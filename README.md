@@ -1,2 +1,2 @@
 # bmc
-Open source code for BMC
+We create this repository for BMC open source code.
