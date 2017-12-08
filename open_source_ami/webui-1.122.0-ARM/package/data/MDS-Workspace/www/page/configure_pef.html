@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<link rel="stylesheet" href="../style/page_style.css" type="text/css" />
+	<link rel="stylesheet" href="../lib/listgrid.css" type="text/css" />
+	<script language="javascript" src="../lib/include.js"></script>
+	<script language="javascript" src="../lib/listgrid.js"></script>
+	<script language="javascript" src="../lib/form.js"></script>
+	<script language="javascript" src="../impl/alert_policy_imp.js"></script>
+	<script language="javascript" src="../impl/lan_dest_imp.js"></script>
+	<script>
+	document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_sendAlert");
+		elmt.setAttribute("value", eLang.getString("configure_pef", "CFG_PEF_SEND_ALERT"));
+		var elmt = document.getElementById("_addBtn");
+		elmt.setAttribute("value", eLang.getString("configure_pef", "CFG_PEF_ADD"));
+		var elmt = document.getElementById("_modBtn");
+		elmt.setAttribute("value", eLang.getString("configure_pef", "CFG_PEF_MODIFY"));
+		var elmt = document.getElementById("_delBtn");
+		elmt.setAttribute("value", eLang.getString("configure_pef", "CFG_PEF_DELETE"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("configure_pef", "CFG_PEF_TITLE"));</script>
+</h3>
+<p>
+<script>document.writeln(eLang.getString("configure_pef", "CFG_PEF_DESC"));</script>
+</p>
+
+<table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+</tr>
+<tr>
+	<td class="roundedtable_left"></td>
+	<td id="_eventFilter" class="classicTab">
+<script>document.writeln(eLang.getString("configure_pef", "CFG_PEF_FILTER"));</script>
+</td>
+	<td class="roundedtable_right"></td>
+	<td class="roundedtable_left"></td>
+	<td id="_alertPolicy" class="classicTab">
+<script>document.writeln(eLang.getString("configure_pef", "CFG_PEF_POLICY"));</script>
+</td>
+	<td class="roundedtable_right"></td>
+	<td class="roundedtable_left"></td>
+	<td id="_lanDests" class="classicTab">
+<script>document.writeln(eLang.getString("configure_pef", "CFG_PEG_LAN"));</script>
+</td>
+	<td class="roundedtable_right"></td>
+</tr>
+</tbody></table>
+
+<table cellspacing="0" cellpadding="10" border="1" width="100%">
+<tr><td>
+	<table cellspacing="0" cellpadding="0" border="0" width="100%">
+	<tr><td>
+		<label id="_lanChannelLabel"><strong>&nbsp;&nbsp;
+<script>document.writeln(eLang.getString("configure_pef", "CFG_PEF_CHANNEL"));</script>
+ </strong></label>
+		<select id="_lanChannel" class="smallclassicTxtBox"></select>
+	</td><td>
+		<label class="alignRight" id="_lblHeader"></label>
+	</td></tr>
+	<tr><td colspan="2"><br/>
+		<script>if(window.ActiveXObject) document.write("<br>");</script>
+	</td></tr>
+	<tr><td colspan="2">
+		<div id="_listGridHolder"></div>
+	</td></tr>
+	<tr><td colspan="2">
+		<div class="btnTray">
+		<input type="button" id="_sendAlert" style="display: none;" />
+		<input type="button" id="_addBtn" />
+		<input type="button" id="_modBtn" />
+		<input type="button" id="_delBtn" />
+		</div>
+	</td></tr>	
+	</table>
+</td></tr>
+</table>
+</body>
+</html>

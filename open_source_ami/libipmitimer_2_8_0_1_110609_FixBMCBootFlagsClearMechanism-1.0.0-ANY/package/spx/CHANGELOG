@@ -1,0 +1,9 @@
+Package: libipmitimer_2_8_0_1_110609_FixBMCBootFlagsClearMechanism (1.0.0); urgency = new
+
+Abstract:
+	To Fix BMC Boot Flag Clear Mechanism
+
+Files Added: 00-data_Timer.c 
+
+--Submitter: Thomas Chao (thomaschao@ami.com.tw) Fri, 15 Mar 2013 15:01:12 CST
+

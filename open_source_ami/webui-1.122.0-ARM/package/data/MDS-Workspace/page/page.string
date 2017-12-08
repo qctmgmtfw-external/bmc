@@ -1,0 +1,1725 @@
+<pagestringtable>
+	<page>
+		<name>main.html</name>
+		<string>
+			<token>MAIN_LOADING</token>
+			<value>Loading</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_network.html</name>
+		<string>
+			<token>CFG_NETWORK_LAN</token>
+			<value>LAN Settings</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_IPV6_ADDR</token>
+			<value>IPv6 Address</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_ENABLE</token>
+			<value>Enable</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_DHCP</token>
+			<value>Use DHCP</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_DESC</token>
+			<value>Manage network settings of the device.</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_MACADDR</token>
+			<value>MAC Address</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_LAN_IFC</token>
+			<value>LAN Interface</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_VLAN_PRIORITY</token>
+			<value>VLAN Priority</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_SUBNET</token>
+			<value>Subnet Mask</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_IPV6</token>
+			<value>IPv6 Configuration</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_IPV4</token>
+			<value>IPv4 Configuration</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_PREFIX</token>
+			<value>Subnet Prefix length</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_VLAN</token>
+			<value>VLAN Configuration</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_IPV6_ENABLE</token>
+			<value>IPv6 Settings</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_TITLE</token>
+			<value>Network Settings</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_VLAN_ENABLE</token>
+			<value>VLAN Settings</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_VLAN_ID</token>
+			<value>VLAN ID</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_IPV4_ADDR</token>
+			<value>IPv4 Address</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_IPADDR</token>
+			<value>Obtain an IP address automatically</value>
+		</string>
+		<string>
+			<token>CFG_NETWORK_GATEWAY</token>
+			<value>Default Gateway</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_services.html</name>
+		<string>
+			<token>CFG_SERVICES_DESC</token>
+			<value>Below is a list of services running on the BMC. It shows current status and other basic information about the services. Select a slot and press &amp;quot;Modify&amp;quot; button to modify the services configuration.</value>
+		</string>
+		<string>
+			<token>CFG_SERVICES_MODIFY</token>
+			<value>Modify</value>
+		</string>
+		<string>
+			<token>CFG_SERVICES_TITLE</token>
+			<value>Services</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_triggers.html</name>
+		<string>
+			<token>CFG_TRIG_DESC</token>
+			<value>This page allows the user to configure which events will trigger the auto video recording function of the KVM server</value>
+		</string>
+		<string>
+			<token>CFG_TRIG_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_TRIG_TITLE</token>
+			<value>Triggers Configuration</value>
+		</string>
+		<string>
+			<token>CFG_TRIG_SAVE</token>
+			<value>Save</value>
+		</string>
+	</page>
+	<page>
+		<name>disable_javascript.html</name>
+	</page>
+	<page>
+		<name>configure_radius.html</name>
+		<string>
+			<token>CFG_RADIUS_TITLE</token>
+			<value>RADIUS Settings</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_TIMEOUT</token>
+			<value>Time Out</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_DESC</token>
+			<value>Check the box below to enable RADIUS authentication and enter the required information to access the RADIUS server. Press the Save button to save your changes.</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_SECRET</token>
+			<value>Secret</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_SERVER</token>
+			<value>Server Address</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_ENABLE</token>
+			<value>Enable</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_SECONDS</token>
+			<value>seconds</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_PORT</token>
+			<value>Port</value>
+		</string>
+		<string>
+			<token>CFG_RADIUS_AUTH</token>
+			<value>RADIUS Authentication</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_ncsi.html</name>
+		<string>
+			<token>CFG_NCSI_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_NCSI_PACKAGE_ID</token>
+			<value>Package ID</value>
+		</string>
+		<string>
+			<token>CFG_NCSI_TITLE</token>
+			<value>NCSI Settings</value>
+		</string>
+		<string>
+			<token>CFG_NCSI_CHANNEL_NO</token>
+			<value>Channel Number</value>
+		</string>
+		<string>
+			<token>CFG_NCSI_DESC</token>
+			<value>The following options are to configure channel number and package ID information for the NCSI interface.</value>
+		</string>
+		<string>
+			<token>CFG_NCSI_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_NCSI_INTERFACE</token>
+			<value>NCSI Interface</value>
+		</string>
+	</page>
+	<page>
+		<name>widget_page.html</name>
+		<string>
+			<token>WIDGET_PAGE_CLOSE</token>
+			<value>Close</value>
+		</string>
+		<string>
+			<token>WIDGET_PAGE_LIVEREAD</token>
+			<value>Live Reading:</value>
+		</string>
+		<string>
+			<token>WIDGET_PAGE_HELP</token>
+			<value>Help</value>
+		</string>
+		<string>
+			<token>WIDGET_PAGE_MINIMIZE</token>
+			<value>Minimize</value>
+		</string>
+		<string>
+			<token>WIDGET_PAGE_SAVE</token>
+			<value>Save</value>
+		</string>
+	</page>
+	<page>
+		<name>video_record.html</name>
+		<string>
+			<token>VIDEO_RCRD_TITLE</token>
+			<value>Video Recording</value>
+		</string>
+		<string>
+			<token>VIDEO_RCRD_DELETE</token>
+			<value>Delete</value>
+		</string>
+		<string>
+			<token>VIDEO_RCRD_PLAY</token>
+			<value>Play Video</value>
+		</string>
+		<string>
+			<token>VIDEO_RCRD_DESC</token>
+			<value>Below is a list of available recorded video files on the BMC. Select a video and press the &amp;quot;Play Video&amp;quot; button to play the video. Select a video and press the &amp;quot;Download&amp;quot; button to download and save the video. Press the &amp;quot;Delete&amp;quot; button to delete the selected video.</value>
+		</string>
+		<string>
+			<token>VIDEO_RCRD_DWLD</token>
+			<value>Download</value>
+		</string>
+	</page>
+	<page>
+		<name>event_log.html</name>
+		<string>
+			<token>EVENT_LOG_FILTERBY</token>
+			<value>filter by:</value>
+		</string>
+		<string>
+			<token>EVENT_LOG_CLEAREVENTS</token>
+			<value>Clear All Event Logs</value>
+		</string>
+		<string>
+			<token>EVENT_LOG_BMC_TZONE</token>
+			<value>BMC Timezone</value>
+		</string>
+		<string>
+			<token>EVENT_LOG_DESC</token>
+			<value>Events generated by the system will be logged here. Double-click on a record to see description</value>
+		</string>
+		<string>
+			<token>EVENT_LOG_TITLE</token>
+			<value>Event Log</value>
+		</string>
+		<string>
+			<token>EVENT_LOG_CLIENT_TZONE</token>
+			<value>Client Timezone</value>
+		</string>
+	</page>
+	<page>
+		<name>sensor_readings.html</name>
+		<string>
+			<token>SENSOR_READ_UNR</token>
+			<value>Upper Non-Recoverable (UNR):</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_LNR</token>
+			<value>Lower Non-Recoverable (LNR):</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_DESC</token>
+			<value>All sensor related information will be displayed here. Double click on a record to toggle (ON / OFF) the live widget for that particular sensor.</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_GRAPH_TITLE</token>
+			<value>Graphical View of this sensor's events</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_WIDGET</token>
+			<value>Live Widget</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_TITLE</token>
+			<value>Sensor Readings</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_THRESHOLD_TITLE</token>
+			<value>Thresholds for this sensor</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_UNC</token>
+			<value>Upper Non-Critical (UNC):</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_LNC</token>
+			<value>Lower Non-Critical (LNC):</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_EVENT_LOG</token>
+			<value>View this Event Log</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_UC</token>
+			<value>Upper Critical (UC):</value>
+		</string>
+		<string>
+			<token>SENSOR_READ_LC</token>
+			<value>Lower Critical (LC):</value>
+		</string>
+	</page>
+	<page>
+		<name>dashboard.html</name>
+		<string>
+			<token>DASHBOARD_SENSORMONIT</token>
+			<value>Sensor Monitoring</value>
+		</string>
+		<string>
+			<token>DASHBOARD_V4MODE</token>
+			<value>V4 Network Mode:</value>
+		</string>
+		<string>
+			<token>DASHBOARD_NWINFO</token>
+			<value>Network Information</value>
+		</string>
+		<string>
+			<token>DASHBOARD_EVENTLOG</token>
+			<value>Event Logs</value>
+		</string>
+		<string>
+			<token>DASHBOARD_DESC</token>
+			<value>Dashboard gives the overall information about the status of the device and remote server.</value>
+		</string>
+		<string>
+			<token>DASHBOARD_FWBUILD</token>
+			<value>Firmware Build Time:</value>
+		</string>
+		<string>
+			<token>DASHBOARD_FWREV</token>
+			<value>Firmware Revision:</value>
+		</string>
+		<string>
+			<token>DASHBOARD_REMOTECTRL</token>
+			<value>Remote Control</value>
+		</string>
+		<string>
+			<token>DASHBOARD_V4IPADDR</token>
+			<value>IPv4 Address:</value>
+		</string>
+		<string>
+			<token>DASHBOARD_TITLE</token>
+			<value>Dashboard</value>
+		</string>
+		<string>
+			<token>DASHBOARD_V6IPADDR</token>
+			<value>IPv6 Address:</value>
+		</string>
+		<string>
+			<token>DASHBOARD_V6MODE</token>
+			<value>V6 Network Mode:</value>
+		</string>
+		<string>
+			<token>DASHBOARD_MACADDR</token>
+			<value>MAC Address:</value>
+		</string>
+		<string>
+			<token>DASHBOARD_DEVICEINFO</token>
+			<value>Device Information</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_vmedia_devices.html</name>
+		<string>
+			<token>CFG_VMEDIA_TITLE</token>
+			<value>Virtual Media Devices</value>
+		</string>
+		<string>
+			<token>CFG_VMEDIA_DESC</token>
+			<value>The following option will allow to configure virtual media devices.</value>
+		</string>
+		<string>
+			<token>CFG_VMEDIA_HARDDISK</token>
+			<value>Harddisk devices</value>
+		</string>
+		<string>
+			<token>CFG_VMEDIA_FLOPPY</token>
+			<value>Floppy devices</value>
+		</string>
+		<string>
+			<token>CFG_VMEDIA_CD</token>
+			<value>CD/DVD devices</value>
+		</string>
+		<string>
+			<token>CFG_VMEDIA_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_VMEDIA_RESET</token>
+			<value>Reset</value>
+		</string>
+	</page>
+	<page>
+		<name>system_audit_log.html</name>
+		<string>
+			<token>SYSTEM_AUDIT_TITLE</token>
+			<value>System &amp; Audit Logs</value>
+		</string>
+		<string>
+			<token>SYSTEM_AUDIT_AUDIT</token>
+			<value>Audit Log</value>
+		</string>
+		<string>
+			<token>SYSTEM_AUDIT_FILTER</token>
+			<value>Filter by:</value>
+		</string>
+		<string>
+			<token>SYSTEM_AUDIT_DESC</token>
+			<value>This page displays logs of system and audit events for this device (if the options have been configured).</value>
+		</string>
+		<string>
+			<token>SYSTEM_AUDIT_SYSTEM</token>
+			<value>System Log</value>
+		</string>
+	</page>
+	<page>
+		<name>blank.html</name>
+	</page>
+	<page>
+		<name>configure_dns.html</name>
+		<string>
+			<token>CFG_DNS_DNS2</token>
+			<value>Alternate DNS Server</value>
+		</string>
+		<string>
+			<token>CFG_DNS_DOMAIN_NAME</token>
+			<value>Domain Name</value>
+		</string>
+		<string>
+			<token>CFG_DNS_DNS1</token>
+			<value>Preferred DNS Server</value>
+		</string>
+		<string>
+			<token>CFG_DNS_DDNS</token>
+			<value>Direct Dynamic DNS</value>
+		</string>
+		<string>
+			<token>CFG_DNS_DHCP_FQDN</token>
+			<value>DHCP Client FQDN</value>
+		</string>
+		<string>
+			<token>CFG_DNS_IPV4_TITLE</token>
+			<value>IPv4 Domain Name Server Configuration</value>
+		</string>
+		<string>
+			<token>CFG_DNS_HOST_TITLE</token>
+			<value>Host Configuration</value>
+		</string>
+		<string>
+			<token>CFG_DNS_BMC_REGISTER</token>
+			<value>Register BMC</value>
+		</string>
+		<string>
+			<token>CFG_DNS_HOST_SETTING</token>
+			<value>Host Settings</value>
+		</string>
+		<string>
+			<token>CFG_DNS_DOMAIN_SETTING</token>
+			<value>Domain Settings</value>
+		</string>
+		<string>
+			<token>CFG_DNS_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_DNS_LAN_INTERFACE</token>
+			<value>LAN Interface</value>
+		</string>
+		<string>
+			<token>CFG_DNS_IPV6_TITLE</token>
+			<value>IPv6 Domain Name Server Configuration</value>
+		</string>
+		<string>
+			<token>CFG_DNS_TITLE</token>
+			<value>DNS Server Settings</value>
+		</string>
+		<string>
+			<token>CFG_DNS_DOMAIN_TITLE</token>
+			<value>Domain Name Configuration</value>
+		</string>
+		<string>
+			<token>CFG_DNS_DESC</token>
+			<value>Manage DNS settings of the device.</value>
+		</string>
+		<string>
+			<token>CFG_DNS_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_DNS_HOST_NAME</token>
+			<value>Host Name</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_phy.html</name>
+		<string>
+			<token>CFG_PHY_AUTO_ON</token>
+			<value>ON</value>
+		</string>
+		<string>
+			<token>CFG_PHY_DESC</token>
+			<value>Manage network link settings of the device.</value>
+		</string>
+		<string>
+			<token>CFG_PHY_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_PHY_LINK_SPEED</token>
+			<value>Link Speed</value>
+		</string>
+		<string>
+			<token>CFG_PHY_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_PHY_LAN_INTERFACE</token>
+			<value>LAN Interface</value>
+		</string>
+		<string>
+			<token>CFG_PHY_AUTO</token>
+			<value>Auto Negotiation</value>
+		</string>
+		<string>
+			<token>CFG_PHY_TITLE</token>
+			<value>Network Link Configuration</value>
+		</string>
+		<string>
+			<token>CFG_PHY_AUTO_OFF</token>
+			<value>OFF</value>
+		</string>
+		<string>
+			<token>CFG_PHY_DUPLEX</token>
+			<value>Duplex Mode</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_users.html</name>
+		<string>
+			<token>CFG_USER_DESC</token>
+			<value>The list below shows the current list of available users. To delete or modify a user, select their name in the list and press &amp;quot;Delete User&amp;quot; or &amp;quot;Modify User&amp;quot;. To add a new user, select an unconfigured slot and press &amp;quot;Add User&amp;quot;.</value>
+		</string>
+		<string>
+			<token>CFG_USER_ADD</token>
+			<value>Add User</value>
+		</string>
+		<string>
+			<token>CFG_USER_TITLE</token>
+			<value>User Management</value>
+		</string>
+		<string>
+			<token>CFG_USER_DELETE</token>
+			<value>Delete User</value>
+		</string>
+		<string>
+			<token>CFG_USER_MODIFY</token>
+			<value>Modify User</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_root.html</name>
+		<string>
+			<token>CFG_ROOT_DESC</token>
+			<value>This page allows the user to enable/disable access and change the password for the System Administrator account.</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_TITLE</token>
+			<value>System Administrator</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_CHANGE_PWORD</token>
+			<value>Change Password</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_USER_ACCESS</token>
+			<value>User Access</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_CFRM_PWORD</token>
+			<value>Confirm Password</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_USERNAME</token>
+			<value>Username</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_ENABLE</token>
+			<value>Enable</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_ROOT_PASSWORD</token>
+			<value>Password</value>
+		</string>
+	</page>
+	<page>
+		<name>activex_launch.html</name>
+	</page>
+	<page>
+		<name>fru_info.html</name>
+		<string>
+			<token>FRU_FILE_ID</token>
+			<value>FRU File ID</value>
+		</string>
+		<string>
+			<token>FRU_BOARD</token>
+			<value>Board Information:</value>
+		</string>
+		<string>
+			<token>FRU_ASSET</token>
+			<value>Asset Tag</value>
+		</string>
+		<string>
+			<token>FRU_CI5</token>
+			<value>Chassis Extra</value>
+		</string>
+		<string>
+			<token>FRU_CI4</token>
+			<value>Chassis Serial Number</value>
+		</string>
+		<string>
+			<token>FRU_CI3</token>
+			<value>Chassis Part Number</value>
+		</string>
+		<string>
+			<token>FRU_MFR_DATE</token>
+			<value>Manufacture Date Time</value>
+		</string>
+		<string>
+			<token>FRU_CI2</token>
+			<value>Chassis Type</value>
+		</string>
+		<string>
+			<token>FRU_PRODUCT</token>
+			<value>Product Information:</value>
+		</string>
+		<string>
+			<token>FRU_CI1</token>
+			<value>Chassis Information Area Format Version</value>
+		</string>
+		<string>
+			<token>FRU_PI6</token>
+			<value>Product Extra</value>
+		</string>
+		<string>
+			<token>FRU_MFR_NAME</token>
+			<value>Manufacturer Name</value>
+		</string>
+		<string>
+			<token>FRU_PI5</token>
+			<value>Product Serial Number</value>
+		</string>
+		<string>
+			<token>FRU_PI4</token>
+			<value>Product Version</value>
+		</string>
+		<string>
+			<token>FRU_PI3</token>
+			<value>Product Part Number</value>
+		</string>
+		<string>
+			<token>FRU_PI2</token>
+			<value>Product Name</value>
+		</string>
+		<string>
+			<token>FRU_PI1</token>
+			<value>Product Information Area Format Version</value>
+		</string>
+		<string>
+			<token>FRU_BI6</token>
+			<value>Board Extra</value>
+		</string>
+		<string>
+			<token>FRU_DEVICEID</token>
+			<value>FRU Device ID</value>
+		</string>
+		<string>
+			<token>FRU_BI5</token>
+			<value>Board Part Number</value>
+		</string>
+		<string>
+			<token>FRU_BI4</token>
+			<value>Board Serial Number</value>
+		</string>
+		<string>
+			<token>FRU_DESC</token>
+			<value>This page gives detailed information for the various FRU devices present in this system.</value>
+		</string>
+		<string>
+			<token>FRU_BI3</token>
+			<value>Board Product Name</value>
+		</string>
+		<string>
+			<token>FRU_TITLE</token>
+			<value>Field Replaceable Unit(FRU)</value>
+		</string>
+		<string>
+			<token>FRU_BI2</token>
+			<value>Board Manufacturer</value>
+		</string>
+		<string>
+			<token>FRU_BI1</token>
+			<value>Board Information Area Format Version</value>
+		</string>
+		<string>
+			<token>FRU_DEVICENAME</token>
+			<value>FRU Device Name</value>
+		</string>
+		<string>
+			<token>FRU_BASIC</token>
+			<value>Basic Information:</value>
+		</string>
+		<string>
+			<token>FRU_LANG</token>
+			<value>Language</value>
+		</string>
+		<string>
+			<token>FRU_CHASSIS</token>
+			<value>Chassis Information:</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_pamorder.html</name>
+		<string>
+			<token>CFG_PAM_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_PAM_LDAP</token>
+			<value>LDAP</value>
+		</string>
+		<string>
+			<token>CFG_PAM_MOVEUP</token>
+			<value>Move UP</value>
+		</string>
+		<string>
+			<token>CFG_PAM_AD</token>
+			<value>Active Directory</value>
+		</string>
+		<string>
+			<token>CFG_PAM_TITLE</token>
+			<value>PAM Ordering</value>
+		</string>
+		<string>
+			<token>CFG_PAM_MOVEDOWN</token>
+			<value>Move Down</value>
+		</string>
+		<string>
+			<token>CFG_PAM_IPMI</token>
+			<value>IPMI</value>
+		</string>
+		<string>
+			<token>CFG_PAM_DESC</token>
+			<value>This page is used to configure the PAM Ordering for the user authentication.</value>
+		</string>
+		<string>
+			<token>CFG_PAM_SAVE</token>
+			<value>Save</value>
+		</string>
+	</page>
+	<page>
+		<name>header.html</name>
+	</page>
+	<page>
+		<name>server_power_control.html</name>
+		<string>
+			<token>SERVER_POWER_RESET</token>
+			<value>Reset Server</value>
+		</string>
+		<string>
+			<token>SERVER_POWER_DESC</token>
+			<value>The current server power status is shown below. To perform a power control operation, select one of the options below and press &amp;quot;Perform Action&amp;quot;.</value>
+		</string>
+		<string>
+			<token>SERVER_POWER_TITLE</token>
+			<value>Power Control and Status</value>
+		</string>
+		<string>
+			<token>SERVER_POWER_POWERON</token>
+			<value>Power On Server</value>
+		</string>
+		<string>
+			<token>SERVER_POWER_SHUTDOWN</token>
+			<value>Power Off Server - Orderly Shutdown</value>
+		</string>
+		<string>
+			<token>SERVER_POWER_PRFMACTION</token>
+			<value>Perform Action</value>
+		</string>
+		<string>
+			<token>SERVER_POWER_POWERCYCLE</token>
+			<value>Power Cycle Server</value>
+		</string>
+		<string>
+			<token>SERVER_POWER_POWEROFF</token>
+			<value>Power Off Server - Immediate</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_pef.html</name>
+		<string>
+			<token>CFG_PEF_FILTER</token>
+			<value>Event Filter</value>
+		</string>
+		<string>
+			<token>CFG_PEF_SEND_ALERT</token>
+			<value>Send Test Alert</value>
+		</string>
+		<string>
+			<token>CFG_PEF_POLICY</token>
+			<value>Alert Policy</value>
+		</string>
+		<string>
+			<token>CFG_PEF_MODIFY</token>
+			<value>Modify</value>
+		</string>
+		<string>
+			<token>CFG_PEF_CHANNEL</token>
+			<value>LAN Channel:</value>
+		</string>
+		<string>
+			<token>CFG_PEF_TITLE</token>
+			<value>PEF Management</value>
+		</string>
+		<string>
+			<token>CFG_PEG_LAN</token>
+			<value>LAN Destination</value>
+		</string>
+		<string>
+			<token>CFG_PEF_DELETE</token>
+			<value>Delete</value>
+		</string>
+		<string>
+			<token>CFG_PEF_ADD</token>
+			<value>Add</value>
+		</string>
+		<string>
+			<token>CFG_PEF_DESC</token>
+			<value>Use this page to configure Event Filter, Alert Policy and LAN Destination. To delete or modify a entry, select it in the list and press &amp;quot;Delete&amp;quot; or &amp;quot;Modify&amp;quot;. To add a new entry, select an unconfigured slot and press &amp;quot;Add&amp;quot;.</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_ntp.html</name>
+		<string>
+			<token>CFG_NTP_TIME</token>
+			<value>Time:</value>
+		</string>
+		<string>
+			<token>CFG_NTP_DATE</token>
+			<value>Date:</value>
+		</string>
+		<string>
+			<token>CFG_NTP_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_NTP_NTP</token>
+			<value>NTP Server:</value>
+		</string>
+		<string>
+			<token>CFG_NTP_HH_MM_SS</token>
+			<value>(hh:mm:ss)</value>
+		</string>
+		<string>
+			<token>CFG_NTP_UTC</token>
+			<value>UTC Timezone:</value>
+		</string>
+		<string>
+			<token>CFG_NTP_HOURS</token>
+			<value>Hour(s)</value>
+		</string>
+		<string>
+			<token>CFG_NTP_TITLE</token>
+			<value>NTP Settings</value>
+		</string>
+		<string>
+			<token>CFG_NTP_DESC</token>
+			<value>Here you can either configure the NTP server or view and modify the device's Date &amp;amp; Time settings.</value>
+		</string>
+		<string>
+			<token>CFG_NTP_SYNC_NTP</token>
+			<value>Automatically synchronize Date &amp; Time with NTP Server</value>
+		</string>
+		<string>
+			<token>CFG_NTP_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_NTP_REFRESH</token>
+			<value>Refresh</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_smtp.html</name>
+		<string>
+			<token>CFG_SMTP_MACHINENAME</token>
+			<value>Machine Name</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_SMTP2</token>
+			<value>Secondary SMTP Server</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_PORT</token>
+			<value>Port</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_SMTP1</token>
+			<value>Primary SMTP Server</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_SERVER</token>
+			<value>Server Address</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_DESC</token>
+			<value>Manage SMTP settings of the device.</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_USERNAME</token>
+			<value>User Name</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_SENDERADDR</token>
+			<value>Sender Address</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_TITLE</token>
+			<value>SMTP Settings</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_AUTHENTICATION</token>
+			<value>SMTP Server requires Authentication</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_LANCHANNEL</token>
+			<value>LAN Channel Number</value>
+		</string>
+		<string>
+			<token>CFG_SMTP_PASSWORD</token>
+			<value>Password</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_lmedia.html</name>
+		<string>
+			<token>CFG_LMEDIA_ADV</token>
+			<value>Advanced Settings</value>
+		</string>
+		<string>
+			<token>CFG_LMEDIA_DELETE</token>
+			<value>Delete Image</value>
+		</string>
+		<string>
+			<token>CFG_LMEDIA_REPLACE</token>
+			<value>Replace Image</value>
+		</string>
+		<string>
+			<token>CFG_LMEDIA_DESC</token>
+			<value>Below is a list of available images on the local media on the BMC. Select a empty record and press the &amp;quot;Add Image&amp;quot; to upload a new image on the BMC. Select a record and press the &amp;quot;Replace Image&amp;quot; button to overwrite the existing image or &amp;quot;Delete Image&amp;quot; to delete the image.</value>
+		</string>
+		<string>
+			<token>CFG_LMEDIA_TITLE</token>
+			<value>Local Media</value>
+		</string>
+		<string>
+			<token>CFG_LMEDIA_ADD</token>
+			<value>Add Image</value>
+		</string>
+	</page>
+	<page>
+		<name>session_expired.html</name>
+	</page>
+	<page>
+		<name>restore_factory.html</name>
+		<string>
+			<token>RESTORE_FACTORY_TITLE</token>
+			<value>Restore Factory Defaults</value>
+		</string>
+		<string>
+			<token>RESTORE_FACTORY_WARNING</token>
+			<value>WARNING:</value>
+		</string>
+		<string>
+			<token>RESTORE_FACTORY_PRSRV_CFG_BTN</token>
+			<value>Enter Preserve Configuration</value>
+		</string>
+		<string>
+			<token>RESTORE_FACTORY_DESC</token>
+			<value>This page will restore the device to default configuration. Press &amp;quot; Restore Factory Defaults&amp;quot; to restore the device default configuration.</value>
+		</string>
+		<string>
+			<token>RESTORE_FACTORY_PRSRV_CFG_DESC</token>
+			<value>This section lists the configuration items, that will be preserved during restore factory default configuration. Click &amp;quot;Preserve Configuration&amp;quot; to modify the preserve configuration items.</value>
+		</string>
+		<string>
+			<token>RESTORE_FACTORY_PRSRV_CFG</token>
+			<value>Preserve Configuration</value>
+		</string>
+		<string>
+			<token>RESTORE_FACTORY_DESC1</token>
+			<value>Please note that after entering into restore factory defaults, widgets, other web pages and services will not work. All open widgets will be closed automatically. The device will reset and reboot within few minutes.</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_remote_session.html</name>
+		<string>
+			<token>CFG_REMOTE_DESC</token>
+			<value>The following options are to enable or disable encryption on KVM or Media data for the next redirection session.</value>
+		</string>
+		<string>
+			<token>CFG_REMOTE_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_REMOTE_ATTACH</token>
+			<value>Virtual Media Attach Mode</value>
+		</string>
+		<string>
+			<token>CFG_REMOTE_KVMENCRYPT</token>
+			<value>KVM Encryption</value>
+		</string>
+		<string>
+			<token>CFG_REMOTE_ENABLE</token>
+			<value>Enable</value>
+		</string>
+		<string>
+			<token>CFG_REMOTE_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_REMOTE_MEDIAENCRYPT</token>
+			<value>Media Encryption</value>
+		</string>
+		<string>
+			<token>CFG_REMOTE_TITLE</token>
+			<value>Configure Remote Session</value>
+		</string>
+	</page>
+	<page>
+		<name>login.html</name>
+		<string>
+			<token>LOGIN_COOKIES</token>
+			<value>Enable cookies for this site</value>
+		</string>
+		<string>
+			<token>LOGIN_FORGOT_PASSWORD</token>
+			<value>Forgot Password?</value>
+		</string>
+		<string>
+			<token>LOGIN_JAVASCRIPT</token>
+			<value>Enable javascript for this site</value>
+		</string>
+		<string>
+			<token>LOGIN_LOGIN</token>
+			<value>Login</value>
+		</string>
+		<string>
+			<token>LOGIN_USERNAME</token>
+			<value>Username:</value>
+		</string>
+		<string>
+			<token>LOGIN_POPUP</token>
+			<value>Allow popups from this site</value>
+		</string>
+		<string>
+			<token>LOGIN_BROWSER</token>
+			<value>Required Browser Settings</value>
+		</string>
+		<string>
+			<token>LOGIN_PASSWORD</token>
+			<value>Password:</value>
+		</string>
+		<string>
+			<token>LOGIN_FILEDOWNLOAD</token>
+			<value>Allow file download from this site.</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_active_directory.html</name>
+		<string>
+			<token>CFG_AD_ADVANCED_SETTINGS</token>
+			<value>Advanced Settings</value>
+		</string>
+		<string>
+			<token>CFG_AD_TITLE</token>
+			<value>Active Directory Settings</value>
+		</string>
+		<string>
+			<token>CFG_AD_DELETE</token>
+			<value>Delete Role Group</value>
+		</string>
+		<string>
+			<token>CFG_AD_MODIFY</token>
+			<value>Modify Role Group</value>
+		</string>
+		<string>
+			<token>CFG_AD_ADD</token>
+			<value>Add Role Group</value>
+		</string>
+		<string>
+			<token>CFG_AD_DESC</token>
+			<value>The list below shows the current list of configured Role Groups. If you would like to delete or modify a role group, select the name in the list and press Delete Role Group or Modify Role Group. To add a new Role Group, select an unconfigured slot and press Add Role Group.</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_mouse_mode.html</name>
+		<string>
+			<token>CFG_MOUSEMODE_TITLE</token>
+			<value>Mouse Mode Settings</value>
+		</string>
+		<string>
+			<token>CFG_MOUSEMODE_CURRENTMODE</token>
+			<value>Current Mouse Mode</value>
+		</string>
+		<string>
+			<token>CFG_MOUSEMODE_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_MOUSEMODE_RELATIVE</token>
+			<value>Set Mode to Relative (Recommended when server OS is Linux)</value>
+		</string>
+		<string>
+			<token>CFG_MOUSEMODE_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_MOUSEMODE_DESC</token>
+			<value>Redirection console mouse mode settings can be modified here.</value>
+		</string>
+		<string>
+			<token>CFG_MOUSEMODE_ABSOLUTE</token>
+			<value>Set Mode to Absolute (Recommended when server OS is Windows)</value>
+		</string>
+	</page>
+	<page>
+		<name>preserve_cfg.html</name>
+		<string>
+			<token>PRESERVE_CFG_CHECK</token>
+			<value>Check All</value>
+		</string>
+		<string>
+			<token>PRESERVE_CFG_UNCHECK</token>
+			<value>Uncheck All</value>
+		</string>
+		<string>
+			<token>PRESERVE_CFG_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>PRESERVE_CFG_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>PRESERVE_CFG_TITLE</token>
+			<value>Preserve Configuration</value>
+		</string>
+		<string>
+			<token>PRESERVE_CFG_DESC</token>
+			<value>This page allows the user to configure the preserve configuration items, which will be used by the Restore factory defaults to preserve the existing configuration without overwriting with default configuration.</value>
+		</string>
+	</page>
+	<page>
+		<name>console_redirection.html</name>
+		<string>
+			<token>CONSOLE_REDIR_DESC</token>
+			<value>Press the button to launch the redirection console and manage the server remotely.</value>
+		</string>
+		<string>
+			<token>CONSOLE_REDIR_TITLE</token>
+			<value>Console Redirection</value>
+		</string>
+	</page>
+	<page>
+		<name>file_upload.html</name>
+	</page>
+	<page>
+		<name>jviewer_launch.html</name>
+		<string>
+			<token>JVIEWER_LAUNCH_DESC</token>
+			<value>Please wait while the application is downloading. This window will be closed automatically.</value>
+		</string>
+	</page>
+	<page>
+		<name>fw_update.html</name>
+		<string>
+			<token>FW_UPDATE_DESC3</token>
+			<value>Preparing device for firmware upgrade.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_DESC2</token>
+			<value>Closing all active client requests.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_UPLOAD</token>
+			<value>Uploading firmware image.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_PRSRV_CFG</token>
+			<value>Enter Preserve Configuration</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_DESC1</token>
+			<value>Please note that after entering update mode widgets, other web pages and services will not work. All open widgets will be closed automatically. If upgrade process is cancelled in the middle of the wizard, the device will reset.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_PRSRV_CFG_DESC</token>
+			<value>This section lists the configuration items, that will be preserved during restore factory default configuration. Click &amp;quot;Enter Preserve Configuration&amp;quot; to modify the preserve configuration items.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_PRSRV_ALL_DESC</token>
+			<value>This will preserve all the configurations during firmware update.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_PRSRV_ALL</token>
+			<value>Preserve all Configuration.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_DESC</token>
+			<value>Upgrade firmware of the device. Press &amp;quot;Enter Update Mode&amp;quot; to put the device in update mode.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_UPDATE</token>
+			<value>Enter Update Mode</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_FLASH</token>
+			<value>Flashing firmware image.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_RESET</token>
+			<value>Resetting Device.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_VERIFY</token>
+			<value>Verifying firmware image.</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_WARNING</token>
+			<value>WARNING:</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_SIGNIMG_KEY</token>
+			<value>Upload SignImage Key</value>
+		</string>
+		<string>
+			<token>FW_UPDATE_TITLE</token>
+			<value>Firmware Update</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_ldap.html</name>
+		<string>
+			<token>CFG_LDAP_ADVANCED_SETTINGS</token>
+			<value>Advanced Settings</value>
+		</string>
+		<string>
+			<token>CFG_LDAP_DESC</token>
+			<value>The list below shows the current list of configured Role Groups. If you would like to delete or modify a role group, select the name in the list and press Delete Role Group or Modify Role Group. To add a new Role Group, select an unconfigured slot and press Add Role Group.</value>
+		</string>
+		<string>
+			<token>CFG_LDAP_TITLE</token>
+			<value>LDAP/E-Directory Settings</value>
+		</string>
+		<string>
+			<token>CFG_LDAP_MODIFY</token>
+			<value>Modify Role Group</value>
+		</string>
+		<string>
+			<token>CFG_LDAP_DELETE</token>
+			<value>Delete Role Group</value>
+		</string>
+		<string>
+			<token>CFG_LDAP_ADD</token>
+			<value>Add Role Group</value>
+		</string>
+	</page>
+	<page>
+		<name>add_mod_pef.html</name>
+		<string>
+			<token>PEF_EVT_DATA_CFG</token>
+			<value>Event Data configuration</value>
+		</string>
+		<string>
+			<token>PEF_CHANNEL_NO</token>
+			<value>Channel Number</value>
+		</string>
+		<string>
+			<token>PEF_EVT_DATA3_CFG</token>
+			<value>Event Data 3 configuration</value>
+		</string>
+		<string>
+			<token>PEF_EVENT2_COMPARE2</token>
+			<value>Event Data 2 Compare 2</value>
+		</string>
+		<string>
+			<token>PEF_SW_ID</token>
+			<value>System Software ID</value>
+		</string>
+		<string>
+			<token>PEF_EVENT2_COMPARE1</token>
+			<value>Event Data 2 Compare 1</value>
+		</string>
+		<string>
+			<token>PEF_EVENT3_AND</token>
+			<value>Event Data 3 AND Mask</value>
+		</string>
+		<string>
+			<token>PEF_SLAVE_ADDR</token>
+			<value>Slave Address</value>
+		</string>
+		<string>
+			<token>PEF_ADD</token>
+			<value>Add</value>
+		</string>
+		<string>
+			<token>PEF_SLAVE_SW</token>
+			<value>Slave Address/Software ID</value>
+		</string>
+		<string>
+			<token>PEF_GNTR_RAW</token>
+			<value>Raw Data</value>
+		</string>
+		<string>
+			<token>PEF_POLICY</token>
+			<value>Alert Policy Number</value>
+		</string>
+		<string>
+			<token>PEF_EVENT3_COMPARE2</token>
+			<value>Event Data 3 Compare 2</value>
+		</string>
+		<string>
+			<token>PEF_ACTION</token>
+			<value>Event Filter Action</value>
+		</string>
+		<string>
+			<token>PEF_EVENT3_COMPARE1</token>
+			<value>Event Data 3 Compare 1</value>
+		</string>
+		<string>
+			<token>PEF_EVT_DATA2_CFG</token>
+			<value>Event Data 2 configuration</value>
+		</string>
+		<string>
+			<token>PEF_CANCEL</token>
+			<value>Cancel</value>
+		</string>
+		<string>
+			<token>PEF_ALERT</token>
+			<value>Alert</value>
+		</string>
+		<string>
+			<token>PEF_EVENT2_AND</token>
+			<value>Event Data 2 AND Mask</value>
+		</string>
+		<string>
+			<token>PEF_ENABLE</token>
+			<value>Enable</value>
+		</string>
+		<string>
+			<token>PEF_SENSORTYPE</token>
+			<value>Sensor Type</value>
+		</string>
+		<string>
+			<token>PEF_GNTR_CFG</token>
+			<value>Generator ID configuration</value>
+		</string>
+		<string>
+			<token>PEF_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>PEF_SENSOREVENTS</token>
+			<value>Sensor Events</value>
+		</string>
+		<string>
+			<token>PEF_ID</token>
+			<value>PEF ID</value>
+		</string>
+		<string>
+			<token>PEF_TRIGGER</token>
+			<value>Event Trigger</value>
+		</string>
+		<string>
+			<token>PEF_IPMB_DEVICE</token>
+			<value>IPMB Device LUN</value>
+		</string>
+		<string>
+			<token>PEF_EVENT_GNTR</token>
+			<value>Event Generator</value>
+		</string>
+		<string>
+			<token>PEF_GNTR_ID2</token>
+			<value>Generator ID 2</value>
+		</string>
+		<string>
+			<token>PEF_GNTR_DATA</token>
+			<value>Generator ID Data</value>
+		</string>
+		<string>
+			<token>PEF_GNTR_ID1</token>
+			<value>Generator ID 1</value>
+		</string>
+		<string>
+			<token>PEF_POWER</token>
+			<value>Power Action</value>
+		</string>
+		<string>
+			<token>PEF_EVENT</token>
+			<value>Event Severity</value>
+		</string>
+		<string>
+			<token>PEF_ACTION_CFG</token>
+			<value>Filter Action configuration</value>
+		</string>
+		<string>
+			<token>PEF_PEF_CFG</token>
+			<value>Event Filter Configuration</value>
+		</string>
+		<string>
+			<token>PEF_SENSORNAME</token>
+			<value>Sensor Name</value>
+		</string>
+		<string>
+			<token>PEF_SENSOR_CFG</token>
+			<value>Sensor configuration</value>
+		</string>
+		<string>
+			<token>PEF_EVENT1_COMPARE2</token>
+			<value>Event Data 1 Compare 2</value>
+		</string>
+		<string>
+			<token>PEF_EVENT1_COMPARE1</token>
+			<value>Event Data 1 Compare 1</value>
+		</string>
+		<string>
+			<token>PEF_FILTER</token>
+			<value>Filter Configuration</value>
+		</string>
+		<string>
+			<token>PEF_EVENT_OPT</token>
+			<value>Event Options</value>
+		</string>
+	</page>
+	<page>
+		<name>resetDevice.html</name>
+		<string>
+			<token>RESET_DESC</token>
+			<value>The device has been reset. Please close this browser session and open a new browser session to reconnect to the device. The device may take about a minute to boot up.</value>
+		</string>
+		<string>
+			<token>RESET_TITLE</token>
+			<value>Device has been reset</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_nw_bond.html</name>
+		<string>
+			<token>CFG_NW_BOND_DESC</token>
+			<value>The following options are to configure networking bonding for the device.</value>
+		</string>
+		<string>
+			<token>CFG_NW_BOND_NWBOND</token>
+			<value>Network Bonding</value>
+		</string>
+		<string>
+			<token>CFG_NW_BOND_ENABLE</token>
+			<value>Enable</value>
+		</string>
+		<string>
+			<token>CFG_NW_BOND_IFC</token>
+			<value>Default Interfaces</value>
+		</string>
+		<string>
+			<token>CFG_NW_BOND_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_NW_BOND_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_NW_BOND_TITLE</token>
+			<value>Network Bonding Configuration</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_sys_audit_log.html</name>
+		<string>
+			<token>CFG_SYS_AUDIT_DESC</token>
+			<value>Enable and configure logging of system events below. Or you can enable/disable logging of audit events. Press the Save button to save your changes.</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_SAVE</token>
+			<value>Save</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_FILESIZE</token>
+			<value>File Size (in bytes)</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_AUDIT</token>
+			<value>Audit Log</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_SYSLOG</token>
+			<value>System Log</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_REMOTE</token>
+			<value>Remote Log</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_SERVERADDR</token>
+			<value>Server Address</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_ROTATECNT</token>
+			<value>Rotate Count</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_RESET</token>
+			<value>Reset</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_LOGTYPE</token>
+			<value>Log Type</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_ENABLE</token>
+			<value>Enable</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_LOCAL</token>
+			<value>Local Log</value>
+		</string>
+		<string>
+			<token>CFG_SYS_AUDIT_TITLE</token>
+			<value>System and Audit Log Settings</value>
+		</string>
+	</page>
+	<page>
+		<name>configure_ssl.html</name>
+		<string>
+			<token>CFG_SSL_SIGN_ALG</token>
+			<value>Signature Algorithm</value>
+		</string>
+		<string>
+			<token>CFG_SSL_VALID</token>
+			<value>Valid for</value>
+		</string>
+		<string>
+			<token>CFG_SSL_NEW_CERT</token>
+			<value>New Certificate</value>
+		</string>
+		<string>
+			<token>CFG_SSL_VALID_FROM</token>
+			<value>Valid From</value>
+		</string>
+		<string>
+			<token>CFG_SSL_EMAIL</token>
+			<value>Email Address</value>
+		</string>
+		<string>
+			<token>CFG_SSL_DAYS</token>
+			<value>days</value>
+		</string>
+		<string>
+			<token>CFG_SSL_VALID_INFO</token>
+			<value>Validity Information</value>
+		</string>
+		<string>
+			<token>CFG_SSL_NEW_KEY</token>
+			<value>New Privacy Key</value>
+		</string>
+		<string>
+			<token>CFG_SSL_ORG</token>
+			<value>Organization(O)</value>
+		</string>
+		<string>
+			<token>CFG_SSL_GENERATE_BTN</token>
+			<value>Generate</value>
+		</string>
+		<string>
+			<token>CFG_SSL_PRIVKEY</token>
+			<value>Current Privacy Key</value>
+		</string>
+		<string>
+			<token>CFG_SSL_COMMON_NAME</token>
+			<value>Common Name(CN)</value>
+		</string>
+		<string>
+			<token>CFG_SSL_VERSION</token>
+			<value>Version</value>
+		</string>
+		<string>
+			<token>CFG_SSL_VIEW</token>
+			<value>View SSL</value>
+		</string>
+		<string>
+			<token>CFG_SSL_TO</token>
+			<value>Issued To</value>
+		</string>
+		<string>
+			<token>CFG_SSL_PUBKEY</token>
+			<value>Public Key</value>
+		</string>
+		<string>
+			<token>CFG_SSL_TITLE</token>
+			<value>SSL Certificate Configuration</value>
+		</string>
+		<string>
+			<token>CFG_SSL_KEY_LENGTH</token>
+			<value>Key Length</value>
+		</string>
+		<string>
+			<token>CFG_SSL_UPLOAD_BTN</token>
+			<value>Upload</value>
+		</string>
+		<string>
+			<token>CFG_SSL_FROM</token>
+			<value>Issued From</value>
+		</string>
+		<string>
+			<token>CFG_SSL_BITS</token>
+			<value>bits</value>
+		</string>
+		<string>
+			<token>CFG_SSL_CITY</token>
+			<value>City or Locality(L)</value>
+		</string>
+		<string>
+			<token>CFG_SSL_BASIC</token>
+			<value>Basic Information</value>
+		</string>
+		<string>
+			<token>CFG_SSL_DESC</token>
+			<value>This page is used to configure SSL certificate into the BMC. Using this, the device can be accessed in a secured mode. Upload SSL option is used to upload the certificate and private key file into the BMC. Generate SSL option is used to generate the SSL certificate based on configuration details. View SSL option is used to view the uploaded SSL certificate in readable format.</value>
+		</string>
+		<string>
+			<token>CFG_SSL_STATE</token>
+			<value>State or Province(ST)</value>
+		</string>
+		<string>
+			<token>CFG_SSL_VALID_TO</token>
+			<value>Valid To</value>
+		</string>
+		<string>
+			<token>CFG_SSL_UPLOAD</token>
+			<value>Upload SSL</value>
+		</string>
+		<string>
+			<token>CFG_SSL_ORG_UNIT</token>
+			<value>Organization Unit(OU)</value>
+		</string>
+		<string>
+			<token>CFG_SSL_CERT</token>
+			<value>Current Certificate</value>
+		</string>
+		<string>
+			<token>CFG_SSL_SL_NO</token>
+			<value>Serial Number</value>
+		</string>
+		<string>
+			<token>CFG_SSL_COUNTRY</token>
+			<value>Country(C)</value>
+		</string>
+		<string>
+			<token>CFG_SSL_GENERATE</token>
+			<value>Generate SSL</value>
+		</string>
+	</page>
+</pagestringtable>

@@ -1,0 +1,9 @@
+Package: ipmi_dev_2_100_0_7_AddNodeMgrFeatureFix (1.0.0); urgency = new
+
+Abstract:
+	add the line extern int lpcuart_route_set(hal_t *phal);
+
+Files Added: data, data/00-data_hal_hw.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: owenchou (owenchou@ami.com.tw) Thu, 22 Dec 2011 00:28:38 EST
+

@@ -1,0 +1,189 @@
+Package: cdrom (1.6.0); urgency = medium
+
+Abstract:
+	Licence Info changed to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/cdrom_mod.c, spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 16:30:57 EDT
+
+Package: cdrom (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:06:30 EDT
+
+Package: cdrom (1.4.0); urgency = medium
+
+Abstract:
+	avoided accessing user space data
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 05 Nov 2010 12:45:34 EDT
+
+Package: cdrom (1.3.0); urgency = medium
+
+Abstract:
+	cdrom module install location changed.
+
+Files Modified: spx/PACKAGES.D/cdrom/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 28 Oct 2010 11:08:14 EDT
+
+Package: cdrom (1.2.0); urgency = medium
+
+Abstract:
+	missing initalization added.
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 27 Oct 2010 10:11:56 EDT
+
+Package: cdrom (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:41:11 EDT
+
+Package: cdrom (1.0.14); urgency = medium
+
+Abstract:
+	cdrom will not be connected to host on module registration with USB core module.
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 13 Aug 2010 11:52:17 EDT
+
+Package: cdrom (1.0.13); urgency = medium
+
+Abstract:
+	cdrom module modified to support dynamic vmedia devices.
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 12 Aug 2010 15:33:32 EDT
+
+Package: cdrom (1.0.12); urgency = medium
+
+Abstract:
+	This change because of IUSB_HEADER field name change.
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 15 Jul 2010 11:21:06 EDT
+
+Package: cdrom (1.0.11); urgency = medium
+
+Abstract:
+	released the cdrom instance during module unload.
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 08 Jul 2010 14:37:35 EDT
+
+Package: cdrom (1.0.10); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:12:20 EDT
+
+Package: cdrom (1.0.9); urgency = high
+
+Abstract:
+	Modified Rules to not to unload module when USB firmware upgrade is used.
+
+Files Modified: spx/PACKAGES.D/cdrom/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 13 May 2010 12:57:26 EDT
+
+Package: cdrom (1.0.8); urgency = medium
+
+Abstract:
+	USB media dependencies resolved for MDS
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 21 Apr 2010 13:38:52 EDT
+
+Package: cdrom (1.0.7); urgency = low
+
+Abstract:
+	serial number string changed.
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 09 Apr 2010 14:13:03 EDT
+
+Package: cdrom (1.0.6); urgency = high
+
+Abstract:
+	iSerialNumber of device descriptor is set to string ID returned by AddStringDesciptor.
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 07 Apr 2010 17:59:43 EDT
+
+Package: cdrom (1.0.5); urgency = low
+
+Abstract:
+	adding serial number string descriptor to fix some failing tests as part of MSC tests of USB 2.0 command verifier
+
+Files Modified: data/cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 07 Apr 2010 17:27:57 EDT
+
+Package: cdrom (1.0.4); urgency = high
+
+Abstract:
+	Makefile corrected. I am curious why this did not come up so far.
+
+Files Modified: data/Makefile
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 31 Mar 2010 12:12:50 EDT
+
+Package: cdrom (1.0.3); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:41:26 EDT
+
+Package: cdrom (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:55:05 EST
+
+Package: cdrom (1.0.1); urgency = low
+
+Abstract:
+	version of iUSB and usbe module dependancy udpated to >= 1.0.0
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 09 Feb 2010 11:17:55 EST
+
+Package:cdrom (1.0.0);urgency=new
+
+Abstract:
+	This package includes CDROM Device driver Module.
+
+Files Added: Makefile, cdrom_mod.c
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Tue, 8 Dec 2009 16:00:54 -0500

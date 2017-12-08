@@ -1,0 +1,91 @@
+--- .pristine/libnetwork-1.58.0-src/data/vlannetworking Thu Jan 12 11:49:47 2012
++++ source/libnetwork-1.58.0-src/data/vlannetworking Fri Jan 13 14:26:08 2012
+@@ -12,6 +12,10 @@
+ TMP_VLAN_ID=0
+ TMP_VLAN_PRIORITY=0
+ VLAN_SETTING_CONF="/conf/vlansetting.conf"
++
++IPV6MODE=""
++IPv6_GLOBAL=""
++LINKADDR=""
+ 
+ if ! [ -f $VLAN_SETTING_CONF ]; then
+     cp -f /etc/defconfig/vlansetting.conf $VLAN_SETTING_CONF
+@@ -39,6 +43,29 @@
+ 								          awk 'BEGIN {FS="="} /vlanpriority/ {print $2}'     | 
+ 								          awk 'NR==1 {print $0}'`
+     fi								          
++}
++
++RemoveIPv6Addr()
++{
++    IFACE=$1
++    
++    IPV6MODE=`cat /etc/network/interfaces | grep $IFACE | grep "inet6" | awk '{print $4}'`
++    if [ "$IPV6MODE" == "autoconf" ] || [ "$IPV6MODE" == "static" ];
++    then   
++        #Remove IPv6 global addresses
++        IPv6_GLOBAL=`ifconfig $IFACE | grep Scope:Global | awk '{print $3}'`
++        for j in $IPv6_GLOBAL; do
++            if [ $j ]; then
++                #echo "Removing Global address $j from $IFACE"
++                ifconfig $IFACE del $j
++            fi
++        done
++        
++        LINKADDR=`ifconfig $IFACE | grep Scope:Link | awk '{print $3}'`
++        ifconfig $IFACE del $LINKADDR
++    else
++    	echo "IPv6 entry is not present in $IFACE"
++    fi        
+ }
+ 
+ VLANINTERFACES_FILE=/conf/vlaninterfaces
+@@ -90,6 +117,7 @@
+ 			fi
+ 		        ifup eth0.$VLAN_ID -i $VLANINTERFACES_FILE
+ 			ifconfig eth0 0.0.0.0
++			RemoveIPv6Addr eth0
+ 		else
+ 		    echo "VLANID is not enabled..."
+ 		fi
+@@ -112,6 +140,7 @@
+ 			fi
+ 		        ifup eth1.$VLAN_ID1 -i $VLANINTERFACES_FILE
+ 			ifconfig eth1 0.0.0.0
++			RemoveIPv6Addr eth1
+ 		else
+ 		    echo "VLANID1 is not enabled..."
+ 		fi
+@@ -134,6 +163,7 @@
+ 			fi
+ 			ifup bond0.$VLAN_ID2 -i $VLANINTERFACES_FILE
+ 			ifconfig bond0 0.0.0.0
++			RemoveIPv6Addr bond0
+ 		else
+ 		    echo "VLANID2 is not enabled..."
+ 		fi
+@@ -213,6 +243,7 @@
+ 	fi
+     
+ 	ifconfig eth0 0.0.0.0
++	RemoveIPv6Addr eth0
+ 
+ 	;;
+     stop0)
+@@ -275,6 +306,7 @@
+ 	fi
+ 	ifup eth1.$VLAN_ID1 -i $VLANINTERFACES_FILE
+ 	ifconfig eth1 0.0.0.0
++	RemoveIPv6Addr eth1
+ 	;;
+     stop1)
+ 	if [ $VLAN_ID1 == 0 ]; then
+@@ -335,6 +367,7 @@
+ 	fi
+ 	ifup bond0.$VLAN_ID2 -i $VLANINTERFACES_FILE
+ 	ifconfig bond0 0.0.0.0
++	RemoveIPv6Addr bond0
+ 	;;
+     stop2)
+ 	if [ $VLAN_ID2 == 0 ]; then

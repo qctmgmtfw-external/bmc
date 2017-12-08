@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+	MKDIR_CLEAN %SPXINC/kcs
+	COPY_DIR ./ %SPXINC/kcs
+
+debug-install:

@@ -1,0 +1,9 @@
+Package: JViewer_1_10_0_2_75844_JavaConsoleRefreshVideoIssue (1.0.0); urgency = new
+
+Abstract:
+	for 75844, Java Console Refresh Video Issue
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_soc_video_Decoder.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 24 Nov 2011 14:36:34 CST
+

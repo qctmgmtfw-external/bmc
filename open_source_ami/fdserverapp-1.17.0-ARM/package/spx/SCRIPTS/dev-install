@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./fdserverapp %IMAGE_TREE/usr/local/bin
+	SET_INIT_SCRIPT ./fdserver
+
+debug-install:

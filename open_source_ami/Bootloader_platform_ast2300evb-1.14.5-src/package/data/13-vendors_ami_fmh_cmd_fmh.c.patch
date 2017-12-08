@@ -1,0 +1,10 @@
+--- u-boot-1.1.6/vendors/ami/fmh/cmd_fmh.c	2011-06-15 16:31:27.805842536 +0800
++++ u-boot-1.1.6-ami/vendors/ami/fmh/cmd_fmh.c	2011-06-15 16:41:00.932843360 +0800
+@@ -247,6 +247,7 @@
+ 	{
+ 		/* If variable is set, then clear it and call fwupdate() */
+ 		setenv("mode", "1");   
++		saveenv();
+ 		fwupdate();
+ 	}
+ #endif

@@ -1,0 +1,1 @@
+int ReInitFloppy_Disk_Letter(char *);

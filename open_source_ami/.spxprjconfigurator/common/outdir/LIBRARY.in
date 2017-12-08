@@ -1,0 +1,256 @@
+menu "Runtime Libraries Configuration"
+
+config GhostFix (1.0.0)
+	bool 
+	default y
+	select target
+	depends on @ARCH_ARM
+	help
+		Contains intercepor function for gethostbyname() to avoid GHOST vulnerability
+
+#--------------------------------------
+config libAMIemailformat (1.4.0)
+	bool "Email Alert AMI format"
+	default n
+	select libEventLogDes
+	depends on libunix
+	help
+		FTS AMI format for Email Alert
+
+#--------------------------------------
+config libEventLogDes (1.1.0)
+	bool "Event Log Error Description"
+	default y
+	depends on libunix
+	depends on @ARCH_ARM
+	help
+		Event Log Error Description
+
+#--------------------------------------
+config libPreserveConf (1.5.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package provides preserve Configuration API's. These API's have the ability to manipulate the INI files
+
+#--------------------------------------
+config libUserPrivilege (1.2.0)
+	bool "USER Privilege"
+	default y
+	help
+		Library to Get user Privilege
+
+#--------------------------------------
+config libadc (1.2.0)
+	bool "ADC Library Support"
+	default n
+	depends on adc
+	depends on @ARCH_ARM
+	help
+		ADC Library Binary
+
+#--------------------------------------
+config libautovideorecord (1.7.0)
+	bool 
+	default y
+	select video
+	select  libvideo
+	select  libncml
+	depends on AutoVideoRecordingSupport &&  libvideorecordcfg
+	depends on @ARCH_ARM
+	help
+		Auto Video Recording functionality
+
+#--------------------------------------
+config libautovideorecord_dev (1.7.0)
+	bool 
+	default y
+	depends on AutoVideoRecordingSupport
+	depends on @ARCH_ARM
+	help
+		Auto Video Recording functionality Development
+
+#--------------------------------------
+config libexpandedgpio (1.2.0)
+	bool "Expanded GPIO Library"
+	default n
+	select libi2c
+	depends on @ARCH_ARM
+	help
+		Expanded GPIO library
+
+#--------------------------------------
+config libfixedsub_emailformat (1.4.0)
+	bool "Email Alert fixed subject format"
+	default n
+	depends on libunix
+	help
+		FTS fixed subject format for Email Alert
+
+#--------------------------------------
+config libgpio (1.5.0)
+	bool "GPIO Library Support"
+	default n
+	depends on gpio
+	depends on @ARCH_ARM
+	help
+		GPIO Library Binary
+
+#--------------------------------------
+config libi2c (1.5.0)
+	bool "I2C Library Support"
+	default n
+	select libunix
+	depends on i2c
+	depends on @ARCH_ARM
+	help
+		I2C Library Binary
+
+#--------------------------------------
+config liblpcuart (1.2.0)
+	bool "LPCUART Library Support"
+	default n
+	select libunix
+	depends on lpcuart
+	depends on @ARCH_ARM
+	help
+		LPCUART Library Support
+
+#--------------------------------------
+config libmmap (1.3.0)
+	bool "Memory Map Library Support"
+	default n
+	depends on @ARCH_ARM
+	help
+		MMAP Library Binary
+
+#--------------------------------------
+config libncml (1.22.0)
+	bool "NCML Library Support"
+	default n
+	select netmon
+	select  ncml_configuration
+	select  libtoken
+	select  libiniparser
+	select  libunix
+	depends on @ARCH_ARM
+	help
+		NCML(Network Connection Management Library) layer provides a common entity with configurations for various network services.
+
+#--------------------------------------
+config libncsiconf (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		User configuration access routines for NCSI.
+
+#--------------------------------------
+config libpeci (1.9.0)
+	bool "PECI Library Support"
+	default n
+	depends on peci
+	depends on @ARCH_ARM
+	help
+		PECI Library Binary
+
+#--------------------------------------
+config libphyconf (1.8.0)
+	bool "PHY Library Support"
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains PHY configuration related APIs
+
+#--------------------------------------
+config libpmbus (1.6.0)
+	bool "PMBUS LIBRARY SUPPORT"
+	default n
+	depends on i2c
+	depends on @ARCH_ARM
+	help
+		PMBus Library Binary
+
+#--------------------------------------
+config libprocmanager (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains library files needed for process manager
+
+#--------------------------------------
+config libreset (1.3.0)
+	bool "Reset Manager Library Support"
+	default n
+	depends on reset
+	depends on @ARCH_ARM
+	help
+		This is the binary package for LIBRESET.
+
+#--------------------------------------
+config libsmb (1.3.0)
+	bool "SMB Library Support"
+	default n
+	select libunix
+	depends on i2c
+	depends on @ARCH_ARM
+	help
+		SMB Library Binary.
+
+#--------------------------------------
+config libsnmpusers (1.8.0)
+	bool 
+	default n
+	select libiniparser
+	depends on @ARCH_ARM
+	help
+		SNMP User Management Library
+
+#--------------------------------------
+config libsnoop (1.3.0)
+	bool "Snoop Library support"
+	default n
+	depends on snoop
+	depends on @ARCH_ARM
+	help
+		This package includes the API calls to access the snoop driver.
+
+#--------------------------------------
+config libsslcertificate (1.7.0)
+	bool "SSL Certificate Library"
+	default y
+	select opensslapp
+	depends on @ARCH_ARM
+	help
+		Library to create, view and validate the SSL certificates
+
+#--------------------------------------
+config libvmedia (1.13.0)
+	bool "Virtual Media Library Support"
+	default n
+	select libiniparser
+	select  libncml
+	depends on @ARCH_ARM
+	help
+		This Package includes build vmedia library module.
+
+#--------------------------------------
+config usbe_driver_dev (1.19.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	help
+		This package includes usbe core driver Development header files.
+
+#--------------------------------------
+
+endmenu
+
+

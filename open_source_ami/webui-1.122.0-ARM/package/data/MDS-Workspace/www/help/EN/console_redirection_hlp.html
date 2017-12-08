@@ -1,0 +1,62 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+ 	<title>console_redirection help</title>
+ 	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	</head>
+	<body>
+	<h2><div class='floatRight'><a href='javascript://' class='closeBtn' onclick='top.closeHelp();'>X</a></div>
+	<div class='helpmainhead'>Console Redirection</div></h2>
+	<div class='subSection'>
+		Launch the remote console redirection window from this page. To launch it, you must have Administrator privileges.
+		<br><br>
+		<strong>NOTE: </strong>A compatible JRE must be installed in the system prior to the launch of JNLP file.
+		<br><br>
+		<fieldset>
+		<legend>Actions</legend>
+		<h4>Java Console</h4>
+		Click 'Java Console' which will cause the jviewer.jnlp file to be downloaded. Once the file is downloaded
+		and launched, a Java redirection window will be displayed.
+		<script type="text/javascript">
+		var activex_help = "<h4>ActiveX Console</h4>" + 
+		"Click 'ActiveX Console' which will cause the activex control to be downloaded, installed, " + 
+		"and an activeX redirection window to be launched.";
+		try
+		{
+			if (top.settings.console.activex.available)
+				document.write (activex_help);
+		}
+		catch(e)
+		{
+		}
+		</script>
+		</fieldset>
+	</div>
+	</body>
+</html>

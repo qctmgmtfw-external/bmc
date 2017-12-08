@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+        MKDIR_CLEAN %TOOLDIR/arm-linux
+        UNTAR_BZ2 ./arm-linux-cc.tar.bz2 %TOOLDIR/arm-linux/
+        SETPATH %$TOOLDIR/arm-linux/cc/bin
+	SET_VALUE CROSS_COMPILE arm-linux-
+
+debug-install:
+
+    
+         

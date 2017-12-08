@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %SPXINC/advisercfg
+		COPY_FILE ./adviser_cfg.h %SPXINC/advisercfg
+		COPY_FILE ./adviser_misc.h %SPXINC/advisercfg
+		MKDIR_NOCLEAN %SPXLIB/advisercfg
+		COPY_FILE ./libadvisercfg.a %SPXLIB/advisercfg
+		COPY_FILE ./libadvisercfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/advisercfg
+		ADD_LIBRARY_LINKS %SPXLIB/advisercfg libadvisercfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		
+debug-install:

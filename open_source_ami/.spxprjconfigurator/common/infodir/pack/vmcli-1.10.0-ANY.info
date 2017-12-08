@@ -1,0 +1,17 @@
+Package : vmcli
+Version : 1.10.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : app
+Required : libfloppy, libcdrom, libharddisk, libkvm_dev
+Essential : NO
+Config-Tag : VMCLI (Windows and Linux)
+Group : SOFTWARE
+Owner : AMI
+Maintainer : muthuchamy  (muthusamyk@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This package contains the source code for VMCLI software Module.
+.

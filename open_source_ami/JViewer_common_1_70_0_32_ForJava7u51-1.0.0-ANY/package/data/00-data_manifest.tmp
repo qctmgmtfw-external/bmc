@@ -1,0 +1,8 @@
+--- .pristine/JViewer_common-1.70.0-src/data/manifest.tmp Thu Jan 23 17:39:33 2014
++++ source/JViewer_common-1.70.0-src/data/manifest.tmp Thu Jan 23 19:24:21 2014
+@@ -1,4 +1,4 @@
+ Manifest-Version: 1.0
+ Main-Class: com.ami.kvm.jviewer.JViewer
+ Class-Path: JViewer-SOC.jar
+-
++Permissions: all-permissions

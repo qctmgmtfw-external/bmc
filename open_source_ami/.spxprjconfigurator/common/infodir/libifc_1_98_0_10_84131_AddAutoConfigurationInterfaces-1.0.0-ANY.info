@@ -1,0 +1,21 @@
+Package : libifc_1_98_0_10_84131_AddAutoConfigurationInterfaces
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 10 for libifc (1.98.0)
+Depends :  libifc(==1.98.0)
+PatchOrder : 10
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  thinkjao (thinkjao@ami.com.tw)
+Urgency : new
+Description : Add configure interfaces in service configuration automatically.
+If Auto configuration is enabled, then all the services will be restarted automatically.
+.
+

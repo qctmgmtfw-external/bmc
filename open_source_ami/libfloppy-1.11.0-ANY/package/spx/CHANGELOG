@@ -1,0 +1,187 @@
+Package: libfloppy (1.11.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:47:13 EDT
+
+Package: libfloppy (1.10.0); urgency = medium
+
+Abstract:
+	Issues Fixed:
+  1.IDE Floppy :LED Lightning
+  2.IDE Floppy :Buffer I/O error
+
+Files Modified: data/Linux/LinuxFloppyReader.cpp, data/Win/Win9xFloppyReader.cpp, data/Win/WinNTFloppyReader.cpp
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 31 Mar 2011 18:04:19 IST
+
+Package: libfloppy (1.9.0); urgency = medium
+
+Abstract:
+	Issue fixed : RHEL5.6 does not re-mount Remote Floppy (Buffer I/O error)
+
+Files Modified: data/Linux/LinuxFloppyReader.cpp, data/Mac/MacFloppyReader.cpp, data/Win/Win9xFloppyReader.cpp, data/Win/WinNTFloppyReader.cpp
+
+--Submitter: othiyappank (gopinaths@amiindia.co.in) Wed, 23 Mar 2011 13:01:34 IST
+
+Package: libfloppy (1.8.0); urgency = medium
+
+Abstract:
+	Included condition to avoid reading beyond Max Sector range
+
+ --This line, and those below, will be ignored--
+M	data/Common/floppyimagereader.c
+
+Files Modified: data/Common/floppyimagereader.c
+
+--Submitter: othiyappank (gopinaths@amiindia.co.in) Wed, 09 Mar 2011 17:57:27 IST
+
+Package: libfloppy (1.7.0); urgency = medium
+
+Abstract:
+	Issue Fixed : Remote FD access Lamp keeps lighting on RHEL5
+
+Files Modified: data/Linux/LinuxFloppyReader.cpp, data/Mac/MacFloppyReader.cpp, data/Win/Win9xFloppyReader.cpp, data/Win/WinNTFloppyReader.cpp, data/include/LinuxFloppyReader.h, data/include/MacFloppyReader.h, data/include/Win9xFloppyReader.h, data/include/WinNTFloppyReader.h
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 04 Mar 2011 20:49:52 IST
+
+Package: libfloppy (1.6.0); urgency = medium
+
+Abstract:
+	USB Floppy detection in windows 7 and windows servers
+
+Files Modified: data/Win/USBDisk.cpp
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 19 Oct 2010 18:02:56 IST
+
+Package: libfloppy (1.5.0); urgency = low
+
+Abstract:
+	Fix for floppy path not displayed in MAC-32 bit.
+
+Files Modified: data/Mac/MacFloppyReader.cpp
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 19 Oct 2010 11:00:20 IST
+
+Package: libfloppy (1.4.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	  While redirecting Cdimage in floppy Drive,proper error message should be thrown..
+
+Files Modified: data/Common/floppyimagereader.c
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 05 Oct 2010 05:05:39 IST
+
+Package: libfloppy (1.3.0); urgency = medium
+
+Abstract:
+	Fixed Issue :Multiple language encoding support on ISO redirection
+
+Files Modified: data/Common/floppyimagereader.c
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 19:45:24 IST
+
+Package: libfloppy (1.2.0); urgency = medium
+
+Abstract:
+	Fix for External hard disk path was displayed in floppy path.
+
+Files Modified: data/Mac/MacFloppyReader.cpp
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 28 Sep 2010 09:29:28 IST
+
+Package: libfloppy (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:54:49 EDT
+
+Package: libfloppy (1.0.8); urgency = medium
+
+Abstract:
+	Source For the commit 72556
+
+Files Modified: data/Win/USBDisk.cpp, spx/INFO
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 27 Aug 2010 23:13:33 IST
+
+Package: libfloppy (1.0.7); urgency = medium
+
+Abstract:
+	Issue Fixed in display the Floppy,CD,HD device
+
+Files Modified: data/Win/USBDisk.cpp, data/Win/WinNTFloppyReader.cpp
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 24 Aug 2010 18:38:38 IST
+
+Package: libfloppy (1.0.6); urgency = medium
+
+Abstract:
+	Added dependency with libkvm.Made changes in projectfile/Makefiles with respect to libkvm.
+
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Mac/Mac_x86_32/Makefile, data/Mac/Mac_x86_64/Makefile, data/Win/floppyLibWin.vcproj, data/include/FloppyReader.h, data/include/floppyimagereader.h, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 07 Aug 2010 17:17:10 IST
+
+Package: libfloppy (1.0.5); urgency = medium
+
+Abstract:
+	Removed depency with libcdrom
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 05 Aug 2010 11:29:51 EDT
+
+Package: libfloppy (1.0.4); urgency = low
+
+Abstract:
+	Changed section field as software.
+Corrections in depends field to enable correct packages.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 05 Aug 2010 19:20:25 IST
+
+Package: libfloppy (1.0.3); urgency = medium
+
+Abstract:
+	Removed object files.
+
+Files Deleted: data/Linux/Linux_x86_32/FloppyImgFileReader.o, data/Linux/Linux_x86_32/FloppyMediaReader.o, data/Linux/Linux_x86_32/LinuxFloppyReader.o, data/Linux/Linux_x86_32/dbgout.o, data/Linux/Linux_x86_32/floppyimagereader.o
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 03 Aug 2010 13:20:23 IST
+
+Package: libfloppy (1.0.2); urgency = low
+
+Abstract:
+	Updated Group field for software library package.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 03 Aug 2010 13:10:54 IST
+
+Package: libfloppy (1.0.1); urgency = medium
+
+Abstract:
+	Modified the Floppy device finding technique,Geting the logical drive and check the drive type
+
+Files Added: data/Linux/Linux_x86_32/FloppyImgFileReader.o, data/Linux/Linux_x86_32/FloppyMediaReader.o, data/Linux/Linux_x86_32/LinuxFloppyReader.o, data/Linux/Linux_x86_32/dbgout.o, data/Linux/Linux_x86_32/floppyimagereader.o, data/Win/StdAfx.h, data/Win/USBDisk.cpp, data/Win/Usbdisk.h
+Files Modified: data/Win/WinNTFloppyReader.cpp, data/Win/floppyLibWin.ncb, data/Win/floppyLibWin.suo, data/Win/floppyLibWin.vcproj
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 02 Aug 2010 22:16:55 IST
+
+Package: libfloppy (1.0.0); urgency = new
+
+Abstract:
+	This Package contains the floppy related library files.
+
+Files Added: data, data/Common, data/Common/FloppyImgFileReader.cpp, data/Common/FloppyMediaReader.cpp, data/Common/dbgout.c, data/Common/floppyimagereader.c, data/Doxyfile, data/Linux, data/Linux/LinuxFloppyReader.cpp, data/Linux/Linux_x86_32, data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64, data/Linux/Linux_x86_64/Makefile, data/Linux/Makefile, data/Mac, data/Mac/MacFloppyReader.cpp, data/Mac/Mac_x86_32, data/Mac/Mac_x86_32/Makefile, data/Mac/Mac_x86_64, data/Mac/Mac_x86_64/Makefile, data/Mac/Makefile, data/Mac/README.txt, data/Win, data/Win/Win9xFloppyReader.cpp, data/Win/WinNTFloppyReader.cpp, data/Win/floppyLibWin.ncb, data/Win/floppyLibWin.sln, data/Win/floppyLibWin.suo, data/Win/floppyLibWin.vcproj, data/bldhelp.js, data/build.wsf, data/include, data/include/FloppyImgFileReader.h, data/include/FloppyMediaReader.h, data/include/FloppyReader.h, data/include/LinuxFloppyReader.h, data/include/MacFloppyReader.h, data/include/Win9xFloppyReader.h, data/include/WinNTFloppyReader.h, data/include/floppyerrors.h, data/include/floppyimagereader.h, data/include/libfloppy.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 28 Jul 2010 12:49:11 IST
+

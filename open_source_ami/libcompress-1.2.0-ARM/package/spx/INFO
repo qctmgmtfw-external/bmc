@@ -1,0 +1,15 @@
+Package : libcompress
+Non-Editable : YES
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Vinay Tandon  (vinayt@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Package-License : AMI
+Description : This package contains the COMPRESS Library Binary.
+.

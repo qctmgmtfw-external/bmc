@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_23_ToFixReadEvtMsgBufferFunctionReturnValueWhenMessageQueueIsEmpty (1.0.0); urgency = new
+
+Abstract:
+	To fix ReadEvtMsgBuffer function return value when message queue is empty.
+
+Files Added: data, data/00-data_App_AppDevice_AppDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: jackyang (jackyang@ami.com.tw) Tue, 05 Jun 2012 18:14:47 CST
+

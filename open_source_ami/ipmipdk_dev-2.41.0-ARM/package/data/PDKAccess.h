@@ -1,0 +1,239 @@
+/******************************************************************
+ ******************************************************************
+ ***                                                                                                           **
+ ***    (C)Copyright 2009, American Megatrends Inc.                            **
+ ***                                                                                                           **
+ ***    All Rights Reserved.                                                                          **
+ ***                                                                                                           **
+ ***    5555 , Oakbrook Pkwy, Norcross,                                                       **
+ ***                                                                                                           **
+ ***    Georgia - 30093, USA. Phone-(770)-246-8600.                                  **
+ ***                                                                                                           **
+ ******************************************************************
+ ******************************************************************
+ ******************************************************************
+ *
+ * PDKAccess.h
+ * PDK Hooks Access methods
+ *
+ *  Author: Winston <winstonv@amiindia.co.in>
+ 
+ ******************************************************************/
+#ifndef _H_PDKACCESS_
+#define _H_PDKACCESS_
+#include "OemDefs.h"
+
+#ifdef CONFIG_SPX_FEATURE_GLOBAL_PDK_LIB
+#define PDK_LIB CONFIG_SPX_FEATURE_GLOBAL_PDK_LIB
+#else
+#define PDK_LIB "/usr/local/lib/libipmipdk.so"
+#endif
+
+
+#define MAX_PDK_EMAIL_HANDLE 20
+
+
+#define LD_PATH "/usr/local/lib/email/"
+#define GET_EMAIL_FORMAT "GetEmailFormat"
+#define FILL_SMTP_CONTENT "FillSMTPContent"
+typedef enum
+{
+    PDK_GETPSGOOD = 0,
+    PDK_PREINIT,
+    PDK_BEFORECREATINGTASKS,
+    PDK_AFTERCREATINGTASKS,
+    PDK_ONTASKSTARTUP,
+    PDK_LPCRESET,
+    PDK_POSTINIT,
+    PDK_SPOEMINSTRUCTION,
+    PDK_PREMONITORSENSOR,
+    PDK_POSTMONITORSENSOR,
+    PDK_PREMONITORALLSENSORS,
+    PDK_POSTMONITORALLSENSORS,
+    PDK_PREADDSEL,
+    PDK_POSTADDSEL,
+    PDK_PRECLEARSEL,
+    PDK_GETSELLIMIT,
+    PDK_SELLIMITEXCEEDED,
+    PDK_PEFOEMACTION,
+    PDK_CHASSISTIMERCB,
+    PDK_TIMERTASK,
+    PDK_BEFOREBMCCOLDRESET,
+    PDK_BEFOREBMCWARMRESET,
+    PDK_BEFOREINITAGENT,
+    PDK_AFTERINITAGENT,
+    PDK_BEFOREPOWERONCHASSIS,
+    PDK_AFTERPOWERONCHASSIS,
+    PDK_BEFOREPOWEROFFCHASSIS,
+    PDK_AFTERPOWEROFFCHASSIS,
+    PDK_BEFORERESETCHASSIS,
+    PDK_AFTERRESETCHASSIS,
+    PDK_BEFOREPOWERCYCLECHASSIS,
+    PDK_AFTERPOWERCYCLECHASSIS,
+    PDK_BEFOREDIAGINTERRUPT,
+    PDK_AFTERDIAGINTERRUPT,
+    PDK_BEFORESMIINTERRUPT,
+    PDK_AFTERSMIINTERRUPT,
+    PDK_BEFORESOFTOFFCHASSIS,
+    PDK_AFTERSOFTOFFCHASSIS,
+    PDK_ONACPISTATECHANGE,
+    PDK_GETMFGPRODID,
+    PDK_INITSOLPORT,
+    PDK_GETSPECIFICSENSORREADING,
+    PDK_SETCURCMDCHANNELINFO,
+    PDK_SETSMSATTN,
+    PDK_CLEARSMSATTN,
+    PDK_BEFOREWATCHDOGACTION,
+    PDK_WATCHDOGACTION,
+    PDK_LOADOEMSENSORDEFAULT,
+    PDK_SETLASTPOWEREVENT,
+    PDK_GETLASTPOWEREVENT,
+    PDK_APPENDOEMPETDATA,
+    PDK_GETSELFTESTRESULTS,
+    PDK_PROCESSOEMRECORD,
+    PDK_AFTERSDRINIT,
+    PDK_SENSORAVERAGE,
+    PDK_SMCDELAY,
+    PDK_PLATFORMINIT,
+    PDK_COLDRESETBMC,
+    PDK_WARMRESETBMC,
+    PDK_GETSYSTEMSTATE,
+    PDK_ONSYSTEMEVENTDETECTED,
+    PDK_ISACPOWERON,
+    PDK_POWERONCHASSIS,
+    PDK_POWEROFFCHASSIS,
+    PDK_SOFTOFFCHASSIS,
+    PDK_POWERCYCLECHASSIS,
+    PDK_RESETCHASSIS,
+    PDK_DIAGINTERRUPTCHASSIS,
+    PDK_SMIINTERRUPTCHASSIS,
+    PDK_CHASSISIDENTIFY,
+    PDK_FPENABLE,
+    PDK_SWITCHEMPMUX,
+    PDK_ASSERTSOLCTS,
+    PDK_DEASSERTSOLCTS,
+    PDK_GENERATEBEEP,
+    PDK_CLEARCMOS,
+    PDK_FANCONTROL,
+    PDK_HANDLECHASSISINTERRUPTS,
+    PDK_REGISTERCHASSISINTERRUPTS,
+    PDK_PROCESSINTERRUPTSENSOR,
+    PDK_HANDLEINTERRUPTSENSORS,
+    PDK_REGISTERINTERRUPTSENSORS,
+    PDK_SETPOWERLIMIT,
+    PDK_ACTIVATEPOWERLIMIT,
+    PDK_READSERVERPOWERUSAGE,
+    PDK_GETFRUAREAINFO,
+    PDK_READFRUDATA,
+    PDK_WRITEFRUDATA,
+    PDK_INITFRU,
+    PDK_DCMIGETFRUDEVICEID,
+    PDK_DCMIREADFRU,
+    PDK_DCMIWRITEFRU,
+    PDK_ALERT,
+    PDK_AFTERSNMPTRAP,
+    PDK_FRAMEANDSENDMAIL,
+    PDK_PLATFORMSETUPLED,
+    PDK_GLOWLED,
+    PDK_PUSTTOTESTLED,
+    PDK_GLOWFAULTLED,
+    PDK_REGINTFDS,
+    PDK_REGINT,
+    PDK_GETINTINFO,
+    PDK_GETLANOEMPARAM,
+    PDK_SETLANOEMPARAM,
+    PDK_POSTSETLANPARAM,
+    PDK_GETSYSINFOPARAM,
+    PDK_SETSYSINFOPARAM,
+    PDK_GETSOLOEMPARAM,
+    PDK_SETSOLOEMPARAM,
+    PDKINITNVRSDR,
+    PDKWRITESDR,
+    PDKINITNVRSEL,
+    PDKWRITESEL,
+    PDK_GETETHINDEX,
+    PDK_GETLANCHANNEL,
+    PDK_SETOBF,
+    PDK_PNMOEMGETREADING,
+    PDK_PNMOEMMEPOWERSTATECHANGE,
+    PDK_PREMONITORINDIVIDUALSENSOR,
+    PDK_POHCOUNTER,
+    PDK_GETBMCSLAVEADDR,
+    PDK_SWITCHMUX,
+    PDK_INITSYSTEMGUID,
+    PDK_INITDEVICEGUID,
+    PDK_GETPRIMARYIPMBADDR,
+    PDK_GETSECONDARYIPMBADDR,
+    PDK_CHECKACPIPOWERSTATE,
+    PDK_RMCPLOGINAUDIT,
+    PDK_BIOSIPSOURCE,
+    PDK_BMCOTHERSOURCEIP,
+    PDK_GETIFACECOUNT,
+    PDK_FRUGETDEVADDRESS,
+    PDK_GETPLATFORMPATH,
+    PDK_ONLANSTATECHANGE,
+    PDK_AFTERINITSOCKETS,
+    PDK_POWERMANAGMENTCAPABILITY,
+#ifdef CONFIG_SPX_FEATURE_SSICOMPUTEBLADE_SUPPORT
+    PDK_PREOPSTATE,
+    PDK_POSTOPSTATE,
+    PDK_ISINSERTCRITERIAMET,
+    PDK_READSLOTID,
+    PDK_GETSLOTID,
+    PDK_GETPHYSLOTNUM,
+    PDK_GENSLOTBASEDIPMBADDR,
+    PDK_GETSLOTBASEDIPMBADDR,
+    PDK_ISPOWERONRESET,
+    PDK_SETPOWERLEVEL,
+    PDK_RENEGOPOWER,
+    PDK_POWERWAKEUP,
+    PDK_UPDPOWERLEDSTATUS,
+    PDK_UPDFAULTLEDSTATUS,
+#endif
+    PDK_SETPRESERVESTATUS,
+    PDK_GETPRESERVESTATUS,
+    PDK_REGISTERSENSORHOOKS,
+    PDK_POSTCLEARSEL,
+    PDK_IPMBBRIDGEREQ,
+    PDK_OEMIPMICONFIG,
+    PDK_OEMIPMICONFIGDAT,
+    PDK_FLUSHOEMCONFIGS,
+    PDK_GETOEMCONFIGSIZE,
+    PDK_LOADOEMCONFIGSDAT,
+    PDK_PWRONOFFAUDIT,
+    PDK_GETLANCONFIGURATIONS,
+    MAX_PDK_HANDLE
+}PDK_Hooks;
+
+
+typedef struct
+{
+    INT16U PDKHookNum;
+    INT8U PDKHookName[255];
+}PDK_Init;
+
+typedef struct
+{
+    void *func;
+}PDKHook_func;
+
+ typedef struct
+{
+    INT8U EmailFormat[EMAIL_FORMAT_SIZE];
+}PDK_EmailFormat;
+typedef void (*pfunc) (void );
+
+extern pfunc g_PDKHandle[MAX_PDK_HANDLE];
+
+extern pfunc g_PDKEmailHandle[MAX_PDK_EMAIL_HANDLE];
+
+extern int EmailformatCount;
+
+extern PDK_EmailFormat g_PDKEmailFormat[MAX_PDK_EMAIL_HANDLE];
+extern int InitPDKHooks();
+extern void *dl_pdkhandle;
+
+
+#endif //_H_PDKACCESS_
+
+

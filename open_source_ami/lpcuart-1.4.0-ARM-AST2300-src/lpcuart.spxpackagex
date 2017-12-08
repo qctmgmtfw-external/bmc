@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/lpcuart-1.4.0-ARM-AST2300-src/package/data/lpcuart_mod.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/lpcuart-1.4.0-ARM-AST2300-src/package/data/lpcuart.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/lpcuart-1.4.0-ARM-AST2300-src/package/data/Makefile</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>lpcuart</package-name>
+<version>1.4.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">crosscc</package-name>
+<package-name operator="" version="">kernel_dev</package-name>
+<package-name operator="" version="">rules</package-name>
+<package-name operator="" version="">global_dev</package-name>
+<package-name operator="" version="">helper_driver_dev</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>DEVICE</group>
+<configtags/>
+<installsize/>
+<description>This package contains driver to control routing between io com ports and uarts</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>alexyang  </maintainer>
+<maintainer-email>alexyang@ami.com.tw</maintainer-email>
+<sourcelocation>AMI</sourcelocation>
+<sourceversion>1.0.0</sourceversion>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc>AST2300</soc>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/lpcuart-1.4.0-ARM-AST2300-src/package/spx/RULES</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages>
+<package>
+<name>lpcuart</name>
+<section>sys</section>
+<essential>NO</essential>
+<configtags>LPCUART Device Support</configtags>
+<group>DEVICE</group>
+<license>GPL-V2</license>
+<description>This package contains lpcuart driver for ast2300 to control routing between io com ports and uarts</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends>
+<package-name operator="" version="">kernel</package-name>
+</depends>
+<required>
+<package-name operator="" version="">helper</package-name>
+</required>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/lpcuart-1.4.0-ARM-AST2300-src/package/spx/PACKAGES.D/lpcuart/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+<package>
+<name>lpcuart_driver_dev</name>
+<section>dev</section>
+<essential>NO</essential>
+<configtags/>
+<group>DEVEL</group>
+<license>GPL-V2</license>
+<description>This package contains lpcuart driver development header files.</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends/>
+<required/>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/lpcuart-1.4.0-ARM-AST2300-src/package/spx/PACKAGES.D/lpcuart_driver_dev/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/lpcuart-1.4.0-ARM-AST2300-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

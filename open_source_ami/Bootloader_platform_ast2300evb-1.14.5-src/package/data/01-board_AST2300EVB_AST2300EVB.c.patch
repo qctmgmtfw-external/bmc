@@ -1,0 +1,70 @@
+--- u-boot-1.1.6/board/AST2300EVB/AST2300EVB.c	1970-01-01 08:00:00.000000000 +0800
++++ u-boot-1.1.6-ami/board/AST2300EVB/AST2300EVB.c	2011-02-25 16:42:04.000000000 +0800
+@@ -0,0 +1,67 @@
++#include <common.h>
++#include <config.h>
++#include <asm/processor.h>
++#include "ast2300_hw.h"
++
++#define AHB_REG_BASE		0x1E600000
++#define AHB_UNLOCK_MAGIC 	0xAEED1A03
++#define AHB_REMAP_REG		0x8C
++
++extern void soc_init(void);
++
++DECLARE_GLOBAL_DATA_PTR;
++
++int board_init (void)
++{
++    unsigned long reg;
++
++	*((volatile ulong *) AHB_REG_BASE) = AHB_UNLOCK_MAGIC; /* unlock AHB controller */
++	*((volatile ulong *) (AHB_REG_BASE + AHB_REMAP_REG)) = 0x01; /* memory remap */
++	*((volatile ulong *) AHB_REG_BASE) = 0; /* lock AHB controller */
++
++    *((volatile ulong*) AST_SMC_BASE) |= 0x00001c00; /* enable Flash Write */
++
++    *((volatile ulong*) SCU_KEY_CONTROL_REG) = 0x1688A8A8; /* unlock SCU */
++
++    reg = *((volatile ulong*) SCU_CLK_SELECT_REG); /* LHCLK = HPLL/8 */
++    reg &= 0x1c0fffff; /* PCLK  = HPLL/8 */
++    reg |= 0x61b00000; /* BHCLK = HPLL/8 */
++    *((volatile ulong*) SCU_CLK_SELECT_REG) = reg;
++
++    reg = *((volatile ulong*) SCU_CLK_STOP_REG); /* enable 2D Clk */
++    reg &= 0xFFFFFFFD;
++    *((volatile ulong*) SCU_CLK_STOP_REG) = reg;
++
++	/* Enable the reference clock divider (div13) for UART1 and UART2 */
++	*((volatile unsigned long *) SCU_MISC_CONTROL_REG) |= 0x1000;
++
++	*((volatile ulong*) SCU_KEY_CONTROL_REG) = 0; /* lock SCU */
++
++	/*Should match with linux mach type for this board */
++	gd->bd->bi_arch_number = 900;
++	/* Should match with linux Makefile.boot entry for params-phys-y */
++	gd->bd->bi_boot_params = CFG_SDRAM_BASE + 0x0000100;
++
++	/* Initialize SOC related */
++	soc_init();
++	return 0;
++}
++
++
++int dram_init (void)
++{
++	bd_t *bd = gd->bd;
++
++	/* Only one Bank*/
++	bd->bi_dram[0].start = CFG_SDRAM_BASE;
++	bd->bi_dram[0].size = CFG_SDRAM_LEN;
++
++	return (0);
++}
++
++short 
++ReadJumperConfig(void)
++{
++	/* Return Path ID */
++	return -1;
++}

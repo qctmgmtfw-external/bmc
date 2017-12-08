@@ -1,0 +1,164 @@
+diff -Naur linux-2.6.28.10.org/drivers/i2c/i2c-core.c linux-2.6.28.10/drivers/i2c/i2c-core.c
+--- linux-2.6.28.10.org/drivers/i2c/i2c-core.c	2010-09-20 16:04:16.823862462 -0400
++++ linux-2.6.28.10/drivers/i2c/i2c-core.c	2010-09-20 16:05:14.063860410 -0400
+@@ -1136,7 +1136,27 @@
+ 			return ret;
+ 		}
+ 		break;
++	case SMBUS_HOST_NOTIFY:
++		if (adap->algo->smb_slave_recv)
++		{
++			char 	*tmp;
++			int 	ret = 0;
++			int     count = 0;
++			tmp = kmalloc(MAX_IPMB_MSG_SIZE, GFP_KERNEL);
++			if (tmp==NULL)
++				return -ENOMEM;
++		
++			ret = adap->algo->smb_slave_recv(adap,tmp,count);
++			if (ret > 0)
++				ret = copy_to_user((unsigned char __user *)arg,tmp,ret)?-EFAULT:ret;
++	#ifdef DEBUG
++			printk (KERN_DEBUG "ret value returned in slave receive call = 0x%x\n", ret);
++	#endif
++			kfree(tmp);
++			return ret;
+ 
++		}
++		break;
+ 	/* UNTESTED CODE :We don't have any scenario to test slave writes */
+ #if 0
+ 	case I2C_SLAVEWRITE:
+@@ -1228,6 +1248,7 @@
+ }
+ EXPORT_SYMBOL(i2c_master_recv);
+ 
++
+ /* ----------------------------------------------------
+  * the i2c address scanning function
+  * Will not work for 10-bit addresses!
+@@ -1662,7 +1683,7 @@
+ }
+ 
+ /* Assume a 7-bit address, which is reasonable for SMBus */
+-static u8 i2c_smbus_msg_pec(u8 pec, struct i2c_msg *msg)
++u8 i2c_smbus_msg_pec(u8 pec, struct i2c_msg *msg)
+ {
+ 	/* The address will be sent first */
+ 	u8 addr = (msg->addr << 1) | !!(msg->flags & I2C_M_RD);
+@@ -1673,7 +1694,7 @@
+ }
+ 
+ /* Used for write only transactions */
+-static inline void i2c_smbus_add_pec(struct i2c_msg *msg)
++void i2c_smbus_add_pec(struct i2c_msg *msg)
+ {
+ 	msg->buf[msg->len] = i2c_smbus_msg_pec(0, msg);
+ 	msg->len++;
+@@ -1684,7 +1705,7 @@
+    partial CRC from the write part into account.
+    Note that this function does modify the message (we need to decrease the
+    message length to hide the CRC byte from the caller). */
+-static int i2c_smbus_check_pec(u8 cpec, struct i2c_msg *msg)
++int i2c_smbus_check_pec(u8 cpec, struct i2c_msg *msg)
+ {
+ 	u8 rpec = msg->buf[--msg->len];
+ 	cpec = i2c_smbus_msg_pec(cpec, msg);
+@@ -2122,6 +2143,9 @@
+ 
+ 	return res;
+ }
++EXPORT_SYMBOL(i2c_smbus_msg_pec);
++EXPORT_SYMBOL(i2c_smbus_add_pec);
++EXPORT_SYMBOL(i2c_smbus_check_pec);
+ EXPORT_SYMBOL(i2c_smbus_xfer);
+ #ifdef I2C_BUS_RECOVERY
+ EXPORT_SYMBOL(i2c_recovery_event);
+diff -Naur linux-2.6.28.10.org/drivers/i2c/i2c-dev.c linux-2.6.28.10/drivers/i2c/i2c-dev.c
+--- linux-2.6.28.10.org/drivers/i2c/i2c-dev.c	2010-09-20 16:04:16.823862462 -0400
++++ linux-2.6.28.10/drivers/i2c/i2c-dev.c	2010-09-20 16:05:25.603859271 -0400
+@@ -329,7 +329,7 @@
+ 		/* These are special: we do not use data */
+ 		return i2c_smbus_xfer(client->adapter, client->addr,
+ 				      client->flags, data_arg.read_write,
+-				      data_arg.command, data_arg.size, NULL);
++				      data_arg.command, data_arg.size, &temp);
+ 
+ 	if (data_arg.data == NULL) {
+ 		dev_dbg(&client->adapter->dev,
+@@ -362,6 +362,7 @@
+ 	}
+ 	res = i2c_smbus_xfer(client->adapter, client->addr, client->flags,
+ 	      data_arg.read_write, data_arg.command, data_arg.size, &temp);
++#if 0
+ 	if (!res && ((data_arg.size == I2C_SMBUS_PROC_CALL) ||
+ 		     (data_arg.size == I2C_SMBUS_BLOCK_PROC_CALL) ||
+ 		     (data_arg.read_write == I2C_SMBUS_READ))) {
+@@ -369,6 +370,33 @@
+ 			return -EFAULT;
+ 	}
+ 	return res;
++#endif
++		if ( res && (((data_arg.size == I2C_SMBUS_BYTE) || 
++		              (data_arg.size == I2C_SMBUS_BYTE_DATA) ||(data_arg.size == I2C_SMBUS_WORD_DATA))&&
++			      (data_arg.read_write == I2C_SMBUS_READ))) {
++			if (copy_to_user(data_arg.data, &temp, datasize))
++				return -EFAULT;
++		}
++		
++		if (  res && (data_arg.size == I2C_SMBUS_BLOCK_DATA)&&(data_arg.read_write == I2C_SMBUS_READ))
++			{
++			
++			if (copy_to_user(data_arg.data, &temp, res)) 
++				return -EFAULT;
++			}
++		
++			
++		if ( res && (((data_arg.size == I2C_SMBUS_PROC_CALL) || 
++		              (data_arg.size == I2C_SMBUS_BLOCK_PROC_CALL)) ||
++			      (data_arg.read_write == I2C_SMBUS_READ))) {
++			if (copy_to_user(data_arg.data, &temp, res * sizeof(data_arg.data->byte)))
++				return -EFAULT;
++		}
++		
++		
++		return 0;
++
++
+ }
+ 
+ static long i2cdev_ioctl(struct file *file, unsigned int cmd, unsigned long arg)
+diff -Naur linux-2.6.28.10.org/include/linux/i2c-dev.h linux-2.6.28.10/include/linux/i2c-dev.h
+--- linux-2.6.28.10.org/include/linux/i2c-dev.h	2010-09-20 16:04:18.383860974 -0400
++++ linux-2.6.28.10/include/linux/i2c-dev.h	2010-09-20 16:05:54.263860086 -0400
+@@ -59,6 +59,8 @@
+ #define I2C_SET_REC_INFO	0x0754	/* Set Recovery Parameters */
+ #define I2C_GET_REC_INFO	0x0755	/* Get Recovery Parameters */
+ #define I2C_RESET		0x0756	/* Reset Controller */
++#define SMBUS_HOST_NOTIFY	0x0757 /* Perform SMBus Host Notify Protocol */
++
+ 
+ /* This is the structure as used in the I2C_SMBUS ioctl call */
+ struct i2c_smbus_ioctl_data {
+diff -Naur linux-2.6.28.10.org/include/linux/i2c.h linux-2.6.28.10/include/linux/i2c.h
+--- linux-2.6.28.10.org/include/linux/i2c.h	2010-09-20 16:04:18.333858594 -0400
++++ linux-2.6.28.10/include/linux/i2c.h	2010-09-20 16:09:48.443859722 -0400
+@@ -79,7 +79,9 @@
+ 
+ /* Now follow the 'nice' access routines. These also document the calling
+    conventions of i2c_smbus_xfer. */
+-
++extern u8 i2c_smbus_msg_pec(u8 pec, struct i2c_msg *msg);
++extern void i2c_smbus_add_pec(struct i2c_msg *msg);
++extern int i2c_smbus_check_pec(u8 cpec, struct i2c_msg *msg);
+ extern s32 i2c_smbus_read_byte(struct i2c_client *client);
+ extern s32 i2c_smbus_write_byte(struct i2c_client *client, u8 value);
+ extern s32 i2c_smbus_read_byte_data(struct i2c_client *client, u8 command);
+@@ -353,6 +355,7 @@
+ 	/* Slave Receive and Slave Send Functions */
+ 	int (*slave_send)(struct i2c_adapter *adap , char *data ,int size);
+ 	int (*slave_recv)(struct i2c_adapter *adap , char *data ,int size);
++	int (*smb_slave_recv)(struct i2c_adapter *adap , char *data , int size);
+ 
+ 	/* Extended IOCTL Calls */
+ 	int (*i2c_hw_ioctl)(struct i2c_adapter *adap, unsigned long cmd , unsigned long arg); 

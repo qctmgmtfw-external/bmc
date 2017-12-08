@@ -1,0 +1,19 @@
+--- linux-2.6.28.10/drivers/video/Kconfig	2009-05-03 02:54:43.000000000 +0800
++++ linux-2.6.28.10-ami/drivers/video/Kconfig	2011-05-26 17:29:07.051292000 +0800
+@@ -1502,6 +1502,15 @@
+ 	  (315/H/PRO, 55x, 650, 651, 740, 330, 661, 741, 760, 761) as well
+ 	  as XGI V3XT, V5, V8 and Z7.
+ 
++config FB_AST
++	bool "ASPEED AST2300 graphics display controller support"
++	depends on FB && ARCH_AST2300EVB
++	select FB_CFB_FILLRECT
++	select FB_CFB_COPYAREA
++	select FB_CFB_IMAGEBLIT
++	help
++	  Say Y here to support use of the AST2300 graphics display controller.
++
+ config FB_VIA
+        tristate "VIA UniChrome (Pro) and Chrome9 display support"
+        depends on FB && PCI
+        

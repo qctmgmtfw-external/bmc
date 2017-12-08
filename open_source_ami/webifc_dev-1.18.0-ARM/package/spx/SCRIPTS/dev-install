@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_NOCLEAN %SPXINC/webifc
+        COPY_DIR ./ %SPXINC/webifc
+
+debug-install:

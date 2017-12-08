@@ -1,0 +1,772 @@
+menu "Device Configuration"
+
+config CDDVD_HW_support (1.1.0)
+	bool 
+	default n
+	select usb1_hw
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		Dummy package to select appropriate USB hardware module for the selected device.
+
+#--------------------------------------
+config CDDVD_support (1.2.0)
+	bool "CD/DVD Device Support"
+	default n
+	select cdrom
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This is a dummy package to properly select USB driver modules to support cd/dvd device on the selected SoC.
+
+#--------------------------------------
+config Floppy_HW_support (1.1.0)
+	bool 
+	default n
+	select usb1_hw
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This is a dummy package to select the proper USB hardware module for the selected device on a particular SOC.
+
+#--------------------------------------
+config Floppy_support (1.2.0)
+	bool "Floppy/USB Key Device Support"
+	default n
+	select floppy
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This is a dummy pacakge to properly select USB driver modules to support Floppy/USB Key device on a selected SoC.
+
+#--------------------------------------
+config HID_HW_support (1.1.0)
+	bool 
+	default n
+	select usb1_hw
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This is a dummy package to select the proper USB hardware module for the selected device on a particular SOC.
+
+#--------------------------------------
+config HID_support (1.1.0)
+	bool 
+	default n
+	select hid
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This is a dummy package to select the proper USB hardware module for the selected device on a particular SOC.
+
+#--------------------------------------
+config HDisk_HW_support (1.1.0)
+	bool 
+	default n
+	select usb1_hw
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This is a dummy package to select the proper USB hardware module for the selected device on a particular SOC.
+
+#--------------------------------------
+config HDisk_support (1.2.0)
+	bool "Hard Disk Device Support"
+	default n
+	select hdisk
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This is a dummy package to properly select USB driver modules to support hard disk device on the selected SoC.
+
+#--------------------------------------
+config usb1_hw (1.6.0)
+	bool 
+	default n
+	select helper
+	select  reset
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  libdbgout_dev
+	select  rules
+	select  usbe_driver_dev
+	depends on kernel &&  usbe
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains the built USB virtual hub controller driver module for AST SoC.
+
+#--------------------------------------
+config platform (1.7.0)
+	bool 
+	default y
+	select crosscc
+	select  kernel_dev
+	select  rules
+	depends on kernel
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		This package contains the built platform-specific hardware initialization module for AST2300EVB.
+
+#--------------------------------------
+config videocap (1.14.0)
+	bool 
+	default y
+	select crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	depends on internal_video &&  video &&  kernel
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains the built video capture dirver for AST SoC.
+
+#--------------------------------------
+config adc (1.6.0)
+	bool "ADC Device Support"
+	default n
+	select helper
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	depends on kernel &&  hw_adc
+	help
+		ADC common driver module
+
+#--------------------------------------
+config adc_hw (1.4.0)
+	bool 
+	default y
+	select helper
+	select adc_driver_dev
+	select  crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	depends on adc &&  kernel
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		This package contains built ADC hardware driver for AST2300EVB.
+
+#--------------------------------------
+config bt (1.1.0)
+	bool "BT Device Support"
+	default n
+	select reset
+	select  helper
+	select crosscc
+	select  rules
+	select  global_dev
+	select  kernel_dev
+	select  helper_driver_dev
+	select  libdbgout_dev
+	depends on kernel &&  hw_bt
+	help
+		BT common driver
+
+#--------------------------------------
+config bt_hw (1.1.0)
+	bool 
+	default y
+	select helper
+	select crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  bt_driver_dev
+	select  rules
+	select  reset_hw
+	depends on kernel &&  bt
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	help
+		This package contains built BT hardware driver for AST2300 SoC.
+
+#--------------------------------------
+config cdrom (1.6.0)
+	bool 
+	default n
+	select helper
+	select  iUSB
+	select  usbe
+	select  CDDVD_HW_support
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  usbe_driver_dev
+	select  iUSB_driver_dev
+	select  rules
+	select  libdbgout_dev
+	select  CDDVD_HW_support
+	depends on kernel &&  hw_usb
+	help
+		This pacakge includes built cdrom driver module.
+
+#--------------------------------------
+config cipher (1.16.0)
+	bool "Cipher Device Support"
+	default n
+	select helper
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	depends on kernel &&  hw_cipher
+	help
+		Cipher Device Support
+
+#--------------------------------------
+config cipher_hw (1.10.0)
+	bool 
+	default y
+	select helper
+	select crosscc
+	select  cipher_driver_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	depends on kernel &&  cipher
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains built cipher hardware driver for AST SoC.
+
+#--------------------------------------
+config floppy (1.6.0)
+	bool 
+	default n
+	select helper
+	select  iUSB
+	select  usbe
+	select  Floppy_HW_support
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  iUSB_driver_dev
+	select  usbe_driver_dev
+	select  libdbgout_dev
+	select  Floppy_HW_support
+	depends on kernel &&  hw_usb
+	help
+		This pacakge includes built Floppy Device Driver Module.
+
+#--------------------------------------
+config gpio (1.10.0)
+	bool "GPIO Device Support"
+	default n
+	select helper
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	depends on kernel &&  hw_gpio
+	help
+		GPIO common driver module
+
+#--------------------------------------
+config gpio_hw (1.14.0)
+	bool 
+	default y
+	select helper
+	select crosscc
+	select  helper_driver_dev
+	select  gpio_driver_dev
+	select  kernel_dev
+	select  rules
+	depends on gpio &&  kernel
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains built GPIO hardware driver for AST SoC.
+
+#--------------------------------------
+config hdisk (1.6.0)
+	bool 
+	default n
+	select helper
+	select  iUSB
+	select  usbe
+	select  HDisk_HW_support
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  iUSB_driver_dev
+	select  usbe_driver_dev
+	select  HDisk_HW_support
+	depends on kernel &&  hw_usb
+	help
+		This pacakge includes built hard disk driver module.
+
+#--------------------------------------
+config helper (1.10.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  kernel_dev
+	select  rules
+	select  libfmh_dev
+	select  platform
+	depends on platform
+	help
+		Helper driver module
+
+#--------------------------------------
+config hid (1.7.0)
+	bool 
+	default n
+	select helper
+	select  iUSB
+	select  usbe
+	select  HID_HW_support
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  usbe_driver_dev
+	select  iUSB_driver_dev
+	select  libdbgout_dev
+	select  HID_HW_support
+	depends on kernel &&  hw_usb
+	help
+		This pacakge includes HID driver module.
+
+#--------------------------------------
+config hw_adc (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports ADC
+
+#--------------------------------------
+config hw_bt (1.0.0)
+	bool 
+	default n
+	help
+		SOC Supports BT
+
+#--------------------------------------
+config hw_cipher (1.1.0)
+	bool 
+	default n
+	help
+		SOC Supports Hardware Crypto Engine
+
+#--------------------------------------
+config hw_gpio (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports GPIO
+
+#--------------------------------------
+config hw_host_spi_flash (1.2.0)
+	bool 
+	default n
+	help
+		SoC supports host SPI flash.
+
+#--------------------------------------
+config hw_i2c (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports I2C
+
+#--------------------------------------
+config hw_kcs (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports KCS
+
+#--------------------------------------
+config hw_nand (1.1.0)
+	bool 
+	default n
+	help
+		SoC supports NAND flash.
+
+#--------------------------------------
+config hw_peci (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports PECI
+
+#--------------------------------------
+config hw_pwmtach (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports Fan PWM and TACH
+
+#--------------------------------------
+config hw_reset (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports RESET
+
+#--------------------------------------
+config hw_sdhc (1.1.0)
+	bool 
+	default n
+	help
+		SOC Supports SDHC.
+
+#--------------------------------------
+config hw_snoop (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports Port 80 Snoop
+
+#--------------------------------------
+config hw_usb (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports USB Peripherals
+
+#--------------------------------------
+config hw_videocap (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports Video Capture and Compression
+
+#--------------------------------------
+config hw_watchdog (1.2.0)
+	bool 
+	default n
+	help
+		SOC Supports Watchdog
+
+#--------------------------------------
+config i2c (1.3.0)
+	bool "I2C Device Support"
+	default n
+	depends on kernel &&  hw_i2c
+	help
+		I2C Core Driver. This is a empty package because
+
+#--------------------------------------
+config i2c_hw (1.12.0)
+	bool 
+	default y
+	select crosscc
+	select  kernel_dev
+	select  rules
+	depends on kernel &&  i2c
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This pacakge contains built I2C hardware driver module for AST SoC.
+
+#--------------------------------------
+config iUSB (1.8.0)
+	bool 
+	default n
+	select helper
+	select  usbe
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  usbe_driver_dev
+	select  libdbgout_dev
+	depends on kernel
+	help
+		iUSB common driver module
+
+#--------------------------------------
+config kcs (1.10.0)
+	bool "KCS Device Support"
+	default n
+	select reset
+	select  helper
+	select crosscc
+	select  rules
+	select  global_dev
+	select  kernel_dev
+	select  helper_driver_dev
+	select  libdbgout_dev
+	depends on kernel &&  hw_kcs
+	help
+		KCS common driver
+
+#--------------------------------------
+config kcs_hw (1.7.0)
+	bool 
+	default y
+	select helper
+	select crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  kcs_driver_dev
+	select  rules
+	select  reset_hw
+	depends on kernel &&  kcs
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains built KCS hardware driver for AST SoC.
+
+#--------------------------------------
+config lpcuart (1.4.0)
+	bool "LPCUART Device Support"
+	default n
+	select helper
+	select crosscc
+	select  kernel_dev
+	select  rules
+	select  global_dev
+	select  helper_driver_dev
+	depends on kernel
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	help
+		This package contains lpcuart driver for ast2300 to control routing between io com ports and uarts
+
+#--------------------------------------
+config ncsi (1.15.0)
+	bool "NCSI Device Support"
+	default n
+	select helper
+	select kernel_dev
+	select  global_dev
+	select  rules
+	select  crosscc
+	select  helper_driver_dev
+	depends on kernel
+	help
+		NCSI 1.0 Device Driver.
+
+#--------------------------------------
+config ncsicfg (1.5.0)
+	bool "NCSI Configuration Support"
+	default n
+	select libncsiconf
+	depends on ncsi
+	depends on @ARCH_ARM
+	help
+		NCSI configuration application. Based on the user configuraton this is used to configure the NCSI interface.
+
+#--------------------------------------
+config netmon (1.14.0)
+	bool "NETMON Device Support"
+	default n
+	select helper
+	select kernel_dev
+	select  rules
+	select  crosscc
+	depends on kernel
+	help
+		Network Interface Monitor. It monitors addition/removal of network interface and changes in the Interface status.Applications query the Interface count, name and information. Also applications use ioctl calls to wait for Interface changes
+
+#--------------------------------------
+config peci (1.11.0)
+	bool "PECI Device Support"
+	default n
+	select helper
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	depends on kernel &&  hw_peci
+	help
+		PECI common driver module.
+
+#--------------------------------------
+config peci_hw (1.4.0)
+	bool 
+	default y
+	select helper
+	select crosscc
+	select  helper_driver_dev
+	select  peci_driver_dev
+	select  kernel_dev
+	select  rules
+	depends on peci &&  kernel
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains the built PECI hardware driver for AST SoC.
+
+#--------------------------------------
+config pwmtach (1.8.0)
+	bool "PWMTACH Device Support"
+	default n
+	select helper
+	select kernel_dev
+	select  global_dev
+	select  rules
+	select  crosscc
+	select  helper_driver_dev
+	select  libdbgout_dev
+	depends on kernel &&  hw_pwmtach
+	help
+		PWMTACH common driver module
+
+#--------------------------------------
+config pwmtach_hw (1.10.0)
+	bool 
+	default y
+	select helper
+	select crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  pwmtach_driver_dev
+	select  rules
+	depends on pwmtach &&  kernel
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This pacakge contains built PWMTACH hardware driver module for AST SoC.
+
+#--------------------------------------
+config reset (1.7.0)
+	bool "Reset Manager Support"
+	default n
+	select kernel
+	select  helper
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	depends on hw_reset
+	help
+		Reset common driver binary package
+
+#--------------------------------------
+config reset_hw (1.5.0)
+	bool 
+	default y
+	select helper
+	select helper_driver_dev
+	select  crosscc
+	select  kernel_dev
+	select  reset_driver_dev
+	select  rules
+	depends on kernel &&  reset
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains built LPC reset hardware driver for AST SoC.
+
+#--------------------------------------
+config snoop (1.5.0)
+	bool "Snoop Device Support"
+	default n
+	select reset
+	select  helper
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  reset_driver_dev
+	depends on kernel &&  hw_snoop
+	help
+		This package contains the Snoop Common driver.
+
+#--------------------------------------
+config snoop_hw (1.4.0)
+	bool 
+	default y
+	select helper
+	select crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  snoop_driver_dev
+	select  reset_hw
+	depends on kernel &&  snoop
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains the built LPC snoop hardware driver for AST SoC.
+
+#--------------------------------------
+config usbe (1.19.0)
+	bool "USBE Device Support"
+	default n
+	select helper
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	depends on kernel &&  hw_usb
+	help
+		USBE core driver module.
+
+#--------------------------------------
+config video (1.2.0)
+	bool "Video Device Support"
+	default n
+	depends on kernel &&  hw_videocap
+	help
+		Dummy package for SoC video driver selection.
+
+#--------------------------------------
+config watchdog (1.6.0)
+	bool "Watchdog Device Support"
+	default n
+	select helper
+	select crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  global_dev
+	depends on kernel &&  hw_watchdog
+	help
+		watchdog common driver
+
+#--------------------------------------
+config watchdog_hw (1.4.0)
+	bool 
+	default y
+	select helper
+	select watchdog_driver_dev
+	select  crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  global_dev
+	select  rules
+	depends on kernel &&  watchdog
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains built watchdog hardware driver for AST SoC.
+
+#--------------------------------------
+
+endmenu
+
+

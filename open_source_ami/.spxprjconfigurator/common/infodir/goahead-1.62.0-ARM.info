@@ -1,0 +1,19 @@
+Package : goahead
+Non-Editable : YES
+Version : 1.62.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : YES
+Config-Tag : GoAhead Web Server
+Group : FEATURES
+Provides : WebServer
+Required : libifc, libldapauth, libldapconf, libntpconf, libradiusconf, libuserm, libncml, libchecksum, libfmh, libadvisercfg, libvmedia, libtoken, webui, libncsiconf, libuserauth, libvideorecordcfg, libactivedircfg
+Package-License : AMI
+Description : This package includes the goahead binary module.
+.

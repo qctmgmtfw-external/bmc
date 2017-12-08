@@ -1,0 +1,11 @@
+./etc/init.d/rsyncconfd 1064 515006f37733bfd8c33c5eacd0353d03
+./etc/rsync-excludes 17 7a9de85610cbdc53c91d8dd2b87fb410
+./etc/rsyncconf.sh 510 56c97cca3c1bb81e6baba6f174066117
+./lib/libacl.so.1.1.0 25412 ad8a507a1834b239a5fc5cccff7f610c
+./lib/libattr.so.1.1.0 14576 6004424259a62982fb82bece3ef98ff2
+./usr/bin/inotifywait 16468 adc9c5563d9ba127c52ef9d114d119a8
+./usr/bin/rsync 362752 5d8cf41184171bd5d9566145ac92e1d1
+./usr/lib/libinotifytools.so.0.4.1 26436 853bad57538d6e28ba601aa2ba3c47e5
+./usr/lib/liblzo2.so.2.0.0 116484 e311d28be54a52d7306e473756410fea
+./usr/sbin/flash_erase 4956 9e5c3fb605e2c7496b017af14d8cd4a6
+./usr/sbin/mkfs.jffs2 44712 6efe3616f196c0faacfb3706781eb38b

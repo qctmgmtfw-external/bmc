@@ -1,0 +1,9 @@
+Package: libipmidcmi_2_8_0_2_EIP_140333_FixSetMgtCtrlIdStringCmdTimeoutIssue (1.0.0); urgency = new
+
+Abstract:
+	Set Management Controller Identifier String will timeout.
+
+Files Added: data, data/00-data_DCMDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: amytsai (AmyTsai@ami.com.tw) Wed, 06 Nov 2013 19:39:29 PST
+

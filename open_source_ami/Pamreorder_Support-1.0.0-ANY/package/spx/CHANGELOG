@@ -1,0 +1,9 @@
+Package: Pamreorder_Support (1.0.0); urgency = new
+
+Abstract:
+	This is a dummy package for PAM Reorder Support.
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: akshay (akshayp@amiindia.co.in) Mon, 08 Aug 2011 18:33:39 IST
+

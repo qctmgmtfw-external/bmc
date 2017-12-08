@@ -1,0 +1,152 @@
+;
+; General information - Image File, Flash and Block Size 
+; Input Files Directory and Output File Directory
+;
+; InDir and OutDir will be used if only the filename is given,
+; This can be overridden by command line options and both are
+; overridden if file name is given with full path
+;
+[GLOBAL]
+	ProductId	= 1
+	Output		= rom.ima		; ?
+	BuildNo		= 19199		; ???
+	FW_DESC		= "RR2 TEST BUILD 2"
+
+;
+; U-Boot Loader: Should be located at the flash start. It 
+; internally contains the configuration information. So 
+; module checksum may  be altered dynamically. So setting 
+; no checksum  
+;
+[BOOT]
+	Major 		= 1
+	Minor 		= 4
+	Type 		= 0x0001		; Boot loader
+; Boot has dynamic contents (Configuration). So no Checksum.
+	CheckSum	= NO
+	File		= bootloader/u-boot.bin
+	Locate		= "START
+	Alloc		= 256K
+	FMHLoc		= 0xff80		; 64K-128;
+
+;
+; CONFIG File System in JFFS2. Dynamic content. So no Checksum.
+; JFFS2 can start only at a block boundary. So set offset 
+; accordingly. 
+; we want params section to be impacted minimally 
+; so I am shifting param to top
+; sections before it are most unlikely to shift..bootloader
+; therefore even if the other sections shift we can just move those around
+; this maybe the best place yet for config.
+[CONF]
+	Major		= 1
+	Minor		= 4
+	Type		= 0x0011		; Should be automatically got from FileType
+	Alloc		= 512K
+	CheckSum	= NO
+	Tree		= /conf
+	FileType	= JFFS2
+	BootOS		= YES
+[BKUPCONF]
+	Major		= 1
+	Minor		= 4
+	Type		= 0x0011				; Should be automatically got from FileType
+	Alloc		= 512K
+	CheckSum	= NO
+	Tree		= /bkupconf
+	FileType	= JFFS2
+	BootOS		= YES
+
+;
+; Root File System in CRAMFS.
+; CRAMFS can start only at a block boundary. So set offset 
+; accordingly. 
+;
+[ROOT]
+	Major		= 1
+	Minor		= 4
+	Type		= 0x0007
+	CheckSum	= NO
+	Tree		= /
+	FileType	= CRAMFS_INITRD
+	BootOS		= YES
+	CopyToRAM	= YES
+	Load		= 0x41000000
+
+;
+; Linux OS Image in uImage Format. It is already compressed, 
+; so we dont do compression. Uncompression is taken care by 
+; the bootloader itself. The Boot loader does the execution.
+; So dont set Execute Flag.
+;
+[OSIMAGE]
+	Major 		= 1
+	Minor		= 4
+	Type		= 0x0006
+	CheckSum	= NO
+	BootOS		= YES
+	Execute		= YES
+	File		= kernel/uImage
+
+;
+; WWW File System in CRAMFS.
+; CRAMFS can start only at a block boundary. So set offset 
+; accordingly. 
+
+[WWW]
+	Major		= 1
+	Minor		= 4
+	Type		= 0x0011
+	CheckSum	= NO 
+	Tree		= /usr/local/www
+	FileType	= CRAMFS
+	BootOS		= YES
+
+
+;
+; This is a special section which give the information 
+; about the overall firmare - Useful field is version.
+; File Name is not needed here. It fills one blocksize
+; of dummy data.
+;
+[AST2300EVB]										; USE PRJNAME
+	Major		= 1
+	Minor		= 4
+	Type		= 0x0002		; Firmware
+	Locate		= "END"
+
+;
+; Example Section with all possible fields with their default 
+; values, unless the field is specified mandatory 
+;
+;[EXAMPLE]
+; Major		= 0			; Major number of module 
+; Minor 	= 0			; Minor number of module 
+; Type		= 0x0000	; Module Type 
+; Offset 	= 0x40		; Location of module from start of FMH
+;						; For Type = JFFS/JFFS2 this should be one 
+;						; block size.
+; Alloc		= X			; Maximum memory allocated; X = roundup 
+;						; to the  nearest blocksize after the 
+;						; module is wrapped with FMH
+; Load		= -1		; Load Address in RAM; If not specified, set 
+;					      CopyToRAM flags to NO
+; CopyToRAM	= NO		; Copy the Module to RAM or not
+; Execute	= NO		; Should the module it be executed or not
+; Checksum	= NO		; Module Checksum valid or not
+; Compress  = 0x0		; Compression Type
+; BootOS	= NO		; BootPathID OS
+; BootDIAG	= NO		; BootPathID DIAG
+; BootRECO	= NO		; BootPathID RECOVERY
+;
+; FMHLoc	= 0			; Placement of FMH; Useful it Alterante 
+;						; FMH to be used.
+; File		= 			; File containing the module ; MANDATORY
+; Locate	= 			; Location in Flash; MANDATORY
+;						; It can be a value or can be the strings 
+;               		  START" or "END"		
+;
+; Note: Numeric values can be represented either by decimal or a 
+;       hexadecimal (Prefixed by 0x)
+;       Numeric values can either end with K or M to specify in 
+;		KiloBytes or MegaBytes 

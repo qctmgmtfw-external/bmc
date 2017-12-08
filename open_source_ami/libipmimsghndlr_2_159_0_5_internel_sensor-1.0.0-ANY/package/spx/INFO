@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_5_internel_sensor
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 5 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 5
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  muthuchamyk (muthusamyk@amiindia.co.in)
+Urgency : new
+Description : Fix for dead lock condition and setting internel sensor reading properly.
+.
+

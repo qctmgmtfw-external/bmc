@@ -1,0 +1,219 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_ldap help</title>
+	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	</head>
+	<body oncontextmenu='return false;'>
+	<h2><div class='floatRight'><a href='javascript://' class='closeBtn' 
+		onclick='top.closeHelp();'>X</a></div>
+	<script type="text/javascript">
+	var helpContent = "";
+	var frameName = top.frames['mainFrame'].pageFrame;
+	frameName = frameName.document.getElementsByTagName("FORM");
+	if (frameName.length)
+	{
+		if ("advancedLDAPFrm" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>Advanced " +
+				"LDAP/E-Directory" +
+				"</div></h2>" +
+				"<div class='subSection'>" +
+				"Use this page to configure advanced LDAP/E-Directory " +
+				"configuration." +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>LDAP/E-Directory Authentication </h4>" +
+				"Check the box below to enable LDAP/E-Directory " +
+				"authentication. " +
+				"<h4>IP Address</h4>" +
+				"The IP address of LDAP/E-Directory server" +
+				"<ul>" +
+				"<li>- IP Address made of 4 numbers separated by dots as in " +
+				"'xxx.xxx.xxx.xxx'.</li>" +
+				"<li>- Each Number ranges from 0 to 255.</li>" +
+				"<li>- First Number must not be 0.</li>" +
+				"</ul>" +
+				"LDAP/E-Directory Server Address will support the following:" +
+				"<ul><li>- IPv4 Address format.</li>" + 
+				"<li>- IPv6 Address format.</li></ul>" +
+				"<h4>Port</h4>" +
+				"Specify the LDAP/E-Directory Port. " +
+				"<ul><li>- Default Port is 389.</li>" +
+				"<li>Secure connection, default port is 636.</li></ul>" +
+				"<h4>Bind DN</h4>" +
+				"The Bind DN is used in bind operation, which authenticates " +
+				"the client to the server." +
+				"<ul>" +
+				"<li>- Bind DN is a string of 4 to 64 alpha-numeric " +
+				"characters.</li>" +
+				"<li>- It must start with an alphabetical character.</li>" +
+				"<li>- Special Symbols like dot(.), comma(,), hyphen(-), " +
+				"underscore(_), equal-to(=) are allowed.</li>" +
+				"<li>- Example: cn=manager,ou=login, dc=domain,dc=com</li>" +
+				"</ul>" +
+				"<h4>Password</h4>" +
+				"The Bind password is used in bind operation, which " +
+				"authenticates the client to the server." +
+				"<ul><li>- Password must be at least 1 character long.</li>" +
+				"<li>- White space is not allowed.</li></ul>" +
+				"<strong>NOTE:</strong> This field will not allow more than " +
+				"48 characters." +
+				"<h4>Search base</h4>" +
+				"The Search base tells the LDAP/E-Directory server which part " +
+				"of the external directory tree to search. The search base " +
+				"may be something equivalent to the organization, group of " +
+				"external directory. " +
+				"<ul>" +
+				"<li>- Searchbase is a string of 4 to 64 alpha-numeric " +
+				"characters.</li>" +
+				"<li>- It must start with an alphabetical character.</li>" +
+				"<li>- Special Symbols like dot(.), comma(,), hyphen(-), " +
+				"underscore(_), equal-to(=) are allowed.</li>" +
+				"<li>- Example: ou=login,dc=domain,dc=com</li>" +
+				"</ul>" +
+				"<h4>Attribute of User Login</h4>" +
+				"The attribute of user login field tells the LDAP/E-Directory server which  " +
+				"attribute should be used to identify the user. "+ 
+				"<ul>" +								
+				"<li>- Example: cn or uid</li>" +
+				"</ul>" +
+				"<h4>Save</h4>" +
+				"Save the settings. " +
+				"<h4>Cancel</h4>" +
+				"Cancel the modified changes. " +
+				"<br>"+
+				"</fieldset>" +
+				"</div>";
+		}
+		else if ("addRoleGroup" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>Add Role Group</div></h2>" +
+				"<div class='subSection'>" +
+				"Use this form to add a new role group. " +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Role Group Name</h4>" +
+				"The name that identifies the role group in the " +
+				"LDAP/E-Directory. " +
+				"<ul><li>- Role Group Name is a string of 255 alpha-numeric " +
+				"characters.</li>" +
+				"<li>- Special symbols hyphen and underscore are allowed." +
+				"</li></ul>" +
+				"<h4>Role Group Search Base</h4>" +
+				"Any path from where the role group is located to Base DN. " +
+				"<ul><li>- Search Base is a string of 255 alpha-numeric " +
+				"characters.</li>" +
+				"<li>- Special symbols hyphen, underscore and dot are " +
+				"allowed.</li></ul>" +
+				"<h4>Role Group Privilege</h4>" +
+				"The level of privilege to assign to this role group. " +
+				"<h4>Add</h4>" +
+				"Click on 'Add' to save the new role group and return to the " +
+				"Role Group list. " +
+				"<h4>Cancel</h4>" +
+				"Click on 'Cancel' to cancel the modification and return to " +
+				"the Role Group list. " +
+				"</fieldset>" +
+				"</div>";
+		}
+		else if ("modRoleGroup" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>Modify Role Group</div>" +
+				"</h2>" +
+				"<div class='subSection'>" +
+				"Use this form to modify the existing role group " +
+				"configuration." +
+				"<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Role Group Name</h4>" +
+				"The name of the role group being configured. " +
+				"<ul><li>- Role Group Name is a string of 255 alpha-numeric " +
+				"characters.</li>" +
+				"<li>- Special symbols hyphen and underscore are allowed." +
+				"</li></ul>" +
+				"<h4>Role Group Search Base</h4>" +
+				"Any path from where the role group is located to Base DN. " +
+				"<ul><li>- Search Base is a string of 255 alpha-numeric " +
+				"characters.</li>" +
+				"<li>- Special symbols hyphen, underscore and dot are " +
+				"allowed.</li></ul>" +
+				"<h4>Role Group Privilege</h4>" +
+				"The level of privilege to assign to this role group. " +
+				"<h4>Modify</h4>" +
+				"Click on 'Modify' to accept the modification and return to " +
+				"the Role Group list. " +
+				"<h4>Cancel</h4>" +
+				"Click on 'Cancel' to cancel the modification and return to " +
+				"the Role Group list. " +
+				"</fieldset>" +
+				"</div>";
+		}
+	}
+	else
+	{
+		helpContent = "<div class='helpmainhead'>LDAP/E-Directory</div></h2>" +
+			"<div class='subSection'>" +
+			"Displayed table shows any configured Role Groups and available " +
+			"slots. You can modify or add/delete role groups from here.<br>" +
+			"Group Search Base can be any path from where Group is located " +
+			"to Base DN. Group Name should correspond to the name of an " +
+			"actual LDAP/E-Directory group. To view the page, user must at " +
+			"least be a User.<br>" +
+			"To modify or add a group, user must be an Administrator.<br>" +
+			"<strong>NOTE:</strong> Free slots are denoted by \"~\" in all " +
+			"columns for the slot." +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Advanced Settings</h4>" +
+			"Click this option to configure LDAP/E-Directory Advanced " +
+			"Settings. Options are Enable LDAP/E-Directory Authentication, " +
+			"IP Address, Port, Bind DN, Password and Search base. " +
+			"<h4>Add Role Group</h4>" +
+			"Select a free slot and click 'Add Role Group' to add a new role " +
+			"group to the device. " +
+			"Alternatively, double click on a free slot to add a role group. " +
+			"<h4>Modify Role Group</h4>" +
+			"Select a configured slot and click 'Modify Role Group' to " +
+			"modify that role group. " +
+			"Alternatively, double click on the configured slot. " +
+			"<h4>Delete Role Group</h4>" +
+			"Select the desired role group to be deleted and click 'Delete " +
+			"Role Group'. " +
+			"</fieldset>" +
+			"</div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

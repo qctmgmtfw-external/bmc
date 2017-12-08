@@ -1,0 +1,10 @@
+--- .pristine/flasher-1.19.0-src/data/prepfl	Thu Jun  5 11:59:23 2014
++++ source/flasher-1.19.0-src/data/prepfl	Fri Jun  6 18:06:10 2014
+@@ -62,6 +62,7 @@
+ #and then recopy back towards the end
+ /usr/local/bin/cpConf /conf /mnt/oldconf
+ umount /conf
++umount /bkupconf
+ echo "done"
+ echo "*******************************************************"
+ 

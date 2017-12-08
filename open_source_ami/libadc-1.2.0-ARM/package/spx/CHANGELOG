@@ -1,0 +1,52 @@
+Package: libadc (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:40:53 EDT
+
+Package: libadc (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:52:38 EDT
+
+Package: libadc (1.0.3); urgency = medium
+
+Abstract:
+	change device name
+
+Files Modified: data/adcifc.h, spx/INFO
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Fri, 30 Jul 2010 16:30:50 CST
+
+Package: libadc (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:52:24 EDT
+
+Package: libadc (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:03:26 EST
+
+Package:libadc (1.0.0);urgency=new
+
+Abstract:
+	LIBADC Library Package
+
+Files Added: adcifc.c, Makefile, adc.h, adcifc.h
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Mon, 16 Nov 2009 17:34:52 +0530

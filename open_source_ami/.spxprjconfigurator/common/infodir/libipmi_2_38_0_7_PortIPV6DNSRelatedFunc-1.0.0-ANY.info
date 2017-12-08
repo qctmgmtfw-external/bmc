@@ -1,0 +1,20 @@
+Package : libipmi_2_38_0_7_PortIPV6DNSRelatedFunc
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 7 for libipmi (2.38.0)
+Depends :  libipmi(==2.38.0)
+PatchOrder : 7
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Seires Lee (SeiresLee@ami.com.tw)
+Urgency : new
+Description : Porting DNSv6 related functions from Q4 release.
+.
+

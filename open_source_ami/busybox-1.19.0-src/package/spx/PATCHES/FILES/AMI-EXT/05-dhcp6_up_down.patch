@@ -1,0 +1,32 @@
+--- busybox.org/networking/ifupdown.c	2010-01-28 11:55:57.000000000 +0530
++++ busybox/networking/ifupdown.c	2010-01-28 11:54:36.000000000 +0530
+@@ -369,6 +369,21 @@
+ #endif
+ }
+ 
++static int dhcp_up6(struct interface_defn_t *ifd, execfn *exec)
++{
++	int result = 0;
++	result = execute("dhcp6c -p /var/run/dhcp6c.%iface%.pid %iface% -f &", ifd, exec);
++	return (result);
++}
++
++static int dhcp_down6(struct interface_defn_t *ifd, execfn *exec)
++{
++	int result = 0;
++	result = execute("kill " "`cat /var/run/dhcp6c.%iface%.pid` 2>/dev/null", ifd, exec);
++	execute("ifconfig %iface% down", ifd, exec);
++	return (result);
++}
++
+ #if ENABLE_FEATURE_IFUPDOWN_IP
+ static int v4tunnel_up(struct interface_defn_t *ifd, execfn *exec)
+ {
+@@ -393,6 +408,7 @@
+ #endif
+ 	{ "static", static_up6, static_down6, },
+ 	{ "loopback", loopback_up6, loopback_down6, },
++	{ "autoconf", dhcp_up6, dhcp_down6, },
+ };
+ 
+ static const struct address_family_t addr_inet6 = {

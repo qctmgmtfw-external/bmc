@@ -1,0 +1,20 @@
+Package : libipmipdkcmds
+Non-Editable : YES
+Version : 2.13.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Alex Yang  (alexyang@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+SOC : AST2300
+PLATFORM : AST2300EVB
+Urgency : low
+Section : lib
+Essential : NO
+Config-Tag : IPMI PDK Commands for AST2300EVB
+Group : PLATFORM
+Provides : IPMI_PDKCommands
+Package-License : AMI
+Description : This package contanins IPMI PDK commands library for AST2300EVB platform.
+.

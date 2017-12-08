@@ -1,0 +1,174 @@
+Release Notes for iwisp Workspace
+---------------------------------
+
+-------------------------------------------------------
+Date		:	October 21, 2008
+Version		:	1.0
+MDS version	:	3.3.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* MDS Project file is changed to WDPX Plugin in MDS-Workspace, So after this we can use MDS3.3.0 or later version of MDS3.3.0 for SPX iwisp workspace.
+* Bug #11124, In the Server health page alignment of the tabs and the logs are not proper for IE8 alone - fixed.
+* Added the missing string file Sensor Events. 
+* Bug #11240, Dashboard: most of the pie chart for Event Logs is invisible - fixed 
+
+
+-------------------------------------------------------
+Date		:	October 16, 2008
+Version		:	0.11
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Bug #11140, Print option in web page do not work in IE - Fixed
+* Bug #11181, After clearing log in web page-Filter by list box displays each items twice - fixed.
+* Bug #11283, Live widget: at least one of the title bar options shows an incorrect mouse-over text - fixed 
+* Bug #11173, Event Log entries do not properly shows its item, when go to some links and get back to event logs when we performed in reduced screen - fixed
+* Bug #11127, Current status of the mouse mode is not choosen in the radio button - fixed.
+* Bug #11225, Dialog box did not close when press ESC Key - fixed. 
+
+
+-------------------------------------------------------
+Date		:	October 15, 2008
+Version		:	0.10
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Bug #11017, Alerts page in UI: an error message should display if you click on any of the buttons without selecting an alert slot - fixed.
+* Bug #11022, SSL upload page: if you decide to not upload the privacy key, the message that displays needs re-wording - fixed.
+* Bug #11125, The sum of interpolated graph legends value in Event Log(Dashboard) is not equal to 100 - fixed.
+* Bug #11182, Able to add user with more than 16 charecters - fixed.
+* Bug #11184, Able to set password greater than 20 characters - fixed.
+* Bug #11256, Help information includes many misspelled words. Please use a spell-check on all pages - fixed.
+* Bug #11318, Alerts page: Alert Table alsays shows 15 entries, no matter how many alert slots are configured - fixed. 
+
+
+-------------------------------------------------------
+Date		:	October 14, 2008
+Version		:	0.9
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Bug #11018, LDAP page in UI: the help info is not very helpful - fixed.
+* Bug #11019, LDAP page: need more validation for all input fields - fixed. 
+* Bug #11023, With Firefox, the name at top of browser window only states Mozilla Firefox, instead of URL - fixed.
+* Bug #11025, Logging out: text in confirmation box needs minor re-wording -fixed.
+* Bug #11128, Gramatical Error : It is given as 'about a particular sensors' in the Help page of Live Widget -fixed.
+* Bug #11138, Login using operator user, "Launch java console "option in Dashboard is in disable state but in console redirection it is active - fixed.
+* Bug #11139, Login using user privileged user, "Launch java console "option in Dashboard is in disable state but in console redirection it is active - fixed.
+
+
+-------------------------------------------------------
+Date		:	October 12, 2008
+Version		:	0.8
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Bug #11016, Alerts page: suggestion for small change in text on page - fixed 
+* Jviewer will be closed, when WebUI is logged out. Yet to add this fix, while closing the browser. 
+
+
+-------------------------------------------------------
+Date		:	September 10, 2008
+Version		:	0.7
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Activate ActiveX support in SPX 
+
+
+-------------------------------------------------------
+Date		:	September 8, 2008
+Version		:	0.6
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Changes made for operator and user privileged users in UI
+
+
+-------------------------------------------------------
+Date		:	September 3, 2008
+Version		:	0.5
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Dynamically show java/activex launch buttons in UI based on the availability of corresponding files
+
+
+-------------------------------------------------------
+Date		:	September 1, 2008
+Version		:	0.4
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Added default focus to Role Group name in Add Role Group dialog.
+* Change password field will be checked in Modify Users dialog.
+* Added DNS Server configuration in Network page.
+* Added help contents for Remote Session page. 
+* Added Firmware Flash stages in Web Flash 
+
+
+-------------------------------------------------------
+Date		:	August 27, 2008
+Version		:	0.3
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Merge bug fix from SP-Pilot-ii (Testlab, #10960).
+* Help contents added for Active Directory and Console Redirection pages 
+* Error thrown while closing Help - Fixed 
+* Weird IE bug - fixed.
+
+
+-------------------------------------------------------
+Date		:	August 20, 2008
+Version		:	0.2
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Added validation for AD Domain Name and Group Name.
+
+
+-------------------------------------------------------
+Date		:	August 12, 2008
+Version		:	0.1
+MDS version	:	3.2.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+
+ - Added SMTP Authentication.
+ - Merge bug fix from SP-Pilot-ii (ID:189965, TAO Tracker).
+
+
+-------------------------------------------------------
+Date		:	August 05, 2008
+Version		:	0.0
+MDS version	:	3.0.0
+-------------------------------------------------------
+
+Features and Modifications:
+---------------------------
+* Added New MDS-Workspace for SP4 generic www.

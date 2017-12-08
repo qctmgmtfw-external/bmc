@@ -1,0 +1,9 @@
+Package: sys_ipv6_2_3_0_2_PortIPV6DNSRelatedFunc (1.0.0); urgency = new
+
+Abstract:
+	Porting DNSv6 related functions from Q4 release.
+
+Files Added: data, data/00-data_dhcp6c-script, data/01-data_ipv6autoconf.sh, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.BSD, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Tue, 14 Feb 2012 14:02:23 CST
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/sys_openssl_0_9_8zf-1.0.0-ARM/package/data/libssl.so.0.9.8</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/sys_openssl_0_9_8zf-1.0.0-ARM/package/data/libcrypto.so.0.9.8</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/sys_openssl_0_9_8zf-1.0.0-ARM/package/data/openssl</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>sys_openssl_0_9_8zf</package-name>
+<version>1.0.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides>openssl</provides>
+<enableprovides/>
+<section>dev</section>
+<build-depends/>
+<depends/>
+<required/>
+<conflicts/>
+<essential>YES</essential>
+<group>BASE</group>
+<configtags>openssl version 0.9.8zf</configtags>
+<installsize/>
+<description>Support OpenslSSL Version 0.9.8zf</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>PatrickHuang  </maintainer>
+<maintainer-email>PatrickHuang@ami.com.tw</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="new">new</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/sys_openssl_0_9_8zf-1.0.0-ARM/package/spx/P.CONFIG</pconfig>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/sys_openssl_0_9_8zf-1.0.0-ARM/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/sys_openssl_0_9_8zf-1.0.0-ARM/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

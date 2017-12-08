@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+	<link href="../lib/listgrid.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/listgrid.js" type="text/javascript"></script>
+	<script src="../lib/form.js" type="text/javascript"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnAdvSettings");
+		elmt.setAttribute("value", eLang.getString("configure_ldap", "CFG_LDAP_ADVANCED_SETTINGS"));
+		var elmt = document.getElementById("_btnAdd");
+		elmt.setAttribute("value", eLang.getString("configure_ldap", "CFG_LDAP_ADD"));
+		var elmt = document.getElementById("_btnModify");
+		elmt.setAttribute("value", eLang.getString("configure_ldap", "CFG_LDAP_MODIFY"));
+		var elmt = document.getElementById("_btnDelete");
+		elmt.setAttribute("value", eLang.getString("configure_ldap", "CFG_LDAP_DELETE"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("configure_ldap", "CFG_LDAP_TITLE"));</script>
+</h3>
+	<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr>
+		<td width="85%"><label id="_lblLDAPDesc"></label></td>
+		<td class="alignRight">
+			<input type="button" id="_btnAdvSettings">
+		</td>
+	</tr></table>
+	<p>
+<script>document.writeln(eLang.getString("configure_ldap", "CFG_LDAP_DESC"));</script>
+</p>
+
+	<label id="_lblHeader" class="alignRight"></label>
+	<br style="clear:both" /><br style="clear:both" />
+	<div id="_lgdRoleGroup"></div>
+	<br/>
+
+	<div class="btnTray">
+		<input type="button" id="_btnAdd" />
+		<input type="button" id="_btnModify" />
+		<input type="button" id="_btnDelete" />
+	</div>
+</body>
+</html>

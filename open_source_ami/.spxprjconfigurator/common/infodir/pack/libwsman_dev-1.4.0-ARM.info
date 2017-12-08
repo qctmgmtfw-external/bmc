@@ -1,0 +1,16 @@
+Package : libwsman_dev
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Silambarasan M  (silambarasanm@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Group : WSMAN
+Package-License : AMI
+Description : This package contains common header files of wsman
+.

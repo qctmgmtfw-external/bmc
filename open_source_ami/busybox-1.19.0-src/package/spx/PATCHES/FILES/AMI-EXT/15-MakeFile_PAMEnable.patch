@@ -1,0 +1,16 @@
+--- old/Makefile.flags	2011-05-10 11:39:43.907094375 +0530
++++ new/Makefile.flags	2011-05-10 11:38:53.578800733 +0530
+@@ -6,11 +6,12 @@
+ export BB_VER
+ SKIP_STRIP = n
+ 
++LDFLAGS += -L$(IMAGE_TREE)/lib
+ # -std=gnu99 needed for [U]LLONG_MAX on some systems
+ CPPFLAGS += $(call cc-option,-std=gnu99,)
+ 
+ CPPFLAGS += \
+-	-Iinclude -Ilibbb \
++	-Iinclude -Ilibbb -I$(TARGETDIR)/usr/include/ \
+ 	$(if $(KBUILD_SRC),-Iinclude2 -I$(srctree)/include -I$(srctree)/libbb) \
+ 	-include include/autoconf.h \
+ 	-D_GNU_SOURCE -DNDEBUG \

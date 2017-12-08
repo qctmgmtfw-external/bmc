@@ -1,0 +1,36 @@
+diff -Naur u-boot-1.1.4/config.mk u-boot-1.1.4-bugfix/config.mk
+--- u-boot-1.1.4/config.mk	2005-12-16 11:39:27.000000000 -0500
++++ u-boot-1.1.4-bugfix/config.mk	2006-04-19 14:48:02.800499375 -0400
+@@ -227,20 +227,26 @@
+ ifndef REMOTE_BUILD
+ 
+ %.s:	%.S
+-	$(CPP) $(AFLAGS) -o $@ $<
++	@echo "Preprocessing $< ..."
++	@$(CPP) $(AFLAGS) -o $@ $<
+ %.o:	%.S
+-	$(CC) $(AFLAGS) -c -o $@ $<
++	@echo "Assembling $< ..."
++	@$(CC) $(AFLAGS) -c -o $@ $<
+ %.o:	%.c
+-	$(CC) $(CFLAGS) -c -o $@ $<
++	@echo "Compiling $< ..."
++	@$(CC) $(CFLAGS) -c -o $@ $<
+ 
+ else
+ 
+ $(obj)%.s:	%.S
+-	$(CPP) $(AFLAGS) -o $@ $<
++	@echo "Preprocessing $< ..."
++	@$(CPP) $(AFLAGS) -o $@ $<
+ $(obj)%.o:	%.S
+-	$(CC) $(AFLAGS) -c -o $@ $<
++	@echo "Assembling $< ..."
++	@$(CC) $(AFLAGS) -c -o $@ $<
+ $(obj)%.o:	%.c
+-	$(CC) $(CFLAGS) -c -o $@ $<
++	@echo "Compiling $< ..."
++	@$(CC) $(CFLAGS) -c -o $@ $<
+ endif
+ 
+ #########################################################################

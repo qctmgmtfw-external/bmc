@@ -1,0 +1,19 @@
+Package : libvideo_dev
+Non-Editable : YES
+Version : 1.8.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : David Chang  (DavidChang@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+SOC : AST2300
+Urgency : medium
+Section : dev
+Essential : NO
+Group : KVM
+Provides : VideoLibraryDevelopment
+Depends : internal_video
+Package-License : AMI
+Description : This package contains video library development header files.
+.

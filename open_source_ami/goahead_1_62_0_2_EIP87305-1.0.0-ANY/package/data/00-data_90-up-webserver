@@ -1,0 +1,29 @@
+--- .pristine/goahead-1.62.0-src/data/90-up-webserver Thu May 24 17:39:19 2012
++++ source/goahead-1.62.0-src/data/90-up-webserver Thu May 24 18:02:54 2012
+@@ -5,7 +5,7 @@
+        exit 0
+ fi
+ 
+-webpid="1"
++webpid="0"
+ webgocheck="1"
+ 
+ if [ -f /var/run/webgo.pid ]; then
+@@ -13,14 +13,12 @@
+ fi
+ 
+ if ! [ -z "$webpid" ]; then
+-webgocheck=`ps ax | grep -v grep | grep $webpid`
++web=`ps ax | grep $webpid`
++webgocheck=`echo $web | awk '{ print $1 }'`
+ fi
+ 
+-if [ -z "$webgocheck" ]; then
+-#echo "webgo going to restart......!!!"
++if [ $webpid == $webgocheck ]; then
+ /etc/init.d/webgo.sh restart
+-#else
+-#echo "No webgo Restart......!!!"
+ fi
+ 
+ exit 0

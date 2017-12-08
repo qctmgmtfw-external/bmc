@@ -1,0 +1,159 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+ 	<title>configure_active_directory help</title>
+ 	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	</head>
+	<body oncontextmenu='return false;'>
+	<h2><div class='floatRight'><a href='javascript://' class='closeBtn' onclick='top.closeHelp();'>X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames['mainFrame'].pageFrame.document.getElementsByTagName("FORM");
+	var helpContent = "";
+	if (frameName.length)
+	{
+		if ("advancedADFrm" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>Advanced Active Directory Settings</div></h2>" +
+			"<div class='subSection'>" +
+			"This page is used to configure the Active Directory Advanced Settings" +
+			"<br>" +
+			"All the trusted domains are supported as well. " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Active Directory Authentication</h4>" +
+			"To enable or disable Active Directory, check or uncheck the 'Active Directory Authentication' checkbox respectively.<br>" +
+			"If you have enabled the Active Directory Authentication, then enter the required information to access the Active Directory server. " +
+			"<h4>User Domain Name</h4>" +
+			"Specify the Domain Name for the user. "+
+			"e.g. MyDomain.com" +
+			"<h4>Time Out</h4>" +
+			"Specifies the waiting time (in seconds) for Active Directory queries to complete.<br>" +
+			"<ul><li>- Default Time out value: 120 seconds.</li>" +
+			"<li>- Ranges from 15 to 300 are allowed.</li></ul>" +
+			"<h4>Domain Controller Server Address1, Domain Controller Server Address2 & Domain Controller Server Address3</h4>" +
+			"Enter the IP address of Active Directory server. At least one Domain Controller Server Address must be configured. " +
+			"<ul><li>- IP Address made of 4 numbers separated by dots as in \"xxx.xxx.xxx.xxx\".</li>" +
+			"<li>- Each number ranges from 0 to 255.</li>" +
+			"<li>- First number must not be 0.</li></ul>" +
+			"Domain Controller Server Addresses will support the following:" +
+			"<ul><li>- IPv4 Address format.</li>" + 
+			"<li>- IPv6 Address format.</li></ul>" +
+			"<h4>Save</h4>" +
+			"Click 'Save' to save the settings. " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modifications and return to the Active Directory page. " +
+			"</fieldset>" +
+			"</div>";
+		}
+		else if ("addRoleGroup" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>Add Role Group</div></h2>" +
+			"<div class='subSection'>" +
+			"This form is used to add a new role group. " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Role Group Name</h4>" +
+			"Enter the Role Group Name. This name identifies the role group in Active Directory. " +
+			"<ul><li>- Role Group Name is a string of 64 alpha-numeric characters.</li>" +
+			"<li>- Special symbols hyphen and underscore are allowed.</li></ul>" +
+			"<h4>Role Group Domain</h4>" +
+			"Enter the Role Group Domain. This is the domain where the role group is located. " +
+			"<ul><li>- Domain Name is a string of 255 alpha-numeric characters.</li>" +
+			"<li>- Special symbols hyphen, underscore and dot are allowed.</li></ul>" +
+			"<h4>Role Group Privilege</h4>" +
+			"Enter the Role Group Privilege. This is the level of privilege to be assigned for this role group. " +
+			"<h4>Add</h4>" +
+			"Click 'Add' to save the new role group and return to the Role Group list. " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification and return to the Role Group list. " +
+			"</fieldset>" +
+			"</div>";
+		}
+		else if ("modRoleGroup" == frameName[0].getAttribute('id'))
+		{
+			helpContent = "<div class='helpmainhead'>Modify Role Group</div></h2>" +
+			"<div class='subSection'>" +
+			"This form is used to modify the existing role group configuration. " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Role Group Name</h4>" +
+			"This field displays the name of the role group being configured. " +
+			"<ul><li>- Role Group Name is a string of 64 alpha-numeric characters.</li>" +
+			"<li>- Special symbols hyphen and underscore are allowed.</li></ul>" +
+			"<h4>Role Group Domain</h4>" +
+			"This field displays the domain where the role group is located. " +
+			"<ul><li>- Domain Name is a string of 255 alpha-numeric characters.</li>" +
+			"<li>- Special symbols hyphen, underscore and dot are allowed.</li></ul>" +
+			"<h4>Role Group Privilege</h4>" +
+			"This field displays the level of privilege assigned for this role group. " +
+			"<h4>Modify</h4>" +
+			"Enter the required modifications and click 'Modify' to accept the modification and return to the Role Group list. " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification and return to the Role Group list. " +
+			"</fieldset>" +
+			"</div>";
+		}
+	}
+	else
+	{
+		helpContent = "<div class='helpmainhead'>Active Directory</div></h2>" +
+		"<div class='subSection'>" +
+		"The displayed table shows any configured Role Groups and the available slots. You can modify, add or delete role groups from here.<br>" +
+		"Group domain can be the AD domain or a trusted domain. " +
+		"Group Name should correspond to the name of an actual AD group. " +
+		"To view the page, you must be at least a User.<br>" +
+		"To modify or add a group, you must be an Administrator. " +
+		"<br>" +
+		"<strong>NOTE:</strong> Free slots are denoted by \"~\" in all " +
+		"columns for the slot. " +
+		"AD or LDAP users do not have SSH access in this release. " +
+		"<br><br>" +
+		"<fieldset>" +
+		"<legend>Actions</legend>" +
+		"<h4>Advanced Settings</h4>" +
+		"Click this option to configure the Active Directory Advanced Settings. Options are " +
+		"Enable Active Directory Authentication, User Domain name, Time Out and up to three Domain Controller Server Addresses. " +
+		"<h4>Add Role Group</h4>" +
+		"Select a free slot and click 'Add Role Group' to add a new role group to the device. " +
+		"Alternatively, double click on a free slot to add a role group. " +
+		"<h4>Modify Role Group</h4>" +
+		"Select a configured slot and click 'Modify Role Group' to modify that role group. " +
+		"Alternatively, double click on the configured slot. " +
+		"<h4>Delete Role Group</h4>" +
+		"Select the desired role group to be deleted and click 'Delete Role Group'. " +
+		"</fieldset>" +
+		"</div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

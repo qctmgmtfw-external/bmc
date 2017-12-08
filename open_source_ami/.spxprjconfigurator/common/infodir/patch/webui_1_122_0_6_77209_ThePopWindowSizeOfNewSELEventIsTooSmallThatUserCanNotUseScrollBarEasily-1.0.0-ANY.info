@@ -1,0 +1,20 @@
+Package : webui_1_122_0_6_77209_ThePopWindowSizeOfNewSELEventIsTooSmallThatUserCanNotUseScrollBarEasily
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 6 for webui (1.122.0)
+Depends :  webui(==1.122.0)
+PatchOrder : 6
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description : for solved the pop window size of new SEL event is too small that user can't use scroll bar easily
+.
+

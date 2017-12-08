@@ -1,0 +1,60 @@
+#!/bin/sh
+# /etc/init.d/ipmistack: start IPMI
+#
+# chkconfig: 2345 10 90
+#Runlevel : S = S37
+#Runlevel : 6 = K37
+# Don't add for Runlevel 7, as it is used for ipmi based (YAFU) firmware upgrade
+#Runlevel : 8 = K37
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+PATHFUL_IPMIINIT="/usr/local/bin/IPMIMain"
+
+
+
+test -f /usr/local/bin/IPMIMain || exit 0
+
+
+# Options for start/restart the daemons
+#
+
+
+#
+
+
+case "$1" in
+  start)
+    echo -n "Starting IPMI Stack: IPMIMain "
+    /usr/local/bin/IPMIMain --daemonize
+#    start-stop-daemon --start --quiet --exec $PATHFUL_IPMIINIT
+    echo "."
+    ;;
+  stop)
+    echo -n "Stopping IPMI Stack: IPMIMain"
+    killall -1 IPMIMain
+#    start-stop-daemon --stop --quiet --exec $PATHFUL_IPMIINIT
+    echo "."
+    ;;
+    reload)
+	echo -n "Reloading IPMI Stack: IPMIMain"
+	echo "dont know what to do with reload right now"
+#	start-stop-daemon --stop --quiet --exec $PATHFUL_IPMIINIT --signal 1
+	echo "."
+	;;
+    force-reload)
+#	$0 reload
+	;;
+    restart)
+	echo -n "Restarting IPMI Stack: IPMIMain"
+	killall -1 IPMIMain
+	/usr/local/bin/IPMIMain --daemonize
+#	start-stop-daemon --stop --quiet --oknodo --exec $PATHFUL_IPMIINIT
+#	start-stop-daemon --start --quiet --exec $PATHFUL_IPMIINIT
+	echo "."
+	;;
+   *)
+    echo "Usage: /etc/init.d/ipmistack {start|stop|reload|restart|force-reload}"
+    exit 1
+esac
+
+exit 0

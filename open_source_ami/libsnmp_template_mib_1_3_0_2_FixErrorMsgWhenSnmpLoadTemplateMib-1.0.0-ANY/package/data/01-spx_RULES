@@ -1,0 +1,8 @@
+--- .pristine/libsnmp_template_mib-1.3.0-src/spx/RULES Thu Jul  5 14:35:30 2012
++++ source/libsnmp_template_mib-1.3.0-src/spx/RULES Thu Jul  5 14:37:01 2012
+@@ -14,4 +14,4 @@
+ 
+ # Rules to create libsnmp_template_mib package
+ build_package-libsnmp_template_mib:
+-		PACK_SPX  ./   %BUILD/%PACKAGE/data/libsnmp_template_mib.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
++		PACK_SPX  ./   %BUILD/%PACKAGE/data/libsnmp_CHANGEME_mib.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX

@@ -1,0 +1,10 @@
+--- .pristine/sys_base-2.41.0-src/spx/PACKAGES.D/sys_base/SCRIPTS/dev-install	Mon Sep  1 10:54:35 2014
++++ source/sys_base-2.41.0-src/spx/PACKAGES.D/sys_base/SCRIPTS/dev-install	Mon Sep  1 11:00:43 2014
+@@ -19,6 +19,6 @@
+ 	DELETE %IMAGE_TREE/conf/interfaces.0x3
+ 	DELETE %IMAGE_TREE/conf/interfaces.0x4
+ 	EXECUTE if [ "%CONFIG_SPX_FEATURE_GLOBAL_ENC_HASH_IMAGE" == "YES" ]; then echo "ENC_IMAGE" >> %IMAGE_TREE/etc/features; fi
+-
++	EXECUTE chmod 644 %IMAGE_TREE/conf/crontab
+ debug-install:
+ 

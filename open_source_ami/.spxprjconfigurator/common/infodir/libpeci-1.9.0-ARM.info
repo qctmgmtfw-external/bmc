@@ -1,0 +1,18 @@
+Package : libpeci
+Non-Editable : YES
+Version : 1.9.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Dinesh Selvam  (dineshs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : lib
+Essential : NO
+Config-Tag : PECI Library Support
+Group : LIBRARY
+Depends : peci
+Package-License : AMI
+Description : PECI Library Binary
+.

@@ -1,0 +1,17 @@
+Package : sys_radius
+Non-Editable : YES
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Anurag Bhatia  (anuragb@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : sys
+Essential : NO
+Config-Tag : RADIUS Support
+Group : FEATURES
+Package-License : BSD
+Description : Systen package which provides support for RADIUS protocol
+.

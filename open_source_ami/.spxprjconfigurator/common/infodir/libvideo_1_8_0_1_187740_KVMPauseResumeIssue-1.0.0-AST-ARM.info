@@ -1,0 +1,21 @@
+Package : libvideo_1_8_0_1_187740_KVMPauseResumeIssue
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libvideo (1.8.0)
+Depends :  libvideo(==1.8.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  NealChen (nealchen@ami.com.tw)
+Urgency : new
+Description : for EIP 187740, KVM pause and resume continuously will hang.
+.
+

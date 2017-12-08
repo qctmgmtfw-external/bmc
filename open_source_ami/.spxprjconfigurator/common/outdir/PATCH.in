@@ -1,0 +1,2118 @@
+menu "Patch Packages Configuration"
+
+config JViewer_1_10_0_1_71562_LogoutCauseJViewerCrashInRHEL (1.0.0)
+	bool "Patch 1 for JViewer (1.10.0)"
+	default n
+	depends on JViewer(==1.10.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		for 71562, Remote redirect session might be disconnect when HOST reboot or logout from GNONE.
+
+#--------------------------------------
+config JViewer_1_10_0_2_75844_JavaConsoleRefreshVideoIssue (1.0.0)
+	bool "Patch 2 for JViewer (1.10.0)"
+	default n
+	depends on JViewer(==1.10.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		for 75844, Java Console Refresh Video Issue
+
+#--------------------------------------
+config JViewer_1_10_0_3_92214_AutoVideoCanNotPlay (1.0.0)
+	bool "Patch 3 for JViewer (1.10.0)"
+	default n
+	depends on JViewer(==1.10.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		for EIP 92214, the video recorded by auto video recording function is blank
+
+#--------------------------------------
+config JViewer_1_10_0_4_EIP92861_UpdateSOCMenuWithCorrectMethod (1.0.0)
+	bool "Patch 4 for JViewer (1.10.0)"
+	default n
+	depends on JViewer(==1.10.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		Update SOCMenu with correct method
+
+#--------------------------------------
+config JViewer_1_10_0_5_95028_ImageInScalingMouseCursorWouldNotBeDraw (1.0.0)
+	bool "Patch 5 for JViewer (1.10.0)"
+	default n
+	depends on JViewer(==1.10.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		The image after affine transform won't be draw the mouse cursor when the hardware cursor is enable and scaling status.
+
+#--------------------------------------
+config JViewer_1_10_0_6_ForJava7u51 (1.0.0)
+	bool "Patch 6 for JViewer (1.10.0)"
+	default n
+	depends on JViewer(==1.10.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		Added support to select Binary of Source package based on Build Precedence, at build time.
+
+#--------------------------------------
+config JViewer_common_1_70_0_10_EIP_70202 (1.0.0)
+	bool "Patch 10 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		When we Pause Console 1 and launch Console 2, the permission given by console 1 doesnt reflect in console 2, issue fixed.
+
+#--------------------------------------
+config JViewer_common_1_70_0_11_74001_SolvedJavaConsoleButtonDisableWhenOpenContinuely (1.0.0)
+	bool "Patch 11 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for 74001, rKVM console Button disable when open and close rKVM continuely
+
+#--------------------------------------
+config JViewer_common_1_70_0_12_EIP_81288_PowerButtonIssueOnKVM (1.0.0)
+	bool "Patch 12 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for 81288, solved after powered off by pressing power button in rKVM, SUT cannot power on by pressing power button in rKVM
+
+#--------------------------------------
+config JViewer_common_1_70_0_13_Enable_KVM_Support_IPv6 (1.0.0)
+	bool "Patch 13 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Enable KVM Support IPv6
+
+#--------------------------------------
+config JViewer_common_1_70_0_14_90010_KVMCouldNotDisplayCompletely (1.0.0)
+	bool "Patch 14 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 90010, KVM could not display completely
+
+#--------------------------------------
+config JViewer_common_1_70_0_15_90223_RHELMouseMoveSlowlyAndErrorJumping (1.0.0)
+	bool "Patch 15 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 90223, RHEL mouse move slowly and error jumping
+
+#--------------------------------------
+config JViewer_common_1_70_0_16_92214_AutoVideoCanNotPlay (1.0.0)
+	bool "Patch 16 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 92214, the video recorded by auto video recording function is blank
+
+#--------------------------------------
+config JViewer_common_1_70_0_17_90310_KVMCanNotDisplay (1.0.0)
+	bool "Patch 17 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 90310, KVM can not display
+
+#--------------------------------------
+config JViewer_common_1_70_0_18_90223_RHELMouseMoveSlowlyAndErrorJumping_2 (1.0.0)
+	bool "Patch 18 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 90223, Mouse cursor movement is abnormal that Mouse along the top frame
+
+#--------------------------------------
+config JViewer_common_1_70_0_19_EIP92790_PhysicalKeyboardSupport (1.0.0)
+	bool "Patch 19 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Add physical keyboard language selection support
+
+#--------------------------------------
+config JViewer_common_1_70_0_1_EIP_66508_Dashboard_Capture_Video_Work_Abnormal_In_DOS (1.0.0)
+	bool "Patch 1 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		For EIP 66508 - Dashboard capture video work abnormal in DOS, especially in resolution 720x400
+
+#--------------------------------------
+config JViewer_common_1_70_0_20_Allowing_CTRL_key_combination_to_be_send_to_host_via_physical_keyboard (1.0.0)
+	bool "Patch 20 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Allowing CTRL key combination to be send to host via physical_keyboard
+
+#--------------------------------------
+config JViewer_common_1_70_0_21_97652_VideoRecordButtonNotRelease (1.0.0)
+	bool "Patch 21 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 97652, when click video record button, it will not auto release
+
+#--------------------------------------
+config JViewer_common_1_70_0_22_Synchronized_addKeyListener (1.0.0)
+	bool "Patch 22 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		There are two thread will called addKeyListener due the second thread might be finished early than the first thread Then iKVM keylistener function would be receives keyPressed event twice
+
+#--------------------------------------
+config JViewer_common_1_70_0_23_EIP95027_SyncHoldKeysAndSoftKeyboard_MDS_Release (1.0.0)
+	bool "Patch 23 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Synchronize hold key sets and SoftKeyboard pad
+
+#--------------------------------------
+config JViewer_common_1_70_0_24_EIP95027_SyncHoldWindowsKeyAndSoftKeyboard (1.0.0)
+	bool "Patch 24 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Synchronize hold windows key and SoftKeyboard pad
+
+#--------------------------------------
+config JViewer_common_1_70_0_25_EIP100725_VMediaMenuAndToolbarButtonEnabledIfPowerOff (1.0.0)
+	bool "Patch 25 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 100725, VMedia menu and toolbar buttons enabled even if host is powered off
+
+#--------------------------------------
+config JViewer_common_1_70_0_26_EIP102436_AddFullKeyboardSupport (1.0.0)
+	bool "Patch 26 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Add full keyboard support option
+
+#--------------------------------------
+config JViewer_common_1_70_0_27_102423_ImageOfVideoRecordButton (1.0.0)
+	bool "Patch 27 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 102423, Image of Video Record Button is not clear
+
+#--------------------------------------
+config JViewer_common_1_70_0_28_106388_SomeKVMButtonWillNotAutoRelease (1.0.0)
+	bool "Patch 28 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 106388, some KVM buttons will not auto released when pressed.
+
+#--------------------------------------
+config JViewer_common_1_70_0_29_107486_PhysicalKeyboardNotWork (1.0.0)
+	bool "Patch 29 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 107486, softkeyboard can not work
+
+#--------------------------------------
+config JViewer_common_1_70_0_2_EIP_69137_Server_Powercontrol_icon_functioning_in_client2_during_requesting_permission_from_1st_client (1.0.0)
+	bool "Patch 2 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Server Power control icon is functioning the in client2 during 2nd client requesting permission from 1st client
+
+#--------------------------------------
+config JViewer_common_1_70_0_30_107486_SoftKeyboardError (1.0.0)
+	bool "Patch 30 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		for EIP 107486, when select physical and then select softkeyboard will make some error
+
+#--------------------------------------
+config JViewer_common_1_70_0_31_149370_Fix_AutoVideoPlayOnce (1.0.0)
+	bool "Patch 31 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		149370_Fix_AutoVideoPlayOnce
+
+#--------------------------------------
+config JViewer_common_1_70_0_32_ForJava7u51 (1.0.0)
+	bool "Patch 32 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Added support to select Binary of Source package based on Build Precedence, at build time.
+
+#--------------------------------------
+config JViewer_common_1_70_0_3_EIP_66807_CD_Redirection_message_popup_read_only_mode (1.0.0)
+	bool "Patch 3 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Write contents in CD when it redirected [write form host] fails. if it is redirected with read only mode proper message should be prompted.
+
+#--------------------------------------
+config JViewer_common_1_70_0_4_EIP_67881_No_popup_message_for_changing_mousemode_from_Relative_to_Absolute (1.0.0)
+	bool "Patch 4 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		No popup message for changing the mouse mode from Relative to Absolute
+
+#--------------------------------------
+config JViewer_common_1_70_0_5_Service_Configuration_Pkt_size_change (1.0.0)
+	bool "Patch 5 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		included needed change for Service Configuration Pkt size change in libncml
+
+#--------------------------------------
+config JViewer_common_1_70_0_6_EIP_69631 (1.0.0)
+	bool "Patch 6 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Trying to launch a third KVM session, after launching 2 sessions in same client, leads to Maximum no: of session reached message to be displayed
+
+#--------------------------------------
+config JViewer_common_1_70_0_7_EIP_69004 (1.0.0)
+	bool "Patch 7 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Host won't wake up from sleep mode if mouse is moved in JViewer
+
+#--------------------------------------
+config JViewer_common_1_70_0_8_EIP_69633_69766_69836 (1.0.0)
+	bool "Patch 8 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		JViewer hangs in some scenario:fixed
+
+#--------------------------------------
+config JViewer_common_1_70_0_9_EIP_69351 (1.0.0)
+	bool "Patch 9 for JViewer_common (1.70.0)"
+	default n
+	depends on JViewer_common(==1.70.0)
+	help
+		Java preview option shows connection failed status when host video is in sleep mode, issue fixed
+
+#--------------------------------------
+config Kernel_soc_ast2300_1_19_0_1_Patch (1.0.0)
+	bool "Patch 1 for Kernel_soc_ast2300 (1.19.0)"
+	default n
+	depends on @Kernel_soc_ast2300(==1.19.0)
+	help
+		Updates mac driver
+
+#--------------------------------------
+config Kernel_soc_ast2300_1_19_0_2_EIP157215_Modify_MAC_DMA_Behavior (1.0.0)
+	bool "Patch 2 for Kernel_soc_ast2300 (1.19.0)"
+	default n
+	depends on @Kernel_soc_ast2300(==1.19.0)
+	help
+		Modify MAC and DMA arbitration behavior as Aspeed AP Note
+
+#--------------------------------------
+config Vmedia_Linux_32_1_15_0_1_ForJava7u51 (1.0.0)
+	bool "Patch 1 for Vmedia_Linux_32 (1.15.0)"
+	default n
+	depends on Vmedia_Linux_32(==1.15.0)
+	help
+		Added support to select Binary of Source package based on Build Precedence, at build time.
+
+#--------------------------------------
+config Vmedia_Linux_64_1_15_0_1_ForJava7u51 (1.0.0)
+	bool "Patch 1 for Vmedia_Linux_64 (1.15.0)"
+	default n
+	depends on Vmedia_Linux_64(==1.15.0)
+	help
+		Added support to select Binary of Source package based on Build Precedence, at build time.
+
+#--------------------------------------
+config Vmedia_Mac_32_1_14_0_1_ForJava7u51 (1.0.0)
+	bool "Patch 1 for Vmedia_Mac_32 (1.14.0)"
+	default n
+	depends on Vmedia_Mac_32(==1.14.0)
+	help
+		Added support to select Binary of Source package based on Build Precedence, at build time.
+
+#--------------------------------------
+config Vmedia_Mac_64_1_14_0_1_ForJava7u51 (1.0.0)
+	bool "Patch 1 for Vmedia_Mac_64 (1.14.0)"
+	default n
+	depends on Vmedia_Mac_64(==1.14.0)
+	help
+		Added support to select Binary of Source package based on Build Precedence, at build time.
+
+#--------------------------------------
+config Vmedia_Win32_1_14_0_1_ForJava7u51 (1.0.0)
+	bool "Patch 1 for Vmedia_Win32 (1.14.0)"
+	default n
+	depends on Vmedia_Win32(==1.14.0)
+	help
+		Added support to select Binary of Source package based on Build Precedence, at build time.
+
+#--------------------------------------
+config Vmedia_Win64_1_14_0_1_ForJava7u51 (1.0.0)
+	bool "Patch 1 for Vmedia_Win64 (1.14.0)"
+	default n
+	depends on Vmedia_Win64(==1.14.0)
+	help
+		Added support to select Binary of Source package based on Build Precedence, at build time.
+
+#--------------------------------------
+config adviser_dev_1_18_0_1_76114_TheMouseOfRemoteJavaViewIsNotSmoothWhenLocalSystemBootToLinux (1.0.0)
+	bool "Patch 1 for adviser_dev (1.18.0)"
+	default n
+	depends on adviser_dev(==1.18.0)
+	help
+		for 76114, the mouse of Remote Java View is not smooth When local sytem boot to Linux.
+
+#--------------------------------------
+config cdserverapp_1_16_0_1_Active_Session_Count_Increases_More_Than_Maxsession (1.0.0)
+	bool "Patch 1 for cdserverapp (1.16.0)"
+	default n
+	depends on cdserverapp(==1.16.0)
+	help
+		Active session count incrementing more then max session count
+
+#--------------------------------------
+config cdserverapp_1_16_0_2_memory_issue (1.0.0)
+	bool "Patch 2 for cdserverapp (1.16.0)"
+	default n
+	depends on cdserverapp(==1.16.0)
+	help
+		Added the pthread join to avaoid the memory leak
+
+#--------------------------------------
+config cdserverapp_1_16_0_3_EIP_68697 (1.0.0)
+	bool "Patch 3 for cdserverapp (1.16.0)"
+	default n
+	depends on cdserverapp(==1.16.0)
+	help
+		Bind Server socket to the interface provided in ncml configuration
+
+#--------------------------------------
+config cdserverapp_1_16_0_4_EIP68263 (1.0.0)
+	bool "Patch 4 for cdserverapp (1.16.0)"
+	default n
+	depends on cdserverapp(==1.16.0)
+	help
+		listen on loopback interface along with the network interface name specified in ncml configuration
+
+#--------------------------------------
+config cdserverapp_1_16_0_5_EncryptedVmediaConnectFail (1.0.0)
+	bool "Patch 5 for cdserverapp (1.16.0)"
+	default n
+	depends on cdserverapp(==1.16.0)
+	help
+		encrypted media session also make connection to media servers on loopback interface and so removed restriction on using loopback interface only for local media redirection
+
+#--------------------------------------
+config cdserverapp_1_16_0_6_EIP_168130 (1.0.0)
+	bool "Patch 6 for cdserverapp (1.16.0)"
+	default n
+	depends on cdserverapp(==1.16.0)
+	help
+		do not disconnect device if there is some instance activated in auto-attach mode
+
+#--------------------------------------
+config cipher_hw_1_10_0_1_EIP_199310_Fix_Incorrect_SCU_Register_Value (1.0.0)
+	bool "Patch 1 for cipher_hw (1.10.0)"
+	default n
+	depends on cipher_hw(==1.10.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		Find out the place to write the incorrect value to SCU04 and fix it.In Cipher_hw driver, fill the incorrect value to SCU04 to reset HAC engine.
+
+#--------------------------------------
+config defaultbondcfg_1_9_0_1_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 1 for defaultbondcfg (1.9.0)"
+	default n
+	depends on defaultbondcfg(==1.9.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config defaulthost_1_4_0_1_hostname_to_macro (1.0.0)
+	bool "Patch 1 for defaulthost (1.4.0)"
+	default n
+	depends on defaulthost(==1.4.0)
+	help
+		Modified the hardcoded hostname AMI to macro
+
+#--------------------------------------
+config fdserverapp_1_17_0_1_EIP_67872_FDmedia_Active_Session_Not_Updating (1.0.0)
+	bool "Patch 1 for fdserverapp (1.17.0)"
+	default n
+	depends on fdserverapp(==1.17.0)
+	help
+		EIP_67872:FDmedia Active Session count is not Updating
+
+#--------------------------------------
+config fdserverapp_1_17_0_2_memory_issues (1.0.0)
+	bool "Patch 2 for fdserverapp (1.17.0)"
+	default n
+	depends on fdserverapp(==1.17.0)
+	help
+		Added the pthread join to avaoid the memory leak
+
+#--------------------------------------
+config fdserverapp_1_17_0_3_EIP_68697 (1.0.0)
+	bool "Patch 3 for fdserverapp (1.17.0)"
+	default n
+	depends on fdserverapp(==1.17.0)
+	help
+		Bind Server socket to the interface provided in ncml configuration
+
+#--------------------------------------
+config fdserverapp_1_17_0_4_EIP68263 (1.0.0)
+	bool "Patch 4 for fdserverapp (1.17.0)"
+	default n
+	depends on fdserverapp(==1.17.0)
+	help
+		Listen on loopback interface along with the network interface name specified in ncml configuration
+
+#--------------------------------------
+config fdserverapp_1_17_0_5_EncryptedVmediaConnectFail (1.0.0)
+	bool "Patch 5 for fdserverapp (1.17.0)"
+	default n
+	depends on fdserverapp(==1.17.0)
+	help
+		encrypted media session also make connection to media servers on loopback interface and so removed restriction on using loopback interface only for local media redirection
+
+#--------------------------------------
+config fdserverapp_1_17_0_6_EIP_168130 (1.0.0)
+	bool "Patch 6 for fdserverapp (1.17.0)"
+	default n
+	depends on fdserverapp(==1.17.0)
+	help
+		do not disconnect device if there is some instance activated in auto-attach mode
+
+#--------------------------------------
+config flasher_1_19_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for flasher (1.19.0)"
+	default n
+	depends on flasher(==1.19.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config flasher_1_19_0_2_AuxVer_With_FMHVer_1_6 (1.0.0)
+	bool "Patch 2 for flasher (1.19.0)"
+	default n
+	depends on flasher(==1.19.0)
+	help
+		Aux version validation for FMH version >= 1.6
+
+#--------------------------------------
+config flasher_1_19_0_3_EIP171751_PreserveCfgDuringFwUpdate (1.0.0)
+	bool "Patch 3 for flasher (1.19.0)"
+	default n
+	depends on flasher(==1.19.0)
+	help
+		Preserve configuration fail during firmware update
+
+#--------------------------------------
+config goahead_1_62_0_1_BindSocketWithSpecifiedIfcName (1.0.0)
+	bool "Patch 1 for goahead (1.62.0)"
+	default n
+	depends on goahead(==1.62.0)
+	help
+		Listen the Socket only for specified interface that is configured in ncml.conf file.
+
+#--------------------------------------
+config goahead_1_62_0_2_EIP87305 (1.0.0)
+	bool "Patch 2 for goahead (1.62.0)"
+	default n
+	depends on goahead(==1.62.0)
+	help
+		EIP
+
+#--------------------------------------
+config goahead_1_62_0_3_EIP92790_PhysicalKeyboardSupport (1.0.0)
+	bool "Patch 3 for goahead (1.62.0)"
+	default n
+	depends on goahead(==1.62.0)
+	help
+		Physical keyboard is added in Web
+
+#--------------------------------------
+config goahead_1_62_0_4_ResIPMatchThroughETHInterface (1.0.0)
+	bool "Patch 4 for goahead (1.62.0)"
+	default n
+	depends on goahead(==1.62.0)
+	help
+		Through eth1 to access BMC website, let dashboard page displays eth1's IP, MAC etc.
+
+#--------------------------------------
+config goahead_1_62_0_5_EIP119560_SSLConnectionRunOutOfMemory (1.0.0)
+	bool "Patch 5 for goahead (1.62.0)"
+	default n
+	depends on goahead(==1.62.0)
+	help
+		Web console using SSL https accesses have access issue and will run out of memory in stress test
+
+#--------------------------------------
+config goahead_1_62_0_7_157037_KVMcannotLaunchInMacSafari (1.0.0)
+	bool "Patch 7 for goahead (1.62.0)"
+	default n
+	depends on goahead(==1.62.0)
+	help
+		157037_KVMcannotLaunchInMacSafari
+
+#--------------------------------------
+config goahead_1_62_0_8_181751_Using443OpenKVMFail (1.0.0)
+	bool "Patch 8 for goahead (1.62.0)"
+	default n
+	depends on goahead(==1.62.0)
+	help
+		for EIP 181751, using 443 port to open KVM will fail.
+
+#--------------------------------------
+config goahead_1_62_0_9_EIP_188860_SSLv3_POODLE_Vulnerability (1.0.0)
+	bool "Patch 9 for goahead (1.62.0)"
+	default n
+	depends on goahead(==1.62.0)
+	help
+		Disable SSLv2. Also disable SSLv3 if TLSv1 is selected.
+
+#--------------------------------------
+config hdserverapp_1_17_0_1_Active_Session_Count_Increases_More_Than_Maxsession (1.0.0)
+	bool "Patch 1 for hdserverapp (1.17.0)"
+	default n
+	depends on hdserverapp(==1.17.0)
+	help
+		Active session count incrementing more then max session count
+
+#--------------------------------------
+config hdserverapp_1_17_0_2_memory_issues (1.0.0)
+	bool "Patch 2 for hdserverapp (1.17.0)"
+	default n
+	depends on hdserverapp(==1.17.0)
+	help
+		Added the pthread join to avaoid the memory leak
+
+#--------------------------------------
+config hdserverapp_1_17_0_3_EIP_68697 (1.0.0)
+	bool "Patch 3 for hdserverapp (1.17.0)"
+	default n
+	depends on hdserverapp(==1.17.0)
+	help
+		Bind server socket tp the interface provided in ncml configuration
+
+#--------------------------------------
+config hdserverapp_1_17_0_4_EIP68263 (1.0.0)
+	bool "Patch 4 for hdserverapp (1.17.0)"
+	default n
+	depends on hdserverapp(==1.17.0)
+	help
+		Listen on loopback interface along with the network interface name specified in ncml configuration
+
+#--------------------------------------
+config hdserverapp_1_17_0_5_EncryptedVmediaConnectFail (1.0.0)
+	bool "Patch 5 for hdserverapp (1.17.0)"
+	default n
+	depends on hdserverapp(==1.17.0)
+	help
+		encrypted media session also make connection to media servers on loopback interface and so removed restriction on using loopback interface only for local media redirection
+
+#--------------------------------------
+config hdserverapp_1_17_0_6_EIP_168130 (1.0.0)
+	bool "Patch 6 for hdserverapp (1.17.0)"
+	default n
+	depends on hdserverapp(==1.17.0)
+	help
+		do not disconnect device if there is some instance activated in auto-attach mode
+
+#--------------------------------------
+config i2c_hw_1_12_0_1_Add_i2c_transfer_byte_timeout_check (1.0.0)
+	bool "Patch 1 for i2c_hw (1.12.0)"
+	default n
+	depends on i2c_hw(==1.12.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		Add I2C transfer byte timeout check
+
+#--------------------------------------
+config ipmi_dev_2_100_0_16_Fix_IPMItool_IPv6_get_session_all_fail (1.0.0)
+	bool "Patch 16 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		Fix IPMItool IPv6 get session all cause buffer overflow.
+
+#--------------------------------------
+config ipmi_dev_2_100_0_17_EIP181215_Support_VLAN_Yafuflash (1.0.0)
+	bool "Patch 17 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		EIP181215_Support_VLAN_Yafuflash
+
+#--------------------------------------
+config ipmi_dev_2_100_0_1_FastSELAccessWebUI (1.0.0)
+	bool "Patch 1 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		Added changes for faster accessing of SEL in WebUI.
+
+#--------------------------------------
+config ipmi_dev_2_100_0_2_Fix_FastSensorInfo (1.0.0)
+	bool "Patch 2 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		Added neccsary structure and macro for AMIGetSensorinfo Command.
+
+#--------------------------------------
+config ipmi_dev_2_100_0_3_Fix_For_SSH_Service_Configuration (1.0.0)
+	bool "Patch 3 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		Fix for SSH Service Configuration
+
+#--------------------------------------
+config ipmi_dev_2_100_0_4_snmp_ipmi_alignment_fix_EIP_69020 (1.0.0)
+	bool "Patch 4 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		snmp ipmi alignment fix EIP 69020
+
+#--------------------------------------
+config ipmi_dev_2_100_0_5_FlashAuxVersion (1.0.0)
+	bool "Patch 5 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		Added Auxversion support in FlashFMH for yafuflash.
+
+#--------------------------------------
+config ipmi_dev_2_100_0_6_AddNodeMgrFeature (1.0.0)
+	bool "Patch 6 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		Implement Intel Node Manage Featur
+
+#--------------------------------------
+config ipmi_dev_2_100_0_7_AddNodeMgrFeatureFix (1.0.0)
+	bool "Patch 7 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		add the line extern int lpcuart_route_set(hal_t *phal);
+
+#--------------------------------------
+config ipmi_dev_2_100_0_8_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 8 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config ipmi_dev_2_100_0_9_EIP81224_PEFPostPoneTime_Does_Not_Stop_When_System_Reset (1.0.0)
+	bool "Patch 9 for ipmi_dev (2.100.0)"
+	default n
+	depends on ipmi_dev(==2.100.0)
+	help
+		PEFPostPoneTimer does not stop when system is reset
+
+#--------------------------------------
+config ipmimain_2_61_0_1_EIP_68217 (1.0.0)
+	bool "Patch 1 for ipmimain (2.61.0)"
+	default n
+	depends on ipmimain(==2.61.0)
+	help
+		the User is added in Groups based on access limit.The user is stored in ChannelUserInfo table sequentially. But in UserInfo table it based on index(slot).we have to compare userid from userinfo table with the every userid in channelUserInfo table.Now we will get correct accesslimit for the user and added in groups correctly.
+
+#--------------------------------------
+config ipmimain_2_61_0_2_memory_issues (1.0.0)
+	bool "Patch 2 for ipmimain (2.61.0)"
+	default n
+	depends on ipmimain(==2.61.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config ipmimain_2_61_0_3_MBMC_Changes (1.0.0)
+	bool "Patch 3 for ipmimain (2.61.0)"
+	default n
+	depends on ipmimain(==2.61.0)
+	help
+		MBMC Changes
+
+#--------------------------------------
+config ipmimain_2_61_0_4_ActiveSessionsofGetSessionInfoIsNotCorrect (1.0.0)
+	bool "Patch 4 for ipmimain (2.61.0)"
+	default n
+	depends on ipmimain(==2.61.0)
+	help
+		Active sessions of Get Session Info is not correct
+
+#--------------------------------------
+config ipmimain_2_61_0_5_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 5 for ipmimain (2.61.0)"
+	default n
+	depends on ipmimain(==2.61.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config ipmimain_2_61_0_6_EIP81224_PEFPostPoneTime_Does_Not_Stop_When_System_Reset (1.0.0)
+	bool "Patch 6 for ipmimain (2.61.0)"
+	default n
+	depends on ipmimain(==2.61.0)
+	help
+		PEFPostPoneTimer does not stop when system is reset
+
+#--------------------------------------
+config ipmimain_2_61_0_7_EIP181215_Support_VLAN_Yafuflash (1.0.0)
+	bool "Patch 7 for ipmimain (2.61.0)"
+	default n
+	depends on ipmimain(==2.61.0)
+	help
+		EIP181215_Support_VLAN_Yafuflash
+
+#--------------------------------------
+config ipmipdk_dev_2_41_0_1_MBMC_Changes (1.0.0)
+	bool "Patch 1 for ipmipdk_dev (2.41.0)"
+	default n
+	depends on ipmipdk_dev(==2.41.0)
+	help
+		MBMC Changes
+
+#--------------------------------------
+config ipmipdk_dev_2_41_0_2_AddNodeMgrFeature (1.0.0)
+	bool "Patch 2 for ipmipdk_dev (2.41.0)"
+	default n
+	depends on ipmipdk_dev(==2.41.0)
+	help
+		Implement Intel Node Manage Feature
+
+#--------------------------------------
+config kcs_1_10_0_1_EIP_181055_FixKCSHangIssueAfterRunOver7Days (1.0.0)
+	bool "Patch 1 for kcs (1.10.0)"
+	default n
+	depends on kcs(==1.10.0)
+	help
+		Fix KCS hang issue after run over 7 days.
+
+#--------------------------------------
+config kcs_hw_1_7_0_1_EIP_181055_FixKCSHangIssueAfterRunOver7Days (1.0.0)
+	bool "Patch 1 for kcs_hw (1.7.0)"
+	default n
+	depends on kcs_hw(==1.7.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		Fix KCS hang issue after run over 7 days.
+
+#--------------------------------------
+config libPreserveConf_1_5_0_1_EIP_69583 (1.0.0)
+	bool "Patch 1 for libPreserveConf (1.5.0)"
+	default n
+	depends on libPreserveConf(==1.5.0)
+	help
+		Restore to factory defaults fix for service configurations
+
+#--------------------------------------
+config libUserPrivilege_1_2_0_1_Fix_Lighttpd_Crash_LDAP_UsrPriv (1.0.0)
+	bool "Patch 1 for libUserPrivilege (1.2.0)"
+	default n
+	depends on libUserPrivilege(==1.2.0)
+	help
+		Fix for Lighttpd Crash when we try ldap login with privilege as user
+
+#--------------------------------------
+config libadvisercfg_1_8_0_1_EIP92790_PhysicalKeyboardSupport (1.0.0)
+	bool "Patch 1 for libadvisercfg (1.8.0)"
+	default n
+	depends on libadvisercfg(==1.8.0)
+	help
+		Add physical keyboard language selection support
+
+#--------------------------------------
+config libautovideorecord_1_7_0_1_149370_Fix_AutoVideoErrorWhenKVMOpen (1.0.0)
+	bool "Patch 1 for libautovideorecord (1.7.0)"
+	default n
+	depends on libautovideorecord(==1.7.0)
+	help
+		149370_Fix_AutoVideoErrorWhenKVMOpen
+
+#--------------------------------------
+config libflash_1_11_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for libflash (1.11.0)"
+	default n
+	depends on libflash(==1.11.0) && libflash_dev(==1.11.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config libhostname_1_7_0_1_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 1 for libhostname (1.7.0)"
+	default n
+	depends on libhostname(==1.7.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config libifc_1_98_0_10_84131_AddAutoConfigurationInterfaces (1.0.0)
+	bool "Patch 10 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Add configure interfaces in service configuration automatically.
+
+#--------------------------------------
+config libifc_1_98_0_11_GlobalIPV6AddrCheck (1.0.0)
+	bool "Patch 11 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		IPV6 address is now restricted to global only.
+
+#--------------------------------------
+config libifc_1_98_0_12_EIP92790_PhysicalKeyboardSupport (1.0.0)
+	bool "Patch 12 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Physical keyboard is added in Web
+
+#--------------------------------------
+config libifc_1_98_0_13_LDAP_ACCEPT_UID (1.0.0)
+	bool "Patch 13 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		LDAP accept uid as bindn and dn
+
+#--------------------------------------
+config libifc_1_98_0_14_AddSensorEventReadingTypeCode (1.0.0)
+	bool "Patch 14 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Add the Sensor Event Reading Type code in the return value of the function GetAllSensors
+
+#--------------------------------------
+config libifc_1_98_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config libifc_1_98_0_2_69009 (1.0.0)
+	bool "Patch 2 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Unable to save DNS settings without Alternate DNS server - fixed.
+
+#--------------------------------------
+config libifc_1_98_0_3_NCSIMacro (1.0.0)
+	bool "Patch 3 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Added global macro support for NCSI.
+
+#--------------------------------------
+config libifc_1_98_0_4_FastSELAccessWebUI (1.0.0)
+	bool "Patch 4 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Added changes for faster SEL accessing in WebUI
+
+#--------------------------------------
+config libifc_1_98_0_5_Fix_FastSensorInfo (1.0.0)
+	bool "Patch 5 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Made changes to call the new API to get the sensor Info for faster web access.
+
+#--------------------------------------
+config libifc_1_98_0_6_EIP_68315 (1.0.0)
+	bool "Patch 6 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Web - Expired SSL certificate able to upload - fixed.
+
+#--------------------------------------
+config libifc_1_98_0_7_FRUInfomationWillShowInvalidCharacter (1.0.0)
+	bool "Patch 7 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		FRU Infomation will show invalid character
+
+#--------------------------------------
+config libifc_1_98_0_8_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 8 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config libifc_1_98_0_9_SolvedCommittedIssueforLibifcPATCHofID7 (1.0.0)
+	bool "Patch 9 for libifc (1.98.0)"
+	default n
+	depends on libifc(==1.98.0)
+	help
+		Solved committed issue for libifc Patch of ID7
+
+#--------------------------------------
+config libipmi_2_38_0_1_memory_issue (1.0.0)
+	bool "Patch 1 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config libipmi_2_38_0_2_FastSELAccessWebUI (1.0.0)
+	bool "Patch 2 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		Adding Higher Level API for faster SEL accessing in WebUI
+
+#--------------------------------------
+config libipmi_2_38_0_3_Fix_FastSensorInfo (1.0.0)
+	bool "Patch 3 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		Added a New API to get all the SensorInfo for faster web access.
+
+#--------------------------------------
+config libipmi_2_38_0_4_snmp_ipmi_alignment_fix_EIP_69020 (1.0.0)
+	bool "Patch 4 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		snmp ipmi alignment fix EIP 69020
+
+#--------------------------------------
+config libipmi_2_38_0_5_Sensor_Scanning_bit (1.0.0)
+	bool "Patch 5 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		Checking the Sensor Scanning bit and Sensor Accessing error to update the Sensor reading.
+
+#--------------------------------------
+config libipmi_2_38_0_6_NodeManagerCantBeReadNormally (1.0.0)
+	bool "Patch 6 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		NodeManager can't be read normally
+
+#--------------------------------------
+config libipmi_2_38_0_7_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 7 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config libipmi_2_38_0_8_AddSensorEventReadingTypeCode (1.0.0)
+	bool "Patch 8 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		Add the Sensor Event Reading Type code in the return value of the function GetAllSensorReadings
+
+#--------------------------------------
+config libipmi_2_38_0_9_EIP193007_FixCant_use_similar_account_to_login_Web (1.0.0)
+	bool "Patch 9 for libipmi (2.38.0)"
+	default n
+	depends on libipmi(==2.38.0)
+	help
+		Fixed can't use the similar account to login WebUI.
+
+#--------------------------------------
+config libipmidcmi_2_8_0_1_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 1 for libipmidcmi (2.8.0)"
+	default n
+	depends on libipmidcmi(==2.8.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config libipmidcmi_2_8_0_2_EIP_140333_FixSetMgtCtrlIdStringCmdTimeoutIssue (1.0.0)
+	bool "Patch 2 for libipmidcmi (2.8.0)"
+	default n
+	depends on libipmidcmi(==2.8.0)
+	help
+		Set Management Controller Identifier String will timeout.
+
+#--------------------------------------
+config libipmihalhw_2_5_1_1_AddNodeMgrFeature (1.0.0)
+	bool "Patch 1 for libipmihalhw (2.5.1)"
+	default n
+	depends on libipmihalhw(==2.5.1)
+	help
+		Implement Intel Node Manage Feature
+
+#--------------------------------------
+config libipmiinterruptsensor_2_4_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for libipmiinterruptsensor (2.4.0)"
+	default n
+	depends on libipmiinterruptsensor(==2.4.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config libipmilan_2_29_0_1_EIP181215_Support_VLAN_Yafuflash (1.0.0)
+	bool "Patch 1 for libipmilan (2.29.0)"
+	default n
+	depends on libipmilan(==2.29.0)
+	help
+		EIP181215_Support_VLAN_Yafuflash
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_10_Fix_FastSensorInfo (1.0.0)
+	bool "Patch 10 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Added a new command to get the sensor Info for faster Web-UI.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_11_EIP70215 (1.0.0)
+	bool "Patch 11 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Fix for WebUI login while changing username using IPMI raw commands.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_12_snmp_ipmi_alignment_fix_EIP_69020 (1.0.0)
+	bool "Patch 12 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		snmp_ipmi_alignment_fix_EIP_69020
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_13_eip77036_error_sensor_name_in_webui (1.0.0)
+	bool "Patch 13 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		error sensor name in web ui
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_14_AddNodeMgrFeature (1.0.0)
+	bool "Patch 14 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Implement Intel Node Manage Feature
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_15_eip78297_IPv6_functions_are_not_completed_yet_and_function_should_be_failed_as_Cesium_does (1.0.0)
+	bool "Patch 15 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		IPv6 functions are not completed yet and function should be failed as Cesium does.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_16_FixSELSensorReadingError_EIP75841 (1.0.0)
+	bool "Patch 16 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Fix the sensor reading error of SEL sensor (internal sensor).
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_17_FixSetSensorEventEnableBugEIP69347 (1.0.0)
+	bool "Patch 17 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		If sensor-scanning is disabled, it means this sensor is disabled. Bit5 of EventFlags should be 1. EIP69347.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_18_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 18 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_19_BridgeCMDfromKCStoNM (1.0.0)
+	bool "Patch 19 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		According to Spec, commands can be bridged to NM only under ADMIN privilege. But some interfaces, including KCS, doesn't need certification. For such interfaces, the privilege-checking should be skipped.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_1_SEL_Fix (1.0.0)
+	bool "Patch 1 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Removed the Dead lock condition and fix for SEL_FULL event.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_20_84131_AddAutoConfigurationInterfaces (1.0.0)
+	bool "Patch 20 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Add configure interfaces in service configuration automatically.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_21_EIP81224_PEFPostPoneTime_Does_Not_Stop_When_System_Reset (1.0.0)
+	bool "Patch 21 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		PEFPostPoneTimer does not stop when system is reset
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_22_GlobalIPV6AddrCheck (1.0.0)
+	bool "Patch 22 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		IPV6 address is now restricted to global only.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_23_ToFixReadEvtMsgBufferFunctionReturnValueWhenMessageQueueIsEmpty (1.0.0)
+	bool "Patch 23 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		To fix ReadEvtMsgBuffer function return value when message queue is empty.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_24_ClassDENotAccepted (1.0.0)
+	bool "Patch 24 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Class D and E addresses are no longer accepted
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_25_Fix_NetConf_IPMI_error_460 (1.0.0)
+	bool "Patch 25 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Fix getting network configuration IPMI error 460
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_26_EIP93209_To_Fix_PEFPostponeTimer_Ineffective_Issue (1.0.0)
+	bool "Patch 26 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Fix the PEF Postpone Timer ineffective issue
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_27_NotThisRange (1.0.0)
+	bool "Patch 27 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Thou Shalt not use reserved address range.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_28_After_WDTTmrAction_is_Executed_Clear_DontLog_Bit (1.0.0)
+	bool "Patch 28 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		After WDTTmrAction is executed, clear the dont_log bit. According to watchdog in SPEC 27.3.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_2_Set_MAC_Fix (1.0.0)
+	bool "Patch 2 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Reboot the card while setting the MAC address in bonding mode.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_3_IPMI_Privilege (1.0.0)
+	bool "Patch 3 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Modified the AMI OEM IPMI command privilege and change for setiface command.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_44_Fix_IPMItool_IPv6_get_session_all_fail (1.0.0)
+	bool "Patch 44 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Fix IPMItool IPv6 get session all cause buffer overflow.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_45_EIP175617_Add_Netwrok_Filter (1.0.0)
+	bool "Patch 45 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		EIP175617_Add_Netwrok_Filter
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_46_EIP_188650_FixWdtPreTimeOut (1.0.0)
+	bool "Patch 46 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Fix watchdog pre-timeout interrupt flag cannot be cleared via Set Watchdog Timer command.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_4_EIP_68695_EIP_68301 (1.0.0)
+	bool "Patch 4 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Modified the reponse data size for syslog command and fix for getdevice id.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_5_internel_sensor (1.0.0)
+	bool "Patch 5 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Fix for dead lock condition and setting internel sensor reading properly.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_6_Enabled_user (1.0.0)
+	bool "Patch 6 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Fix for Currently enabled user.
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_7_EIP_67874_Fix (1.0.0)
+	bool "Patch 7 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		JViewer is not terminating after Restore factory defaults
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_8_FastSELAccessWebUI (1.0.0)
+	bool "Patch 8 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Added IPMI Command AMIGetSELEntries for faster SEL accessing in WebUI
+
+#--------------------------------------
+config libipmimsghndlr_2_159_0_9_lighttpdrestartfix (1.0.0)
+	bool "Patch 9 for libipmimsghndlr (2.159.0)"
+	default n
+	depends on libipmimsghndlr(==2.159.0)
+	help
+		Changes made to restart lighttpd properly during web service restarting.
+
+#--------------------------------------
+config libipmipdkapi_2_7_0_1_AddNodeMgrFeature (1.0.0)
+	bool "Patch 1 for libipmipdkapi (2.7.0)"
+	default n
+	depends on libipmipdkapi(==2.7.0)
+	help
+		Implement Intel Node Manage Feature
+
+#--------------------------------------
+config libipmipdkcmds_2_13_0_1_EnableAMIGetSelEntries (1.0.0)
+	bool "Patch 1 for libipmipdkcmds (2.13.0)"
+	default n
+	depends on libipmipdkcmds(==2.13.0)
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		Enabling AMIGetSelEntries command for faster SEL accessing in WebUI
+
+#--------------------------------------
+config libipmipdkcmds_2_13_0_2_EnableAMIGetSensorInfo (1.0.0)
+	bool "Patch 2 for libipmipdkcmds (2.13.0)"
+	default n
+	depends on libipmipdkcmds(==2.13.0)
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		Enabling AMIGetSensorInfo Command for faster access.
+
+#--------------------------------------
+config libipmipef_2_11_0_1_EIP81224_PEFPostPoneTime_Does_Not_Stop_When_System_Reset (1.0.0)
+	bool "Patch 1 for libipmipef (2.11.0)"
+	default n
+	depends on libipmipef(==2.11.0)
+	help
+		PEFPostPoneTimer does not stop when system is reset
+
+#--------------------------------------
+config libipmipef_2_11_0_2_EIP93209_To_Fix_PEFPostponeTimer_Ineffective_Issue (1.0.0)
+	bool "Patch 2 for libipmipef (2.11.0)"
+	default n
+	depends on libipmipef(==2.11.0)
+	help
+		Fix the PEF Postpone Timer ineffective issue
+
+#--------------------------------------
+config libipmisol_2_8_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for libipmisol (2.8.0)"
+	default n
+	depends on libipmisol(==2.8.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config libipmisol_2_8_0_2_78904_SOLLoopTestFail (1.0.0)
+	bool "Patch 2 for libipmisol (2.8.0)"
+	default n
+	depends on libipmisol(==2.8.0)
+	help
+		SOL loop test fail
+
+#--------------------------------------
+config libipmistack_2_52_0_1_MBMC_Changes (1.0.0)
+	bool "Patch 1 for libipmistack (2.52.0)"
+	default n
+	depends on libipmistack(==2.52.0)
+	help
+		MBMC Changes
+
+#--------------------------------------
+config libipmistack_2_52_0_2_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 2 for libipmistack (2.52.0)"
+	default n
+	depends on libipmistack(==2.52.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config libipmitimer_2_8_0_1_110609_FixBMCBootFlagsClearMechanism (1.0.0)
+	bool "Patch 1 for libipmitimer (2.8.0)"
+	default n
+	depends on libipmitimer(==2.8.0)
+	help
+		To Fix BMC Boot Flag Clear Mechanism
+
+#--------------------------------------
+config libldapauth_1_16_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for libldapauth (1.16.0)"
+	default n
+	depends on libldapauth(==1.16.0)
+	help
+		Returning the null if any failure case occurs
+
+#--------------------------------------
+config libldapconf_1_11_0_1_LDAP_ACCEPT_UID (1.0.0)
+	bool "Patch 1 for libldapconf (1.11.0)"
+	default n
+	depends on libldapconf(==1.11.0)
+	help
+		LDAP accept uid as binddn and dn
+
+#--------------------------------------
+config libldapconf_1_11_0_2_LDAP_GroupOfName_Allow_UID (1.0.0)
+	bool "Patch 2 for libldapconf (1.11.0)"
+	default n
+	depends on libldapconf(==1.11.0)
+	help
+		ldap objectclaas GroupOfName allow UID as dn
+
+#--------------------------------------
+config libncml_1_22_0_1_SSHFIX (1.0.0)
+	bool "Patch 1 for libncml (1.22.0)"
+	default n
+	depends on libncml(==1.22.0)
+	help
+		Added integer 1 to MAX_SERVICE_NAME_SIZE and MAX_SERVICE_IFACE_NAME_SIZE
+
+#--------------------------------------
+config libncml_1_22_0_2_memory_issues (1.0.0)
+	bool "Patch 2 for libncml (1.22.0)"
+	default n
+	depends on libncml(==1.22.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config libncml_1_22_0_3_Fix_For_SSH_Service_Configuration (1.0.0)
+	bool "Patch 3 for libncml (1.22.0)"
+	default n
+	depends on libncml(==1.22.0)
+	help
+		Fix for Saving SSH Service Configurations
+
+#--------------------------------------
+config libncml_1_22_0_4_Build_error_while_patched_84131 (1.0.0)
+	bool "Patch 4 for libncml (1.22.0)"
+	default n
+	depends on libncml(==1.22.0)
+	help
+		Build error while patched 84131. Removed include "nwcfg.h".
+
+#--------------------------------------
+config libnetwork_1_58_0_10_NotThisRange (1.0.0)
+	bool "Patch 10 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Thou Shalt not use reserved address range.
+
+#--------------------------------------
+config libnetwork_1_58_0_11_EIP_113381_NonStandardFeature_ivp6_prefix_mask (1.0.0)
+	bool "Patch 11 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Add all  prefix mask
+
+#--------------------------------------
+config libnetwork_1_58_0_12_EIP181215_Support_VLAN_Yafuflash (1.0.0)
+	bool "Patch 12 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		EIP181215_Support_VLAN_Yafuflash
+
+#--------------------------------------
+config libnetwork_1_58_0_13_EIP187026_FIX_IPV6_GET_DEFAULT_GATEWAY_ADDRESS (1.0.0)
+	bool "Patch 13 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Fix IPv6 can't get default gateway address
+
+#--------------------------------------
+config libnetwork_1_58_0_1_Bond_fix (1.0.0)
+	bool "Patch 1 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Added new method to check the bond interface's slave status and Bond VLAN fix.
+
+#--------------------------------------
+config libnetwork_1_58_0_2_Null_check (1.0.0)
+	bool "Patch 2 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Added Null check for interface name and free memory in error condition.
+
+#--------------------------------------
+config libnetwork_1_58_0_3_Modified_StringManipulation_Logic (1.0.0)
+	bool "Patch 3 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Modified string manipulation logic in protoendpoint.c and tcp.c
+
+#--------------------------------------
+config libnetwork_1_58_0_4_79335_VLanForIPv6CannotWork (1.0.0)
+	bool "Patch 4 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		VLan for IPv6 cannot work.
+
+#--------------------------------------
+config libnetwork_1_58_0_5_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 5 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config libnetwork_1_58_0_6_StripUnnecessaryLib (1.0.0)
+	bool "Patch 6 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Strip Unnecessary Library
+
+#--------------------------------------
+config libnetwork_1_58_0_7_84131_AddAutoConfigurationInterfaces (1.0.0)
+	bool "Patch 7 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Add configure interfaces in service configuration automatically. If Auto configuration is enabled, then all the services will be restarted automatically.
+
+#--------------------------------------
+config libnetwork_1_58_0_8_RestartServiceAfterSettingDNSConf (1.0.0)
+	bool "Patch 8 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Restart web related services after setting dns configuration
+
+#--------------------------------------
+config libnetwork_1_58_0_9_GlobalIPV6AddrCheck (1.0.0)
+	bool "Patch 9 for libnetwork (1.58.0)"
+	default n
+	depends on libnetwork(==1.58.0)
+	help
+		Add a function to check for global ipv6 address
+
+#--------------------------------------
+config libntpconf_1_4_0_1_EIP176750_FixMultipleInstancesOfNtpd (1.0.0)
+	bool "Patch 1 for libntpconf (1.4.0)"
+	default n
+	depends on libntpconf(==1.4.0)
+	help
+		Fix the multiple instances of ntpd
+
+#--------------------------------------
+config libsmtp_1_6_0_1_101349_LetSMTPMailCanWork (1.0.0)
+	bool "Patch 1 for libsmtp (1.6.0)"
+	default n
+	depends on libsmtp(==1.6.0)
+	help
+		for EIP 101349, Because of the AST2300_2011Q3 SMTP mail content is null, so, add this patch to resolved this issue
+
+#--------------------------------------
+config libsnmp_hostname_mib_1_6_0_1_FixDuplicateRegistrationMibModule (1.0.0)
+	bool "Patch 1 for libsnmp_hostname_mib (1.6.0)"
+	default n
+	depends on libsnmp_hostname_mib(==1.6.0)
+	help
+		FixDuplicateRegistrationMibModule
+
+#--------------------------------------
+config libsnmp_template_mib_1_3_0_1_FixDuplicateRegistrationMibModule (1.0.0)
+	bool "Patch 1 for libsnmp_template_mib (1.3.0)"
+	default n
+	depends on libsnmp_template_mib(==1.3.0)
+	help
+		FixDuplicateRegistrationMibModule
+
+#--------------------------------------
+config libsnmp_template_mib_1_3_0_2_FixErrorMsgWhenSnmpLoadTemplateMib (1.0.0)
+	bool "Patch 2 for libsnmp_template_mib (1.3.0)"
+	default n
+	depends on libsnmp_template_mib(==1.3.0)
+	help
+		FixErrorMsgWhenSnmpLoadTemplateMib
+
+#--------------------------------------
+config libsnmpusers_1_8_0_1_snmp_ipmi_alignment_fix_EIP_69020 (1.0.0)
+	bool "Patch 1 for libsnmpusers (1.8.0)"
+	default n
+	depends on libsnmpusers(==1.8.0)
+	help
+		snmp ipmi alignment fix EIP 69020
+
+#--------------------------------------
+config libsnmpusers_1_8_0_2_FixTheSnmpUserAccountInforWillBeLostAfterBMCreset (1.0.0)
+	bool "Patch 2 for libsnmpusers (1.8.0)"
+	default n
+	depends on libsnmpusers(==1.8.0)
+	help
+		Fix the SNMP user account information will be lost after BMC reset
+
+#--------------------------------------
+config libsyslogconf_1_4_0_1_EIP165066_Fix_Log_Rotate (1.0.0)
+	bool "Patch 1 for libsyslogconf (1.4.0)"
+	default n
+	depends on libsyslogconf(==1.4.0)
+	help
+		Fix log rotate
+
+#--------------------------------------
+config libtoken_1_7_0_1_EIP_69351 (1.0.0)
+	bool "Patch 1 for libtoken (1.7.0)"
+	default n
+	depends on libtoken(==1.7.0)
+	help
+		Java preview option shows connection failed status when host video is in sleep mode, issue fixed
+
+#--------------------------------------
+config libtoken_1_7_0_2_Enable_KVM_Support_IPv6 (1.0.0)
+	bool "Patch 2 for libtoken (1.7.0)"
+	default n
+	depends on libtoken(==1.7.0)
+	help
+		Enable KVM Support IPv6
+
+#--------------------------------------
+config libubenv_1_3_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for libubenv (1.3.0)"
+	default n
+	depends on libubenv(==1.3.0)
+	help
+		Memory Issues proeprly closed the handle and free the memory
+
+#--------------------------------------
+config libunix_1_5_0_1_Memory_issue (1.0.0)
+	bool "Patch 1 for libunix (1.5.0)"
+	default n
+	depends on libunix(==1.5.0)
+	help
+		Modified the sizeof to strlen for string lenth check
+
+#--------------------------------------
+config libunix_1_5_0_2_Fix_MsgHndlr_Queue_Crash (1.0.0)
+	bool "Patch 2 for libunix (1.5.0)"
+	default n
+	depends on libunix(==1.5.0)
+	help
+		Fixed for execute command line function causes ipmistack to exit
+
+#--------------------------------------
+config libuserauth_1_27_0_1_no_access_user_block (1.0.0)
+	bool "Patch 1 for libuserauth (1.27.0)"
+	default n
+	depends on libuserauth(==1.27.0)
+	help
+		Blocking no access user acount when login.
+
+#--------------------------------------
+config libuserm_1_12_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for libuserm (1.12.0)"
+	default n
+	depends on libuserm(==1.12.0)
+	help
+		Added proper error handling and freeing of dynamically allocated memory.
+
+#--------------------------------------
+config libvideo_1_8_0_1_187740_KVMPauseResumeIssue (1.0.0)
+	bool "Patch 1 for libvideo (1.8.0)"
+	default n
+	depends on libvideo(==1.8.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		for EIP 187740, KVM pause and resume continuously will hang.
+
+#--------------------------------------
+config libvmedia_1_13_0_1_EIP69440_AllowOnlyOneClientAtATimeForVmedia (1.0.0)
+	bool "Patch 1 for libvmedia (1.13.0)"
+	default n
+	depends on libvmedia(==1.13.0)
+	help
+		Allow only one vmedia client at one time
+
+#--------------------------------------
+config libvmedia_1_13_0_2_EIP_68697 (1.0.0)
+	bool "Patch 2 for libvmedia (1.13.0)"
+	default n
+	depends on libvmedia(==1.13.0)
+	help
+		Bind server socket to the interface provided in ncml configuration
+
+#--------------------------------------
+config libvmedia_1_13_0_3_EIP68263 (1.0.0)
+	bool "Patch 3 for libvmedia (1.13.0)"
+	default n
+	depends on libvmedia(==1.13.0)
+	help
+		moved the macro to header file
+
+#--------------------------------------
+config libvmedia_1_13_0_4_EIP_168130 (1.0.0)
+	bool "Patch 4 for libvmedia (1.13.0)"
+	default n
+	depends on libvmedia(==1.13.0)
+	help
+		do not disconnect device if there is some instance activated in auto-attach mode
+
+#--------------------------------------
+config ncsi_1_15_0_1_NCSI_Support_IPV6 (1.0.0)
+	bool "Patch 1 for ncsi (1.15.0)"
+	default n
+	depends on ncsi(==1.15.0)
+	help
+		NCSI Support IPV6
+
+#--------------------------------------
+config nsupdate_1_10_0_1_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 1 for nsupdate (1.10.0)"
+	default n
+	depends on nsupdate(==1.10.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config oempdk_dev_2_7_0_1_AddNodeMgrFeature (1.0.0)
+	bool "Patch 1 for oempdk_dev (2.7.0)"
+	default n
+	depends on oempdk_dev(==2.7.0)
+	help
+		Implement Intel Node Manage Feature
+
+#--------------------------------------
+config pam_ad_1_15_0_1_Fix_Lighttpd_Crash_LDAP_UsrPriv (1.0.0)
+	bool "Patch 1 for pam_ad (1.15.0)"
+	default n
+	depends on pam_ad(==1.15.0)
+	help
+		Fix for Lighttpd Crash when we try ldap login with privilege as user
+
+#--------------------------------------
+config pam_ipmi_1_18_0_1_Fix_For_Username_Password_Length (1.0.0)
+	bool "Patch 1 for pam_ipmi (1.18.0)"
+	default n
+	depends on pam_ipmi(==1.18.0)
+	help
+		Fix for Username and Password Length
+
+#--------------------------------------
+config pam_ldap_1_24_0_1_Fix_Lighttpd_Crash_LDAP_UsrPriv (1.0.0)
+	bool "Patch 1 for pam_ldap (1.24.0)"
+	default n
+	depends on pam_ldap(==1.24.0)
+	help
+		Fix for Lighttpd Crash when we try ldap login with privilege as user
+
+#--------------------------------------
+config processmanager_1_3_0_1_memory_issues (1.0.0)
+	bool "Patch 1 for processmanager (1.3.0)"
+	default n
+	depends on processmanager(==1.3.0)
+	help
+		Memory Issues
+
+#--------------------------------------
+config sys_base_2_41_0_1_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 1 for sys_base (2.41.0)"
+	default n
+	depends on sys_base(==2.41.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config sys_base_2_41_0_2_Fix_SystemLog_Err_Msg_In_Cron (1.0.0)
+	bool "Patch 2 for sys_base (2.41.0)"
+	default n
+	depends on sys_base(==2.41.0)
+	help
+		Fix cron error log.
+
+#--------------------------------------
+config sys_base_2_41_0_3_EIP165066_Fix_Log_Rotate_MDS_Release (1.0.0)
+	bool "Patch 3 for sys_base (2.41.0)"
+	default n
+	depends on sys_base(==2.41.0)
+	help
+		Fix log rotate
+
+#--------------------------------------
+config sys_base_2_41_0_4_EIP176750_Fix_Crontab (1.0.0)
+	bool "Patch 4 for sys_base (2.41.0)"
+	default n
+	depends on sys_base(==2.41.0)
+	help
+		Fix the cron does not execute
+
+#--------------------------------------
+config sys_failsafeconf_2_4_0_1_EIP_116094_StandardFeature_FIX_Rsync_on_JFFS2_Cause_Memory_Leak (1.0.0)
+	bool "Patch 1 for sys_failsafeconf (2.4.0)"
+	default n
+	depends on sys_failsafeconf(==2.4.0)
+	help
+		for EIP 116094: memory leak. Rsync creating temporary files on JFFS2 files system is an unnecessary overhead. Fix: create temporary files outside the backup config folder.
+
+#--------------------------------------
+config sys_ipv6_2_3_0_1_79335_VLanForIPv6CannotWork (1.0.0)
+	bool "Patch 1 for sys_ipv6 (2.3.0)"
+	default n
+	depends on sys_ipv6(==2.3.0)
+	help
+		VLan for IPv6 cannot work.
+
+#--------------------------------------
+config sys_ipv6_2_3_0_2_PortIPV6DNSRelatedFunc (1.0.0)
+	bool "Patch 2 for sys_ipv6 (2.3.0)"
+	default n
+	depends on sys_ipv6(==2.3.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config sys_net_snmp_2_6_0_1_FixTheSnmpUserAccountInforWillBeLostAfterBMCreset (1.0.0)
+	bool "Patch 1 for sys_net_snmp (2.6.0)"
+	default n
+	depends on sys_net_snmp(==2.6.0)
+	help
+		Fix the SNMP user account information will be lost after BMC reset
+
+#--------------------------------------
+config usb1_hw_1_6_0_1_200772_KVMMouseKeyboardNotWork (1.0.0)
+	bool "Patch 1 for usb1_hw (1.6.0)"
+	default n
+	depends on usb1_hw(==1.6.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		for EIP 200772, RKVM keyboard and mouse does not work in Windows2012R2
+
+#--------------------------------------
+config videocap_1_14_0_0_EIP_89885_DCTQuantizationProblemInJviewer (1.0.0)
+	bool "Patch 0 for videocap (1.14.0)"
+	default n
+	depends on videocap(==1.14.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		for EIP 89885, DCT Quantization problem in JViewer
+
+#--------------------------------------
+config videocap_1_14_0_1_167645_KVMRedirectionShaking (1.0.0)
+	bool "Patch 1 for videocap (1.14.0)"
+	default n
+	depends on videocap(==1.14.0)
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		for EIP 167645, the screen would shake if system server changed the resolution 1440 x 900,1600 x 900,1680 x 1050
+
+#--------------------------------------
+config webui_1_122_0_10_87010_Disable_IPv6_Setting_When_Network_Bonding_is_Enable (1.0.0)
+	bool "Patch 10 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Disable IPv6 setting when network bonding is enable
+
+#--------------------------------------
+config webui_1_122_0_11_Add_Save_SEL_Function_Support (1.0.0)
+	bool "Patch 11 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Add save SEL function support
+
+#--------------------------------------
+config webui_1_122_0_11_ClassDENotAccepted (1.0.0)
+	bool "Patch 11 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Class D and E addresses are no longer accepted
+
+#--------------------------------------
+config webui_1_122_0_12_EIP92790_PhysicalKeyboardSupport (1.0.0)
+	bool "Patch 12 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Physical Keyboard support is added in Web
+
+#--------------------------------------
+config webui_1_122_0_13_Fix_bugs_of_the_sensor_reading_widget (1.0.0)
+	bool "Patch 13 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Fix bugs of the sensor reading widget.
+
+#--------------------------------------
+config webui_1_122_0_14_ResIPMatchThroughETHInterface (1.0.0)
+	bool "Patch 14 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Through eth1 to access BMC website, let dashboard page displays eth1's IP, MAC etc.
+
+#--------------------------------------
+config webui_1_122_0_15_LDAP_ACCEPT_UID (1.0.0)
+	bool "Patch 15 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		LDAP accept uid as bindn and dn
+
+#--------------------------------------
+config webui_1_122_0_16_NotThisRange (1.0.0)
+	bool "Patch 16 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Thou Shalt not use reserved address range.
+
+#--------------------------------------
+config webui_1_122_0_17_AddSensorEventReadingTypeCode (1.0.0)
+	bool "Patch 17 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Add the Sensor Event Reading Type Code in the sensor event filter
+
+#--------------------------------------
+config webui_1_122_0_18_107625_LiveWidgetHaveNoFunctionForIE (1.0.0)
+	bool "Patch 18 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		For EIP 107625, Live Widget has no function, for IE
+
+#--------------------------------------
+config webui_1_122_0_19_EIP_113381_NonStandardFeature_ivp6_prefix_mask (1.0.0)
+	bool "Patch 19 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Add all  prefix mask
+
+#--------------------------------------
+config webui_1_122_0_1_66835_66108 (1.0.0)
+	bool "Patch 1 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		1.In UI, Network privilege in User management shows as blank for newly added user through IPMI tool. 2.Event & System_Audit Logs: Info message regarding empty log looks and feels as if there is an error condition.
+
+#--------------------------------------
+config webui_1_122_0_20_EIP117390_EventLogPageDisplayIncorrectlyInIE10 (1.0.0)
+	bool "Patch 20 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Event log page of web UI displays incorrectly in IE10
+
+#--------------------------------------
+config webui_1_122_0_21_128154_HelpPageShowErrorMessage (1.0.0)
+	bool "Patch 21 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		for EIP 128154, at Active Directory help page show error message
+
+#--------------------------------------
+config webui_1_122_0_22_128154_RollbackOneLine (1.0.0)
+	bool "Patch 22 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		for EIP 128154, delete one more line, need rollback
+
+#--------------------------------------
+config webui_1_122_0_23_149370_Fix_AutoVideoCannotPlay (1.0.0)
+	bool "Patch 23 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		149370_Fix_AutoVideoCannotPlay
+
+#--------------------------------------
+config webui_1_122_0_24_187028_EventLogShowError_MDS_Release (1.0.0)
+	bool "Patch 24 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		for EIP 187028, event log show error in IE11 and firefox
+
+#--------------------------------------
+config webui_1_122_0_2_Pagewise_Eventlog (1.0.0)
+	bool "Patch 2 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Redesigned Event Log to display the events in pagewise format.
+
+#--------------------------------------
+config webui_1_122_0_3_EIP_69120_68315_63780 (1.0.0)
+	bool "Patch 3 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Following are the bugs fixed, 1.AD - wrong help texty for Active directory. 2.Web - Expired SSL certificate able to upload. 3.Modifying an AD role group via UI: the confirmation message needs minor correction.
+
+#--------------------------------------
+config webui_1_122_0_4_EIP_69619_68351 (1.0.0)
+	bool "Patch 4 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		1.Web - There is no help text for Send test alert-fixed. 2.Get an IPMI error message if an Operator tries to view the Triggers Configuration page-fixed.
+
+#--------------------------------------
+config webui_1_122_0_5_Network_Service_Warning (1.0.0)
+	bool "Patch 5 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Added Service related warning message, when network/bonding configuration is done.
+
+#--------------------------------------
+config webui_1_122_0_6_77209_ThePopWindowSizeOfNewSELEventIsTooSmallThatUserCanNotUseScrollBarEasily (1.0.0)
+	bool "Patch 6 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		for solved the pop window size of new SEL event is too small that user can't use scroll bar easily
+
+#--------------------------------------
+config webui_1_122_0_7_PortIPV6DNSRelatedFunc_MDS_Release (1.0.0)
+	bool "Patch 7 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Porting DNSv6 related functions from Q4 release.
+
+#--------------------------------------
+config webui_1_122_0_8_84131_AddAutoConfigurationInterfaces (1.0.0)
+	bool "Patch 8 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Add configure interfaces in service configuration automatically.
+
+#--------------------------------------
+config webui_1_122_0_9_85463_NetworkInfo_is_Incorrect_If_Use_Eth1 (1.0.0)
+	bool "Patch 9 for webui (1.122.0)"
+	default n
+	depends on webui(==1.122.0)
+	help
+		Open Web through eth1, the Network Information is not eth1 info.
+
+#--------------------------------------
+
+endmenu
+
+

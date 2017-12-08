@@ -1,0 +1,9 @@
+# This will install the uImage
+
+build-install:
+		MKDIR_CLEAN %KERNEL_BIN
+		COPY_FILE  ./boot/kernel/uImage %KERNEL_BIN
+ 		CREATE_SOFT_LINK generic %IMAGE_TREE/lib/modules/2.6.28.10-ami
+
+debug-install:
+		COPY_FILE ./boot/kernel/uImage  %TFTPBOOT

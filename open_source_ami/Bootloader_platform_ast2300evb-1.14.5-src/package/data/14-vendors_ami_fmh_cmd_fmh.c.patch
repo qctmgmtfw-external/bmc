@@ -1,0 +1,22 @@
+--- u-boot-1.1.6/vendors/ami/fmh/cmd_fmh.c	2011-08-11 12:26:54.000000000 +0800
++++ u-boot-1.1.6-ami/vendors/ami/fmh/cmd_fmh.c	2012-08-22 11:38:00.000000000 +0800
+@@ -445,11 +445,19 @@
+ 		//we found root mtd.now we see if it is initrd
+ 		if(rootisinitrd == 1)
+ 		{
++#ifdef CONFIG_DRAM_ECC
++			sprintf(bootargs,"root=/dev/ramdisk ro ip=none ramdisk_blocksize=4096 mem=%dM ",(CFG_SDRAM_LEN - CFG_SDRAM_ECC_USED) >> 20);
++#else
+ 			sprintf(bootargs,"root=/dev/ramdisk ro ip=none ramdisk_blocksize=4096 ");
++#endif
+ 		}
+ 		else
+ 		{
++#ifdef CONFIG_DRAM_ECC
++			sprintf(bootargs,"root=/dev/mtdblock%d ro ip=none mem=%dM ",RootMtdNo,(CFG_SDRAM_LEN - CFG_SDRAM_ECC_USED) >> 20);
++#else
+ 			sprintf(bootargs,"root=/dev/mtdblock%d ro ip=none ",RootMtdNo);
++#endif
+ 		}
+ 
+ 		if (silent > 1)

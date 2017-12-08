@@ -1,0 +1,13 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/unix
+	COPY_FILE ./unix.h %SPXINC/unix
+	COPY_FILE ./semaph.h %SPXINC/unix
+	MKDIR_NOCLEAN %SPXLIB/unix
+	COPY_FILE ./libunix.a %SPXLIB/unix
+	COPY_FILE ./libunix.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/unix
+	ADD_LIBRARY_LINKS %SPXLIB/unix libunix.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+
+debug-install:

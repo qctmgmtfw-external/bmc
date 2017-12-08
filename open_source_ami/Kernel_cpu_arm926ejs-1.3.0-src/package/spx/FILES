@@ -1,0 +1,2 @@
+./01-Compiler.patch 586 a990ecff33728e184f1ac5f92b509e8d
+./02-cacheflush.patch 584 f8963f3af496a30a7d47e96e2e933d04

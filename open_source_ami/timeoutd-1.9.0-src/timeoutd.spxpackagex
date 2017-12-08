@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/data/timeoutd.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/data/patch</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/data/Makefile</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/data/timeout</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>timeoutd</package-name>
+<version>1.9.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">crosscc</package-name>
+<package-name operator="" version="">kernel</package-name>
+<package-name operator="" version="">sys_base</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>FEATURES</group>
+<configtags>Timeout Daemon Support</configtags>
+<installsize/>
+<description>Timeout daemon package.</description>
+<architecture>ALL</architecture>
+<owner>AMI</owner>
+<maintainer>Gokulakannan Sampath  </maintainer>
+<maintainer-email>gokulakannans@amiindia.co.in</maintainer-email>
+<sourcelocation>http://packages.debian.org/source/squeeze/timeoutd</sourcelocation>
+<sourceversion>1.5</sourceversion>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/spx/RULES</rule>
+<rule>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/spx/RULES.D/CreateTimeoutConf</rule>
+<rule>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/spx/RULES.D/ApplyPatch</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/spx/P.CONFIG</pconfig>
+<buildconfig/>
+<packages>
+<package>
+<name>timeoutd</name>
+<section>app</section>
+<essential>NO</essential>
+<configtags>Timeout Daemon Support</configtags>
+<group>FEATURES</group>
+<license>GPL-V2</license>
+<description>Timeoutd application package.</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends/>
+<required/>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/spx/PACKAGES.D/timeoutd/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/timeoutd-1.9.0-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_5_internel_sensor (1.0.0); urgency = new
+
+Abstract:
+	Fix for dead lock condition and setting internel sensor reading properly.
+
+Files Added: data, data/00-data_Storage_SELDevice_SEL.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 09 Sep 2011 15:29:48 IST
+

@@ -1,0 +1,48 @@
+menu "Platform Configuration"
+
+source libipmipar_ANY.in
+
+config libipmipdk (1.0.0)
+	bool "IPMI PDK Library for AST2300EVB Platform(AMI OEM Version)"
+	default y
+	depends on ipmimain
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	depends on @OEM_AMI
+	help
+		This package contains IPMI PDK Hooks Library for AST2300EVB (AMI OEM Version)
+
+#--------------------------------------
+config libipmipdkcmds (2.13.0)
+	bool "IPMI PDK Commands for AST2300EVB"
+	default n
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		This package contanins IPMI PDK commands library for AST2300EVB platform.
+
+#--------------------------------------
+config libipmipar (2.1.0)
+	bool 
+	default n
+	help
+		This is a core libipmipar pacakge which will select board specific libipmipar packages
+
+#--------------------------------------
+config libipmipar_ast2300evb_ami (1.15.0)
+	bool "IPMI Platform Library for AST2300EVB Platform (AMI OEM Version)"
+	default y
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	depends on @OEM_AMI
+	help
+		This package contains IPMI Configurations and sensor porting related stuffs for AST2300EVB Platform
+
+#--------------------------------------
+
+endmenu
+
+

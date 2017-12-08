@@ -1,0 +1,91 @@
+#!/bin/sh
+
+#
+#Format of the Bond Configuration File
+#BondName slave1,slave2...slaveN Mode Miimon
+#
+
+BOND_CONFIG_FILE=/etc/network/bond.conf
+BOND_SLAVE_FILE=/conf/activeslave.conf
+
+# Check if bond information is found
+[ -f $BOND_CONFIG_FILE ] || exit 0
+
+
+# Check if the bond config file has the specificed bond interface name
+case "$IFACE" in
+#Bond with Vlan 
+  bond*.*)
+	BOND_DEV=`echo $IFACE | awk -F. '{ print $1 }'`	
+	grep $BOND_DEV $BOND_CONFIG_FILE >/dev/null 2>&1  || exit 0
+	;;
+#Normal Bond Device
+  bond*)	
+	BOND_DEV=$IFACE
+	grep $BOND_DEV $BOND_CONFIG_FILE >/dev/null 2>&1  || exit 0
+ 	;;
+  *)
+    exit 0
+  ;;
+esac
+
+# Check the bond device is up or not.
+# If bond device was up, we don't need configure it again.
+if grep $BOND_DEV /sys/class/net/bonding_masters >/dev/null; then
+    echo "$BOND_DEV has been found in the bonding_masters."
+	exit 0
+fi
+
+# Parse the Configuration
+BONDCFG=`grep $BOND_DEV $BOND_CONFIG_FILE`
+SLAVES=`echo $BONDCFG | awk '{ print $2 }'`
+MODE=`echo $BONDCFG | awk '{ print $3 }'`
+MIIMON=`echo $BONDCFG | awk '{ print $4 }'`
+
+
+ifconfig $BOND_DEV down	 				>/dev/null 2>&1			
+echo -$BOND_DEV  > /sys/class/net/bonding_masters	
+echo +$BOND_DEV  > /sys/class/net/bonding_masters	
+ifconfig $BOND_DEV down	 				>/dev/null 2>&1			
+echo $MODE  > /sys/class/net/$BOND_DEV/bonding/mode	
+echo $MIIMON  > /sys/class/net/$BOND_DEV/bonding/miimon	
+echo 0 > /sys/class/net/$BOND_DEV/bonding/use_carrier
+
+for iface in `echo $SLAVES | sed 's/,/ /g' `
+do
+     ifconfig $iface down > /dev/null 2>&1
+     echo +$iface > /sys/class/net/$BOND_DEV/bonding/slaves 
+done
+
+echo "$BOND_DEV of type $MODE created with interfaces $SLAVES".
+
+[ -f $BOND_SLAVE_FILE ] || exit 0 
+
+echo "Configuring Bond Slave interface..."
+# Parse the Configuration
+SLAVECFG=`grep $BOND_DEV $BOND_SLAVE_FILE`
+SLAVE=`echo $SLAVECFG | awk '{ print $2 }'`
+
+for iface in `echo $SLAVES | sed 's/,/ /g' `
+do
+	if [ $iface == $SLAVE ]; then
+		ifconfig $iface up
+		if [ $MODE == 1 ]; then
+			echo $SLAVE > /sys/class/net/$BOND_DEV/bonding/active_slave
+		fi 
+	fi
+
+	if [ $MODE != 1 ]; then
+		if [ $iface != $SLAVE ]; then
+			ifconfig $iface down
+		fi
+	fi
+done
+echo "Done."
+exit 0
+
+
+
+
+
+

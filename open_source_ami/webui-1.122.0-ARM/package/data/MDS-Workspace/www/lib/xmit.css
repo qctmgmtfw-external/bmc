@@ -1,0 +1,213 @@
+/*
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+*/
+
+/* Styles for the xmit ajax debugger module */
+/* Brandon B - Jan 2007 */
+
+body {
+	font: 12px Tahoma;
+	margin-right: 35px;
+}
+
+.hapierror {
+	background: #FF3131;
+	border: 2px solid #B0B0B0;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 150%;
+	padding: 0px 5px 0px 5px;
+	text-align: right;
+}
+
+.hapierrordesc {
+	background: #FF3131;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.hapinone {
+	background: #ECEF7F;
+	border: 2px solid #B3B762;
+	color: #787A42;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 150%;
+	padding: 0px 5px 0px 5px;
+	text-align: right;
+}
+
+.hapiok {
+	background: #99F25E;
+	border: 2px solid #73B646;
+	color: #008000;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 150%;
+	padding: 0px 5px 0px 5px;
+	text-align: right;
+}
+
+.recblock {
+	background: #DADFEB;
+	border: 4px solid #B9BEC8;
+	margin: 5px -25px 5px 25px;
+}
+
+.recblockdataasp {
+	background: #EFD9FF;
+	border: 1px solid #818181;
+	color: #800080;
+	font: bold 12px "Courier New";
+	margin: 10px;
+	padding: 5px;
+}
+
+.recblockdatanonasp {
+	background: #F2F2F2;
+	border: 1px solid #818181;
+	color: #000000;
+	font: bold 12px "Courier New";
+	margin: 10px;
+	padding: 5px;
+}
+
+.recblockevalfail {
+	background: #FF3131;
+	border: 4px solid #B0B0B0;
+	color: #FFFFFF;
+	font-weight: bold;
+	margin: 5px -25px 5px 25px;
+	padding: 5px;
+}
+
+.recblockevalfailtitle {
+	background: #FF3131;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.recblockevalfailtitlemsg {
+	color: #FFFFFF;
+}
+
+.recblockevalfilehexdump {
+	color: #FFFFFF;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.recblockevalsuccess	{
+	background: #DDF8C4;
+	border: 4px solid #BCD3A7;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 5px -25px 5px 25px;
+}
+
+.recblockevalsuccesstitle	{
+	background: #BAE8A4;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.recblockevalsuccesstitlemsg	{
+	color: #008000;
+}
+
+.recblockhexdump	{
+	color: #000000;
+	display: none;
+	font-family: monospace;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.recblocktimeout {
+	background: #FF3131;
+	border: 4px solid #B0B0B0;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 5px 25px 5px 0px;
+	padding: 5px;
+}
+
+.recblocktimeouttitle	{
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.recblocktitle	{
+	background: #ACC1F3;
+	border: 1px solid #7381A2;
+	border-bottom: 3px solid #7381A2;
+	font-weight: bold;
+	padding: 2px;
+}
+
+.recblocktitlerecmsg	{
+	color: #0000CD;
+}
+
+.sendblock {
+	background: #FFF3B0;
+	border: 4px solid #D9CF96;
+	margin: 5px 25px 5px 0px;
+}
+
+.sendblockdata	{
+	background: #D9F7B0;
+	border: 1px solid #818181;
+	color: #000000;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0px 5px 5px 5px;
+	margin: 10px;
+	padding: 5px;
+}
+
+.sendblockdatainputs	{
+	color: #000000;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 5px;
+}
+
+.sendblocktitle	{
+	background: #FFD700;
+	border: 1px solid #CEAE00;
+	border-bottom: 3px solid #CEAE00;
+	font-weight: bold;
+	padding: 2px;
+}

@@ -1,0 +1,15 @@
+Package : libuserm
+Non-Editable : YES
+Version : 1.12.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : arunkumars  (arunkumars@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Package-License : AMI
+Description : This package contains libuserm Binary.
+.

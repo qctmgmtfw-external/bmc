@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_10_EIP_70202
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 10 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 10
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  gopinaths (gopinaths@amiindia.co.in)
+Urgency : new
+Description : When we Pause Console 1 and launch Console 2, the permission given by console 1 doesnt reflect in console 2, issue fixed.
+.
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="true" readonly="true" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/goahead-1.62.0-ARM/package/data/90-up-webserver</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/goahead-1.62.0-ARM/package/data/webgo.sh</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/goahead-1.62.0-ARM/package/data/webauthactivedir</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/goahead-1.62.0-ARM/package/data/webgo</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/goahead-1.62.0-ARM/package/data/webauthldap</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/goahead-1.62.0-ARM/package/data/webauthradius</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>goahead</package-name>
+<version>1.62.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides>WebServer</provides>
+<enableprovides/>
+<section>app</section>
+<build-depends/>
+<depends/>
+<required>
+<package-name operator="" version="">libifc</package-name>
+<package-name operator="" version="">libldapauth</package-name>
+<package-name operator="" version="">libldapconf</package-name>
+<package-name operator="" version="">libntpconf</package-name>
+<package-name operator="" version="">libradiusconf</package-name>
+<package-name operator="" version="">libuserm</package-name>
+<package-name operator="" version="">libncml</package-name>
+<package-name operator="" version="">libchecksum</package-name>
+<package-name operator="" version="">libfmh</package-name>
+<package-name operator="" version="">libadvisercfg</package-name>
+<package-name operator="" version="">libvmedia</package-name>
+<package-name operator="" version="">libtoken</package-name>
+<package-name operator="" version="">webui</package-name>
+<package-name operator="" version="">libncsiconf</package-name>
+<package-name operator="" version="">libuserauth</package-name>
+<package-name operator="" version="">libvideorecordcfg</package-name>
+<package-name operator="" version="">libactivedircfg</package-name>
+</required>
+<conflicts/>
+<essential>YES</essential>
+<group>FEATURES</group>
+<configtags>GoAhead Web Server</configtags>
+<installsize/>
+<description>This package includes the goahead binary module.</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>SP Core Team  </maintainer>
+<maintainer-email>spcoreteam@ami.com</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/goahead-1.62.0-ARM/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/goahead-1.62.0-ARM/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

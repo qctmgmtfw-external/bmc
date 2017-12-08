@@ -1,0 +1,17 @@
+Package : NWBonding_Support
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Depends : sys_base
+Essential : NO
+Config-Tag : Network Bonding Support
+Group : FEATURES
+Owner : AMI
+Maintainer : Muthuchamy K  (muthusamyk@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : low
+Description : This is dummy Package to enable the bonding support.
+.

@@ -1,0 +1,20 @@
+Package : libnetwork_1_58_0_11_EIP_113381_NonStandardFeature_ivp6_prefix_mask
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 11 for libnetwork (1.58.0)
+Depends :  libnetwork(==1.58.0)
+PatchOrder : 11
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Kent Yeh (kentyeh@ami.com.tw)
+Urgency : new
+Description : Add all  prefix mask
+.
+

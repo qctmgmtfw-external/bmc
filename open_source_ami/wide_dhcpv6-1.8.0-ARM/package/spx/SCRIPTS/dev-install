@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+    MKDIR_NOCLEAN %IMAGE_TREE/usr/sbin/
+    COPY_FILE ./dhcp6c %IMAGE_TREE/usr/sbin/
+
+debug-install:

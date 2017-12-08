@@ -1,0 +1,95 @@
+Package: timeoutd (1.9.0); urgency = medium
+
+Abstract:
+	Corrected the ApplyPatch input parameter.
+
+Files Modified: spx/RULES
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 25 Jul 2011 14:37:33 IST
+
+Package: timeoutd (1.8.0); urgency = medium
+
+Abstract:
+	Invoked ApplyPatch in extract_source part.
+
+Files Modified: spx/RULES
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 25 Jul 2011 12:30:24 IST
+
+Package: timeoutd (1.7.0); urgency = medium
+
+Abstract:
+	Disabled timeoutd in NFS mode as utmp file not updated for debug console user, so that debug console will timeout often without waiting for timeout. Also reduced the sleeping time from 60 to 30 seconds for more efficient.
+
+Files Modified: data/patch/timeoutd_issues.patch, data/timeout
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 06 Jun 2011 20:43:34 IST
+
+Package: timeoutd (1.6.0); urgency = medium
+
+Abstract:
+	Added the support for restarting timeout daemon
+
+Files Modified: data/timeout
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 12 May 2011 22:13:38 IST
+
+Package: timeoutd (1.5.0); urgency = medium
+
+Abstract:
+	Modified the package to configure default session timeout in PRJ
+
+Files Added: spx/P.CONFIG, spx/RULES.D/CreateTimeoutConf
+Files Deleted: data/timeouts
+Files Modified: spx/RULES
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 11 May 2011 15:42:27 IST
+
+Package: timeoutd (1.4.0); urgency = medium
+
+Abstract:
+	Updated the License information
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 09 May 2011 16:16:01 IST
+
+Package: timeoutd (1.3.0); urgency = medium
+
+Abstract:
+	Modified timeout script as executable mode
+
+Files Modified: spx/PACKAGES.D/timeoutd/SCRIPTS/dev-install
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 09 May 2011 15:21:39 IST
+
+Package: timeoutd (1.2.0); urgency = medium
+
+Abstract:
+	Fixed build error in applying patch
+
+Files Modified: data/patch/timeoutd_issues.patch
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 09 May 2011 13:51:34 IST
+
+Package: timeoutd (1.1.0); urgency = medium
+
+Abstract:
+	Modified the package to have the original file as it is and applied the changes as patches.
+
+Files Added: data/patch, data/patch/timeoutd_issues.patch, spx/RULES.D, spx/RULES.D/ApplyPatch
+Files Deleted: data/timeoutd
+Files Modified: data/Makefile, data/timeout, data/timeoutd.c, spx/RULES
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 04 May 2011 17:42:35 IST
+
+Package: timeoutd (1.0.0); urgency = new
+
+Abstract:
+	Timeout daemon package.
+
+Files Added: data, data/Makefile, data/timeout, data/timeoutd, data/timeoutd.c, data/timeouts, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/timeoutd, spx/PACKAGES.D/timeoutd/DATA, spx/PACKAGES.D/timeoutd/SCRIPTS, spx/PACKAGES.D/timeoutd/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 04 May 2011 17:28:40 IST
+

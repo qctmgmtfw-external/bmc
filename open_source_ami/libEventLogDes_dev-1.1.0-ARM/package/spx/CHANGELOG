@@ -1,0 +1,18 @@
+Package: libEventLogDes (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:46:11 EDT
+
+Package: libEventLogDes (1.0.0); urgency = new
+
+Abstract:
+	Sensor Event Log Description
+
+Files Added: data, data/Makefile, data/libEventLogDes.c, data/libEventLogDes.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libEventLogDes, spx/PACKAGES.D/libEventLogDes/DATA, spx/PACKAGES.D/libEventLogDes/SCRIPTS, spx/PACKAGES.D/libEventLogDes/SCRIPTS/dev-install, spx/PACKAGES.D/libEventLogDes_dev, spx/PACKAGES.D/libEventLogDes_dev/DATA, spx/PACKAGES.D/libEventLogDes_dev/SCRIPTS, spx/PACKAGES.D/libEventLogDes_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Tue, 23 Nov 2010 21:26:55 IST
+

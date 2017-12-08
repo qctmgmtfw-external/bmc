@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<link href="../www/style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../www/lib/include.js" type="text/javascript"></script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>SMTP Settings</h3>
+	<p>Manage SMTP settings of the device.</p>
+
+	<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+		<tr id="_rowLANChannel"><td width="40%">
+		<strong>LAN Channel Number</strong></td>
+		<td><select id="_lstLANChannel" class="smallclassicTxtBox"></select>
+		</td></tr>
+
+		<tr><td width="40%"><strong>Sender Address</strong></td>
+		<td><input type="text" id="_txtSenderAddr" maxlength="63" class="bigclassicTxtBox"/>
+		</td></tr>
+
+		<tr><td><strong>Machine Name</strong></td>
+		<td><input type="text" id="_txtMachineName" maxlength="31" class="classicTxtBox"/>
+		</td></tr>
+	</table>
+	</div>
+
+	<strong>Primary SMTP Server</strong>
+	<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+		<tr class="hiddenRow"><td width="40%"><strong>Port</strong></td>
+		<td><input type="text" id="_txtPort1" maxlength="5" class="smallclassicTxtBox"/>
+		</td></tr>
+
+		<tr><td width="40%"><strong>Server Address</strong></td>
+		<td><input type="text" id="_txtSMTPServer1" maxlength="39" class="classicTxtBox"/>
+		</td></tr>
+
+		<tr><td colspan="2"><input type="checkbox" id="_chkSMTPAuth1"/> 
+		<strong><label for="_chkSMTPAuth1">SMTP Server requires Authentication</label>
+		</strong></td></tr>
+
+		<tr><td><strong>User Name</strong></td>
+		<td><input type="text" id="_txtUsername1" maxlength="64" class="classicTxtBox"/>
+		</td></tr>
+
+		<tr><td><strong>Password</strong></td>
+		<td><input type="password" id="_txtPassword1" maxlength="64" class="classicTxtBox"/>
+		</td></tr>
+	</table>
+	</div>
+
+	<strong>Secondary SMTP Server</strong>
+	<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+		<tr class="hiddenRow"><td width="40%"><strong>Port</strong></td>
+		<td><input type="text" id="_txtPort2" maxlength="5" class="smallclassicTxtBox"/>
+		</td></tr>
+
+		<tr><td width="40%"><strong>Server Address</strong></td>
+		<td><input type="text" id="_txtSMTPServer2" maxlength="39" class="classicTxtBox"/>
+		</td></tr>
+
+		<tr><td colspan="2"><input type="checkbox" id="_chkSMTPAuth2"/> 
+		<strong><label for="_chkSMTPAuth2">SMTP Server requires Authentication
+		</label></strong></td></tr>
+
+		<tr><td><strong>User Name</strong></td>
+		<td><input type="text" id="_txtUsername2" maxlength="64" class="classicTxtBox"/>
+		</td></tr>
+
+		<tr><td><strong>Password</strong></td>
+		<td><input type="password" id="_txtPassword2" maxlength="64" class="classicTxtBox"/>
+		</td></tr>
+	</table>
+	</div>
+	<br/>
+	<div class="btnTray">
+		<input type="button" value="Save" id="_btnSave" />
+		<input type="button" value="Reset" id="_btnReset" />
+	</div>
+</body>
+</html>

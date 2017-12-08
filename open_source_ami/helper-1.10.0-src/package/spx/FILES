@@ -1,0 +1,8 @@
+./Makefile 294 fa83f42e800b2da941efed9864156f69
+./driver_hal.c 7849 d920b4b0926243247ce557adf7afd67d
+./driver_hal.h 2620 813929a9bb715e1ed9cb8de701db580a
+./fmhcore.c 6101 647e37ccf43be4b1da3108d777ff4f9b
+./fwinfo.c 6448 56c731ca52e9a11b594f3c96a25a565d
+./helper.h 1544 aaab1c97a3068f2d2c729da0fadec4ee
+./helpmain.c 6427 5153e61776020a302d04ae39f19ae9a9
+./proc_sysctl.c 4185 af623f8e41f413561f4290df99ca31a4

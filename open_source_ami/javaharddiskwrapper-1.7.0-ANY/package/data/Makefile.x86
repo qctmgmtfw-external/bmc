@@ -1,0 +1,60 @@
+ifeq ($(shell uname), Linux)
+CPP = g++
+OUTPUTDIR = ../lib/javaharddiskwrapper/linux_x86_32
+HARDDISKLIB = ../lib/libharddisk/Linux_x86_32/libharddiskLinux.a
+else
+CPP = /opt/sfw/bin/g++
+INCLUDES += -I/usr/j2se/include -I/usr/j2se/include/solaris
+LIBS = -lstdc++ -R/usr/sfw/lib:/opt/sfw/lib
+ifeq ($(shell arch), i86pc)
+OUTPUTDIR = ../lib/javaharddiskwrapper/solaris-x86
+HARDDISKLIB = ../lib/libharddisk/Solaris-x86/libharddiskSolaris.a
+else
+OUTPUTDIR = ../lib/javaharddiskwrapper/solaris-sparc
+HARDDISKLIB = ../lib/libharddisk/Solaris-sparc/libharddiskSolaris.a
+endif
+endif
+
+OUTPUT = $(OUTPUTDIR)/libjavaharddiskwrapper.so
+## This check for MAC
+ifeq ($(shell uname), Darwin)
+CPP = g++
+OUTPUTDIR = ../lib/javaharddiskwrapper/mac_x86_32
+OUTPUT = $(OUTPUTDIR)/libjavaharddiskwrapper.jnilib
+HARDDISKLIB = ../lib/libharddisk/Mac_x86_32/libharddiskMac.a
+INCLUDES += -I /System/Library/Frameworks/JavaVM.framework/Headers 
+CFLAGS = $(INCLUDES) -Wall -O2 -dynamiclib -fPIC -framework IOKit -framework JavaVM
+else
+
+## NOTE: the following java related includes changes from machine to machine depending on their java installation directories.
+## Also there might be version change for JDK. This also must be taken care everytime there is a version change for JDK.
+INCLUDES += -I/usr/java/jdk1.6.0/include
+INCLUDES += -I/usr/java/jdk1.6.0/include/linux
+CFLAGS = $(INCLUDES) -Wall -O2 -shared -fpic
+endif
+INCLUDES += -I../../Build/include
+INCLUDES += -I../../Build/include/global
+INCLUDES += -I../../Build/include/usbe
+INCLUDES += -I../include/harddisk
+INCLUDES += -I../include/libkvm
+
+#LIBS += $(HARDDISKLIB) /usr/X11R6/lib/libX11.a
+LIBS += $(HARDDISKLIB) -lX11 -L/usr/X11R6/lib -L/usr/X11/lib
+
+javaharddiskwrapper:	javaharddiskwrapper.cpp java_prototypes.h $(FLOPPYLIB) 
+ifeq (${shell arch},x86_64)
+	@echo -e "Architecture Mismatch. Please use Makefile.x86_64 for x86_64 architecture."
+else
+ifeq (${shell echo $$HOSTTYPE},x86_64)
+	@echo -e "Architecture Mismatch. Please use Makefile.x86_64 for x86_64 architecture."
+else
+	mkdir -p $(OUTPUTDIR)
+	$(CPP) $(CFLAGS) -o $(OUTPUT) javaharddiskwrapper.cpp $(LIBS)
+endif
+endif
+clean:
+ifeq (${shell arch},x86_64)
+	@echo -e "Architecture Mismatch. Please use Makefile.x86_64 for x86_64 architecture."
+else
+	$(RM) $(OUTPUT) *~
+endif

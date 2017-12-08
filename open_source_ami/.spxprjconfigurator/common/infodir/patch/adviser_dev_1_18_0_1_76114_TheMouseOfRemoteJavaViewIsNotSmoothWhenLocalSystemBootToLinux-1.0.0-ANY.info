@@ -1,0 +1,20 @@
+Package : adviser_dev_1_18_0_1_76114_TheMouseOfRemoteJavaViewIsNotSmoothWhenLocalSystemBootToLinux
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for adviser_dev (1.18.0)
+Depends :  adviser_dev(==1.18.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description : for 76114, the mouse of Remote Java View is not smooth When local sytem boot to Linux.
+.
+

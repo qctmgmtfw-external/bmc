@@ -1,0 +1,58 @@
+# /etc/init.d/timeout: start timeoutd
+#
+# chkconfig: 2345 10 90
+#Runlevel : 3 = S97
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+PATHFUL_TIMEOUT="/usr/local/bin/timeoutd"
+
+
+
+test -f /usr/local/bin/timeoutd || exit 0
+test -f /var/log/wtmp || touch /var/log/wtmp
+
+# Options for start/restart the daemons
+#
+
+
+#
+
+
+case "$1" in
+  start)
+    # We use the same script for both NFS and Flash 
+    # Stat is not updating the atime and mtime of dev file in nfs. 
+    # Timeout is not stated in NFS mode
+    if [ -r /proc/cmdline ] && grep -q 'root=\/dev\/nfs' /proc/cmdline
+    then
+        echo "Booting via NFS. Timeoutd will not be Started"
+        exit 0
+    fi
+    
+    echo "Starting Timeout Daemon Utility: timeoutd."
+    start-stop-daemon --start --quiet --exec $PATHFUL_TIMEOUT 
+    ;;
+  stop)
+    echo "Stopping Timeout Daemon Utility: timeoutd."
+    start-stop-daemon --stop --quiet --exec $PATHFUL_TIMEOUT
+    ;;
+  restart)
+    start-stop-daemon --stop --quiet --exec $PATHFUL_TIMEOUT
+    
+    # We use the same script for both NFS and Flash 
+    # Stat is not updating the atime and mtime of dev file in nfs. 
+    # Timeout is not stated in NFS mode
+    if [ -r /proc/cmdline ] && grep -q 'root=\/dev\/nfs' /proc/cmdline
+    then
+        echo "Booting via NFS. Timeoutd will not be Started"
+        exit 0
+    fi
+    
+    start-stop-daemon --start --quiet --exec $PATHFUL_TIMEOUT
+    ;;
+   *)
+    echo "Usage: /etc/init.d/timeout {start|stop|restart}"
+    exit 1
+esac
+
+exit 0

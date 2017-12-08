@@ -1,0 +1,20 @@
+Package : ipmi_dev_2_100_0_17_EIP181215_Support_VLAN_Yafuflash
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 17 for ipmi_dev (2.100.0)
+Depends :  ipmi_dev(==2.100.0)
+PatchOrder : 17
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  PatrickHuang (PatrickHuang@ami.com.tw)
+Urgency : new
+Description : EIP181215_Support_VLAN_Yafuflash
+.
+

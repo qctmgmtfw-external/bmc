@@ -1,0 +1,9 @@
+Package: libnetwork_1_58_0_4_79335_VLanForIPv6CannotWork (1.0.0); urgency = new
+
+Abstract:
+	VLan for IPv6 cannot work.
+
+Files Added: data, data/00-data_vlannetworking, data/01-data_nwcfg.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kenttang (kenttang@ami.com.tw) Mon, 16 Jan 2012 18:30:24 CST
+

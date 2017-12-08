@@ -1,0 +1,73 @@
+--- busybox-1.13.2/loginutils/getty.c	2010-12-31 17:34:28.429025631 +0530
++++ busybox_new/loginutils/getty.c	2010-12-31 17:33:49.933902572 +0530
+@@ -617,6 +617,51 @@
+ }
+ #endif /* CONFIG_FEATURE_UTMP */
+ 
++#define CONSOLE_TTY "/conf/console_tty"
++static
++void
++UserConfigTTY(char *configtty)
++{
++	char usertty[16];	/* /dev/XXXXX\0" */
++	FILE *fp;
++	struct stat st;
++	int len;
++
++	memset(usertty,0,16);
++	strcpy(usertty,"/dev/");
++
++	fp = fopen(CONSOLE_TTY,"r");
++	if (fp == NULL)
++		return;
++
++	if (fread(&usertty[5],1,10,fp) <= 0)
++	{
++		fclose(fp);
++		return;
++	} 
++	fclose(fp);
++
++	/* Strip trailing \n if any */	
++	len=strlen(usertty);
++	if (usertty[len-1] == '\n')
++		usertty[len -1] = 0;
++
++
++	if (stat(usertty,&st) == -1)
++		return;
++
++	if ((st.st_mode & S_IFMT) != S_IFCHR )
++		return;
++
++	//#define _BSD_SOURCE
++	//if (major(st.st_dev) != 4)
++	//	return;
++	
++	strcpy(configtty,&usertty[5]);
++	return;
++}
++
++
+ int getty_main(int argc, char **argv) MAIN_EXTERNALLY_VISIBLE;
+ int getty_main(int argc UNUSED_PARAM, char **argv)
+ {
+@@ -634,7 +679,7 @@
+ 
+ 	memset(&options, 0, sizeof(options));
+ 	options.login =	_PATH_LOGIN;    /* default login program */
+-	options.tty = "tty1";           /* default tty line */
++	options.tty = "console";           /* default tty line */
+ 	options.initstring = "";        /* modem init string */
+ #ifdef ISSUE
+ 	options.issue = ISSUE;          /* default issue file */
+@@ -643,6 +688,9 @@
+ 	/* Parse command-line arguments. */
+ 	parse_args(argv, &options, &fakehost);
+ 
++	if(strcmp(options.tty,"console")==0)
++		UserConfigTTY((char *)options.tty);
++
+ 	logmode = LOGMODE_NONE;
+ 
+ 	/* Create new session, lose controlling tty, if any */

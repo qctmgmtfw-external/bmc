@@ -1,0 +1,111 @@
+Package: rules (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:33:47 EDT
+
+Package: rules (1.4.0); urgency = medium
+
+Abstract:
+	Adds libs/linker(which contains links to all SPX libraries) to rpath-link
+This fixes not building applications which uses a dynamic library which calls functions 
+from another dynamic library
+
+Files Modified: data/Rules.make.apps
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 16 Mar 2011 11:42:13 EDT
+
+Package: rules (1.3.0); urgency = medium
+
+Abstract:
+	gcc> 4.0 does a strict aliasing by default. This breaks many applications
+So setting no-strict-aliasing
+
+Files Modified: data/Rules.global
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 24 Feb 2011 12:00:09 EST
+
+Package: rules (1.2.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:34:09 EST
+
+Package: rules (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:13:58 EDT
+
+Package: rules (1.0.6); urgency = medium
+
+Abstract:
+	During Debug, -O option is removed from CFLAGS, as it is not allowing gdb to show local varibales
+
+Files Modified: data/Rules.global
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 19 Aug 2010 10:42:03 EDT
+
+Package: rules (1.0.5); urgency = low
+
+Abstract:
+	Added support for C++
+
+Files Modified: data/Rules.global, data/Rules.make.apps
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 Aug 2010 16:23:11 EDT
+
+Package: rules (1.0.4); urgency = low
+
+Abstract:
+	Passing SOC, ARCH, BASESOC, PLATFORM and OEM defines
+
+Files Modified: data/Rules.make.drivers, data/Rules.global
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Tue, 30 Mar 2010 01:30:30 EDT
+
+Package: rules (1.0.3); urgency = low
+
+Abstract:
+	Less Verbose and Cleaner output during building packages
+
+Files Modified: data/Rules.make.drivers, data/Rules.make.apps, data/Rules.global, data/Rules.make.libs
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Mar 2010 18:20:35 EST
+
+Package: rules (1.0.2); urgency = low
+
+Abstract:
+	Changed BUILDAREA to BLDPRJAREA because of conflicts with BUILD
+
+Files Modified: data/Rules.make.apps
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 26 Feb 2010 15:56:13 EST
+
+Package: rules (1.0.1); urgency = low
+
+Abstract:
+	Remove CIMProvider Rules as it is similiar to library rules
+CIMProviders adds exrtra libraries when creating the providers. So added $(LIBS) to Rules.make.libs
+
+Files Deleted: data/Rules.make.CIMProviders
+Files Modified: data/Rules.make.libs
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 23 Feb 2010 09:40:39 EST
+
+Package:rules (1.0.0);urgency=new
+
+Abstract:
+	This package includes all the global build rules for drivers,libraries, applications.
+
+Files Added: Rules.make.drivers, Rules.make.libs, Rules.make.apps, Rules.global
+
+--Submitter: Vinesh Christopher (vineshc@ami.com) Fri, 22 Jan 2010 13:17:19 -0500

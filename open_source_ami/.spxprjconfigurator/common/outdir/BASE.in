@@ -1,0 +1,364 @@
+menu "Basic Configuration"
+
+source @ARCH_ARM_ANY.in
+
+source @PLATFORM_AST2300EVB_ANY.in
+
+source @SOC_AST2300_ANY.in
+
+source sys_openssl_0_9_8zf_ARM.in
+
+config @Bootloader_Pristine (1.2.0)
+	bool 
+	default n
+	help
+		Pristine U-Boot Boot loader 1.1.6
+
+#--------------------------------------
+config @Bootloader_amiext (1.16.0)
+	bool 
+	default n
+	select @Bootloader_Pristine
+	help
+		AMI Extensions to Bootloader Uboot-1.1.6This is a empty dummy binary package because according to SPX a source package has to generate a binary package
+
+#--------------------------------------
+config @Bootloader_arch_arm (1.4.0)
+	bool 
+	default n
+	select @Bootloader_bugfix
+	help
+		ARM Fixes to Bootloader (U-boot 1.1.6)
+
+#--------------------------------------
+config @Bootloader_bugfix (1.3.0)
+	bool 
+	default n
+	select @Bootloader_amiext
+	help
+		Bug Fixes to Bootloader (U-boot 1.1.6)
+
+#--------------------------------------
+config @Bootloader_cpu_arm926ejs (1.3.0)
+	bool 
+	default n
+	select @Bootloader_arch_arm
+	help
+		ARM 926EJ-S to Bootloader (U-boot 1.1.6)
+
+#--------------------------------------
+config @Bootloader_oem_ast2300evb (1.0.2)
+	bool 
+	default n
+	select @Bootloader_platform_ast2300evb
+	help
+		ast2300evb OEM Patches to Bootloader (U-boot 1.1.6)
+
+#--------------------------------------
+config @Kernel_Pristine (1.2.0)
+	bool 
+	default n
+	help
+		Pristine Linux Kernel 2.6.28.10 from www.kernel.org
+
+#--------------------------------------
+config @Kernel_amiext (1.13.0)
+	bool 
+	default n
+	select @Kernel_Pristine
+	help
+		AMI Extensions to Kernel 2.6.28.10
+
+#--------------------------------------
+config @Kernel_arch_arm (1.3.0)
+	bool 
+	default n
+	select @Kernel_bugfix
+	help
+		ARM Fixes to Kernel 2.6.28.10
+
+#--------------------------------------
+config @Kernel_bugfix (1.7.0)
+	bool 
+	default n
+	select @Kernel_amiext
+	help
+		Bug Fixes to Kernel 2.6.28.10
+
+#--------------------------------------
+config @Kernel_cpu_arm926ejs (1.3.0)
+	bool 
+	default n
+	select @Kernel_subarch_armv4
+	help
+		ARM 926EJ-S Fixes to Kernel 2.6.28.10
+
+#--------------------------------------
+config @Kernel_oem_ast2300evb (1.0.3)
+	bool 
+	default n
+	select @Kernel_platform_ast2300evb
+	help
+		AST2300 OEM Patches to Kernel 2.6.28.10
+
+#--------------------------------------
+config @Kernel_platform_ast2300evb (1.4.0)
+	bool 
+	default n
+	select @Kernel_soc_ast2300
+	help
+		This is a dummy package because the SPX package Architecturerequires atleast one binary package to be specified for a source package.
+
+#--------------------------------------
+config @Kernel_soc_ast2300 (1.19.0)
+	bool 
+	default n
+	select @Kernel_cpu_arm926ejs
+	help
+		This is a dummy package because the SPX package Architecturerequires atleast one binary package to be specified for a source package.
+
+#--------------------------------------
+config @Kernel_subarch_armv4 (1.3.0)
+	bool 
+	default n
+	select @Kernel_arch_arm
+	help
+		ARMV4  Fixes to Kernel 2.6.28.10
+
+#--------------------------------------
+config @ARCH_ARM (1.2.0)
+	bool 
+	default y
+	select target
+	select  crosscc
+	help
+		Selects Architecure as ARM
+
+#--------------------------------------
+config @BASESOC_AST (1.4.0)
+	bool 
+	default n
+	select @ARCH_ARM
+	select  hw_kcs
+	select  hw_gpio
+	select  hw_usb
+	select  hw_peci
+	select  hw_videocap
+	select  hw_pwmtach
+	select  hw_i2c
+	select  hw_reset
+	select  hw_snoop
+	help
+		Package specifying BASESOC is AST
+
+#--------------------------------------
+config sys_ldap (2.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		System Package that includes all the LDAP related system-level libraries.
+
+#--------------------------------------
+config sys_base (2.41.0)
+	bool 
+	default y
+	depends on @ARCH_ARM
+	help
+		Base System Package which creates a minimal working linux root filesystem .
+
+#--------------------------------------
+config Bootloader (1.7.2)
+	bool 
+	default y
+	select @Bootloader_oem_ast2300evb
+	select  buildtools
+	select  crosscc
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		Bootloader for AST2300EVB.
+
+#--------------------------------------
+config @OEM_AMI (1.2.0)
+	bool "AMI OEM"
+	default y
+	help
+		Selects OEM as AMI
+
+#--------------------------------------
+config @PLATFORM_AST2300EVB (1.5.1)
+	bool "AST2300EVB"
+	default y
+	select @SOC_AST2300
+	help
+		Selects Platform as AST2300 Eval Board
+
+#--------------------------------------
+config @SOC_AST2300 (1.6.0)
+	bool "AST2300"
+	default y
+	select @ARCH_ARM
+	select  @BASESOC_AST
+	select  hw_gpio
+	select  hw_i2c
+	select  hw_kcs
+	select  hw_peci
+	select  hw_pwmtach
+	select  hw_reset
+	select  hw_snoop
+	select  hw_usb
+	select  hw_videocap
+	select  hw_watchdog
+	select  hw_adc
+	select  hw_host_spi_flash
+	select  hw_sdhc
+	select  hw_nand
+	select  hw_cipher
+	select  hw_bt
+	help
+		Package specifying SOC is AST2300
+
+#--------------------------------------
+config buildtools (1.2.0)
+	bool 
+	default y
+	help
+		This package provides build tools used to build SPX
+
+#--------------------------------------
+config busybox (1.19.0)
+	bool 
+	default y
+	select crosscc
+	select  busybox_configuration
+	help
+		BusyBox: The Swiss Army Knife of Embedded Linux
+
+#--------------------------------------
+config busybox_configuration (1.6.0)
+	bool 
+	default n
+	help
+		This package contains the default busybox configuration details. BusyBox configuration can be customized by overridding this package with OEM specific configuration pacakge.
+
+#--------------------------------------
+config crosscc (2.1.0)
+	bool 
+	default y
+	depends on sys_base
+	depends on @ARCH_ARM
+	help
+		This package provide the Cross compiler for ARM from Code Sourcery
+
+#--------------------------------------
+config defaulthost (1.4.0)
+	bool 
+	default y
+	select libhostname
+	select  sys_base
+	depends on @ARCH_ARM
+	help
+		This package includes the defaulthost application.
+
+#--------------------------------------
+config defshell (1.9.0)
+	bool 
+	default y
+	select libunix
+	select  libdbgout
+	depends on @ARCH_ARM
+	help
+		Provides the default shell all user logins.  This will launch
+
+#--------------------------------------
+config kernel (1.6.1)
+	bool 
+	default y
+	select @Kernel_oem_ast2300evb
+	select  buildtools
+	select  crosscc
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		Provides the binary Kernel image that can be used on AST2300EVB
+
+#--------------------------------------
+config librtlog (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		rtlog library package
+
+#--------------------------------------
+config sys_openssl_0_9_8zf (1.0.0)
+	bool "openssl version 0.9.8zf"
+	default y
+	depends on @ARCH_ARM
+	help
+		Support OpenslSSL Version 0.9.8zf
+
+#--------------------------------------
+config rndisinf (1.3.0)
+	bool 
+	default y
+	help
+		This package provides INF file for RNDIS/CDC Support
+
+#--------------------------------------
+config rules (1.5.0)
+	bool 
+	default y
+	help
+		Global build rules and Build rules for  drivers,libraries, applications.
+
+#--------------------------------------
+config sys_ip6tables (2.1.0)
+	bool 
+	default y
+	depends on libiptables && sys_ipv6
+	depends on @ARCH_ARM
+	help
+		Packages contains library files and configurations for ip6tables.
+
+#--------------------------------------
+config sys_iptables (2.1.0)
+	bool 
+	default y
+	depends on libiptables
+	depends on @ARCH_ARM
+	help
+		Packages contains library files and configurations for iptables.
+
+#--------------------------------------
+config sys_ipv6 (2.3.0)
+	bool "IPv6 Support"
+	default n
+	depends on @ARCH_ARM
+	help
+		ipv6 System Package which creates ipv6 spported files.
+
+#--------------------------------------
+config sys_slp (2.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		System Package which provides SLPD support and registration of SLP services.
+
+#--------------------------------------
+config target (4.4.0)
+	bool 
+	default y
+	depends on @ARCH_ARM
+	help
+		This package provide the Target File System for ARM. This is based on Debian 6.0.2 (Squeeze)
+
+#--------------------------------------
+
+endmenu
+
+

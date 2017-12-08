@@ -1,0 +1,6 @@
+config FEATURE_ENABLE_PAM_REORDER_SUPPORT
+    bool
+    default y
+    help
+        Enable/Disable IPMI PAM-Reordering Command.
+        

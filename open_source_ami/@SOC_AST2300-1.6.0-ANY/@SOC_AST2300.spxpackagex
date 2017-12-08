@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files/>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>@SOC_AST2300</package-name>
+<version>1.6.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides>SOC</provides>
+<enableprovides/>
+<section>info</section>
+<build-depends/>
+<depends/>
+<required>
+<package-name operator="" version="">@ARCH_ARM</package-name>
+<package-name operator="" version="">@BASESOC_AST</package-name>
+<package-name operator="" version="">hw_gpio</package-name>
+<package-name operator="" version="">hw_i2c</package-name>
+<package-name operator="" version="">hw_kcs</package-name>
+<package-name operator="" version="">hw_peci</package-name>
+<package-name operator="" version="">hw_pwmtach</package-name>
+<package-name operator="" version="">hw_reset</package-name>
+<package-name operator="" version="">hw_snoop</package-name>
+<package-name operator="" version="">hw_usb</package-name>
+<package-name operator="" version="">hw_videocap</package-name>
+<package-name operator="" version="">hw_watchdog</package-name>
+<package-name operator="" version="">hw_adc</package-name>
+<package-name operator="" version="">hw_host_spi_flash</package-name>
+<package-name operator="" version="">hw_sdhc</package-name>
+<package-name operator="" version="">hw_nand</package-name>
+<package-name operator="" version="">hw_cipher</package-name>
+<package-name operator="" version="">hw_bt</package-name>
+</required>
+<conflicts/>
+<essential>YES</essential>
+<group>BASE</group>
+<configtags>AST2300</configtags>
+<installsize/>
+<description>Package specifying SOC is AST2300</description>
+<architecture>ANY</architecture>
+<owner>AMI</owner>
+<maintainer>Alex Yang  </maintainer>
+<maintainer-email>alexyang@ami.com.tw</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/@SOC_AST2300-1.6.0-ANY/package/spx/P.CONFIG</pconfig>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/@SOC_AST2300-1.6.0-ANY/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/@SOC_AST2300-1.6.0-ANY/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

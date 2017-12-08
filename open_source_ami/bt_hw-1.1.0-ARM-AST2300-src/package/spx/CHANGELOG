@@ -1,0 +1,18 @@
+Package: bt_hw (1.1.0); urgency = medium
+
+Abstract:
+	replaced some hardcoded numbers with macros and cleaned up the code
+
+Files Modified: data/bt_hw.h, data/bthw_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 15 Aug 2011 11:35:23 EDT
+
+Package: bt_hw (1.0.0); urgency = new
+
+Abstract:
+	This package contains BT hardware driver for AST2300 SoC.
+
+Files Added: data, data/Makefile, data/bt_hw.h, data/bthw_mod.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/bt_hw, spx/PACKAGES.D/bt_hw/DATA, spx/PACKAGES.D/bt_hw/SCRIPTS, spx/PACKAGES.D/bt_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 12 Aug 2011 17:10:12 EDT
+

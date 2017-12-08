@@ -1,0 +1,18 @@
+Package: hw_cipher (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:22:41 EDT
+
+Package: hw_cipher (1.0.0); urgency = new
+
+Abstract:
+	SOC Supports Hardware Crypto Engine
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 31 Jan 2011 09:39:35 EST
+

@@ -1,0 +1,151 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+	<link href='../www/style/page_style.css' rel='stylesheet' type='text/css' />
+	<script src='/lib/include.js' type='text/javascript'></script>
+	<script>
+	document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+	</script>
+</head>
+<body oncontextmenu='return false;'>
+<h3><label id='_pageTitle'></label></h3>
+<p id='_pageDesc'></p>
+<div class='subSection'>
+<strong>Event Filter Configuration</strong>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='5' border='0' width='600'>
+	<tr><td width='40%'><strong>PEF ID</strong></td>
+	<td><input type='text' id='_pefID' readonly class='smallclassicTxtBox'/></td></tr>
+	<tr><td><strong>Filter Configuration</strong></td>
+	<td><input type='checkbox' id='_enablePEF' value='1' />
+		<label for="_enablePEF">Enable</label></td></tr>
+	<tr><td><strong>Event Severity</strong></td>
+	<td><select id='_eventSeverity' class='classicTxtBox'></select></td></tr>
+	</table>
+</div>
+
+<strong>Filter Action configuration</strong>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='5' border='0' width='600'>
+	<tr><td width='40%'><strong>Event Filter Action</strong></td>
+	<td><input type='checkbox' id='_pefAlert' value='1' />
+		<label for="_pefAlert">Alert</label></td></tr>
+	<tr><td><strong>Power Action</strong></td>
+	<td><select id='_powerAction' class='classicTxtBox'></select></td></tr>
+	<tr><td><strong>Alert Policy Number</strong></td>
+	<td><select id='_policyNo' class='smallclassicTxtBox'></select></td></tr>
+	</table>
+</div>
+	
+<strong>Generator ID configuration</strong>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='5' border='0' width='600'>
+	<tr><td width='40%'><strong>Generator ID Data</strong></td>
+
+	<td><input type='checkbox' id='_rawType' checked='true'>
+	<label for='_rawType'>Raw Data</label></td></tr>
+	<tr><td><strong>Generator ID 1</strong></td>
+	<td><input type='text' id='_genID1' class='classicTxtBox'></td></tr>
+	<tr><td><strong>Generator ID 2</strong></td>
+	<td><input type='text' id='_genID2' class='classicTxtBox'></td></tr>
+
+	<tr><td><strong>Event Generator</strong></td>
+	<td><input type='radio' id='_slaveType' name='generatorType'>
+	<label for='_slaveType'>Slave Address</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type='radio' id='_softwareType' name='generatorType'>
+	<label for='_softwareType'>System Software ID</label></td></tr>
+
+	<tr><td><strong>Slave Address/Software ID</strong></td>
+	<td><input type='text' id='_slave_software' class='classicTxtBox'></td></tr>
+	<tr><td><strong>Channel Number</strong></td>
+	<td><select id='_channelNo' class='smallclassicTxtBox'></select></td></tr>
+	<tr><td><strong>IPMB Device LUN</strong></td>
+	<td><select id='_ipmbDevice' class='smallclassicTxtBox'></select></td></tr>
+	</tr>
+	</table>
+</div>
+
+<strong>Sensor configuration</strong>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='5' border='0' width='600'>
+	<tr><td width='40%'><strong>Sensor Type</strong></td>
+	<td><select id='_sensorType' class='bigclassicTxtBox'></select></td></tr>
+	<tr><td><strong>Sensor Name</strong></td>
+	<td><select id='_sensorName' class='bigclassicTxtBox'></select></td></tr>
+	<tr><td><strong>Event Options</strong></td>
+	<td><select id='_eventOpt' class='classicTxtBox'></select></td></tr>
+	<tr id='_sensorEventRow'><td><strong>Sensor Events</strong></td>
+	<td><div id='_sensorEvent'></div></td></tr>
+	</table>
+</div>
+
+<strong>Event Data configuration</strong>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='5' border='0' width='600'>
+	<tr><td width='40%'><strong>Event Trigger</strong></td>
+	<td><input type='text' id='_eventTrigger' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	<tr><td><strong>Event Data 1 AND Mask</strong></td>
+	<td><input type='text' id='_event1ANDMask' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	<tr><td><strong>Event Data 1 Compare 1</strong></td>
+	<td><input type='text' id='_event1Compare1' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	<tr><td><strong>Event Data 1 Compare 2</strong></td>
+	<td><input type='text' id='_event1Compare2' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	</table>
+</div>
+
+<strong>Event Data 2 configuration</strong>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='5' border='0' width='600'>
+	<tr><td width='40%'><strong>Event Data 2 AND Mask</strong></td>
+	<td><input type='text' id='_event2ANDMask' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	<tr><td><strong>Event Data 2 Compare 1</strong></td>
+	<td><input type='text' id='_event2Compare1' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	<tr><td><strong>Event Data 2 Compare 2</strong></td>
+	<td><input type='text' id='_event2Compare2' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	</table>
+</div>
+
+<strong>Event Data 3 configuration</strong>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='5' border='0' width='600'>
+	<tr><td width='40%'><strong>Event Data 3 AND Mask</strong></td>
+	<td><input type='text' id='_event3ANDMask' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	<tr><td><strong>Event Data 3 Compare 1</strong></td>
+	<td><input type='text' id='_event3Compare1' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	<tr><td><strong>Event Data 3 Compare 2</strong></td>
+	<td><input type='text' id='_event3Compare2' maxlength='3' class='smallclassicTxtBox'/></td></tr>
+	</table>
+</div></div>
+<div class="btnTray">
+	<input type="button" class="classicBtn" value='Add' id="_saveBtn" />
+	<input type="button" class="classicBtn" value='Reset' id="_resetBtn" />
+	<input type="button" class="classicBtn" value='Cancel' id="_cancelBtn" />
+</div>
+</body>
+</html>

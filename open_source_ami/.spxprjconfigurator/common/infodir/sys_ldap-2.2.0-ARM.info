@@ -1,0 +1,17 @@
+Package : sys_ldap
+Non-Editable : YES
+Version : 2.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : sys
+Essential : NO
+Group : BASE
+Provides : BaseLdap
+Package-License : OPENSOURCE
+Description : System Package that includes all the LDAP related system-level libraries.
+.

@@ -1,0 +1,301 @@
+Package: busybox (1.19.0); urgency = high
+
+Abstract:
+	Incorrect prototypes of function resulted in error on strict compilers
+
+Files Added: data/.workspace, spx/PATCHES/FILES/AMI-EXT/20-include_libbb.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 25 Jul 2011 17:03:40 EDT
+
+Package: busybox (1.18.0); urgency = medium
+
+Abstract:
+	Fix for interfaces not getting IPv6 address after switching from bonding mode.
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/19-networking_ifupdown.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 21 Jul 2011 15:06:35 IST
+
+Package: busybox (1.17.0); urgency = low
+
+Abstract:
+	adding pam close session
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/18-pam_close_session.patch
+
+--Submitter: sridhar ch (sridharch@amiindia.co.in) Wed, 29 Jun 2011 05:42:20 TLT
+
+Package: busybox (1.16.0); urgency = medium
+
+Abstract:
+	Added patch to set the IPV6 Gateway Address to specific interface.
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/17-networking_ifupdown.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 22 Jun 2011 14:08:51 IST
+
+Package: busybox (1.15.0); urgency = low
+
+Abstract:
+	Changes for login application in PAM enabled case
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/16-pamauth-chges_login.patch
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Mon, 06 Jun 2011 11:46:44 TLT
+
+Package: busybox (1.14.0); urgency = medium
+
+Abstract:
+	Enabling PAM in Busybox
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/15-MakeFile_PAMEnable.patch
+Files Modified: spx/DEFCONFIG
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 10 May 2011 17:43:57 IST
+
+Package: busybox (1.13.0); urgency = medium
+
+Abstract:
+	Modified the loginpath in the telnet patch in busybox
+
+Files Modified: spx/PATCHES/FILES/AMI-EXT/13-telnetd_login.patch
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Fri, 29 Apr 2011 20:17:49 IST
+
+Package: busybox (1.12.0); urgency = medium
+
+Abstract:
+	Modified the location of the file to be patched
+
+Files Modified: spx/PATCHES/FILES/AMI-EXT/13-telnetd_login.patch, spx/PATCHES/FILES/AMI-EXT/14-MakeFile_Telnet.patch
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Mon, 25 Apr 2011 22:17:16 IST
+
+Package: busybox (1.11.0); urgency = medium
+
+Abstract:
+	Added patch to configure Telnet Login shell
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/13-telnetd_login.patch, spx/PATCHES/FILES/AMI-EXT/14-MakeFile_Telnet.patch
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Mon, 25 Apr 2011 20:52:22 IST
+
+Package: busybox (1.10.0); urgency = medium
+
+Abstract:
+	Build Rule is modified to use config file from busybox_configuration package
+
+Files Modified: spx/INFO, spx/RULES
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Mon, 18 Apr 2011 22:42:51 IST
+
+Package: busybox (1.9.0); urgency = low
+
+Abstract:
+	Removed unwanted debug message while booting the firmware.
+
+Files Modified: data/dhcp4.script, data/dhcp6.script
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 21 Feb 2011 18:30:53 IST
+
+Package: busybox (1.8.0); urgency = high
+
+Abstract:
+	Added FQDN support
+
+Files Modified: data/dhcp4.script
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 20 Jan 2011 00:08:29 IST
+
+Package: busybox (1.7.0); urgency = medium
+
+Abstract:
+	Fix for Makefile 3.82
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/12-make_3_82.patch
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 13 Jan 2011 12:44:42 EST
+
+Package: busybox (1.6.0); urgency = low
+
+Abstract:
+	White Spaces exists in original tar. Unknowingly modified it. Fixed now
+t--This line, and those below, will be ignored--
+M	spx/PATCHES/FILES/AMI-EXT/04-ttyoverride
+
+Files Modified: spx/PATCHES/FILES/AMI-EXT/04-ttyoverride
+
+--Submitter: revanth (revantha@amiindia.co.in) Tue, 04 Jan 2011 17:07:03 IST
+
+Package: busybox (1.5.0); urgency = low
+
+Abstract:
+	In Busybox Added support to run getty on multiple serial line
+
+Files Modified: spx/PATCHES/FILES/AMI-EXT/04-ttyoverride
+
+--Submitter: revanth (revantha@amiindia.co.in) Tue, 04 Jan 2011 15:37:28 IST
+
+Package: busybox (1.4.0); urgency = medium
+
+Abstract:
+	Removed ping6 utility from busybox.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 15 Dec 2010 15:42:44 IST
+
+Package: busybox (1.3.0); urgency = low
+
+Abstract:
+	Reboot does not work in busybox.Removed
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 29 Nov 2010 18:19:38 EST
+
+Package: busybox (1.2.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:24:16 EST
+
+Package: busybox (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:40:28 EDT
+
+Package: busybox (1.0.12); urgency = low
+
+Abstract:
+	Remove DDNS related function from dhcp4.script, it's obsolete.
+
+Files Modified: data/dhcp4.script
+
+--Submitter: bensonchuang (BensonChuang@ami.com.tw) Thu, 05 Aug 2010 13:43:28 CST
+
+Package: busybox (1.0.11); urgency = low
+
+Abstract:
+	Commented else condtion in scripts to avoid error messages while executing the same
+
+Files Modified: data/dhcp4.script, data/dhcp6.script
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 04 Aug 2010 19:51:03 IST
+
+Package: busybox (1.0.10); urgency = low
+
+Abstract:
+	Remove notification if the entended parameter file is missing.
+
+Files Modified: data/dhcp4.script, data/dhcp6.script
+
+--Submitter: bensonchuang (BensonChuang@ami.com.tw) Wed, 04 Aug 2010 15:53:19 CST
+
+Package: busybox (1.0.9); urgency = medium
+
+Abstract:
+	To disable the debug messages from dhcp6c daemon, removed the forgrounding of dhcp6c process.
+
+Files Modified: data/dhcp6.script, spx/PATCHES/FILES/AMI-EXT/10-ifupdown-dhcp-script.patch
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 03 Aug 2010 19:33:04 IST
+
+Package: busybox (1.0.8); urgency = medium
+
+Abstract:
+	1. Remove unused variable from TFTP (warning message)
+2. Add DHCP interval and retry mechanism for IPv4
+3. The dhcp application is not hard code inside ifupdown.c, it call dhcp4.script and dhcp6.scipt for external application
+4. If /conf/dhcp.conf is existing, then dhcp script can send special parameters to dhcp application
+
+Files Added: data/dhcp4.script, data/dhcp6.script, spx/PATCHES/FILES/AMI-EXT/09-dhcp-header.patch, spx/PATCHES/FILES/AMI-EXT/10-ifupdown-dhcp-script.patch, spx/PATCHES/FILES/AMI-EXT/11-dhcpc-interval.c.patch
+Files Modified: spx/PATCHES/FILES/AMI-EXT/06-tftp.patch, spx/RULES
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 27 May 2010 03:37:15 CST
+
+Package: busybox (1.0.7); urgency = low
+
+Abstract:
+	Enable watchdog application in BusyBox
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Sat, 22 May 2010 22:20:57 CST
+
+Package: busybox (1.0.6); urgency = low
+
+Abstract:
+	1. Remove the dummy file DEFCONFIG in AMI-EXT folder
+2. Fix the dulpicate definition : GENERAL_ERROR and COMPLETED
+
+Files Deleted: spx/PATCHES/FILES/AMI-EXT/DEFCONFIG
+Files Modified: spx/PATCHES/FILES/AMI-EXT/07-wget.patch
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 13 May 2010 03:15:22 CST
+
+Package: busybox (1.0.5); urgency = low
+
+Abstract:
+	Added Runlevel 8 entries
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:10:10 EDT
+
+Package: busybox (1.0.4); urgency = low
+
+Abstract:
+	1. If applications in busybox create connection by using xconnect(), it will not return to program who call him if error occurs.
+We need to write pipe including information at here.
+2. Enable standalone for telnet service
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/08-xconnect.patch, spx/PATCHES/FILES/AMI-EXT/DEFCONFIG
+Files Modified: spx/DEFCONFIG, spx/PATCHES/FILES/AMI-EXT/06-tftp.patch, spx/PATCHES/FILES/AMI-EXT/07-wget.patch
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Fri, 07 May 2010 06:12:51 CST
+
+Package: busybox (1.0.3); urgency = low
+
+Abstract:
+	1. Enable telnet service, wget and tftp
+2. Patch wget and tftp for firmware update
+
+Files Added: spx/PATCHES/FILES/AMI-EXT/06-tftp.patch, spx/PATCHES/FILES/AMI-EXT/07-wget.patch
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 06 May 2010 23:07:42 CST
+
+Package: busybox (1.0.2); urgency = medium
+
+Abstract:
+	only one instance of dhcp6c client is running and it is stick to one interface. so it is corrected now to run seperate instances of dhcp6 client for each interface
+
+Files Modified: spx/INFO, spx/PATCHES/FILES/AMI-EXT/05-dhcp6_up_down.patch
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 22 Apr 2010 14:45:20 IST
+
+Package: busybox (1.0.1); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 14 Apr 2010 17:38:10 EDT
+
+Package:busybox (1.0.0);urgency=new
+
+Abstract:
+	BusyBox: The Swiss Army Knife of Embedded Linux
+
+Files Added: busybox-1.13.2.tar.gz
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 30 Sep 2009 12:24:13 -0400

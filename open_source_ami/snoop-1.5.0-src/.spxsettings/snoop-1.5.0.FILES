@@ -1,0 +1,4 @@
+./Makefile 258 81ebc39ef60bec9ea8c99f82c7c9e4fc
+./snoop.h 1094 645b3968dde334ea8e3e5985849d08a1
+./snoop_ioctl.h 885 a4897681322605470b998a8dd3dd46b9
+./snoopmain.c 9976 12e198dd2abcceec447df7d2d249e8ee

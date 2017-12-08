@@ -1,0 +1,211 @@
+Package: libipmiipmb (2.8.0); urgency = low
+
+Abstract:
+	Modified sequence number chk for timeout response
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 22 Jul 2011 21:38:41 IST
+
+Package: libipmiipmb (2.7.0); urgency = medium
+
+Abstract:
+	Add Slot ID based IPMB address support for SSI Compute Blade.
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 12 Jul 2011 17:44:12 CST
+
+Package: libipmiipmb (2.6.0); urgency = low
+
+Abstract:
+	Added support for timeout completion code
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 06 Jun 2011 22:24:04 IST
+
+Package: libipmiipmb (2.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:51:04 EDT
+
+Package: libipmiipmb (2.4.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:52:35 IST
+
+Package: libipmiipmb (2.3.0); urgency = low
+
+Abstract:
+	Modifications done to handle errors properly.
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 11 May 2011 11:56:04 IST
+
+Package: libipmiipmb (2.2.0); urgency = medium
+
+Abstract:
+	Added support to disable I2C bus recovery for IPMB Buses.
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 20 Apr 2011 18:32:11 IST
+
+Package: libipmiipmb (2.1.0); urgency = medium
+
+Abstract:
+	primary, secondary ipmb variable name changes.
+IPMB host address is set for primary and secondary IPMB.
+
+Files Modified: data/IPMBIfc.c, data/IPMBMetaInfo.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 24 Mar 2011 12:42:35 IST
+
+Package: libipmiipmb (2.0.0); urgency = medium
+
+Abstract:
+	Minor changes and incrementing the version to 2.0.0
+
+Files Modified: data/IPMBMetaInfo.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:13:28 IST
+
+Package: libipmiipmb (1.3.0); urgency = low
+
+Abstract:
+	The Thread arguments will be made free in startIfc function after the thread mutex is released properly.
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Feb 2011 00:59:24 IST
+
+Package: libipmiipmb (1.2.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:07:05 EDT
+
+Package: libipmiipmb (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:56:45 EDT
+
+Package: libipmiipmb (1.0.10); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/Makefile
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:49:33 IST
+
+Package: libipmiipmb (1.0.9); urgency = low
+
+Abstract:
+	MBMC Changes for IPMB Interface
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:43:19 IST
+
+Package: libipmiipmb (1.0.8); urgency = low
+
+Abstract:
+	Replacing libi2c calls with function pointers
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 15 Jun 2010 21:16:21 IST
+
+Package: libipmiipmb (1.0.7); urgency = low
+
+Abstract:
+	Removing gpio depends from libipmiipmb
+
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 14 Jun 2010 15:24:43 IST
+
+Package: libipmiipmb (1.0.6); urgency = medium
+
+Abstract:
+	Issue:
+While setting the Event Receiver from the BMC to another device, it seems that the device does not function as the Event Receiver.
+And the Event Message is generated while setting the Event Receiver Slave Address to FFh. (This is a specification breach)
+
+Solution:
+Modified the ProcessEvtMsgReq to send proper IPMB packet for the command Platform Event Message.
+
+Files Modified: data/IPMBIfc.c, spx/INFO
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 07 Jun 2010 21:01:07 IST
+
+Package: libipmiipmb (1.0.5); urgency = medium
+
+Abstract:
+	IPMI hardware interface should be shown/selected only if the corresponding hardware is available
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 13:09:57 EDT
+
+Package: libipmiipmb (1.0.4); urgency = low
+
+Abstract:
+	Replacing hardcoded value of BMC_SLAVE_ADDRESS with g_BMCSlaveAddr.
+
+Files Modified: data/IPMBIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 10 May 2010 17:30:22 IST
+
+Package: libipmiipmb (1.0.3); urgency = medium
+
+Abstract:
+	Fix in IPMB interface so that two IPMB Interface can be up at the same time
+
+Files Modified: data/IPMBIfc.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 28 Apr 2010 19:20:13 IST
+
+Package: libipmiipmb (1.0.2); urgency = medium
+
+Abstract:
+	ln -s repalced with CREATE_SOFT_LINK
+
+Files Modified: spx/PACKAGES.D/libipmiipmb/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 05 Mar 2010 10:09:06 EST
+
+Package: libipmiipmb (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:05:42 EST
+
+Package:libipmiipmb (1.0.0);urgency=new
+
+Abstract:
+	This package conatains IPMI IPMB related stuffs
+
+Files Added: Makefile, IPMBIfc.c, IPMBMetaInfo.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 9 Dec 2009 15:02:55 +0800

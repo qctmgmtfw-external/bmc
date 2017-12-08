@@ -1,0 +1,20 @@
+Package : hdserverapp_1_17_0_3_EIP_68697
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 3 for hdserverapp (1.17.0)
+Depends :  hdserverapp(==1.17.0)
+PatchOrder : 3
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Rama Rao Bisa (ramab@ami.com)
+Urgency : new
+Description : Bind server socket tp the interface provided in ncml configuration
+.
+

@@ -1,0 +1,94 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>dashboard help</title>
+	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body>
+		<h2><div class='floatRight'><a href='javascript://' class='closeBtn' onclick='top.closeHelp();'>X</a></div>
+		<div class='helpmainhead'>Dashboard</div></h2>
+		<div class='subSection'>
+		Dashboard displays the overall information about the device status.
+		<br/><br/>
+		<fieldset>
+		<legend>Information</legend>
+		<h4>Device Information</h4>
+		Displays the Device Power Status(On or Off), Firmware Revision and Firmware Build
+		Time (Date and Time). 
+
+		<h4>Network Information</h4>
+		Shows network settings for the device. Click on the link Edit to view the Network Settings Page.
+
+		<h4>Remote Control</h4>
+		Start remote redirection of the host by launching the console from this page.
+		<h4>Java Console</h4>
+		Clicking on 'Launch' button of 'Java Console' will cause the jviewer.jnlp file to be downloaded. Once the file is downloaded
+		and launched, a Java redirection window will be displayed.
+		<script type="text/javascript">
+		try {
+			var activex_help = "<h4>ActiveX Console</h4>";
+			activex_help += "Clicking on 'Launch' button of 'ActiveX Console' " +
+				"will cause the activeX control to be downloaded, installed, " +
+				"and an activeX redirection window to be launched.";
+			if (top.settings.console.activex.available) {
+				document.write (activex_help);
+			}
+		} catch (e) {
+		}
+		try {
+			var preview_help = "<h4>Remote Console Preview</h4>";
+			preview_help += "It will show the console preview of the remote " +
+				"server using java application. Click on 'Refresh' button to " +
+				"reload the console preview.";
+			if (checkProjectCfg("WEB_PREVIEW")) {
+				document.write (preview_help);
+			}
+		} catch(e) {
+			alert (e);
+		}
+		</script>
+		<h4>Sensor Monitoring</h4>
+		It lists all available sensors on the device, with information such as status, name, reading, and status icon.
+		<br/>There are 3 possible states for a Sensor:
+		<ul>
+			<li>- Green dot denotes a Normal state.</li>
+			<li>- Yellow exclamation denotes Warning state.</li>
+			<li>- Red cross denotes a Critical state.</li>
+		</ul>
+
+		The magnifying glass allows access to the Sensor details page for that sensor.
+		<h4>Event Logs</h4>
+		A graphical representation of all events incurred by various sensors and occupied/available space in logs. 
+		If you click on the color-coded rectangle in the Legend for the chart, you can view a list of those specific events only.
+		</fieldset>
+		</div>
+	</body>
+</html>

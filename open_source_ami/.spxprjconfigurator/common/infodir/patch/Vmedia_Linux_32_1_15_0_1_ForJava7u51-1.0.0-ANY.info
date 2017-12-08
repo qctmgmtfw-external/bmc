@@ -1,0 +1,20 @@
+Package : Vmedia_Linux_32_1_15_0_1_ForJava7u51
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for Vmedia_Linux_32 (1.15.0)
+Depends :  Vmedia_Linux_32(==1.15.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  thinkjao (thinkjao@ami.com.tw)
+Urgency : new
+Description : Added support to select Binary of Source package based on Build Precedence, at build time.
+.
+

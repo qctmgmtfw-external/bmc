@@ -1,0 +1,12 @@
+--- .pristine/sys_base-2.41.0-src/data/defaults/etc/network/udhcpc.script Fri Feb  3 16:12:20 2012
++++ source/sys_base-2.41.0-src/data/defaults/etc/network/udhcpc.script Mon Feb 13 19:34:33 2012
+@@ -69,6 +69,9 @@
+ 				echo "DnsServer : " $i
+ 				#AddDNSServerIP $i				#This API is replaced with the new API for overwriting problems.
+ 				AddDNSServerIP_New $i $cnt				
++				if [ "$SET_IPV6_PRIORITY" == 'yes' -o "$SET_IPV6_PRIORITY" == 'y' ]; then
++					break
++				fi
+ 		    done
+ 		else
+ 		    echo "SET_DNS is false and it is $SET_DNS"

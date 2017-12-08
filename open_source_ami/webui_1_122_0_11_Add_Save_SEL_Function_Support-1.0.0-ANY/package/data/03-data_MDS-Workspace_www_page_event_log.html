@@ -1,0 +1,22 @@
+--- .pristine/webui-1.122.0-src/data/MDS-Workspace/www/page/event_log.html Wed Apr 18 13:50:25 2012
++++ source/webui-1.122.0-src/data/MDS-Workspace/www/page/event_log.html Fri Apr 20 14:46:52 2012
+@@ -43,6 +43,8 @@
+ 		if (top.gLangSettingSet == true) {
+ 		var elmt = document.getElementById("_btnClearLog");
+ 		elmt.setAttribute("value", eLang.getString("event_log", "EVENT_LOG_CLEAREVENTS"));
++		var elmt = document.getElementById("_btnSaveLog");
++		elmt.setAttribute("value", eLang.getString("event_log", "EVENT_LOG_SAVEEVENTS"));
+ 			doInit();
+ 		}
+ 	}
+@@ -99,7 +101,8 @@
+ 	if (!window.ActiveXObject)document.write("<br>");
+ </script>
+ <div class="btnTray">
++	<input type="button" id="_btnSaveLog" />
+ 	<input type="button" id="_btnClearLog" />
+ </div>
+ </body>
+-</html>
++</html>
+

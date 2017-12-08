@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+	MKDIR_CLEAN %BOOT_BIN
+	COPY_FILE ./u-boot.bin %BOOT_BIN
+
+debug-install:
+	COPY_FILE ./u-boot.bin %TFTPBOOT

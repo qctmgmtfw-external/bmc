@@ -1,0 +1,10 @@
+if auth_ad
+config FEATURE_AD_LOADED
+	int 
+	default 1
+	help
+		AD Module Loaded for Module Count
+endif
+endmenu
+
+

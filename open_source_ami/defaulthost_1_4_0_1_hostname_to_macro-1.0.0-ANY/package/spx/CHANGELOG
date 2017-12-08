@@ -1,0 +1,9 @@
+Package: defaulthost_1_4_0_1_hostname_to_macro (1.0.0); urgency = new
+
+Abstract:
+	Modified the hardcoded hostname AMI to macro
+
+Files Added: data, data/00-data_defaulthost.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 20 Sep 2011 12:59:15 IST
+

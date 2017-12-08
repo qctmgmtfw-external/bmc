@@ -1,0 +1,9 @@
+Package: libipmipdk (1.0.0); urgency = new
+
+Abstract:
+	This package contains the I2C Debug Board PDK Related Stuffs for AST2300EVB Platform
+
+Files Added: data, data/Makefile, data/PDKAlert.c, data/PDKEEPROM.c, data/PDKFRU.c, data/PDKHW.c, data/PDKHooks.c, data/PDKInt.c, data/PDKLED.c, data/PDKNM.c, data/PDKSDR.c, data/PDKSEL.c, data/PDKSensor.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libipmipdk, spx/PACKAGES.D/libipmipdk/DATA, spx/PACKAGES.D/libipmipdk/SCRIPTS, spx/PACKAGES.D/libipmipdk/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 29 Oct 2012 16:48:53 CST
+

@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_NOCLEAN %SPXINC/lpcuart
+        COPY_DIR ./ %SPXINC/lpcuart
+
+debug-install:

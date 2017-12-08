@@ -1,0 +1,69 @@
+#!/bin/sh
+#echo " 95-up-nsupdate : IFACE - $IFACE"
+
+NSUPDATE_BINARY=/usr/local/bin/nsupdate
+NSUPDATE_SCRIPT=/usr/local/bin/nsupdate.sh
+
+METHOD=register
+
+INTERFACE=$IFACE
+
+if [ "$IFACE"  == "lo" ]
+then
+	exit 0
+fi
+
+[ -x $NSUPDATE_BINARY ] || exit 0
+
+[ -f /conf/dns.conf ] || exit 0
+
+. /conf/dns.conf
+
+if [ -z "$DO_DDNS" ]; then
+	exit 0
+fi
+
+if ! [ "$DO_DDNS" == 'yes'  -o "$DO_DDNS" == 'y' ]; then
+	exit 0
+fi
+
+IP=`/sbin/ifconfig $IFACE |  grep "inet addr:" | cut -d: -f2 | awk '{ print $1}'`
+
+HOST_NAME=`hostname`
+DOMAIN_NAME=`cat /etc/resolv.conf | grep "search" | awk '{ print $2}'`
+if [ "$HOST_NAME" == "" ]; then
+	echo "NSUPDATE: Cannot $METHOD hostname as it is empty"
+    	exit 0
+fi
+
+if [ "$DOMAIN_NAME" == "" ]; then
+	REGISTER_NAME=$HOST_NAME
+else	
+	REGISTER_NAME=$HOST_NAME.$DOMAIN_NAME
+fi
+
+#echo "NSUPDATE: $METHOD $REGISTER_NAME  to Address $IP ..."
+
+if ! [ "$SET_FQDN" == 'yes' -o "$SET_FQDN" == 'y' ]; then
+  
+$NSUPDATE_SCRIPT $METHOD $REGISTER_NAME $IP 
+
+fi
+
+# Find if IPv6 address present and register the corresponding AAAA record
+# Ignore Link-local and router advertsement (RA) addresses
+
+sleep 1
+#LINK_LOCAL=`ifconfig eth0 | grep Scope:Link | awk '{print $3}' | cut -d'/' -f1`
+LINK_LOCAL=`ifconfig $IFACE | grep Scope:Link | awk '{print $3}' | cut -d'/' -f1`
+SUFFIX=`echo ${LINK_LOCAL#*::}`
+
+#IPv6=`ifconfig eth0 | grep inet6 | grep -v $SUFFIX | awk '{print $3}' | cut -d'/' -f1`
+IPv6=`ifconfig $IFACE | grep inet6 | grep -v $SUFFIX | awk '{print $3}' | cut -d'/' -f1`
+
+for j in $IPv6; do
+	#echo "Registering AAAA record for $j"
+	$NSUPDATE_SCRIPT $METHOD $REGISTER_NAME $j
+done
+
+exit 0

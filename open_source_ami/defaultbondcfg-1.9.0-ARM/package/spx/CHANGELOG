@@ -1,0 +1,96 @@
+Package: defaultbondcfg (1.9.0); urgency = medium
+
+Abstract:
+	Code clean up.
+
+Files Modified: spx/P.CONFIG, spx/RULES, spx/RULES.D/bondscript
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 14 Sep 2011 22:00:42 IST
+
+Package: defaultbondcfg (1.8.0); urgency = medium
+
+Abstract:
+	Modified binary package creation to fix the build error for binary customer.
+
+Files Added: spx/PACKAGES.D/defaultbondcfg, spx/PACKAGES.D/defaultbondcfg/DATA, spx/PACKAGES.D/defaultbondcfg/SCRIPTS, spx/PACKAGES.D/defaultbondcfg/SCRIPTS/dev-install
+Files Deleted: spx/PACKAGES.D/Bondconfig, spx/PACKAGES.D/Bondconfig/DATA, spx/PACKAGES.D/Bondconfig/SCRIPTS, spx/PACKAGES.D/Bondconfig/SCRIPTS/dev-install
+Files Modified: spx/INFO, spx/P.CONFIG, spx/RULES, spx/RULES.D/bondscript
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 14 Sep 2011 17:44:52 IST
+
+Package: defaultbondcfg (1.7.0); urgency = low
+
+Abstract:
+	Updating the depends field.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 15 Jul 2011 18:01:22 IST
+
+Package: defaultbondcfg (1.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:11:35 EDT
+
+Package: defaultbondcfg (1.5.0); urgency = medium
+
+Abstract:
+	Invoking boding script from the binary package,so that bonding configuration will be updated when build option is IMAGE.
+
+Files Modified: spx/PACKAGES.D/Bondconfig/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 04 Apr 2011 13:40:16 IST
+
+Package: defaultbondcfg (1.4.0); urgency = medium
+
+Abstract:
+	Modified script file to check Bond Enabled Macro.
+
+Files Modified: spx/RULES.D/bondscript
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 29 Mar 2011 14:45:55 IST
+
+Package: defaultbondcfg (1.3.0); urgency = medium
+
+Abstract:
+	Modified default bonding configurations.
+
+Files Added: data/bond.conf
+Files Deleted: data/bond.conf.0x0, data/bond.conf.0x1, data/bond.conf.0x2, data/bond.conf.0x3, data/bond.conf.0x4, data/bond.conf.0x5, data/bond.conf.0x6
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/Bondconfig/SCRIPTS/dev-install, spx/RULES, spx/RULES.D/bondscript
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 29 Mar 2011 00:17:45 IST
+
+Package: defaultbondcfg (1.2.0); urgency = medium
+
+Abstract:
+	Added interface and dns configuration tmp files.These files will be restored when bonding is disabled.
+
+Files Added: data/dns.tmp, data/interfaces.tmp.0x0, data/interfaces.tmp.0x1
+Files Modified: spx/PACKAGES.D/Bondconfig/SCRIPTS/dev-install, spx/RULES, spx/RULES.D/bondscript
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 07 Mar 2011 17:15:57 IST
+
+Package: defaultbondcfg (1.1.0); urgency = medium
+
+Abstract:
+	Added dns configuration file.
+
+Files Added: data/dns.conf
+Files Modified: spx/PACKAGES.D/Bondconfig/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 04 Mar 2011 22:07:57 IST
+
+Package: defaultbondcfg (1.0.0); urgency = new
+
+Abstract:
+	This Package will configure the default bonding configurations.
+
+Files Added: data, data/activeslave.conf.0x0, data/activeslave.conf.0x1, data/bond.conf.0x0, data/bond.conf.0x1, data/bond.conf.0x2, data/bond.conf.0x3, data/bond.conf.0x4, data/bond.conf.0x5, data/bond.conf.0x6, data/interfaces, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/Bondconfig, spx/PACKAGES.D/Bondconfig/DATA, spx/PACKAGES.D/Bondconfig/SCRIPTS, spx/PACKAGES.D/Bondconfig/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/bondscript
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 04 Mar 2011 20:22:39 IST
+

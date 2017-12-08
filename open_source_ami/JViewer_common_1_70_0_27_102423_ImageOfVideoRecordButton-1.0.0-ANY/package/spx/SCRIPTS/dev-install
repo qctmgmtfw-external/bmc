@@ -1,0 +1,7 @@
+#Install Script for Patch Package 
+
+build-install: 
+	COPY_DIR   . %SOURCE/JViewer_common-1.70.0-src/data/src/com/ami/kvm/jviewer/res
+
+debug-install: 
+

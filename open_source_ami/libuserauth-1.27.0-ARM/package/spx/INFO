@@ -1,0 +1,17 @@
+Package : libuserauth
+Non-Editable : YES
+Version : 1.27.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : siva Prakash R  (sivaprakashr@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Group : AUTHENTICATION
+Required : libUserPrivilege
+Package-License : AMI
+Description : User Authentication package
+.

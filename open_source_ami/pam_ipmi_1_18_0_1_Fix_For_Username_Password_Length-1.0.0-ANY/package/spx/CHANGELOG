@@ -1,0 +1,9 @@
+Package: pam_ipmi_1_18_0_1_Fix_For_Username_Password_Length (1.0.0); urgency = new
+
+Abstract:
+	Fix for Username and Password Length
+
+Files Added: data, data/00-data_pam_ipmi.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 21 Sep 2011 14:47:59 IST
+

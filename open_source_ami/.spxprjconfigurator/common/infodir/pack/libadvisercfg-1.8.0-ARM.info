@@ -1,0 +1,16 @@
+Package : libadvisercfg
+Non-Editable : YES
+Version : 1.8.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Required : libracsessioninfo, libncml
+Package-License : AMI
+Description : This is the binary package for advisercfg library.
+.

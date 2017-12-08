@@ -1,0 +1,9 @@
+Package: fdserverapp_1_17_0_6_EIP_168130 (1.0.0); urgency = new
+
+Abstract:
+	do not disconnect device if there is some instance activated in auto-attach mode
+
+Files Added: data, data/00-data_fdserver.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 05 Jun 2014 16:41:02 CST
+

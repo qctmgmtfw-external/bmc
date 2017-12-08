@@ -1,0 +1,20 @@
+Package : webui_1_122_0_13_Fix_bugs_of_the_sensor_reading_widget
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 13 for webui (1.122.0)
+Depends :  webui(==1.122.0)
+PatchOrder : 13
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  thinkjao (thinkjao@ami.com.tw)
+Urgency : new
+Description : Fix bugs of the sensor reading widget.
+.
+

@@ -1,0 +1,11 @@
+--- u-boot-1.1.6/MAKEALL	2006-11-02 22:15:01.000000000 +0800
++++ u-boot-1.1.6-ami/MAKEALL	2009-08-12 11:07:50.000000000 +0800
+@@ -195,7 +195,7 @@
+ 	omap1610h2	omap1610inn	omap730p2	sbc2410x	\
+ 	scb9328		smdk2400	smdk2410	trab		\
+ 	VCMA9		versatile	versatileab	versatilepb	\
+-	voiceblue							\
++	voiceblue	AST2300EVB				\
+ "
+ 
+ #########################################################################

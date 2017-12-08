@@ -1,0 +1,5 @@
+# INFO packages are not installed 
+# These are used only to select packages.
+build-install:
+
+debug-install:

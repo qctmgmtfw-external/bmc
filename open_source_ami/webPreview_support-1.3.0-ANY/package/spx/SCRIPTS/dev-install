@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+	APPEND_TO_FILE WEB_PREVIEW %IMAGE_TREE/etc/features
+	MKDIR_CLEAN %IMAGE_TREE/usr/local/www/Java/release/capture
+		
+debug-install:
+ 
+ 

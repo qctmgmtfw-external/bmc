@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_14_90010_KVMCouldNotDisplayCompletely (1.0.0); urgency = new
+
+Abstract:
+	for EIP 90010, KVM could not display completely
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_kvmpkts_KVMClient.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 31 May 2012 15:33:07 CST
+

@@ -1,0 +1,9 @@
+./01-ServerIP.patch 718 74cc997157b029ed132cecebab627448
+./03-common-make.patch 453 4c2167b4f6ec875e5fabd01a279d861d
+./04-FC6-makefile.patch 439 05606dad468ba5d49a46c54c5ca97397
+./06-tftp-flash-0.patch 667 9bdc9c52eabba4a0771ba63d22db2b30
+./07-bootelf-args.patch 436 a21752b5c5d34a2aaa0c20f77dc73d10
+./08-net_net.c 255 1e7fc4de64acee86d3ab3c0c6dab57e4
+./09-strnicmp.patch 1012 60acdcf01ca0fdbce65c2191ca09d3d1
+./10-drivers_nand_nand_ids.c 471 153d0ee5aacb935326b6c31973d4ef7c
+./11-nand_bad_block_options_issue.c 424 025ea14b7f846d610f48d8c112e29424

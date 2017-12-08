@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/i2c
+        COPY_FILE ./libi2c.h %SPXINC/i2c
+    MKDIR_NOCLEAN %SPXLIB/i2c
+	COPY_FILE ./libi2c.a %SPXLIB/i2c
+	COPY_FILE libi2c.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/i2c
+	ADD_LIBRARY_LINKS %SPXLIB/i2c libi2c.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:
+

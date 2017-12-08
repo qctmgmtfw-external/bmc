@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_27_102423_ImageOfVideoRecordButton
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 27 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 27
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description :  for EIP 102423, Image of Video Record Button is not clear
+.
+

@@ -1,0 +1,9 @@
+Package: libUserPrivilege_1_2_0_1_Fix_Lighttpd_Crash_LDAP_UsrPriv (1.0.0); urgency = new
+
+Abstract:
+	Fix for Lighttpd Crash when we try ldap login with privilege as user
+
+Files Added: data, data/00-data_userprivilege.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 15 Sep 2011 17:36:16 IST
+

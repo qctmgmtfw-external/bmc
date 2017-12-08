@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/snmpusers
+	MKDIR_NOCLEAN %SPXINC/snmpusers
+	COPY_FILE ./snmpusers.h %SPXINC/snmpusers
+	COPY_FILE ./HelperFuncs.h %SPXINC/snmpusers
+	COPY_FILE ./SNMPApi.h %SPXINC/snmpusers
+	COPY_FILE ./libsnmpusers.a %SPXLIB/snmpusers
+	COPY_FILE ./libsnmpusers.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/snmpusers
+	ADD_LIBRARY_LINKS %SPXLIB/snmpusers  libsnmpusers.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+debug-install:

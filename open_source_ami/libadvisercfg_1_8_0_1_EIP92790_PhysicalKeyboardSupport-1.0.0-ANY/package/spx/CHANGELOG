@@ -1,0 +1,9 @@
+Package: libadvisercfg_1_8_0_1_EIP92790_PhysicalKeyboardSupport (1.0.0); urgency = new
+
+Abstract:
+	Add physical keyboard language selection support
+
+Files Added: data, data/00-data_adviser_cfg.c, data/01-data_adviser_cfg.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 11 Jul 2012 16:27:42 CST
+

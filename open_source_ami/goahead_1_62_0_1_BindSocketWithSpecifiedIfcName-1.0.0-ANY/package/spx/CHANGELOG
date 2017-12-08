@@ -1,0 +1,9 @@
+Package: goahead_1_62_0_1_BindSocketWithSpecifiedIfcName (1.0.0); urgency = new
+
+Abstract:
+	Listen the Socket only for specified interface that is configured in ncml.conf file.
+
+Files Added: data, data/00-data_sockGen.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Thu, 19 Jan 2012 19:37:50 CST
+

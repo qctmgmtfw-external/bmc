@@ -1,0 +1,74 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+<link href="../style/page_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../lib/include.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_applyBtn");
+		elmt.setAttribute("value", eLang.getString("configure_mouse_mode", "CFG_MOUSEMODE_SAVE"));
+		var elmt = document.getElementById("_resetBtn");
+		elmt.setAttribute("value", eLang.getString("configure_mouse_mode", "CFG_MOUSEMODE_RESET"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("configure_mouse_mode", "CFG_MOUSEMODE_TITLE"));</script>
+</h3>
+<p>
+<script>document.writeln(eLang.getString("configure_mouse_mode", "CFG_MOUSEMODE_DESC"));</script>
+</p>
+<div class="subSection">
+<h4 id="_mInfo">
+<script>document.writeln(eLang.getString("configure_mouse_mode", "CFG_MOUSEMODE_CURRENTMODE"));</script>
+</h4>
+<p>
+<input type="radio" id="_absMod" name="mousemode" />
+<label for="_absMod">
+<script>document.writeln(eLang.getString("configure_mouse_mode", "CFG_MOUSEMODE_ABSOLUTE"));</script>
+</label><br>
+<input type="radio" id="_relMod" name="mousemode" />
+<label for="_relMod">
+<script>document.writeln(eLang.getString("configure_mouse_mode", "CFG_MOUSEMODE_RELATIVE"));</script>
+</label>
+</p>
+</div>
+
+<div class="btnTray">
+	<input type="button" id="_applyBtn" />
+	<input type="button" id="_resetBtn" />
+</div>
+</body>
+</html>

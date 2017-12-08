@@ -1,0 +1,128 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_services help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = "", bodyContent = "", buttonContent = "";
+	var helpContent;
+	if (frameName.length) {
+		if (frameName[0].getAttribute("id").indexOf("modifyServiceForm") != -1) {
+			titleContent = "<div class='helpmainhead'>Modify Service" +
+				"</div></h2><div class='subSection'>" +
+				"Use this form to modify the configuration of the services " +
+				"running in the BMC. ";
+
+			bodyContent = "<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Service Name</h4>" +
+			"Displays service name of the selected slot(readonly)." +
+			"<h4>Current State</h4>" +
+			"Displays the current status of the service, either active or " +
+			"inactive state. Check this option to start the inactive service." +
+			"<h4>Interfaces</h4>" +
+			"It shows the interface in which service is running. The user " +
+			"can choose any one of the available interfaces." +
+			"<h4>Nonsecure Port</h4>" +
+			"Used to configure non secure port number for the service. " +
+			"<ul><li>- Web default port is 80.</li>" +
+			"<li>- KVM default port is 7578.</li>" +
+			"<li>- CD Media default port is 5120.</li>" +
+			"<li>- FD Media default port is 5122.</li>" +
+			"<li>- HD Media default port is 5123.</li>" +
+			"<li>- Telnet default port is 23.</li></ul>" +
+			"<br><strong>NOTE:</strong> " +
+			"SSH service will not support non secure port." +
+			"<h4>Secure Port</h4>" +
+			"Used to configure secure port number for the service. " +
+			"<ul><li>- Web default port is 443.</li>" +
+			"<li>- KVM default port is 7582.</li>" +
+			"<li>- CD Media default port is 5124.</li>" +
+			"<li>- FD Media default port is 5126.</li>" +
+			"<li>- HD Media default port is 5127.</li>" +
+			"<li>- SSH default port is 22.</li></ul>" +
+			"<br><strong>NOTE:</strong> " +
+			"Telnet service will not support secure port." +
+			"<h4>Timeout</h4>" +
+			"Displays the session timeout value of the service. " +
+			"For web, SSH and telnet service, user can configure the session " +
+			"timeout value. " +
+			"<ul><li>- Web timeout value ranges from 300 to 1800 seconds.</li>" +
+			"<li>- SSH and Telnet timeout value ranges from 60 to 1800 " +
+			"seconds.</li>" +
+			"<li>- SSH and telnet timeout value should be in multiples of " +
+			"60 seconds.</li></ul>" +
+			"<br><strong>NOTE:</strong> " +
+			"SSH and telnet service will be using the shared timeout value. " +
+			"If the user configures SSH timeout value, it will be applied to " +
+			"telnet service also and vice versa." +
+			"<h4>Maximum Sessions</h4>" +
+			"Displays the maximum number of allowed sessions for the service." +
+			"<h4>Active Sessions</h4>" +
+			"Displays the number of current active sessions for the service.";
+
+			buttonContent = "<h4>Modify</h4>" +
+				"Click on 'Modify' to save the configuration for the service " +
+				"and return to Services list. " +
+				"<br><strong>NOTE:</strong> " +
+				"Already opened sessions for the service will be affected " +
+				"and service will be restarted." +
+				"<h4>Cancel</h4>" +
+				"Click 'Cancel' to cancel the modification and return to " +
+				"Services list. " +
+				"</fieldset></div>";
+			helpContent = titleContent + bodyContent + buttonContent;
+		}
+	} else {
+		helpContent = "<div class='helpmainhead'>Services</div></h2>" +
+		"<div class='subSection'>" +
+		"This page is used to display the basic information about services " +
+		"running in the BMC. To modify a service, user must be an " +
+		"Administrator. " +
+		"<br><br><fieldset>" +
+		"<legend>Actions</legend>" +
+		"<h4>Modify</h4>" +
+		"Select a slot and click 'Modify' to modify the configuration of " +
+		"the service. Alternatively, double click on the slot." +
+		"<br><strong>NOTE:</strong> Whenever the configuration is modified, " +
+		"the service will be restarted automatically. User has to close the " +
+		"existing opened session for the service if needed." +
+		"</fieldset></div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

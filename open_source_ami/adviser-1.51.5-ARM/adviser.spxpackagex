@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="true" readonly="true" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/adviser-1.51.5-ARM/package/data/adviserd.sh</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/adviser-1.51.5-ARM/package/data/adviserd</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/adviser-1.51.5-ARM/package/data/stunnel.conf</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/adviser-1.51.5-ARM/package/data/adviserd.conf</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>adviser</package-name>
+<version>1.51.5</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends/>
+<depends/>
+<required>
+<package-name operator="" version="">libvideo</package-name>
+<package-name operator="" version="">libcompress</package-name>
+<package-name operator="" version="">libadvisercfg</package-name>
+<package-name operator="" version="">libencryption</package-name>
+<package-name operator="" version="">libunix</package-name>
+<package-name operator="" version="">libracsessioninfo</package-name>
+<package-name operator="" version="">libdbgout</package-name>
+<package-name operator="" version="">libiniparser</package-name>
+<package-name operator="" version="">libsmtp</package-name>
+<package-name operator="" version="">HID_support</package-name>
+<package-name operator="" version="">libncml</package-name>
+</required>
+<conflicts/>
+<essential>NO</essential>
+<group>KVM</group>
+<configtags>Video Server Support</configtags>
+<installsize/>
+<description>This package includes the binary for ADVISER application.</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>Viswanathan S  </maintainer>
+<maintainer-email>viswanathans@ami.com</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/adviser-1.51.5-ARM/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/adviser-1.51.5-ARM/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

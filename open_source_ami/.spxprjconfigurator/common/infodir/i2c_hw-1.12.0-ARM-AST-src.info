@@ -1,0 +1,39 @@
+Source : i2c_hw
+Version : 1.12.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : i2c_hw
+Build-Depends : crosscc, kernel_dev, rules
+Essential : YES
+Group : DEVICE
+Owner : AMI
+Maintainer : David Chang  (DavidChang@ami.com.tw)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST
+Urgency : critical
+Description : This pacakge contains I2C hardware level driver for AST SoC.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : i2c_hw
+Section : sys
+Essential : YES
+Group : DEVICE
+Provides : i2cDriver
+Depends : kernel, i2c
+Package-License : GPL-V2
+Description : This pacakge contains built I2C hardware driver module for AST SoC.
+.
+

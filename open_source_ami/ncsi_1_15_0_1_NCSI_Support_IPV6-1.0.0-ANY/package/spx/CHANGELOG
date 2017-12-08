@@ -1,0 +1,9 @@
+Package: ncsi_1_15_0_1_NCSI_Support_IPV6 (1.0.0); urgency = new
+
+Abstract:
+	NCSI Support IPV6
+
+Files Added: data, data/00-data_core_ncsicore.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Tue, 06 Dec 2011 19:16:57 CST
+

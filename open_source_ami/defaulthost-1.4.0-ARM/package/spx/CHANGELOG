@@ -1,0 +1,71 @@
+Package: defaulthost (1.4.0); urgency = low
+
+Abstract:
+	Removed unused file.
+
+Files Deleted: data/hostname.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 06 Jul 2011 18:56:31 IST
+
+Package: defaulthost (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:11:46 EDT
+
+Package: defaulthost (1.2.0); urgency = medium
+
+Abstract:
+	Modified to GetHostNameConf and SetHostNameConf for new hostname.conf with INI format.
+
+Files Modified: data/Makefile, data/defaulthost.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 22 Apr 2011 15:55:43 CST
+
+Package: defaulthost (1.1.0); urgency = medium
+
+Abstract:
+	Fix for the issue : Default Hostname of the BMC device is not getting updated after updating the MAC address via either updating the ethaddr environment variable or using Set LAN Configuration Parameter command
+
+Files Modified: data/defaulthost.c
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Sat, 18 Sep 2010 07:33:00 IST
+
+Package: defaulthost (1.0.3); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:21:44 EDT
+
+Package: defaulthost (1.0.2); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:21:38 EDT
+
+Package: defaulthost (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:56:37 EST
+
+Package:defaulthost (1.0.0);urgency=new
+
+Abstract:
+	This package includes default host application that runs duringsystem startup to configure the hostname.
+
+Files Added: hostname.c, Makefile, defaulthost.c, defaulthost.sh
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 11 Nov 2009 15:40:26 -0500

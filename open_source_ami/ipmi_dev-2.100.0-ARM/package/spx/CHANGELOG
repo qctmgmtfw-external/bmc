@@ -1,0 +1,1995 @@
+Package: ipmi_dev (2.100.0); urgency = medium
+
+Abstract:
+	Reverted the changes.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Aug 2011 22:54:42 IST
+
+Package: ipmi_dev (2.99.0); urgency = medium
+
+Abstract:
+	Added VLAN TCP socket.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Aug 2011 19:06:06 IST
+
+Package: ipmi_dev (2.98.0); urgency = medium
+
+Abstract:
+	Removed unwanted variable.
+
+Files Modified: data/IPMIConf.h, data/Session.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Aug 2011 13:04:27 IST
+
+Package: ipmi_dev (2.97.0); urgency = low
+
+Abstract:
+	Added new fields for username and ipaddr to the UDS Msg Header structure and username field to the Session Table structure
+
+Files Modified: data/IPMIDefs.h, data/Session.h
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 17 Aug 2011 11:37:52 IST
+
+Package: ipmi_dev (2.96.0); urgency = low
+
+Abstract:
+	Moving VersionConfig_T to top of BMCInfo_t structure.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 16 Aug 2011 14:24:54 IST
+
+Package: ipmi_dev (2.95.0); urgency = medium
+
+Abstract:
+	LoginAudit coniguration support for telnet and ssh
+
+Files Modified: data/IPMI_AMIDevice.h, data/PMConfig.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 11 Aug 2011 21:06:33 IST
+
+Package: ipmi_dev (2.94.0); urgency = medium
+
+Abstract:
+	Added Cirucular SEL Flag and variables.
+
+Files Modified: data/PMConfig.h, data/SharedMem.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 10 Aug 2011 15:05:54 IST
+
+Package: ipmi_dev (2.93.0); urgency = medium
+
+Abstract:
+	Correcting MAX_SERVICES
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 09 Aug 2011 17:11:27 IST
+
+Package: ipmi_dev (2.92.1); urgency = low
+
+Abstract:
+	Adding libpeci functions to halhw
+
+Files Modified: data/hal_hw.h
+
+--Submitter: David Wise (davidw@ami.com) Mon, 08 Aug 2011 18:26:59 EDT
+
+Package: ipmi_dev (2.92.0); urgency = low
+
+Abstract:
+	1. PEF Startup Delay time function works abnormally.
+   Sec 17.4 .The PEF Startup Delay causes Platform Event Filtering triggered power-down, reset, and power-cycle actions to be postponed when the system is 
+   either powered up or is reset locally via a pushbutton or other local front-panel user interface. the time is to delay PEF after a system powerup, from 
+   S4 or S5 and resets.
+
+2. PEF Alert startup delay works abnormally.
+   table 30-6 field 4, the alert startup delay time is to delay Alerts after system powerups, from S4 or S5 and resets. 
+
+
+3. The first Priority of PEF Action is wrong.
+   If a event trigger a lot of filter, we should choose a power action onlt, if do power action every filter, it isn't reasonable.
+
+Files Modified: data/PEFTmr.h
+
+--Submitter: terrychen (terrychen@ami.com.tw) Mon, 08 Aug 2011 10:58:54 CST
+
+Package: ipmi_dev (2.91.0); urgency = medium
+
+Abstract:
+	Added new completion code and added needed structure.
+
+Files Modified: data/IPMIDefs.h, data/IPMI_AMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 04 Aug 2011 20:41:15 IST
+
+Package: ipmi_dev (2.90.0); urgency = medium
+
+Abstract:
+	Added Missing header file to fix build error.
+
+Files Modified: data/SensorAPI.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 03 Aug 2011 22:58:29 IST
+
+Package: ipmi_dev (2.89.0); urgency = medium
+
+Abstract:
+	Added missing dlpar_handle variable.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 03 Aug 2011 21:01:33 IST
+
+Package: ipmi_dev (2.88.0); urgency = medium
+
+Abstract:
+	changes done for MBMC to move global m_internal_sensor_tbl inside BMCInfo_t structure.
+
+Files Modified: data/IPMIConf.h, data/SensorMonitor.h, data/SharedMem.h, data/internal_sensor.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 03 Aug 2011 20:26:52 IST
+
+Package: ipmi_dev (2.87.0); urgency = medium
+
+Abstract:
+	Adding dlpar_handle to BMCInfo_t structure.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 03 Aug 2011 14:40:22 IST
+
+Package: ipmi_dev (2.86.0); urgency = medium
+
+Abstract:
+	Incremented IPMI config version.
+
+Files Modified: data/PMConfig.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 02 Aug 2011 14:07:22 IST
+
+Package: ipmi_dev (2.85.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/AppDevice.h, data/IPMIConf.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:16:57 IST
+
+Package: ipmi_dev (2.84.0); urgency = medium
+
+Abstract:
+	Added First SEL Record ID Field.
+
+Files Modified: data/PMConfig.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 29 Jul 2011 20:47:45 IST
+
+Package: ipmi_dev (2.83.0); urgency = medium
+
+Abstract:
+	Added support for IPMI Configuration Version check. The version of IPMI_CONFIG_VERSION will be compared with CDF Version of libipmipar pakcage.This support can be enabled in PRJ using MDS.
+
+Files Modified: data/IPMIConf.h, data/IPMI_AMISmtp.h, data/IPMI_OPMA.h, data/PMConfig.h, data/SerialModem.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 28 Jul 2011 17:06:37 IST
+
+Package: ipmi_dev (2.82.0); urgency = medium
+
+Abstract:
+	Reverted the change - re-ordering structure.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 26 Jul 2011 21:10:00 IST
+
+Package: ipmi_dev (2.81.0); urgency = medium
+
+Abstract:
+	Re-ordered the structure inorder to make it wok with the old par packages.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 26 Jul 2011 17:41:22 IST
+
+Package: ipmi_dev (2.80.0); urgency = low
+
+Abstract:
+	For OPMA spec p.92
+ 1. Virtual Comm 1 Port 00h = Not supported 01h = Supported
+ 2. Virtual Floppy Interface 00h = Not supported 01h = Supported
+
+Files Modified: data/IPMI_OPMA.h
+
+--Submitter: terrychen (terrychen@ami.com.tw) Tue, 26 Jul 2011 17:13:21 CST
+
+Package: ipmi_dev (2.79.0); urgency = medium
+
+Abstract:
+	Adding IPMI_START_SYNC_Q
+
+Files Modified: data/IPMI_Main.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 25 Jul 2011 21:21:11 IST
+
+Package: ipmi_dev (2.78.0); urgency = medium
+
+Abstract:
+	Added UDS Error Code
+
+Files Modified: data/UDSIfc.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Jul 2011 16:17:37 IST
+
+Package: ipmi_dev (2.77.0); urgency = low
+
+Abstract:
+	Add the APML version 103
+
+Files Modified: data/Apml.h, data/Apml_fdk.h, data/Support.h
+
+--Submitter: terrychen (terrychen@ami.com.tw) Fri, 22 Jul 2011 13:43:03 CST
+
+Package: ipmi_dev (2.76.0); urgency = medium
+
+Abstract:
+	Added OEM completion code.
+
+Files Modified: data/IPMIDefs.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 21 Jul 2011 15:02:44 IST
+
+Package: ipmi_dev (2.75.0); urgency = low
+
+Abstract:
+	Removing unused flashing related commands.
+
+Files Modified: data/AMIDevice.h, data/IPMI_AMI.h, data/Support.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 20 Jul 2011 17:17:09 IST
+
+Package: ipmi_dev (2.74.0); urgency = low
+
+Abstract:
+	Increased the size of secure port and non secure port
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 20 Jul 2011 14:09:29 IST
+
+Package: ipmi_dev (2.73.0); urgency = medium
+
+Abstract:
+	Adding BTIfcsupport to IPMIConfig_T structure.
+
+Files Modified: data/IPMIConf.h, data/IPMI_Main.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 19 Jul 2011 19:22:22 IST
+
+Package: ipmi_dev (2.72.0); urgency = low
+
+Abstract:
+	Adding hal_intsensor_t structure needed for interrupt registration.
+
+Files Modified: data/hal_defs.h, data/ipmi_int.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 14 Jul 2011 18:43:48 IST
+
+Package: ipmi_dev (2.71.0); urgency = medium
+
+Abstract:
+	Adding macros for sensor Entity IDs
+
+Files Modified: data/Sensor.h
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 14 Jul 2011 18:05:24 IST
+
+Package: ipmi_dev (2.70.0); urgency = low
+
+Abstract:
+	Added function prototype.
+
+Files Modified: data/Ethaddr.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 13 Jul 2011 18:11:28 IST
+
+Package: ipmi_dev (2.69.0); urgency = low
+
+Abstract:
+	Reverted the changes.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Jul 2011 19:26:31 IST
+
+Package: ipmi_dev (2.68.0); urgency = low
+
+Abstract:
+	Removed unused variable.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Jul 2011 18:16:48 IST
+
+Package: ipmi_dev (2.67.0); urgency = low
+
+Abstract:
+	Added extern of get timestamp for ipmi timeout table
+
+Files Modified: data/Message.h
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 08 Jul 2011 12:06:57 IST
+
+Package: ipmi_dev (2.66.0); urgency = medium
+
+Abstract:
+	Added RestartService_T structure
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Thu, 07 Jul 2011 17:04:50 IST
+
+Package: ipmi_dev (2.65.0); urgency = low
+
+Abstract:
+	Removing unwanted mutex.
+
+Files Modified: data/IPMIConf.h, data/IPMI_Main.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 06 Jul 2011 21:12:41 IST
+
+Package: ipmi_dev (2.64.0); urgency = medium
+
+Abstract:
+	Add Operational State support for SSI Compute Blade.
+
+Files Modified: data/IPMI_Main.h, data/IPMI_Sensor.h, data/PMConfig.h, data/SSIAccess.h, data/SSIDefs.h, data/SharedMem.h, data/WDT.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 05 Jul 2011 20:25:30 CST
+
+Package: ipmi_dev (2.63.0); urgency = medium
+
+Abstract:
+	Removed unwanted variables.
+
+Files Modified: data/IPMIConf.h, data/LANIfc.h, data/PendTask.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 29 Jun 2011 20:43:21 IST
+
+Package: ipmi_dev (2.62.0); urgency = low
+
+Abstract:
+	Added REBOOT macro
+
+Files Modified: data/PendTask.h
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 29 Jun 2011 17:01:39 IST
+
+Package: ipmi_dev (2.61.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+Files Modified: data/hal_defs.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 28 Jun 2011 17:26:43 CST
+
+Package: ipmi_dev (2.60.1); urgency = low
+
+Abstract:
+	Adding LPC uart rounting feature
+
+Files Modified: data/hal_defs.h, data/hal_hw.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 28 Jun 2011 15:08:43 CST
+
+Package: ipmi_dev (2.60.0); urgency = medium
+
+Abstract:
+	Modified the number of SessionLimit and ActiveSession.
+
+Files Modified: data/PMConfig.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 27 Jun 2011 10:48:54 CST
+
+Package: ipmi_dev (2.59.0); urgency = low
+
+Abstract:
+	Moving MAX_CIPHER_SUITES_BYTES to Ciphertable.h.
+
+Files Modified: data/Ciphertable.h, data/RMCP+.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 21 Jun 2011 14:04:05 IST
+
+Package: ipmi_dev (2.58.0); urgency = medium
+
+Abstract:
+	Changed the return value of coreAPI from unsigned int to int.because in all the API we return -1 in case of failure.
+
+Files Modified: data/API.h, data/AlertAPI.h, data/EventAPI.h, data/FRUAPI.h, data/MiscAPI.h, data/SELAPI.h
+
+--Submitter: akshay (akshayp@amiindia.co.in) Mon, 20 Jun 2011 13:46:42 IST
+
+Package: ipmi_dev (2.57.0); urgency = medium
+
+Abstract:
+	Declaring CmdHndlrMutex.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Sat, 18 Jun 2011 14:36:17 IST
+
+Package: ipmi_dev (2.56.0); urgency = medium
+
+Abstract:
+	Added comand number and structure for Set/Get preserve configuration
+
+Files Modified: data/AMIRestoreDefaults.h, data/IPMI_AMI.h, data/Support.h
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Fri, 17 Jun 2011 15:42:24 IST
+
+Package: ipmi_dev (2.55.0); urgency = medium
+
+Abstract:
+	Pend Task function for restarting services : Support macros
+
+Files Modified: data/PendTask.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 17 Jun 2011 10:59:18 IST
+
+Package: ipmi_dev (2.54.0); urgency = medium
+
+Abstract:
+	Add AMI Get/Set SEL Policy Commands support.
+
+Files Modified: data/AMIConf.h, data/IPMI_AMI.h, data/IPMI_AMIConf.h, data/Support.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Thu, 16 Jun 2011 15:08:57 EDT
+
+Package: ipmi_dev (2.53.0); urgency = medium
+
+Abstract:
+	Add SSI Commands for SSI Compute Blade support.
+
+Files Added: data/SSIDefs.h
+Files Modified: data/IPMIConf.h, data/IPMI_GroupExtn.h, data/SharedMem.h, data/Support.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Sat, 11 Jun 2011 21:58:45 EDT
+
+Package: ipmi_dev (2.52.0); urgency = medium
+
+Abstract:
+	Add Circular SEL support.
+
+Files Modified: data/IPMIConf.h, data/MsgHndlr.h, data/PMConfig.h, data/SEL.h, data/SELRecord.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Fri, 10 Jun 2011 19:31:59 EDT
+
+Package: ipmi_dev (2.51.0); urgency = high
+
+Abstract:
+	Update for DCMI V2
+
+Files Modified: data/IPMIDefs.h, data/IPMI_DCM.h
+
+--Submitter: Charles Lilly (charlesl@ami.com) Wed, 08 Jun 2011 17:23:12 EDT
+
+Package: ipmi_dev (2.50.0); urgency = low
+
+Abstract:
+	Added support for timeout completion code
+
+Files Modified: data/Message.h, data/MsgHndlr.h
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 06 Jun 2011 22:23:12 IST
+
+Package: ipmi_dev (2.49.0); urgency = low
+
+Abstract:
+	Update LICENSE.AMI
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Sat, 04 Jun 2011 04:37:16 CST
+
+Package: ipmi_dev (2.48.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:25:30 EDT
+
+Package: ipmi_dev (2.47.0); urgency = low
+
+Abstract:
+	Add new field "Session Handle." of Close Session Command
+
+Files Modified: data/IPMIDefs.h, data/IPMI_AppDevice.h, spx/LICENSES/LICENSE.AMI
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 03 Jun 2011 19:37:20 CST
+
+Package: ipmi_dev (2.46.0); urgency = low
+
+Abstract:
+	Function declaration to Post and Track Bridge Messages Internally
+
+Files Added: data/BridgeMsgAPI.h
+
+--Submitter: ManimehalaiS (manimehalais@amiindia.co.in) Wed, 01 Jun 2011 10:15:34 IST
+
+Package: ipmi_dev (2.45.0); urgency = medium
+
+Abstract:
+	Incrementing data size for Network Link speed.
+
+Files Modified: data/IPMI_LANConfig.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 30 May 2011 18:49:52 IST
+
+Package: ipmi_dev (2.44.0); urgency = medium
+
+Abstract:
+	Add SSI LAN Parameters support for SSI Compute Blade.
+
+Files Modified: data/IPMIConf.h, data/IPMI_LANConfig.h, data/LANConfig.h, data/PMConfig.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Wed, 18 May 2011 16:11:52 EDT
+
+Package: ipmi_dev (2.43.0); urgency = medium
+
+Abstract:
+	Add Event Forwarding support for SSI Compute Blade.
+
+Files Added: data/SSIAccess.h
+Files Modified: data/SharedMem.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 17 May 2011 20:05:37 EDT
+
+Package: ipmi_dev (2.42.0); urgency = medium
+
+Abstract:
+	Add completion code "CC_SESSION_IN_PROGRESS 0x82".
+
+Files Modified: data/IPMIDefs.h
+
+--Submitter: garypaung (garypaung@ami.com.tw) Tue, 17 May 2011 17:41:23 CST
+
+Package: ipmi_dev (2.41.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:26:58 EDT
+
+Package: ipmi_dev (2.40.0); urgency = low
+
+Abstract:
+	IPV6 Support for IPMI RMCP and RMCP+ Communication
+
+Files Modified: data/IPMI_AppDevice.h, data/IPMI_LANIfc.h, data/Message.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Fri, 13 May 2011 21:58:10 IST
+
+Package: ipmi_dev (2.39.0); urgency = medium
+
+Abstract:
+	modifying the structures for PAM re-ordering command
+
+Files Modified: data/AMIDevice.h, data/IPMI_AMIDevice.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 13 May 2011 14:30:13 IST
+
+Package: ipmi_dev (2.38.0); urgency = high
+
+Abstract:
+	SNMP updates for get/set user info
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 09:18:22 EDT
+
+Package: ipmi_dev (2.37.0); urgency = low
+
+Abstract:
+	Modifications done for SNMP related commands.
+
+Files Modified: data/AMIConf.h, data/IPMI_AMI.h, data/Support.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 12 May 2011 17:35:44 IST
+
+Package: ipmi_dev (2.36.0); urgency = high
+
+Abstract:
+	Made changes to support OPMA related commands.
+
+Files Modified: data/IPMIConf.h, data/IPMI_OPMA.h, data/PMConfig.h, data/SensorAPI.h, data/SensorMonitor.h, data/SharedMem.h, data/Support.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 May 2011 14:52:14 IST
+
+Package: ipmi_dev (2.35.0); urgency = medium
+
+Abstract:
+	Add SSI Boot Option Parameters support.
+
+Files Modified: data/IPMI_ChassisDevice.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Wed, 11 May 2011 19:53:46 EDT
+
+Package: ipmi_dev (2.34.0); urgency = low
+
+Abstract:
+	Included Trigger Event Configuration Macros
+
+Files Modified: data/IPMI_AMIDevice.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 11 May 2011 21:16:23 IST
+
+Package: ipmi_dev (2.33.0); urgency = low
+
+Abstract:
+	Added Completion code for invalid date and time
+
+Files Modified: data/IPMIDefs.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 11 May 2011 19:05:45 IST
+
+Package: ipmi_dev (2.32.0); urgency = low
+
+Abstract:
+	Moved halapi header file to halapi package
+
+Files Deleted: data/hal_api.h
+Files Modified: data/IPMIConf.h, data/ipmi_hal.h
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:54:41 IST
+
+Package: ipmi_dev (2.31.0); urgency = medium
+
+Abstract:
+	Adding the macro PEF_ACTION_SEN_SPECIFIC_OFFSET.
+
+Files Modified: data/IPMI_Sensor.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 10 May 2011 18:53:40 IST
+
+Package: ipmi_dev (2.30.0); urgency = low
+
+Abstract:
+	Removed adding audit log event to SEL from pend task
+
+Files Modified: data/PendTask.h
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 09 May 2011 17:58:00 IST
+
+Package: ipmi_dev (2.29.0); urgency = medium
+
+Abstract:
+	Fixed alignment trap issue.
+
+Files Modified: data/Session.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 05 May 2011 04:43:04 IST
+
+Package: ipmi_dev (2.28.0); urgency = medium
+
+Abstract:
+	Removing unwanted prototypes.
+
+Files Modified: data/NVRAccess.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 05 May 2011 00:49:41 IST
+
+Package: ipmi_dev (2.27.0); urgency = medium
+
+Abstract:
+	Fix to make flushing of IPMI Configurations to NVRAM faster.
+
+Files Modified: data/IPMIConf.h, data/IPMI_Main.h, data/NVRAccess.h, data/PMConfig.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 18:58:28 IST
+
+Package: ipmi_dev (2.26.0); urgency = low
+
+Abstract:
+	Removing network link type field from PHY configuration
+
+Files Modified: data/IPMI_LANConfig.h
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Mon, 02 May 2011 20:36:37 IST
+
+Package: ipmi_dev (2.25.0); urgency = low
+
+Abstract:
+	Adding AMI Copyrights.
+
+Files Modified: data/YafuStatus.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 29 Apr 2011 17:26:20 IST
+
+Package: ipmi_dev (2.24.0); urgency = low
+
+Abstract:
+	Implement ARP suspend function
+
+Files Modified: data/LANConfig.h, data/SharedMem.h, data/WDT.h
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Fri, 29 Apr 2011 18:00:23 CST
+
+Package: ipmi_dev (2.23.0); urgency = medium
+
+Abstract:
+	Adding PAM re-ordering Command Support
+
+Files Modified: data/AMIDevice.h, data/IPMIDefs.h, data/IPMI_AMI.h, data/Support.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 29 Apr 2011 12:24:10 EDT
+
+Package: ipmi_dev (2.22.0); urgency = medium
+
+Abstract:
+	Removing unwanted mutex variable.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 27 Apr 2011 21:17:23 IST
+
+Package: ipmi_dev (2.21.0); urgency = medium
+
+Abstract:
+	Removed the unwanted structure with no member in it inside AMISetLogConfReq_T structure.
+
+Files Modified: data/IPMI_AMISyslogConf.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 27 Apr 2011 17:01:44 IST
+
+Package: ipmi_dev (2.20.0); urgency = high
+
+Abstract:
+	Incremented the size of pipe name length from 20 t0 64 Bytes
+
+Files Modified: data/Message.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Apr 2011 21:11:51 IST
+
+Package: ipmi_dev (2.19.0); urgency = low
+
+Abstract:
+	Removed Multiple declaration of Macro EMAIL_FORMAT_SIZE
+
+Files Modified: data/IPMI_AMIResetPass.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 25 Apr 2011 12:26:38 IST
+
+Package: ipmi_dev (2.18.0); urgency = medium
+
+Abstract:
+	Adding the necessary handles needed to set and get I2C-Recovery to HAL_I2C_HANDLE structure.
+
+Files Modified: data/hal_hw.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 20 Apr 2011 18:34:14 IST
+
+Package: ipmi_dev (2.17.0); urgency = low
+
+Abstract:
+	Removing unwanted codes.
+
+Files Modified: data/SerialModem.h, data/Support.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 15:10:36 IST
+
+Package: ipmi_dev (2.16.0); urgency = medium
+
+Abstract:
+	Enable DeleteSELEntry and DeleteSDR.
+
+Files Modified: data/Support.h
+
+--Submitter:  () Thu, 14 Apr 2011 16:54:17 CST
+
+Package: ipmi_dev (2.15.0); urgency = medium
+
+Abstract:
+	Fix for ACPI.Removing unwanted function prototypes.
+
+Files Modified: data/Platform.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 12 Apr 2011 15:19:36 IST
+
+Package: ipmi_dev (2.14.0); urgency = medium
+
+Abstract:
+	Modified the datatype w.r.t 9587
+
+Files Modified: data/Iptables.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Apr 2011 21:47:48 IST
+
+Package: ipmi_dev (2.13.0); urgency = low
+
+Abstract:
+	Add the function "enable all fan"
+
+Files Modified: data/hal_hw.h
+
+--Submitter: terrychen (terrychen@ami.com.tw) Thu, 07 Apr 2011 20:40:21 CST
+
+Package: ipmi_dev (2.12.0); urgency = low
+
+Abstract:
+	Added login Audit configuration for RMCP and Web
+
+Files Modified: data/AMIDevice.h, data/IPMIConf.h, data/IPMI_AMI.h, data/IPMI_AMIDevice.h, data/NVRAccess.h, data/PMConfig.h, data/PendTask.h, data/RMCP.h, data/Session.h, data/Support.h
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 05 Apr 2011 17:44:41 IST
+
+Package: ipmi_dev (2.11.0); urgency = medium
+
+Abstract:
+	AMI command(AMIGetSolConf) added to get the SOL configuration.
+
+Files Modified: data/AMIDevice.h, data/IPMI_AMI.h, data/IPMI_AMIDevice.h, data/Support.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 05 Apr 2011 15:32:10 IST
+
+Package: ipmi_dev (2.10.0); urgency = medium
+
+Abstract:
+	Adding libipmi Services structures and prototypes
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 04 Apr 2011 15:12:56 IST
+
+Package: ipmi_dev (2.9.0); urgency = medium
+
+Abstract:
+	Added LPC Reset in Trigger Event Configuration
+
+Files Modified: data/IPMI_Main.h, data/PMConfig.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 01 Apr 2011 16:50:59 IST
+
+Package: ipmi_dev (2.8.0); urgency = low
+
+Abstract:
+	Added required structures and variables of sensor monitoring,SDR in the global BMCInfo Structure
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 29 Mar 2011 14:50:04 IST
+
+Package: ipmi_dev (2.7.0); urgency = medium
+
+Abstract:
+	Removed activeslave command and added parameter for activeslave.
+
+Files Modified: data/IPMIDefs.h, data/IPMI_AMI.h, data/IPMI_AMIConf.h, data/Support.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 28 Mar 2011 23:27:34 IST
+
+Package: ipmi_dev (2.6.0); urgency = low
+
+Abstract:
+	Declaring SeviceNameList as extern
+
+Files Modified: data/AMIConf.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 28 Mar 2011 15:20:01 IST
+
+Package: ipmi_dev (2.5.0); urgency = medium
+
+Abstract:
+	changing system reset function to API
+
+Files Modified: data/IPMIConf.h, data/SensorAPI.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 25 Mar 2011 18:34:22 IST
+
+Package: ipmi_dev (2.4.0); urgency = low
+
+Abstract:
+	add function 
+1 set_pwm_dutycycle
+2 get_pwm_dutycycle
+let PDK use it.
+
+Files Modified: data/hal_hw.h
+
+--Submitter: terrychen (terrychen@ami.com.tw) Fri, 25 Mar 2011 14:39:30 CST
+
+Package: ipmi_dev (2.3.0); urgency = medium
+
+Abstract:
+	Included the structures required for trigger event configuration feature
+
+Files Modified: data/AMIDevice.h, data/IPMIConf.h, data/IPMI_AMI.h, data/IPMI_AMIDevice.h, data/NVRAccess.h, data/PMConfig.h, data/Support.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 24 Mar 2011 19:37:54 IST
+
+Package: ipmi_dev (2.2.0); urgency = medium
+
+Abstract:
+	primary, secondary ipmb variable name changes.
+
+Files Modified: data/IPMBIfc.h, data/IPMIConf.h, data/IPMI_Main.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 24 Mar 2011 12:36:33 IST
+
+Package: ipmi_dev (2.1.0); urgency = low
+
+Abstract:
+	Minor changes.
+
+Files Modified: data/NVRAccess.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 21 Mar 2011 20:01:37 IST
+
+Package: ipmi_dev (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/IPMIConf.h, data/IfcSupport.h, data/MiscAPI.h, data/NVRAccess.h, data/NVRData.h, data/PMConfig.h, data/Sensor.h, data/Session.h, data/hal_api.h, data/ipmi_hal.h, data/migrate.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:06:31 IST
+
+Package: ipmi_dev (1.83.0); urgency = medium
+
+Abstract:
+	Added Error Completion code.
+
+Files Modified: data/IPMIDefs.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Mar 2011 19:30:52 IST
+
+Package: ipmi_dev (1.82.0); urgency = medium
+
+Abstract:
+	Fix to get SEL entries properly from NVRAM
+
+Files Modified: data/NVRAccess.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Mar 2011 15:09:02 IST
+
+Package: ipmi_dev (1.81.0); urgency = low
+
+Abstract:
+	Made changes so that PMConfigs will be stored in RAM seperately and no more clubbed with SEL and SDR
+
+Files Modified: data/IPMIConf.h, data/NVRAccess.h, data/NVRData.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Mar 2011 14:15:09 IST
+
+Package: ipmi_dev (1.80.0); urgency = low
+
+Abstract:
+	BMC Configuration related Function headers are included as a separate file
+
+Files Added: data/BMCInfo.h
+Files Modified: data/Ethaddr.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 01 Mar 2011 20:12:53 IST
+
+Package: ipmi_dev (1.79.0); urgency = medium
+
+Abstract:
+	Added mutex SMmutex to BMCInfo_T structure
+
+Files Modified: data/IPMIConf.h, data/SensorMonitor.h, data/ipmi_int.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 25 Feb 2011 21:27:37 IST
+
+Package: ipmi_dev (1.78.0); urgency = medium
+
+Abstract:
+	Change the macro OS_TIME_DELAY_HMHS for high precision timer by using usleep.
+
+Files Modified: data/OSPort.h
+
+--Submitter:  () Wed, 23 Feb 2011 14:56:44 CST
+
+Package: ipmi_dev (1.77.0); urgency = low
+
+Abstract:
+	Completion Codes for Bonding related commands.
+
+Files Modified: data/IPMIDefs.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 21 Feb 2011 14:53:49 IST
+
+Package: ipmi_dev (1.76.0); urgency = low
+
+Abstract:
+	Adding ThreadSyncMutex to BMCInfo_T structure.
+
+Files Modified: data/IPMIConf.h, data/IPMI_Main.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Feb 2011 01:04:40 IST
+
+Package: ipmi_dev (1.75.0); urgency = low
+
+Abstract:
+	Added definitions for OEM parameter macros
+
+Files Modified: data/LANConfig.h
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 16 Feb 2011 19:50:59 IST
+
+Package: ipmi_dev (1.74.0); urgency = low
+
+Abstract:
+	fd set is added in the global UDS Structure
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 16 Feb 2011 14:09:29 IST
+
+Package: ipmi_dev (1.73.0); urgency = medium
+
+Abstract:
+	Supporting Interrupt handler for SWC controller(PASS-THRU, PWBTIN, Power Good interrupts).
+
+Files Modified: data/ipmi_int.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 16 Feb 2011 11:09:17 IST
+
+Package: ipmi_dev (1.72.0); urgency = medium
+
+Abstract:
+	Added BOND TCP socket and moved g_ethindex into LANConfig.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 14 Feb 2011 21:25:52 IST
+
+Package: ipmi_dev (1.71.0); urgency = medium
+
+Abstract:
+	Added g_ethindex in BMCInfo table.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 10 Feb 2011 18:13:30 IST
+
+Package: ipmi_dev (1.70.0); urgency = low
+
+Abstract:
+	Including the phy structure only when phy support is seleced
+
+Files Modified: data/IPMI_LANConfig.h
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 09 Feb 2011 15:12:49 IST
+
+Package: ipmi_dev (1.69.0); urgency = high
+
+Abstract:
+	Added ActiveSlave Command.
+Changes done for Bonding Supprot.
+
+Files Modified: data/AMIConf.h, data/Ethaddr.h, data/IPMIConf.h, data/IPMIDefs.h, data/IPMI_AMI.h, data/IPMI_AMIConf.h, data/PendTask.h, data/Support.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Feb 2011 22:24:41 IST
+
+Package: ipmi_dev (1.68.0); urgency = high
+
+Abstract:
+	Changed SetRootPassword command password length to max 64 bytes
+
+Files Modified: data/IPMI_AMIDevice.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 08 Feb 2011 19:24:40 IST
+
+Package: ipmi_dev (1.67.0); urgency = medium
+
+Abstract:
+	Added macro for default mii interval value
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 04 Feb 2011 00:08:58 IST
+
+Package: ipmi_dev (1.66.0); urgency = high
+
+Abstract:
+	Modifications in Set/Get Ifacestate command structure.
+
+Files Modified: data/IPMI_AMIConf.h, data/PendTask.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 03 Feb 2011 15:24:59 IST
+
+Package: ipmi_dev (1.65.0); urgency = medium
+
+Abstract:
+	Added macros to handle UDS error
+
+Files Modified: data/UDSIfc.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 03 Feb 2011 11:45:58 IST
+
+Package: ipmi_dev (1.64.0); urgency = medium
+
+Abstract:
+	Adding Mutex to BMCInfo structure.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 02 Feb 2011 19:43:51 IST
+
+Package: ipmi_dev (1.63.0); urgency = medium
+
+Abstract:
+	Adding BMC Instance in prototypes related to APML.
+
+Files Modified: data/Apml.h, data/Apml_fdk.h, data/IPMIConf.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 01 Feb 2011 17:29:10 IST
+
+Package: ipmi_dev (1.62.0); urgency = medium
+
+Abstract:
+	Modifications in prototype for GetJiffySysCtlvalue function.
+
+Files Modified: data/Util.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 27 Jan 2011 17:16:21 IST
+
+Package: ipmi_dev (1.61.0); urgency = high
+
+Abstract:
+	Added new OEM commands SetUserShell and GetUserShelltype
+
+Files Modified: data/AMIDevice.h, data/IPMI_AMI.h, data/IPMI_AMIDevice.h, data/PMConfig.h, data/Support.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Wed, 26 Jan 2011 22:08:20 IST
+
+Package: ipmi_dev (1.60.0); urgency = low
+
+Abstract:
+	SMTP username and password length is to increased to 64 bytes
+
+Files Modified: data/IPMI_AMISmtp.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 26 Jan 2011 00:14:30 IST
+
+Package: ipmi_dev (1.59.0); urgency = low
+
+Abstract:
+	Added/modified  macros for SHA2 support
+
+Files Modified: data/IPMI_LANConfig.h, data/IPMI_RMCP+.h, data/RMCP+.h, data/RMCP.h, data/Session.h
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 25 Jan 2011 17:47:03 IST
+
+Package: ipmi_dev (1.58.0); urgency = medium
+
+Abstract:
+	UDS Monitor Queue is added to monitor any abrupt shutdown of client
+
+Files Modified: data/IPMIConf.h, data/IPMI_Main.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 24 Jan 2011 21:44:44 IST
+
+Package: ipmi_dev (1.57.0); urgency = medium
+
+Abstract:
+	Including macro to return proper error for Master Write-Read command
+
+Files Modified: data/AppDevice.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 19 Jan 2011 14:20:39 IST
+
+Package: ipmi_dev (1.56.0); urgency = medium
+
+Abstract:
+	Added support for power on and power reset delay in sensor monitoring.
+
+Files Modified: data/SensorMonitor.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 19 Jan 2011 11:09:55 IST
+
+Package: ipmi_dev (1.55.0); urgency = high
+
+Abstract:
+	Added function to get the BoardID.
+
+Files Modified: data/IPMIConf.h, data/Platform.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 18 Jan 2011 19:03:14 IST
+
+Package: ipmi_dev (1.54.0); urgency = medium
+
+Abstract:
+	Adding RearmSetSensorThreshold to IPMIConfigs_T structure.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 14 Jan 2011 11:16:48 IST
+
+Package: ipmi_dev (1.53.0); urgency = low
+
+Abstract:
+	Changing the data type of UDS Message Length,which can hold more than 256 bytes of size
+
+Files Modified: data/IPMIDefs.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 13 Jan 2011 15:05:34 IST
+
+Package: ipmi_dev (1.52.0); urgency = low
+
+Abstract:
+	DCMI Version 1.1 support
+
+Files Modified: data/DCMDevice.h, data/IPMI_DCM.h, data/IPMI_GroupExtn.h, data/Support.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 13 Jan 2011 16:26:13 CST
+
+Package: ipmi_dev (1.51.0); urgency = low
+
+Abstract:
+	Add the interrupt in the table.
+
+Files Modified: data/hal_hw.h
+
+--Submitter: terrychen (terrychen@ami.com.tw) Thu, 13 Jan 2011 15:25:08 CST
+
+Package: ipmi_dev (1.50.0); urgency = medium
+
+Abstract:
+	Modified Get/Set DNS configuration structure.
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 20:40:24 IST
+
+Package: ipmi_dev (1.49.0); urgency = low
+
+Abstract:
+	Added YAFU return Error code.
+
+Files Modified: data/YafuStatus.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 19:11:47 IST
+
+Package: ipmi_dev (1.48.0); urgency = medium
+
+Abstract:
+	Enabled GetSensorType command
+
+Files Modified: data/Support.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 03 Jan 2011 15:11:47 IST
+
+Package: ipmi_dev (1.47.0); urgency = medium
+
+Abstract:
+	Changed the trigger type and trigger method, because it is handled differently in gpio_hw.
+
+Files Modified: data/ipmi_int.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 27 Dec 2010 22:15:49 IST
+
+Package: ipmi_dev (1.46.0); urgency = medium
+
+Abstract:
+	duplicate ipmi users not allowed
+
+Files Modified: data/Session.h
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Fri, 24 Dec 2010 16:12:39 IST
+
+Package: ipmi_dev (1.45.0); urgency = low
+
+Abstract:
+	Added poweron_delay and sysreset_delay variables in sensor_properties_t structure
+
+Files Modified: data/SensorMonitor.h, data/hal_defs.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 24 Dec 2010 15:43:49 IST
+
+Package: ipmi_dev (1.44.0); urgency = high
+
+Abstract:
+	Added new OEM Command Completion Code for reserved user check
+
+Files Modified: data/IPMIDefs.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Fri, 24 Dec 2010 15:36:20 IST
+
+Package: ipmi_dev (1.43.0); urgency = low
+
+Abstract:
+	Added support to force network link modes(speed/duplex)
+
+Files Modified: data/IPMI_LANConfig.h
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 23 Dec 2010 16:57:47 IST
+
+Package: ipmi_dev (1.42.0); urgency = low
+
+Abstract:
+	Removing LvpQ
+
+Files Modified: data/IPMI_Main.h
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Thu, 23 Dec 2010 02:15:48 IST
+
+Package: ipmi_dev (1.41.0); urgency = low
+
+Abstract:
+	Adding LVP Queue
+
+Files Modified: data/IPMI_Main.h
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Fri, 17 Dec 2010 16:33:49 IST
+
+Package: ipmi_dev (1.40.0); urgency = low
+
+Abstract:
+	Added Secondary SMTP server support in Forgot Password of User and made code reusablilty.
+
+Files Modified: data/AMISmtp.h, data/IPMI_AMISmtp.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 17 Dec 2010 07:37:07 IST
+
+Package: ipmi_dev (1.39.0); urgency = medium
+
+Abstract:
+	Added necessary structures for WDT.
+
+Files Modified: data/IPMIConf.h, data/Util.h, data/WDT.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 16 Dec 2010 21:23:14 EST
+
+Package: ipmi_dev (1.38.0); urgency = high
+
+Abstract:
+	fixed libipmi issues for customfields in fru and memory allocation failures
+
+Files Modified: data/IPMI_FRU.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 16 Dec 2010 23:41:35 IST
+
+Package: ipmi_dev (1.37.0); urgency = high
+
+Abstract:
+	Added new AMI-OEM command Get linux root user access
+
+Files Modified: data/AMIDevice.h, data/IPMI_AMI.h, data/IPMI_AMIDevice.h, data/Support.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 16 Dec 2010 19:26:14 IST
+
+Package: ipmi_dev (1.36.0); urgency = high
+
+Abstract:
+	Added new IPMI OEM command to change linux root user password
+
+Files Modified: data/AMIDevice.h, data/IPMI_AMI.h, data/IPMI_AMIDevice.h, data/Support.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 13 Dec 2010 23:30:04 IST
+
+Package: ipmi_dev (1.35.0); urgency = low
+
+Abstract:
+	Removed OEM specific parameters and included the OEM header file which defines these parameters
+
+Files Modified: data/LANConfig.h
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 13 Dec 2010 15:53:16 IST
+
+Package: ipmi_dev (1.34.0); urgency = medium
+
+Abstract:
+	Added necessary structures for LAN Configuration using NCML.
+
+Files Modified: data/Ethaddr.h, data/IPMIConf.h, data/IPMI_AMIConf.h, data/IPMI_Main.h, data/LANIfc.h, data/SharedMem.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 10 Dec 2010 19:05:59 EST
+
+Package: ipmi_dev (1.33.0); urgency = low
+
+Abstract:
+	Suppor command
+1. Get Device SDR Info
+2. Get Device SDR
+3. Reserve Device SDR Repository
+
+Files Modified: data/Support.h
+
+--Submitter: terrychen (terrychen@ami.com.tw) Fri, 10 Dec 2010 18:18:56 CST
+
+Package: ipmi_dev (1.32.0); urgency = low
+
+Abstract:
+	Added Secondary SMTP server configuration.
+
+Files Modified: data/IPMI_AMISmtp.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Wed, 08 Dec 2010 21:57:51 IST
+
+Package: ipmi_dev (1.31.0); urgency = medium
+
+Abstract:
+	Modified POH Minutes per count to 60. (60 minutes for an hour)
+
+Files Modified: data/ChassisDevice.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 08 Dec 2010 22:27:46 GMT-5:30
+
+Package: ipmi_dev (1.30.0); urgency = high
+
+Abstract:
+	Redesigned UTCOffset configuration using IPMI command.
+
+Files Modified: data/IPMI_SEL.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 02 Dec 2010 20:24:02 IST
+
+Package: ipmi_dev (1.29.0); urgency = low
+
+Abstract:
+	Added Macros for PDK_PreAddSEL() return values
+
+Files Modified: data/SEL.h
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 02 Dec 2010 16:41:42 IST
+
+Package: ipmi_dev (1.28.0); urgency = low
+
+Abstract:
+	Code clean up for VLAN.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 01 Dec 2010 17:14:58 EST
+
+Package: ipmi_dev (1.27.0); urgency = low
+
+Abstract:
+	Fix can't reset "set in progress" parameter when a system reset or transition to powered down state occurs
+
+Files Modified: data/PMConfig.h, data/Platform.h, data/SharedMem.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 01 Dec 2010 20:10:06 CST
+
+Package: ipmi_dev (1.26.0); urgency = low
+
+Abstract:
+	Adding GetSelTime function
+
+Files Modified: data/SELAPI.h
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Wed, 24 Nov 2010 21:32:23 IST
+
+Package: ipmi_dev (1.25.0); urgency = medium
+
+Abstract:
+	Included BMCInst in GetSelTimeStamp funtion.
+
+Files Modified: data/SEL.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 23 Nov 2010 09:04:46 GMT-5:30
+
+Package: ipmi_dev (1.24.0); urgency = low
+
+Abstract:
+	This MAX_NUM_LAN_ALERT_DESTINATIONS macro is moved form webifc_XportDevice.c to IPMI_LANConfig.h
+
+Files Modified: data/IPMI_LANConfig.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Mon, 22 Nov 2010 14:42:18 IST
+
+Package: ipmi_dev (1.23.0); urgency = low
+
+Abstract:
+	Added Email formatting support For users, PEF email alert is configured using user ID  instead emailid and Added support to Attach a file to smtp email alert
+
+Files Modified: data/AMIResetPass.h, data/IPMIDefs.h, data/IPMI_AMI.h, data/IPMI_AMIResetPass.h, data/IPMI_AMISmtp.h, data/PMConfig.h, data/Support.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 19 Nov 2010 23:13:14 IST
+
+Package: ipmi_dev (1.22.0); urgency = medium
+
+Abstract:
+	Add core support for LPCRESET notification.
+
+Files Modified: data/IPMI_Main.h
+
+--Submitter: joywu (joywu) Fri, 12 Nov 2010 15:05:56 CST
+
+Package: ipmi_dev (1.21.0); urgency = medium
+
+Abstract:
+	Fix Watchdog countdown timer not accurate issue
+
+Files Modified: data/WDT.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 10 Nov 2010 11:16:39 CST
+
+Package: ipmi_dev (1.20.0); urgency = medium
+
+Abstract:
+	Removing related code for user sync with linux db
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Tue, 09 Nov 2010 17:57:21 IST
+
+Package: ipmi_dev (1.19.0); urgency = medium
+
+Abstract:
+	Fix Set User Access Command - Disable message issue
+
+Files Modified: data/IPMIDefs.h, data/PMConfig.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 28 Oct 2010 17:25:48 CST
+
+Package: ipmi_dev (1.18.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/MiscAPI.h, data/Platform.h, data/sp_porting.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:10:56 EDT
+
+Package: ipmi_dev (1.17.0); urgency = medium
+
+Abstract:
+	Chassistype type is changed
+
+Files Modified: data/IPMI_FRU.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 08 Oct 2010 12:14:32 EDT
+
+Package: ipmi_dev (1.16.0); urgency = medium
+
+Abstract:
+	Add support for NCSI configuration access by using interface name
+
+Files Modified: data/IPMI_LANConfig.h
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Tue, 05 Oct 2010 22:48:30 CST
+
+Package: ipmi_dev (1.15.0); urgency = medium
+
+Abstract:
+	Add support for commands regarding NCSI configuration access
+
+Files Modified: data/IPMI_LANConfig.h, data/LANConfig.h
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 04 Oct 2010 15:06:17 CST
+
+Package: ipmi_dev (1.14.0); urgency = medium
+
+Abstract:
+	Adding two fields EntityID and EntityIns to the OEM_FRURec_T structure
+
+Files Modified: data/IPMI_AMIDevice.h, data/IPMI_SDRRecord.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 29 Sep 2010 19:30:03 EDT
+
+Package: ipmi_dev (1.13.0); urgency = low
+
+Abstract:
+	Code cleanup to remove unwanted codes
+
+Files Modified: data/IfcSupport.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 28 Sep 2010 17:54:28 EDT
+
+Package: ipmi_dev (1.12.0); urgency = medium
+
+Abstract:
+	Changes done for preserving sensor thresholds when a warm reset is done
+
+Files Modified: data/IPMIConf.h, data/NVRAccess.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 28 Sep 2010 20:11:09 IST
+
+Package: ipmi_dev (1.11.0); urgency = medium
+
+Abstract:
+	Addition of structure and other macros for the AMI command AMIGetFruDetails.
+Changes in the structure in order to add the custom field in Chassis info, 
+Board info and product info of FRU.
+
+Files Modified: data/AMIDevice.h, data/IPMI_AMI.h, data/IPMI_AMIDevice.h, data/IPMI_FRU.h, data/Support.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 28 Sep 2010 05:43:49 EDT
+
+Package: ipmi_dev (1.10.0); urgency = medium
+
+Abstract:
+	Fix for OBF settings.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 22 Sep 2010 19:00:26 EDT
+
+Package: ipmi_dev (1.9.0); urgency = medium
+
+Abstract:
+	- Added IPMI command for Set/Get IPv6 network configurations. Includes DNS configurations too.
+
+Files Modified: data/IPMI_LANConfig.h, data/LANConfig.h, data/PMConfig.h, data/PendTask.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 22 Sep 2010 18:45:47 IST
+
+Package: ipmi_dev (1.8.0); urgency = low
+
+Abstract:
+	Changed the library name from library.so.1.0 to library.so as this was causing the sigsegv fault
+
+Files Modified: data/IfcSupport.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 22 Sep 2010 17:48:00 IST
+
+Package: ipmi_dev (1.7.0); urgency = medium
+
+Abstract:
+	The libraries that are to be loaded dynamically are referenced by "library.so" instead of "library.so.1.0"
+
+Files Modified: data/hal_hw.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 21 Sep 2010 19:06:38 EDT
+
+Package: ipmi_dev (1.6.0); urgency = medium
+
+Abstract:
+	Modified the alignment of SensorInfo structure to fix alignment trap issue, found while modifying the SensorReading in hal_api.c file.
+
+Files Modified: data/SensorMonitor.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 20 Sep 2010 20:50:22 IST
+
+Package: ipmi_dev (1.5.0); urgency = medium
+
+Abstract:
+	Implementing i2c_read_reg function.
+
+Files Modified: data/hal_hw.h
+
+--Submitter: Sridhar Ch (sridharch@amiindia.co.in) Mon, 20 Sep 2010 14:18:02 IST
+
+Package: ipmi_dev (1.4.0); urgency = low
+
+Abstract:
+	Add a Completion Code 0x84 which means the session sequence number is out-of-range
+
+Files Modified: data/IPMIDefs.h
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 20 Sep 2010 10:00:05 CST
+
+Package: ipmi_dev (1.3.0); urgency = low
+
+Abstract:
+	- Added support to allow the user to select the protocol type as tcp/udp while blockin/un-blocking ports.
+
+Files Modified: data/Iptables.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 17 Sep 2010 14:40:14 IST
+
+Package: ipmi_dev (1.2.0); urgency = medium
+
+Abstract:
+	Changed the Variable TCPSocket as array in LANConfig Structure
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 16 Sep 2010 19:29:27 IST
+
+Package: ipmi_dev (1.1.0); urgency = low
+
+Abstract:
+	Reordering OEM Commands
+
+Files Modified: data/IPMI_AMI.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Wed, 15 Sep 2010 13:00:35 IST
+
+Package: ipmi_dev (1.0.31); urgency = medium
+
+Abstract:
+	Added Node Manager Disovery Support
+
+Files Modified: data/IPMIConf.h, data/IPMI_SDRRecord.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 13 Sep 2010 11:47:25 IST
+
+Package: ipmi_dev (1.0.30); urgency = low
+
+Abstract:
+	- Added IS_BLOCK_ALL support in Get Firewall configuration command.
+
+Files Modified: data/IPMI_AMIConf.h, data/Iptables.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 08 Sep 2010 15:30:15 IST
+
+Package: ipmi_dev (1.0.29); urgency = medium
+
+Abstract:
+	Modified typedef to support 64-bit OS.
+
+Files Modified: data/IPMI_AMIDevice.h, data/IPMI_RMCP+.h, data/IPMI_RMCP.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 06 Sep 2010 18:51:29 IST
+
+Package: ipmi_dev (1.0.28); urgency = low
+
+Abstract:
+	- Allowing the user to select block/accept in the rule, while doing Set Cmd for Firewall. Also retrieving the same in Get Cmd.
+
+Files Modified: data/IPMI_AMIConf.h, data/Iptables.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 03 Sep 2010 18:12:19 IST
+
+Package: ipmi_dev (1.0.27); urgency = medium
+
+Abstract:
+	- Adding "Get" Command for Firewall configurations
+
+Files Modified: data/AMIConf.h, data/IPMI_AMI.h, data/IPMI_AMIConf.h, data/Iptables.h, data/Support.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 02 Sep 2010 20:18:50 IST
+
+Package: ipmi_dev (1.0.26); urgency = low
+
+Abstract:
+	Removed PDK,OEM Header Files and moved it to separate packages
+
+Files Deleted: data/OEM_NVR.h, data/OemCmdSupport.h, data/OemDefs.h, data/OemSMMCmds.h, data/PDKAccess.h, data/PDKAlert.h, data/PDKCmds.h, data/PDKDefs.h, data/PDKEEPROM.h, data/PDKFRU.h, data/PDKHW.h, data/PDKHooks.h, data/PDKInt.h, data/PDKSDR.h, data/PDKSEL.h, data/PDKSensor.h
+Files Modified: data/NVRAccess.h, data/NVRData.h, data/SDRRecord.h, data/SELRecord.h, data/ipmi_int.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:46:05 IST
+
+Package: ipmi_dev (1.0.25); urgency = medium
+
+Abstract:
+	Changes in array handling.
+
+Files Modified: data/MsgHndlr.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 01 Sep 2010 19:09:29 IST
+
+Package: ipmi_dev (1.0.24); urgency = low
+
+Abstract:
+	Add declarations regarding "Set MAC Address"
+
+Files Modified: data/IPMI_LANConfig.h, data/LANConfig.h, data/PendTask.h
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Tue, 31 Aug 2010 15:20:36 CST
+
+Package: ipmi_dev (1.0.23); urgency = medium
+
+Abstract:
+	* Done changes for firewall related configurations
+
+Files Added: data/Iptables.h
+Files Modified: data/AMIConf.h, data/IPMI_AMI.h, data/IPMI_AMIConf.h, data/Support.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 26 Aug 2010 17:43:29 IST
+
+Package: ipmi_dev (1.0.22); urgency = high
+
+Abstract:
+	Fix KCS interface will be closed after watchdog timeout issue
+
+Files Modified: data/Support.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 25 Aug 2010 21:05:58 CST
+
+Package: ipmi_dev (1.0.21); urgency = low
+
+Abstract:
+	Modified command numbers for set/get for IPv6 DNS configurations.
+
+Files Modified: data/IPMI_AMI.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 19 Aug 2010 23:25:14 IST
+
+Package: ipmi_dev (1.0.20); urgency = medium
+
+Abstract:
+	Adding AMI OEM command to get/set IPv6 DNS configurations
+
+Files Modified: data/AMIConf.h, data/IPMI_AMI.h, data/IPMI_AMIConf.h, data/Support.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 18 Aug 2010 21:54:32 IST
+
+Package: ipmi_dev (1.0.19); urgency = medium
+
+Abstract:
+	Added PDK_PreMonitorIndividualSensor hook to invoke for each sensor and for every monitor interval
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 18 Aug 2010 22:34:46 IST
+
+Package: ipmi_dev (1.0.18); urgency = low
+
+Abstract:
+	Bug :- LAN Interface is not loaded properly when there are two BMC Instances.
+Fix :- Moved the Global Variable which is used for VLAN Support to Global Structure BMCInfo_t.
+
+Files Modified: data/IPMIConf.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 17 Aug 2010 21:15:51 IST
+
+Package: ipmi_dev (1.0.17); urgency = low
+
+Abstract:
+	Modify Node manager function name defination
+
+Files Modified: data/Pnm.h, data/Support.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Mon, 16 Aug 2010 18:02:19 CST
+
+Package: ipmi_dev (1.0.16); urgency = low
+
+Abstract:
+	Adding Node Manager support features
+
+Files Added: data/Pnm.h
+Files Modified: data/PDKAccess.h, data/PDKHooks.h, data/Support.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Mon, 16 Aug 2010 09:49:59 CST
+
+Package: ipmi_dev (1.0.15); urgency = low
+
+Abstract:
+	Included the extern declaration of MsgHndlrTbl,TimerTaskTbl,GroupExtnMsgHndltTbl
+
+Files Modified: data/SharedMem.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 13 Aug 2010 18:00:41 IST
+
+Package: ipmi_dev (1.0.14); urgency = low
+
+Abstract:
+	Removed unused Commands and functions
+
+Files Modified: data/AMIDevice.h, data/IPMI_AMI.h, data/Support.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Thu, 12 Aug 2010 21:19:36 IST
+
+Package: ipmi_dev (1.0.13); urgency = medium
+
+Abstract:
+	Added Get Bios Code command (0x73) in AMI net function.
+
+Files Added: data/AMIBiosCode.h, data/IPMI_AMIBiosCode.h
+Files Modified: data/IPMI_AMI.h, data/Support.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 12 Aug 2010 18:14:36 IST
+
+Package: ipmi_dev (1.0.12); urgency = low
+
+Abstract:
+	Changed ASF IANA value as integer in RMCP ping request
+
+Files Modified: data/IPMI_RMCP.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Wed, 11 Aug 2010 19:59:40 IST
+
+Package: ipmi_dev (1.0.11); urgency = medium
+
+Abstract:
+	Added SDR pointer in the SensorInfo Structure, this will help SensorMonitor to point SDR.
+
+Files Modified: data/SensorMonitor.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 11 Aug 2010 22:32:22 IST
+
+Package: ipmi_dev (1.0.10); urgency = medium
+
+Abstract:
+	Added command number to get the interface status.
+Removed unwanted flag and added the neccessary structure.
+
+Files Modified: data/AMIConf.h, data/IPMI_AMI.h, data/IPMI_AMIConf.h, data/Support.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 10 Aug 2010 20:48:56 IST
+
+Package: ipmi_dev (1.0.9); urgency = low
+
+Abstract:
+	Added Macros to Support SOL Pay load size
+
+Files Modified: data/Support.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 09 Aug 2010 18:48:17 IST
+
+Package: ipmi_dev (1.0.8); urgency = low
+
+Abstract:
+	Commenting ExitSDRUpdate command as we support non modal means of SDR Updation.
+
+Files Modified: data/Support.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 09 Aug 2010 15:41:21 IST
+
+Package: ipmi_dev (1.0.7); urgency = low
+
+Abstract:
+	Changes for Initializing the Pre-monitor and Post Monitor hooks for sensors in ipmi_dev
+
+Files Added: data/PDKSensor.h
+Files Modified: data/PDKHooks.h, data/SensorMonitor.h
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Fri, 06 Aug 2010 20:58:15 IST
+
+Package: ipmi_dev (1.0.6); urgency = low
+
+Abstract:
+	Changes Done for starting lan interface along with other Interface Tasks
+
+Files Modified: data/IPMI_Main.h, data/NVRAccess.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 06 Aug 2010 17:42:31 IST
+
+Package: ipmi_dev (1.0.5); urgency = high
+
+Abstract:
+	Implementing KCS Non communication interrupt.
+
+Files Modified: data/IPMI_KCS.h, data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 05 Aug 2010 23:00:46 IST
+
+Package: ipmi_dev (1.0.4); urgency = medium
+
+Abstract:
+	Added Typedef for Interrrupt sensor handler and modified the macro from PDK_CHECKFORINT to PDK_GETINTINFO, which leads to some other meaning.
+
+Files Modified: data/PDKAccess.h, data/ipmi_int.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 05 Aug 2010 22:59:18 IST
+
+Package: ipmi_dev (1.0.3); urgency = low
+
+Abstract:
+	Removing AMISetSystemGUID command as the GUID is created while the IPMI stack is started.
+
+Files Modified: data/IPMI_AMI.h, data/IPMI_AMIDevice.h, data/Support.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 04 Aug 2010 19:14:40 IST
+
+Package: ipmi_dev (1.0.2); urgency = low
+
+Abstract:
+	Modified interface name to EthIndex in AMI Set Iface State Command
+
+Files Modified: data/IPMI_AMIConf.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 03 Aug 2010 13:17:43 CST
+
+Package: ipmi_dev (1.0.1); urgency = low
+
+Abstract:
+	MBMC Changes for ipmi_dev package
+
+Files Added: data/UDSIfc.h
+Files Modified: data/AMIConf.h, data/AMIDevice.h, data/AMIResetPass.h, data/AMIRestoreDefaults.h, data/AMISmtp.h, data/AMISyslogConf.h, data/API.h, data/AlertAPI.h, data/Apml.h, data/AppDevice+.h, data/AppDevice.h, data/Badpasswd.h, data/BridgeDiscovery.h, data/BridgeEvt.h, data/BridgeMgmt.h, data/Bridging.h, data/ChassisAPI.h, data/ChassisCtrl.h, data/ChassisDevice.h, data/DCMDevice.h, data/Ethaddr.h, data/EventAPI.h, data/Events.h, data/FFConfig.h, data/FRU.h, data/FRUAPI.h, data/Firewall.h, data/IPMDevice.h, data/IPMIConf.h, data/IPMIDefs.h, data/IPMI_AMIConf.h, data/IPMI_AMISmtp.h, data/IPMI_AMISyslogConf.h, data/IPMI_AppDevice.h, data/IPMI_DCM.h, data/IPMI_IPMB.h, data/IPMI_KCS.h, data/IPMI_LANConfig.h, data/IPMI_Main.h, data/IPMI_PEF.h, data/IPMI_RMCP+.h, data/IPMI_SDRRecord.h, data/IPMI_SEL.h, data/IfcSupport.h, data/Indicators.h, data/LANAlert.h, data/LANConfig.h, data/LANIfc.h, data/MD.h, data/Message.h, data/MiscAPI.h, data/MsgAPI.h, data/MsgHndlr.h, data/NVRAccess.h, data/NVRData.h, data/OPMA.h, data/OSPort.h, data/OemSMMCmds.h, data/PDKAlert.h, data/PDKCmds.h, data/PDKFRU.h, data/PDKHooks.h, data/PDKSDR.h, data/PDKSEL.h, data/PEF.h, data/PEFDevice.h, data/PEFTmr.h, data/PMConfig.h, data/PendTask.h, data/Platform.h, data/RMCP+.h, data/RMCP.h, data/SDR.h, data/SDRAPI.h, data/SDRFunc.h, data/SEL.h, data/SELAPI.h, data/SELRecord.h, data/SHA1.h, data/SOL.h, data/SOLBuf.h, data/SOLConfig.h, data/SOLRecv.h, data/SOLSend.h, data/SOLVars.h, data/Sensor.h, data/SensorAPI.h, data/SensorMonitor.h, data/Serial.h, data/SerialIfc.h, data/SerialModem.h, data/Session.h, data/SharedMem.h, data/Support.h, data/Terminal.h, data/YafuStatus.h, data/hal_api.h, data/hal_defs.h, data/internal_sensor.h, data/ipmi_hal.h, data/ipmi_int.h, data/migrate.h, data/types_linux.h, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:49:02 IST
+
+Package: ipmi_dev (1.0.0); urgency = new
+
+Abstract:
+	This Package contains IPMI include files used in IPMI stack
+
+Files Added: data, data/AES.h, data/AMI.h, data/AMIConf.h, data/AMIDevice.h, data/AMIResetPass.h, data/AMIRestoreDefaults.h, data/AMISmtp.h, data/AMISyslogConf.h, data/API.h, data/AlertAPI.h, data/Apml.h, data/Apml_fdk.h, data/App.h, data/AppDevice+.h, data/AppDevice.h, data/Badpasswd.h, data/Bridge.h, data/BridgeDiscovery.h, data/BridgeEvt.h, data/BridgeMgmt.h, data/Bridging.h, data/Chassis.h, data/ChassisAPI.h, data/ChassisCtrl.h, data/ChassisDevice.h, data/Ciphertable.h, data/DCMDevice.h, data/Debug.h, data/DeviceConfig.h, data/EEPROMAccess.h, data/Ethaddr.h, data/EventAPI.h, data/Events.h, data/ExtendedConfig.h, data/FFConfig.h, data/FRU.h, data/FRUAPI.h, data/FRURecord.h, data/Firewall.h, data/GUID.h, data/GroupExtn.h, data/HMAC.h, data/HWConfig.h, data/I2CAPI.h, data/IPMBIfc.h, data/IPMDevice.h, data/IPMIConf.h, data/IPMIDefs.h, data/IPMI_AMI.h, data/IPMI_AMIConf.h, data/IPMI_AMIDevice.h, data/IPMI_AMIResetPass.h, data/IPMI_AMISmtp.h, data/IPMI_AMISyslogConf.h, data/IPMI_App+.h, data/IPMI_App.h, data/IPMI_AppDevice+.h, data/IPMI_AppDevice.h, data/IPMI_BrDiscovery.h, data/IPMI_BrEvt.h, data/IPMI_BrMgmt.h, data/IPMI_Bridge.h, data/IPMI_Bridging.h, data/IPMI_Chassis.h, data/IPMI_ChassisDevice.h, data/IPMI_DCM.h, data/IPMI_DeviceConfig.h, data/IPMI_Events.h, data/IPMI_FRU.h, data/IPMI_Firewall.h, data/IPMI_GroupExtn.h, data/IPMI_IPM.h, data/IPMI_IPMB.h, data/IPMI_KCS.h, data/IPMI_LANConfig.h, data/IPMI_LANIfc.h, data/IPMI_Main.h, data/IPMI_OPMA.h, data/IPMI_PEF.h, data/IPMI_PICMG.h, data/IPMI_RMCP+.h, data/IPMI_RMCP.h, data/IPMI_SDR.h, data/IPMI_SDRRecord.h, data/IPMI_SEL.h, data/IPMI_SOLConfig.h, data/IPMI_Sensor.h, data/IPMI_SensorEvent.h, data/IPMI_SerialModem.h, data/IPMI_Storage.h, data/IfcSupport.h, data/Indicators.h, data/KCS.h, data/LANAlert.h, data/LANConfig.h, data/LANIfc.h, data/LEDMap.h, data/MD.h, data/Message.h, data/MiscAPI.h, data/MsgAPI.h, data/MsgHndlr.h, data/NVRAPI.h, data/NVRAccess.h, data/NVRData.h, data/OEM_NVR.h, data/OPMA.h, data/OSPort.h, data/OemCmdSupport.h, data/OemDefs.h, data/OemSMMCmds.h, data/PDKAccess.h, data/PDKAlert.h, data/PDKCmds.h, data/PDKDefs.h, data/PDKEEPROM.h, data/PDKFRU.h, data/PDKHW.h, data/PDKHooks.h, data/PDKInt.h, data/PDKSDR.h, data/PDKSEL.h, data/PEF.h, data/PEFDevice.h, data/PEFTmr.h, data/PMConfig.h, data/PendTask.h, data/Platform.h, data/RMCP+.h, data/RMCP.h, data/SDR.h, data/SDRAPI.h, data/SDRFunc.h, data/SDRRecord.h, data/SEL.h, data/SELAPI.h, data/SELRecord.h, data/SHA1.h, data/SOL.h, data/SOLBuf.h, data/SOLConfig.h, data/SOLRecv.h, data/SOLSend.h, data/SOLVars.h, data/Sensor.h, data/SensorAPI.h, data/SensorEvent.h, data/SensorMonitor.h, data/Serial.h, data/SerialIfc.h, data/SerialModem.h, data/Session.h, data/SharedMem.h, data/Storage.h, data/Support.h, data/Terminal.h, data/Util.h, data/WDT.h, data/YafuStatus.h, data/hal_api.h, data/hal_defs.h, data/hal_hw.h, data/hal_porting.h, data/internal_sensor.h, data/ipmi_hal.h, data/ipmi_int.h, data/lanchcfg.h, data/migrate.h, data/pmcfg.h, data/porting_w32.h, data/scsi_to_host.h, data/sp_porting.h, data/types_cmn.h, data/types_linux.h, data/types_w32.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/ipmi_dev, spx/PACKAGES.D/ipmi_dev/DATA, spx/PACKAGES.D/ipmi_dev/SCRIPTS, spx/PACKAGES.D/ipmi_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 26 Jul 2010 17:22:04 EDT
+

@@ -1,0 +1,20 @@
+Package : usb1_hw_1_6_0_1_200772_KVMMouseKeyboardNotWork
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Section : patch
+Config-Tag : Patch 1 for usb1_hw (1.6.0)
+Depends :  usb1_hw(==1.6.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  Neal Chen (nealchen@ami.com.tw)
+Urgency : new
+Description : for EIP 200772, RKVM keyboard and mouse does not work in Windows2012R2
+.
+

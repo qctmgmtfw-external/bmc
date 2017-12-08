@@ -1,0 +1,21 @@
+Package : libipmimsghndlr_2_159_0_20_84131_AddAutoConfigurationInterfaces
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 20 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 20
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  thinkjao (thinkjao@ami.com.tw)
+Urgency : new
+Description : Add configure interfaces in service configuration automatically.
+If Auto configuration is enabled, then all the services will be restarted automatically.
+.
+

@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/lpcuart
+	MKDIR_NOCLEAN %SPXINC/lpcuart
+	COPY_FILE ./lpcuartifc.h %SPXINC/lpcuart
+	COPY_FILE ./liblpcuart.a %SPXLIB/lpcuart
+	COPY_FILE ./liblpcuart.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/lpcuart
+	ADD_LIBRARY_LINKS %SPXLIB/lpcuart liblpcuart.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

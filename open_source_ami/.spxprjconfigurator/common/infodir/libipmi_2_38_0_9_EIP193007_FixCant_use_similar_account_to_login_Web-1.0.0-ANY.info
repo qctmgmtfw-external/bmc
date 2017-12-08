@@ -1,0 +1,19 @@
+Package : libipmi_2_38_0_9_EIP193007_FixCant_use_similar_account_to_login_Web
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Section : patch
+Config-Tag : Patch 9 for libipmi (2.38.0)
+Depends :  libipmi(==2.38.0)
+PatchOrder : 9
+Essential : NO
+Group : PATCH
+Owner : AMI
+License : AMI
+Architecture : ANY
+Maintainer :  thinkjao (thinkjao@ami.com.tw)
+Urgency : new
+Description : Fixed can't use the similar account to login WebUI.
+.
+

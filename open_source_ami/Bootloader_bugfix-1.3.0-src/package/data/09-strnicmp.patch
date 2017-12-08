@@ -1,0 +1,24 @@
+diff -Naur u-boot-1.1.6/include/linux/string.h u-boot-1.1.6.org/include/linux/string.h
+--- u-boot-1.1.6/include/linux/string.h	2006-11-02 09:15:01.000000000 -0500
++++ u-boot-1.1.6.org/include/linux/string.h	2008-08-29 16:04:59.896732311 -0400
+@@ -38,7 +38,7 @@
+ #ifndef __HAVE_ARCH_STRNCMP
+ extern int strncmp(const char *,const char *,__kernel_size_t);
+ #endif
+-#if 0 /* not used - was: #ifndef __HAVE_ARCH_STRNICMP */
++#ifndef __HAVE_ARCH_STRNICMP 
+ extern int strnicmp(const char *, const char *, __kernel_size_t);
+ #endif
+ #ifndef __HAVE_ARCH_STRCHR
+diff -Naur u-boot-1.1.6/lib_generic/string.c u-boot-1.1.6.org/lib_generic/string.c
+--- u-boot-1.1.6/lib_generic/string.c	2006-11-02 09:15:01.000000000 -0500
++++ u-boot-1.1.6.org/lib_generic/string.c	2008-08-29 16:06:13.714740816 -0400
+@@ -21,7 +21,7 @@
+ #include <malloc.h>
+ 
+ 
+-#if 0 /* not used - was: #ifndef __HAVE_ARCH_STRNICMP */
++#ifndef __HAVE_ARCH_STRNICMP 
+ /**
+  * strnicmp - Case insensitive, length-limited string comparison
+  * @s1: One string

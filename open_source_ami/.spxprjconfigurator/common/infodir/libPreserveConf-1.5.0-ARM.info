@@ -1,0 +1,16 @@
+Package : libPreserveConf
+Non-Editable : YES
+Version : 1.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Prakash S  (prakashs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Group : LIBRARY
+Package-License : AMI
+Description : This package provides preserve Configuration API's. These API's have the ability to manipulate the INI files
+.

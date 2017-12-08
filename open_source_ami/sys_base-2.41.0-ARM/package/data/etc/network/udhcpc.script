@@ -1,0 +1,94 @@
+#!/bin/sh
+
+# udhcpc script edited by Tim Riker <Tim@Rikers.org>
+
+IFACE=$interface
+
+. /conf/dns.conf
+. /etc/nwhelperapi.sh
+
+[ -z "$1" ] && echo "Error: should be called from udhcpc" && exit 1
+
+RESOLV_CONF="/conf/resolv.conf"
+NTP_CONF="/conf/ntp.conf"
+[ -n "$broadcast" ] && BROADCAST="broadcast $broadcast"
+[ -n "$subnet" ] && NETMASK="netmask $subnet"
+
+#[ -n "$ntpsrv" ] && NTPSRV="ntp $ntpsrv"
+#echo $NTPSRV
+
+
+case "$1" in
+	deconfig)
+		/sbin/ifconfig $interface 0.0.0.0
+		;;
+
+	renew|bound)
+		/sbin/ifconfig $interface $ip $BROADCAST $NETMASK
+		echo "Address   : " $ip
+		echo "Netmask   : " $subnet
+		if [ -n "$router" ] ; then
+			echo "deleting routers"
+			while route del default gw 0.0.0.0 dev $interface 2>/dev/null ; do
+				:
+			done
+
+			metric=0
+			for i in $router ; do
+				echo "Router    : " $i
+				route add default gw $i dev $interface metric $((metric++))
+			done
+		fi
+        echo $ip > /conf/dhcp.preip_4
+
+#		echo -n > $RESOLV_CONF
+#		[ -n "$domain" ] && echo search $domain >> $RESOLV_CONF
+#	        [ -n "$domain" ] && echo "Domain    : " $domain
+#		for i in $dns ; do
+#			echo "DnsServer : " $i
+#			echo nameserver $i >> $RESOLV_CONF
+#		done
+#		;;
+
+                INTERFACE=$interface #set the interface to whatever interface we are at
+#		getdnsvars #source the configuration from dhcpc-config
+
+                if [ "$SET_DOMAIN" == 'yes' -o "$SET_DOMAIN" == 'y' ]; then
+		    [ -n "$domain" ] && AddDNSDomainName $domain
+		    [ -n "$domain" ] && echo "Domain    : " $domain
+		else
+		    echo "SET_DOMAIN is not true and it is $SET_DOMAIN"
+		fi
+
+        	if [ "$SET_DNS" == 'yes' -o "$SET_DNS" == 'y' ]; then
+		    cnt=0
+		    ONE=1    
+		    for i in $dns ; do
+				cnt=$(($cnt+$ONE))
+				#echo "Count -- $cnt"		    
+				echo "DnsServer : " $i
+				#AddDNSServerIP $i				#This API is replaced with the new API for overwriting problems.
+				AddDNSServerIP_New $i $cnt				
+				if [ "$SET_IPV6_PRIORITY" == 'yes' -o "$SET_IPV6_PRIORITY" == 'y' ]; then
+					break
+				fi
+		    done
+		else
+		    echo "SET_DNS is false and it is $SET_DNS"
+		fi
+
+#		echo "Came to ntp part.......!"
+		if [ -n "$ntpsrv" ] ; then
+			echo "ntpsrv : $ntpsrv"         
+			AddNTPServerName $ntpsrv
+		else
+			echo "No NTP support"
+		fi
+
+		#echo -n > $NTP_CONF
+		#[ -n "$ntpsrv" ] && echo server $ntpsrv >> $NTP_CONF
+
+                ;;
+esac
+
+exit 0

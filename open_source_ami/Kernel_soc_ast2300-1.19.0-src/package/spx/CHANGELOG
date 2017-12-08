@@ -1,0 +1,250 @@
+Package: Kernel_soc_ast2300 (1.19.0); urgency = medium
+
+Abstract:
+	Added 1000Mbps support for ethtool get/set setting functions.
+
+Files Modified: data/04-drivers_net_arm_ast_ether.c, data/05-drivers_net_arm_ast_ether.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 17 Aug 2011 18:42:51 CST
+
+Package: Kernel_soc_ast2300 (1.18.0); urgency = high
+
+Abstract:
+	Added Macronix 32MB "MX25L25735E" flash part support
+
+Files Modified: data/25-drivers_mtd_spichips_astspi.c
+
+--Submitter: royku (royku@ami.com.tw) Wed, 06 Jul 2011 13:37:01 CST
+
+Package: Kernel_soc_ast2300 (1.17.0); urgency = medium
+
+Abstract:
+	Setting BMCR_RESET register before changing the speed and duplex.
+
+Files Modified: data/04-drivers_net_arm_ast_ether.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 07 Jun 2011 15:33:04 IST
+
+Package: Kernel_soc_ast2300 (1.16.0); urgency = low
+
+Abstract:
+	Correct file name and few definitions from ast2050 to ast2300
+
+Files Added: data/01-arch_arm_soc-ast2300_ast2300-irq.c, data/02-arch_arm_soc-ast2300_ast2300-time.c, data/16-arch_arm_include_asm_soc-ast2300_entry-macro.S, data/17-arch_arm_include_asm_soc-ast2300_hwdef.h, data/18-arch_arm_include_asm_soc-ast2300_hwmap.h, data/19-arch_arm_include_asm_soc-ast2300_hwreg.h, data/20-arch_arm_include_asm_soc-ast2300_io.h, data/21-arch_arm_include_asm_soc-ast2300_lowlevel_serial.h, data/22-arch_arm_include_asm_soc-ast2300_serial.h, data/24-arch_arm_include_asm_soc-ast2300_system.h
+Files Deleted: data/01-arch_arm_soc-ast2050_ast2050-irq.c, data/02-arch_arm_soc-ast2050_ast2050-time.c, data/16-arch_arm_include_asm_soc-ast2050_entry-macro.S, data/17-arch_arm_include_asm_soc-ast2050_hwdef.h, data/18-arch_arm_include_asm_soc-ast2050_hwmap.h, data/19-arch_arm_include_asm_soc-ast2050_hwreg.h, data/20-arch_arm_include_asm_soc-ast2050_io.h, data/21-arch_arm_include_asm_soc-ast2050_lowlevel_serial.h, data/22-arch_arm_include_asm_soc-ast2050_serial.h, data/24-arch_arm_include_asm_soc-ast2050_system.h
+Files Modified: data/35-drivers_video_Kconfig
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 27 May 2011 13:14:34 CST
+
+Package: Kernel_soc_ast2300 (1.15.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:39:18 EDT
+
+Package: Kernel_soc_ast2300 (1.14.0); urgency = medium
+
+Abstract:
+	Fixed the error string
+
+Files Modified: data/33-drivers_video_ast_Makefile, data/34-drivers_video_Makefile
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 02 May 2011 10:45:11 CST
+
+Package: Kernel_soc_ast2300 (1.13.0); urgency = high
+
+Abstract:
+	The framebuffer cannot be loaded by kernel if the feature is not selected by PRJ.
+
+It waste too many memory, and lead to videocap get problem.
+
+Files Modified: data/33-drivers_video_ast_Makefile, data/34-drivers_video_Makefile
+
+--Submitter:  () Tue, 26 Apr 2011 19:30:54 CST
+
+Package: Kernel_soc_ast2300 (1.12.0); urgency = medium
+
+Abstract:
+	Link status is now reported only when there's a change.
+
+Files Modified: data/04-drivers_net_arm_ast_ether.c, data/05-drivers_net_arm_ast_ether.h
+
+--Submitter:  () Wed, 20 Apr 2011 14:01:07 CST
+
+Package: Kernel_soc_ast2300 (1.11.0); urgency = low
+
+Abstract:
+	Added Link Status Change netification from network driver. SPX netmon driver will be notified for link up and link down which can notify applications
+
+Files Modified: data/04-drivers_net_arm_ast_ether.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 30 Mar 2011 14:01:58 CST
+
+Package: Kernel_soc_ast2300 (1.10.0); urgency = medium
+
+Abstract:
+	Add USB host controller support.
+
+Files Added: data/36-drivers_usb_host_uchi-ast_uhci-hcd.c, data/37-drivers_usb_host_uchi-ast_uhci-hcd.h, data/38-drivers_usb_host_uchi-ast_uhci-hub.c, data/39-drivers_usb_host_uchi-ast_uhci-q.c, data/40-drivers_usb_host_uchi-ast_uhci-debug.c, data/41-drivers_usb_host_uchi-ast_Makefile, data/42-drivers_usb_host_Makefile, data/43-drivers_usb_host_Kconfig, data/44-drivers_usb_Makefile
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 21 Mar 2011 14:13:26 CST
+
+Package: Kernel_soc_ast2300 (1.9.0); urgency = medium
+
+Abstract:
+	Fix clock.
+
+Files Modified: data/25-drivers_mtd_spichips_astspi.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 17 Mar 2011 18:10:31 CST
+
+Package: Kernel_soc_ast2300 (1.8.0); urgency = medium
+
+Abstract:
+	Fix clock problem.
+
+Files Modified: data/25-drivers_mtd_spichips_astspi.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 17 Mar 2011 15:23:19 CST
+
+Package: Kernel_soc_ast2300 (1.7.0); urgency = medium
+
+Abstract:
+	Add frame buffer driver.
+
+Files Added: data/28-drivers_video_ast_ast_fb.c, data/29-drivers_video_ast_ast_fb.h, data/30-drivers_video_ast_ast_fb_ioctl.h, data/31-drivers_video_ast_ast_fb_mode.c, data/32-drivers_video_ast_ast_fb_mode.h, data/33-drivers_video_ast_Makefile, data/34-drivers_video_Makefile, data/35-drivers_video_Kconfig
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 25 Feb 2011 15:51:41 CST
+
+Package: Kernel_soc_ast2300 (1.6.0); urgency = high
+
+Abstract:
+	Modify entry-macro.S, hwreg.h and hwmap.h to support irqs after 32 in ast2300
+
+Files Modified: data/16-arch_arm_include_asm_soc-ast2050_entry-macro.S, data/18-arch_arm_include_asm_soc-ast2050_hwmap.h, data/19-arch_arm_include_asm_soc-ast2050_hwreg.h
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Wed, 22 Dec 2010 15:10:06 CST
+
+Package: Kernel_soc_ast2300 (1.5.0); urgency = medium
+
+Abstract:
+	Add new PHY support.
+
+Files Modified: data/04-drivers_net_arm_ast_ether.c, data/05-drivers_net_arm_ast_ether.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 03 Dec 2010 11:40:30 CST
+
+Package: Kernel_soc_ast2300 (1.4.0); urgency = medium
+
+Abstract:
+	Move NAND flash related patches to stand alone package.
+
+Files Deleted: data/31-drivers_mtd_nand_ast_nand.c, data/32-drivers_mtd_nand_Makefile, data/33-drivers_mtd_nand_Kconfig
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 15 Nov 2010 15:23:44 CST
+
+Package: Kernel_soc_ast2300 (1.3.0); urgency = medium
+
+Abstract:
+	Remove SDHC patch.
+
+Files Deleted: data/30-drivers_mmc_host_sdhci.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 27 Oct 2010 18:44:02 CST
+
+Package: Kernel_soc_ast2300 (1.2.0); urgency = high
+
+Abstract:
+	Move resource allocation from open operation to initialization.
+
+Files Modified: data/04-drivers_net_arm_ast_ether.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 07 Oct 2010 16:42:27 CST
+
+Package: Kernel_soc_ast2300 (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:51:35 EDT
+
+Package: Kernel_soc_ast2300 (1.0.7); urgency = medium
+
+Abstract:
+	Remove VUART.
+Sync Ethernet driver with AST2050/AST2150.
+
+Files Deleted: data/23-arch_arm_include_asm_soc-ast2050_serreg.h, data/28-drivers_serial_vuart.h, data/29-drivers_serial_Kconfig
+Files Modified: data/04-drivers_net_arm_ast_ether.c, data/06-drivers_serial_8250.c, data/08-arch_arm_include_asm_soc-ast_debug-macro.S, data/14-arch_arm_include_asm_soc-ast_uncompress.h, data/21-arch_arm_include_asm_soc-ast2050_lowlevel_serial.h, data/22-arch_arm_include_asm_soc-ast2050_serial.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 27 Aug 2010 14:31:53 CST
+
+Package: Kernel_soc_ast2300 (1.0.6); urgency = medium
+
+Abstract:
+	Add NAND flash support.
+
+Files Added: data/31-drivers_mtd_nand_ast_nand.c, data/32-drivers_mtd_nand_Makefile, data/33-drivers_mtd_nand_Kconfig
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 27 Aug 2010 11:19:50 CST
+
+Package: Kernel_soc_ast2300 (1.0.5); urgency = medium
+
+Abstract:
+	Support new PHY and clean up.
+
+Files Added: data/04-drivers_net_arm_ast_ether.c, data/05-drivers_net_arm_ast_ether.h
+Files Deleted: data/04-drivers_net_arm_astmac100.c, data/05-drivers_net_arm_astmac100.h
+Files Modified: data/03-drivers_net_arm_Makefile
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 10 Aug 2010 18:10:03 CST
+
+Package: Kernel_soc_ast2300 (1.0.4); urgency = low
+
+Abstract:
+	Fixed that the targets of patches which are set as absolute path will block build process on Ubuntu 10.4.
+
+Files Modified: data/04-drivers_net_arm_astmac100.c, data/05-drivers_net_arm_astmac100.h, data/06-drivers_serial_8250.c, data/17-arch_arm_include_asm_soc-ast2050_hwdef.h, data/18-arch_arm_include_asm_soc-ast2050_hwmap.h, data/22-arch_arm_include_asm_soc-ast2050_serial.h, data/29-drivers_serial_Kconfig
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Wed, 21 Jul 2010 16:26:06 CST
+
+Package: Kernel_soc_ast2300 (1.0.3); urgency = medium
+
+Abstract:
+	Add SDHC support.
+
+Files Added: data/30-drivers_mmc_host_sdhci.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 16 Jul 2010 17:49:59 CST
+
+Package: Kernel_soc_ast2300 (1.0.2); urgency = high
+
+Abstract:
+	Change clock definitions for AST2300.
+
+Files Modified: data/25-drivers_mtd_spichips_astspi.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 06 Jul 2010 16:17:53 CST
+
+Package: Kernel_soc_ast2300 (1.0.1); urgency = medium
+
+Abstract:
+	PHY status change interrupt has to be disabled in AST2300 when it is not used.
+
+Files Modified: data/04-drivers_net_arm_astmac100.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 01 Jul 2010 19:53:59 CST
+
+Package: Kernel_soc_ast2300 (1.0.0); urgency = new
+
+Abstract:
+	AST2300 SOC Fixes to Kernel 2.6.28.10
+
+Files Added: data, data/01-arch_arm_soc-ast2050_ast2050-irq.c, data/02-arch_arm_soc-ast2050_ast2050-time.c, data/03-drivers_net_arm_Makefile, data/04-drivers_net_arm_astmac100.c, data/05-drivers_net_arm_astmac100.h, data/06-drivers_serial_8250.c, data/07-include_asm_soc-ast_bits.h, data/08-arch_arm_include_asm_soc-ast_debug-macro.S, data/09-arch_arm_include_asm_soc-ast_dma.h, data/10-arch_arm_include_asm_soc-ast_irqs.h, data/11-arch_arm_include_asm_soc-ast_memory.h, data/12-arch_arm_include_asm_soc-ast_param.h, data/13-arch_arm_include_asm_soc-ast_timex.h, data/14-arch_arm_include_asm_soc-ast_uncompress.h, data/15-arch_arm_include_asm_soc-ast_vmalloc.h, data/16-arch_arm_include_asm_soc-ast2050_entry-macro.S, data/17-arch_arm_include_asm_soc-ast2050_hwdef.h, data/18-arch_arm_include_asm_soc-ast2050_hwmap.h, data/19-arch_arm_include_asm_soc-ast2050_hwreg.h, data/20-arch_arm_include_asm_soc-ast2050_io.h, data/21-arch_arm_include_asm_soc-ast2050_lowlevel_serial.h, data/22-arch_arm_include_asm_soc-ast2050_serial.h, data/23-arch_arm_include_asm_soc-ast2050_serreg.h, data/24-arch_arm_include_asm_soc-ast2050_system.h, data/25-drivers_mtd_spichips_astspi.c, data/26-drivers_mtd_spichips_Makefile, data/27-drivers_mtd_spichips_Kconfig, data/28-drivers_serial_vuart.h, data/29-drivers_serial_Kconfig, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/@Kernel_soc_ast2300, spx/PACKAGES.D/@Kernel_soc_ast2300/DATA, spx/PACKAGES.D/@Kernel_soc_ast2300/SCRIPTS, spx/PACKAGES.D/@Kernel_soc_ast2300/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/ApplyPatch
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 27 May 2010 17:58:39 CST
+

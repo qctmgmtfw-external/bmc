@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_9_lighttpdrestartfix (1.0.0); urgency = new
+
+Abstract:
+	Changes made to restart lighttpd properly during web service restarting.
+
+Files Added: data, data/00-data_PendTask.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 16 Sep 2011 18:40:13 IST
+

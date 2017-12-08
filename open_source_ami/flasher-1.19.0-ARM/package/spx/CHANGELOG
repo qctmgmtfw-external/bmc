@@ -1,0 +1,327 @@
+Package: flasher (1.19.0); urgency = low
+
+Abstract:
+	Flasher changes for Dual Image Feature
+
+Files Modified: data/Makefile, data/main.c, data/utils.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Sat, 20 Aug 2011 00:26:16 TLT
+
+Package: flasher (1.18.0); urgency = medium
+
+Abstract:
+	adding aux version also as part of image version in flasher
+
+Files Modified: data/utils.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 11 Aug 2011 14:19:54 IST
+
+Package: flasher (1.17.0); urgency = medium
+
+Abstract:
+	Call preservecfg binary, when the firmware supports Preserve Configuration feature
+
+Files Modified: data/cpConf, data/utils.c
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Thu, 14 Jul 2011 19:05:05 IST
+
+Package: flasher (1.16.0); urgency = medium
+
+Abstract:
+	Made changes to pass the error code to libflas,h instead of exiting from flasher.
+
+Files Modified: data/main.c, data/utils.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 26 May 2011 09:25:16 EDT
+
+Package: flasher (1.15.0); urgency = medium
+
+Abstract:
+	In case of SignImage,NewImageSize is updated to file size excluding the appended encrypted hash
+
+Files Modified: data/utils.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 16 May 2011 16:01:54 IST
+
+Package: flasher (1.14.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:13:36 EDT
+
+Package: flasher (1.13.0); urgency = medium
+
+Abstract:
+	Added support to flush IPMI Configurations from DAT file to corresponding INI files in prepareflasharea.
+
+Files Modified: data/utils.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 19:05:14 IST
+
+Package: flasher (1.12.0); urgency = medium
+
+Abstract:
+	Added support for preseve/dont preseve SDR
+
+Files Modified: data/cpConf
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Tue, 19 Apr 2011 00:15:00 IST
+
+Package: flasher (1.11.0); urgency = medium
+
+Abstract:
+	separting err code for pubkey decryption failure and pubkey upload failure
+
+Files Modified: data/utils.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Wed, 13 Apr 2011 22:12:08 IST
+
+Package: flasher (1.10.0); urgency = high
+
+Abstract:
+	fixing build error
+
+Files Modified: data/utils.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 11 Apr 2011 23:35:04 IST
+
+Package: flasher (1.9.0); urgency = medium
+
+Abstract:
+	returning errcode when public key decryption fails for SignImage
+
+Files Modified: data/utils.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 11 Apr 2011 13:14:26 IST
+
+Package: flasher (1.8.0); urgency = low
+
+Abstract:
+	Removing ipmimain from depends due to circular dependancy.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 25 Feb 2011 11:01:14 IST
+
+Package: flasher (1.7.0); urgency = medium
+
+Abstract:
+	Fixed Build Dependency.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 12 Jan 2011 15:03:21 IST
+
+Package: flasher (1.6.0); urgency = medium
+
+Abstract:
+	Changed PrepareFlashArea into generic function.
+Removed unwanted code.
+
+Files Modified: data/main.c, data/utils.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 19:02:47 IST
+
+Package: flasher (1.5.0); urgency = low
+
+Abstract:
+	Grouped the packages along with FEATURES configuration instead of IPMI configuration
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 07 Jan 2011 17:20:25 EST
+
+Package: flasher (1.4.0); urgency = medium
+
+Abstract:
+	Included -a option to copy all the files with preserve options. This is usefull in F/W update with preserve configuration.
+
+Files Modified: data/cpConf
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 05 Jan 2011 20:21:23 IST
+
+Package: flasher (1.3.0); urgency = high
+
+Abstract:
+	web based firmware upgrade issue is fixed. Preserve configuration is applied on bkacup conf, if existing
+
+Files Modified: data/mkMiniMe, data/utils.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 06 Oct 2010 16:14:20 EDT
+
+Package: flasher (1.2.0); urgency = medium
+
+Abstract:
+	Moved macros from utils.c to flashlib.h, those macros are used in libifc layer
+
+Files Modified: data/utils.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Sun, 03 Oct 2010 10:44:29 IST
+
+Package: flasher (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:43:33 EDT
+
+Package: flasher (1.0.16); urgency = medium
+
+Abstract:
+	adding the macro check before reading the public key
+
+Files Modified: data/utils.c
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Thu, 02 Sep 2010 22:54:23 IST
+
+Package: flasher (1.0.15); urgency = low
+
+Abstract:
+	variable included within the ifdef
+
+Files Modified: data/utils.c
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Thu, 02 Sep 2010 15:58:02 IST
+
+Package: flasher (1.0.14); urgency = low
+
+Abstract:
+	Code changes for checking the Image integrity in flasher
+
+Files Modified: data/Makefile, data/utils.c, spx/PACKAGES.D/flasher/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 02 Sep 2010 15:29:51 IST
+
+Package: flasher (1.0.13); urgency = medium
+
+Abstract:
+	flasher binary pkg is also made essential in case ipmimain is selected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 09 Aug 2010 14:59:50 EDT
+
+Package: flasher (1.0.12); urgency = medium
+
+Abstract:
+	Bug: Uploaded SSH Public Key is not preserved after Firmware Update - fixed.
+
+Files Modified: data/cpConf, spx/INFO
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 14 Jul 2010 13:00:31 IST
+
+Package: flasher (1.0.11); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Deleted: data/fmhcore.c
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:26:08 EDT
+
+Package: flasher (1.0.10); urgency = medium
+
+Abstract:
+	Unload modules based on the runlevel (7 or 8)
+Each runlevel can have different set of unload modules
+
+Files Modified: data/forcekill
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 12 May 2010 12:21:09 EDT
+
+Package: flasher (1.0.9); urgency = medium
+
+Abstract:
+	Web based flash to use run level 8
+
+Files Modified: data/forcekill, data/utils.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 19:13:31 EDT
+
+Package: flasher (1.0.8); urgency = low
+
+Abstract:
+	Added Runlevel 8 entries
+
+Files Modified: data/flumount, data/forcekill, data/initcomplete, data/prepfl, data/stopgc
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:11:54 EDT
+
+Package: flasher (1.0.7); urgency = low
+
+Abstract:
+	Add the parameter to let developer control reset BMC or not after firmware update
+
+Files Modified: data/main.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 06 May 2010 23:52:35 CST
+
+Package: flasher (1.0.6); urgency = medium
+
+Abstract:
+	qomd is added to kill list during flashing
+
+Files Modified: data/forcekill
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 05 May 2010 15:22:02 EDT
+
+Package: flasher (1.0.5); urgency = medium
+
+Abstract:
+	Added hdserver to be killed during flasher
+Messages cleanup
+
+Files Modified: data/forcekill
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Apr 2010 15:03:07 EDT
+
+Package: flasher (1.0.4); urgency = medium
+
+Abstract:
+	Proper unloading of all the modules which are not used by any applications.
+This will free up more memory for the flasher to use.
+
+Files Modified: data/forcekill
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 25 Mar 2010 14:48:43 EDT
+
+Package: flasher (1.0.3); urgency = high
+
+Abstract:
+	preserve config issue fixed. init 7 scripts cleaned
+
+Files Modified: data/stopgc, data/prepfl, data/flumount, data/forcekill
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 24 Mar 2010 13:00:33 EDT
+
+Package: flasher (1.0.2); urgency = medium
+
+Abstract:
+	flasher.initcomplete should be the last to be executed in run level 7. Also, seld, sdrd, and frud needs to be killed during prepare flash.
+
+Files Modified: data/forcekill, data/initcomplete
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Tue, 23 Mar 2010 18:06:17 EDT
+
+Package: flasher (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:56:57 EST
+
+Package:flasher (1.0.0);urgency=new
+
+Abstract:
+	This Package includes Flasher Application.
+
+Files Added: stopgc, flasher, ub_env.c, prepfl, flrep.c, initcomplete, forcekill, Makefile, utils.c, cpConf, mkMiniMe, main.c, flumount, fmhcore.c
+
+--Submitter: Dinesh Selvam (dineshs@amiindia.co.in) Tue, 8 Dec 2009 17:31:35 -0500

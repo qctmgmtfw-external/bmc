@@ -1,0 +1,20 @@
+Package : libipmitimer_2_8_0_1_110609_FixBMCBootFlagsClearMechanism
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libipmitimer (2.8.0)
+Depends :  libipmitimer(==2.8.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Thomas Chao (thomaschao@ami.com.tw)
+Urgency : new
+Description : To Fix BMC Boot Flag Clear Mechanism
+.
+

@@ -1,0 +1,44 @@
+Source : libiniparser
+Version : 1.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : libiniparser, libiniparser_dev
+Build-Depends : crosscc, global_dev, rules
+Essential : NO
+Group : LIBRARY
+Owner : AMI
+Maintainer : Suresh  (sureshv@amiindia.co.in)
+Source-Location : http://ndevilla.free.fr/iniparser/ini2/index.html
+Source-Version : 2.17
+Source-License : MIT
+Package-License : MIT
+Architecture : ALL
+Urgency : low
+Description : This package includes iniparser Library. 
+Original code written by Nicolas Devillard <ndevilla@free.fr>
+Available from http://ndevilla.free.fr/iniparser/ini2/index.html under MIT License
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : libiniparser
+Section : lib
+Essential : NO
+Package-License : MIT
+Description : This package includes the binary iniparser library.
+.
+
+Package : libiniparser_dev
+Section : dev
+Essential : NO
+Package-License : MIT
+Description : This is the development package for iniparser library package.
+.
+

@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/ubenv
+	MKDIR_NOCLEAN %SPXINC/ubenv
+	COPY_FILE ./ubenv.h %SPXINC/ubenv
+	COPY_FILE ./libubenv.a %SPXLIB/ubenv
+	COPY_FILE ./libubenv.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ubenv
+	ADD_LIBRARY_LINKS %SPXLIB/ubenv libubenv.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

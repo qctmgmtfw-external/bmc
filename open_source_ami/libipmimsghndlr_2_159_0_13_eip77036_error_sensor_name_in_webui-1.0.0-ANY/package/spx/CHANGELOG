@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_13_eip77036_error_sensor_name_in_webui (1.0.0); urgency = new
+
+Abstract:
+	error sensor name in web ui
+
+Files Added: data, data/00-data_AMI_AMIConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kenttang (kenttang@ami.com.tw) Thu, 08 Dec 2011 14:11:40 CST
+

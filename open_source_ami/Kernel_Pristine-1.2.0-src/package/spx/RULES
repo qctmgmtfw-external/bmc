@@ -1,0 +1,18 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+	MKDIR_CLEAN %KERNEL_SRC
+	UNTAR_BZ2  %SOURCE/%PACKAGE/data/linux-2.6.28.10.tar.bz2  %KERNEL_SRC
+    	RENAME %KERNEL_SRC/linux-2.6.28.10 %KERNEL_SRC/linux
+
+#Clean Source
+clean_source:
+	DELETE %BINARY/@Kernel_Pristine-*-ANY.spx
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+# Rules to create kernel_dummy package
+build_package-@Kernel_Pristine:
+	PACK_SPX
+

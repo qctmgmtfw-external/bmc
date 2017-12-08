@@ -1,0 +1,9 @@
+Package: libncml_1_22_0_3_Fix_For_SSH_Service_Configuration (1.0.0); urgency = new
+
+Abstract:
+	Fix for Saving SSH Service Configurations
+
+Files Added: data, data/00-data_ncml.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 19 Sep 2011 15:42:02 IST
+

@@ -1,0 +1,18 @@
+Package : solssh
+Non-Editable : YES
+Version : 1.10.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Joey Chen  (JoeyChen@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Config-Tag : SOLSSH Support
+Group : FEATURES
+Required : libiniparser
+Package-License : AMI
+Description : This package include build solssh application
+.

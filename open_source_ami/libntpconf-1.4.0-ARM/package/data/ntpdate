@@ -1,0 +1,56 @@
+#! /bin/sh
+#
+# We run as soon as networking is live, and before we use NFS!
+# chkconfig: S 42 0
+#
+#Runlevel : S = S42
+
+test -f /usr/sbin/ntpdate || exit 0
+test -f /etc/ntp.conf || exit  0
+test -f /conf/ntp.stat || exit 0
+
+[ 0 -eq `ps -ef | grep "/usr/sbin/ntpd" | grep -vc "grep"` ] || exit 0
+
+case "$1" in
+start)
+#Not setting date to default (010100002012) in case of  
+  #manual ntp update.  
+  grep "Manual" /conf/ntp.stat >/dev/null 2>&1
+  if [ $? == 0 ]
+  then
+        #date 010100002012
+        exit 0
+  fi
+  # Fix for ntp offset overflow. Offset can be +/- 0x3FFFFFFF
+  # So if the date is any year below 1972 (as of 2006), ntpdate
+  # will return a negative offset and will set wrong values
+  if [ ! -f /tmp/ntpdate_init ]; then
+        date 010100002012
+        touch /tmp/ntpdate_init
+  fi
+  echo "Running ntpdate to synchronize clock :"
+  cat /etc/ntp.conf | grep server | awk '{print $2}' \
+  |while read NTPSERVER; do
+	if [ "$NTPSERVER" != "" ]
+	then
+		echo -n "Trying NTP Server $NTPSERVER :"
+		ntpdate -b -s -u $NTPSERVER
+		if [ $? = 0 ] 
+		then
+			echo "Success"
+			exit 0
+		else
+			echo "Failure" 
+		fi
+	fi
+	echo "Failure" 
+  done
+  ;;
+stop|restart|force-reload)
+  ;;
+*)
+  echo "Usage: /etc/init.d/ntpdate {start|stop|restart|force-reload}"
+  exit 1
+esac
+
+exit 0

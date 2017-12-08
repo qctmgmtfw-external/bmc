@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ipmi_dev_2_100_0_3_Fix_For_SSH_Service_Configuration-1.0.0-ANY</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.ami.megarac.spx.packagecreator.spxnature</nature>
+	</natures>
+	<filteredResources>
+		<filter>
+			<id>1438845562475</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*:*</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+</projectDescription>

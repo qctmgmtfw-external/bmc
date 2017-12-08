@@ -1,0 +1,61 @@
+ifeq ($(shell uname), Linux)
+CPP = g++
+OUTPUTDIR = ../lib/javacdromwrapper/linux_x86_32
+OUTPUT = $(OUTPUTDIR)/libjavacdromwrapper.so
+CDROMLIB = ../lib/libcdrom/Linux_x86_32/libcdromLinux.a
+else
+CPP = /opt/sfw/bin/g++
+INCLUDES += -I/usr/j2se/include -I/usr/j2se/include/solaris
+LIBS = -lstdc++ -R/usr/sfw/lib:/opt/sfw/lib
+ifeq ($(shell arch), i86pc)
+OUTPUTDIR = ../lib/javacdromwrapper/solaris-x86
+OUTPUT = $(OUTPUTDIR)/libjavacdromwrapper.so
+CDROMLIB = ../lib/libcdrom/Solaris-x86/libcdromSolaris.a
+else
+OUTPUTDIR = ../lib/javacdromwrapper/solaris-sparc
+OUTPUT = $(OUTPUTDIR)/libjavacdromwrapper.so
+CDROMLIB = ../lib/libcdrom/Solaris-sparc/libcdromSolaris.a
+endif
+endif
+## This check for MAC
+ifeq ($(shell uname), Darwin)
+CPP = g++
+OUTPUTDIR = ../lib/javacdromwrapper/mac_x86_32
+OUTPUT = $(OUTPUTDIR)/libjavacdromwrapper.jnilib
+CDROMLIB = ../lib/libcdrom/Mac_x86_32/libcdromMac.a
+INCLUDES += -I /System/Library/Frameworks/JavaVM.framework/Headers 
+CFLAGS = $(INCLUDES) -Wall -O2 -dynamiclib -fPIC -framework CoreFoundation -framework IOKit -framework JavaVM
+else
+## NOTE: the following java related includes changes from machine to machine depending on their java installation directories.
+## Also there might be version change for JDK. This also must be taken care everytime there is a version change for JDK.
+INCLUDES += -I/usr/java/jdk1.6.0/include
+INCLUDES += -I/usr/java/jdk1.6.0/include/linux
+CFLAGS = $(INCLUDES) -Wall -O2 -shared -fpic
+endif
+INCLUDES += -I../../Build/include
+INCLUDES += -I../../Build/include/global
+INCLUDES += -I../../Build/include/usbe
+INCLUDES += -I../include/cdrom
+INCLUDES += -I../include/libkvm
+LIBS += $(CDROMLIB)
+                                                                                
+javacdromwrapper:	javacdromwrapper.cpp java_prototypes.h $(CDROMLIB)
+ifeq (${shell arch},x86_64)
+	@echo -e "Architecture Mismatch. Please use Makefile.x86_64 for x86_64 architecture."
+	@exit 1
+else
+ifeq (${shell echo $$HOSTTYPE},x86_64)
+@echo -e "Architecture Mismatch. Please use Makefile.x86_64 for x86_64 architecture."
+@exit 1
+endif
+	mkdir -p $(OUTPUTDIR)
+	$(CPP) $(CFLAGS) -o $(OUTPUT) javacdromwrapper.cpp $(LIBS)
+endif
+clean:
+ifeq (${shell arch},x86_64)
+	@echo -e "Architecture Mismatch. Please use Makefile.x86_64 for x86_64 architecture."
+	@exit 1
+else
+	$(RM) $(OUTPUT) *~
+endif
+

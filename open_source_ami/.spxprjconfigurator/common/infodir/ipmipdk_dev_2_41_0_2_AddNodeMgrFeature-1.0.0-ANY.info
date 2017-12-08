@@ -1,0 +1,20 @@
+Package : ipmipdk_dev_2_41_0_2_AddNodeMgrFeature
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for ipmipdk_dev (2.41.0)
+Depends :  ipmipdk_dev(==2.41.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  OwenChou (OwenChou@ami.com.tw)
+Urgency : new
+Description : Implement Intel Node Manage Feature
+.
+

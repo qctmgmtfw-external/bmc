@@ -1,0 +1,9 @@
+Package: goahead_1_62_0_8_181751_Using443OpenKVMFail (1.0.0); urgency = new
+
+Abstract:
+	for EIP 181751, using 443 port to open KVM will fail.
+
+Files Added: data, data/00-data_websSSL.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Mon, 01 Sep 2014 18:39:46 CST
+

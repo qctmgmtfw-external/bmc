@@ -1,0 +1,9 @@
+Package: libsnmpusers_1_8_0_1_snmp_ipmi_alignment_fix_EIP_69020 (1.0.0); urgency = new
+
+Abstract:
+	snmp ipmi alignment fix EIP 69020
+
+Files Added: data, data/00-data_SNMPApi.h, data/01-data_Makefile, data/02-data_snmpusers.c, data/03-data_SNMPApi.c, data/04-data_snmpusers.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Tue, 20 Sep 2011 12:25:51 EDT
+

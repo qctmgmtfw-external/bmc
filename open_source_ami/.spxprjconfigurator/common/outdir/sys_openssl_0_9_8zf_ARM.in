@@ -1,0 +1,9 @@
+config FEATURE_OPENSSL_0_9_8
+	bool
+	default y if sys_openssl_0_9_8zf
+	help
+		Enable/Disable openssl of version 0.9.8zf
+
+endmenu
+
+

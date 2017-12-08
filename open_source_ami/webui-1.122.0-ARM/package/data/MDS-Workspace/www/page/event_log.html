@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link rel="stylesheet" href="../lib/listgrid.css" type="text/css" />
+<link rel="stylesheet" href="../style/page_style.css" type="text/css" />
+<script language="javascript" src="../lib/include.js"></script>
+<script language="javascript" src="../lib/listgrid.js"></script>
+<script>
+document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnClearLog");
+		elmt.setAttribute("value", eLang.getString("event_log", "EVENT_LOG_CLEAREVENTS"));
+		var elmt = document.getElementById("_btnSaveLog");
+		elmt.setAttribute("value", eLang.getString("event_log", "EVENT_LOG_SAVEEVENTS"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<style>
+.toggleBMC
+{
+	display:'';
+}
+.toggleClient
+{
+	display:none;
+}
+</style>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("event_log", "EVENT_LOG_TITLE"));</script>
+</h3>
+<p>
+<script>document.writeln(eLang.getString("event_log", "EVENT_LOG_DESC"));</script>
+</p>
+<table border="0" width="100%" cellspacing="3" cellpadding="3">
+	<tr>
+		<td><select id="_eventTypeSel"></select>&nbsp; 
+<script>document.writeln(eLang.getString("event_log", "EVENT_LOG_FILTERBY"));</script>
+&nbsp;<select id="_sensorName"></select></td>
+		<td><label class="alignRight" id="_lblHeader"></label></td>
+	</tr>
+	<tr>
+		<td><input type="radio" id="_rdoBMCTzone" name="timeZone" checked>
+		<label for="_rdoBMCTzone">
+<script>document.writeln(eLang.getString("event_log", "EVENT_LOG_BMC_TZONE"));</script>
+</label>
+		<input type="radio" id="_rdoClientTzone" name="timeZone">
+		<label for="_rdoClientTzone">
+<script>document.writeln(eLang.getString("event_log", "EVENT_LOG_CLIENT_TZONE"));</script>
+</label>
+		&nbsp;&nbsp;<label id="_utcOffset"></label>
+	</td><td class="alignRight">
+		<input type="button" id="_btnFirst" style="width:40px" value="<<" />
+		<input type="button" id="_btnPrevious" style="width:40px" value="<" />
+		<input type="text" id="_txtPage" maxlength="5" style="width:50px" />
+		<input type="button" id="_btnNext" style="width:40px" value=">" />
+		<input type="button" id="_btnLast" style="width:40px" value=">>" /></td>
+	</tr>
+</table>
+<script>
+	if (window.ActiveXObject)document.write("<br>");
+</script>
+<div id="_eventLogHolder"></div>
+<br>
+<script>
+	if (!window.ActiveXObject)document.write("<br>");
+</script>
+<div class="btnTray">
+	<input type="button" id="_btnSaveLog" />
+	<input type="button" id="_btnClearLog" />
+</div>
+</body>
+</html>

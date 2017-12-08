@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>i2c_hw_1_12_0_1_Add_i2c_transfer_byte_timeout_check-1.0.0-AST-ARM</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.ami.megarac.spx.packagecreator.spxnature</nature>
+	</natures>
+	<filteredResources>
+		<filter>
+			<id>1438845561650</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*:*</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+</projectDescription>

@@ -1,0 +1,228 @@
+Package: pam_ldap (1.24.0); urgency = low
+
+Abstract:
+	libUserPrivilege is added in build depend and binary required list
+
+Files Modified: spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 18 Aug 2011 19:33:36 IST
+
+Package: pam_ldap (1.23.0); urgency = low
+
+Abstract:
+	Code CleanUP.
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 17 Aug 2011 12:56:14 IST
+
+Package: pam_ldap (1.22.0); urgency = medium
+
+Abstract:
+	Fixing Login/Logout Audit bugs and Optimizing the code
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 11 Aug 2011 20:47:15 IST
+
+Package: pam_ldap (1.21.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/Makefile, data/pam_ldap.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:21:45 IST
+
+Package: pam_ldap (1.20.0); urgency = medium
+
+Abstract:
+	Passing Session Handle as NULL to AuditHook
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 29 Jul 2011 20:00:50 IST
+
+Package: pam_ldap (1.19.0); urgency = medium
+
+Abstract:
+	Modified the hook name from PDK_LoginAudit to PDK_LoginLogoutAudit, Also used macro for pam module count
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 21 Jul 2011 17:20:48 IST
+
+Package: pam_ldap (1.18.0); urgency = medium
+
+Abstract:
+	Removed P.CONFIG script from pam_ldap
+
+Files Deleted: spx/P.CONFIG
+Files Modified: data/pam_ldap.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 07 Jul 2011 21:04:28 IST
+
+Package: pam_ldap (1.17.0); urgency = medium
+
+Abstract:
+	Regarding IPv6 support for LDAP authentication, added removed code snippet into libldapconf/GenericLdapauth.
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Wed, 29 Jun 2011 16:15:31 IST
+
+Package: pam_ldap (1.16.0); urgency = low
+
+Abstract:
+	added ipv6 support for LDAP authentication
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: sridhar ch (sridharch@amiindia.co.in) Wed, 29 Jun 2011 07:33:05 TLT
+
+Package: pam_ldap (1.15.0); urgency = low
+
+Abstract:
+	logging sel events for ldap users
+
+Files Added: spx/P.CONFIG
+Files Modified: data/Makefile, data/pam_ldap.c, spx/INFO
+
+--Submitter: sridhar ch (sridharch@amiindia.co.in) Wed, 29 Jun 2011 05:49:49 TLT
+
+Package: pam_ldap (1.14.0); urgency = medium
+
+Abstract:
+	Linking libldap_r.so needed for LDAP authentication.
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 23 Jun 2011 18:29:10 IST
+
+Package: pam_ldap (1.13.0); urgency = high
+
+Abstract:
+	Fixed dependency issue with libldapconf when GoAhead is not selected
+
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 10 Jun 2011 10:58:23 EDT
+
+Package: pam_ldap (1.12.0); urgency = medium
+
+Abstract:
+	Updated license information.
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Tue, 31 May 2011 11:30:34 IST
+
+Package: pam_ldap (1.11.0); urgency = medium
+
+Abstract:
+	if ldap user logs in with wrong password, then it should return the error as invalid credential and dont check for the user is pressent in AD or not. 
+(reverting changes done for commit no 14008)
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Mon, 30 May 2011 16:18:52 IST
+
+Package: pam_ldap (1.10.0); urgency = medium
+
+Abstract:
+	Added support for duplicate user name in ldap and ad.
+
+Files Modified: data/pam_ldap.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Mon, 30 May 2011 11:48:14 IST
+
+Package: pam_ldap (1.9.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:22:41 EDT
+
+Package: pam_ldap (1.8.0); urgency = medium
+
+Abstract:
+	The pam handle has to be closed on failure case.
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Fri, 13 May 2011 18:05:07 IST
+
+Package: pam_ldap (1.7.0); urgency = medium
+
+Abstract:
+	PAM Modules will not allow other modules to check with user crendential, when wrong password is passed to the existing username.
+
+Files Modified: data/pam_ldap.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 16 Feb 2011 12:03:26 IST
+
+Package: pam_ldap (1.6.0); urgency = low
+
+Abstract:
+	Including provides, this will make proper overriding the core or OEM packages.
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 19 Jan 2011 17:42:25 IST
+
+Package: pam_ldap (1.5.0); urgency = low
+
+Abstract:
+	Changing shared library names as pam_custom_ldap
+
+Files Modified: data/Makefile, spx/PACKAGES.D/pam_ldap/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Sat, 08 Jan 2011 16:40:27 IST
+
+Package: pam_ldap (1.4.0); urgency = medium
+
+Abstract:
+	non ldap users login problem solved. now only ldap users could able to authenticate through pam_ldap
+
+Files Modified: data/Makefile, data/pam_ldap.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 07 Jan 2011 14:21:28 IST
+
+Package: pam_ldap (1.3.0); urgency = low
+
+Abstract:
+	Ldap user will Use Block pipe, here after this enables LDAP users will have the control for the src pipe
+
+Files Modified: data/pam_ldap.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 03 Jan 2011 17:19:13 IST
+
+Package: pam_ldap (1.2.0); urgency = low
+
+Abstract:
+	Not a library, should be listed in Miscellaneous Configuration
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 23 Dec 2010 22:50:47 IST
+
+Package: pam_ldap (1.1.0); urgency = low
+
+Abstract:
+	Adding configs support..
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 23 Dec 2010 22:22:48 IST
+
+Package: pam_ldap (1.0.0); urgency = new
+
+Abstract:
+	This packages contains the PAM module for LDAP based login
+
+Files Added: data, data/Makefile, data/pam_ldap.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/pam_ldap, spx/PACKAGES.D/pam_ldap/DATA, spx/PACKAGES.D/pam_ldap/SCRIPTS, spx/PACKAGES.D/pam_ldap/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 03 Dec 2010 14:30:15 IST
+

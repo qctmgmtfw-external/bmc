@@ -1,0 +1,19 @@
+Package : liblpcuart
+Non-Editable : YES
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Alex Yang  (alexyang@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : LPCUART Library Support
+Group : LIBRARY
+Depends : lpcuart
+Required : libunix
+Package-License : AMI
+Description : LPCUART Library Support
+.

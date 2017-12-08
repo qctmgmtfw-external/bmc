@@ -1,0 +1,95 @@
+Package: target (4.4.0); urgency = medium
+
+Abstract:
+	Target upgraded to Debian 6.0.2 (Squeeze)
+
+Files Modified: data/target.arm.full.tar.bz2, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 25 Jul 2011 12:17:25 EDT
+
+Package: target (4.3.0); urgency = high
+
+Abstract:
+	Added net-snmp development packages - Header files
+
+Files Modified: data/target.arm.full.tar.bz2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 11 May 2011 17:06:43 EDT
+
+Package: target (4.2.0); urgency = medium
+
+Abstract:
+	1. Updated to Debian 6.0.1 which updated the following Packages:
+	base-files bind9-host dnsutils host isc-dhcp-client isc-dhcp-common
+	libbind-dev libbind9-60 libdns69 libisc62 libisccc60 libisccfg62 liblwres60
+	libnss3-1d linux-libc-dev python python-minimal tzdata
+
+2. Added libncurses5-dev package
+
+Files Modified: data/target.arm.full.tar.bz2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 04 May 2011 16:07:15 EDT
+
+Package: target (4.1.0); urgency = medium
+
+Abstract:
+	Updated with libraries needed for nsupdate
+
+Files Modified: data/target.arm.full.tar.bz2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 11 Mar 2011 21:32:30 EST
+
+Package: target (4.0.0); urgency = medium
+
+Abstract:
+	Updated to Debian 6.0 (Squeeze)
+
+Files Modified: data/target.arm.full.tar.bz2, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 17:01:20 EST
+
+Package: target (3.1.0); urgency = medium
+
+Abstract:
+	Updated with inotify and rsync
+
+Files Modified: data/target.arm.full.tar.bz2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 23 Sep 2010 10:34:23 EDT
+
+Package: target (3.0.0); urgency = medium
+
+Abstract:
+	Added libsasl2 development package
+
+Files Modified: data/target.arm.full.tar.bz2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 18 May 2010 18:52:02 EDT
+
+Package: target (2.0.1); urgency = low
+
+Abstract:
+	Changed BUILDAREA to BLDPRJAREA because of conflicts with BUILD
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 26 Feb 2010 15:59:15 EST
+
+Package: target (2.0.0); urgency = high
+
+Abstract:
+	Updated packages from debian as on 22 Jan 2010. Added the following new packages   bridge-utils,etables, ipv6calc,wide-dhcpv6-clientd,ndisc6 ipsetdibbler-client and smping
+
+Files Modified: data/target.arm.full.tar.bz2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 03 Feb 2010 18:23:39 EST
+
+Package:target (1.0.0);urgency=new
+
+Abstract:
+	This package provide the Target File System for ARM.This is based on Debian 5.0
+
+Files Added: target.arm.full.tar.bz2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 30 Nov 2009 15:44:54 -0500
+

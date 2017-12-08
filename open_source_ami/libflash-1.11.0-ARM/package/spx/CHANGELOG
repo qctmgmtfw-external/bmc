@@ -1,0 +1,136 @@
+Package: libflash (1.11.0); urgency = low
+
+Abstract:
+	Dual Image Feature supported changes
+
+Files Modified: data/flshfiles.h
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Sat, 20 Aug 2011 00:27:28 TLT
+
+Package: libflash (1.10.0); urgency = high
+
+Abstract:
+	Following are the bugs fixed,
+* FTS [Flashing Sign Image] : IPMI error is thrown while uploading sign image with wrong key.
+* FTS [Flashing Sign Image] : Flasher service is getting crashed while uploading sign image with invalid key.
+
+Files Modified: data/flashlib.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 10 Jun 2011 11:45:41 IST
+
+Package: libflash (1.9.0); urgency = medium
+
+Abstract:
+	Handle the error code returned from flasher.
+
+Files Modified: data/flashlib.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 26 May 2011 09:26:31 EDT
+
+Package: libflash (1.8.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:47:00 EDT
+
+Package: libflash (1.7.0); urgency = medium
+
+Abstract:
+	add 3 functions for firmware update purpose
+
+Files Modified: data/flashlib.c, data/flashlib.h
+
+--Submitter: royku (royku@ami.com.tw) Thu, 12 May 2011 10:44:50 CST
+
+Package: libflash (1.6.0); urgency = medium
+
+Abstract:
+	Needed macros for flashing.
+
+Files Modified: data/flshfiles.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 19:06:11 IST
+
+Package: libflash (1.5.0); urgency = low
+
+Abstract:
+	Minor correction: Handled the handler properly
+
+Files Modified: data/flashlib.c
+
+--Submitter: prakashs (prakashs@amiindia.co.in) Wed, 16 Feb 2011 10:45:42 IST
+
+Package: libflash (1.4.0); urgency = low
+
+Abstract:
+	Call any PDK Pre Flash hook present
+
+Files Modified: data/flashlib.c
+
+--Submitter: prakashs (prakashs@amiindia.co.in) Tue, 08 Feb 2011 17:15:11 IST
+
+Package: libflash (1.3.0); urgency = medium
+
+Abstract:
+	Added DummyFlashArea Macro to prepare Flash area.
+Removed unwanted code.
+
+Files Modified: data/flashlib.c, data/flashlib.h, data/flshdefs.h, data/flshfiles.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 19:05:48 IST
+
+Package: libflash (1.2.0); urgency = medium
+
+Abstract:
+	Moved macros from utils.c to flashlib.h, those macros are used in libifc layer
+
+Files Modified: data/flashlib.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Sun, 03 Oct 2010 10:47:01 IST
+
+Package: libflash (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:54:38 EDT
+
+Package: libflash (1.0.3); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Modified: data/Makefile, data/flashlib.c, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:26:48 EDT
+
+Package: libflash (1.0.2); urgency = low
+
+Abstract:
+	Add the parameter to let developer control reset BMC or not after firmware update
+
+Files Modified: data/flashlib.c, data/flashlib.h, data/flshdefs.h
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 06 May 2010 23:52:10 CST
+
+Package: libflash (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:04:15 EST
+
+Package:libflash (1.0.0);urgency=new
+
+Abstract:
+	This package contains flash Library.
+
+Files Added: flshdefs.h, flshfiles.h, flashlib.c, flashlib.h, Makefile
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Thu, 3 Dec 2009 15:29:53 -0500

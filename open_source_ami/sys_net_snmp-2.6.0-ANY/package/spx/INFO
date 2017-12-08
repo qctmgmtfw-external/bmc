@@ -1,0 +1,18 @@
+Package : sys_net_snmp
+Non-Editable : YES
+Version : 2.6.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Michael Wozniak  (michaelw@ami.com)
+Source-License : AMI
+Architecture : ANY
+Urgency : high
+Section : sys
+Essential : NO
+Config-Tag : NET-SNMP Support
+Group : FEATURES
+Required : libsnmpusers
+Package-License : BSD
+Description : Systen package which provides support for NET-SNMP protocol
+.

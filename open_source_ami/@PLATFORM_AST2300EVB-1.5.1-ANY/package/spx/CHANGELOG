@@ -1,0 +1,80 @@
+Package: @PLATFORM_AST2300EVB (1.5.1); urgency = high
+
+Abstract:
+	Support memory ECC protection function.
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Wed, 22 Aug 2012 11:58:04 CST
+
+Package: @PLATFORM_AST2300EVB (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:27:01 EDT
+
+Package: @PLATFORM_AST2300EVB (1.4.0); urgency = medium
+
+Abstract:
+	Add frame buffer support configuration.
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 25 Feb 2011 15:26:12 CST
+
+Package: @PLATFORM_AST2300EVB (1.3.0); urgency = low
+
+Abstract:
+	Description Fields cleaned up
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 09:59:48 EST
+
+Package: @PLATFORM_AST2300EVB (1.2.0); urgency = low
+
+Abstract:
+	Added @SOC_AST2300 in Required
+
+Files Modified: spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 09 Nov 2010 11:03:31 CST
+
+Package: @PLATFORM_AST2300EVB (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:10:22 EDT
+
+Package: @PLATFORM_AST2300EVB (1.0.2); urgency = high
+
+Abstract:
+	remove MAX_ADC_CHANNELS from @PLATFORM
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Wed, 28 Jul 2010 11:17:27 CST
+
+Package: @PLATFORM_AST2300EVB (1.0.1); urgency = medium
+
+Abstract:
+	add MAX_ADC_CHANNELS global variable
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Mon, 26 Jul 2010 18:11:37 CST
+
+Package: @PLATFORM_AST2300EVB (1.0.0); urgency = new
+
+Abstract:
+	Package specifying Platform is AST2300
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 27 May 2010 18:00:09 CST
+

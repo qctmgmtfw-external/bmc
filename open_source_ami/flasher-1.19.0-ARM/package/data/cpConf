@@ -1,0 +1,12 @@
+# /usr/local/bin/cpConf: Copy all files from $1 to $2
+#
+#
+
+CUR_DIR=`pwd`
+cd $1
+
+for i in *
+do
+	cp -a -r $i $2/.
+done
+

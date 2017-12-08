@@ -1,0 +1,9 @@
+Package: libldapconf_1_11_0_1_LDAP_ACCEPT_UID (1.0.0); urgency = new
+
+Abstract:
+	LDAP accept uid as binddn and dn
+
+Files Added: data, data/00-data_ldapconf.c, data/01-data_ldapconf.h, data/02-data_GenericLdapAuth.c, data/03-data_ldap.conf.disabled, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: royku (royku@ami.com.tw) Fri, 07 Sep 2012 17:11:28 CST
+

@@ -1,0 +1,4 @@
+./00-data_sdr_cache.c 321 51c576b07dca96ec7474c68371b38ea1
+./01-data_scsi.c 673 5a1492039132ae9f4a0c9cf4810b4c7c
+./02-data_libipmi_fru.c 567 a500f73089d5218327f4493a5557c7a9
+./03-data_libipmi_StorDevice.c 342 93b7b4eef5f0e5b2a9411ed8ed257c49

@@ -1,0 +1,8 @@
+./lib/security/pam_ldap.so.1 36672 3824d476b6236df50a29232f748b8687
+./usr/lib/libgcrypt.so.11.5.3 469060 7e87d40a2cbdec8ac4903a79c28350e2
+./usr/lib/libgnutls.so.26.14.12 602016 e0929d13c14d6b120097d248bb678412
+./usr/lib/libgpg-error.so.0.4.0 11524 05506e0db55a837945d23466b46c4721
+./usr/lib/liblber-2.4.so.2.5.6 43184 9f7103e5de1fa501e42d5bd7fbadf22d
+./usr/lib/libldap_r-2.4.so.2.5.6 251724 f63f4869f53c96cfc578e596b115da7f
+./usr/lib/libsasl2.so.2.0.23 89472 2fe57ec4bf02821fcc71b01da725b789
+./usr/lib/libtasn1.so.3.1.9 53868 fe8c152ba7bca0defccfaf67f28a03e6

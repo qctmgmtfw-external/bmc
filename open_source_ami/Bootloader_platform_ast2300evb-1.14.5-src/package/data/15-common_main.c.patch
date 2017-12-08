@@ -1,0 +1,15 @@
+--- u-boot-1.1.6/common/main.c	2010-01-20 17:19:48.000000000 +0800
++++ u-boot-1.1.6-ami/common/main.c	2012-08-22 11:46:00.000000000 +0800
+@@ -421,6 +421,12 @@
+ 
+ 	debug ("### main_loop: bootcmd=\"%s\"\n", s ? s : "<UNDEFINED>");
+ 
++#ifdef CONFIG_DRAM_ECC
++	printf("DRAM ECC enabled\n");
++#else
++	printf("DRAM ECC disabled\n");
++#endif
++
+ 	if (bootdelay >= 0 && s && !abortboot (bootdelay)) {
+ # ifdef CONFIG_AUTOBOOT_KEYED
+ 		int prev = disable_ctrlc(1);	/* disable Control C checking */

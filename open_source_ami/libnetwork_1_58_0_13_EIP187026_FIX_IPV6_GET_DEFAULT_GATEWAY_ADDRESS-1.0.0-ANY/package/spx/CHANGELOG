@@ -1,0 +1,9 @@
+Package: libnetwork_1_58_0_13_EIP187026_FIX_IPV6_GET_DEFAULT_GATEWAY_ADDRESS (1.0.0); urgency = new
+
+Abstract:
+	Fix IPv6 can't get default gateway address
+
+Files Added: data, data/00-data_nwcfg.c, data/01-data_nwcfg.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: hanslin (hanslin@ami.com.tw) Tue, 07 Oct 2014 14:58:06 CST
+

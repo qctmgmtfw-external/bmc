@@ -1,0 +1,14 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/iniparser
+	MKDIR_NOCLEAN %SPXINC/iniparser
+	COPY_FILE ./parse-ex.h %SPXINC/iniparser
+	COPY_FILE ./iniparser.h %SPXINC/iniparser
+	COPY_FILE ./dictionary.h %SPXINC/iniparser
+	COPY_FILE ./strlib.h %SPXINC/iniparser
+	COPY_FILE ./libiniparser.a %SPXLIB/iniparser
+	COPY_FILE ./libiniparser.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/iniparser
+	ADD_LIBRARY_LINKS %SPXLIB/iniparser libiniparser.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

@@ -1,0 +1,60 @@
+Package: CDDVD_support (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:06:07 EDT
+
+Package: CDDVD_support (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:40:48 EDT
+
+Package: CDDVD_support (1.0.4); urgency = medium
+
+Abstract:
+	USB media dependencies resolved for MDS
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 21 Apr 2010 13:38:17 EDT
+
+Package: CDDVD_support (1.0.3); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:50:26 CST
+
+Package: CDDVD_support (1.0.2); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:21:18 EDT
+
+Package: CDDVD_support (1.0.1); urgency = medium
+
+Abstract:
+	package dependencies corrected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 18 Mar 2010 11:49:37 EDT
+
+Package:CDDVD_support (1.0.0);urgency=new
+
+Abstract:
+	This is a dummy pacakge to properly select USB driver modules to support cd/dvd device on a selected SoC.
+
+--Submitter: SP Core Team (spcoreteam@ami.com) Tue, 16 Mar 2010 15:26:42 -0400
+

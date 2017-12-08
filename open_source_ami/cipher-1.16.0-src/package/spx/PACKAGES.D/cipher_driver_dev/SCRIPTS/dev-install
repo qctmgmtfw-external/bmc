@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+  		MKDIR_NOCLEAN %SPXINC/cipher
+		COPY_DIR ./ %SPXINC/cipher
+		
+debug-install:

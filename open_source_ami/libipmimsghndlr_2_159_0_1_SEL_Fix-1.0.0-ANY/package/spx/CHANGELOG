@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_1_SEL_Fix (1.0.0); urgency = new
+
+Abstract:
+	Removed the Dead lock condition and fix for SEL_FULL event.
+
+Files Added: data, data/00-data_Storage_SELDevice_SEL.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 07 Sep 2011 20:47:03 IST
+

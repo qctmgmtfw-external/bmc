@@ -1,0 +1,18 @@
+Package : libreset
+Non-Editable : YES
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Vinay Tandon  (vinayt@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : Reset Manager Library Support
+Group : LIBRARY
+Depends : reset
+Package-License : AMI
+Description : This is the binary package for LIBRESET.
+.

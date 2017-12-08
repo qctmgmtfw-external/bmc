@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_20_84131_AddAutoConfigurationInterfaces (1.0.0); urgency = new
+
+Abstract:
+	Add configure interfaces in service configuration automatically.
+
+Files Added: data, data/00-data_AMI_AMIConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Fri, 09 Mar 2012 15:50:15 CST
+

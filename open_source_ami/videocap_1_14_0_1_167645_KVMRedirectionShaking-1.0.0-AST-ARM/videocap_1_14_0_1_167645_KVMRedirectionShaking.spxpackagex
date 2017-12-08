@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="true" readonly="true" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/videocap_1_14_0_1_167645_KVMRedirectionShaking-1.0.0-AST-ARM/package/data/00-data_ast_videocap_engine.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/videocap_1_14_0_1_167645_KVMRedirectionShaking-1.0.0-AST-ARM/package/data/01-data_ast_videocap_hw.h</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>videocap_1_14_0_1_167645_KVMRedirectionShaking</package-name>
+<version>1.0.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>patch</section>
+<patch-order>1</patch-order>
+<build-depends/>
+<depends>
+<package-name operator="==" version="1.14.0">videocap</package-name>
+</depends>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>PATCH</group>
+<configtags>Patch 1 for videocap (1.14.0)</configtags>
+<installsize/>
+<description>for EIP 167645, the screen would shake if system server changed the resolution 1440 x 900,1600 x 900,1680 x 1050</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>Neal Chen </maintainer>
+<maintainer-email>nealchen@ami.com.tw</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc>AST</soc>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="new">new</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/videocap_1_14_0_1_167645_KVMRedirectionShaking-1.0.0-AST-ARM/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/videocap_1_14_0_1_167645_KVMRedirectionShaking-1.0.0-AST-ARM/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

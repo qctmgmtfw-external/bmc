@@ -1,0 +1,175 @@
+Package: webifc_dev (1.18.0); urgency = low
+
+Abstract:
+	Adding macros for SSL certificate error codes.
+
+Files Modified: data/sslcertificate.h
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Tue, 20 Sep 2011 15:42:25 IST
+
+Package: webifc_dev (1.17.0); urgency = high
+
+Abstract:
+	Services configuration redesigned to have support of Non-Editable and Not-Applicable of the individual fields.
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 20 Jul 2011 14:08:20 IST
+
+Package: webifc_dev (1.16.0); urgency = medium
+
+Abstract:
+	Added pam_handler for websession it is used for login audit
+
+Files Modified: data/webs.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 08 Jul 2011 14:32:07 IST
+
+Package: webifc_dev (1.15.0); urgency = medium
+
+Abstract:
+	Changed to common timeout macro value.
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 01 Jul 2011 16:26:58 IST
+
+Package: webifc_dev (1.14.0); urgency = high
+
+Abstract:
+	Following are the bugs fixed,
+* FTS [Flashing Sign Image] : IPMI error is thrown while uploading sign image with wrong key.
+* FTS [Flashing Sign Image] : Flasher service is getting crashed while uploading sign image with invalid key.
+
+Files Modified: data/sslcertificate.h, data/webifc.h
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 10 Jun 2011 11:48:09 IST
+
+Package: webifc_dev (1.13.0); urgency = medium
+
+Abstract:
+	Added seperate library function to extract web port value from wp structure.
+
+Files Modified: data/webs.h
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 09 Jun 2011 02:28:28 IST
+
+Package: webifc_dev (1.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 16:01:38 EDT
+
+Package: webifc_dev (1.11.0); urgency = low
+
+Abstract:
+	Added TIMEOUT macro for libifc layer.
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 04 Apr 2011 13:43:11 IST
+
+Package: webifc_dev (1.10.0); urgency = medium
+
+Abstract:
+	Added network bonding changes in UI
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 28 Mar 2011 22:58:35 IST
+
+Package: webifc_dev (1.9.0); urgency = high
+
+Abstract:
+	Added video record feature in UI.
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 16:20:39 IST
+
+Package: webifc_dev (1.8.0); urgency = low
+
+Abstract:
+	Instead of restarting web server, now only HTTPS service is restarted for uploading and generating the SSL certificate.
+
+Files Modified: data/websSSL.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 02 Mar 2011 15:45:16 IST
+
+Package: webifc_dev (1.7.0); urgency = low
+
+Abstract:
+	Size Limit of Name Fields are changed. which are supported by openssl to created the ssl certificate.
+
+Files Modified: data/sslcertificate.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Fri, 04 Feb 2011 12:43:03 IST
+
+Package: webifc_dev (1.6.0); urgency = medium
+
+Abstract:
+	Added error code macro for untrusted certificate.
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 26 Jan 2011 00:47:04 IST
+
+Package: webifc_dev (1.5.0); urgency = low
+
+Abstract:
+	Added support of Generate, View and Validated the SSL Certificate.
+
+Files Modified: data/sslcertificate.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 25 Jan 2011 21:51:16 IST
+
+Package: webifc_dev (1.4.0); urgency = high
+
+Abstract:
+	Moved macros from c file to header file.
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 10 Jan 2011 20:39:02 IST
+
+Package: webifc_dev (1.3.0); urgency = high
+
+Abstract:
+	Added PHY configuration support.
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 29 Dec 2010 17:59:43 IST
+
+Package: webifc_dev (1.2.0); urgency = high
+
+Abstract:
+	* Removed sshkey header file, since all macros are available in IPMI core layer, now libifc is using those macros.
+* Few other temporary macros are moved to webifc header file.
+
+Files Deleted: data/sshkey.h
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 28 Dec 2010 18:27:48 IST
+
+Package: webifc_dev (1.1.0); urgency = medium
+
+Abstract:
+	Added macro for features list file.
+
+Files Modified: data/webifc.h, spx/INFO
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 29 Oct 2010 18:46:50 IST
+
+Package: webifc_dev (1.0.0); urgency = new
+
+Abstract:
+	This package includes the header files required to write to web interface.
+
+Files Added: data, data/ej.h, data/multipart_handler.h, data/sshkey.h, data/sslcertificate.h, data/uemf.h, data/webifc.h, data/webs.h, data/websSSL.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/webifc_dev, spx/PACKAGES.D/webifc_dev/DATA, spx/PACKAGES.D/webifc_dev/SCRIPTS, spx/PACKAGES.D/webifc_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 26 Jul 2010 17:22:36 EDT
+

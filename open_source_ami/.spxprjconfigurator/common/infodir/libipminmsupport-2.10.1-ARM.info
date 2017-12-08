@@ -1,0 +1,19 @@
+Package : libipminmsupport
+Non-Editable : YES
+Version : 2.10.1
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : James Chiu  (jcchiu@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Config-Tag : IPMI PNM Support
+Group : IPMI
+Provides : OPMA_PNM_Support
+Depends : ipmimain
+Package-License : AMI
+Description : This contains the ipmi pnm binary.
+.

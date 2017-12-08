@@ -1,0 +1,18 @@
+Package : libipmiserialterminal
+Non-Editable : YES
+Version : 2.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Suresh  (sureshv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Config-Tag : IPMI Serial Terminal Interface Support
+Group : IPMI
+Depends : ipmimain
+Package-License : AMI
+Description : This package contains the binaries of serial terminal mode.
+.

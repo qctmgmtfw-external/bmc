@@ -1,0 +1,21 @@
+Package : cipher_hw_1_10_0_1_EIP_199310_Fix_Incorrect_SCU_Register_Value
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for cipher_hw (1.10.0)
+Depends :  cipher_hw(==1.10.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST
+Maintainer :  dislin (dislin@ami.com.tw)
+Urgency : new
+Description : Find out the place to write the incorrect value to SCU04 and fix it.In Cipher_hw driver, fill the incorrect value to SCU04 to reset HAC engine.
+.
+

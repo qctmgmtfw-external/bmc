@@ -1,0 +1,196 @@
+Package: libipmichassis (2.7.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/ChassisCtrl.c, data/ChassisTimer.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:23:17 IST
+
+Package: libipmichassis (2.6.0); urgency = medium
+
+Abstract:
+	Add Operational State support for SSI Compute Blade.
+
+Files Modified: data/ChassisCtrl.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 05 Jul 2011 20:28:35 CST
+
+Package: libipmichassis (2.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:50:08 EDT
+
+Package: libipmichassis (2.4.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:44:37 IST
+
+Package: libipmichassis (2.3.0); urgency = medium
+
+Abstract:
+	Removing nice as they are not applicable for threads.
+
+Files Modified: data/ChassisTimer.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 15:02:46 IST
+
+Package: libipmichassis (2.2.0); urgency = medium
+
+Abstract:
+	Fix for ACPI. Removing unwanted functions calls.
+
+Files Modified: data/ChassisTimer.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 12 Apr 2011 15:15:02 IST
+
+Package: libipmichassis (2.1.0); urgency = medium
+
+Abstract:
+	Added the condition check for sending the SIGUSR2 signal from ipmimain to adviser to start recording video
+
+Files Modified: data/ChassisCtrl.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 24 Mar 2011 19:40:56 IST
+
+Package: libipmichassis (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/ChassisCtrl.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:02:15 IST
+
+Package: libipmichassis (1.7.0); urgency = low
+
+Abstract:
+	Passing BMCInst to ChassisInterrupt task also.
+
+Files Modified: data/ChassisCtrl.c, data/ChassisTimer.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 17 Feb 2011 19:24:07 IST
+
+Package: libipmichassis (1.6.0); urgency = medium
+
+Abstract:
+	Passing BMC Instance for APMLInit and APMLClose.
+
+Files Modified: data/ChassisCtrl.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 01 Feb 2011 17:26:35 IST
+
+Package: libipmichassis (1.5.0); urgency = low
+
+Abstract:
+	Fix can't reset "set in progress" parameter when a system reset or transition to powered down state occurs
+
+Files Modified: data/ChassisTimer.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 01 Dec 2010 20:11:31 CST
+
+Package: libipmichassis (1.4.0); urgency = low
+
+Abstract:
+	Fixing Power On check.  Chassis Power On should check PSGood, if PSGood is true then the power is already on.
+
+Files Modified: data/ChassisCtrl.c
+
+--Submitter: David Wise (davidw@ami.com) Thu, 28 Oct 2010 16:44:24 EDT
+
+Package: libipmichassis (1.3.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/ChassisCtrl.c, data/ChassisTimer.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:06:43 EDT
+
+Package: libipmichassis (1.2.0); urgency = low
+
+Abstract:
+	Correction in condition check.
+
+Files Modified: data/ChassisCtrl.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 04 Oct 2010 20:19:45 IST
+
+Package: libipmichassis (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:56:09 EDT
+
+Package: libipmichassis (1.0.6); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/ChassisCtrl.c, data/ChassisTimer.c, data/Makefile, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 21:25:23 IST
+
+Package: libipmichassis (1.0.5); urgency = low
+
+Abstract:
+	MBMC Changes for Chassis
+
+Files Modified: data/ChassisCtrl.c, data/ChassisTimer.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:47:54 IST
+
+Package: libipmichassis (1.0.4); urgency = low
+
+Abstract:
+	Fixed binary build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 25 Jun 2010 13:00:02 EDT
+
+Package: libipmichassis (1.0.3); urgency = low
+
+Abstract:
+	Removing dependency of gpio
+
+Files Modified: data/ChassisTimer.c, data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 20:02:42 IST
+
+Package: libipmichassis (1.0.2); urgency = low
+
+Abstract:
+	Removed unwanted codes used by ATCA.
+
+Files Modified: data/ChassisTimer.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 14 May 2010 16:48:50 IST
+
+Package: libipmichassis (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:05:16 EST
+
+Package:libipmichassis (1.0.0);urgency=new
+
+Abstract:
+	This Package contains Chassis library needed for IPMI
+
+Files Added: ChassisCtrl.c, Makefile, ChassisTimer.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 9 Dec 2009 14:16:54 +0800

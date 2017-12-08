@@ -1,0 +1,27 @@
+Package: hw_watchdog (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:25:03 EDT
+
+Package: hw_watchdog (1.1.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:28:16 EST
+
+Package: hw_watchdog (1.0.0); urgency = new
+
+Abstract:
+	SOC Supports Watchdog
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:11:05 EDT
+

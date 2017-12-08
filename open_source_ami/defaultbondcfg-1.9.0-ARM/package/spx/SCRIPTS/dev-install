@@ -1,0 +1,18 @@
+# Install Script
+
+build-install:
+	COPY_FILE interfaces %IMAGE_TREE/conf/interfaces
+	COPY_FILE interfaces %IMAGE_TREE/etc/defconfig/interfaces
+	COPY_FILE bond.conf %IMAGE_TREE/conf/bond.conf
+	COPY_FILE bond.conf %IMAGE_TREE/etc/defconfig/bond.conf
+	COPY_FILE dns.conf %IMAGE_TREE/conf/dns.conf
+	COPY_FILE dns.conf %IMAGE_TREE/etc/defconfig/dns.conf
+	COPY_FILE interfaces.tmp %IMAGE_TREE/conf/interfaces.tmp
+	COPY_FILE interfaces.tmp %IMAGE_TREE/etc/defconfig/interfaces.tmp
+	COPY_FILE dns.tmp %IMAGE_TREE/conf/dns.tmp
+	COPY_FILE dns.tmp %IMAGE_TREE/etc/defconfig/dns.tmp
+	DELETE %IMAGE_TREE/conf/activeslave.conf
+	DELETE %IMAGE_TREE/etc/defconfig/activeslave.conf
+	COPY_FILE_IF_EXISTS activeslave.conf %IMAGE_TREE/conf/
+	COPY_FILE_IF_EXISTS activeslave.conf %IMAGE_TREE/etc/defconfig/
+debug-install:

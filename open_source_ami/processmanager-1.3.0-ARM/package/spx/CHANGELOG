@@ -1,0 +1,97 @@
+Package: processmanager (1.3.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/procmonitor.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:36:51 IST
+
+Package: processmanager (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:28:46 EDT
+
+Package: processmanager (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:11:33 EDT
+
+Package: processmanager (1.0.7); urgency = low
+
+Abstract:
+	Added init script to runlevel 7 and 8 to kill it during flash
+
+Files Modified: data/procmanager
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 19:08:42 EDT
+
+Package: processmanager (1.0.6); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:22:59 EDT
+
+Package: processmanager (1.0.5); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:24:27 EDT
+
+Package: processmanager (1.0.4); urgency = low
+
+Abstract:
+	Fix in slp so that broadcastion of the service will be done in rcS.
+
+Files Modified: data/slp.c, data/procmonitor.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 22 Mar 2010 20:09:57 IST
+
+Package: processmanager (1.0.3); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 18:00:01 EDT
+
+Package: processmanager (1.0.2); urgency = low
+
+Abstract:
+	Changes in processmanger in Register service part and deregistering process part.
+
+Files Modified: data/slp.c, data/procmonitor.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 16 Feb 2010 21:34:35 IST
+
+Package: processmanager (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:13:30 EST
+
+Package:processmanager (1.0.0);urgency=new
+
+Abstract:
+	This package contains source to monitor process started by AMI.
+
+Files Added: Makefile, procmonitor.c, procmonitor.h
+
+--Submitter: winstonv (winstonv@ami.com) Mon, 25 Jan 2010 21:53:49 +0530

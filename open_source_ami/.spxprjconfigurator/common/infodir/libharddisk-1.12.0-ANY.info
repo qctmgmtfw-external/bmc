@@ -1,0 +1,17 @@
+Package : libharddisk
+Version : 1.12.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : app
+Required : libkvm_dev
+Essential : NO
+Config-Tag : harddisk library files (VMCLI and WinKVM).
+Group : SOFTWARE
+Owner : AMI
+Maintainer : muthuchamyk  (muthusamyk@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This Package contains the harddisk related library files.
+.

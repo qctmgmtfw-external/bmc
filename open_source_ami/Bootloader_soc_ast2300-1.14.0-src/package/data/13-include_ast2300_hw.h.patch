@@ -1,0 +1,16 @@
+--- u-boot-1.1.6/include/ast2300_hw.h	1970-01-01 08:00:00.000000000 +0800
++++ u-boot-1.1.6-ami/include/ast2300_hw.h	2010-01-19 17:30:01.000000000 +0800
+@@ -0,0 +1,13 @@
++#ifndef _AST2300_HW_H_
++#define _AST2300_HW_H_
++
++#include <config.h>
++
++/* U-Boot does not use MMU. So no mapping */
++#define IO_ADDRESS(x)	(x)
++#define MEM_ADDRESS(x)  (x)
++
++#include <ast2300/hwmap.h>
++#include <ast2300/hwreg.h>
++#include <ast2300/hwdef.h>
++#endif

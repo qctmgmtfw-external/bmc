@@ -1,0 +1,9 @@
+Package: libipmi_2_38_0_6_NodeManagerCantBeReadNormally (1.0.0); urgency = new
+
+Abstract:
+	NodeManager can't be read normally
+
+Files Added: data, data/00-data_sensor_helpers.c, data/01-data_libipmi_sensor.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: benchen (benchen@ami.com.tw) Tue, 10 Jan 2012 17:48:31 CST
+

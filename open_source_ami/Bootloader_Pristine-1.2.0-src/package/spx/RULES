@@ -1,0 +1,18 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+	MKDIR_CLEAN %BOOT_SRC
+	UNTAR_BZ2  %SOURCE/%PACKAGE/data/u-boot-1.1.6.tar.bz2  %BOOT_SRC
+	RENAME %BOOT_SRC/u-boot-1.1.6  %BOOT_SRC/uboot
+    
+#Clean Source
+clean_source:
+	DELETE %BINARY/@Bootloader_Pristine-*-ANY.spx
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+# Rules to create dummy package
+build_package-@Bootloader_Pristine:
+	PACK_SPX
+

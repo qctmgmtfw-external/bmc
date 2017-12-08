@@ -1,0 +1,20 @@
+Package : libipmistack_2_52_0_1_MBMC_Changes
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libipmistack (2.52.0)
+Depends :  libipmistack(==2.52.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Suresh V (sureshv@amiindia.co.in)
+Urgency : new
+Description : MBMC Changes
+.
+

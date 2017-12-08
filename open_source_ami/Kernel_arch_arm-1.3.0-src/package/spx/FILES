@@ -1,0 +1,4 @@
+./01-serialbaud.patch 464 ad1209c7531dec74f2139a4b8da0a9ba
+./02-wtcache.patch 1039 62ee5cfbbfbfedd465380e1c6d383219
+./03-atag.patch 1886 77e4e007c3f48d1fae170f23d0bcba81
+./04-alignment.patch 466 36f3137f876b17224c0bb5f4429792e5

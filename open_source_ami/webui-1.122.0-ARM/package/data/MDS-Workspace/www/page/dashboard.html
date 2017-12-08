@@ -1,0 +1,127 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+	<link rel="stylesheet" href="../style/page_style.css" type="text/css" />
+	<script language="javascript" src="../lib/include.js"></script>
+	<script language="javascript" src="../lib/excanvas.js"></script>
+	<script>
+		document.writeln("<script language='javascript' src='../str/" + 
+			top.gLangSetting + "/global_str.js'><\/script>");
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+			doInit();
+		}
+	}
+	</script>
+</head>
+
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_TITLE"));</script>
+</h3> 
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_DESC"));</script>
+ <table cellspacing="0" cellpadding="5" border="0" class="dashboardHolder" id="dashboard"><tr><td id="_infoLeft" width="250" valign="top">
+		<h4>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_DEVICEINFO"));</script>
+</h4>
+		<table cellspacing="0" cellpadding="3" border="0">
+			<tr><td><label>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_FWREV"));</script>
+</label></td>
+				<td id="_fwRev"></td></tr>
+			<tr><td><label>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_FWBUILD"));</script>
+</label></td>
+				<td id="_buildTime"></td></tr>
+		</table>
+		<br style="clear:both" />
+
+		<h4>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_NWINFO"));</script>
+ <small id="_networkEditLink"></small></h4>
+		<table cellspacing="0" cellpadding="3" border="0" id="_tblNetworkInfo">
+			<tr><td><label>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_MACADDR"));</script>
+</label></td>
+				<td id="_macAddress"></td></tr>
+			<tr><td><label>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_V4MODE"));</script>
+</label></td>
+				<td id="_v4OptMode"></td></tr>
+			<tr><td><label>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_V4IPADDR"));</script>
+</label></td>
+				<td id="_ipv4Address"></td></tr>
+			<tr><td><label>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_V6MODE"));</script>
+</label></td>
+				<td id="_v6OptMode"></td></tr>
+			<tr id="_ipv6AddressRow" style="display:none;">
+				<td><label>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_V6IPADDR"));</script>
+</label></td>
+				<td id="_ipv6Address"></td></tr>
+		</table>
+
+		<table cellspacing="0" cellpadding="3" border="0" id="_tblPermissionDeny">
+			<tr><td id="_permissionDeny"></td></tr>
+		</table>
+		<br style="clear:both" />
+
+		<table cellspacing="0" cellpadding="3" border="0">
+			<tr id="_remoteControl">
+			<td align="left"><h4>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_REMOTECTRL"));</script>
+</h4></td></tr>
+			<tr><td id="_rowWebPreview" class="hiddenRow" style="vertical-align:middle; width:300px; height:200px; 
+				border:1px solid black;"></td></tr>
+		</table>
+		</td>
+
+		<td id="_infoRight" align="center" valign="top">
+			<h4>
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_SENSORMONIT"));</script>
+</h4>
+		</td>
+
+		<td id="_infoGraph" width="380" class="infoGraph" valign="top">
+			<h4 align="center">
+<script>document.writeln(eLang.getString("dashboard", "DASHBOARD_EVENTLOG"));</script>
+</h4>
+			<span class="pieChartArea"></span>
+			<canvas id="graphCanvas" width="200" height="200" class="gCanvas">
+			</canvas>
+		</td>
+	</tr></table>
+</body>
+</html>

@@ -1,0 +1,187 @@
+Package: libipmiserialterminal (2.4.0); urgency = low
+
+Abstract:
+	Added support for timeout completion code
+
+Files Modified: data/Terminal.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 06 Jun 2011 22:25:31 IST
+
+Package: libipmiserialterminal (2.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:01:33 EDT
+
+Package: libipmiserialterminal (2.2.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:47:46 IST
+
+Package: libipmiserialterminal (2.1.0); urgency = medium
+
+Abstract:
+	Fix to make flushing of IPMI Configurations to NVRAM faster.
+
+Files Modified: data/Terminal.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 19:08:02 IST
+
+Package: libipmiserialterminal (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/Terminal.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:08:10 IST
+
+Package: libipmiserialterminal (1.6.0); urgency = low
+
+Abstract:
+	As the new compiler is strict, changed the incrementing of outbound sequence number in Terminal Mode.
+
+Files Modified: data/Terminal.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 23 Feb 2011 13:49:20 IST
+
+Package: libipmiserialterminal (1.5.0); urgency = low
+
+Abstract:
+	The Thread arguments will be made free in startIfc function after the thread mutex is released properly.
+
+Files Modified: data/Terminal.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Feb 2011 00:57:45 IST
+
+Package: libipmiserialterminal (1.4.0); urgency = medium
+
+Abstract:
+	Fix for Terminal Mode User Authentication in Serial Interface.Outbound Sequence number is added in the command framing which is validated in activate session command.The challenge string is the password itself as serial interface is a single session channel which should be 16 bytes as per IPMI 1.5.20 Bytes of data copied as challenge string which overwrites the other structure member data,changed to copy only 16 bytes of data.
+
+Files Modified: data/Terminal.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 15 Feb 2011 12:08:58 IST
+
+Package: libipmiserialterminal (1.3.0); urgency = medium
+
+Abstract:
+	Made corrections to get the handle properly for PDK_ONTASKSTARTUP.
+
+Files Modified: data/Terminal.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 09 Nov 2010 15:04:18 EST
+
+Package: libipmiserialterminal (1.2.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/Terminal.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:05:29 EDT
+
+Package: libipmiserialterminal (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:00:48 EDT
+
+Package: libipmiserialterminal (1.0.9); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency and removed unwanted inclusion of PDK Header Files
+
+Files Modified: data/Makefile, data/Terminal.c, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:53:57 IST
+
+Package: libipmiserialterminal (1.0.8); urgency = low
+
+Abstract:
+	Code Cleanup done in Terminal Mode Files in Serial Interface
+
+Files Modified: data/Terminal.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 04 Aug 2010 19:03:38 IST
+
+Package: libipmiserialterminal (1.0.7); urgency = low
+
+Abstract:
+	MBMC Changes for terminal mode in Serial Interface
+
+Files Modified: data/Terminal.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:42:13 IST
+
+Package: libipmiserialterminal (1.0.6); urgency = low
+
+Abstract:
+	Removing gpio from build dependancy for libipmiserialterminal
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 14 Jun 2010 13:33:43 IST
+
+Package: libipmiserialterminal (1.0.5); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:23:54 EDT
+
+Package: libipmiserialterminal (1.0.4); urgency = low
+
+Abstract:
+	Now the Command for null user authentication is been updated to the correct one
+
+Files Modified: data/Terminal.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Sat, 20 Mar 2010 17:05:56 IST
+
+Package: libipmiserialterminal (1.0.3); urgency = low
+
+Abstract:
+	Added the Help on how to login in terminal mode(serial interface)
+
+Files Modified: data/Terminal.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 17 Feb 2010 17:22:25 IST
+
+Package: libipmiserialterminal (1.0.2); urgency = low
+
+Abstract:
+	Removed the hardcoded device name in terminal.c and done the changes to use the device name from IPMI.conf file
+
+Files Modified: data/Terminal.c, data/Makefile
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 15 Feb 2010 14:24:09 IST
+
+Package: libipmiserialterminal (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:08:15 EST
+
+Package:libipmiserialterminal (1.0.0);urgency=new
+
+Abstract:
+	This package contains the serial terminal mode related files.
+
+Files Added: Terminal.c, Makefile
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Fri, 22 Jan 2010 12:00:25 +0530

@@ -1,0 +1,81 @@
+Package: Kernel_bugfix (1.7.0); urgency = medium
+
+Abstract:
+	Added patch to update the bond interface's link changes.
+
+Files Added: data/07-drivers_net_bonding_bond_main.c
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 30 Aug 2011 14:20:09 IST
+
+Package: Kernel_bugfix (1.6.0); urgency = medium
+
+Abstract:
+	Linux patch for IPv6 DAD (to pass the IPv6 conformance test, Section 3)
+
+Files Added: data/06-IPv6_DAD.patch
+
+--Submitter: Balamurugan Gnanasambandam (balamurugang@ami.com) Tue, 17 May 2011 16:14:04 CDT
+
+Package: Kernel_bugfix (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:34:08 EDT
+
+Package: Kernel_bugfix (1.4.0); urgency = medium
+
+Abstract:
+	Fix for ALB and TLB modes for Bonding driver to update active slave
+Fix taken from 2.6.30 kernel
+
+Files Added: data/05-drivers_net_bonding_bond_main.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 07 Mar 2011 08:50:59 EST
+
+Package: Kernel_bugfix (1.3.0); urgency = medium
+
+Abstract:
+	Fix for Makefile 3.82
+
+Files Added: data/04-make_3_82.patch
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 13 Jan 2011 12:46:05 EST
+
+Package: Kernel_bugfix (1.2.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:30:25 EST
+
+Package: Kernel_bugfix (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:50:23 EDT
+
+Package: Kernel_bugfix (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:01:56 EST
+
+Package:Kernel_bugfix (1.0.0);urgency=new
+
+Abstract:
+	Bug Fixes to Kernel 2.6.28.10
+
+Files Added: 01-cramfs.initrd.patch, 02-nand_bad_block_options_issue.patch, 03-arpflux.fix.patch
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 24 Sep 2009 17:29:15 -0400

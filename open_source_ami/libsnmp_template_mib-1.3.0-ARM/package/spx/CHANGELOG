@@ -1,0 +1,36 @@
+Package: libsnmp_template_mib (1.3.0); urgency = high
+
+Abstract:
+	update config file for /conf and /etc/defconfig
+
+Files Modified: data/Makefile, spx/PACKAGES.D/libsnmp_template_mib/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 08 Jul 2011 11:05:10 EDT
+
+Package: libsnmp_template_mib (1.2.0); urgency = high
+
+Abstract:
+	added snmp template implementation doc to package
+
+Files Added: spx/DOCS, spx/DOCS/snmp_module_implementation.txt
+
+--Submitter: michaelw (michaelw@ami.com) Wed, 08 Jun 2011 17:22:26 EDT
+
+Package: libsnmp_template_mib (1.1.0); urgency = high
+
+Abstract:
+	modified to ensure build will not fail if this package is included in the PRJ
+
+Files Modified: data/Makefile, data/amiMibModule.c
+
+--Submitter: michaelw (michaelw@ami.com) Wed, 08 Jun 2011 15:52:22 EDT
+
+Package: libsnmp_template_mib (1.0.0); urgency = new
+
+Abstract:
+	SNMP Template Extension
+
+Files Added: data, data/Makefile, data/amiMibModule.c, data/amiMibModule.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libsnmp_template_mib, spx/PACKAGES.D/libsnmp_template_mib/DATA, spx/PACKAGES.D/libsnmp_template_mib/SCRIPTS, spx/PACKAGES.D/libsnmp_template_mib/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 03 Jun 2011 15:35:22 EDT
+

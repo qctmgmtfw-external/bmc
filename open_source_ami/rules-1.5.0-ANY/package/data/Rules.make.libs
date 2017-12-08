@@ -1,0 +1,59 @@
+#----------------------------------------------------------------------
+# 			Rules.make for Libraries
+# 		   Copyright (c) 2003 American Megatrends Inc 
+#-----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#			Include Global Rules 
+#----------------------------------------------------------------------
+include ${TOOLDIR}/rules/Rules.global
+
+#-----------------------------------------------------------------------
+#			General purpose library building
+#-----------------------------------------------------------------------
+CFLAGS += -fno-strict-aliasing
+CFLAGS += -DPKG_MAJOR=${PKG_MAJOR} -DPKG_MINOR=${PKG_MINOR} -DPKG_AUX=${PKG_AUX}
+
+#this stuff is mostly used within makefiles inside the libs directory
+# this simplifies concepts such as linker name,shared object name etc
+TARGET = $(LIBRARY_NAME).a
+
+# Name of the library shared object
+LIB_COMMON_LIBNAME = $(LIBRARY_NAME).so
+
+# These are unix (linux) standards for naming shared libraries.
+# Stick to these conventions for naming.
+# Linux HOWTO http://www.tldp.org/HOWTO/Program-Library-HOWTO/introduction.html
+# for details
+LIB_SONAME = $(LIB_COMMON_LIBNAME).${PKG_MAJOR}
+LIB_REALNAME = $(LIB_COMMON_LIBNAME).${PKG_MAJOR}.${PKG_MINOR}.${PKG_AUX}
+LIB_ARCHIVE_NAME = $(LIBRARY_NAME).a
+#---------------------------------------------------------------------
+
+all: .depend  $(LIB_REALNAME) 
+
+depend .depend dep:
+	@echo "  DEP     $(LIBRARY_NAME) "
+	@$(CC) $(CFLAGS) -M  $(SRC) > $@
+
+$(LIB_ARCHIVE_NAME): $(SRC:.c=.o) 
+	@echo "  AR      $@"
+	@$(AR) $(ARFLAGS) $@ $^ 2>/dev/null
+
+$(LIB_REALNAME):$(LIB_ARCHIVE_NAME)
+	@echo "  LIB     $@ "
+	@$(CC) -shared -Wl,-soname,$(LIB_SONAME) -o $(LIB_REALNAME) \
+	-Wl,--whole-archive $(LIB_ARCHIVE_NAME) -Wl,--no-whole-archive -lc $(LIBS)
+ifeq ($(DEBUG),n)
+	@echo "  STRIP   $@"
+	@$(STRIP) $(LIB_REALNAME) 
+endif
+
+clean:
+	@rm -f *.o *~ core .depend $(TARGET) *.lcd
+	@rm -f $(LIB_COMMON_LIBNAME) $(LIB_REALNAME)
+
+ifeq (.depend,$(wildcard .depend))
+include .depend
+endif
+#------------------------- End of Rules.Make ---------------------------
+

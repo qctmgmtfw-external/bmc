@@ -1,0 +1,5 @@
+./flashlib.h 8703 60d9044174f98b62fa1a385feab1bd8b
+./flshdefs.h 3015 7ccfbab3fcc1a49b7cfdc34ac4611404
+./flshfiles.h 4126 df0991452cd6c8a71e3e793f681c87c0
+./libflash.a 15054 62ea7d628b956f81763c7da571c8cfee
+./libflash.so.1.11.0 15168 815f77d4cc6043cea4d129edb895dc19

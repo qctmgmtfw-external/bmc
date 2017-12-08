@@ -1,0 +1,91 @@
+Package: libiptables (1.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:03:02 EDT
+
+Package: libiptables (1.3.0); urgency = medium
+
+Abstract:
+	Modification in IP Address string conversion.
+
+Files Modified: data/Iptables.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Apr 2011 21:46:17 IST
+
+Package: libiptables (1.2.0); urgency = low
+
+Abstract:
+	* corrected minor errors
+ * Added the support to block/accept both tcp & udp protocols at the same time i.e. in a single command.
+
+Files Modified: data/Iptables.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 23 Sep 2010 13:50:37 IST
+
+Package: libiptables (1.1.0); urgency = low
+
+Abstract:
+	-Added support to allow the user to select the protocol type as tcp/udp while blockin/un-blocking ports.
+
+Files Modified: data/Iptables.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 17 Sep 2010 14:41:39 IST
+
+Package: libiptables (1.0.5); urgency = low
+
+Abstract:
+	- Corrected minor errors
+
+Files Modified: data/Iptables.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 08 Sep 2010 16:43:24 IST
+
+Package: libiptables (1.0.4); urgency = low
+
+Abstract:
+	- Added IS_BLOCK_ALL support in Get Firewall configuration command.
+
+Files Modified: data/Iptables.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 08 Sep 2010 15:31:05 IST
+
+Package: libiptables (1.0.3); urgency = low
+
+Abstract:
+	- Allowing the user to select block/accept in the rule, while doing Set Cmd for Firewall. Also retrieving the same in Get Cmd.
+
+Files Modified: data/Iptables.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 03 Sep 2010 18:12:50 IST
+
+Package: libiptables (1.0.2); urgency = medium
+
+Abstract:
+	- Adding "Get" Command for Firewall configurations
+
+Files Modified: data/Iptables.c, spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 02 Sep 2010 20:19:47 IST
+
+Package: libiptables (1.0.1); urgency = low
+
+Abstract:
+	Dependecies Resolved
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 27 Aug 2010 15:36:34 EDT
+
+Package: libiptables (1.0.0); urgency = new
+
+Abstract:
+	This Package Contains Firewall configurations and iptables support Files.
+
+Files Added: data, data/Iptables.c, data/Makefile, data/iptables.sh, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libiptables, spx/PACKAGES.D/libiptables/DATA, spx/PACKAGES.D/libiptables/SCRIPTS, spx/PACKAGES.D/libiptables/SCRIPTS/dev-install, spx/PACKAGES.D/libiptables_dev, spx/PACKAGES.D/libiptables_dev/DATA, spx/PACKAGES.D/libiptables_dev/SCRIPTS, spx/PACKAGES.D/libiptables_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 26 Aug 2010 17:40:17 IST
+

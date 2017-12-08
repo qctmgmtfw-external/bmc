@@ -1,0 +1,16 @@
+--- u-boot-1.1.6/net/tftp.c	2006-11-02 22:15:01.000000000 +0800
++++ u-boot-1.1.6-ami/net/tftp.c	2010-09-17 16:27:09.000000000 +0800
+@@ -70,8 +70,12 @@
+ 	int i, rc = 0;
+ 
+ 	for (i=0; i<CFG_MAX_FLASH_BANKS; i++) {
++		if (flash_info[i].size == 0)
++			continue;
+ 		/* start address in flash? */
+-		if (load_addr + offset >= flash_info[i].start[0]) {
++//BugFix: In cases where Flash is located at lower range than SDRAM, it tftp direct flash will fail.
++//		if (load_addr + offset >= flash_info[i].start[0]) {
++		if ((load_addr + offset >= flash_info[i].start[0]) && (load_addr + offset <= ((flash_info[i].size-1) + flash_info[i].start[0]))) {
+ 			rc = 1;
+ 			break;
+ 		}

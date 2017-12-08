@@ -1,0 +1,12 @@
+--- .pristine/Vmedia_Linux_32-1.15.0-src/spx/INFO Thu Jan 23 17:39:40 2014
++++ source/Vmedia_Linux_32-1.15.0-src/spx/INFO Thu Jan 23 19:13:31 2014
+@@ -10,7 +10,8 @@
+ Source-Version : 1.0.0
+ Source-License : AMI
+ Package-License : AMI
+-Architecture : ALL
++Build-Precedence : CONFIG_SPX_FEATURE_REBUILD_JAVA_APPS 
++Architecture : ANY
+ Urgency : medium
+ Description : This package contains Linux 32 bit Library for Vmedia.
+ .

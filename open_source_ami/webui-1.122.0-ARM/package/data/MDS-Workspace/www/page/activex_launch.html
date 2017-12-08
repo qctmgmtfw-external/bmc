@@ -1,0 +1,60 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<HEAD>
+<script language="JavaScript" src="../lib/mini_inc.js"></script>
+<script language="JavaScript" src="../lib/xmit.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<script>
+if(window.ActiveXObject)
+{
+	var objectcab = "<!-- Class ID must be correct for the OCX to launch -->" +
+		"<object ID='AVCVIEW' CLASSID='CLSID:" + top.activex.classid + "' " +
+		"codebase='" + top.activex.cabname + "#version='+ top.activex.version + "' " +
+		"WIDTH=0 HEIGHT=0 onerror='alert(\'Error in loading ActiveX object\')'/>";
+	document.writeln(objectcab);
+	document.writeln("Please do not close this window. It will be closed automatically once the redirection is up and running.");
+}
+else
+{
+	document.writeln("ActiveX Viewer is supported only in Microsoft Internet Explorer browser. Please use Java Viewer for all other browsers.");
+	document.writeln("<input type='submit' value='Close' onclick='window.close(); return false;'>");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+Package : libipmi_2_38_0_4_snmp_ipmi_alignment_fix_EIP_69020
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 4 for libipmi (2.38.0)
+Depends :  libipmi(==2.38.0)
+PatchOrder : 4
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  michaelw (michaelw@ami.com)
+Urgency : new
+Description : snmp ipmi alignment fix EIP 69020
+.
+

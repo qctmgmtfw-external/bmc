@@ -1,0 +1,15 @@
+Package : hw_cipher
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Essential : NO
+Group : DEVICE
+Owner : AMI
+Maintainer : Joey Chen  (JoeyChen@ami.com.tw)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : SOC Supports Hardware Crypto Engine
+.

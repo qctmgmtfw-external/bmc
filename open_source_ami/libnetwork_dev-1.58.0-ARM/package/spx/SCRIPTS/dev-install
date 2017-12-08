@@ -1,0 +1,21 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/network
+	MKDIR_NOCLEAN %SPXINC/network
+	COPY_FILE ./nwcfg.h %SPXINC/network
+	COPY_FILE ./userconn.h %SPXINC/network
+	COPY_FILE ./validate.h %SPXINC/network
+	COPY_FILE ./valiPrivate.h %SPXINC/network
+	COPY_FILE ./netports.h %SPXINC/network
+	COPY_FILE ./protoendpoint.h %SPXINC/network
+	COPY_FILE ./sendarp.h %SPXINC/network
+	COPY_FILE ./tcp.h %SPXINC/network
+	COPY_FILE ./libnetwork.a %SPXLIB/network
+	SET_INIT_SCRIPT ./vlannetworking 
+	COPY_TO_CONF ./vlaninterfaces
+	COPY_TO_CONF ./vlansetting.conf
+	COPY_FILE libnetwork.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/network
+	ADD_LIBRARY_LINKS %SPXLIB/network libnetwork.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

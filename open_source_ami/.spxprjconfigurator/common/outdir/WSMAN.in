@@ -1,0 +1,31 @@
+menu "WSMAN Configuration"
+
+config libEventHandler (1.1.0)
+	bool 
+	default y
+	depends on WSMAN_Support
+	depends on @ARCH_ARM
+	help
+		This library is triggered when a event occurs in IPMI.
+
+#--------------------------------------
+config libEventHandler_dev (1.1.0)
+	bool 
+	default y
+	depends on @ARCH_ARM
+	help
+		This library is triggered when a event occurs in IPMI.
+
+#--------------------------------------
+config libwsman_dev (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains common header files of wsman
+
+#--------------------------------------
+
+endmenu
+
+

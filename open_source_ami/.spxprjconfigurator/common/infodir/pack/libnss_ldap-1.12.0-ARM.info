@@ -1,0 +1,17 @@
+Package : libnss_ldap
+Non-Editable : YES
+Version : 1.12.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Siva Prakash R  (sivaprakashr@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Group : AUTHENTICATION
+Required : pam_helperd, libuserauth, libUserPrivilege
+Package-License : AMI
+Description : Provides the libnss_ldap functionality
+.

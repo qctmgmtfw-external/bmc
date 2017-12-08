@@ -1,0 +1,18 @@
+Package : dhcpmonitor
+Non-Editable : YES
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Seires Lee  (seireslee@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Config-Tag : DHCP Renewal Support upon Link-Up
+Group : FEATURES
+Depends : netmon
+Package-License : AMI
+Description : Used to renew DHCP lease upon link status change.
+.

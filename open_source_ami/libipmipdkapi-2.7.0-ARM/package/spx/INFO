@@ -1,0 +1,16 @@
+Package : libipmipdkapi
+Non-Editable : YES
+Version : 2.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : sakthipriya M  (sakthipriyam@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Group : IPMI
+Package-License : AMI
+Description : IPMI PDK API Binary
+.

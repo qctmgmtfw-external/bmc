@@ -1,0 +1,9 @@
+Package: libipmipef_2_11_0_2_EIP93209_To_Fix_PEFPostponeTimer_Ineffective_Issue (1.0.0); urgency = new
+
+Abstract:
+	Fix the PEF Postpone Timer ineffective issue
+
+Files Added: data, data/00-data_PEF.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Prakash.S (prakashs@amiindia.co.in) Fri, 24 Aug 2012 19:55:09 IST
+

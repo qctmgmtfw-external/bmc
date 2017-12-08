@@ -1,0 +1,119 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" rel="stylesheet" type="text/css" />	
+	<script language="javascript" src="../lib/include.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_saveBtn");
+		elmt.setAttribute("value", eLang.getString("configure_snmp", "CFG_SNMP_SAVE"));
+		var elmt = document.getElementById("_resetBtn");
+		elmt.setAttribute("value", eLang.getString("configure_snmp", "CFG_SNMP_RESET"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_TITLE"));</script>
+</h3>
+<p>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_DESC"));</script>
+</p>
+
+<div class="subSection">
+<table cellspacing="0" cellpadding="5" border="0" width="500">
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_SNMPV1_V2"));</script>
+</strong></td>
+	<td><input type="checkbox" id="_enableV1V2" />
+	<label for="_enableV1V2">
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_ENABLE"));</script>
+</label></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_ACCESS_LEVEL"));</script>
+</strong></td>
+	<td><select id="_accessLevel" class="classicTxtBox"></select></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_CMTY_STRING"));</script>
+</strong></td>
+	<td><input type="text" id="_communityStr" maxlength="15" class="classicTxtBox" disabled /></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_SNMPV3"));</script>
+</strong></td>
+	<td><input type="checkbox" id="_enableV3" />
+	<label for="_enableV3">
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_ENABLE"));</script>
+</label></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_USER_ACC"));</script>
+</strong></td>
+	<td><input type="text" id="_userAccount" class="classicTxtBox" disabled/></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_USER_ACCESS"));</script>
+</strong></td>
+	<td><select id="_userAccess" class="classicTxtBox"></select></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_AUTH_PTCL"));</script>
+</strong></td>
+	<td><select id="_authProtocol" class="smallclassicTxtBox"></select></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_AUTH_PASS"));</script>
+</strong></td>
+	<td><input type="text" id="_authPassphrase" maxlength="20" class="classicTxtBox" disabled/></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_PRIVACY_PRTCL"));</script>
+</strong></td>
+	<td><select id="_privProtocol" class="smallclassicTxtBox"></select></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_snmp", "CFG_SNMP_PRIVACY_PASS"));</script>
+</strong></td>
+	<td><input type="text" id="_privPassphrase" maxlength="20" class="classicTxtBox" disabled/></td></tr>
+</table>
+</div>
+
+<div class="btnTray">
+	<input type="button" class="classicBtn" id="_saveBtn" />
+	<input type="button" class="classicBtn" id="_resetBtn" />
+</div>
+</body>
+</html>

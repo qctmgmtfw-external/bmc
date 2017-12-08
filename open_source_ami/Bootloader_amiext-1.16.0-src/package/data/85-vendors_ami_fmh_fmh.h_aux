@@ -1,0 +1,32 @@
+--- uboot/vendors/ami/fmh/fmh.h	2011-08-11 12:26:55.010329016 +0530
++++ uboot-1.1.6/vendors/ami/fmh/fmh.h	2011-08-11 12:28:19.431328056 +0530
+@@ -5,7 +5,7 @@
+ #define FMH_END_SIGNATURE 	0x55AA
+ #define FMH_SIZE			64
+ #define FMH_MAJOR			1
+-#define FMH_MINOR		 	5	
++#define FMH_MINOR		 	6
+ 
+ /*
+ typedef struct
+@@ -31,7 +31,8 @@
+ 	unsigned short	Module_Flags;			/* Refer Module Flags Values Below */
+ 	unsigned long	Module_Load_Address;
+ 	unsigned long 	Module_Checksum;		/* CRC 32 */
+-	unsigned char	Module_Reserved[8];
++	unsigned char   Module_Ver_Aux[2];
++	unsigned char	Module_Reserved[6];
+ } __attribute__ ((packed)) MODULE_INFO;
+ 
+ /* Flash Module Header */
+--- uboot/vendors/ami/fmh/cmd_fmh.c	2011-08-11 12:26:54.991328355 +0530
++++ uboot-1.1.6/vendors/ami/fmh/cmd_fmh.c	2011-08-11 12:28:27.569991122 +0530
+@@ -152,7 +152,7 @@
+ 			strncpy((char *)Name,(char *)mod->Module_Name,8);
+ 			Name[8]=0;
+ 			printf("Name    : %s\n",Name);
+-			printf("Ver     : %d.%d\n",mod->Module_Ver_Major,mod->Module_Ver_Minor);
++			printf("Ver     : %d.%d.%.2s\n",mod->Module_Ver_Major,mod->Module_Ver_Minor,mod->Module_Ver_Aux);
+ 			printf("Type 	: 0x%04x\n",le16_to_host(mod->Module_Type));
+ 			printf("Flags	: 0x%04x\n",le16_to_host(mod->Module_Flags));
+ 			printf("Size 	: 0x%08x\n",le32_to_host(mod->Module_Size));

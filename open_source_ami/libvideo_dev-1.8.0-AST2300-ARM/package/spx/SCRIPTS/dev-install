@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/video
+	MKDIR_NOCLEAN %SPXLIB/video
+	COPY_FILE ./videopkt_soc.h %SPXINC/video
+	COPY_FILE ./libvideo.a %SPXLIB/video
+	COPY_FILE ./libvideo.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/video
+	ADD_LIBRARY_LINKS %SPXLIB/video libvideo.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

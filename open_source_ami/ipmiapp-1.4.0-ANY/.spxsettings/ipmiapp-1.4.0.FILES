@@ -1,0 +1,15 @@
+./Common/Nwusb.c 18727 2f4492f8177fa702770e84557e2fd509
+./Common/utils.c 979 4563824f72f13771cf2d9aff114c40f1
+./Linux/Linux_x86_32/Makefile 1064 b6f83b4da804daf8b03a7e7870a9fe9f
+./Linux/Linux_x86_64/Makefile 1049 945246b986ea2b3b02f43a7acf949bc1
+./Linux/Makefile 445 1ccf640230a1a827f5cd284935f97d83
+./Win/IPMIApp.sln 1233 8b4be11ed02ec7452133fb36dd8c84eb
+./Win/IPMIApp.vcproj 12789 f9df63fa3162014a7572ca30ae7d4083
+./obj/Linux_x86_32/IPMIApp 16098 b1eff67bc605c237ee5d5b478bf6c4e1
+./obj/Linux_x86_32/libipmi.so.1.0 380129 10e9c014c8853709c41227bca7898c6f
+./obj/Linux_x86_64/IPMIApp 21331 ff7f43816ed90b361495808195375360
+./obj/Linux_x86_64/libipmi.so.1.0 432393 4dacbd870f00713dd583a7427a0d7be8
+./obj/Win32/Release/IPMIApp.exe 175104 c46f4516b14e49e6bce2c8b8a45249cb
+./obj/Win32/Release/LIBIPMI.dll 135680 2ee6edb946cce5912528e9b358c06510
+./obj/Win64/Release/IPMIApp.exe 200704 a32cb3ae5ec3f68792a88b2906d0c5ba
+./obj/Win64/Release/LIBIPMI.dll 152064 2aaac0c65234154c0a3e54dd992ac2c7

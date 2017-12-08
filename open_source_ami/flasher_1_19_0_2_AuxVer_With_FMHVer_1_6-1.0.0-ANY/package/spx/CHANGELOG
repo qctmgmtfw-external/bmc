@@ -1,0 +1,9 @@
+Package: flasher_1_19_0_2_AuxVer_With_FMHVer_1_6 (1.0.0); urgency = new
+
+Abstract:
+	Aux version validation for FMH version >= 1.6
+
+Files Added: data, data/00-data_utils.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 19 Sep 2011 19:25:29 IST
+

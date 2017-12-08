@@ -1,0 +1,6 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./solssh %IMAGE_TREE/usr/local/bin
+	
+debug-install:

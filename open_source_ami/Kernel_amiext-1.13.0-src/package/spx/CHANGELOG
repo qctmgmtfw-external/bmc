@@ -1,0 +1,156 @@
+Package: Kernel_amiext (1.13.0); urgency = medium
+
+Abstract:
+	Aux version added in FMH
+
+Files Added: data/36-drivers_mtd_maps_fmh.h_aux
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 11 Aug 2011 15:39:26 IST
+
+Package: Kernel_amiext (1.12.0); urgency = high
+
+Abstract:
+	Added Macronix 32MB "MX25L25735E" flash part support
+
+Files Modified: data/10-drivers_mtd_spichips_m25pxx.c, data/14-drivers_mtd_spichips_spimtd.c, data/15-drivers_mtd_spichips_spiflash.h, data/17-drivers_mtd_spichips_generic.c, data/18-drivers_mtd_spichips_atmel.c, data/19-drivers_mtd_spichips_intels33.c, data/20-drivers_mtd_spichips_default.c, data/26-drivers_mtd_spichips_spansion.c, data/27-drivers_mtd_spichips_macronix.c, data/28-drivers_mtd_spichips_winbond.c
+
+--Submitter: royku (royku@ami.com.tw) Wed, 06 Jul 2011 13:35:48 CST
+
+Package: Kernel_amiext (1.11.0); urgency = high
+
+Abstract:
+	Revert to version 1.9.0
+
+Files Modified: data/14-drivers_mtd_spichips_spimtd.c, data/17-drivers_mtd_spichips_generic.c, data/27-drivers_mtd_spichips_macronix.c
+
+--Submitter: royku (royku@ami.com.tw) Tue, 24 May 2011 16:47:50 CST
+
+Package: Kernel_amiext (1.10.0); urgency = high
+
+Abstract:
+	1. added "MX25L25735E" 32MB flash support.
+2. temporary removed the code for "MX25L25635E" flash type support.
+
+Files Modified: data/14-drivers_mtd_spichips_spimtd.c, data/17-drivers_mtd_spichips_generic.c, data/27-drivers_mtd_spichips_macronix.c
+
+--Submitter: royku (royku@ami.com.tw) Tue, 24 May 2011 13:49:32 CST
+
+Package: Kernel_amiext (1.9.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:33:24 EDT
+
+Package: Kernel_amiext (1.8.0); urgency = medium
+
+Abstract:
+	Added support for ethtool override. Added support for Callback on Link Up/Down
+
+Files Added: data/32-drivers_net_eth_over.c, data/33-drivers_net_Makefile, data/34-include_linux_eth_over.h, data/35-linkchange_notify
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 18 Mar 2011 16:18:12 EDT
+
+Package: Kernel_amiext (1.7.0); urgency = medium
+
+Abstract:
+	Added Macronix 32MB SPI Part
+
+Files Modified: data/27-drivers_mtd_spichips_macronix.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 23:17:28 EST
+
+Package: Kernel_amiext (1.6.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:30:04 EST
+
+Package: Kernel_amiext (1.5.0); urgency = low
+
+Abstract:
+	BigPhysArea Kconfig moved from arch/arm to mm as it is generic and not arch specific
+
+Files Modified: data/23-bigphysarea.patch
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 04 Nov 2010 12:32:23 EDT
+
+Package: Kernel_amiext (1.4.0); urgency = low
+
+Abstract:
+	Added ST Micro m25px64 SPI Support
+
+Files Modified: data/10-drivers_mtd_spichips_m25pxx.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 24 Sep 2010 11:29:56 EDT
+
+Package: Kernel_amiext (1.3.0); urgency = high
+
+Abstract:
+	Corrected SMBUS Patches
+
+Files Modified: data/31-smbus.patch
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 20 Sep 2010 16:18:49 EDT
+
+Package: Kernel_amiext (1.2.0); urgency = medium
+
+Abstract:
+	Added SMBUS support
+
+Files Added: data/31-smbus.patch
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 20 Sep 2010 15:25:43 EDT
+
+Package: Kernel_amiext (1.1.0); urgency = medium
+
+Abstract:
+	Add fail-safe conf feature - added a fs_jffs2_scan.c patch for returning scaned error.
+
+Files Added: data/30-fs_jffs2_scan.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 15 Sep 2010 11:34:23 CST
+
+Package: Kernel_amiext (1.0.3); urgency = high
+
+Abstract:
+	i2c driver crashing because of mutex_lock called in ISR context 
+Changed to mutex_trylock
+
+Files Added: data/29-i2c-mutex-fix.patch
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 30 Apr 2010 13:13:52 EDT
+
+Package: Kernel_amiext (1.0.2); urgency = medium
+
+Abstract:
+	Add support for Winbond SPI flash chips.
+Add support for SPI clock configuration.
+
+Files Added: data/28-drivers_mtd_spichips_winbond.c
+Files Modified: data/09-drivers_mtd_spichips_Kconfig, data/10-drivers_mtd_spichips_m25pxx.c, data/11-drivers_mtd_spichips_Makefile, data/14-drivers_mtd_spichips_spimtd.c, data/15-drivers_mtd_spichips_spiflash.h, data/18-drivers_mtd_spichips_atmel.c, data/19-drivers_mtd_spichips_intels33.c, data/20-drivers_mtd_spichips_default.c, data/26-drivers_mtd_spichips_spansion.c, data/27-drivers_mtd_spichips_macronix.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 27 Apr 2010 15:03:26 CST
+
+Package: Kernel_amiext (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:01:43 EST
+
+Package:Kernel_amiext (1.0.0);urgency=new
+
+Abstract:
+	AMI Extensions to Kernel 2.6.28.10
+
+Files Added: 01-Makefile.patch, 02-drivers_mtd_nand_Kconfig, 03-drivers_mtd_nand_Makefile, 04-mtd.ractrends.map.patch, 05-drivers_mtd_Kconfig, 06-drivers_mtd_Makefile, 07-drivers_mtd_maps_Kconfig, 08-drivers_mtd_maps_Makefile, 09-drivers_mtd_spichips_Kconfig, 10-drivers_mtd_spichips_m25pxx.c, 11-drivers_mtd_spichips_Makefile, 12-drivers_mtd_spichips_spireg.c, 13-drivers_mtd_spichips_spiaccess.c, 14-drivers_mtd_spichips_spimtd.c, 15-drivers_mtd_spichips_spiflash.h, 16-drivers_mtd_maps_fmh.h, 17-drivers_mtd_spichips_generic.c, 18-drivers_mtd_spichips_atmel.c, 19-drivers_mtd_spichips_intels33.c, 20-drivers_mtd_spichips_default.c, 21-drivers_mtd_maps_ractrends.c, 22-drivers_mtd_nand_amimap.c, 23-bigphysarea.patch, 24-i2c_extensions.patch, 25-android-ashmem.patch, 26-drivers_mtd_spichips_spansion.c, 27-drivers_mtd_spichips_macronix.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 24 Sep 2009 14:16:31 -0400

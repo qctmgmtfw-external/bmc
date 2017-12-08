@@ -1,0 +1,45 @@
+Package: sys_iptables (2.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:41:08 EDT
+
+Package: sys_iptables (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:53:51 EST
+
+Package: sys_iptables (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:17:12 EDT
+
+Package: sys_iptables (1.0.1); urgency = low
+
+Abstract:
+	Dependecies Resolved
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 27 Aug 2010 15:37:12 EDT
+
+Package: sys_iptables (1.0.0); urgency = new
+
+Abstract:
+	Package provides support to iptables which is used for IPv4 firewall configuration.
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/sys_iptables, spx/PACKAGES.D/sys_iptables/DATA, spx/PACKAGES.D/sys_iptables/SCRIPTS, spx/PACKAGES.D/sys_iptables/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/CreateTree, spx/RULES.D/device.lst, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 26 Aug 2010 17:39:30 IST
+

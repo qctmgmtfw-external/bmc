@@ -1,0 +1,9 @@
+config FEATURE_GLOBAL_WEB_CONSOLE_PREVIEW
+        bool
+        default y if webPreview_support
+        help
+             Enable disable web preview support
+
+endmenu
+
+

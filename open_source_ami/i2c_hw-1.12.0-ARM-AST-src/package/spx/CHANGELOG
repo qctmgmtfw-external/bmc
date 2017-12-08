@@ -1,0 +1,252 @@
+Package: i2c_hw (1.12.0); urgency = critical
+
+Abstract:
+	1. Fix I2C BUS recover not work.
+2. Fix IPMB not response issue. 
+3. Fix to check bus free logic error.
+4. Revise recovery parameters.
+
+Files Modified: data/i2c-hardware.c, data/i2c-hardware.h, data/i2c-module.c, data/i2c-recovery.c
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Fri, 28 Oct 2011 11:38:49 CST
+
+Package: i2c_hw (1.11.0); urgency = high
+
+Abstract:
+	1.fix IPMB transfer and receive error on stress test.
+2.fix received wrong package from ME.
+3.modify i2c timeout default value
+4.adjust I2C clock default to 100KHz.
+5.set buffer size limited of slave receive mode.
+6.add slave mode flag for each bus.
+7.unsupport ARP Host address(0x10) in default.
+8.fix driver wrong error code.
+
+Files Modified: data/i2c-data.h, data/i2c-hardware.c, data/i2c-hardware.h, data/i2c-interrupt.c, data/i2c-transfer.c
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Thu, 13 Oct 2011 19:53:50 CST
+
+Package: i2c_hw (1.10.0); urgency = high
+
+Abstract:
+	Updating the license to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/i2c-module.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 27 Jun 2011 14:50:27 EDT
+
+Package: i2c_hw (1.9.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:26:01 EDT
+
+Package: i2c_hw (1.8.0); urgency = medium
+
+Abstract:
+	Adding support for 7th, 8th & 9th i2c bus for AST2300.
+
+Files Modified: data/i2c-data.h, data/i2c-hardware.c, data/i2c-hardware.h, data/i2c-interrupt.c, data/i2c-module.c, data/i2c-recovery.c, data/i2c-transfer.c
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Fri, 04 Mar 2011 18:34:13 CST
+
+Package: i2c_hw (1.7.0); urgency = high
+
+Abstract:
+	NACK is now correctly reported to waiting thread.
+Waiting thread is now immediately waken upon NACK.
+
+Files Modified: data/i2c-interrupt.c
+
+--Submitter:  () Tue, 15 Feb 2011 18:36:16 CST
+
+Package: i2c_hw (1.6.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/i2c_hw/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 16:26:42 EDT
+
+Package: i2c_hw (1.5.0); urgency = low
+
+Abstract:
+	Correct ast2050evb i2c bus channel to 7
+
+Files Modified: data/i2c-data.h, data/i2c-hardware.c, data/i2c-module.c
+
+--Submitter: Connie Yin (conniey@ami.com) Tue, 12 Oct 2010 14:53:13 EDT
+
+Package: i2c_hw (1.4.0); urgency = medium
+
+Abstract:
+	fix master transmitter and master receiver flag time issue
+
+Files Modified: data/i2c-data.c, data/i2c-data.h, data/i2c-interrupt.c, data/i2c-transfer.c
+
+--Submitter: Connie Yin (conniey@ami.com) Wed, 06 Oct 2010 12:18:06 EDT
+
+Package: i2c_hw (1.3.0); urgency = low
+
+Abstract:
+	Commenting the debug message.
+
+Files Modified: data/i2c-interrupt.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 04 Oct 2010 11:18:26 EDT
+
+Package: i2c_hw (1.2.0); urgency = medium
+
+Abstract:
+	ast2050evb SPX I2C SMB driver
+
+Files Deleted: data/include, data/include/i2c-dev.h, data/include/i2c-id.h, data/include/i2c.h, data/include/libi2c.h
+Files Modified: data/i2c-data.c, data/i2c-data.h, data/i2c-hardware.c, data/i2c-hardware.h, data/i2c-interrupt.c, data/i2c-module.c, data/i2c-recovery.c, data/i2c-transfer.c
+
+--Submitter: Connie Yin (conniey@ami.com) Mon, 20 Sep 2010 16:34:46 EDT
+
+Package: i2c_hw (1.1.0); urgency = security
+
+Abstract:
+	ast2050evb SPX i2c smb driver
+
+Files Added: data/i2c-data.c, data/i2c-data.h, data/i2c-hardware.c, data/i2c-hardware.h, data/i2c-interrupt.c, data/i2c-module.c, data/i2c-recovery.c, data/i2c-transfer.c, data/include, data/include/i2c-dev.h, data/include/i2c-id.h, data/include/i2c.h, data/include/libi2c.h
+Files Deleted: data/i2c-ast.c, data/i2c-ast.h
+Files Modified: data/Makefile
+
+--Submitter: Connie Yin (conniey@ami.com) Mon, 20 Sep 2010 15:19:34 EDT
+
+Package: i2c_hw (1.0.13); urgency = medium
+
+Abstract:
+	Avoid unexpected IRQ.
+Change timeout value.
+
+Files Modified: data/i2c-ast.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 08 Sep 2010 11:07:20 CST
+
+Package: i2c_hw (1.0.12); urgency = medium
+
+Abstract:
+	Add bus recovery function.
+
+Files Modified: data/i2c-ast.c, data/i2c-ast.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 27 Aug 2010 17:00:36 CST
+
+Package: i2c_hw (1.0.11); urgency = medium
+
+Abstract:
+	Change definition name.
+
+Files Modified: data/i2c-ast.c, data/i2c-ast.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 23 Aug 2010 16:31:02 CST
+
+Package: i2c_hw (1.0.10); urgency = medium
+
+Abstract:
+	Change to interrupt-driven model.
+
+Files Deleted: data/i2c-algo-ast.c
+Files Modified: data/Makefile, data/i2c-ast.c, data/i2c-ast.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 23 Aug 2010 14:46:19 CST
+
+Package: i2c_hw (1.0.9); urgency = high
+
+Abstract:
+	clean slave and master mode in i2c_reset
+
+Files Modified: data/i2c-ast.c, data/i2c-ast.h
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Fri, 11 Jun 2010 19:00:27 CST
+
+Package: i2c_hw (1.0.8); urgency = high
+
+Abstract:
+	fix i2c_ast_slave_addr elements exceed in ast2050
+
+Files Modified: data/i2c-ast.c, data/i2c-ast.h
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Fri, 28 May 2010 11:34:01 CST
+
+Package: i2c_hw (1.0.7); urgency = high
+
+Abstract:
+	Add support for AST2300
+
+Files Modified: data/i2c-ast.c, data/i2c-ast.h, spx/INFO
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 27 May 2010 18:16:16 CST
+
+Package: i2c_hw (1.0.6); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:46:38 CST
+
+Package: i2c_hw (1.0.5); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:22:56 EDT
+
+Package: i2c_hw (1.0.4); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:48:28 EDT
+
+Package: i2c_hw (1.0.3); urgency = high
+
+Abstract:
+	add unlock data line function
+
+Files Modified: data/i2c-algo-ast.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 11 Mar 2010 17:15:30 CST
+
+Package: i2c_hw (1.0.2); urgency = high
+
+Abstract:
+	1. fix duplicated sent stop bit error
+2. send stop bit when there's no data sent
+
+Files Modified: data/i2c-algo-ast.c, spx/INFO
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 11 Mar 2010 13:49:39 CST
+
+Package: i2c_hw (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:59:09 EST
+
+Package:i2c_hw (1.0.0);urgency=new
+
+Abstract:
+	This pacakge contains I2C hardware level driver for AST2050 SoC.
+
+Files Added: i2c-algo-ast.c, i2c-ast.c, i2c-ast.h, Makefile
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 19 Nov 2009 16:05:51 -0500

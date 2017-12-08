@@ -1,0 +1,18 @@
+Package : libEventLogDes
+Non-Editable : YES
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : sridharch  (sridharch@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : YES
+Config-Tag : Event Log Error Description
+Group : LIBRARY
+Depends : libunix
+Package-License : AMI
+Description : Event Log Error Description
+.

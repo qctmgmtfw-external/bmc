@@ -1,0 +1,245 @@
+Package: libipmihalhw (2.5.1); urgency = low
+
+Abstract:
+	Adding libpeci functions to halhw
+
+Files Modified: data/hal_hw.c
+
+--Submitter: David Wise (davidw@ami.com) Mon, 08 Aug 2011 18:27:28 EDT
+
+Package: libipmihalhw (2.5.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+Files Modified: data/hal_hw.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 28 Jun 2011 17:24:31 CST
+
+Package: libipmihalhw (2.4.1); urgency = low
+
+Abstract:
+	Adding LPC uart rounting feature
+
+Files Modified: data/hal_hw.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 28 Jun 2011 15:09:22 CST
+
+Package: libipmihalhw (2.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:50:42 EDT
+
+Package: libipmihalhw (2.3.0); urgency = medium
+
+Abstract:
+	Handles needed to get and set I2C recovery function.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 20 Apr 2011 18:36:52 IST
+
+Package: libipmihalhw (2.2.0); urgency = low
+
+Abstract:
+	Add the function "enable all fan"
+
+Files Modified: data/hal_hw.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Thu, 07 Apr 2011 20:41:16 CST
+
+Package: libipmihalhw (2.1.0); urgency = low
+
+Abstract:
+	add function 
+1 set_pwm_dutycycle
+2 get_pwm_dutycycle
+let PDK use it.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Fri, 25 Mar 2011 14:38:39 CST
+
+Package: libipmihalhw (2.0.0); urgency = medium
+
+Abstract:
+	Incrementing the package version to 2.0.0
+
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:23:03 IST
+
+Package: libipmihalhw (1.7.0); urgency = high
+
+Abstract:
+	modified to return the proper error codes as returned by the lower layers
+
+Files Modified: data/hal_hw.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Tue, 18 Jan 2011 18:30:17 EST
+
+Package: libipmihalhw (1.6.0); urgency = low
+
+Abstract:
+	Correct function name.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Thu, 13 Jan 2011 18:14:17 CST
+
+Package: libipmihalhw (1.5.0); urgency = low
+
+Abstract:
+	Add the interrupt in the table
+
+Files Modified: data/hal_hw.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Thu, 13 Jan 2011 15:25:48 CST
+
+Package: libipmihalhw (1.4.0); urgency = low
+
+Abstract:
+	Increment element in fan config table in fan_set_connect.  Otherwise fan config is overwritten on next senor fan_set_connect call.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: David Wise (davidw@ami.com) Mon, 01 Nov 2010 14:30:30 EDT
+
+Package: libipmihalhw (1.3.0); urgency = medium
+
+Abstract:
+	Fix in fan_set_connect.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 12 Oct 2010 18:51:27 EDT
+
+Package: libipmihalhw (1.2.0); urgency = low
+
+Abstract:
+	Correction in debug message.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 04 Oct 2010 16:42:09 EDT
+
+Package: libipmihalhw (1.1.0); urgency = medium
+
+Abstract:
+	Implementing i2c_read_reg function.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: Sridhar Ch (sridharch@amiindia.co.in) Mon, 20 Sep 2010 14:14:19 IST
+
+Package: libipmihalhw (1.0.11); urgency = low
+
+Abstract:
+	Commenting the Error message "Error in loading IPMI library" as this is not a error.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 30 Jul 2010 17:07:15 IST
+
+Package: libipmihalhw (1.0.10); urgency = medium
+
+Abstract:
+	1. The parameter sequence of HAL I2C Hanlder is not correct
+2. Auto fill fan map table
+
+Files Modified: data/hal_hw.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Tue, 13 Jul 2010 17:27:51 CST
+
+Package: libipmihalhw (1.0.9); urgency = medium
+
+Abstract:
+	Adding i2c_set_host_address, i2c_slave_read_on_fd and i2c_master_write_on_fd to g_HALI2CInit table.
+
+Files Modified: data/hal_hw.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 29 Jun 2010 22:18:21 IST
+
+Package: libipmihalhw (1.0.8); urgency = low
+
+Abstract:
+	Fixed binary build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 25 Jun 2010 12:59:25 EDT
+
+Package: libipmihalhw (1.0.7); urgency = low
+
+Abstract:
+	Changes done to remove i2c dependancy
+
+Files Modified: data/hal_hw.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 11 Jun 2010 19:38:31 IST
+
+Package: libipmihalhw (1.0.6); urgency = low
+
+Abstract:
+	Removing gpio,i2c,peci,adc from includes in Makefile as these dependancies are removed
+
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 11 Jun 2010 14:56:09 IST
+
+Package: libipmihalhw (1.0.5); urgency = medium
+
+Abstract:
+	Changes have been done to load device specific libraries for gpio,i2c,adc,peci dynamically.
+
+Files Modified: data/hal_hw.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 17:40:01 IST
+
+Package: libipmihalhw (1.0.4); urgency = medium
+
+Abstract:
+	Reading of ADC and Fan values has been made generic in HAL layer of IPMI
+
+Files Modified: data/hal_hw.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 28 Apr 2010 17:44:15 IST
+
+Package: libipmihalhw (1.0.3); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:54:07 EDT
+
+Package: libipmihalhw (1.0.2); urgency = low
+
+Abstract:
+	Adding peci_driver_dev, libpwmtach_dev, libmmap_dev and libadc_dev build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Thu, 11 Mar 2010 17:35:17 EST
+
+Package: libipmihalhw (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:05:36 EST
+
+Package:libipmihalhw (1.0.0);urgency=new
+
+Abstract:
+	Library package for HAL hardware.
+
+Files Added: hal_hw.c, Makefile
+
+--Submitter: sakthipriya M (sakthipriyam@amiindia.co.in) Wed, 9 Dec 2009 15:00:12 +0800

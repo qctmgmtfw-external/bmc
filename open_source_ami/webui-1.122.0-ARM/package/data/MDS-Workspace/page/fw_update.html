@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<link href="../www/style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../www/lib/include.js" type="text/javascript"></script>
+	<script src="../www/lib/form.js" type="text/javascript"></script>
+	<link href="../www/lib/listgrid.css" type="text/css" rel="stylesheet" />
+	<script src="../www/lib/listgrid.js" type="text/javascript"></script>
+</head>
+
+<body oncontextmenu="return false;">
+	<h3>Firmware Update</h3>
+	<p>Upgrade firmware of the device. Press &quot;Enter Update Mode&quot; to 
+	put the device in update mode.</p>
+
+	<div class="subSection">
+		<strong>WARNING:</strong>Please note that after entering update mode 
+		widgets, other web pages and services will not work. All open widgets 
+		will be closed automatically. If upgrade process is cancelled in the 
+		middle of the wizard, the device will reset.
+		<br><br>
+
+		<div id="_divPrsrvAll"><input type="checkbox" id="_chkPrsrvAll">
+		&nbsp;<label for="_chkPrsrvAll">Preserve all Configuration. </label>
+		This will preserve all the configurations during firmware update.
+		<label id="_lblPrsrvAllDesc"></label></div>
+
+		<table cellspacing="0" cellpadding="0" border="0" width="97%">
+		<tr><td width="500">
+			<ul id="_wizard" class="wizard">
+			<li id="_clientRequests"><img src="../www/res/not_started.png"/> 
+				Closing all active client requests.</li>
+			<li id="_prepareDevice"><img src="../www/res/not_started.png"/> 
+				Preparing device for firmware upgrade.</li>
+			<li id="_uploadImage"><img src="../www/res/not_started.png"/> 
+				Uploading firmware image.</li>
+			<li id="_verifyImage"><img src="../www/res/not_started.png"/> 
+				Verifying firmware image.</li>
+			<li id="_flashImage"><img src="../www/res/not_started.png"/> 
+				Flashing firmware image. <span id="_percentageFlashed"></span>
+				</li>
+			<li id="_resetDevice"><img src="../www/res/not_started.png"/> 
+				Resetting Device.</li>
+			</ul>
+		</td>
+		<td id="_section" class="section" valign="top"></td></tr>
+		</table>
+		<iframe name="hiddenFrame" class="hide"></iframe>
+	</div>
+
+	<div id="_divPrsrvCfg">This section lists the configuration items, that 
+		will be preserved during restore factory default configuration. Click 
+		&quot;Enter Preserve Configuration&quot; to modify the preserve 
+		configuration items.
+		<br><br>
+		<div id="_lgdPrsrvCfg"></div>
+		<br><br>
+	</div>
+
+	<div class="btnTray">
+		<input type="button" id="_btnKeyUpload" value="Upload SignImage Key" />
+		<input type="button" id="_btnPrsrvCfg" 
+			value="Enter Preserve Configuration" />
+		<input type="button" id="_btnFWUpdate" value="Enter Update Mode" />
+	</div>
+</body>
+</html>

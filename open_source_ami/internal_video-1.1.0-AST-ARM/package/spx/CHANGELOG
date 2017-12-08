@@ -1,0 +1,18 @@
+Package: internal_video (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:26:34 EDT
+
+Package: internal_video (1.0.0); urgency = new
+
+Abstract:
+	This is a dummy package to select internal video source on AST SOC.
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 17 Jan 2011 14:03:55 CST
+

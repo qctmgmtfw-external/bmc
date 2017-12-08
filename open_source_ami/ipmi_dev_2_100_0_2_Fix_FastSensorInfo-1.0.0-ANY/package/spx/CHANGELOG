@@ -1,0 +1,9 @@
+Package: ipmi_dev_2_100_0_2_Fix_FastSensorInfo (1.0.0); urgency = new
+
+Abstract:
+	Added neccsary structure and macro for AMIGetSensorinfo Command.
+
+Files Added: data, data/00-data_IPMIDefs.h, data/01-data_AMIConf.h, data/02-data_IPMI_AMI.h, data/03-data_IPMI_AMIConf.h, data/04-data_Support.h, data/05-data_Sensor.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 17 Sep 2011 16:51:25 IST
+

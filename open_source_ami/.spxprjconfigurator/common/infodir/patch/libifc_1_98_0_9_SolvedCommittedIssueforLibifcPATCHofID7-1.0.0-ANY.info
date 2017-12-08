@@ -1,0 +1,20 @@
+Package : libifc_1_98_0_9_SolvedCommittedIssueforLibifcPATCHofID7
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 9 for libifc (1.98.0)
+Depends :  libifc(==1.98.0)
+PatchOrder : 9
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  BenChen (Benchen@ami.comt.w)
+Urgency : new
+Description : Solved committed issue for libifc Patch of ID7
+.
+

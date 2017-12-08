@@ -1,0 +1,18 @@
+Package : fdserverapp
+Non-Editable : YES
+Version : 1.17.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : app
+Essential : NO
+Config-Tag : Floppy Device Support
+Group : MEDIA
+Required : libtoken, libdbgout, libunix, libvmedia, Floppy_support, vmapp, libncml
+Package-License : AMI
+Description : This Package includes build fdserver application.
+.

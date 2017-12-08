@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files/>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>@BASESOC_AST</package-name>
+<version>1.4.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides>BASESOC</provides>
+<enableprovides/>
+<section>info</section>
+<build-depends/>
+<depends/>
+<required>
+<package-name operator="" version="">@ARCH_ARM</package-name>
+<package-name operator="" version="">hw_kcs</package-name>
+<package-name operator="" version="">hw_gpio</package-name>
+<package-name operator="" version="">hw_usb</package-name>
+<package-name operator="" version="">hw_peci</package-name>
+<package-name operator="" version="">hw_videocap</package-name>
+<package-name operator="" version="">hw_pwmtach</package-name>
+<package-name operator="" version="">hw_i2c</package-name>
+<package-name operator="" version="">hw_reset</package-name>
+<package-name operator="" version="">hw_snoop</package-name>
+</required>
+<conflicts/>
+<essential>NO</essential>
+<group>BASE</group>
+<configtags/>
+<installsize/>
+<description>Package specifying BASESOC is AST</description>
+<architecture>ANY</architecture>
+<owner>AMI</owner>
+<maintainer>Samvinesh Christopher  </maintainer>
+<maintainer-email>vineshc@ami.com</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/@BASESOC_AST-1.4.0-ANY/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/@BASESOC_AST-1.4.0-ANY/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

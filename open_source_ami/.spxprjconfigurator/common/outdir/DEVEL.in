@@ -1,0 +1,309 @@
+menu "Development Kits Configuration"
+
+config videocap_driver_dev (1.14.0)
+	bool 
+	default n
+	select crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	depends on internal_video
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This package contains video capture driver development header files.
+
+#--------------------------------------
+config adc_driver_dev (1.6.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	help
+		This package contains ADC driver development header files.
+
+#--------------------------------------
+config gpio_driver_dev (1.10.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	help
+		This package contains GPIO driver development header files.
+
+#--------------------------------------
+config helper_driver_dev (1.10.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  kernel_dev
+	select  rules
+	select  libfmh_dev
+	select  platform
+	help
+		This pacakge includes the Helper driver header files used across various other drivers.
+
+#--------------------------------------
+config kcs_driver_dev (1.10.0)
+	bool 
+	default n
+	select crosscc
+	select  rules
+	select  global_dev
+	select  kernel_dev
+	select  helper_driver_dev
+	select  libdbgout_dev
+	help
+		KCS driver devl package
+
+#--------------------------------------
+config kernel_dev (1.6.1)
+	bool "Kernel Development for AST2300EVB"
+	default y
+	select @Kernel_oem_ast2300evb
+	select  buildtools
+	select  crosscc
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		Provides the Kernel Development files. This is needed  for driver developement
+
+#--------------------------------------
+config libEventLogDes_dev (1.1.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		SEL Log error description
+
+#--------------------------------------
+config libPreserveConf_dev (1.5.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Package Description.
+
+#--------------------------------------
+config libUserPrivilege_dev (1.2.0)
+	bool 
+	default n
+	help
+		User Privilege Development Header files.
+
+#--------------------------------------
+config libadc_dev (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		LIBADC development header files.
+
+#--------------------------------------
+config libexpandedgpio_dev (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Expanded GPIO development header files.
+
+#--------------------------------------
+config libgpio_dev (1.5.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		GPIO development header files.
+
+#--------------------------------------
+config libi2c_dev (1.5.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		I2C Development Header files.
+
+#--------------------------------------
+config libipmi_dev (2.38.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		LIBIPMI development header files.
+
+#--------------------------------------
+config liblpcuart_dev (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		LIBLPCUART development header files.
+
+#--------------------------------------
+config libmmap_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		MMAP development header files
+
+#--------------------------------------
+config libncml_dev (1.22.0)
+	bool "NCML development header files"
+	default n
+	depends on @ARCH_ARM
+	help
+		Network connection manager library development package
+
+#--------------------------------------
+config libncsiconf_dev (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Development package for user configuration access routines of NCSI.
+
+#--------------------------------------
+config libpeci_dev (1.9.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		PECI Development Header files.
+
+#--------------------------------------
+config libphyconf_dev (1.8.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains PHY configuration related APIs
+
+#--------------------------------------
+config libpmbus_dev (1.6.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		PMBus development header
+
+#--------------------------------------
+config libreset_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains the development package for RESET library.
+
+#--------------------------------------
+config libsmb_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		SMB Development Header File.
+
+#--------------------------------------
+config libsnoop_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Snoop library development header files.
+
+#--------------------------------------
+config lpcuart_driver_dev (1.4.0)
+	bool 
+	default n
+	select crosscc
+	select  kernel_dev
+	select  rules
+	select  global_dev
+	select  helper_driver_dev
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	help
+		This package contains lpcuart driver development header files.
+
+#--------------------------------------
+config ncml_configuration (1.11.0)
+	bool 
+	default n
+	help
+		This package contains the default configuration file of ncml package. This defualt configuration can be overriden by any OEM specific configuration pacakge.
+
+#--------------------------------------
+config netmon_driver_dev (1.14.0)
+	bool 
+	default n
+	select kernel_dev
+	select  rules
+	select  crosscc
+	help
+		Network Interface Monitor Development Package. It monitors addition/removal of network interface and changes in the Interface status.Applications query the Interface count, name and information. Also applications use ioctl calls to wait for Interface changesThis package Contains the related header files and libraries.
+
+#--------------------------------------
+config pwmtach_driver_dev (1.8.0)
+	bool 
+	default n
+	select kernel_dev
+	select  global_dev
+	select  rules
+	select  crosscc
+	select  helper_driver_dev
+	select  libdbgout_dev
+	help
+		This package includes PWMATACH driver Development header files.
+
+#--------------------------------------
+config reset_driver_dev (1.7.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	help
+		Reset common driver development package.
+
+#--------------------------------------
+config snoop_driver_dev (1.5.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  reset_driver_dev
+	help
+		This package contains the Snoop Driver development files.
+
+#--------------------------------------
+config watchdog_driver_dev (1.6.0)
+	bool 
+	default n
+	select crosscc
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  global_dev
+	help
+		watchdog common driver development package
+
+#--------------------------------------
+
+endmenu
+
+

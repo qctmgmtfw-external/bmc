@@ -1,0 +1,55 @@
+Package: Kernel_platform_ast2300evb (1.4.0); urgency = high
+
+Abstract:
+	Added Macronix 32MB "MX25L25735E" flash part support
+
+Files Modified: data/30-arch_arm_mach-ast2300evb_setup.c
+
+--Submitter: royku (royku@ami.com.tw) Wed, 06 Jul 2011 13:36:24 CST
+
+Package: Kernel_platform_ast2300evb (1.3.0); urgency = low
+
+Abstract:
+	Correct file name and few definitions from ast2050 to ast2300
+
+Files Added: data/03-arch_arm_configs_ast2300evb_defconfig, data/09-arch_arm_mach-ast2300evb_include_mach_astmacdef.h, data/10-arch_arm_mach-ast2300evb_include_mach_dma.h, data/11-arch_arm_mach-ast2300evb_include_mach_bits.h, data/12-arch_arm_mach-ast2300evb_include_mach_debug-macro.S, data/13-arch_arm_mach-ast2300evb_include_mach_entry-macro.S, data/14-arch_arm_mach-ast2300evb_include_mach_hardware.h, data/15-arch_arm_mach-ast2300evb_include_mach_io.h, data/16-arch_arm_mach-ast2300evb_include_mach_irqs.h, data/17-arch_arm_mach-ast2300evb_include_mach_lowlevel_serial.h, data/18-arch_arm_mach-ast2300evb_include_mach_memory.h, data/19-arch_arm_mach-ast2300evb_include_mach_param.h, data/20-arch_arm_mach-ast2300evb_include_mach_platform.h, data/21-arch_arm_mach-ast2300evb_include_mach_serial.h, data/22-arch_arm_mach-ast2300evb_include_mach_system.h, data/23-arch_arm_mach-ast2300evb_include_mach_timex.h, data/24-arch_arm_mach-ast2300evb_include_mach_uncompress.h, data/25-arch_arm_mach-ast2300evb_include_mach_vmalloc.h, data/26-arch_arm_mach-ast2300evb_irq.c, data/27-arch_arm_mach-ast2300evb_Kconfig, data/28-arch_arm_mach-ast2300evb_Makefile, data/29-arch_arm_mach-ast2300evb_Makefile.boot, data/30-arch_arm_mach-ast2300evb_setup.c, data/31-arch_arm_mach-ast2300evb_time.c
+Files Deleted: data/03-arch_arm_configs_ast2050evb_defconfig, data/09-arch_arm_mach-ast2050evb_include_mach_astmacdef.h, data/10-arch_arm_mach-ast2050evb_include_mach_dma.h, data/11-arch_arm_mach-ast2050evb_include_mach_bits.h, data/12-arch_arm_mach-ast2050evb_include_mach_debug-macro.S, data/13-arch_arm_mach-ast2050evb_include_mach_entry-macro.S, data/14-arch_arm_mach-ast2050evb_include_mach_hardware.h, data/15-arch_arm_mach-ast2050evb_include_mach_io.h, data/16-arch_arm_mach-ast2050evb_include_mach_irqs.h, data/17-arch_arm_mach-ast2050evb_include_mach_lowlevel_serial.h, data/18-arch_arm_mach-ast2050evb_include_mach_memory.h, data/19-arch_arm_mach-ast2050evb_include_mach_param.h, data/20-arch_arm_mach-ast2050evb_include_mach_platform.h, data/21-arch_arm_mach-ast2050evb_include_mach_serial.h, data/22-arch_arm_mach-ast2050evb_include_mach_system.h, data/23-arch_arm_mach-ast2050evb_include_mach_timex.h, data/24-arch_arm_mach-ast2050evb_include_mach_uncompress.h, data/25-arch_arm_mach-ast2050evb_include_mach_vmalloc.h, data/26-arch_arm_mach-ast2050evb_irq.c, data/27-arch_arm_mach-ast2050evb_Kconfig, data/28-arch_arm_mach-ast2050evb_Makefile, data/29-arch_arm_mach-ast2050evb_Makefile.boot, data/30-arch_arm_mach-ast2050evb_setup.c, data/31-arch_arm_mach-ast2050evb_time.c
+Files Modified: data/01-arch_arm_Makefile, data/02-arch_arm_Kconfig, data/04-arch_arm_mm_Kconfig, data/05-arch_arm_tools_mach-types
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 27 May 2011 13:14:03 CST
+
+Package: Kernel_platform_ast2300evb (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:35:28 EDT
+
+Package: Kernel_platform_ast2300evb (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:50:49 EDT
+
+Package: Kernel_platform_ast2300evb (1.0.1); urgency = medium
+
+Abstract:
+	Change as per the removing of VUART.
+
+Files Modified: data/20-arch_arm_mach-ast2050evb_include_mach_platform.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 27 Aug 2010 14:32:27 CST
+
+Package: Kernel_platform_ast2300evb (1.0.0); urgency = new
+
+Abstract:
+	AST2300 Fixes to Kernel 2.6.28.10
+
+Files Added: data, data/01-arch_arm_Makefile, data/02-arch_arm_Kconfig, data/03-arch_arm_configs_ast2050evb_defconfig, data/04-arch_arm_mm_Kconfig, data/05-arch_arm_tools_mach-types, data/06-arch_arm_include_asm_mach_arch.h, data/07-arch_arm_include_asm_mach_irq.h, data/08-arch_arm_include_asm_mach_time.h, data/09-arch_arm_mach-ast2050evb_include_mach_astmacdef.h, data/10-arch_arm_mach-ast2050evb_include_mach_dma.h, data/11-arch_arm_mach-ast2050evb_include_mach_bits.h, data/12-arch_arm_mach-ast2050evb_include_mach_debug-macro.S, data/13-arch_arm_mach-ast2050evb_include_mach_entry-macro.S, data/14-arch_arm_mach-ast2050evb_include_mach_hardware.h, data/15-arch_arm_mach-ast2050evb_include_mach_io.h, data/16-arch_arm_mach-ast2050evb_include_mach_irqs.h, data/17-arch_arm_mach-ast2050evb_include_mach_lowlevel_serial.h, data/18-arch_arm_mach-ast2050evb_include_mach_memory.h, data/19-arch_arm_mach-ast2050evb_include_mach_param.h, data/20-arch_arm_mach-ast2050evb_include_mach_platform.h, data/21-arch_arm_mach-ast2050evb_include_mach_serial.h, data/22-arch_arm_mach-ast2050evb_include_mach_system.h, data/23-arch_arm_mach-ast2050evb_include_mach_timex.h, data/24-arch_arm_mach-ast2050evb_include_mach_uncompress.h, data/25-arch_arm_mach-ast2050evb_include_mach_vmalloc.h, data/26-arch_arm_mach-ast2050evb_irq.c, data/27-arch_arm_mach-ast2050evb_Kconfig, data/28-arch_arm_mach-ast2050evb_Makefile, data/29-arch_arm_mach-ast2050evb_Makefile.boot, data/30-arch_arm_mach-ast2050evb_setup.c, data/31-arch_arm_mach-ast2050evb_time.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/@Kernel_platform_ast2300evb, spx/PACKAGES.D/@Kernel_platform_ast2300evb/DATA, spx/PACKAGES.D/@Kernel_platform_ast2300evb/SCRIPTS, spx/PACKAGES.D/@Kernel_platform_ast2300evb/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/ApplyPatch
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 27 May 2010 17:58:16 CST
+

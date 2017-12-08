@@ -1,0 +1,52 @@
+Package: libcompress (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:44:10 EDT
+
+Package: libcompress (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:53:27 EDT
+
+Package: libcompress (1.0.3); urgency = medium
+
+Abstract:
+	Updated Hw compression handling for both Pilot2 and Pilot3
+
+Files Modified: data/compress.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 11 Aug 2010 16:08:22 EDT
+
+Package: libcompress (1.0.2); urgency = high
+
+Abstract:
+	Video support libraries customized for Pilot2 and Pilot3
+
+Files Modified: data/compress.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 10 Aug 2010 21:45:43 EDT
+
+Package: libcompress (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:03:46 EST
+
+Package:libcompress (1.0.0);urgency=new
+
+Abstract:
+	This package contains the COMPRESS library.
+
+Files Added: rle.h, minilzo.c, minilzo.h, qlzw.c, qlzw.h, compress.h, lzoconf.h, Makefile, compress_types.h, rle.c, interface_minilzo.c
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Tue, 8 Dec 2009 17:31:57 -0500

@@ -1,0 +1,38 @@
+#----------------------------------------------------------------------
+# 			Rules.make for Applications 
+# 		   Copyright (c) 2003 American Megatrends Inc 
+#-----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#			Include Global Rules 
+#----------------------------------------------------------------------
+include ${TOOLDIR}/rules/Rules.global
+
+CFLAGS += -DPKG_MAJOR=${PKG_MAJOR} -DPKG_MINOR=${PKG_MINOR} -DPKG_AUX=${PKG_AUX}
+
+LIBS += -Wl,-rpath-link ${BLDPRJAREA}/target/usr/local/lib -Wl,-rpath-link ${BLDPRJAREA}/target/usr/lib -Wl,-rpath-link ${BLDPRJAREA}/target/lib
+LIBS += -Wl,-rpath /usr/local/lib -Wl,-rpath /usr/lib -Wl,-rpath /lib
+
+LIBS += -Wl,-rpath-link ${SPXLIB}/linker	# SPX Library paths
+
+all:   .depend $(TARGET)	# If your module exports symbols
+
+$(TARGET): $(SRC:.c=.o) $(SRCCPP:.cpp=.o)
+	@echo "  LD      $@"
+	@$(CC) $^ $(LIBS) -o $@
+ifeq ($(DEBUG),n)
+	@echo "  STRIP   $@"
+	@$(STRIP) $@
+endif
+
+depend .depend dep:
+	@echo "  DEP     $(TARGET)"
+	@$(CC) $(CFLAGS) -M  $(SRC) > $@
+
+clean:
+	@rm -f *.o *~ core .depend $(TARGET)
+
+ifeq (.depend,$(wildcard .depend))
+include .depend
+endif
+#------------------------- End of Rules.Make ---------------------------
+

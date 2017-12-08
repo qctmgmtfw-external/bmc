@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_44_Fix_IPMItool_IPv6_get_session_all_fail
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 44 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 44
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  KennyWu (Kennywu@ami.com.tw)
+Urgency : new
+Description : Fix IPMItool IPv6 get session all cause buffer overflow.
+.
+

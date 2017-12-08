@@ -1,0 +1,254 @@
+Package: libuserauth (1.27.0); urgency = medium
+
+Abstract:
+	Common code between ipmi,ldap,ad moved to user-auth
+
+Files Added: data/user_helper.h
+Files Modified: data/Makefile, data/user_auth.c, data/user_auth.h, spx/INFO, spx/RULES
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 11 Aug 2011 20:50:19 IST
+
+Package: libuserauth (1.26.0); urgency = low
+
+Abstract:
+	#endif without #if, So #endif removed.
+
+Files Modified: data/user_auth.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 10:08:22 IST
+
+Package: libuserauth (1.25.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/Makefile, data/user_auth.c, data/user_auth.h, spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:19:25 IST
+
+Package: libuserauth (1.24.0); urgency = medium
+
+Abstract:
+	Same Session Handle is used for  GetRequserinfo and Audit Hook
+
+Files Modified: data/user_auth.c, data/user_auth.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 29 Jul 2011 19:49:29 IST
+
+Package: libuserauth (1.23.0); urgency = medium
+
+Abstract:
+	Removed the local define of UDS Authentication Flag as it is declared as a global enum
+
+Files Modified: data/user_auth.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Jul 2011 16:26:18 IST
+
+Package: libuserauth (1.22.0); urgency = medium
+
+Abstract:
+	Removed PAMModuleCount function and used as macro.
+
+Files Modified: data/user_auth.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 21 Jul 2011 17:22:58 IST
+
+Package: libuserauth (1.21.0); urgency = medium
+
+Abstract:
+	Setting the service and user inforamtion to environment variable
+
+Files Modified: data/user_auth.c, data/user_auth.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 08 Jul 2011 14:22:22 IST
+
+Package: libuserauth (1.20.0); urgency = low
+
+Abstract:
+	Proper closing of iniparser handle.
+
+Files Modified: data/user_auth.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 29 Jun 2011 19:51:39 IST
+
+Package: libuserauth (1.19.0); urgency = low
+
+Abstract:
+	adding appropriate macros for login logout audit
+
+Files Modified: data/user_auth.h
+
+--Submitter: sridhar ch (sridharch@amiindia.co.in) Wed, 29 Jun 2011 05:43:54 TLT
+
+Package: libuserauth (1.18.0); urgency = medium
+
+Abstract:
+	Whenever AD, LDAP user logs in, Inspite of successful login some error messages(info messages) are displayed.changed this info messages to debug messages.
+
+Files Modified: data/user_auth.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 28 Jun 2011 19:35:48 IST
+
+Package: libuserauth (1.17.0); urgency = high
+
+Abstract:
+	Cleared high order bits of GID,as Superh architecture supports only 16 bit GID
+
+Files Modified: data/user_auth.c
+
+--Submitter: ManimehalaiS (manimehalais@amiindia.co.in) Thu, 23 Jun 2011 14:46:05 IST
+
+Package: libuserauth (1.16.0); urgency = medium
+
+Abstract:
+	Modified the Essential and depedency part, as this package is selected by default
+
+Files Modified: spx/INFO
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 06 Jun 2011 12:27:12 IST
+
+Package: libuserauth (1.15.0); urgency = medium
+
+Abstract:
+	Removing UDS close session call when local session was not established.
+
+Files Modified: data/user_auth.c
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Tue, 17 May 2011 14:40:43 IST
+
+Package: libuserauth (1.14.0); urgency = medium
+
+Abstract:
+	Fix for UDS session was not closed when invalid ipmi username or password given in webgo
+
+Files Modified: data/user_auth.c
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Mon, 16 May 2011 18:33:17 IST
+
+Package: libuserauth (1.13.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:14:42 EDT
+
+Package: libuserauth (1.12.0); urgency = high
+
+Abstract:
+	remove SNMP specific parameters for commands to not break anything
+
+Files Modified: data/user_auth.c
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 19:23:02 EDT
+
+Package: libuserauth (1.11.0); urgency = high
+
+Abstract:
+	SNMP related updates to fix build error
+
+Files Modified: data/user_auth.c
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 15:02:11 EDT
+
+Package: libuserauth (1.10.0); urgency = medium
+
+Abstract:
+	User name length is changed from 17 to 16
+
+Files Modified: data/user_auth.c, data/user_auth.h, spx/INFO
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Mon, 11 Apr 2011 15:47:50 IST
+
+Package: libuserauth (1.9.0); urgency = low
+
+Abstract:
+	MapGidToUserPrivilege function can be used globally.
+
+Files Modified: data/user_auth.c, data/user_auth.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 05 Apr 2011 19:38:51 IST
+
+Package: libuserauth (1.8.0); urgency = medium
+
+Abstract:
+	Added libipmi/libipmi_dev dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 05 Apr 2011 10:13:59 EDT
+
+Package: libuserauth (1.7.0); urgency = critical
+
+Abstract:
+	Fix for getent failure in SH4. 
+Added libraries to link : libipmiparams and libpam
+
+Files Modified: data/Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Mar 2011 11:40:05 EST
+
+Package: libuserauth (1.6.0); urgency = low
+
+Abstract:
+	if user is disabled in one PAM, then need not to authenticate with next PAM hierachy. only next hierarchy gets control when user is not available.
+
+Files Modified: data/user_auth.c, data/user_auth.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 02 Mar 2011 14:38:42 IST
+
+Package: libuserauth (1.5.0); urgency = medium
+
+Abstract:
+	PAM Modules will not allow other modules to check with user crendential, when wrong password is passed to the existing username.
+
+Files Modified: data/user_auth.c, data/user_auth.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 16 Feb 2011 12:04:23 IST
+
+Package: libuserauth (1.4.0); urgency = medium
+
+Abstract:
+	including Auth_flag to determine whether create local session needs to authenticate with given username/password, else null username/password can be used to create session.
+
+Files Modified: data/user_auth.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 09 Feb 2011 17:45:13 IST
+
+Package: libuserauth (1.3.0); urgency = medium
+
+Abstract:
+	fixing build error
+
+Files Modified: data/user_auth.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 31 Jan 2011 17:07:39 IST
+
+Package: libuserauth (1.2.0); urgency = medium
+
+Abstract:
+	user if disabled pam-ipmi itself returns failure
+
+Files Modified: data/user_auth.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 31 Jan 2011 16:48:54 IST
+
+Package: libuserauth (1.1.0); urgency = medium
+
+Abstract:
+	pam authentication uses user and passwd verification thro LIBIPMI_GetUserIDForUserName instead of using CreateSession as the latter considers privilege as a factor for restricting user access
+
+Files Modified: data/user_auth.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Wed, 12 Jan 2011 11:30:51 IST
+
+Package: libuserauth (1.0.0); urgency = new
+
+Abstract:
+	This package contains helper functions for PAM and NSS  libraries. it can be OEM Extensible.
+
+Files Added: data, data/Makefile, data/user_auth.c, data/user_auth.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libuserauth, spx/PACKAGES.D/libuserauth/DATA, spx/PACKAGES.D/libuserauth/SCRIPTS, spx/PACKAGES.D/libuserauth/SCRIPTS/dev-install, spx/PACKAGES.D/libuserauth_dev, spx/PACKAGES.D/libuserauth_dev/DATA, spx/PACKAGES.D/libuserauth_dev/SCRIPTS, spx/PACKAGES.D/libuserauth_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 07 Jan 2011 14:17:57 IST
+

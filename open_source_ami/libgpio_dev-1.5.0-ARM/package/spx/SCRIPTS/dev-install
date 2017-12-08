@@ -1,0 +1,12 @@
+# Install Script
+#
+build-install:
+	MKDIR_NOCLEAN %SPXINC/gpio
+		COPY_FILE ./gpioifc.h %SPXINC/gpio
+		COPY_FILE ./intrsensor.h %SPXINC/gpio
+	MKDIR_NOCLEAN %SPXLIB/gpio
+	COPY_FILE ./libgpio.a %SPXLIB/gpio
+	COPY_FILE libgpio.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/gpio
+	ADD_LIBRARY_LINKS %SPXLIB/gpio libgpio.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+        
+debug-install:

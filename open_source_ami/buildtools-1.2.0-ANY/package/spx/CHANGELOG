@@ -1,0 +1,27 @@
+Package: buildtools (1.2.0); urgency = medium
+
+Abstract:
+	Support for renaming workspace. Need SET_PATH to generate %TOOLDIR based on the current workspace path
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 22 Jul 2011 16:24:08 EDT
+
+Package: buildtools (1.1.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:24:05 EST
+
+Package:buildtools (1.0.0);urgency=new
+
+Abstract:
+	This package provides some build tools used to build SPX
+ The tools runs on host x86 based linux
+
+Files Added: mkcramfs, mkfs.jffs2, mkimage
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 8 Sep 2009 14:37:09 -0400

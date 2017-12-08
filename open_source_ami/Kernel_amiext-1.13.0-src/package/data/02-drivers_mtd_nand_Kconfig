@@ -1,0 +1,15 @@
+--- linux.old/drivers/mtd/nand/Kconfig	2006-02-10 02:22:48.000000000 -0500
++++ linux.med/drivers/mtd/nand/Kconfig	2008-09-05 16:06:38.259797159 -0400
+@@ -365,6 +365,12 @@
+ 	  The simulator may simulate various NAND flash chips for the
+ 	  MTD nand layer.
+ 
++config MTD_NAND_MAP_AMI
++       bool "Support for AMI Parition for NAND"
++       depends on MTD_NAND && MTD_PARTITIONS
++       help
++          Select if you want AMI's method of NAND Paritioning
++
+ config MTD_NAND_PLATFORM
+ 	tristate "Support for generic platform NAND driver"
+ 	depends on MTD_NAND

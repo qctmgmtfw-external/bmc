@@ -1,0 +1,20 @@
+Package : libipmidcmi_2_8_0_2_EIP_140333_FixSetMgtCtrlIdStringCmdTimeoutIssue
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libipmidcmi (2.8.0)
+Depends :  libipmidcmi(==2.8.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  amy tsai (AmyTsai@ami.com.tw)
+Urgency : new
+Description : Set Management Controller Identifier String will timeout.
+.
+

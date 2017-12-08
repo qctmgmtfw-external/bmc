@@ -1,0 +1,9 @@
+Package: flasher_1_19_0_3_EIP171751_PreserveCfgDuringFwUpdate (1.0.0); urgency = new
+
+Abstract:
+	Preserve configuration fail during firmware update
+
+Files Added: data, data/00-data_prepfl, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: royku (royku@ami.com.tw) Mon, 09 Jun 2014 15:11:11 CST
+

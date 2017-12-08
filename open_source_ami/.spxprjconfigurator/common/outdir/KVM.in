@@ -1,0 +1,155 @@
+menu "KVM Configuration"
+
+config AutoVideoRecordingSupport (1.1.0)
+	bool "Auto Video Recording Support"
+	default n
+	select libautovideorecord
+	select  adviser
+	select  libvideorecordcfg
+	help
+		This Dummy Package is used to select/deselect the Auto Video Recording Support
+
+#--------------------------------------
+config JDK (1.2.0)
+	bool 
+	default y
+	depends on JavaClientSupport
+	help
+		This Package contains the Java development kit for compiling JViewer
+
+#--------------------------------------
+config JViewer_common (1.70.0)
+	bool 
+	default y
+	select adviser
+	depends on JavaClientSupport
+	help
+		This package contains JViewer common source such as GUI,Vmedia source package.
+
+#--------------------------------------
+config JViewer_signkey (1.2.0)
+	bool 
+	default n
+	help
+		This package contains AMIkey to sign the JAR.
+
+#--------------------------------------
+config JViewer (1.10.0)
+	bool 
+	default y
+	depends on JViewer_common
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	help
+		This is a dummy package because the SPX package Architecturerequires at least one binary package to be specified for a source package.
+
+#--------------------------------------
+config JavaClientSupport (1.3.0)
+	bool "Java KVM Client Support"
+	default n
+	depends on webui
+	help
+		This Dummy Package is used to select/deselect Java Client Support
+
+#--------------------------------------
+config internal_video (1.1.0)
+	bool "Internal Video"
+	default n
+	depends on @ARCH_ARM
+	depends on @BASESOC_AST
+	help
+		This is a dummy package to select internal video source on AST SOC.
+
+#--------------------------------------
+config libvideo (1.8.0)
+	bool "Video library for AST"
+	default n
+	select video
+	depends on internal_video
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	help
+		The package contains built video library.
+
+#--------------------------------------
+config libvideo_dev (1.8.0)
+	bool 
+	default n
+	depends on internal_video
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	help
+		This package contains video library development header files.
+
+#--------------------------------------
+config Vmedia_Linux_32 (1.15.0)
+	bool "VMedia Support for Linux 32-Bit Clients"
+	default y
+	depends on JavaClientSupport
+	help
+		This package contains Linux 32 bit Library for Vmedia.
+
+#--------------------------------------
+config Vmedia_Linux_64 (1.15.0)
+	bool "VMedia Support for Linux 64-Bit Clients"
+	default y
+	depends on JavaClientSupport
+	help
+		This package contains Linux 64 bit Library for Vmedia.
+
+#--------------------------------------
+config Vmedia_Mac_32 (1.14.0)
+	bool "VMedia Support for Mac 32-Bit Clients"
+	default y
+	depends on JavaClientSupport
+	help
+		This package contains the VMedia Mac 32 bit library.
+
+#--------------------------------------
+config Vmedia_Mac_64 (1.14.0)
+	bool "VMedia Support for Mac 64-Bit Clients"
+	default y
+	depends on JavaClientSupport
+	help
+		This package contains the VMedia Mac 64 bit library.
+
+#--------------------------------------
+config Vmedia_Win32 (1.14.0)
+	bool "VMedia Support for Windows 32-Bit Clients"
+	default y
+	depends on JavaClientSupport
+	help
+		This package contains Windows 32 bit library for Vmedia.
+
+#--------------------------------------
+config Vmedia_Win64 (1.14.0)
+	bool "VMedia Support for Windows 64-Bit Clients"
+	default y
+	depends on JavaClientSupport
+	help
+		This package contains the Windows 64 bit library for Vmedia.
+
+#--------------------------------------
+config adviser (1.51.5)
+	bool "Video Server Support"
+	default n
+	select libvideo
+	select  libcompress
+	select  libadvisercfg
+	select  libencryption
+	select  libunix
+	select  libracsessioninfo
+	select  libdbgout
+	select  libiniparser
+	select  libsmtp
+	select  HID_support
+	select  libncml
+	depends on @ARCH_ARM
+	help
+		This package includes the binary for ADVISER application.
+
+#--------------------------------------
+
+endmenu
+
+

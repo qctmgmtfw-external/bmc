@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/fwinfo
+	MKDIR_NOCLEAN %SPXINC/fwinfo
+	COPY_FILE ./libfwinfo.a %SPXLIB/fwinfo
+	COPY_FILE ./fwinfo.h %SPXINC/fwinfo
+	COPY_FILE ./libfwinfo.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/fwinfo
+	ADD_LIBRARY_LINKS %SPXLIB/fwinfo libfwinfo.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

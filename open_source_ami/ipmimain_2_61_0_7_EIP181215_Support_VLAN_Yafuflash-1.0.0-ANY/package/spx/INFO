@@ -1,0 +1,20 @@
+Package : ipmimain_2_61_0_7_EIP181215_Support_VLAN_Yafuflash
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 7 for ipmimain (2.61.0)
+Depends :  ipmimain(==2.61.0)
+PatchOrder : 7
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  PatrickHuang (PatrickHuang@ami.com.tw)
+Urgency : new
+Description : EIP181215_Support_VLAN_Yafuflash
+.
+

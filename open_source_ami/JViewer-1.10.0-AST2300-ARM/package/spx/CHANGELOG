@@ -1,0 +1,215 @@
+Package: JViewer (1.10.0); urgency = medium
+
+Abstract:
+	Extended the interface to enable/disbale the SOC menuitem using the String array
+
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCManager.java, data/src/com/ami/kvm/jviewer/soc/SOCMenu.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 11 Jul 2011 18:01:25 IST
+
+Package: JViewer (1.9.0); urgency = medium
+
+Abstract:
+	#moved jnlp file to common JViewer package
+
+Files Deleted: data/jviewer.jnlp
+Files Modified: spx/PACKAGES.D/JViewer/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 09 Jun 2011 03:17:10 IST
+
+Package: JViewer (1.8.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:30:06 EDT
+
+Package: JViewer (1.7.0); urgency = high
+
+Abstract:
+	Mouse non-sync fixed for Rainier in 1440x900 and 1600x1200. Added Width & height APIs for Mouse for all projects.
+
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCFrameHdr.java
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Mar 2011 15:48:52 EDT
+
+Package: JViewer (1.6.0); urgency = medium
+
+Abstract:
+	Added the interface for Video record app
+
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCFrameHdr.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 09 Mar 2011 20:56:54 IST
+
+Package: JViewer (1.5.0); urgency = medium
+
+Abstract:
+	Updated description
+
+Files Modified: spx/INFO
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 08 Feb 2011 15:13:22 IST
+
+Package: JViewer (1.4.0); urgency = medium
+
+Abstract:
+	Support pass 2 feature for AST2300.
+
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCFrameHdr.java, data/src/com/ami/kvm/jviewer/soc/SOCJVVideo.java, data/src/com/ami/kvm/jviewer/soc/video/Decoder.java, data/src/com/ami/kvm/jviewer/soc/video/HuffmanTable.java, data/src/com/ami/kvm/jviewer/soc/video/JTables.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 28 Dec 2010 10:56:19 CST
+
+Package: JViewer (1.3.0); urgency = medium
+
+Abstract:
+	Add host video output on/off function.
+
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCApp.java, data/src/com/ami/kvm/jviewer/soc/SOCKVMclient.java, data/src/com/ami/kvm/jviewer/soc/SOCMenu.java, data/src/com/ami/kvm/jviewer/soc/video/VideoEngineConfigs.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 13 Dec 2010 15:51:25 CST
+
+Package: JViewer (1.2.0); urgency = medium
+
+Abstract:
+	Interface defined,once session validated command to be sent if needed
+
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCApp.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 02 Dec 2010 14:37:08 IST
+
+Package: JViewer (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:48:37 EDT
+
+Package: JViewer (1.0.12); urgency = medium
+
+Abstract:
+	Build error fixed, due to some changes in JViewer common package
+
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCApp.java, data/src/com/ami/kvm/jviewer/soc/SOCKVMclient.java, data/src/com/ami/kvm/jviewer/soc/video/VideoEngineConfigs.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 17 Aug 2010 23:36:05 IST
+
+Package: JViewer (1.0.11); urgency = medium
+
+Abstract:
+	Add hardware cursor support.
+
+Files Added: data/src/com/ami/kvm/jviewer/soc/video/HardwareCursor.java
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCApp.java, data/src/com/ami/kvm/jviewer/soc/SOCFrameHdr.java, data/src/com/ami/kvm/jviewer/soc/SOCJVVideo.java, data/src/com/ami/kvm/jviewer/soc/reader/HardwareCursorReader.java, data/src/com/ami/kvm/jviewer/soc/video/Decoder.java, data/src/com/ami/kvm/jviewer/soc/video/JTables.java, data/src/com/ami/kvm/jviewer/soc/video/VideoEngineInfo.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 30 Jun 2010 15:52:19 CST
+
+Package: JViewer (1.0.10); urgency = low
+
+Abstract:
+	Remove uesless classes.
+
+Files Deleted: data/src/com/ami/kvm/jviewer/soc/video/Compression.java, data/src/com/ami/kvm/jviewer/soc/video/Unsigned2ByteShort.java, data/src/com/ami/kvm/jviewer/soc/video/Unsigned4ByteInt.java, data/src/com/ami/kvm/jviewer/soc/video/UnsignedByte.java
+Files Modified: data/src/com/ami/kvm/jviewer/soc/video/Decoder.java, data/src/com/ami/kvm/jviewer/soc/video/HuffmanTable.java, data/src/com/ami/kvm/jviewer/soc/video/JTables.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 09 Jun 2010 17:54:21 CST
+
+Package: JViewer (1.0.9); urgency = medium
+
+Abstract:
+	Add hardware cursor support(Draw function is not ready yet).
+
+Files Added: data/src/com/ami/kvm/jviewer/soc/video/HuffmanTable.java, data/src/com/ami/kvm/jviewer/soc/video/VideoHeader.java
+Files Deleted: data/src/com/ami/kvm/jviewer/soc/video/ASP2000ImgHdr.java, data/src/com/ami/kvm/jviewer/soc/video/Huffman_table.java
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCApp.java, data/src/com/ami/kvm/jviewer/soc/SOCFrameHdr.java, data/src/com/ami/kvm/jviewer/soc/SOCJVVideo.java, data/src/com/ami/kvm/jviewer/soc/SOCKVMclient.java, data/src/com/ami/kvm/jviewer/soc/reader/HardwareCursorReader.java, data/src/com/ami/kvm/jviewer/soc/video/Decoder.java, data/src/com/ami/kvm/jviewer/soc/video/VideoEngineInfo.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 09 Jun 2010 14:23:23 CST
+
+Package: JViewer (1.0.8); urgency = medium
+
+Abstract:
+	Add video compression mode and DCT quantization table configuration.
+
+Files Added: data/src/com/ami/kvm/jviewer/soc/reader/HardwareCursorReader.java, data/src/com/ami/kvm/jviewer/soc/video/VideoEngineConfigs.java
+Files Deleted: data/src/com/ami/kvm/jviewer/soc/reader/HardWareCursorReader.java
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCApp.java, data/src/com/ami/kvm/jviewer/soc/SOCCreateBufferImage.java, data/src/com/ami/kvm/jviewer/soc/SOCFrameHdr.java, data/src/com/ami/kvm/jviewer/soc/SOCIVTPPktHdr.java, data/src/com/ami/kvm/jviewer/soc/SOCJVVideo.java, data/src/com/ami/kvm/jviewer/soc/SOCKVMclient.java, data/src/com/ami/kvm/jviewer/soc/SOCManager.java, data/src/com/ami/kvm/jviewer/soc/SOCMenu.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 04 Jun 2010 11:16:41 CST
+
+Package: JViewer (1.0.7); urgency = medium
+
+Abstract:
+	dependencies fixed for MDS
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Tue, 20 Apr 2010 16:53:57 EDT
+
+Package: JViewer (1.0.6); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:48:41 CST
+
+Package: JViewer (1.0.5); urgency = medium
+
+Abstract:
+	JViewer SOC clients are now under provides
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 15 Apr 2010 12:04:59 EDT
+
+Package: JViewer (1.0.4); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:49:39 EDT
+
+Package: JViewer (1.0.3); urgency = low
+
+Abstract:
+	Fix width and height setting methods.
+
+Files Modified: data/src/com/ami/kvm/jviewer/soc/SOCCreateBufferImage.java, data/src/com/ami/kvm/jviewer/soc/SOCJVVideo.java, data/src/com/ami/kvm/jviewer/soc/SOCFrameHdr.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 12 Mar 2010 17:59:45 CST
+
+Package: JViewer (1.0.2); urgency = low
+
+Abstract:
+	JViewer is seperated to SoC part and common part.
+
+Files Added: data/src/com/ami/kvm/jviewer/soc, data/src/com/ami/kvm/jviewer/soc/SOCManager.java, data/src/com/ami/kvm/jviewer/soc/SOCKVMclient.java, data/src/com/ami/kvm/jviewer/soc/reader, data/src/com/ami/kvm/jviewer/soc/reader/HardWareCursorReader.java, data/src/com/ami/kvm/jviewer/soc/SOCIVTPPktHdr.java, data/src/com/ami/kvm/jviewer/soc/SOCCreateBufferImage.java, data/src/com/ami/kvm/jviewer/soc/SOCApp.java, data/src/com/ami/kvm/jviewer/soc/video, data/src/com/ami/kvm/jviewer/soc/video/Unsigned4ByteInt.java, data/src/com/ami/kvm/jviewer/soc/video/UnsignedByte.java, data/src/com/ami/kvm/jviewer/soc/video/ASP2000ImgHdr.java, data/src/com/ami/kvm/jviewer/soc/video/Compression.java, data/src/com/ami/kvm/jviewer/soc/video/Unsigned2ByteShort.java, data/src/com/ami/kvm/jviewer/soc/video/JTables.java, data/src/com/ami/kvm/jviewer/soc/video/Decoder.java, data/src/com/ami/kvm/jviewer/soc/video/VideoEngineInfo.java, data/src/com/ami/kvm/jviewer/soc/video/Huffman_table.java, data/src/com/ami/kvm/jviewer/soc/SOCMenu.java, data/src/com/ami/kvm/jviewer/soc/SOCJVVideo.java, data/src/com/ami/kvm/jviewer/soc/SOCFrameHdr.java
+Files Deleted: data/manifest.tmp, data/src/com/ami/iusb, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/protocol, data/src/com/ami/iusb/protocol/PacketMaster.java, data/src/com/ami/iusb/protocol/IUSBSCSI.java, data/src/com/ami/iusb/protocol/CDROMProtocol.java, data/src/com/ami/iusb/protocol/RedirProtocol.java, data/src/com/ami/iusb/protocol/FloppyProtocol.java, data/src/com/ami/iusb/protocol/IUSBHeader.java, data/src/com/ami/iusb/protocol/RedirPacket.java, data/src/com/ami/iusb/protocol/RedirHeader.java, data/src/com/ami/iusb/JListDialog.java, data/src/com/ami/iusb/RedirProtocolException.java, data/src/com/ami/iusb/RedirectionException.java, data/src/com/ami/iusb/EncryptionException.java, data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/kvmpkts, data/src/com/ami/kvm/jviewer/kvmpkts/IVTPPktHdr.java, data/src/com/ami/kvm/jviewer/kvmpkts/USBKeyboardRep.java, data/src/com/ami/kvm/jviewer/kvmpkts/USBKeyProcessor.java, data/src/com/ami/kvm/jviewer/kvmpkts/CfgBandwidth.java, data/src/com/ami/kvm/jviewer/kvmpkts/PS2MouseRep.java, data/src/com/ami/kvm/jviewer/kvmpkts/VideoEngineConfigs.java, data/src/com/ami/kvm/jviewer/kvmpkts/CaptureParams.java, data/src/com/ami/kvm/jviewer/kvmpkts/KeyProcessor.java, data/src/com/ami/kvm/jviewer/kvmpkts/PS2Message.java, data/src/com/ami/kvm/jviewer/kvmpkts/USBMouseRep.java, data/src/com/ami/kvm/jviewer/kvmpkts/AutoDetectBw.java, data/src/com/ami/kvm/jviewer/kvmpkts/PS2KeyboardRep.java, data/src/com/ami/kvm/jviewer/kvmpkts/CursorPacketHeader.java, data/src/com/ami/kvm/jviewer/kvmpkts/USBMessage.java, data/src/com/ami/kvm/jviewer/gui, data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java, data/src/com/ami/kvm/jviewer/gui/JVToolbar.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/gui/FSFrame.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/VideoEngineConfigsDialog.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/AutoBWDlg.java, data/src/com/ami/kvm/jviewer/gui/JVStatusBar.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java, data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/hid, data/src/com/ami/kvm/jviewer/hid/KVMReader.java, data/src/com/ami/kvm/jviewer/hid/FragNumReader.java, data/src/com/ami/kvm/jviewer/hid/FragReader.java, data/src/com/ami/kvm/jviewer/hid/PS2Encode.java, data/src/com/ami/kvm/jviewer/hid/KMEncode.java, data/src/com/ami/kvm/jviewer/hid/CtrlReader.java, data/src/com/ami/kvm/jviewer/hid/USBEncode.java, data/src/com/ami/kvm/jviewer/hid/CursorHeaderReader.java, data/src/com/ami/kvm/jviewer/hid/KMCrypt.java, data/src/com/ami/kvm/jviewer/hid/HeaderReader.java, data/src/com/ami/kvm/jviewer/hid/KVMClient.java, data/src/com/ami/kvm/jviewer/hid/NullReader.java, data/src/com/ami/kvm/jviewer/hid/CursorPatternReader.java, data/src/com/ami/kvm/jviewer/communication, data/src/com/ami/kvm/jviewer/communication/NWListener.java, data/src/com/ami/kvm/jviewer/communication/Client.java, data/src/com/ami/kvm/jviewer/video, data/src/com/ami/kvm/jviewer/video/Unsigned4ByteInt.java, data/src/com/ami/kvm/jviewer/video/ASP2000ImgHdr.java, data/src/com/ami/kvm/jviewer/video/UnsignedByte.java, data/src/com/ami/kvm/jviewer/video/Compression.java, data/src/com/ami/kvm/jviewer/video/Unsigned2ByteShort.java, data/src/com/ami/kvm/jviewer/video/JTables.java, data/src/com/ami/kvm/jviewer/video/Decoder.java, data/src/com/ami/kvm/jviewer/video/JVVideo.java, data/src/com/ami/kvm/jviewer/video/FrameHdr.java, data/src/com/ami/kvm/jviewer/video/VideoEngineInfo.java, data/src/com/ami/kvm/jviewer/video/Huffman_table.java, data/src/com/ami/kvm/jviewer/Debug.java, data/src/com/ami/kvm/jviewer/res, data/src/com/ami/kvm/jviewer/res/min.jpg, data/src/com/ami/kvm/jviewer/res/menu.jpg, data/src/com/ami/kvm/jviewer/res/up.jpg, data/src/com/ami/kvm/jviewer/res/close.jpg, data/src/com/ami/kvm/jviewer/res/max.jpg, data/src/com/ami/kvm/jviewer/res/pin.jpg, data/src/com/ami/kvm/jviewer/res/down.jpg, data/src/com/ami/kvm/jviewer/res/unpin.jpg, data/src/com/ami/kvm/jviewer/res/left.jpg, data/src/com/ami/kvm/jviewer/res/jviewer.jpg, data/src/com/ami/kvm/jviewer/res/right.jpg, data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/MiscUtils.java
+Files Modified: data/jviewer.jnlp, spx/PACKAGES.D/JViewer/SCRIPTS/dev-install, spx/RULES, spx/INFO, spx/RULES.D/buildjar.sh, spx/RULES.D/sign.sh
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 12 Mar 2010 11:16:57 CST
+
+Package: JViewer (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:00:13 EST
+
+Package:JViewer (1.0.0);urgency=new
+
+Abstract:
+	This package contains the JViewer for AST2050.
+
+Files Added: jviewer.jnlp, manifest.tmp, src
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 28 Jan 2010 13:25:17 +0800
+

@@ -1,0 +1,18 @@
+Package : @SOC_AST2300
+Version : 1.6.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : SOC
+Section : info
+Required : @ARCH_ARM, @BASESOC_AST, hw_gpio, hw_i2c, hw_kcs, hw_peci, hw_pwmtach, hw_reset, hw_snoop, hw_usb, hw_videocap, hw_watchdog, hw_adc, hw_host_spi_flash, hw_sdhc, hw_nand, hw_cipher, hw_bt
+Essential : YES
+Config-Tag : AST2300
+Group : BASE
+Owner : AMI
+Maintainer : Alex Yang  (alexyang@ami.com.tw)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : Package specifying SOC is AST2300
+.

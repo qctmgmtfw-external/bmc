@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/procmanager
+	MKDIR_NOCLEAN %SPXINC/procmanager        
+	COPY_FILE ./procreg.h %SPXINC/procmanager
+    COPY_FILE ./libprocmanager.a %SPXLIB/procmanager
+	COPY_FILE libprocmanager.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/procmanager
+	ADD_LIBRARY_LINKS %SPXLIB/procmanager libprocmanager.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

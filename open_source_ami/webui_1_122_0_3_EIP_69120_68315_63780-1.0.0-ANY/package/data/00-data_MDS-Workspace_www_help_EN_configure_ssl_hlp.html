@@ -1,0 +1,27 @@
+--- .pristine/webui-1.122.0-src/data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html Tue Sep 20 20:25:09 2011
++++ source/webui-1.122.0-src/data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html Tue Sep 20 20:25:50 2011
+@@ -133,17 +133,21 @@
+ 		helpContent = "<div class='helpmainhead'>Upload SSL</div></h2>" +
+ 			"<div class='subSection'>" +
+ 			"This page is used to upload a new SSL certificate and privacy key. " +
+-			"The dates for the current certificate and private key are shown. " +
++			"<br>" +
++			"<strong>NOTE:</strong> Please check the current BMC time in NTP under " +
++			"Configuration menu while uploading the SSL certificate." +
+ 			"<br><br>" +
+ 			"<fieldset>" +
+ 			"<legend>Actions</legend>" +
+ 			"<h4>Current Certificate</h4>" +
+-			"Current certificate information will be displayed(readonly)." +
++			"Current certificate, uploaded date/time information will be " +
++			"displayed(readonly)." +
+ 			"<h4>New Certificate</h4>" +
+ 			"Browse and navigate to the certificate file." +
+ 			"<ul><li>- Certificate file should be of pem type</li></ul>" +
+ 			"<h4>Current Privacy Key</h4>" +
+-			"Current privacy key information will be displayed(readonly)." +
++			"Current privacy key, uploaded date/time information will be " +
++			"displayed(readonly)." +
+ 			"<h4>New Privacy Key</h4>" +
+ 			"Browse and navigate to the privacy key file." +
+ 			"<ul><li>- Privacy key file should be of pem type</li></ul>" +

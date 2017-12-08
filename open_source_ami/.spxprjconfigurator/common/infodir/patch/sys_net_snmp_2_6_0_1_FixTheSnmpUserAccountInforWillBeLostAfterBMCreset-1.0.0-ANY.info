@@ -1,0 +1,20 @@
+Package : sys_net_snmp_2_6_0_1_FixTheSnmpUserAccountInforWillBeLostAfterBMCreset
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for sys_net_snmp (2.6.0)
+Depends :  sys_net_snmp(==2.6.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  jcchiu (jcchiu@ami.com.tw)
+Urgency : new
+Description : Fix the SNMP user account information will be lost after BMC reset
+.
+

@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+		COPY_FILE ./libldapconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %IMAGE_TREE/usr/local/lib/
+		ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libldapconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		COPY_TO_CONF ./ldap.conf.disabled
+		COPY_TO_CONF ./openLdapGroup.conf
+				
+debug-install:

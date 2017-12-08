@@ -1,0 +1,17 @@
+Package : libsyslogconf
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Gokulakannan Sampath  (gokulakannans@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : SysLog Library Support
+Group : FEATURES
+Package-License : AMI
+Description : syslog configuration library.
+.

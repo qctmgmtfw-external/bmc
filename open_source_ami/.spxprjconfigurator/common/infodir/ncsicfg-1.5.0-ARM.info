@@ -1,0 +1,19 @@
+Package : ncsicfg
+Non-Editable : YES
+Version : 1.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Config-Tag : NCSI Configuration Support
+Group : DEVICE
+Depends : ncsi
+Required : libncsiconf
+Package-License : AMI
+Description : NCSI configuration application. Based on the user configuraton this is used to configure the NCSI interface.
+.

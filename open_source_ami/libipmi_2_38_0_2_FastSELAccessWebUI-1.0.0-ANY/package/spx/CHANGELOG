@@ -1,0 +1,9 @@
+Package: libipmi_2_38_0_2_FastSELAccessWebUI (1.0.0); urgency = new
+
+Abstract:
+	Adding Higher Level API for faster SEL accessing in WebUI
+
+Files Added: data, data/00-data_libipmi_AMIOEM.c, data/01-data_libipmi_StorDevice.c, data/02-data_include_libipmi_StorDevice.h, data/03-data_include_libipmi_AMIOEM.h, data/04-data_include_libipmi_errorcodes.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 15 Sep 2011 23:21:29 IST
+

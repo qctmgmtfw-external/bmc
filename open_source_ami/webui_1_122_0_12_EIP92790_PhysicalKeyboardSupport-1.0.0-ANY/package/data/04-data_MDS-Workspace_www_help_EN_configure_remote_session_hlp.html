@@ -1,0 +1,17 @@
+--- .pristine/webui-1.122.0-src/data/MDS-Workspace/www/help/EN/configure_remote_session_hlp.html	Tue Jul 10 13:50:20 2012
++++ source/webui-1.122.0-src/data/MDS-Workspace/www/help/EN/configure_remote_session_hlp.html	Wed Jul 11 13:08:16 2012
+@@ -42,6 +42,14 @@
+ 	<legend>Actions</legend>
+ 	<h4>KVM Encryption</h4>
+ 	Enable/Disable encryption on KVM data for the next redirection session.
++	<script type="text/javascript">
++	KEYBOARD_LANG = checkProjectCfg("KB_LANG_SELECT_SUPPORT");
++	if (KEYBOARD_LANG) {
++        document.write("<h4>Keyboard Languages</h4> " +
++                "This select box is used to select the keyboard supported " +
++                "languages.");
++	}
++	</script>
+ 	<h4>Media Encryption</h4>
+ 	Enable/Disable encryption on Media data for the next redirection session.
+ 	<h4>Virtual Media Attach Mode</h4>

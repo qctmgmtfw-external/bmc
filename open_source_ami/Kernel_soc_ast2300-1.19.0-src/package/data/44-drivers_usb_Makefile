@@ -1,0 +1,10 @@
+--- linux-2.6.28.10/drivers/usb/Makefile	2009-05-03 02:54:43.000000000 +0800
++++ linux-2.6.28.10-ami/drivers/usb/Makefile	2011-03-17 16:25:26.000000000 +0800
+@@ -13,6 +13,7 @@
+ obj-$(CONFIG_USB_ISP116X_HCD)	+= host/
+ obj-$(CONFIG_USB_OHCI_HCD)	+= host/
+ obj-$(CONFIG_USB_UHCI_HCD)	+= host/
++obj-$(CONFIG_USB_AST_UHCI_HCD)	+= host/
+ obj-$(CONFIG_USB_SL811_HCD)	+= host/
+ obj-$(CONFIG_USB_U132_HCD)	+= host/
+ obj-$(CONFIG_USB_R8A66597_HCD)	+= host/

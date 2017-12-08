@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:				
+		MKDIR_NOCLEAN %SPXLIB/PreserveConf
+		COPY_DIR		./ %IMAGE_TREE/usr/local/lib/
+		ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libpreserveconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX		
+		COPY_FILE ./libpreserveconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/PreserveConf
+		ADD_LIBRARY_LINKS %SPXLIB/PreserveConf libpreserveconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX 
+		APPEND_TO_FILE PRESERVECONF %IMAGE_TREE/etc/features
+		
+debug-install:

@@ -1,0 +1,33 @@
+Package: video (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:57:00 EDT
+
+Package: video (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:54:10 EDT
+
+Package: video (1.0.1); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:15:25 EDT
+
+Package:video (1.0.0);urgency=new
+
+Abstract:
+	Dummy package for SoC video driver selection.
+
+--Submitter: SP Core Team (spcoreteam@ami.com) Fri, 2 Apr 2010 18:09:40 -0400
+

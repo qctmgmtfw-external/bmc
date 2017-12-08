@@ -1,0 +1,140 @@
+Package: libvideorecordcfg (1.14.0); urgency = medium
+
+Abstract:
+	#Modified jnlp file
+
+Files Modified: data/video_record.jnlp
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 09 Jun 2011 03:19:39 IST
+
+Package: libvideorecordcfg (1.13.0); urgency = high
+
+Abstract:
+	Fixed EIP 60797:Recorded Video files are deleted wrongly
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 25 May 2011 23:24:36 EDT
+
+Package: libvideorecordcfg (1.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:16:01 EDT
+
+Package: libvideorecordcfg (1.11.0); urgency = high
+
+Abstract:
+	Removed the unnecessary stunnel restart for videorecording config change
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 02:06:40 EDT
+
+Package: libvideorecordcfg (1.10.0); urgency = high
+
+Abstract:
+	Moved the autorecord.conf from adviser to libvideorecordcfg for video record feature isolation
+
+Files Added: data/autorecord.conf
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 10:55:06 EDT
+
+Package: libvideorecordcfg (1.9.0); urgency = high
+
+Abstract:
+	Fixed the extra junk gets padded into the file info structure.
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 03 Mar 2011 00:41:26 EST
+
+Package: libvideorecordcfg (1.8.0); urgency = high
+
+Abstract:
+	Created the Java folder for copying the video record JNLP.
+
+Files Modified: spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 22:28:04 IST
+
+Package: libvideorecordcfg (1.7.0); urgency = high
+
+Abstract:
+	Added video record feature in UI.
+
+Files Added: data/video_record.jnlp
+Files Deleted: data/jviewer_video.jnlp
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 16:21:40 IST
+
+Package: libvideorecordcfg (1.6.0); urgency = high
+
+Abstract:
+	JNLP file needs to be copied to www/Java for Video Recording functionality
+
+Files Modified: spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 01 Mar 2011 13:04:37 EST
+
+Package: libvideorecordcfg (1.5.0); urgency = high
+
+Abstract:
+	Adding the JNLP file for loading the Java App for Video recording functionality
+
+Files Added: data/jviewer_video.jnlp
+Files Modified: spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 28 Feb 2011 15:42:53 EST
+
+Package: libvideorecordcfg (1.4.0); urgency = high
+
+Abstract:
+	Modified the locking mechanism for the videorecording data file using counter semaphores
+
+Files Modified: data/videorecord_cfg.c, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 28 Feb 2011 13:13:10 EST
+
+Package: libvideorecordcfg (1.3.0); urgency = high
+
+Abstract:
+	Modified the return when the lock is not got by this process
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 23 Feb 2011 10:23:13 EST
+
+Package: libvideorecordcfg (1.2.0); urgency = high
+
+Abstract:
+	Added Locking when deleting the data file
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Feb 2011 18:42:47 EST
+
+Package: libvideorecordcfg (1.1.0); urgency = high
+
+Abstract:
+	Added APIs to support Web interface to handle the dump files
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Feb 2011 18:28:34 EST
+
+Package: libvideorecordcfg (1.0.0); urgency = new
+
+Abstract:
+	This package includes the APIs related to handling the configuration file for Auto Video Recording feature
+
+Files Added: data, data/Makefile, data/videorecord_cfg.c, data/videorecord_cfg.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/libvideorecordcfg, spx/PACKAGES.D/libvideorecordcfg/DATA, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/PACKAGES.D/libvideorecordcfg_dev, spx/PACKAGES.D/libvideorecordcfg_dev/DATA, spx/PACKAGES.D/libvideorecordcfg_dev/SCRIPTS, spx/PACKAGES.D/libvideorecordcfg_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 01 Feb 2011 17:44:53 EST
+

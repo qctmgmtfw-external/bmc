@@ -1,0 +1,20 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/encryption
+	MKDIR_NOCLEAN %SPXINC/encryption
+	COPY_FILE ./AES.h %SPXINC/encryption
+	COPY_FILE ./global.h %SPXINC/encryption
+	COPY_FILE ./blowfish.h %SPXINC/encryption
+	COPY_FILE ./hashers.h %SPXINC/encryption
+	COPY_FILE ./hmac_md5.h %SPXINC/encryption
+	COPY_FILE ./hmac_sha1.h %SPXINC/encryption	
+	COPY_FILE ./MD5_128.h %SPXINC/encryption
+	COPY_FILE ./blowPrivate.h %SPXINC/encryption
+	COPY_FILE ./md5.h %SPXINC/encryption
+	COPY_FILE ./libencryption.a %SPXLIB/encryption
+	COPY_FILE ./libencryption.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/encryption
+	ADD_LIBRARY_LINKS %SPXLIB/encryption libencryption.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+
+debug-install:

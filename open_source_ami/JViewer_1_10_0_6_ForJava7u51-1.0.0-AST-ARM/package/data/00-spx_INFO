@@ -1,0 +1,10 @@
+--- .pristine/JViewer-1.10.0-ARM-AST-src/spx/INFO Thu Jan 23 17:39:39 2014
++++ source/JViewer-1.10.0-ARM-AST-src/spx/INFO Thu Jan 23 19:15:55 2014
+@@ -14,6 +14,7 @@
+ Architecture : ARM
+ SOC : AST
+ Urgency : medium
++Build-Precedence : CONFIG_SPX_FEATURE_REBUILD_JAVA_APPS 
+ Description : AST Specific Portion of JViewer
+ .
+ 

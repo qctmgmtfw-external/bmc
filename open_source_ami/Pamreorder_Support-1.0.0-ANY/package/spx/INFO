@@ -1,0 +1,16 @@
+Package : Pamreorder_Support
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Essential : NO
+Config-Tag : PAM Reorder Support
+Group : FEATURES
+Owner : AMI
+Maintainer : Akshay P. Wattamwar  (akshayp@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : new
+Description : This is a dummy package for PAM Reorder Support.
+.

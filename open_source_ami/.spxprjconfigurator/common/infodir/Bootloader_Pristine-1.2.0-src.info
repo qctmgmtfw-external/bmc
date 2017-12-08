@@ -1,0 +1,35 @@
+Source : Bootloader_Pristine
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : @Bootloader_Pristine
+Essential : NO
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-Location : http://sourceforge.net/projects/u-boot
+Source-Version : 1.1.6
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ANY
+Urgency : medium
+Description : Pristine U-Boot Boot loader 1.1.6
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : @Bootloader_Pristine
+Section : info
+Essential : NO
+Group : BASE
+Package-License : AMI
+Description : Pristine U-Boot Boot loader 1.1.6
+This is a empty dummy binary package because according to SPX a source package has to generate a binary package
+.
+

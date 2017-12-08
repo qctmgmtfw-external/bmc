@@ -1,0 +1,7 @@
+# Install Script
+
+
+build-install:
+        INSTALL %TOOLDIR/rules
+
+debug-install:

@@ -1,0 +1,43 @@
+Package: libradiusconf (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:08:49 EDT
+
+Package: libradiusconf (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:03:28 EDT
+
+Package: libradiusconf (1.0.2); urgency = low
+
+Abstract:
+	Removed double installation of conf files.
+
+Files Modified: spx/PACKAGES.D/libradiusconf/SCRIPTS/dev-install, spx/PACKAGES.D/libradiusconf_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Thu, 15 Apr 2010 13:51:20 EDT
+
+Package: libradiusconf (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:09:51 EST
+
+Package:libradiusconf (1.0.0);urgency=new
+
+Abstract:
+	This package includes RADIUSCONF library.
+
+Files Added: radiusconf.c, radiusconf.h, Makefile, radius.conf.disabled
+
+--Submitter: Maintainer Name (maintainer@domain.com) Tue, 19 Jan 2010 17:14:37 +0530

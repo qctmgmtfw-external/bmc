@@ -1,0 +1,247 @@
+menu "IPMI Configuration"
+
+source PECI_over_IPMI_Support_ANY.in
+
+config libipminmsupport (2.10.1)
+	bool "IPMI PNM Support"
+	default n
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		This contains the ipmi pnm binary.
+
+#--------------------------------------
+config PECI_over_IPMI_Support (1.0.0)
+	bool "PECI Over IPMI Support"
+	default n
+	select peci
+	select  libpeci
+	help
+		Support for Communicating with PECI using IPMI Master Write Read Interface
+
+#--------------------------------------
+config ipmimain (2.61.0)
+	bool "IPMI Support"
+	default n
+	select libflash
+	select  libipmistack
+	select  libipmihalapi
+	select  libipmihalhw
+	select  libipmipdkapi
+	select  libfwinfo
+	select  libipmichassis
+	select  libipmipef
+	select  libipmitimer
+	select  libipmipdk
+	select  libipmipar
+	select  libipmipdkcmds
+	select  libprocmanager
+	select  libuserm
+	select  libchecksum
+	select  libfmh
+	select  libiniparser
+	select  libadvisercfg
+	select  libencryption
+	select  libubenv
+	select  libipmiuds
+	select  pam_ipmi
+	select  libnss_ipmi
+	select  libncsiconf
+	select  libUserPrivilege
+	depends on @ARCH_ARM
+	help
+		This package contains ipmi binaries
+
+#--------------------------------------
+config libipmi (2.38.0)
+	bool "IPMI Library (libipmi) Support"
+	default n
+	select libsmtp
+	select  libipmiparams
+	select  libsnmpusers
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		IPMI Library Binary
+
+#--------------------------------------
+config libipmiapml (2.4.0)
+	bool "IPMI APML Support"
+	default n
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		This contains the ipmi apml binary.
+
+#--------------------------------------
+config libipmichassis (2.7.0)
+	bool 
+	default n
+	select libunix
+	depends on @ARCH_ARM
+	help
+		IPMI Chassis library binary
+
+#--------------------------------------
+config libipmidcmi (2.8.0)
+	bool "IPMI DCMI Support"
+	default n
+	select libipmi
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		This contains the ipmi dcmi binary.
+
+#--------------------------------------
+config libipmihalapi (2.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Binary package for Lib IPMI HAL API
+
+#--------------------------------------
+config libipmihalapi_dev (2.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains the HAL API development header files.
+
+#--------------------------------------
+config libipmihalhw (2.5.1)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Binary package for IPMI HAL Hardware library
+
+#--------------------------------------
+config libipmiinterruptsensor (2.4.0)
+	bool "IPMI Interrupt Sensor Monitoring"
+	default n
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		This package contains interrupt sensor monitoring part
+
+#--------------------------------------
+config libipmiipmb (2.8.0)
+	bool "IPMI IPMB Support"
+	default n
+	depends on ipmimain &&  i2c
+	depends on @ARCH_ARM
+	help
+		IPMI IPMB library binaries
+
+#--------------------------------------
+config libipmikcs (2.10.0)
+	bool "IPMI KCS Support"
+	default n
+	depends on ipmimain &&  kcs
+	depends on @ARCH_ARM
+	help
+		This contains the IPMI KCS Library Binary.
+
+#--------------------------------------
+config libipmilan (2.29.0)
+	bool "IPMI LAN Support"
+	default n
+	select libnetwork
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		IPMI LAN Library binaries
+
+#--------------------------------------
+config libipmiparams (2.5.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Library to convert configuration parameter values.
+
+#--------------------------------------
+config libipmipdkapi (2.7.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		IPMI PDK API Binary
+
+#--------------------------------------
+config libipmipef (2.11.0)
+	bool 
+	default n
+	select libunix
+	depends on @ARCH_ARM
+	help
+		IPMI PEF binaries
+
+#--------------------------------------
+config libipmiserial (2.2.0)
+	bool "IPMI Serial Interface Support"
+	default n
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		IPMI Serial Library Binaries.
+
+#--------------------------------------
+config libipmiserialterminal (2.4.0)
+	bool "IPMI Serial Terminal Interface Support"
+	default n
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		This package contains the binaries of serial terminal mode.
+
+#--------------------------------------
+config libipmisol (2.8.0)
+	bool "IPMI SOL Support"
+	default n
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		IPMI SOL library binaries
+
+#--------------------------------------
+config libipmitimer (2.8.0)
+	bool 
+	default n
+	select libunix
+	depends on @ARCH_ARM
+	help
+		IPMI Timer Library Binary
+
+#--------------------------------------
+config libipmiuds (2.7.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		IPMI UDS Library binaries
+
+#--------------------------------------
+config libipmiusb (2.3.0)
+	bool "IPMI USB Support"
+	default n
+	select usbe
+	depends on ipmimain &&  usbe
+	depends on @ARCH_ARM
+	help
+		This contains ipmi usb binary.
+
+#--------------------------------------
+config oempdk_dev (2.7.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This Package contains PDK Header files required for pdk packages.
+
+#--------------------------------------
+
+endmenu
+
+

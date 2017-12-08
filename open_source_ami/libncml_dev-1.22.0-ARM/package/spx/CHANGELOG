@@ -1,0 +1,274 @@
+Package: libncml (1.22.0); urgency = medium
+
+Abstract:
+	Release semaphore if any error occurs
+
+Files Modified: data/Makefile, data/ncml.c, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 12 Aug 2011 18:41:22 IST
+
+Package: libncml (1.21.0); urgency = medium
+
+Abstract:
+	Made changes to set the interface name field as not applicable for SSH service.
+
+Files Modified: data/defservicecfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 11 Aug 2011 19:58:53 IST
+
+Package: libncml (1.20.0); urgency = medium
+
+Abstract:
+	Removing IPMI_SERVICE_NAME macro.
+
+Files Modified: data/ncml.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 09 Aug 2011 17:10:36 IST
+
+Package: libncml (1.19.0); urgency = medium
+
+Abstract:
+	Telnet interface name is changed to Not Applicable.
+
+Files Modified: data/defservicecfg.h, data/ncml.c, data/ncml.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 05 Aug 2011 11:51:43 IST
+
+Package: libncml (1.18.0); urgency = low
+
+Abstract:
+	Redesigned the services configuration
+1.If the Field is not Editable then the first byte
+in the MSB is set to 1.
+2.If the Field is Not Applicable then the value will
+be 0xFFFFFFF for four byte data and 0xFF for single byte.
+Done the Validation accordingly inorder to avoid the 
+setting of Not Editable and Not Applicable Data Field.
+
+Files Modified: data/Makefile, data/defservicecfg.h, data/ncml.c, data/ncml.h, data/stunnel_cfg.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 20 Jul 2011 14:05:30 IST
+
+Package: libncml (1.17.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:05:40 IST
+
+Package: libncml (1.16.0); urgency = high
+
+Abstract:
+	libncml build depends on libnetwork_dev
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 09 Jun 2011 11:41:19 EDT
+
+Package: libncml (1.15.0); urgency = high
+
+Abstract:
+	Modified the media to individual cd, fd and hd components
+
+Files Modified: data/ncml.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 07 Jun 2011 01:19:37 EDT
+
+Package: libncml (1.14.0); urgency = high
+
+Abstract:
+	Added additional condition for checking all supported media types
+
+Files Modified: data/stunnel_cfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:36:44 EDT
+
+Package: libncml (1.13.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/defservicecfg.h, data/ncml.c, data/ncml.h, data/stunnel_cfg.c, data/stunnel_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:26:38 EDT
+
+Package: libncml (1.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:04:46 EDT
+
+Package: libncml (1.11.0); urgency = medium
+
+Abstract:
+	Added support for timeoutd configuration while updating ssh/telnet configuration.
+Also fixed some issues with validating the inputs.
+
+It is also configurable in PRJ, i.e., if timeout daemon package selected then only it will update in timeout configuration.
+
+Files Modified: data/ncml.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 13 May 2011 17:40:28 IST
+
+Package: libncml (1.10.0); urgency = high
+
+Abstract:
+	Fixing dependency issue & hence build error
+
+Files Modified: data/Makefile, data/stunnel_cfg.c, data/stunnel_cfg.h, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 07:47:10 EDT
+
+Package: libncml (1.9.0); urgency = high
+
+Abstract:
+	Handling the port number fetching from ncml config
+
+Files Added: data/stunnel_cfg.c, data/stunnel_cfg.h
+Files Modified: data/Makefile, data/ncml.c, data/ncml.h, spx/PACKAGES.D/libncml_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 01:59:17 EDT
+
+Package: libncml (1.8.0); urgency = low
+
+Abstract:
+	Added function to check request port and services
+
+Files Modified: data/ncml.c, data/ncml.h
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 02 May 2011 18:47:14 IST
+
+Package: libncml (1.7.0); urgency = medium
+
+Abstract:
+	Removed configuration file as it is part of ncml_configuration package
+
+Files Deleted: data/ncml.conf
+Files Modified: spx/INFO, spx/PACKAGES.D/libncml/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Tue, 19 Apr 2011 00:53:28 IST
+
+Package: libncml (1.6.0); urgency = low
+
+Abstract:
+	Adding libiniparser_dev to Build depends and changed Group to LIBRARY
+
+Files Modified: spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 05 Apr 2011 14:09:54 IST
+
+Package: libncml (1.5.0); urgency = low
+
+Abstract:
+	added #ifdef check before using a macro
+
+Files Modified: data/defservicecfg.h
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 10 Mar 2011 19:02:24 IST
+
+Package: libncml (1.4.0); urgency = medium
+
+Abstract:
+	Added API Call to get all the interface name.
+
+Files Modified: data/ncml.c, data/ncml.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Feb 2011 22:05:15 IST
+
+Package: libncml (1.3.0); urgency = medium
+
+Abstract:
+	Adding wait_network_state_change function which helps in detecting the change in network device state change.
+
+Files Modified: data/ncml.c, data/ncml.conf, data/ncml.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 10 Dec 2010 19:00:46 EST
+
+Package: libncml (1.2.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 11 Nov 2010 11:35:57 CST
+
+Package: libncml (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:01:58 EDT
+
+Package: libncml (1.0.6); urgency = low
+
+Abstract:
+	Remove non-critical error message and reformat code.
+
+Files Modified: data/defservicecfg.h, data/ncml.c, data/ncml.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 04 Aug 2010 11:47:25 CST
+
+Package: libncml (1.0.5); urgency = medium
+
+Abstract:
+	1. Added the support for setting default value back to conf when read fails with NCML and added related functions to do that.
+2. Added the manufacture default values in header file.
+3. Modified ncml.conf default value - change service name to lowercase and change max session number of web server to 20.
+
+Files Added: data/defservicecfg.h
+Files Modified: data/ncml.c, data/ncml.conf, data/ncml.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 28 Jun 2010 17:06:02 CST
+
+Package: libncml (1.0.4); urgency = medium
+
+Abstract:
+	Dependecies resolved
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 11:19:56 EDT
+
+Package: libncml (1.0.3); urgency = medium
+
+Abstract:
+	Modified for enable all services except telnet in default setting.
+
+Files Modified: data/ncml.conf
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Mon, 24 May 2010 17:09:50 EDT
+
+Package: libncml (1.0.2); urgency = medium
+
+Abstract:
+	Incread web timeout from 60 to 1800 seconds. Thie low timeout values failes firmware upgrade
+
+Files Modified: data/ncml.conf
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 19:12:37 EDT
+
+Package: libncml (1.0.1); urgency = low
+
+Abstract:
+	Modified for copy library and conf in RULES and dev-install.
+
+Files Modified: data/ncml.c, spx/PACKAGES.D/libncml/SCRIPTS/dev-install, spx/PACKAGES.D/libncml_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Wed, 05 May 2010 18:05:16 EDT
+
+Package: libncml (1.0.0); urgency = new
+
+Abstract:
+	This library package contains network connection manager library related files
+
+Files Added: data, data/Makefile, data/ncml.c, data/ncml.conf, data/ncml.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libncml, spx/PACKAGES.D/libncml/DATA, spx/PACKAGES.D/libncml/SCRIPTS, spx/PACKAGES.D/libncml/SCRIPTS/dev-install, spx/PACKAGES.D/libncml_dev, spx/PACKAGES.D/libncml_dev/DATA, spx/PACKAGES.D/libncml_dev/SCRIPTS, spx/PACKAGES.D/libncml_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Mon, 03 May 2010 21:21:37 EDT
+

@@ -1,0 +1,9 @@
+Package: ipmimain_2_61_0_4_ActiveSessionsofGetSessionInfoIsNotCorrect (1.0.0); urgency = new
+
+Abstract:
+	Active sessions of Get Session Info is not correct
+
+Files Added: data, data/00-data_SharedMem.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: benchen (benchen@ami.com.tw) Fri, 30 Dec 2011 17:29:27 CST
+

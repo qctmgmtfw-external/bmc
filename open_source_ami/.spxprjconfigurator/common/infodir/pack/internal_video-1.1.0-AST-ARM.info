@@ -1,0 +1,18 @@
+Package : internal_video
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : VideoDriver
+Section : sys
+Essential : NO
+Config-Tag : Internal Video
+Group : KVM
+Owner : AMI
+Maintainer : David Chang  (DavidChang@ami.com.tw)
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : This is a dummy package to select internal video source on AST SOC.
+.

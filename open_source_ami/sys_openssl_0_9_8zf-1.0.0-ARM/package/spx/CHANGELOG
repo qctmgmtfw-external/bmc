@@ -1,0 +1,9 @@
+Package: sys_openssl_0_9_8zf (1.0.0); urgency = new
+
+Abstract:
+	Support OpenslSSL Version 0.9.8zf
+
+Files Added: data, data/libcrypto.so.0.9.8, data/libssl.so.0.9.8, data/openssl, data/openssl/aes.h, data/openssl/asn1.h, data/openssl/asn1_mac.h, data/openssl/asn1t.h, data/openssl/bio.h, data/openssl/blowfish.h, data/openssl/bn.h, data/openssl/buffer.h, data/openssl/cast.h, data/openssl/comp.h, data/openssl/conf.h, data/openssl/conf_api.h, data/openssl/crypto.h, data/openssl/des.h, data/openssl/des_old.h, data/openssl/dh.h, data/openssl/dsa.h, data/openssl/dso.h, data/openssl/dtls1.h, data/openssl/e_os2.h, data/openssl/ebcdic.h, data/openssl/ec.h, data/openssl/ecdh.h, data/openssl/ecdsa.h, data/openssl/engine.h, data/openssl/err.h, data/openssl/evp.h, data/openssl/fips.h, data/openssl/fips_rand.h, data/openssl/hmac.h, data/openssl/idea.h, data/openssl/krb5_asn.h, data/openssl/kssl.h, data/openssl/lhash.h, data/openssl/md2.h, data/openssl/md4.h, data/openssl/md5.h, data/openssl/obj_mac.h, data/openssl/objects.h, data/openssl/ocsp.h, data/openssl/opensslconf.h, data/openssl/opensslv.h, data/openssl/ossl_typ.h, data/openssl/pem.h, data/openssl/pem2.h, data/openssl/pkcs12.h, data/openssl/pkcs7.h, data/openssl/pq_compat.h, data/openssl/pqueue.h, data/openssl/rand.h, data/openssl/rc2.h, data/openssl/rc4.h, data/openssl/ripemd.h, data/openssl/rsa.h, data/openssl/safestack.h, data/openssl/sha.h, data/openssl/ssl.h, data/openssl/ssl2.h, data/openssl/ssl23.h, data/openssl/ssl3.h, data/openssl/stack.h, data/openssl/store.h, data/openssl/symhacks.h, data/openssl/tls1.h, data/openssl/tmdiff.h, data/openssl/txt_db.h, data/openssl/ui.h, data/openssl/ui_compat.h, data/openssl/x509.h, data/openssl/x509_vfy.h, data/openssl/x509v3.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Tue, 24 Mar 2015 18:57:48 CST
+

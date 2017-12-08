@@ -1,0 +1,17 @@
+Package : liblogostatic
+Non-Editable : YES
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Jonny Chang  (jonnychang@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Config-Tag : Dynamic change OEM logo and copyright files
+Group : FEATURES
+Package-License : AMI
+Description : This Package contains OEM logo and copyright file for dynamic change.
+.

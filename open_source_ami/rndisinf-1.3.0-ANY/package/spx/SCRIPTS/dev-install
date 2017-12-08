@@ -1,0 +1,5 @@
+build-install:
+	INSTALL %TOOLDIR/rndisinf
+	SETPATH %$TOOLDIR/rndisinf
+
+debug-install:

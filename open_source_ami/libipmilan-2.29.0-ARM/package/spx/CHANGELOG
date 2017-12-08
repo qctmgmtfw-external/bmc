@@ -1,0 +1,755 @@
+Package: libipmilan (2.29.0); urgency = medium
+
+Abstract:
+	Reverted the changes.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Aug 2011 22:57:16 IST
+
+Package: libipmilan (2.28.0); urgency = medium
+
+Abstract:
+	Added TCP support for VLAN interface to support YafuFlash.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Aug 2011 18:57:55 IST
+
+Package: libipmilan (2.27.0); urgency = medium
+
+Abstract:
+	Removed unwanted code.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Aug 2011 13:06:15 IST
+
+Package: libipmilan (2.26.0); urgency = low
+
+Abstract:
+	Removing unnecessary codes.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 09 Aug 2011 17:06:09 IST
+
+Package: libipmilan (2.25.0); urgency = low
+
+Abstract:
+	Modified Sequence number chk for LUN 01 fwding
+
+Files Modified: data/RMCP.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 22 Jul 2011 21:36:44 IST
+
+Package: libipmilan (2.24.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:26:51 IST
+
+Package: libipmilan (2.23.0); urgency = low
+
+Abstract:
+	Clean up the session info incase of error status code.
+
+Files Modified: data/RMCP+.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 15 Jul 2011 15:56:19 IST
+
+Package: libipmilan (2.22.0); urgency = medium
+
+Abstract:
+	Added IPv6 Support for TCP in LAN interface.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 13 Jul 2011 18:13:45 IST
+
+Package: libipmilan (2.21.0); urgency = low
+
+Abstract:
+	Modified ipmicmd timeout handling to check from a command list
+
+Files Modified: data/LANIfc.c, data/RMCP.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 08 Jul 2011 12:09:54 IST
+
+Package: libipmilan (2.20.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:10:26 IST
+
+Package: libipmilan (2.19.0); urgency = medium
+
+Abstract:
+	validation changed.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 05 Jul 2011 16:59:11 IST
+
+Package: libipmilan (2.18.0); urgency = high
+
+Abstract:
+	Redesigned the LAN interface to create the Sockets based on the Interface state change.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 29 Jun 2011 20:42:28 IST
+
+Package: libipmilan (2.17.0); urgency = low
+
+Abstract:
+	Fixed yafu flash failure when nodebusy(fts feature) is active
+
+Files Modified: data/RMCP.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 28 Jun 2011 14:14:48 IST
+
+Package: libipmilan (2.16.0); urgency = high
+
+Abstract:
+	LAN interface status is updated based on interface count and also
+allocate the memory based on interface count to avoid memory leak.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 16 Jun 2011 19:51:40 IST
+
+Package: libipmilan (2.15.0); urgency = low
+
+Abstract:
+	Added support for timeout completion code
+
+Files Modified: data/LANIfc.c, data/RMCP.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 06 Jun 2011 22:24:50 IST
+
+Package: libipmilan (2.14.0); urgency = medium
+
+Abstract:
+	Fixed build error.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 26 May 2011 02:48:57 EDT
+
+Package: libipmilan (2.13.0); urgency = medium
+
+Abstract:
+	Close the input and output buffer before closing TCP socket.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 25 May 2011 09:46:44 EDT
+
+Package: libipmilan (2.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:51:27 EDT
+
+Package: libipmilan (2.11.0); urgency = low
+
+Abstract:
+	IPV6 Support for IPMI RMCP and RMCP+ Communication
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Fri, 13 May 2011 21:59:29 IST
+
+Package: libipmilan (2.10.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:46:05 IST
+
+Package: libipmilan (2.9.0); urgency = low
+
+Abstract:
+	Modified Audit logging by removing post to pend task and directly called the hook
+
+Files Modified: data/RMCP.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 09 May 2011 17:59:14 IST
+
+Package: libipmilan (2.8.0); urgency = low
+
+Abstract:
+	Fixed incorrect logout event issue
+
+Files Modified: data/RMCP.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 02 May 2011 18:52:27 IST
+
+Package: libipmilan (2.7.0); urgency = medium
+
+Abstract:
+	Moved the hook invocation from LanMonitor function to UpdateLANStateChange function. Also Corrected to modify the proper Lan state.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 27 Apr 2011 18:05:32 IST
+
+Package: libipmilan (2.6.0); urgency = medium
+
+Abstract:
+	Added Two hooks as follows
+1. After Socket initialization for IPMI.
+2. On Lan state change.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 26 Apr 2011 17:24:59 IST
+
+Package: libipmilan (2.5.0); urgency = medium
+
+Abstract:
+	Reverting the changes to close the sockets when LAN state is changed.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 25 Apr 2011 19:44:36 IST
+
+Package: libipmilan (2.4.0); urgency = medium
+
+Abstract:
+	Combine vlanid and vlanpriority into vlansetting.conf.
+Modified ReadVLANFile and WriteVLANFile function accordingly.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 23 Apr 2011 14:58:25 CST
+
+Package: libipmilan (2.3.0); urgency = medium
+
+Abstract:
+	Removing nice as they are not applicable for threads.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 15:15:36 IST
+
+Package: libipmilan (2.2.0); urgency = medium
+
+Abstract:
+	Modified LANIfc to initialize all the network sockets when there is a change in the LAN state.
+This change will help in dynamically close and open all TCP and UDP sockets when there is a change in the 
+LAN interface.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 11 Apr 2011 11:39:51 IST
+
+Package: libipmilan (2.1.0); urgency = low
+
+Abstract:
+	Added login Audit configuration for RMCP and Web
+
+Files Modified: data/RMCP+.c, data/RMCP.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 05 Apr 2011 17:45:53 IST
+
+Package: libipmilan (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/LANIfc.c, data/LANMetaInfo.c, data/RMCP+.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:04:01 IST
+
+Package: libipmilan (1.21.0); urgency = low
+
+Abstract:
+	Remove the socket from socket table when bonding is disabled.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 24 Feb 2011 17:29:56 IST
+
+Package: libipmilan (1.20.0); urgency = medium
+
+Abstract:
+	Retry to bind the socket when getting Address already in use error.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 22 Feb 2011 15:43:28 IST
+
+Package: libipmilan (1.19.0); urgency = low
+
+Abstract:
+	The Thread arguments will be made free in startIfc function after the thread mutex is released properly.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Feb 2011 00:56:13 IST
+
+Package: libipmilan (1.18.0); urgency = high
+
+Abstract:
+	Made changes to handle TCP connection in bonding mode.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 14 Feb 2011 21:24:32 IST
+
+Package: libipmilan (1.17.0); urgency = low
+
+Abstract:
+	Check the socket status, before send a message on a socket
+
+Files Modified: data/LANIfc.c
+
+--Submitter: prakashs (prakashs@amiindia.co.in) Thu, 10 Feb 2011 20:47:55 IST
+
+Package: libipmilan (1.16.0); urgency = medium
+
+Abstract:
+	Made changes to set IPv4 Header and RMCP port in bonding mode.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 10 Feb 2011 18:19:11 IST
+
+Package: libipmilan (1.15.0); urgency = high
+
+Abstract:
+	Added Support to Handle the bond interface UDP Socket.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Feb 2011 22:31:33 IST
+
+Package: libipmilan (1.14.0); urgency = high
+
+Abstract:
+	Removed hardcoded interface name.
+Interface Name will be referenced by Index.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 25 Jan 2011 19:25:52 IST
+
+Package: libipmilan (1.13.0); urgency = low
+
+Abstract:
+	Added support for SHA2 algorithm in RAKP1 and RAKP2 messages
+
+Files Modified: data/RMCP+.c, data/RMCP.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 25 Jan 2011 17:43:44 IST
+
+Package: libipmilan (1.12.0); urgency = medium
+
+Abstract:
+	Let session info table be initailized before packet is processed.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: bensonchuang (bensonchuang@ami.com.tw) Fri, 07 Jan 2011 14:05:30 CST
+
+Package: libipmilan (1.11.0); urgency = medium
+
+Abstract:
+	Issue :- when eth0 is down then ipmi communications was not successful through eth1 ip
+Fix :- Handling the conditions correctly inorder to make the communication successful even if the eth0 is down
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 06 Jan 2011 22:59:26 IST
+
+Package: libipmilan (1.10.0); urgency = medium
+
+Abstract:
+	Modified to avoid error when IPMI returns more than 230 bytes(excluding headers).
+
+Files Modified: data/RMCP.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 28 Dec 2010 17:37:27 IST
+
+Package: libipmilan (1.9.0); urgency = medium
+
+Abstract:
+	Changes in lan lanterface to select NIC interface based on IPMI command.
+
+Files Modified: data/LANIfc.c, data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 10 Dec 2010 18:55:30 EST
+
+Package: libipmilan (1.8.0); urgency = low
+
+Abstract:
+	Removed unused codes for VLAN.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 01 Dec 2010 17:14:22 EST
+
+Package: libipmilan (1.7.0); urgency = medium
+
+Abstract:
+	1. Make changes to prevent RAKP4 from being sent when bad password is received.
+2. Fix user cannot be locked when bad password is sent over 3 times.
+
+Files Modified: data/RMCP+.c, data/RMCP.c
+
+--Submitter: bensonchuang (poshuntseng@ami.com.tw) Tue, 23 Nov 2010 17:55:35 CST
+
+Package: libipmilan (1.6.0); urgency = medium
+
+Abstract:
+	Fix Set User Access Command - Disable message issue
+
+Files Modified: data/RMCP+.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 28 Oct 2010 17:26:21 CST
+
+Package: libipmilan (1.5.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:14:52 EDT
+
+Package: libipmilan (1.4.0); urgency = medium
+
+Abstract:
+	Constructing HMAC packets with session privilege instead of Maximum privilege of channel.
+
+Files Modified: data/RMCP+.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 04 Oct 2010 12:39:31 EDT
+
+Package: libipmilan (1.3.0); urgency = low
+
+Abstract:
+	some minor changes done.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 30 Sep 2010 18:59:42 IST
+
+Package: libipmilan (1.2.0); urgency = high
+
+Abstract:
+	* Initializing "n" value (which is going to be the fdmax for select() call) in each call for VLAN configure/De-configure.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 30 Sep 2010 16:15:39 IST
+
+Package: libipmilan (1.1.0); urgency = medium
+
+Abstract:
+	Bug :- YafuFlash Cannot communicate using eth1 ip
+Fix :- Created a TCP Socket and binded with eth1 interface like eth0
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 16 Sep 2010 19:28:17 IST
+
+Package: libipmilan (1.0.30); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:50:31 IST
+
+Package: libipmilan (1.0.29); urgency = low
+
+Abstract:
+	Bug :- LAN Interface is not started properly when there is two BMC.
+Fix :- Moved the global variable which is used in VLAN into BMCInfo_t 
+       Structure and TCP Socket is binded to particular ethindex of 
+       the BMC's as there are two BMC.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 17 Aug 2010 21:23:51 IST
+
+Package: libipmilan (1.0.28); urgency = high
+
+Abstract:
+	Bug: Cannot communicate with eth0's VLAN IP when after De-configuring eth1's VLAN interface.
+Fix: Removing unwanted initialization of VLAN interface flag during LAN UDP socket creation.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 16 Aug 2010 20:53:05 IST
+
+Package: libipmilan (1.0.27); urgency = low
+
+Abstract:
+	Changed ASF IANA value as integer in RMCP ping request
+
+Files Modified: data/RMCP.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Wed, 11 Aug 2010 20:00:45 IST
+
+Package: libipmilan (1.0.26); urgency = low
+
+Abstract:
+	Adding NULL Condition Check after gettting NVR Address
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 10 Aug 2010 12:55:57 IST
+
+Package: libipmilan (1.0.25); urgency = low
+
+Abstract:
+	Added proper response code including No Cipher Suite match (SC_NO_CIPHER_SUITE_MATCH)
+
+Files Modified: data/RMCP+.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 09 Aug 2010 18:50:29 IST
+
+Package: libipmilan (1.0.24); urgency = low
+
+Abstract:
+	Changes Done for Starting LAN Interface along with other tasks and Loop Back Socket is Removed as it is not necessary now
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 06 Aug 2010 17:44:31 IST
+
+Package: libipmilan (1.0.23); urgency = low
+
+Abstract:
+	MBMC Changes for LAN Interface
+
+Files Modified: data/LANIfc.c, data/LANMetaInfo.c, data/RMCP+.c, data/RMCP.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:40:57 IST
+
+Package: libipmilan (1.0.22); urgency = low
+
+Abstract:
+	Handling of error is taken properly in case of Socket initialization failure
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 16 Jul 2010 17:40:59 IST
+
+Package: libipmilan (1.0.21); urgency = low
+
+Abstract:
+	Fix for establishing RMCP+ session using cipher suite 0
+
+Files Modified: data/RMCP+.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 01 Jul 2010 19:05:17 IST
+
+Package: libipmilan (1.0.20); urgency = medium
+
+Abstract:
+	Fix issue for SPX will allow 16 session activated when channel session limit is set to 15.
+
+Files Modified: data/RMCP+.c
+
+--Submitter: JCChiu (jcchiu@ami.com.tw) Tue, 29 Jun 2010 14:22:54 CST
+
+Package: libipmilan (1.0.19); urgency = medium
+
+Abstract:
+	Issue:
+If OEM privilege is supported, the created user is not able to send any command after changing "RMCP+ Messaging Cipher Suite Privilege Levels (24)" in Lan Configuration.
+
+Solution:
+In Creating RAKP message4 used Max Privilege instead of Privilege of the user, so the problem is difference in Privilege and Max privilege.
+
+Files Modified: data/RMCP+.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 21 Jun 2010 23:29:35 IST
+
+Package: libipmilan (1.0.18); urgency = low
+
+Abstract:
+	Checking FindUserLockStatus condition properly for lanplus
+
+Files Modified: data/RMCP+.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 16 Jun 2010 17:52:43 IST
+
+Package: libipmilan (1.0.17); urgency = low
+
+Abstract:
+	Corrections in Session limit validation for user
+
+Files Modified: data/RMCP+.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 16 Jun 2010 14:37:23 IST
+
+Package: libipmilan (1.0.16); urgency = low
+
+Abstract:
+	Removing gpio includes from Makefile for libipmilan
+
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 14 Jun 2010 15:27:17 IST
+
+Package: libipmilan (1.0.15); urgency = medium
+
+Abstract:
+	Adding link down resilent support to SPX
+
+Files Modified: data/RMCP.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Jun 2010 11:17:51 IST
+
+Package: libipmilan (1.0.14); urgency = medium
+
+Abstract:
+	Fix for VLAN socket cannot receive IPMI commands when VLAN is enabled after BMC start/re-start.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 24 May 2010 16:48:59 CST
+
+Package: libipmilan (1.0.13); urgency = medium
+
+Abstract:
+	Adding  bad password detection support in IPMI for SPX.
+
+Files Modified: data/RMCP+.c, data/RMCP.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 21 May 2010 15:13:14 IST
+
+Package: libipmilan (1.0.12); urgency = medium
+
+Abstract:
+	Fix in SOL. Sol packets has to be posted to sol interface queue only when payload type of the session is SOL.
+
+Files Modified: data/RMCP.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 04 May 2010 15:41:12 IST
+
+Package: libipmilan (1.0.11); urgency = medium
+
+Abstract:
+	Fix in cipher suite privilege level validation.
+
+Files Modified: data/RMCP+.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 29 Apr 2010 20:56:42 IST
+
+Package: libipmilan (1.0.10); urgency = low
+
+Abstract:
+	Add the SOL idle timeout function, the sol session will be timeout due to inactivity.
+
+Files Modified: data/RMCP+.c, data/RMCP.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Tue, 27 Apr 2010 20:31:05 EDT
+
+Package: libipmilan (1.0.9); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:22:17 EDT
+
+Package: libipmilan (1.0.8); urgency = medium
+
+Abstract:
+	The RMCP+ session should not be established when cipher suite ID privilege is unspecified i.e cipher suite is unused.
+
+Files Modified: data/RMCP+.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 21 Apr 2010 16:22:12 IST
+
+Package: libipmilan (1.0.7); urgency = low
+
+Abstract:
+	Removed unwanted code.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Sat, 10 Apr 2010 02:06:54 JST
+
+Package: libipmilan (1.0.6); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:54:21 EDT
+
+Package: libipmilan (1.0.5); urgency = low
+
+Abstract:
+	Added libnetwork_dev and libencryption_dev build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Wed, 10 Mar 2010 18:37:46 EST
+
+Package: libipmilan (1.0.4); urgency = medium
+
+Abstract:
+	ln -s repalced with CREATE_SOFT_LINK
+
+Files Modified: spx/PACKAGES.D/libipmilan/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 05 Mar 2010 10:09:20 EST
+
+Package: libipmilan (1.0.3); urgency = low
+
+Abstract:
+	Fix for bug 11761. Now RMCP port number can be changed using "Set Lan Configuration" command and the port for the next lan session will be reflected.
+
+Files Modified: data/LANIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 26 Feb 2010 01:20:24 IST
+
+Package: libipmilan (1.0.2); urgency = low
+
+Abstract:
+	Build error fixed.
+
+Files Modified: data/RMCP.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 25 Feb 2010 10:58:48 IST
+
+Package: libipmilan (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:05:56 EST
+
+Package:libipmilan (1.0.0);urgency=new
+
+Abstract:
+	This library package contains IPMI LAN related stuffs
+
+Files Added: LANMetaInfo.c, Makefile, LANIfc.c, RMCP.c, RMCP+.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 16 Dec 2009 19:40:48 +0530

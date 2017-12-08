@@ -1,0 +1,61 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+<link rel='stylesheet' href='../www/style/login_style.css' type='text/css'/>
+<script language='javascript' src='../www/lib/ns_inc.js'></script>
+</head>
+<body oncontextmenu='return false;'>
+<div align='center'>
+	<label id='msglbl'></label>
+	<br style='clear:both'/>
+	<div class='login_bg'>
+		<form name='login' method='POST' action='javascript://' style='padding-top:25px;'>
+		<table border='0' cellspacing='4' cellpadding='4'>
+		<tr><td><label>Username:</label></td>
+		<td><input class='input' type='text' name='username' id='login_username'/></td></tr>
+		<tr><td><label>Password:</label></td>
+		<td><input class='input' type='password' name='password' id='login_password'/><br style='clear:both'/>
+		<a href='#' style='font-size:11px;' onclick='forgotPassword()'>Forgot Password?</a></td></tr>
+		<tr><td colspan='2' align='center'>
+		<input type='button' name='btnLogin' value='Login' onclick="validate(document.forms['login'])"/></td></tr>
+		</table>
+		</form>
+	</div>
+	<div class='info'>
+		<strong>Required Browser Settings</strong>
+		<ul>
+			<li>Allow popups from this site<span id='popupBlock'></span></li>
+			<li>Allow file download from this site. <a id='fileDownload' style='text-decoration:none; color:000'></a></li>
+			<li>Enable javascript for this site<script>document.writeln(top.IMG_RIGHT);</script><noscript>top.IMG_WRONG</noscript></li>
+			<li>Enable cookies for this site<script>document.writeln(navigator.cookieEnabled?top.IMG_RIGHT:top.IMG_WRONG)</script></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

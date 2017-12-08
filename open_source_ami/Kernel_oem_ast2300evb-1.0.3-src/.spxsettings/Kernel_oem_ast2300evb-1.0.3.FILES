@@ -1,0 +1,6 @@
+./01-arch_arm_include_asm_soc-ast2300_system.h 1199 19bbbb5cc27a205ef94c73ec7622430d
+./02-drivers_mtd_spichips_macronix.c 2304 6515064ef4b8fd908acd2c8b12525331
+./03-drivers_mtd_spichips_winbond.c 570 c9f4b21a3a290808e1c127c4f16628b4
+./04-drivers_mtd_spichips_generic.c 3097 b22b26c724acc87747b3e2744333eb23
+./05-drivers_mtd_spichips_spimtd.c 840 37b2ea472a2cd6d6e79d130ad40f80b5
+./06-drivers_mtd_spichips_spiflash.h 578 4e989faaadae324788e29b3c9a4368a4

@@ -1,0 +1,7 @@
+if PreserveSDR_Support
+config FEATURE_FILEOVERRIDE_SUPPORT
+	bool
+        default y
+        help
+             Enable/Disable File Override Support during firmware upgrade
+endif

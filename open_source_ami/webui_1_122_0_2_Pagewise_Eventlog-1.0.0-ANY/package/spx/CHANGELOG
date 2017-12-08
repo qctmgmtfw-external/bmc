@@ -1,0 +1,9 @@
+Package: webui_1_122_0_2_Pagewise_Eventlog (1.0.0); urgency = new
+
+Abstract:
+	Redesigned Event Log to display the events in pagewise format.
+
+Files Added: data, data/00-data_MDS-Workspace_page_event_log.html, data/01-data_MDS-Workspace_www_help_EN_event_log_hlp.html, data/02-data_MDS-Workspace_www_impl_event_log_imp.js, data/03-data_MDS-Workspace_www_str_EN_event_log_str.js, data/04-data_MDS-Workspace_www_str_EN_common_str.js, data/05-data_MDS-Workspace_www_lib_listgrid.js, data/06-data_MDS-Workspace_www_lib_web_alerts.js, data/07-data_MDS-Workspace_www_page_event_log.html, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Tue, 20 Sep 2011 19:48:27 IST
+

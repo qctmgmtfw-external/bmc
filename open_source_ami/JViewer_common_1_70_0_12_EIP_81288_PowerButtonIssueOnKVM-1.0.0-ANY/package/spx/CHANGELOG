@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_12_EIP_81288_PowerButtonIssueOnKVM (1.0.0); urgency = new
+
+Abstract:
+	for 81288, solved after powered off by pressing power button in rKVM, SUT cannot power on by pressing power button in rKVM
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, data/01-data_src_com_ami_kvm_jviewer_gui_PowerStatusMonitor.java, data/02-data_src_com_ami_kvm_jviewer_jvvideo_JVVideo.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 20 Jan 2012 16:00:30 CST
+

@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_3_EIP_66807_CD_Redirection_message_popup_read_only_mode
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 3 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 3
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  gopinaths (gopinaths@amiindia.co.in)
+Urgency : new
+Description : Write contents in CD when it redirected [write form host] fails. if it is redirected with read only mode proper message should be prompted.
+.
+

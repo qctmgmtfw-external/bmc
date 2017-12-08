@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_18_PortIPV6DNSRelatedFunc (1.0.0); urgency = new
+
+Abstract:
+	Porting DNSv6 related functions from Q4 release.
+
+Files Added: data, data/00-data_PendTask.c, data/01-data_Transport_LANConfig.c, data/02-data_AMI_AMI.c, data/03-data_AMI_AMIConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Tue, 14 Feb 2012 14:01:18 CST
+

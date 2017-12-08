@@ -1,0 +1,43 @@
+Package: Bootloader_cpu_arm926ejs (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:00:53 EDT
+
+Package: Bootloader_cpu_arm926ejs (1.2.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:22:56 EST
+
+Package: Bootloader_cpu_arm926ejs (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:38:16 EDT
+
+Package: Bootloader_cpu_arm926ejs (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:54:02 EST
+
+Package:Bootloader_cpu_arm926ejs (1.0.0);urgency=new
+
+Abstract:
+	ARM 926EJ-S Fixes to Bootloader 1.1.6
+
+Files Added: 01-config.mk.patch, 03-start.S.patch, 02-cpu.c.patch
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 22 Dec 2009 00:38:28 -0500

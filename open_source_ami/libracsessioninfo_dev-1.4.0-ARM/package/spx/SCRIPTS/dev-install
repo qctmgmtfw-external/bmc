@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/racsessioninfo
+	MKDIR_NOCLEAN %SPXINC/racsessioninfo
+	COPY_FILE ./racsessioninfo.h %SPXINC/racsessioninfo
+	COPY_FILE ./libracsessioninfo.a %SPXLIB/racsessioninfo
+	COPY_FILE ./libracsessioninfo.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/racsessioninfo
+	ADD_LIBRARY_LINKS %SPXLIB/racsessioninfo libracsessioninfo.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

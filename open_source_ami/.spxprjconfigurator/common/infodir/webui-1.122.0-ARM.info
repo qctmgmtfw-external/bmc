@@ -1,0 +1,15 @@
+Package : webui
+Non-Editable : YES
+Version : 1.122.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Arockia Selva Rani A  (arockiaa@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Package-License : AMI
+Description : This Package contains web page related (workspace and www)files.
+.

@@ -1,0 +1,16 @@
+--- u-boot-1.1.6/cpu/arm926ejs/AST2300/reset.c	1970-01-01 08:00:00.000000000 +0800
++++ u-boot-1.1.6-ami/cpu/arm926ejs/AST2300/reset.c	2010-01-18 10:37:10.000000000 +0800
+@@ -0,0 +1,13 @@
++/* AST2300 WDT Routines for u-boot reboot */
++
++#include <common.h>
++#include <linux/types.h>
++#include "soc_hw.h"
++
++void reset_cpu(ulong addr)
++{
++	printf("Resetting ...\n");
++	*(unsigned long *)(WDT_RELOAD_REG) = 0x10;
++	*(unsigned long *)(WDT_CONTROL_REG) = WDT_TIMER_EN | WDT_RESET_EN;
++	while (1);
++}

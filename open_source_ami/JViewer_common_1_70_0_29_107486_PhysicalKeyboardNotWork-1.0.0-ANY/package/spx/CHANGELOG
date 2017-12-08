@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_29_107486_PhysicalKeyboardNotWork (1.0.0); urgency = new
+
+Abstract:
+	for EIP 107486, softkeyboard can not work
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_AutoKeyboardLayout.java, data/01-data_src_com_ami_kvm_jviewer_gui_JVMenu.java, data/02-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, data/03-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorJapanese.java, data/04-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorEnglishHost.java, data/05-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorFrenchHost.java, data/06-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorGermanHost.java, data/07-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorSpanishHost.java, data/08-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorSpanish.java, data/09-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorEnglish.java, data/10-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorGerman.java, data/11-data_src_com_ami_kvm_jviewer_hid_USBKeyProcessorFrench.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 14 Dec 2012 18:07:31 CST
+

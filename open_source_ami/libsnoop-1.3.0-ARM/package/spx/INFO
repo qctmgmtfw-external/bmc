@@ -1,0 +1,18 @@
+Package : libsnoop
+Non-Editable : YES
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Gokulakannan Sampath  (gokulakannans@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : lib
+Essential : NO
+Config-Tag : Snoop Library support
+Group : LIBRARY
+Depends : snoop
+Package-License : AMI
+Description : This package includes the API calls to access the snoop driver.
+.

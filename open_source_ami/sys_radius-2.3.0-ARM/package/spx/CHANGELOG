@@ -1,0 +1,72 @@
+Package: sys_radius (2.3.0); urgency = high
+
+Abstract:
+	package created again to include the proper license file
+
+Files Added: spx/LICENSES/LICENSE.BSD
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 24 Jun 2011 11:33:59 EDT
+
+Package: sys_radius (2.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:42:11 EDT
+
+Package: sys_radius (2.1.0); urgency = high
+
+Abstract:
+	Package license corrected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 09 May 2011 17:46:52 EDT
+
+Package: sys_radius (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:54:59 EST
+
+Package: sys_radius (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:17:31 EDT
+
+Package: sys_radius (1.0.2); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:25:46 EDT
+
+Package: sys_radius (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:16:08 EST
+
+Package:sys_radius (1.0.0);urgency=new
+
+Abstract:
+	Package provides support for RADIUS protocol
+
+Files Added: 
+
+--Submitter: Maintainer (Maintainer@ami.com) Tue, 19 Jan 2010 17:50:29 +0530

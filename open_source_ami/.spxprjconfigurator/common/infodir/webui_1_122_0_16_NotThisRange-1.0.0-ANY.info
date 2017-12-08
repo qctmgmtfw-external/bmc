@@ -1,0 +1,20 @@
+Package : webui_1_122_0_16_NotThisRange
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 16 for webui (1.122.0)
+Depends :  webui(==1.122.0)
+PatchOrder : 16
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Seires Lee (SeiresLee@ami.com.tw)
+Urgency : new
+Description : Thou Shalt not use reserved address range.
+.
+

@@ -1,0 +1,167 @@
+/*
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+*/
+
+body
+{
+	font-family: Verdana;
+	display: block;
+	text-decoration:none;
+	color:black;
+	font-size:.7em;
+	background: #EDF3F9;
+	padding:0px;
+	margin:0px;
+	overflow:auto;
+}
+
+h2
+{
+	font-size: 12px;
+	font-style:italic;
+	margin:0px;
+	padding:6.5px;
+	margin-bottom:5px;
+	background:#4C6C9B;
+	border-left:1px solid #fff;
+	/*border-right:1px solid #fff;*/
+}
+
+legend{
+	font-weight:bold;
+	color:#000;
+	text-transform:uppercase;
+}
+
+fieldset{
+}
+
+h4
+{
+	margin-top:7px;
+	margin-bottom:0px;
+	font-size:12px;
+}
+
+ul
+{
+	margin: 3px;
+	padding-left:10px;
+}
+
+li
+{
+	margin: 0px;
+	list-style-type:none;
+}
+
+#helptitle
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-style:normal;
+	font-weight:bold;
+	color:black;
+}
+
+#helpbutton
+{
+	background-color:#b8b89d;
+}
+
+p
+{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.floatRight
+{
+	display:block;
+	float:right;
+}
+
+.closeBtn
+{
+	border:1px solid #440000;
+	font-weight:bold;
+	color:#20457A;
+	text-decoration:none;
+	font-style:normal;
+	font-size:11px;
+	padding-left:3px;
+	padding-right:3px;
+	background:#fff;
+	filter:alpha(opacity=30);
+	opacity:.7;
+}
+
+.closeBtn:hover
+{
+	opacity:1;
+	filter:aplha(opacity=100);
+	color:red;
+	background-color:#fff;
+}
+
+.helpmainhead
+{
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:italic;
+	color:#fff;
+}
+
+.helpbtn
+{
+	font-family: Arial;
+	font-size: 12px;
+	padding-left:22px;
+	font-weight:bold;
+	color:black;
+  text-decoration:none;
+}
+
+.heading
+{
+	font-weight:bold;
+	font-size: 12px;
+	margin-bottom:0px;
+	margin-top:0px;
+	text-decoration:underline;
+}
+
+.subSection
+{
+	margin:10px;
+}
+
+ul{
+	margin-top:3px;
+	margin-bottom:3px;
+}

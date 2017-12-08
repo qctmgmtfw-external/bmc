@@ -1,0 +1,18 @@
+Package: libkvm_dev (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:03:25 EDT
+
+Package: libkvm_dev (1.0.0); urgency = new
+
+Abstract:
+	This Package contains the common header files for KVM.
+
+Files Added: data, data/include, data/include/libmacro.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 07 Aug 2010 17:00:09 IST
+

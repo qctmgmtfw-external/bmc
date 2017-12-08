@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/userprivilege
+        COPY_FILE ./userprivilege.h %SPXINC/userprivilege
+    MKDIR_NOCLEAN %SPXLIB/userprivilege
+	COPY_FILE ./libuserprivilege.a %SPXLIB/userprivilege
+	COPY_FILE libuserprivilege.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/userprivilege
+	ADD_LIBRARY_LINKS %SPXLIB/userprivilege libuserprivilege.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:
+

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="true" readonly="true" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/webui_1_122_0_14_ResIPMatchThroughETHInterface-1.0.0-ANY/package/data/00-data_MDS-Workspace_www_impl_login_imp.js</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/webui_1_122_0_14_ResIPMatchThroughETHInterface-1.0.0-ANY/package/data/01-data_MDS-Workspace_www_impl_dashboard_imp.js</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>webui_1_122_0_14_ResIPMatchThroughETHInterface</package-name>
+<version>1.0.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>patch</section>
+<patch-order>14</patch-order>
+<build-depends/>
+<depends>
+<package-name operator="==" version="1.122.0">webui</package-name>
+</depends>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>PATCH</group>
+<configtags>Patch 14 for webui (1.122.0)</configtags>
+<installsize/>
+<description>Through eth1 to access BMC website, let dashboard page displays eth1's IP, MAC etc.</description>
+<architecture>ANY</architecture>
+<owner>AMI</owner>
+<maintainer>thinkjao </maintainer>
+<maintainer-email>thinkjao@ami.com.tw</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="new">new</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/webui_1_122_0_14_ResIPMatchThroughETHInterface-1.0.0-ANY/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/webui_1_122_0_14_ResIPMatchThroughETHInterface-1.0.0-ANY/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

@@ -1,0 +1,23 @@
+diff -Naur linux-2.6.15.4/Makefile linux-2.6.15.4-amiext/Makefile
+--- linux-2.6.15.4/Makefile	2006-02-10 02:22:48.000000000 -0500
++++ linux-2.6.15.4-amiext/Makefile	2006-04-20 19:03:59.519825189 -0400
+@@ -1,7 +1,7 @@
+ VERSION = 2
+ PATCHLEVEL = 6
+ SUBLEVEL = 28
+-EXTRAVERSION = .10
++EXTRAVERSION = .10-ami
+ NAME = Erotic Pickled Herring
+ 
+ # *DOCUMENTATION*
+@@ -334,8 +334,8 @@
+ LINUXINCLUDE    := -Iinclude \
+                    $(if $(KBUILD_SRC),-Iinclude2 -I$(srctree)/include) \
+                    -I$(srctree)/arch/$(hdr-arch)/include               \
+-                   -include include/linux/autoconf.h
+-
++                   -include include/linux/autoconf.h		       \
++		   -include ${SPXINC}/projdef.h		
+ KBUILD_CPPFLAGS := -D__KERNEL__ $(LINUXINCLUDE)
+ 
+ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \

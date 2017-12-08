@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_13_Enable_KVM_Support_IPv6
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 13 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 13
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  ivanlee (ivanlee@ami.com.tw)
+Urgency : new
+Description : Enable KVM Support IPv6
+.
+

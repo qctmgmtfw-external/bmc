@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_19_BridgeCMDfromKCStoNM (1.0.0); urgency = new
+
+Abstract:
+	According to Spec, commands can be bridged to NM only under ADMIN privilege. But some interfaces, including KCS, doesn't need certification. For such interfaces, the privilege-checking should be skipped.
+
+Files Added: data, data/00-data_App_AppDevice_AppDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: owenchou (owenchou@ami.com.tw) Mon, 05 Mar 2012 16:03:24 CST
+

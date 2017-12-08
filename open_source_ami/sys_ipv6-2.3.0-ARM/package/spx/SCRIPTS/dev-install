@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./etc/wide-dhcpv6 %IMAGE_TREE/etc/wide-dhcpv6
+	COPY_TO_CONF ./dhcp6c-script
+        COPY_FILE ./interfaces.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/etc/defconfig/interfaces
+        COPY_FILE ./interfaces.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/conf/interfaces
+        COPY_FILE ./dhcp6c.conf.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/etc/defconfig/dhcp6c.conf
+        COPY_FILE ./dhcp6c.conf.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/conf/dhcp6c.conf
+	COPY_FILE ./ipv6autoconf.sh %IMAGE_TREE/etc/network/if-up.d/02-up-ipv6autoconf
+	
+debug-install:

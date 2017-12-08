@@ -1,0 +1,17 @@
+Package : JavaClientSupport
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Depends : webui
+Essential : NO
+Config-Tag : Java KVM Client Support
+Group : KVM
+Owner : AMI
+Maintainer : othiyappan K  (othiyappank@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This Dummy Package is used to select/deselect Java Client Support
+.

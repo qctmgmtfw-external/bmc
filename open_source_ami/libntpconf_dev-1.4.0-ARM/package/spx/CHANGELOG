@@ -1,0 +1,88 @@
+Package: libntpconf (1.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:05:57 EDT
+
+Package: libntpconf (1.3.0); urgency = high
+
+Abstract:
+	Removed utcoffset from NTP configuration.
+
+Files Modified: data/ntpserver.c, data/ntpserver.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 02 Dec 2010 20:27:42 IST
+
+Package: libntpconf (1.2.0); urgency = medium
+
+Abstract:
+	Modified the file name ntpdate.sh to ntpdate, cron is using ntpdate instead of ntpdate.sh.
+
+Files Added: data/ntpdate
+Files Deleted: data/ntpdate.sh
+Files Modified: data/ntpserver.h, spx/PACKAGES.D/libntpconf/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: gokul (pavithras@amiindia.co.in) Fri, 12 Nov 2010 19:16:17 IST
+
+Package: libntpconf (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:02:08 EDT
+
+Package: libntpconf (1.0.4); urgency = high
+
+Abstract:
+	Problem : 
+	* When there is no DNS server at the time of booting of the device, the ntdate.sh script dont have any DNS server to resolve the NTP server names. so its taking long time for the device to boot.
+	* In VLAN mode, at the time of booting the startup script to configure VLAN interface is called after ntpdate.sh which is a NTP related script and due to above mentioned problem it is taking very long time to configure VLAN interface and its network configurations.
+
+Solution :
+	Moving the Run level execution of ntpdate.sh script after the execution of vlannetworking script solves this problem. I.e. keep vlannetworking script after S40networking script and ntpdate.sh script after VLAN run level script as S42ntpdate.sh.
+
+Files Modified: data/ntpdate.sh
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 13 Aug 2010 21:36:19 IST
+
+Package: libntpconf (1.0.3); urgency = high
+
+Abstract:
+	ntpdate.sh script file copied to usr/local/lib is removed.
+
+Files Modified: spx/PACKAGES.D/libntpconf/SCRIPTS/dev-install, spx/PACKAGES.D/libntpconf_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Fri, 16 Apr 2010 19:24:27 IST
+
+Package: libntpconf (1.0.2); urgency = medium
+
+Abstract:
+	Earlier NTP is always enabled. Now check added to read NTP state file and start/not start NTP 
+This file is configured to "Auto" or "Manual" from the NTP Configuration
+
+Files Modified: data/ntpdate.sh
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 07 Apr 2010 14:11:04 EDT
+
+Package: libntpconf (1.0.1); urgency = medium
+
+Abstract:
+	NTPDATE script added to rcS init level
+
+Files Modified: data/ntpdate.sh
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 07 Apr 2010 12:30:28 EDT
+
+Package:libntpconf (1.0.0);urgency=new
+
+Abstract:
+	This package includes NTPCONF library.
+
+Files Added: ntpserver.c, Makefile, ntpdate, ntpserver.h
+
+--Submitter: SP Core Team (spcoreteam@ami.com) Fri, 12 Feb 2010 14:38:38 +0530
+

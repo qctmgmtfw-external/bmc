@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_4_FastSELAccessWebUI (1.0.0); urgency = new
+
+Abstract:
+	Added changes for faster SEL accessing in WebUI
+
+Files Added: data, data/00-data_webifc_StorDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 15 Sep 2011 23:18:26 IST
+

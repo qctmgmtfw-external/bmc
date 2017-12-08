@@ -1,0 +1,9 @@
+Package: webui_1_122_0_22_128154_RollbackOneLine (1.0.0); urgency = new
+
+Abstract:
+	for EIP 128154, delete one more line, need rollback
+
+Files Added: data, data/00-data_MDS-Workspace_www_help_EN_configure_active_directory_hlp.html, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 25 Jul 2013 14:22:21 CST
+

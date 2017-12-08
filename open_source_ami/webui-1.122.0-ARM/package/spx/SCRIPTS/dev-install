@@ -1,0 +1,10 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./MDS-Workspace/www %IMAGE_TREE/usr/local/www
+	GZIP_WEB *.js %IMAGE_TREE/usr/local/www
+	GZIP_WEB *.htm %IMAGE_TREE/usr/local/www
+	GZIP_WEB *.html %IMAGE_TREE/usr/local/www
+	GZIP_WEB *.css %IMAGE_TREE/usr/local/www
+
+debug-install:

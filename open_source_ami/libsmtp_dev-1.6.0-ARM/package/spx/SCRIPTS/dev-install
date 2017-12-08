@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/smtp
+        COPY_FILE ./smtpclient.h %SPXINC/smtp        
+	MKDIR_NOCLEAN %SPXLIB/smtp
+	COPY_FILE ./libsmtp.a %SPXLIB/smtp
+	COPY_FILE libsmtp.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/smtp
+	ADD_LIBRARY_LINKS %SPXLIB/smtp libsmtp.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

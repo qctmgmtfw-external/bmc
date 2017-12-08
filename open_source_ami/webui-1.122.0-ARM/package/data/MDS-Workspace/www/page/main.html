@@ -1,0 +1,62 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+<link rel="stylesheet" href="../style/app_style.css" type="text/css" />
+<link rel="stylesheet" href="../lib/listgrid.css" type="text/css" />
+<script language="javascript" src="../nav/navobj.js"></script>
+<script language="javascript" src="../lib/widget.js"></script>
+<script language="javascript" src="../lib/web_alerts.js"></script>
+<script language="javascript" src="../lib/listgrid.js"></script>
+<script language="javascript" src="../lib/menu.js"></script>
+<script language="javascript" src="../lib/include.js"></script>
+<script>
+document.writeln("<script language='javascript' src='../nav/str/"+top.gLangSetting+"/navobj_str.js'><\/script>");
+document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+	<div id="_menuHolder" class="menuHolder"></div>
+	<div id="_loader" class="loader_t">
+		<span id="_loaderStatus">
+<script>document.writeln(eLang.getString("main", "MAIN_LOADING"));</script>
+</span>
+		<img src="../res/loading.gif" />
+	</div>
+	<iframe src="" id="pageFrame" frameborder="0" name="pageFrame" class="fPage"></iframe>
+</body>
+</html>

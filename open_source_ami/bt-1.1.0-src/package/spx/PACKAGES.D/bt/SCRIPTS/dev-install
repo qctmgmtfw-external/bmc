@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc
+	ADD_MODULES bt
+# Nodes are created by bt hardware for every instance of bt
+	MAKE_CHAR_NODE bt0 43 0
+	MAKE_CHAR_NODE bt1 43 1
+	MAKE_CHAR_NODE bt2 43 2
+	
+debug-install:

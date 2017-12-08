@@ -1,0 +1,20 @@
+Package : sys_base_2_41_0_4_EIP176750_Fix_Crontab
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 4 for sys_base (2.41.0)
+Depends :  sys_base(==2.41.0)
+PatchOrder : 4
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Hanslin (hanslin@ami.com.tw)
+Urgency : new
+Description : Fix the cron does not execute
+.
+

@@ -1,0 +1,17 @@
+Package : libnetwork
+Non-Editable : YES
+Version : 1.58.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : winston  (winstonv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Depends : libhostname
+Required : libunix
+Package-License : AMI
+Description : Network library binaries
+.

@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_20_Allowing_CTRL_key_combination_to_be_send_to_host_via_physical_keyboard (1.0.0); urgency = new
+
+Abstract:
+	Allowing CTRL key combination to be send to host via physical_keyboard
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerView.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 25 Jul 2012 11:44:34 CST
+

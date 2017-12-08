@@ -1,0 +1,11 @@
+# Install Script
+#
+build-install:
+	MKDIR_NOCLEAN %SPXINC/expandedgpio
+		COPY_FILE ./expanded_gpio_ifc.h %SPXINC/expandedgpio
+	MKDIR_NOCLEAN %SPXLIB/expandedgpio
+	COPY_FILE ./libexpandedgpio.a %SPXLIB/expandedgpio
+	COPY_FILE libexpandedgpio.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/expandedgpio
+	ADD_LIBRARY_LINKS %SPXLIB/expandedgpio libexpandedgpio.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+        
+debug-install:

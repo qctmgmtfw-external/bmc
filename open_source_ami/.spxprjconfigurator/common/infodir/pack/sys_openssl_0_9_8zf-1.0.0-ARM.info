@@ -1,0 +1,17 @@
+Package : sys_openssl_0_9_8zf
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : openssl
+Section : dev
+Essential : YES
+Config-Tag : openssl version 0.9.8zf
+Group : BASE
+Owner : AMI
+Maintainer : PatrickHuang  (PatrickHuang@ami.com.tw)
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+Urgency : new
+Description : Support OpenslSSL Version 0.9.8zf
+.

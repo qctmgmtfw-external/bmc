@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="true" readonly="true" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/ipmimain-2.61.0-ARM/package/data/IPMIMain</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/ipmimain-2.61.0-ARM/package/data/ipmistack</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>ipmimain</package-name>
+<version>2.61.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends/>
+<depends/>
+<required>
+<package-name operator="" version="">libflash</package-name>
+<package-name operator="" version="">libipmistack</package-name>
+<package-name operator="" version="">libipmihalapi</package-name>
+<package-name operator="" version="">libipmihalhw</package-name>
+<package-name operator="" version="">libipmipdkapi</package-name>
+<package-name operator="" version="">libfwinfo</package-name>
+<package-name operator="" version="">libipmichassis</package-name>
+<package-name operator="" version="">libipmipef</package-name>
+<package-name operator="" version="">libipmitimer</package-name>
+<package-name operator="" version="">libipmipdk</package-name>
+<package-name operator="" version="">libipmipar</package-name>
+<package-name operator="" version="">libipmipdkcmds</package-name>
+<package-name operator="" version="">libprocmanager</package-name>
+<package-name operator="" version="">libuserm</package-name>
+<package-name operator="" version="">libchecksum</package-name>
+<package-name operator="" version="">libfmh</package-name>
+<package-name operator="" version="">libiniparser</package-name>
+<package-name operator="" version="">libadvisercfg</package-name>
+<package-name operator="" version="">libencryption</package-name>
+<package-name operator="" version="">libubenv</package-name>
+<package-name operator="" version="">libipmiuds</package-name>
+<package-name operator="" version="">pam_ipmi</package-name>
+<package-name operator="" version="">libnss_ipmi</package-name>
+<package-name operator="" version="">libncsiconf</package-name>
+<package-name operator="" version="">libUserPrivilege</package-name>
+</required>
+<conflicts/>
+<essential>NO</essential>
+<group>IPMI</group>
+<configtags>IPMI Support</configtags>
+<installsize/>
+<description>This package contains ipmi binaries</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>Winston  </maintainer>
+<maintainer-email>winstonv@amiindia.co.in</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="low">low</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/ipmimain-2.61.0-ARM/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/ipmimain-2.61.0-ARM/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+		COPY_FILE ./adviserd %IMAGE_TREE/usr/local/bin/
+		SET_INIT_SCRIPT ./adviserd.sh
+		COPY_TO_CONF ./adviserd.conf
+		COPY_TO_CONF ./stunnel.conf
+		ADD_CONF_LINK /etc/stunnel stunnel.conf
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT" == "YES" ]; then echo "CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT" >> %IMAGE_TREE/etc/core_features; echo "KB_LANG_SELECT_SUPPORT" >> %IMAGE_TREE/etc/features; fi
+
+debug-install:
+

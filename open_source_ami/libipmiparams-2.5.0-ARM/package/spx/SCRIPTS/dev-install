@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %SPXLIB/ipmiparams
+		COPY_DIR		./ %IMAGE_TREE/usr/local/lib/
+		ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libipmiparams.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		COPY_FILE ./libipmiparams.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ipmiparams
+		ADD_LIBRARY_LINKS %SPXLIB/ipmiparams libipmiparams.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX		
+debug-install:

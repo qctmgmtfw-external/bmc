@@ -1,0 +1,9 @@
+Package: sys_failsafeconf_2_4_0_1_EIP_116094_StandardFeature_FIX_Rsync_on_JFFS2_Cause_Memory_Leak (1.0.0); urgency = new
+
+Abstract:
+	for EIP 116094: memory leak. Rsync creating temporary files on JFFS2 files system is an unnecessary overhead. Fix: create temporary files outside the backup config folder.
+
+Files Added: data, data/00-data_defaults_etc_rsyncconf.sh, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Mon, 08 Apr 2013 16:50:00 CST
+

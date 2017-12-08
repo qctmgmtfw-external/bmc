@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/radiusconf
+	MKDIR_NOCLEAN %SPXINC/radiusconf
+	COPY_FILE ./libradiusconf.a %SPXLIB/radiusconf
+    COPY_FILE ./radiusconf.h %SPXINC/radiusconf
+	COPY_FILE libradiusconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/radiusconf
+	ADD_LIBRARY_LINKS %SPXLIB/radiusconf libradiusconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+        
+debug-install:
+

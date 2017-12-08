@@ -1,0 +1,15 @@
+Package : ipmi_dev
+Non-Editable : YES
+Version : 2.100.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Winston  (winston@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : This Package contains IPMI include files used in IPMI stack
+.

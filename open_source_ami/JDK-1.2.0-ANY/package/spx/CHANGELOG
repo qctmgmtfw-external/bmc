@@ -1,0 +1,43 @@
+Package: JDK (1.2.0); urgency = medium
+
+Abstract:
+	Support for renaming workspace. Need SET_PATH to generate %TOOLDIR based on the current workspace path
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 22 Jul 2011 16:21:20 EDT
+
+Package: JDK (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:48:28 EDT
+
+Package: JDK (1.0.2); urgency = low
+
+Abstract:
+	Changed dev-install to use EXECUTE rule to extract JDK
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 03 Mar 2010 08:27:52 EST
+
+Package: JDK (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:00:05 EST
+
+Package:JDK (1.0.0);urgency=new
+
+Abstract:
+	This Package contains the Java development kit for compiling JViewer
+
+Files Added: jdk-1_5_0_01-linux-i586.bin, ExtractJAR.sh
+
+--Submitter: othiyappan K (othiyappank@amiindia.co.in) Wed, 25 Nov 2009 12:18:27 +0530

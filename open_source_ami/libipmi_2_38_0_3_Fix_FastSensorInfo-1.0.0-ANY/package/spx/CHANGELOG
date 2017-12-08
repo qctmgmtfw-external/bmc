@@ -1,0 +1,9 @@
+Package: libipmi_2_38_0_3_Fix_FastSensorInfo (1.0.0); urgency = new
+
+Abstract:
+	Added a New API to get all the SensorInfo for faster web access.
+
+Files Added: data, data/00-data_libipmi_sensor.c, data/01-data_sensor_helpers.c, data/02-data_libipmi_AMIOEM.c, data/03-data_sensor_helpers.h, data/04-data_include_libipmi_sensor.h, data/05-data_include_libipmi_errorcodes.h, data/06-data_include_libipmi_AMIOEM.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 17 Sep 2011 16:47:44 IST
+

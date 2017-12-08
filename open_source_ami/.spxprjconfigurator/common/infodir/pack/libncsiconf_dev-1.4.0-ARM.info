@@ -1,0 +1,16 @@
+Package : libncsiconf_dev
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Gray Chen  (graychen@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : dev
+Essential : NO
+Group : DEVEL
+Package-License : AMI
+Description : Development package for user configuration access routines of NCSI.
+.

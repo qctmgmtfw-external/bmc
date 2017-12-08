@@ -1,0 +1,9 @@
+Package: libipmistack_2_52_0_1_MBMC_Changes (1.0.0); urgency = new
+
+Abstract:
+	MBMC Changes
+
+Files Added: data, data/00-data_BMCInfo.c, data/01-data_PDKAccess.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Sat, 24 Sep 2011 00:29:24 IST
+

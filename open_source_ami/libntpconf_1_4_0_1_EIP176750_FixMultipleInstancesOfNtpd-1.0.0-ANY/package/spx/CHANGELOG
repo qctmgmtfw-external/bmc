@@ -1,0 +1,9 @@
+Package: libntpconf_1_4_0_1_EIP176750_FixMultipleInstancesOfNtpd (1.0.0); urgency = new
+
+Abstract:
+	Fix the multiple instances of ntpd
+
+Files Added: data, data/00-data_ntpdate, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: hanslin (hanslin@ami.com.tw) Mon, 01 Sep 2014 11:45:33 CST
+

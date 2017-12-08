@@ -1,0 +1,33 @@
+Package: PreserveSDR_Support (1.3.0); urgency = medium
+
+Abstract:
+	bumped to 1.3.0
+
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 05 Oct 2011 11:04:19 EDT
+
+Package: PreserveSDR_Support (1.2.0); urgency = medium
+
+Abstract:
+	bumped to 1.2.0
+
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 05 Oct 2011 11:03:01 EDT
+
+Package: PreserveSDR_Support (1.1.0); urgency = medium
+
+Abstract:
+	bumped up to 1.1.0.
+
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 05 Oct 2011 11:02:12 EDT
+
+Package: PreserveSDR_Support (1.0.0); urgency = new
+
+Abstract:
+	This is a dummy binary package for PreserverSDR
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 05 Oct 2011 11:00:24 EDT
+

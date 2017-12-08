@@ -1,0 +1,99 @@
+Package: adc (1.6.0); urgency = high
+
+Abstract:
+	Updating the SourceLicense, PackageLicense, BinaryLicense and Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/adcmain.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 16:00:24 EDT
+
+Package: adc (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 13:54:33 EDT
+
+Package: adc (1.4.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/adc/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:47:25 EDT
+
+Package: adc (1.3.0); urgency = medium
+
+Abstract:
+	removed platform specific header file as this driver is arch-independent driver
+
+Files Modified: data/adcmain.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 15 Oct 2010 16:28:16 EDT
+
+Package: adc (1.2.0); urgency = medium
+
+Abstract:
+	Changes in ADC driver to comply with the changes to track open count in helper driver
+
+Files Modified: data/adcmain.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 27 Sep 2010 18:09:34 EDT
+
+Package: adc (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 12:54:22 EDT
+
+Package: adc (1.0.4); urgency = medium
+
+Abstract:
+	add adc for AST2300EVB
+
+Files Modified: data/adc.h, data/adcmain.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Mon, 19 Jul 2010 18:51:09 CST
+
+Package: adc (1.0.3); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 11:24:55 EDT
+
+Package: adc (1.0.2); urgency = high
+
+Abstract:
+	fix wrong MAJOR_NUM in dev-install
+
+Files Modified: data/adcmain.c, spx/PACKAGES.D/adc/SCRIPTS/dev-install, spx/INFO
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Mon, 26 Apr 2010 17:49:02 CST
+
+Package: adc (1.0.1); urgency = low
+
+Abstract:
+	Versoion Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:49:57 EST
+
+Package:adc (1.0.0);urgency=new
+
+Abstract:
+	This package contains the ADC common(hardware independent) driver.
+
+Files Added: adc.h, adcmain.c, Makefile
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Sat, 28 Nov 2009 14:21:06 -0500

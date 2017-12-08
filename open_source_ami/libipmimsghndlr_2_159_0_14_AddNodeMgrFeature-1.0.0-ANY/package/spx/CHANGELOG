@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_14_AddNodeMgrFeature (1.0.0); urgency = new
+
+Abstract:
+	Implement Intel Node Manage Feature
+
+Files Added: data, data/00-data_MsgHndlr.c, data/01-data_Storage_SDRDevice_SDR.c, data/02-data_SensorEvent_SensorDevice_SensorMonitor.c, data/03-data_SensorEvent_SensorDevice_Sensor.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: owenchou (owenchou@ami.com.tw) Thu, 22 Dec 2011 01:13:51 EST
+

@@ -1,0 +1,20 @@
+Package : libipmipef_2_11_0_1_EIP81224_PEFPostPoneTime_Does_Not_Stop_When_System_Reset
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libipmipef (2.11.0)
+Depends :  libipmipef(==2.11.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  kenttang (kenttang@ami.com.tw)
+Urgency : new
+Description : PEFPostPoneTimer does not stop when system is reset
+.
+

@@ -1,0 +1,12 @@
+if yafuflash
+
+menu "Yafuflash Configuration"
+
+config FEATURE_YAFUFLASH_ENABLE_INTERACTIVE_UPGRADE
+    bool "Enable/Disable Interactive Upgrade in YafuFlash"
+    default n
+    help
+        Enable or Disable Interactive Upgrade in YafuFlash
+        
+endmenu
+endif

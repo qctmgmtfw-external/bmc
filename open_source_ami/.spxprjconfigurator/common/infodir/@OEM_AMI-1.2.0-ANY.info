@@ -1,0 +1,17 @@
+Package : @OEM_AMI
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : OEM
+Section : info
+Essential : YES
+Config-Tag : AMI OEM
+Group : BASE
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : Selects OEM as AMI
+.

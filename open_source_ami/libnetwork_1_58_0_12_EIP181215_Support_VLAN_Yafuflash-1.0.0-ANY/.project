@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>libnetwork_1_58_0_12_EIP181215_Support_VLAN_Yafuflash-1.0.0-ANY</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.ami.megarac.spx.packagecreator.spxnature</nature>
+	</natures>
+	<filteredResources>
+		<filter>
+			<id>1438845653284</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*:*</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+</projectDescription>

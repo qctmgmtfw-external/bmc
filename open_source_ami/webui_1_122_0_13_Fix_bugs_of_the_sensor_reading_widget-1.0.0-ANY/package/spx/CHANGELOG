@@ -1,0 +1,9 @@
+Package: webui_1_122_0_13_Fix_bugs_of_the_sensor_reading_widget (1.0.0); urgency = new
+
+Abstract:
+	Fix bugs of the sensor reading widget.
+
+Files Added: data, data/00-data_MDS-Workspace_www_lib_common_fn.js, data/01-data_MDS-Workspace_www_lib_widget.js, data/02-data_MDS-Workspace_www_impl_main_imp.js, data/03-data_MDS-Workspace_www_impl_widget_page_imp.js, data/04-data_MDS-Workspace_www_impl_sensor_readings_imp.js, data/05-data_MDS-Workspace_www_help_EN_configure_remote_session_hlp.html, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Wed, 29 Aug 2012 14:09:07 CST
+

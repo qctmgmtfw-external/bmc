@@ -1,0 +1,86 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>Megarac SP</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script language="Javascript" src="index_imp.js"></script>
+	<script language="Javascript" src="lib/ui.js"></script>
+	<script language="Javascript" src="lib/xmit.js"></script>
+	<script language="Javascript" src="lib/eLang.js"></script>
+	<script language="Javascript" src="lib/events.js"></script>
+	<script language="Javascript" src="str/title_str.js"></script>
+	<script>
+		var gLangSettingSet		= false;
+		var gLangSetting		= "EN";
+		var gPageDir			= "/page/";
+		var gResDir				= "/res/";
+		var gStrDir				= "/str/";
+		var gStyleDir			= "/style/";
+		var gLibDir				= "/lib/";
+		var gImplDir			= "/impl/";
+		var gHelpDir			= "/help/";
+		var gOemDir				= "../";
+		var gJavaJnlp			= "/Java/jviewer.jnlp";
+		var gVideoJnlp			= "/Java/video_record.jnlp";
+
+		onload = function() {
+			gLangSetting = getBrowserLang();
+			gLangSettingSet = true;
+			doInit();
+		}
+
+		function loadFrames()
+		{
+			window.frames["headerFrame"].location.href = "." + gPageDir + 
+				"header.html";
+			var sessionexpire = fnCookie.read("SessionExpired");
+
+			if ((fnCookie.read("SessionCookie") != undefined && 
+				fnCookie.read("SessionCookie") != null) && 
+				(sessionexpire == undefined || sessionexpire == null || 
+				sessionexpire == "false")) {
+				window.frames["mainFrame"].location.href = "." + gPageDir + 
+					"main.html";
+			} else {
+				window.frames["mainFrame"].location.href = "." + gPageDir + 
+					"login.html";
+			}
+		}
+		document.write("<script language = \"Javascript\" src = \"/str/" + 
+			gLangSetting + "/common_str.js\"><\/script>");
+	</script>
+</head>
+	<frameset rows="88, *" border="0" bordercolor="rgb(192, 192, 192)" frameborder="no" framespacing="0">
+		<frame src="./page/disable_javascript.html" name="headerFrame" id="HEADERFRAME" scrolling="no" noresize="true"></frame>
+		<frameset cols="*, 0" id="frmHolder" border="0" bordercolor="rgb(192, 192, 192)" frameborder="no" framespacing="0">
+			<frame src="./page/blank.html" name="mainFrame" id="MAINFRAME" scrolling="no" noresize="false"></frame>
+			<frame src="./page/blank.html" name="helpFrame" id="HELPFRAME" scrolling="auto" noresize="false"></frame>
+		</frameset>
+	</frameset>
+</html>

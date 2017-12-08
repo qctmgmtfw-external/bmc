@@ -1,0 +1,9 @@
+Package: webui_1_122_0_24_187028_EventLogShowError_MDS_Release (1.0.0); urgency = new
+
+Abstract:
+	for EIP 187028, event log show error in IE11 and firefox
+
+Files Added: data, data/00-data_MDS-Workspace_www_lib_listgrid.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Wed, 15 Jul 2015 20:00:38 CST
+

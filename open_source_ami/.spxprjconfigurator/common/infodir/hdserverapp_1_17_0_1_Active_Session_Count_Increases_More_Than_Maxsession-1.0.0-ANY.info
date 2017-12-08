@@ -1,0 +1,20 @@
+Package : hdserverapp_1_17_0_1_Active_Session_Count_Increases_More_Than_Maxsession
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for hdserverapp (1.17.0)
+Depends :  hdserverapp(==1.17.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  gopinaths (gopinaths@amiindia.co.in)
+Urgency : new
+Description : Active session count incrementing more then max session count
+.
+

@@ -1,0 +1,24 @@
+#!/bin/sh 
+# Restart the webserver when the interface comes up
+if [ "$IFACE"  == "lo" ]
+then
+       exit 0
+fi
+
+webpid="0"
+webgocheck="1"
+
+if [ -f /var/run/webgo.pid ]; then
+webpid=`cat /var/run/webgo.pid`
+fi
+
+if ! [ -z "$webpid" ]; then
+web=`ps ax | grep $webpid`
+webgocheck=`echo $web | awk '{ print $1 }'`
+fi
+
+if [ $webpid == $webgocheck ]; then
+/etc/init.d/webgo.sh restart
+fi
+
+exit 0

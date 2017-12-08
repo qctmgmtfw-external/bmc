@@ -1,0 +1,88 @@
+Package: libtoken (1.7.0); urgency = high
+
+Abstract:
+	Removing the unused MAX_SESSION macro since it is now dynamically updated from ncml configuration
+
+Files Modified: data/sessioncfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 31 May 2011 15:06:42 EDT
+
+Package: libtoken (1.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:14:08 EDT
+
+Package: libtoken (1.5.0); urgency = medium
+
+Abstract:
+	Fixing adviser abnormal termination when web Preview support was enabled
+
+Files Modified: data/sessioncfg.h
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Thu, 12 May 2011 16:16:45 IST
+
+Package: libtoken (1.4.0); urgency = medium
+
+Abstract:
+	Web console preview feature support
+
+Files Modified: data/sessioncfg.h
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 27 Apr 2011 17:01:04 IST
+
+Package: libtoken (1.3.0); urgency = high
+
+Abstract:
+	FD leak fixed on CreateToken.
+
+Files Modified: data/token.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 10:36:04 EDT
+
+Package: libtoken (1.2.0); urgency = medium
+
+Abstract:
+	Increasing webtoken size to store the null character
+
+Files Modified: data/token.h
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 09 Feb 2011 14:16:03 IST
+
+Package: libtoken (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:05:09 EDT
+
+Package: libtoken (1.0.2); urgency = medium
+
+Abstract:
+	Virtual Flash server port number macros added.
+
+Files Modified: data/sessioncfg.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 15 Jul 2010 12:50:02 EDT
+
+Package: libtoken (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:10:46 EST
+
+Package:libtoken (1.0.0);urgency=new
+
+Abstract:
+	This Package include token library.
+
+Files Added: token.h, sessioncfg.h, token.c, Makefile
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Wed, 23 Dec 2009 13:45:17 -0500

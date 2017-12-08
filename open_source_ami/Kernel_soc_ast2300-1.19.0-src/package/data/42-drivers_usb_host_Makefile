@@ -1,0 +1,11 @@
+--- linux-2.6.28.10/drivers/usb/host/Makefile	2009-05-03 02:54:43.000000000 +0800
++++ linux-2.6.28.10-ami/drivers/usb/host/Makefile	2011-03-17 16:28:13.000000000 +0800
+@@ -10,6 +10,8 @@
+ 
+ obj-$(CONFIG_USB_WHCI_HCD)	+= whci/
+ 
++obj-$(CONFIG_USB_AST_UHCI_HCD)	+= uhci-ast/
++
+ obj-$(CONFIG_PCI)		+= pci-quirks.o
+ 
+ obj-$(CONFIG_USB_EHCI_HCD)	+= ehci-hcd.o

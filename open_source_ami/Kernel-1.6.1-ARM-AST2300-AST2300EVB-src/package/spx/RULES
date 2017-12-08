@@ -1,0 +1,22 @@
+extract_source:
+
+build_source:
+		COPY_FILE %BUILD/%PACKAGE/spx/DEFCONFIG %KERNEL_SRC/linux/.config
+		CWD %KERNEL_SRC/linux
+		INVOKE_MAKE oldconfig
+		INVOKE_MAKE uImage
+
+#Clean Source
+clean_source:
+		CWD %KERNEL_SRC/linux
+		INVOKE_MAKE clean
+		INVOKE_MAKE distclean
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+# Rules to create kernel package
+build_package-kernel:
+		PACK_SPX  ./boot/kernel %KERNEL_SRC/linux/arch/arm/boot/uImage
+
+# Rule  to create kernel_dev package
+build_package-kernel_dev:
+		PACK_SPX ./usr/include/linux  %KERNEL_SRC/linux/include

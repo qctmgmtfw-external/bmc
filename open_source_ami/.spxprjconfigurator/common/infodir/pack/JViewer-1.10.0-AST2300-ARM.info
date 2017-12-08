@@ -1,0 +1,19 @@
+Package : JViewer
+Non-Editable : YES
+Version : 1.10.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : David Chang  (DavidChang@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+SOC : AST2300
+Urgency : medium
+Section : app
+Essential : YES
+Group : KVM
+Provides : JavaClient
+Depends : JViewer_common
+Package-License : AMI
+Description : This is a dummy package because the SPX package Architecturerequires at least one binary package to be specified for a source package.
+.

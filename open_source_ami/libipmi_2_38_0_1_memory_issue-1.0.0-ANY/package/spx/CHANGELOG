@@ -1,0 +1,9 @@
+Package: libipmi_2_38_0_1_memory_issue (1.0.0); urgency = new
+
+Abstract:
+	Added proper error handling and freeing of dynamically allocated memory.
+
+Files Added: data, data/00-data_sdr_cache.c, data/01-data_scsi.c, data/02-data_libipmi_fru.c, data/03-data_libipmi_StorDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 14 Sep 2011 15:38:54 JST
+

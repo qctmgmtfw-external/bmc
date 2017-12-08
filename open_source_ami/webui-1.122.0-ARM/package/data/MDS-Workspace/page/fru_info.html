@@ -1,0 +1,114 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+<link rel='stylesheet' href='../www/style/page_style.css' type='text/css'/>
+<script language='javascript' src='../www/lib/include.js'></script>
+</head>
+<body oncontextmenu='return false;'>
+<h3>Field Replaceable Unit(FRU)</h3>
+<p>This page gives detailed information for the various FRU devices 
+	present in this system.</p>
+
+<h4>Basic Information:</h4>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='6' border='0' width='700'>
+		<tr><td width='40%'><strong>FRU Device ID</strong></td>
+		<td><select id='_FRUDeviceID' class='classicTxtBox'></select></td></tr>
+		<tr><td><strong>FRU Device Name</strong></td>
+		<td><label id='_FRUDeviceName' class='classicTxtBox' /></td></tr>
+	</table>
+</div>
+
+<h4>Chassis Information:</h4>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='6' border='0' width='700'>
+		<tr><td width='40%'><strong>Chassis Information Area Format Version</strong></td>
+		<td><label id='_CI_ChassisInfoAreaFormatVersion' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Chassis Type</strong></td>
+		<td><label id='_CI_ChassisType' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Chassis Part Number</strong></td>
+		<td><label id='_CI_ChassisPartNum' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Chassis Serial Number</strong></td>
+		<td><label id='_CI_ChassisSerialNum' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Chassis Extra</strong></td>
+		<td><label id='_CI_CustomFields' class='classicTxtBox' /></td></tr>
+	</table>
+</div>
+
+<h4>Board Information:</h4>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='6' border='0' width='700'>
+		<tr><td width='40%'><strong>Board Information Area Format Version</strong></td>
+		<td><label id='_BI_BoardInfoAreaFormatVersion' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Language</strong></td>
+		<td><label id='_BI_Language' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Manufacture Date Time</strong></td>
+		<td><label id='_BI_MfgDateTime' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Board Manufacturer</strong></td>
+		<td><label id='_BI_BoardMfr' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Board Product Name</strong></td>
+		<td><label id='_BI_BoardProductName' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Board Serial Number</strong></td>
+		<td><label id='_BI_BoardSerialNum' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Board Part Number</strong></td>
+		<td><label id='_BI_BoardPartNum' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>FRU File ID</strong></td>
+		<td><label id='_BI_FRUFileID' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Board Extra</strong></td>
+		<td><label id='_BI_CustomFields' class='classicTxtBox' /></td></tr>
+	</table>
+</div>
+
+<h4>Product Information:</h4>
+<div class='subSection'>
+	<table cellspacing='0' cellpadding='6' border='0' width='700'>
+		<tr><td width='40%'><strong>Product Information Area Format Version</strong></td>
+		<td><label id='_PI_ProductInfoAreaFormatVersion' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Language</strong></td>
+		<td><label id='_PI_Language' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Manufacturer Name</strong></td>
+		<td><label id='_PI_MfrName' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Product Name</strong></td>
+		<td><label id='_PI_ProductName' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Product Part Number</strong></td>
+		<td><label id='_PI_ProductPartNum' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Product Version</strong></td>
+		<td><label id='_PI_ProductVersion' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Product Serial Number</strong></td>
+		<td><label id='_PI_ProductSerialNum' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Asset Tag</strong></td>
+		<td><label id='_PI_AssetTag' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>FRU File ID</strong></td>
+		<td><label id='_PI_FRUFileID' class='classicTxtBox' /></td></tr>
+		<tr><td><strong>Product Extra</strong></td>
+		<td><label id='_PI_CustomFields' class='classicTxtBox' /></td></tr>
+	</table>
+</div>
+</body>
+</html>

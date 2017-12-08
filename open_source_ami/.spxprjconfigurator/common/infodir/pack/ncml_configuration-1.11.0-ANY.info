@@ -1,0 +1,15 @@
+Package : ncml_configuration
+Version : 1.11.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : app
+Essential : NO
+Group : DEVEL
+Owner : AMI
+Maintainer : Veera Jothi R  (veerajothir@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This package contains the default configuration file of ncml package. This defualt configuration can be overriden by any OEM specific configuration pacakge.
+.

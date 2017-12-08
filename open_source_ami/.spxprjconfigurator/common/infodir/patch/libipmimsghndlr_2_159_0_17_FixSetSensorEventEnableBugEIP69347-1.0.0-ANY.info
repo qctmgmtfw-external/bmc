@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_17_FixSetSensorEventEnableBugEIP69347
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 17 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 17
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Owen Chou (owenchou@ami.com.tw)
+Urgency : new
+Description : If sensor-scanning is disabled, it means this sensor is disabled. Bit5 of EventFlags should be 1. EIP69347.
+.
+

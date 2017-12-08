@@ -1,0 +1,16 @@
+Package : libUserPrivilege_dev
+Non-Editable : YES
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Revanth A  (revantha@amiindia.co.in)
+Source-License : AMI
+Architecture : ANY
+Urgency : medium
+Section : dev
+Essential : NO
+Group : DEVEL
+Package-License : AMI
+Description : User Privilege Development Header files.
+.

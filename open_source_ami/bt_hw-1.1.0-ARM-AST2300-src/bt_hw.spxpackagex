@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/bt_hw-1.1.0-ARM-AST2300-src/package/data/bt_hw.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/bt_hw-1.1.0-ARM-AST2300-src/package/data/Makefile</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/bt_hw-1.1.0-ARM-AST2300-src/package/data/bthw_mod.c</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>bt_hw</package-name>
+<version>1.1.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">crosscc</package-name>
+<package-name operator="" version="">helper_driver_dev</package-name>
+<package-name operator="" version="">kernel_dev</package-name>
+<package-name operator="" version="">bt_driver_dev</package-name>
+<package-name operator="" version="">rules</package-name>
+<package-name operator="" version="">reset_hw</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>YES</essential>
+<group>DEVICE</group>
+<configtags/>
+<installsize/>
+<description>This package contains BT hardware driver for AST2300 SoC.</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>Rama Rao Bisa  </maintainer>
+<maintainer-email>RamaB@ami.com</maintainer-email>
+<sourcelocation>AMI</sourcelocation>
+<sourceversion>1.0.0</sourceversion>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc>AST2300</soc>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/bt_hw-1.1.0-ARM-AST2300-src/package/spx/RULES</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages>
+<package>
+<name>bt_hw</name>
+<section>sys</section>
+<essential>YES</essential>
+<configtags/>
+<group>DEVICE</group>
+<license>GPL-V2</license>
+<description>This package contains built BT hardware driver for AST2300 SoC.</description>
+<provides>btDriver</provides>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends>
+<package-name operator="" version="">kernel</package-name>
+<package-name operator="" version="">bt</package-name>
+</depends>
+<required>
+<package-name operator="" version="">helper</package-name>
+</required>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/bt_hw-1.1.0-ARM-AST2300-src/package/spx/PACKAGES.D/bt_hw/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/bt_hw-1.1.0-ARM-AST2300-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

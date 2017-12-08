@@ -1,0 +1,50 @@
+--- .pristine/webui-1.122.0-src/data/MDS-Workspace/www/page/event_log.html Tue Sep 20 19:40:35 2011
++++ source/webui-1.122.0-src/data/MDS-Workspace/www/page/event_log.html Tue Sep 20 18:21:53 2011
+@@ -41,7 +41,7 @@
+ 	<script>
+ 	onload = function() {
+ 		if (top.gLangSettingSet == true) {
+-		var elmt = document.getElementById("_clearLog");
++		var elmt = document.getElementById("_btnClearLog");
+ 		elmt.setAttribute("value", eLang.getString("event_log", "EVENT_LOG_CLEAREVENTS"));
+ 			doInit();
+ 		}
+@@ -67,9 +67,9 @@
+ </p>
+ <table border="0" width="100%" cellspacing="3" cellpadding="3">
+ 	<tr>
+-		<td><select id="_eventTypeSel"></select> 
++		<td><select id="_eventTypeSel"></select>&nbsp; 
+ <script>document.writeln(eLang.getString("event_log", "EVENT_LOG_FILTERBY"));</script>
+- <select id="_sensorName"></select></td>
++&nbsp;<select id="_sensorName"></select></td>
+ 		<td><label class="alignRight" id="_lblHeader"></label></td>
+ 	</tr>
+ 	<tr>
+@@ -80,8 +80,14 @@
+ 		<input type="radio" id="_rdoClientTzone" name="timeZone">
+ 		<label for="_rdoClientTzone">
+ <script>document.writeln(eLang.getString("event_log", "EVENT_LOG_CLIENT_TZONE"));</script>
+-</label></td>
+-		<td><label class="alignRight" id="_utcOffset"></label></td>
++</label>
++		&nbsp;&nbsp;<label id="_utcOffset"></label>
++	</td><td class="alignRight">
++		<input type="button" id="_btnFirst" style="width:40px" value="<<" />
++		<input type="button" id="_btnPrevious" style="width:40px" value="<" />
++		<input type="text" id="_txtPage" maxlength="5" style="width:50px" />
++		<input type="button" id="_btnNext" style="width:40px" value=">" />
++		<input type="button" id="_btnLast" style="width:40px" value=">>" /></td>
+ 	</tr>
+ </table>
+ <script>
+@@ -93,7 +99,7 @@
+ 	if (!window.ActiveXObject)document.write("<br>");
+ </script>
+ <div class="btnTray">
+-	<input type="button" id="_clearLog" />
++	<input type="button" id="_btnClearLog" />
+ </div>
+ </body>
+ </html>
+\ No newline at end of file

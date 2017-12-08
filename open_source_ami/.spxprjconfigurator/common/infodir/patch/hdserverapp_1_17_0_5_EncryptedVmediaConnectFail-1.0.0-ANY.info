@@ -1,0 +1,20 @@
+Package : hdserverapp_1_17_0_5_EncryptedVmediaConnectFail
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 5 for hdserverapp (1.17.0)
+Depends :  hdserverapp(==1.17.0)
+PatchOrder : 5
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  joeychen (JoeyChen@ami.com.tw)
+Urgency : new
+Description : encrypted media session also make connection to media servers on loopback interface and so removed restriction on using loopback interface only for local media redirection
+.
+

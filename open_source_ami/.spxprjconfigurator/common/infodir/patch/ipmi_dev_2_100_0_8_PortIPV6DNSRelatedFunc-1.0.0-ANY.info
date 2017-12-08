@@ -1,0 +1,20 @@
+Package : ipmi_dev_2_100_0_8_PortIPV6DNSRelatedFunc
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 8 for ipmi_dev (2.100.0)
+Depends :  ipmi_dev(==2.100.0)
+PatchOrder : 8
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Seires Lee (SeiresLee@ami.com.tw)
+Urgency : new
+Description : Porting DNSv6 related functions from Q4 release.
+.
+

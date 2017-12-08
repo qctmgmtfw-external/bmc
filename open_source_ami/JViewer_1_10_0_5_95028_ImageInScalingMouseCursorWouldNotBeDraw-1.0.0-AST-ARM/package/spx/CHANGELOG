@@ -1,0 +1,9 @@
+Package: JViewer_1_10_0_5_95028_ImageInScalingMouseCursorWouldNotBeDraw (1.0.0); urgency = new
+
+Abstract:
+	The image after affine transform won't be draw the mouse cursor when the hardware cursor is enable and scaling status.
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_soc_video_HardwareCursor.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Mon, 30 Jul 2012 13:29:45 CST
+

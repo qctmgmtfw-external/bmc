@@ -1,0 +1,30 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/userm
+	MKDIR_NOCLEAN %SPXINC/userm        
+    COPY_FILE ./commonio.h %SPXINC/userm
+    COPY_FILE ./config.h %SPXINC/userm
+    COPY_FILE ./defines.h %SPXINC/userm
+    COPY_FILE ./groupio.h %SPXINC/userm
+    COPY_FILE ./gshadow_.h %SPXINC/userm
+    COPY_FILE ./ipmi_userifc_private.h %SPXINC/userm
+    COPY_FILE ./pppConf.h %SPXINC/userm
+    COPY_FILE ./protos.h %SPXINC/userm
+    COPY_FILE ./prototypes.h %SPXINC/userm
+    COPY_FILE ./pwio.h %SPXINC/userm
+    COPY_FILE ./shadowio.h %SPXINC/userm
+    COPY_FILE ./snprintf.h %SPXINC/userm
+    COPY_FILE ./webshio.h %SPXINC/userm  
+    COPY_FILE ./authenticate.h %SPXINC/userm
+    COPY_FILE ./ipmi_userifc.h %SPXINC/userm
+    COPY_FILE ./rac_numbers.h %SPXINC/userm
+    COPY_FILE ./stdgrps.h %SPXINC/userm
+    COPY_FILE ./usermapis.h %SPXINC/userm
+    COPY_FILE ./usermdefs.h %SPXINC/userm
+    COPY_FILE ./libuserm.a %SPXLIB/userm
+	COPY_FILE libuserm.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/userm
+	ADD_LIBRARY_LINKS %SPXLIB/userm libuserm.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+        
+
+debug-install:

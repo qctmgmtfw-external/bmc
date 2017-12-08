@@ -1,0 +1,18 @@
+Package : libipmi_sw
+Version : 1.10.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : software
+Depends : libipmi
+Conflicts : Package
+Essential : NO
+Config-Tag : libipmi (software)
+Group : SOFTWARE
+Owner : AMI
+Maintainer : muthuchamyk  (muthusamyk@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : low
+Description : This Package contains the files to refer original libipmi library.
+.

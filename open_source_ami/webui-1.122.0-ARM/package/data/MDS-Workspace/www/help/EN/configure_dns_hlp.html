@@ -1,0 +1,102 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<title>configure_dns help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+</head>
+<body>
+	<h2><div class="floatRight">
+	<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a>
+	</div>
+	<div class="helpmainhead">DNS</div></h2>
+	<div class="subSection">
+		This page is used to configure the Host name and Domain Name Server
+		 configuration of the device.
+		<br/><br/>
+		<fieldset>
+			<legend>Actions</legend>
+			<h4>Host configuration</h4>
+			<h4>Host Settings</h4>
+			Choose either Automatic or Manual settings.
+			<h4>Host Name</h4>
+			It displays hostname of the device. If the Host setting is chosen
+			 as Manual, then specify the hostname of the device.
+			<h4>Register BMC</h4>
+			Choose the BMC's network port to register with this DNS settings.
+			<script type="text/javascript">
+			var hlpLAN = "";
+			hlpLAN = "<h4>LAN Interface</h4>";
+			hlpLAN += "Check the option 'Register BMC' to register with this " +
+				"DNS settings. <br>Choose the option 'Direct Dynamic DNS' to " +
+				"register with direct dynamic DNS or choose 'DHCP Client " +
+				"FQDN' to register through DHCP server.";
+			document.write(hlpLAN);
+			</script>
+			<h4>Domain Name Configuration </h4>
+			<h4>Domain Settings</h4>
+			It lists the option for domain interface as Manual, v4 or v6 for
+			 multiLAN channels. 
+			<h4>Domain Name</h4>
+			It displays the domain name of the device.
+			If the Domain setting is chosen as Manual, then specify the domain
+			 name of the device.
+			<h4>Domain Name Server Configuration </h4>
+			<h4>DNS Server Settings</h4>
+			It lists the option for DNS interface, Manual and available
+			 LAN interfaces.
+			<h4>IP Priority</h4>
+			If IP Priority is IPv4, it will have 2 IPv4 DNS servers and 1 IPv6
+			 DNS server. If IP Priority is IPv6, it will have 2 IPv6 DNS servers
+			 and 1 IPv4 DNS server.
+			<br>
+			<strong>NOTE:</strong> It is not applicable for Manual
+			 configuration.
+			<h4>DNS Server1, 2 & 3</h4>
+			Specify the DNS (Domain Name System) server address to be configured
+			 for the BMC.
+			<ul>
+				<li>- IPv4 Address made of 4 numbers separated by dots as in
+				 "xxx.xxx.xxx.xxx".</li>
+				<li>- Each number ranges from 0 to 255.</li>
+				<li>- First number must not be 0.</li>
+			</ul>
+			DNS Server Address will support the following:
+			<ul>
+				<li>- IPv4 Address format.</li>
+				<li>- IPv6 Address format.</li>
+			</ul>
+			<h4>Save</h4>
+			Click 'Save' to save any changes made.
+			You will be prompted to log out of current UI session and log back in.
+			<h4>Reset</h4>
+			Reset the modified changes.
+		</fieldset>
+	</div>
+</body>
+</html>

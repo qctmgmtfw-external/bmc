@@ -1,0 +1,204 @@
+Package: ncsi (1.15.0); urgency = high
+
+Abstract:
+	Fix for low transfer speed on NCSI network when connected to 1G Switch
+
+Files Modified: data/include/ncsi.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 02 Aug 2011 15:29:02 EDT
+
+Package: ncsi (1.14.0); urgency = high
+
+Abstract:
+	Updating ncsi license from AMI to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 27 Jun 2011 15:00:18 EDT
+
+Package: ncsi (1.13.0); urgency = high
+
+Abstract:
+	Minor correction: Earlier, the condition for rtnl_trylock was checked wrongly and mutex lock was not freed
+
+Files Modified: data/core/ncsi_if.c, spx/INFO
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 22 Jun 2011 17:09:36 IST
+
+Package: ncsi (1.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:19:38 EDT
+
+Package: ncsi (1.11.0); urgency = medium
+
+Abstract:
+	Removed hard coded values with values from project configuration
+
+Files Modified: data/core/ncsi_if.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 25 Mar 2011 17:14:30 EDT
+
+Package: ncsi (1.10.0); urgency = high
+
+Abstract:
+	NCSI MAC Filtering address changed when ADDRCHANGE notification arrives - Neededfor bonding support
+
+ethtool get_settings changed from reading NCSI to reading internal data structure which are filled during init and during link status changes. This reduced the 
+overhead of NCSI communicaiton (the overhead was about 90% cpu usage when bonding calls the ethool every 100ms for MIIMON interval
+
+Files Modified: data/core/ethtool.c, data/core/interfaces.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/include/interfaces.h, data/include/ncsi.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 25 Mar 2011 15:57:33 EDT
+
+Package: ncsi (1.9.0); urgency = medium
+
+Abstract:
+	Added Link Status Change Notifiation to kernel
+SPX netmon driver will be notified for link up and link down
+which can notify  applications
+
+Files Modified: data/core/ncsilib.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 21 Mar 2011 16:43:21 EDT
+
+Package: ncsi (1.8.0); urgency = medium
+
+Abstract:
+	Added ethtool functions for NCSI. These functions will be called from networ driver
+
+Files Added: data/core/ethtool.c
+Files Modified: data/Makefile, data/core/interfaces.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/include/interfaces.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 18 Mar 2011 16:20:09 EDT
+
+Package: ncsi (1.7.0); urgency = high
+
+Abstract:
+	NCSI detection is now done in the foreground.
+
+Files Modified: data/Makefile, data/core/ncsi_if.c, data/core/ncsicore.c, data/include/interfaces.h
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 03 Mar 2011 19:27:57 EST
+
+Package: ncsi (1.6.0); urgency = medium
+
+Abstract:
+	Added support to force NCSI link speed/duplex
+
+Files Modified: data/core/ncsicore.c, data/core/proc.c, data/include/interfaces.h, data/include/ncsi.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 07 Feb 2011 11:05:17 EST
+
+Package: ncsi (1.5.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/Makefile, data/core/ncsi_if.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:53:31 EST
+
+Package: ncsi (1.4.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:33:00 EST
+
+Package: ncsi (1.3.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:49:39 EDT
+
+Package: ncsi (1.2.0); urgency = medium
+
+Abstract:
+	The NCSI driver uses the work queue mechanism to apply user settings.
+
+Files Modified: data/core/ncsi_if.c, data/core/ncsicore.c, data/include/interfaces.h
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 04 Oct 2010 15:11:53 CST
+
+Package: ncsi (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:06:49 EDT
+
+Package: ncsi (1.0.6); urgency = medium
+
+Abstract:
+	Support NCSI LAN controllers which do not support NCSI checksum(the checksum field is always 0).
+
+Files Modified: data/core/ncsilib.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 09 Jul 2010 10:59:37 CST
+
+Package: ncsi (1.0.5); urgency = medium
+
+Abstract:
+	Modified the attribute of UserEnable and UserVlanID to 0644 for user settable support.
+
+Files Modified: data/core/proc.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 07 Jun 2010 12:46:08 CST
+
+Package: ncsi (1.0.4); urgency = medium
+
+Abstract:
+	Fixed Bug: If TRUE/FALSE is not defined earlier, it will fail
+
+Files Modified: data/include/types.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 06 May 2010 16:11:20 EDT
+
+Package: ncsi (1.0.3); urgency = high
+
+Abstract:
+	ncsi types are defined locally within the driver
+
+Files Modified: data/include/types.h
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 05 May 2010 16:52:41 EDT
+
+Package: ncsi (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:58:52 EDT
+
+Package: ncsi (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:12:02 EST
+
+Package:ncsi (1.0.0);urgency=new
+
+Abstract:
+	This package provides the NCSI Device Driver Support
+
+Files Added: helper, core, include, Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 18 Dec 2009 08:38:57 -0500

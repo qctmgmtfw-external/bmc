@@ -1,0 +1,61 @@
+menu "Media Configuration"
+
+config cdserverapp (1.16.0)
+	bool "CD/DVD ROM Device Support"
+	default n
+	select libtoken
+	select  libunix
+	select  libvmedia
+	select  CDDVD_support
+	select  vmapp
+	select  libncml
+	depends on @ARCH_ARM
+	help
+		This package includes built cdserver application.
+
+#--------------------------------------
+config fdserverapp (1.17.0)
+	bool "Floppy Device Support"
+	default n
+	select libtoken
+	select  libdbgout
+	select  libunix
+	select  libvmedia
+	select  Floppy_support
+	select  vmapp
+	select  libncml
+	depends on @ARCH_ARM
+	help
+		This Package includes build fdserver application.
+
+#--------------------------------------
+config hdserverapp (1.17.0)
+	bool "Harddisk Server Support"
+	default n
+	select libdbgout
+	select  libtoken
+	select  libunix
+	select  libvmedia
+	select  HDisk_support
+	select  vmapp
+	select  libncml
+	depends on @ARCH_ARM
+	help
+		This Package includes built hdserver application.
+
+#--------------------------------------
+config vmapp (1.5.0)
+	bool 
+	default n
+	select libtoken
+	select  libunix
+	select  libvmedia
+	depends on @ARCH_ARM
+	help
+		This package includes built Virtual Media application.
+
+#--------------------------------------
+
+endmenu
+
+

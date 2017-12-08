@@ -1,0 +1,17 @@
+Package : hw_bt
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Essential : NO
+Group : DEVICE
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : new
+Description : SOC Supports BT
+SOC will include this package if it supports this peripheral.
+Driver Packages can be selected only if this package is included
+.

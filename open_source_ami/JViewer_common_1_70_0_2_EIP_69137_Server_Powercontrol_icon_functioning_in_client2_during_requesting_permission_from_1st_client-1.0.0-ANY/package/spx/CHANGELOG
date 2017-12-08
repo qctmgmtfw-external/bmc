@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_2_EIP_69137_Server_Powercontrol_icon_functioning_in_client2_during_requesting_permission_from_1st_client (1.0.0); urgency = new
+
+Abstract:
+	Server Power control icon is functioning the in client2 during 2nd client requesting permission from 1st client
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JVToolBar.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 08 Sep 2011 17:24:33 IST
+

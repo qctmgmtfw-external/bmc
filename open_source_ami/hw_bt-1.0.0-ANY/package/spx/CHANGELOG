@@ -1,0 +1,9 @@
+Package: hw_bt (1.0.0); urgency = new
+
+Abstract:
+	SOC Supports BT
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 05 Jul 2011 12:40:20 EDT
+

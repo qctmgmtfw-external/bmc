@@ -1,0 +1,88 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+<link rel="stylesheet" href="../style/login_style.css" type="text/css" />
+<script language="javascript" src="../lib/ns_inc.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("LOGIN_VALUE_1");
+		elmt.setAttribute("value", eLang.getString("login", "LOGIN_LOGIN"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<div align="center">
+	<label id="msglbl"></label>
+	<br style="clear:both" />
+	<div class="login_bg">
+		<form name="login" method="POST" action="javascript://" style="padding-top:25px;">
+		<table border="0" cellspacing="4" cellpadding="4">
+		<tr><td><label>
+<script>document.writeln(eLang.getString("login", "LOGIN_USERNAME"));</script>
+</label></td>
+		<td><input class="input" type="text" name="username" id="login_username" /></td></tr>
+		<tr><td><label>
+<script>document.writeln(eLang.getString("login", "LOGIN_PASSWORD"));</script>
+</label></td>
+		<td><input class="input" type="password" name="password" id="login_password" /><br style="clear:both" />
+		<a href="#" style="font-size:11px;" onclick="forgotPassword()">
+<script>document.writeln(eLang.getString("login", "LOGIN_FORGOT_PASSWORD"));</script>
+</a></td></tr>
+		<tr><td colspan="2" align="center">
+		<input type="button" name="btnLogin" id="LOGIN_VALUE_1" onclick="validate(document.forms['login'])" /></td></tr>
+		</table>
+		</form>
+	</div>
+	<div class="info">
+		<strong>
+<script>document.writeln(eLang.getString("login", "LOGIN_BROWSER"));</script>
+</strong>
+		<ul>
+			<li>
+<script>document.writeln(eLang.getString("login", "LOGIN_POPUP"));</script>
+<span id="popupBlock"></span></li>
+			<li>
+<script>document.writeln(eLang.getString("login", "LOGIN_FILEDOWNLOAD"));</script>
+ <a id="fileDownload" style="text-decoration:none; color:000"></a></li>
+			<li>
+<script>document.writeln(eLang.getString("login", "LOGIN_JAVASCRIPT"));</script>
+<script>document.writeln(top.IMG_RIGHT);</script><noscript>top.IMG_WRONG</noscript></li>
+			<li>
+<script>document.writeln(eLang.getString("login", "LOGIN_COOKIES"));</script>
+<script>document.writeln(navigator.cookieEnabled?top.IMG_RIGHT:top.IMG_WRONG)</script></li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

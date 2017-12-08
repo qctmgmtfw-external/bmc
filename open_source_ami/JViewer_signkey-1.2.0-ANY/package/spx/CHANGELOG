@@ -1,0 +1,43 @@
+Package: JViewer_signkey (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:30:41 EDT
+
+Package: JViewer_signkey (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:49:04 EDT
+
+Package: JViewer_signkey (1.0.2); urgency = high
+
+Abstract:
+	Fixed dev-install to fix build issue
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 01 Mar 2010 23:50:01 EST
+
+Package: JViewer_signkey (1.0.1); urgency = low
+
+Abstract:
+	Removed the echo in the devinstall
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 01 Mar 2010 20:18:55 IST
+
+Package:JViewer_signkey (1.0.0);urgency=new
+
+Abstract:
+	This package contains AMIkey to sign the JAR.
+
+Files Added: amiKeys
+
+--Submitter: Othiyappan K (othiyappank@amiindia.co.in) Fri, 27 Nov 2009 13:36:02 +0530

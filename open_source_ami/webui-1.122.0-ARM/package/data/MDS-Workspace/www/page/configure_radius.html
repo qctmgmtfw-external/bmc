@@ -1,0 +1,93 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+<link href="../style/page_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../lib/include.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_saveBtn");
+		elmt.setAttribute("value", eLang.getString("configure_radius", "CFG_RADIUS_SAVE"));
+		var elmt = document.getElementById("_resetBtn");
+		elmt.setAttribute("value", eLang.getString("configure_radius", "CFG_RADIUS_RESET"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_TITLE"));</script>
+</h3>
+
+<p>
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_DESC"));</script>
+</p>
+
+ <div class="subSection">
+ 	<div class="subSection">
+		<table cellspacing="0" cellpadding="5" border="0" width="450">
+		<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_AUTH"));</script>
+</strong></td>
+		<td>
+			<input type="checkbox" id="_enableRADIUS" value="1" />
+			<label for="_enableRADIUS">
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_ENABLE"));</script>
+</label>
+		</td></tr>
+		<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_PORT"));</script>
+</strong></td>
+		<td><input type="text" id="_port" disabled maxlength="5" class="smallclassicTxtBox" /></td></tr>
+		<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_TIMEOUT"));</script>
+</strong></td>
+		<td><input type="text" id="_timeout" disabled maxlength="3" class="smallclassicTxtBox" /> 
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_SECONDS"));</script>
+</td></tr>
+		<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_SERVER"));</script>
+</strong></td>
+		<td><input type="text" id="_ipaddr" disabled maxlength="15" class="classicTxtBox" /></td></tr>
+		<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_radius", "CFG_RADIUS_SECRET"));</script>
+</strong></td>
+		<td><input type="password" id="_secret" disabled maxlength="31" class="classicTxtBox" /></td></tr>
+		</table>
+ 	</div>
+ </div>
+<div class="btnTray">
+	<input type="button" id="_saveBtn" />
+	<input type="button" id="_resetBtn" />
+</div>
+</body>
+</html>

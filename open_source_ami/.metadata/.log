@@ -1,0 +1,18 @@
+!SESSION 2015-08-06 15:13:17.748 -----------------------------------------------
+eclipse.buildId=Version : 3.7.9 BuildId : 105162
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86 -clean
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 15:13:35.174
+!MESSAGE Plugin 'com.ami.megarac.spx.builder' invalid Menu Extension (Path 'org.eclipse.search.menu' is invalid): textSearchSubMenu
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 15:13:35.176
+!MESSAGE Plug-in 'com.ami.megarac.spx.builder' contributed an invalid Menu Extension (Path: 'org.eclipse.search.menu/textSearchSubMenu' is invalid): com.ami.megarac.spx.builder.SearchAction
+
+!ENTRY com.ami.megarac.utils 4 0 2015-08-06 15:14:27.867
+!MESSAGE Process '[python, -u, /home/kevenchen/MDS_Loop/3.7.9/mds379/release/Linux/x86/MDS//spx/utils/nonvirtualpkg_support/BuildPRJ/BuildPRJ.py, /home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/configs/ast2300evb.PRJ, /home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges, /home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/ast2300evb_workspace, EXTRACT]' exited with status: 1
+
+!ENTRY org.eclipse.ui 4 4 2015-08-06 15:29:04.886
+!MESSAGE Invalid preference page path: HTML Syntax

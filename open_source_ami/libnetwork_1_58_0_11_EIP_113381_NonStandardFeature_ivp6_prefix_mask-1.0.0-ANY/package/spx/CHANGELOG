@@ -1,0 +1,9 @@
+Package: libnetwork_1_58_0_11_EIP_113381_NonStandardFeature_ivp6_prefix_mask (1.0.0); urgency = new
+
+Abstract:
+	Add all  prefix mask
+
+Files Added: data, data/00-data_nwcfg.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kentyeh (kentyeh@ami.com.tw) Thu, 31 Jan 2013 16:14:35 CST
+

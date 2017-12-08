@@ -1,0 +1,40 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:		sshd
+# Required-Start:	$remote_fs $syslog
+# Required-Stop:	$remote_fs $syslog
+# Default-Start:	2 3 4 5
+# Default-Stop:		1
+# Short-Description:	OpenBSD Secure Shell server
+### END INIT INFO
+
+set -e
+
+# This script start the actual ssh script in background  if we the ssh keys 
+# are not presnet, So that the bootup process will continue without the 
+# ssh-keygen holding up booting
+
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
+
+case "$1" in
+  start)
+	if [ ! -f "/etc/ssh/ssh_host_rsa_key" ] || [ ! -f "/etc/ssh/ssh_host_dsa_key" ]
+	then
+    	    echo "Starting sshd : Host Keys don't exist (Doing ssh-keygen in the background)"
+	    /etc/init.d/ssh start &
+	else
+	    # The following four line are needed for NFS as the permissions are not proper.
+            chown 0:0 /etc/ssh/ssh_host_*   #UID 0 is fixed for linux administrator user
+	    chmod 600 /etc/ssh/ssh_host_*
+	    chown 0:0 /var/run/sshd         #UID 0 is fixed for linux administrator user
+	    chmod 600 /var/run/sshd
+	    /etc/init.d/ssh start
+	fi 
+	;;
+  *)	
+	/etc/init.d/ssh $1
+	;;
+
+esac
+
+exit 0

@@ -1,0 +1,90 @@
+Package: libnss_ad (1.9.0); urgency = low
+
+Abstract:
+	libUserPrivilege is added in build depend and binary required list
+
+Files Modified: spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 18 Aug 2011 19:32:53 IST
+
+Package: libnss_ad (1.8.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/Makefile, data/nss-ad.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:18:42 IST
+
+Package: libnss_ad (1.7.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:05:22 EDT
+
+Package: libnss_ad (1.6.0); urgency = low
+
+Abstract:
+	Removing the provides. this packages is only for core.
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 19 Jan 2011 18:34:49 IST
+
+Package: libnss_ad (1.5.0); urgency = low
+
+Abstract:
+	Including provides, this will make proper overriding the core or OEM packages.
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 19 Jan 2011 17:37:20 IST
+
+Package: libnss_ad (1.4.0); urgency = low
+
+Abstract:
+	Changes includes moving OEM Extensible thing to libuserauth.
+
+Files Modified: data/Makefile, data/nss-ad.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 07 Jan 2011 14:24:16 IST
+
+Package: libnss_ad (1.3.0); urgency = low
+
+Abstract:
+	Active Directory user will Use Blocked pipe, here after this enables AD users will have the control for the src pipe
+
+Files Modified: data/nss-ad.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 03 Jan 2011 17:27:14 IST
+
+Package: libnss_ad (1.2.0); urgency = low
+
+Abstract:
+	Changing dummy user file to reserved user file.
+
+Files Modified: data/nss-ad.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 24 Dec 2010 01:07:49 IST
+
+Package: libnss_ad (1.1.0); urgency = low
+
+Abstract:
+	Adding configs support
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 23 Dec 2010 14:27:35 IST
+
+Package: libnss_ad (1.0.0); urgency = new
+
+Abstract:
+	Package Contains implementation for libnss for Active Directory
+
+Files Added: data, data/Makefile, data/nss-ad.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libnss_ad, spx/PACKAGES.D/libnss_ad/DATA, spx/PACKAGES.D/libnss_ad/SCRIPTS, spx/PACKAGES.D/libnss_ad/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 22 Dec 2010 18:21:12 IST
+

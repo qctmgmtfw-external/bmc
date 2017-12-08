@@ -1,0 +1,16 @@
+Package : libipmistack
+Non-Editable : YES
+Version : 2.52.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Suresh  (sureshv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : YES
+Depends : ipmimain
+Package-License : AMI
+Description : This contains the ipmi stack lib binary.
+.

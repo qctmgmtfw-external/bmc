@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="true" readonly="true" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/JViewer_1_10_0_2_75844_JavaConsoleRefreshVideoIssue-1.0.0-AST-ARM/package/data/00-data_src_com_ami_kvm_jviewer_soc_video_Decoder.java</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>JViewer_1_10_0_2_75844_JavaConsoleRefreshVideoIssue</package-name>
+<version>1.0.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>patch</section>
+<patch-order>2</patch-order>
+<build-depends/>
+<depends>
+<package-name operator="==" version="1.10.0">JViewer</package-name>
+</depends>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>PATCH</group>
+<configtags>Patch 2 for JViewer (1.10.0)</configtags>
+<installsize/>
+<description>for 75844, Java Console Refresh Video Issue</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>nealchen </maintainer>
+<maintainer-email>nealchen@ami.com.tw</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc>AST</soc>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="new">new</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/JViewer_1_10_0_2_75844_JavaConsoleRefreshVideoIssue-1.0.0-AST-ARM/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/JViewer_1_10_0_2_75844_JavaConsoleRefreshVideoIssue-1.0.0-AST-ARM/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

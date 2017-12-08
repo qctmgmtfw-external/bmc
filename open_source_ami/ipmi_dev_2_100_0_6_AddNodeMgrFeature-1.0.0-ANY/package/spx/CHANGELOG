@@ -1,0 +1,9 @@
+Package: ipmi_dev_2_100_0_6_AddNodeMgrFeature (1.0.0); urgency = new
+
+Abstract:
+	Implement Intel Node Manage Featur
+
+Files Added: data, data/00-data_hal_defs.h, data/01-data_hal_hw.h, data/02-data_Pnm.h, data/03-data_BridgeMsgAPI.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: owenchou (owenchou@ami.com.tw) Wed, 21 Dec 2011 04:44:29 EST
+

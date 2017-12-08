@@ -1,0 +1,115 @@
+/*
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+*/
+
+body, form, table{
+	font-size:12px;
+	font-family:Arial;
+}
+
+.loginBox{
+	width:355px;
+	text-align:center;
+}
+
+label{
+	display:block;
+	width:100px;
+	float:left;
+	margin-left:30px;
+	font-weight:bold;
+	font-size:14px;
+	height:20px;
+}
+
+#msglbl{
+	display:block;
+	width:100%;
+	text-align:center;
+	color:#354968;
+	font-size:16px;
+	text-transform:capitalize;
+	font-variant:small-caps;
+	margin-top:80px;
+	margin-bottom:10px;
+	margin-left:0px;
+	clear:both;
+}
+
+.input{
+	width:170px;
+	display:block;
+	float:right;
+	height:22px;
+	margin-right:30px;
+}
+
+
+.login_bg{
+	background:url(../res/login_bg.png) no-repeat bottom;
+	width:350px;
+	height:160px;
+}
+
+* html .login_bg{
+	-width:370px; /* ie6 support ugly css hacks */
+}
+
+.login_bg form{
+	margin:0px;
+	padding:0px;
+	padding-top:40px;
+}
+
+.breaker{
+	clear:both;
+	font-size:3px;
+	margin:0px;
+	padding:0px;
+}
+
+.info{
+	width:30%;
+	text-align:left;
+	margin-top:20px;
+}
+
+.info strong{
+	text-decoration:underline;
+}
+
+.info ul{
+	list-style-type:decimal;
+}
+
+.info li{
+	padding:3px;
+}
+
+.info img{
+	padding-left:4px;
+}

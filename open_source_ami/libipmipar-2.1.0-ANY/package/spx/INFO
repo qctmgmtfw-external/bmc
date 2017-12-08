@@ -1,0 +1,16 @@
+Package : libipmipar
+Version : 2.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Essential : NO
+Config-Tag : 
+Group : PLATFORM
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This is a core libipmipar pacakge which will select board specific libipmipar packages
+.

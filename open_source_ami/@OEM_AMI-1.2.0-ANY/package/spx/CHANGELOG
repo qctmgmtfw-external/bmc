@@ -1,0 +1,34 @@
+Package: @OEM_AMI (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:21:07 EDT
+
+Package: @OEM_AMI (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:07:25 EDT
+
+Package: @OEM_AMI (1.0.1); urgency = medium
+
+Abstract:
+	package dependencies corrected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Tue, 13 Apr 2010 20:16:54 EDT
+
+Package:@OEM_AMI (1.0.0);urgency=new
+
+Abstract:
+	Selects OEM as AMI
+
+Files Added: 
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 6 Jan 2010 17:07:52 -0500

@@ -1,0 +1,21 @@
+Package : libvideo
+Non-Editable : YES
+Version : 1.8.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : David Chang  (DavidChang@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+SOC : AST2300
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : Video library for AST
+Group : KVM
+Provides : VideoLibrary
+Depends : internal_video
+Required : video
+Package-License : AMI
+Description : The package contains built video library.
+.

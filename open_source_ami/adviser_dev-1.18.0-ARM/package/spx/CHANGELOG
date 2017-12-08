@@ -1,0 +1,189 @@
+Package: adviser_dev (1.18.0); urgency = medium
+
+Abstract:
+	KVM session User Active client information display in the JViewer
+
+Files Modified: data/sessionmgr.h, data/videopkt.h
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 21:10:24 IST
+
+Package: adviser_dev (1.17.0); urgency = medium
+
+Abstract:
+	Moved the static methods to non static for adviserd restart
+
+Files Modified: data/avse.h
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 18:54:53 IST
+
+Package: adviser_dev (1.16.0); urgency = medium
+
+Abstract:
+	Feature to change Mouse mode from the Jviewer
+
+Files Modified: data/videopkt.h
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Thu, 16 Jun 2011 15:50:00 IST
+
+Package: adviser_dev (1.15.0); urgency = medium
+
+Abstract:
+	Added the support to send the Mousem mode,Cd,FD,HD count if user updated in the web sending the data to the opened active JViewer CLients.
+
+Files Modified: data/sessionmgr.h, data/videopkt.h
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 09 Jun 2011 02:44:42 IST
+
+Package: adviser_dev (1.14.0); urgency = high
+
+Abstract:
+	Sending the service configuration to the clients upon startup and whenever configuration changes
+
+Files Modified: data/advisercfg.h, data/sessionmgr.h, data/videopkt.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 07 Jun 2011 15:51:36 EDT
+
+Package: adviser_dev (1.13.0); urgency = high
+
+Abstract:
+	Power Feature added
+
+Files Modified: data/session_data.h, data/sessionmgr.h, data/videopkt.h
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 01 Jun 2011 23:22:23 IST
+
+Package: adviser_dev (1.12.0); urgency = high
+
+Abstract:
+	Modified from MAX_SESSION macro to dynamically updated max_session from ncml configuration
+
+Files Modified: data/session_data.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 31 May 2011 15:05:06 EDT
+
+Package: adviser_dev (1.11.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 13:55:52 EDT
+
+Package: adviser_dev (1.10.0); urgency = medium
+
+Abstract:
+	Fixing adviser abnormal termination when web Preview support was enabled
+
+Files Modified: data/sessionmgr.h, data/videopkt.h
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Thu, 12 May 2011 16:15:51 IST
+
+Package: adviser_dev (1.9.0); urgency = high
+
+Abstract:
+	Fixed Bugs: 13147=Resume Redirection does not resume the updated video correctly & 13198=Error reading video data is displayed on changing the mouse mode
+
+Files Modified: data/avse.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 10 May 2011 15:49:35 EDT
+
+Package: adviser_dev (1.8.0); urgency = medium
+
+Abstract:
+	Web console preview feature support
+
+Files Modified: data/session_data.h, data/sessionmgr.h, data/videopkt.h
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 27 Apr 2011 16:59:17 IST
+
+Package: adviser_dev (1.7.0); urgency = high
+
+Abstract:
+	Removing dependency with libautovideorecord library for adviser
+
+Files Modified: data/video_interface.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 14:38:15 EDT
+
+Package: adviser_dev (1.6.0); urgency = high
+
+Abstract:
+	Removed the header files from adviser and moved to adviser_dev for easier access by other packages
+
+Files Added: data/advisercfg.h, data/adviserdbg.h, data/advisererrno.h, data/avse.h, data/cmworker.h, data/conmgr.h, data/encrypt.h, data/hid_cmdhandlr.h, data/hid_errno.h, data/hidconf.h, data/hidtypes.h, data/reader.h, data/sessionlogin.h, data/sessionmgr.h, data/stickyKeys.h, data/sync.h, data/threadmgr.h, data/utils.h, data/video_misc.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 10:56:09 EDT
+
+Package: adviser_dev (1.5.0); urgency = medium
+
+Abstract:
+	KVM Sharing Feature added
+
+Files Modified: data/cmdhndlr.h, data/session_data.h, data/videopkt.h
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 17 Jan 2011 21:29:05 IST
+
+Package: adviser_dev (1.4.0); urgency = high
+
+Abstract:
+	Updated the soc header update
+
+Files Modified: data/video_interface.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 01 Dec 2010 19:27:49 EST
+
+Package: adviser_dev (1.3.0); urgency = high
+
+Abstract:
+	Modified the Host lock and hardware cursor feature as individual session based.
+Added Hook declarations to be called whenever a new session starts or stops.
+
+Files Modified: data/session_data.h, data/video_interface.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 01 Dec 2010 17:19:42 EST
+
+Package: adviser_dev (1.2.0); urgency = medium
+
+Abstract:
+	Added the Xcursor Thread
+
+Files Modified: data/video_interface.h, spx/INFO
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 16 Nov 2010 21:45:01 IST
+
+Package: adviser_dev (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 12:55:56 EDT
+
+Package: adviser_dev (1.0.2); urgency = high
+
+Abstract:
+	Host lock feature updated
+
+Files Modified: data/video_interface.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 16 Aug 2010 20:02:29 EDT
+
+Package: adviser_dev (1.0.1); urgency = high
+
+Abstract:
+	Added support in video libraries for host monitor lock feature
+
+Files Modified: data/video_interface.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 12 Aug 2010 20:06:00 EDT
+
+Package: adviser_dev (1.0.0); urgency = new
+
+Abstract:
+	This package contains the common header files for adviser and libvideo packages.
+
+Files Added: data, data/cmdhndlr.h, data/session_data.h, data/video_interface.h, data/videopkt.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/adviser_dev, spx/PACKAGES.D/adviser_dev/DATA, spx/PACKAGES.D/adviser_dev/SCRIPTS, spx/PACKAGES.D/adviser_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 26 Jul 2010 17:21:15 EDT
+

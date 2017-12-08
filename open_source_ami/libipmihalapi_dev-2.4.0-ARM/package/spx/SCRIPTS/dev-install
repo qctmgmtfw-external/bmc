@@ -1,0 +1,10 @@
+# Install Script
+
+build-install:
+    MKDIR_NOCLEAN %SPXLIB/ipmihalapi
+    MKDIR_NOCLEAN %SPXINC/ipmihalapi
+    COPY_FILE ./hal_api.h %SPXINC/ipmihalapi	
+    COPY_FILE ./libipmihalapi.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ipmihalapi
+    ADD_LIBRARY_LINKS %SPXLIB/ipmihalapi libipmihalapi.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+    	
+debug-install:

@@ -1,0 +1,26 @@
+Package: hw_snoop (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:24:31 EDT
+
+Package: hw_snoop (1.1.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:27:45 EST
+
+Package:hw_snoop (1.0.0);urgency=new
+
+Abstract:
+	SOC Supports Port 80 Snoop
+
+Files Added: 
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 14 Sep 2009 10:41:54 -0400

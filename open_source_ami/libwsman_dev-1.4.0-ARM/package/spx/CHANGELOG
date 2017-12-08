@@ -1,0 +1,46 @@
+Package: libwsman_dev (1.4.0); urgency = medium
+
+Abstract:
+	Added Indication Support
+
+Files Added: data/WS_Session.h
+Files Modified: data/WS_EventingDaemon.h, data/WS_Main.h, spx/RULES
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Wed, 18 May 2011 21:08:07 IST
+
+Package: libwsman_dev (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:16:42 EDT
+
+Package: libwsman_dev (1.2.0); urgency = high
+
+Abstract:
+	Dependencies corrected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 09 Mar 2011 17:56:44 EST
+
+Package: libwsman_dev (1.1.0); urgency = medium
+
+Abstract:
+	Added support for namespace customization
+
+Files Modified: data/WS_CIM_Include.h
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Thu, 17 Feb 2011 22:22:48 IST
+
+Package: libwsman_dev (1.0.0); urgency = new
+
+Abstract:
+	This package contains common header files of wsman
+
+Files Added: data, data/WS_CIMTransfer.h, data/WS_CIM_Enum.h, data/WS_CIM_Include.h, data/WS_CIM_InvokeMethod.h, data/WS_CIM_XML.h, data/WS_Enumeration.h, data/WS_EventingDaemon.h, data/WS_EventingManager.h, data/WS_Executer.h, data/WS_Fault.h, data/WS_FileIO.h, data/WS_Filter.h, data/WS_Include.h, data/WS_LinkedList.h, data/WS_Main.h, data/WS_Parser.h, data/WS_ResourceCatalog.h, data/WS_SOAPRespGenerator.h, data/WS_SecProf.h, data/WS_Soap2CIMInst.h, data/WS_Soap2Struct.h, data/WS_Struct2Soap.h, data/WS_Structures.h, data/WS_Util.h, data/WS_WSDLParser.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libwsman_dev, spx/PACKAGES.D/libwsman_dev/DATA, spx/PACKAGES.D/libwsman_dev/SCRIPTS, spx/PACKAGES.D/libwsman_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Wed, 01 Sep 2010 20:44:15 IST
+

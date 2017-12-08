@@ -1,0 +1,72 @@
+Package: pam_helperd (1.7.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:22:15 EDT
+
+Package: pam_helperd (1.6.0); urgency = medium
+
+Abstract:
+	Removing Edirectory based changes..
+
+Files Modified: data/pam_helperd.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 19 Apr 2011 13:57:36 IST
+
+Package: pam_helperd (1.5.0); urgency = medium
+
+Abstract:
+	Increasing the PAM helper table size. to provide Edirectory User info table
+
+Files Modified: data/pam_helperd.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 12 Apr 2011 20:55:34 IST
+
+Package: pam_helperd (1.4.0); urgency = medium
+
+Abstract:
+	Delete the username in other table, when adding the same user in one table
+
+Files Modified: data/pam_helperd.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 21 Mar 2011 16:32:55 IST
+
+Package: pam_helperd (1.3.0); urgency = low
+
+Abstract:
+	Removing Config Tag, adding the package under Authentication group.
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 03 Jan 2011 17:29:38 IST
+
+Package: pam_helperd (1.2.0); urgency = low
+
+Abstract:
+	updated pam helper to pass handle so that number of opens is reduced and the write calls never fails as the fifo is always opened for reading
+
+Files Modified: data/pam_helperd.c
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Thu, 02 Dec 2010 15:56:19 CET
+
+Package: pam_helperd (1.1.0); urgency = low
+
+Abstract:
+	Removed the killing script for pam helperd
+
+Files Modified: data/pamhelperd.sh
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Wed, 01 Dec 2010 08:31:07 CET
+
+Package: pam_helperd (1.0.0); urgency = new
+
+Abstract:
+	This package shall provide helper functionality between PAM libraries and the libnss libraries. PAM libraries can store the username and the privilege in pam helper and the libnss libraries can request for that information from pam helper. The pam helper also assigns a unique UID to the username stored.
+
+Files Added: data, data/Makefile, data/pam_helperd.c, data/pam_helperd.h, data/pamhelperd.sh, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/pam_helperd, spx/PACKAGES.D/pam_helperd/DATA, spx/PACKAGES.D/pam_helperd/SCRIPTS, spx/PACKAGES.D/pam_helperd/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Wed, 24 Nov 2010 08:32:53 EST
+

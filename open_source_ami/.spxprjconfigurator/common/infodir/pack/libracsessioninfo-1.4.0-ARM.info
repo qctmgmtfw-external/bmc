@@ -1,0 +1,15 @@
+Package : libracsessioninfo
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Package-License : AMI
+Description : This Package includes built rac session info library module.
+.

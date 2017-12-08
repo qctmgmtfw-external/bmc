@@ -1,0 +1,170 @@
+Package: libipmitimer (2.8.0); urgency = medium
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/Timer.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 28 Jul 2011 21:56:06 IST
+
+Package: libipmitimer (2.7.0); urgency = medium
+
+Abstract:
+	Modify timer task to update the flash only if there is a change in power state.
+
+Files Modified: data/Timer.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 07 Jul 2011 19:51:24 IST
+
+Package: libipmitimer (2.6.0); urgency = medium
+
+Abstract:
+	SEL UTC Offset is added along with the GMT Time in order to compare the trigger time with the exact UTC Tim
+
+Files Modified: data/Timer.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 14 Jun 2011 00:21:48 IST
+
+Package: libipmitimer (2.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:02:28 EDT
+
+Package: libipmitimer (2.4.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:48:38 IST
+
+Package: libipmitimer (2.3.0); urgency = low
+
+Abstract:
+	Fix to make flushing of IPMI Configurations to NVRAM faster.
+
+Files Modified: data/Timer.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 19:01:28 IST
+
+Package: libipmitimer (2.2.0); urgency = medium
+
+Abstract:
+	Fix for ACPI. The power state of the system will be stored to non-volatile memory for every 10 seconds.
+
+Files Modified: data/Timer.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 12 Apr 2011 15:14:12 IST
+
+Package: libipmitimer (2.1.0); urgency = medium
+
+Abstract:
+	Added the condition check for sending the SIGUSR2 signal from ipmimain to adviser
+
+Files Modified: data/Timer.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 24 Mar 2011 19:41:43 IST
+
+Package: libipmitimer (2.0.0); urgency = medium
+
+Abstract:
+	hanges done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/Timer.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:03:16 IST
+
+Package: libipmitimer (1.4.0); urgency = medium
+
+Abstract:
+	Invoked PDK_POHCounter on every minute. Also increment and flush the POH counter for every hour.
+When power down occurs in between the power counts the count will be initialized to zero.
+
+Files Modified: data/Timer.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 08 Dec 2010 22:26:27 GMT-5:30
+
+Package: libipmitimer (1.3.0); urgency = low
+
+Abstract:
+	Added function call to the POH Counter hook which is called everytime the POH counter is incremented
+
+Files Modified: data/Timer.c
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 02 Dec 2010 17:20:46 IST
+
+Package: libipmitimer (1.2.0); urgency = medium
+
+Abstract:
+	Made corrections to get the handler properly for PDK_ONTASKSTARTUP and done code alignment.
+
+Files Modified: data/Timer.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 09 Nov 2010 15:05:22 EST
+
+Package: libipmitimer (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:00:56 EDT
+
+Package: libipmitimer (1.0.5); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:55:50 IST
+
+Package: libipmitimer (1.0.4); urgency = low
+
+Abstract:
+	MBMC changes for Timer in IPMI
+
+Files Modified: data/Timer.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:45:58 IST
+
+Package: libipmitimer (1.0.3); urgency = low
+
+Abstract:
+	Fixed binary build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 25 Jun 2010 13:01:44 EDT
+
+Package: libipmitimer (1.0.2); urgency = low
+
+Abstract:
+	Removing gpio from dependency
+
+Files Modified: data/Makefile, data/Timer.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 20:03:57 IST
+
+Package: libipmitimer (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:08:36 EST
+
+Package:libipmitimer (1.0.0);urgency=new
+
+Abstract:
+	This package contains IPMI Timer library
+
+Files Added: Timer.c, Makefile
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 9 Dec 2009 14:16:49 +0800

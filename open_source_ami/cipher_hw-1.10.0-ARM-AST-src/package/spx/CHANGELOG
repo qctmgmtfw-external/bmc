@@ -1,0 +1,109 @@
+Package: cipher_hw (1.10.0); urgency = medium
+
+Abstract:
+	Added lock SCU command.
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 08 Dec 2011 21:21:32 CST
+
+Package: cipher_hw (1.9.0); urgency = medium
+
+Abstract:
+	Adjust delay time.
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 08 Dec 2011 21:15:23 CST
+
+Package: cipher_hw (1.8.0); urgency = medium
+
+Abstract:
+	Adjust initial sequence for the default clock stopped HAC engines in ast cipher hw driver
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 08 Dec 2011 17:19:00 CST
+
+Package: cipher_hw (1.7.0); urgency = medium
+
+Abstract:
+	Added DES/3DES support for ast2300 cipher driver
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 08 Aug 2011 13:02:16 CST
+
+Package: cipher_hw (1.6.0); urgency = high
+
+Abstract:
+	Updating SourceLicense?, PackageLicense?, BinaryLicense? & Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ast_cipher.c, spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 24 Jun 2011 14:45:01 CST
+
+Package: cipher_hw (1.5.0); urgency = medium
+
+Abstract:
+	1. Added sha224, sha256, md5, hmac-sha224, hmac-sha256, and hmac-md5 support.
+2. Use flush cache function instead of delay fuction.
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 21 Jun 2011 11:00:44 CST
+
+Package: cipher_hw (1.4.0); urgency = medium
+
+Abstract:
+	1. Restructure some segment.
+2. Added data buffer for AES, and adjust the returned max data length.
+3. Solved aes bug via delay function.
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 18 May 2011 14:42:07 CST
+
+Package: cipher_hw (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:07:29 EDT
+
+Package: cipher_hw (1.2.0); urgency = low
+
+Abstract:
+	1. Remove GPL licenced code, and change licence to AMI.
+2. Added get_info, data_padding, and remove_data_padding functions.
+
+Files Added: data/aes_core.c
+Files Deleted: data/aes.c, spx/LICENSES/LICENSE.GPL-V2
+Files Modified: data/Makefile, data/aes.h, data/ast_cipher.c, data/ast_cipher.h, data/rc4.c, data/rc4.h, spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 04 May 2011 19:30:26 CST
+
+Package: cipher_hw (1.1.0); urgency = medium
+
+Abstract:
+	1. Added get_max_datalen function support.
+2. The enum name of AES changes
+3. Reduce rc4 key states by changing its type.
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h, data/rc4.c, data/rc4.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 11 Mar 2011 19:19:11 CST
+
+Package: cipher_hw (1.0.0); urgency = new
+
+Abstract:
+	This package contains cipher hardware level driver for AST SOC
+
+Files Added: data, data/Makefile, data/aes.c, data/aes.h, data/ast_cipher.c, data/ast_cipher.h, data/rc4.c, data/rc4.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/cipher_hw, spx/PACKAGES.D/cipher_hw/DATA, spx/PACKAGES.D/cipher_hw/SCRIPTS, spx/PACKAGES.D/cipher_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 29 Jan 2011 20:50:44 CST
+

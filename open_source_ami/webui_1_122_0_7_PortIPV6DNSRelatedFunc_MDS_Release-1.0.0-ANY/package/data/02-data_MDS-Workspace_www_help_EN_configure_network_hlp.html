@@ -1,0 +1,15 @@
+--- .pristine/webui-1.122.0-src/data/MDS-Workspace/www/help/EN/configure_network_hlp.html Fri Feb  3 16:19:05 2012
++++ source/webui-1.122.0-src/data/MDS-Workspace/www/help/EN/configure_network_hlp.html Mon Feb 13 19:24:07 2012
+@@ -81,9 +81,11 @@
+ 	Check this option to enable VLAN support for the selected interface.
+ 	<h4>VLAN ID</h4>
+ 	Specify the Identification for VLAN configuration.
+-	<ul><li>- Value ranges from 1 to 4095.</li></ul>
++	<ul><li>- Value ranges from 2 to 4094.</li></ul>
+ 	<strong>NOTE:</strong> VLAN ID cannot be changed without resetting the VLAN
+ 		configuration.
++	<br>
++	VLAN ID 0, 1, 4095 are reserved VLAN ID's.
+ 	<h4>VLAN Priority</h4>
+ 	Specify the priority for VLAN configuration.
+ 	<ul><li>- Value ranges from 1 to 7.</li></ul>

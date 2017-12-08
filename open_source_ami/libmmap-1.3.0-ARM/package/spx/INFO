@@ -1,0 +1,17 @@
+Package : libmmap
+Non-Editable : YES
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Dinesh Selvam  (dineshs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : Memory Map Library Support
+Group : LIBRARY
+Package-License : AMI
+Description : MMAP Library Binary
+.

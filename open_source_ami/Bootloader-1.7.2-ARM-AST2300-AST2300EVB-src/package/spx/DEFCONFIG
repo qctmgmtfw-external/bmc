@@ -1,0 +1,294 @@
+/*
+ * (C) Copyright 2010 American Megaterends
+ * Configuration settings for the ASPEED AST2300 EVB
+ */
+
+#ifndef __CONFIG_H
+#define __CONFIG_H
+
+/*------------------------------------------------------------------------------------------*/
+/*--------------------------------- Configurable Setting -----------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+#define 	CFG_FLASH_BASE          	CONFIG_SPX_FEATURE_GLOBAL_FLASH_START
+#define		CFG_FLASH_BANKS_LIST 		{ CFG_FLASH_BASE }
+#define 	CFG_FLASH_SIZE				CONFIG_SPX_FEATURE_GLOBAL_FLASH_SIZE
+#define 	CFG_FLASH_SECTOR_SIZE		CONFIG_SPX_FEATURE_GLOBAL_ERASE_BLOCK_SIZE
+
+#define 	CFG_MONITOR_LEN		   		CONFIG_SPX_FEATURE_GLOBAL_UBOOT_MONITOR_SIZE /* Size of U-Boot (without Env) */
+
+#define 	CONFIG_ETHADDR				00:00:00:00:00:00	/* Ethernet MAC Address 		*/
+#define 	CONFIG_ETH1ADDR				00:00:00:00:00:00	/* Ethernet MAC1 Address 		*/
+#define		CONFIG_HAS_ETH1				1
+#define 	CONFIG_BOARD_NAME			"AST2300EVB"		/* Board Name 					*/
+#define 	CONFIG_MENUKEY			 	27					/* ESC Key to enter menu		*/
+#define 	CONFIG_SILENT_CONSOLE		1
+
+#define 	UART_CLOCK 					(24000000/13)		/* UART CLOCK in AST2300 EVB */
+#define 	CONFIG_DRAM_408
+
+#undef  	DEBUG
+
+/*------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------*/
+
+
+/*---------------------------------------------------------------
+ *			Board and Processor Identification
+ *---------------------------------------------------------------
+ */
+#define CONFIG_ARM926EJS	1	/* This is an ARM926EJS Core */
+#define CONFIG_AST2300		1	/* AST2300 SOC */
+
+/*---------------------------------------------------------------
+ *			SDRAM SIZE
+ *---------------------------------------------------------------
+ */
+#define CFG_SDRAM_LEN		CONFIG_SPX_FEATURE_GLOBAL_MEMORY_SIZE
+
+/*---------------------------------------------------------------
+ *  			Default Memory Test Range
+ *---------------------------------------------------------------
+ */
+#define CFG_MEMTEST_START  0x300000 		/* After U-Boot		*/
+#define CFG_MEMTEST_END    CFG_SDRAM_LEN
+
+/*---------------------------------------------------------------
+ *				   Timer Clock Frequency
+ *---------------------------------------------------------------
+ */
+#define CFG_HZ			(1000000) /* use external clock (1MHz) */
+
+
+/*---------------------------------------------------------------
+ *                 Serial Port Configuration
+ *---------------------------------------------------------------
+ */
+#define CFG_NS16550
+#define CFG_NS16550_SERIAL
+#define CFG_NS16550_REG_SIZE	 (-4)
+#define CFG_NS16550_CLK		 (24000000/13)
+
+#define CFG_NS16550_COM1	 0x1E783000
+#define CFG_NS16550_COM2	 0x1E78D000
+#define CFG_NS16550_COM3	 0x1E78E000
+#define CFG_NS16550_COM4	 0x1E78F000
+#define CFG_NS16550_COM5	 0x1E784000
+
+#define CONFIG_CONS_INDEX	5
+#define CONFIG_BAUDRATE		38400
+#define CFG_BAUDRATE_TABLE	{ 9600, 19200, 38400, 57600, 115200 }
+
+/*---------------------------------------------------------------
+ * I2C EEPROM (AT24C128) configuration
+ *---------------------------------------------------------------
+ */
+#define CONFIG_HARD_I2C /* I2c with hardware support */
+#define CFG_I2C_CHANNEL_ID	2 /* device is connected on channel 2 */
+#define CFG_I2C_SPEED		100000	/* I2C speed */
+#define CFG_I2C_SLAVE		0x20 /* slave address of ourself */
+
+#define CFG_I2C_EEPROM_ADDR				0x50
+#define	CFG_I2C_EEPROM_ADDR_LEN			2		/* need 16 bit address	*/
+#define CFG_EEPROM_PAGE_WRITE_BITS		6		/* 64-byte pages		*/
+#define CFG_EEPROM_PAGE_WRITE_ENABLE
+#define CFG_EEPROM_PAGE_WRITE_DELAY_MS	10		/* 10 mS */
+
+/*---------------------------------------------------------------
+ *	           Required DHCP Vendor Extensions
+ *---------------------------------------------------------------
+ */
+#define CONFIG_BOOTP_MASK (CONFIG_BOOTP_SUBNETMASK | \
+						   CONFIG_BOOTP_GATEWAY    | \
+						   CONFIG_BOOTP_HOSTNAME)
+
+/*---------------------------------------------------------------
+ *	              ARM Linux Argument TAGS (ATAG)
+ *---------------------------------------------------------------
+ */
+#define CONFIG_CMDLINE_TAG	 		1
+#define CONFIG_SETUP_MEMORY_TAGS 	1
+#define CONFIG_INITRD_TAG	 		1
+#define CONFIG_ENETADDR_TAG		1
+//The following needs functions to be written
+//#define CONFIG_SERIAL_TAG				1		// get_board_serial()
+//#define CONFIG_REVISION_TAG			1		// get_board_rev()
+/*---------------------------------------------------------------
+ *	               Supported Commands
+ *---------------------------------------------------------------
+ */
+#define CONFIG_COMMANDS     										\
+	(CFG_CMD_DHCP | CFG_CMD_NET | CFG_CMD_PING|CFG_CMD_MII |		\
+	CFG_CMD_MEMORY | CFG_CMD_CONSOLE | CFG_CMD_FLASH |				\
+	CFG_CMD_I2C | CFG_CMD_EEPROM |									\
+	CFG_CMD_AUTOSCRIPT | CFG_CMD_RUN|CFG_CMD_BDI |					\
+	CFG_CMD_ELF | CFG_CMD_IMLS|CFG_CMD_IMI |						\
+	CFG_CMD_ENV | CFG_CMD_SAVEENV | CFG_CMD_ASKENV | CFG_CMD_RUN |	\
+	CFG_CMD_CACHE | CFG_CMD_IRQ | CFG_CMD_MISC)
+
+/* CFG_CMD_DATE  | CFG_CMD_SNTP */
+
+/* IMPORTANT: This must be included AFTER the definition of
+               CONFIG_COMMANDS (if any) */
+#include <cmd_confdefs.h>
+
+/*---------------------------------------------------------------
+ * 				 Default Environment Values
+ *--------------------------------------------------------------*/
+#define CONFIG_BAUDRATE         38400
+#define CONFIG_BOOTDELAY        3 
+#define CFG_AUTOLOAD			"no"
+#define CONFIG_LOADS_ECHO		1
+#define CFG_LOADS_BAUD_CHANGE	1
+#define CFG_LOAD_ADDR			0x42000000
+#define CONFIG_BOOTCOMMAND		"bootfmh"
+//#define CONFIG_EXTRA_ENV_SETTINGS "menucmd=bootmenu\0silent=1"
+
+/*---------------------------------------------------------------
+ * 				Network Configuration
+ *--------------------------------------------------------------*/
+#define CONFIG_NET_MULTI
+#define CONFIG_MII						1
+#define CONFIG_OVERWRITE_ETHADDR_ONCE	1
+#define CONFIG_NET_RETRY_COUNT			25
+
+#define CONFIG_NCSI_SUPPORT
+#define CONFIG_NCSI_FORCE_DEFAULT_PORT	1
+#undef CONFIG_NCSI_ETH0
+#undef CONFIG_NCSI_ETH1
+
+#undef CONFIG_MACADDR_IN_EEPROM
+#define CFG_EEPROM_MACADDR_OFFSET	0x00
+#define CFG_EEPROM_MAC1ADDR_OFFSET	0x08
+
+/*---------------------------------------------------------------
+ * Miscellaneous configurable options
+ *---------------------------------------------------------------*/
+#define CONFIG_BOARD_PRE_INIT	1
+
+#define CFG_LONGHELP	0					/* No Long Help    				*/
+#define CFG_PROMPT		CONFIG_BOARD_NAME">"	/* Monitor Command Prompt		*/
+#define CFG_PBSIZE		(CFG_CBSIZE+sizeof(CFG_PROMPT)+16)
+											/* Print Buffer Size 			*/
+#define CFG_MAXARGS		16					/* Max number of command args	*/
+#define CFG_BARGSIZE	CFG_CBSIZE			/* Boot Argument Buffer Size 	*/
+#define CFG_EXTBDINFO	1					/* Extended Board Info 			*/
+//#define CFG_ALT_MEMTEST			1		/* Allow Extended Memory Test 	*/
+#define CFG_DEVICE_NULLDEV		1			/* Enable Null Device 			*/
+#define CFG_CONSOLE_INFO_QUIET 	1
+#define CFG_DIRECT_FLASH_TFTP	1			/* Allow TFTP download to flash	*/
+
+/* Console I/O Buffer Size */
+#if (CONFIG_COMMANDS & CFG_CMD_KGDB)
+#define CFG_CBSIZE		1024
+#else
+#define CFG_CBSIZE		256
+#endif
+
+#define CONFIG_USE_IRQ			1			/* U-Boot can use IRQ */
+
+/*-----------------------------------------------------------------
+ * Stack sizes
+ * The stack sizes are set up in start.S using the settings below
+ *-----------------------------------------------------------------
+ */
+#define CONFIG_STACKSIZE	(128*1024)	/* regular stack */
+#ifdef CONFIG_USE_IRQ
+#define CONFIG_STACKSIZE_IRQ	(4*1024)	/* IRQ stack */
+#define CONFIG_STACKSIZE_FIQ	(4*1024)	/* FIQ stack */
+#endif
+
+/*----------------------------------------------------------------
+ *             Physical Memory Map of SDRAM and Flash
+ *----------------------------------------------------------------
+ */
+#define CFG_SDRAM_BASE 			0x40000000
+#define CONFIG_NR_DRAM_BANKS	1
+
+#define CFG_MAX_FLASH_BANKS		1
+
+/* Cannot use SPD to detect SDRAM Information*/
+#undef CONFIG_SPD_EEPROM
+
+#ifdef CONFIG_SPX_FEATURE_GLOBAL_FLASH_TYPE_NOR
+	/* Use CFI Driver to detect the Flash Information */
+	#define CFG_FLASH_CFI    			1
+	#define CFG_FLASH_CFI_DRIVER    	1
+	#define CFG_ENV_IS_IN_FLASH		1
+#endif
+
+#ifdef CONFIG_SPX_FEATURE_GLOBAL_FLASH_TYPE_SPI
+	/* Use SPI Driver to detect the Flash Information */
+	#define CONFIG_HAS_SPI				1
+	#define CFG_FLASH_SPI_DRIVER    	1
+	#define CFG_ENV_IS_IN_SPI			1
+#endif
+
+//Note: One of the following is goofing up flash writes to Spansion
+//      So till it is fixed don't use.
+//#define CFG_FLASH_PROTECTION	1		
+//#define CFG_FLASH_USE_BUFFER_WRITE 1
+
+/* Max number of sectors on one chip*/
+#define CFG_MAX_FLASH_SECT      512
+
+/*--------------------------------------------------------------
+ *					Monitor Information
+ *--------------------------------------------------------------
+*/
+#define CFG_MONITOR_BASE	   CFG_FLASH_BASE
+
+
+/*---------------------------------------------------------------
+ *                    Environment organization
+ *---------------------------------------------------------------
+ */
+#define CONFIG_ENV_OVERWRITE 	1
+#define CFG_ENV_SECT_SIZE	 	CFG_FLASH_SECTOR_SIZE
+
+/*
+ * Adjust Total Size of Environment so that it fits in a complete sector
+ * along with the variable "env_size". Actual Usable environment Size is
+ * CFG_ENV_SECT_SIZE - 2 * sizeof(unsigned long). The unsigned longs are
+ * "env_size" and crc32
+ */
+#define CFG_ENV_SIZE 			(CFG_ENV_SECT_SIZE - 4)
+#define CFG_ENV_ADDR			(CFG_FLASH_BASE+CFG_MONITOR_LEN)
+
+/*----------------------------------------------------------------
+ *               Size of malloc() pool
+ *---------------------------------------------------------------
+ */
+#define CFG_MALLOC_LEN	  ((CFG_ENV_SIZE+4) + (64 *1024))
+#define CFG_GBL_DATA_SIZE	128	 /* Size for initial data */
+
+/*----------------------------------------------------------
+ * Board Specific Configs
+ *----------------------------------------------------------
+ */
+#ifdef CONFIG_SPX_FEATURE_GLOBAL_FRAME_BUFFER_SUPPORT
+#define	CONFIG_BIGPHYSAREA	"8192"
+#else
+#define	CONFIG_BIGPHYSAREA	"6144"
+#endif
+
+#define CFG_YAFU_SUPPORT	1
+
+/* Board Specifc Address location for downloading Image */  
+#define YAFU_IMAGE_UPLOAD_LOCATION                                      (0x42000000)  
+#define YAFU_TEMP_SECTOR_BUFFER                                            (0x43000000)
+
+#define CONFIG_EXPORT_ETH_FNS   1
+#define CONFIG_ETH_HEADER_NOCRC   1
+
+#ifdef CONFIG_SPX_FEATURE_GLOBAL_MEMORY_ECC_ENABLE
+#if (CFG_SDRAM_LEN < 0x08000000) && (CFG_FLASH_SIZE > 0x01000000)
+#define CFG_SDRAM_ECC_USED	0x00400000
+#define CFG_SDRAM_SYS_USED	0x02000000
+#else
+#define CFG_SDRAM_ECC_USED	(CFG_SDRAM_LEN >> 3)
+#define CFG_SDRAM_SYS_USED	(CFG_SDRAM_LEN - CFG_SDRAM_ECC_USED)
+#endif
+#define	CONFIG_DRAM_ECC
+#endif
+
+#endif /* __CONFIG_H */

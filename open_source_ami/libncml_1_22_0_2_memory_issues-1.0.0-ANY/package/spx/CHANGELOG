@@ -1,0 +1,9 @@
+Package: libncml_1_22_0_2_memory_issues (1.0.0); urgency = new
+
+Abstract:
+	Added proper error handling and freeing of dynamically allocated memory.
+
+Files Added: data, data/00-data_ncml.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 14 Sep 2011 16:01:25 JST
+

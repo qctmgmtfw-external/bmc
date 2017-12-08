@@ -1,0 +1,109 @@
+Package: ncml_configuration (1.11.0); urgency = medium
+
+Abstract:
+	Modified interface name as bond0 if the bond is enabled by default.
+
+Files Added: data/ncml_bond.conf
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 26 Sep 2011 17:49:06 IST
+
+Package: ncml_configuration (1.10.0); urgency = medium
+
+Abstract:
+	Made changes to set the interface name field as not applicable for SSH service.
+
+Files Modified: data/ncml.conf
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 11 Aug 2011 19:59:33 IST
+
+Package: ncml_configuration (1.9.0); urgency = medium
+
+Abstract:
+	Removing IPMI service configuration using ncml.
+
+Files Modified: data/ncml.conf
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 09 Aug 2011 17:08:41 IST
+
+Package: ncml_configuration (1.8.0); urgency = medium
+
+Abstract:
+	Default value of telnet interface name is changed to Not applicable
+
+Files Modified: data/ncml.conf
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 05 Aug 2011 11:52:41 IST
+
+Package: ncml_configuration (1.7.0); urgency = high
+
+Abstract:
+	Moving the section from info to app
+
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 02 Aug 2011 15:17:32 EDT
+
+Package: ncml_configuration (1.6.0); urgency = low
+
+Abstract:
+	Changed the Field values of services to support Not Applicable and Not Editable configurations.
+
+Files Modified: data/ncml.conf
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 20 Jul 2011 14:11:06 IST
+
+Package: ncml_configuration (1.5.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/ncml.conf
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:27:12 EDT
+
+Package: ncml_configuration (1.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:19:22 EDT
+
+Package: ncml_configuration (1.3.0); urgency = medium
+
+Abstract:
+	Modified the default timeout for ssh and telnet as 10 mins, this configuration should match with timeoutd default configuration
+
+Files Modified: data/ncml.conf
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 12 May 2011 22:25:57 IST
+
+Package: ncml_configuration (1.2.0); urgency = low
+
+Abstract:
+	Added function to check request port and services
+
+Files Modified: data/ncml.conf
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 02 May 2011 18:46:30 IST
+
+Package: ncml_configuration (1.1.0); urgency = medium
+
+Abstract:
+	Modified devinstall script to copy the ncml.conf file to /conf location
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Tue, 19 Apr 2011 17:30:54 IST
+
+Package: ncml_configuration (1.0.0); urgency = new
+
+Abstract:
+	This package contains the default configuration file of ncml package. This defualt configuration can be overriden by any OEM specific configuration pacakge.
+
+Files Added: data, data/ncml.conf, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Tue, 19 Apr 2011 00:51:32 IST
+

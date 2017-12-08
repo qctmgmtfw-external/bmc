@@ -1,0 +1,20 @@
+Package : libldapauth_1_16_0_1_memory_issues
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libldapauth (1.16.0)
+Depends :  libldapauth(==1.16.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  othiyappnk (othiyappank@amiindia.co.in)
+Urgency : new
+Description : Returning the null if any failure case occurs
+.
+

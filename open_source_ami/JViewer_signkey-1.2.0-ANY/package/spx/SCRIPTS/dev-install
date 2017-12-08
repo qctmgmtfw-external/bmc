@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %TEMPDIR/../certs
+		COPY_FILE ./amiKeys %TEMPDIR/../certs/
+				
+debug-install:

@@ -1,0 +1,20 @@
+Package : libipmi_2_38_0_2_FastSELAccessWebUI
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libipmi (2.38.0)
+Depends :  libipmi(==2.38.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  winston (winstonv@amiindia.co.in)
+Urgency : new
+Description : Adding Higher Level API for faster SEL accessing in WebUI
+.
+

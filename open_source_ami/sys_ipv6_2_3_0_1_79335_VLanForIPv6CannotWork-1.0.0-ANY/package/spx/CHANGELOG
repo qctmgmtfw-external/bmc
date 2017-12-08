@@ -1,0 +1,9 @@
+Package: sys_ipv6_2_3_0_1_79335_VLanForIPv6CannotWork (1.0.0); urgency = new
+
+Abstract:
+	VLan for IPv6 cannot work.
+
+Files Added: data, data/00-data_ipv6autoconf.sh, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.BSD, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kenttang (kenttang@ami.com.tw) Mon, 16 Jan 2012 18:31:20 CST
+

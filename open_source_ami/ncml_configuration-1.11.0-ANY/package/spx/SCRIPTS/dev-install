@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+	COPY_TO_CONF ./ncml.conf
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH0" == "YES" ] || [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH1" == "YES" ] || [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_BOTH" == "YES" ]; then cp ./ncml_bond.conf %IMAGE_TREE/conf/ncml.conf; fi
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH0" == "YES" ] || [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH1" == "YES" ] || [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_BOTH" == "YES" ]; then cp ./ncml_bond.conf %IMAGE_TREE/etc/defconfig/ncml.conf; fi
+debug-install:

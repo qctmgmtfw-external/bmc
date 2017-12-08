@@ -1,0 +1,118 @@
+Package: libnss_ldap (1.12.0); urgency = low
+
+Abstract:
+	libUserPrivilege is added in build depend and binary required list
+
+Files Modified: spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 18 Aug 2011 19:33:08 IST
+
+Package: libnss_ldap (1.11.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/Makefile, data/nss-ldap.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:19:06 IST
+
+Package: libnss_ldap (1.10.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:05:46 EDT
+
+Package: libnss_ldap (1.9.0); urgency = low
+
+Abstract:
+	Removing the provides. this packages is only for core.
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 19 Jan 2011 18:34:18 IST
+
+Package: libnss_ldap (1.8.0); urgency = low
+
+Abstract:
+	Including provides, this will make proper overriding the core or OEM packages.
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 19 Jan 2011 17:37:43 IST
+
+Package: libnss_ldap (1.7.0); urgency = low
+
+Abstract:
+	Changes includes moving OEM Extensible thing to libuserauth.
+
+Files Modified: data/Makefile, data/nss-ldap.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 07 Jan 2011 14:22:21 IST
+
+Package: libnss_ldap (1.6.0); urgency = low
+
+Abstract:
+	Ldap user will Use Block pipe, here after this enables LDAP users will have the control for the src pipe
+
+Files Modified: data/nss-ldap.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 03 Jan 2011 17:20:27 IST
+
+Package: libnss_ldap (1.5.0); urgency = low
+
+Abstract:
+	using the buffer and reference ptr to copy the name string to pwd structure.
+
+Files Modified: data/nss-ldap.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 24 Dec 2010 01:04:54 IST
+
+Package: libnss_ldap (1.4.0); urgency = high
+
+Abstract:
+	changed dummyusers file access macro to reservedusers
+
+Files Modified: data/nss-ldap.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Wed, 22 Dec 2010 20:56:30 IST
+
+Package: libnss_ldap (1.3.0); urgency = high
+
+Abstract:
+	moved dummyusers to sys_base for common use
+
+Files Deleted: data/dummyusers
+Files Modified: spx/RULES
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 21 Dec 2010 19:59:41 IST
+
+Package: libnss_ldap (1.2.0); urgency = low
+
+Abstract:
+	updated libnss_ldap based on pam_helperd and libpamhelper changes. this enables failure case handle when pamhelperd didnt run
+
+Files Modified: data/nss-ldap.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 02 Dec 2010 20:12:16 IST
+
+Package: libnss_ldap (1.1.0); urgency = low
+
+Abstract:
+	Changed ESSENTIAL to NO and added config tag
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 26 Nov 2010 16:25:43 CET
+
+Package: libnss_ldap (1.0.0); urgency = new
+
+Abstract:
+	Implementation of libnss for ldap
+
+Files Added: data, data/Makefile, data/dummyusers, data/nss-ldap.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libnss_ldap, spx/PACKAGES.D/libnss_ldap/DATA, spx/PACKAGES.D/libnss_ldap/SCRIPTS, spx/PACKAGES.D/libnss_ldap/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 26 Nov 2010 09:45:43 IST
+

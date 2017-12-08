@@ -1,0 +1,18 @@
+Package : libpmbus
+Non-Editable : YES
+Version : 1.6.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Revanth  (revantha@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : PMBUS LIBRARY SUPPORT
+Group : LIBRARY
+Depends : i2c
+Package-License : AMI
+Description : PMBus Library Binary
+.

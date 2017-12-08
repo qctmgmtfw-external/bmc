@@ -1,0 +1,10 @@
+--- .pristine/JViewer_common-1.70.0-src/spx/INFO Thu Jan 23 17:39:33 2014
++++ source/JViewer_common-1.70.0-src/spx/INFO Thu Jan 23 19:16:03 2014
+@@ -13,6 +13,7 @@
+ Package-License : AMI
+ Architecture : ANY
+ Urgency : medium
++Build-Precedence : CONFIG_SPX_FEATURE_REBUILD_JAVA_APPS 
+ Description : This package contains JViewer common source such as GUI,Vmedia source package.
+ .
+ 

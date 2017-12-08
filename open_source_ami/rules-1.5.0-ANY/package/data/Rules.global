@@ -1,0 +1,79 @@
+#---------------------------------------------------------------------
+# 			Global Rules.make for Firmware
+# 		   Copyright (c) 2003 American Megatrends Inc 
+#---------------------------------------------------------------------
+#----------------------------------------------------------------------
+#			Include Project Defintion File
+#----------------------------------------------------------------------
+-include ${SPXINC}/projdef.mk
+#----------------------------------------------------------------------
+#                              Cross Compile Tools
+#----------------------------------------------------------------------
+AS      =$(CROSS_COMPILE)as
+LD      =$(CROSS_COMPILE)ld
+CC      =$(CROSS_COMPILE)gcc
+CPLUS	=$(CROSS_COMPILE)g++
+CPP     =$(CC) -E
+AR      =$(CROSS_COMPILE)ar
+NM      =$(CROSS_COMPILE)nm
+STRIP   =$(CROSS_COMPILE)strip
+OBJCOPY =$(CROSS_COMPILE)objcopy
+OBJDUMP =$(CROSS_COMPILE)objdump
+INSTALL =install
+
+ARFLAGS = r
+#----------------------------------------------------------------------
+#----------------------------------------------------------------------
+#                     Flag settings for Building
+#----------------------------------------------------------------------
+# CFLAGS: all assignments to CFLAGS are incremental, so you can specify
+# the initial flags on the command line or environment, if needed.
+CFLAGS +=  -Wall -Werror  
+CFLAGS +=  -fno-strict-aliasing		# gcc > 4.0.0 turn on strict-aliasing by default
+
+# Specify Floating Point method
+ifeq ($(ARCH),ARM)
+CFLAGS += -msoft-float 
+endif
+ifeq ($(ARCH),MIPS)
+CFLAGS += -mhard-float -fpic
+endif
+# For other architecure leave it to the default FP mode specificed by the toolchain (for now)
+
+CFLAGS += -include ${SPXINC}/projdef.h
+
+#Global Debug Flags
+ifeq ($(GLOBAL_DEBUG),y)
+	DEBUG=y
+endif
+ifeq ($(GLOBAL_DEBUG),n)
+	DEBUG=n
+endif
+
+
+#Set Flags depending Apon whether Debug is enabled or not te DEBUG flag
+#is set in respective Makefiles
+ifeq ($(DEBUG),y)
+#  DEBFLAGS = -O -g -DDEBUG # "-O" is needed to expand inlines
+  DEBFLAGS = -g -DDEBUG # "-O" is removed because it is not allowing gdb to show local variables
+else
+  DEBFLAGS = -O2
+endif
+
+CFLAGS += $(DEBFLAGS) 
+
+#Set Flags for passing SOC, ARCH, BASESOC, PLATFORM and OEM information
+CFLAGS += -DSOC_${SOC} -DARCH_${ARCH} -DBASESOC_${BASESOC} -DPLATFORM_${PLATFORM} -DOEM_${OEM}
+
+#$(SRC:.c=.o) : %.o : %.c
+#
+.c.o:
+#	@echo "$(CC): creating $@ ..."
+	@echo "  CC      $@ "
+	@$(CC) -c $(CFLAGS) $< -o $@ 
+
+.cpp.o:
+#	@echo "$(CPLUS): creating $@ ..."
+	@echo "  C++     $@ "
+	@$(CPLUS) -c $(CFLAGS) $< -o $@ 
+#-----------------------  End of global Rules -------------------------

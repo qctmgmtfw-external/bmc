@@ -1,0 +1,21 @@
+Package : JViewer_1_10_0_5_95028_ImageInScalingMouseCursorWouldNotBeDraw
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 5 for JViewer (1.10.0)
+Depends :  JViewer(==1.10.0)
+PatchOrder : 5
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  thinkjao (thinkjao@ami.com.tw)
+Urgency : new
+Description : The image after affine transform won't be draw the mouse cursor when the hardware cursor is enable and scaling status.
+.
+

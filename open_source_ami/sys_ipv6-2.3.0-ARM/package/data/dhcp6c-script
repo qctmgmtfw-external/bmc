@@ -1,0 +1,51 @@
+#!/bin/sh
+# dhcp6c-script for Debian/Ubuntu. Jérémie Corbier, April, 2006.
+# resolvconf support by Mattias Guns, May 2006.
+
+#INTERFACE="eth0"
+INTERFACE=$new_interface_name
+IFACE=$INTERFACE
+
+. /etc/nwhelperapi.sh
+
+.  /conf/dns.conf
+
+#getdnsvars
+if [ "$SET_DNS" == 'yes' -o "$SET_DNS" == 'y' ]; then
+	if [ -n "$new_domain_name_servers" ]; then
+		#if [ -n "$new_domain_name" -o -n "$new_domain_name_servers" ]; then
+		LOOP=0
+		ONE=1
+		for i in $new_domain_name_servers; do
+			LOOP=$(($LOOP+$ONE))
+			#echo "LOOP - $LOOP"
+			#AddDNSServerIP $i				#This API is replaced with the new API for DNS address overwriting problems.
+			AddDNSServerIP_New $i $LOOP
+			if ! [ "$SET_IPV6_PRIORITY" == 'yes' -o "$SET_IPV6_PRIORITY" == 'y' ];then
+				break
+			fi
+		done
+	fi
+else
+	echo " SET_DNS is not true"
+fi	
+	
+if [ "$SET_v6DOMAIN" == 'yes' -o "$SET_v6DOMAIN" == 'y' ]; then
+	if [ -n "$new_domain_name" ]; then
+		for i in $new_domain_name; do
+			# Remove the 'extra' dot found at the end
+			DOMAIN=`echo $i | awk '{c=substr($0,length($0),1); if ( c == "." ){ $0=substr($0,1,length($0)-1);} print $0}'`
+			AddDNSDomainName $DOMAIN
+		done
+	fi
+else
+	echo " SET_v6DOMAIN is not true"
+fi
+
+	if [ -n "$new_ntp_servers" ]; then
+		AddNTPServerName $new_ntp_servers
+	else
+		echo "No NTP server found for IPv6........!"
+	fi
+
+exit 0

@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# /etc/init.d/rsyncconfd: start rsyncconf to run fail-save configuration Service
+#
+# chkconfig: 2345 90 91
+#Runlevel : 1 = K91
+#Runlevel : 3 = S90
+#Runlevel : 6 = K91
+#Runlevel : 7 = K91
+#Runlevel : 8 = K91
+
+BKUPCONF_DIR="bkupconf"
+
+#
+# function check_bkupconf,
+# it will check if there is a bkupconf partition in fstab.
+# And it will return 1 if success.
+#
+check_bkupconf() {
+    # Check if there is bkupconf in fstab
+    VAL=`grep -w "/$BKUPCONF_DIR" /etc/fstab`
+    if [ "$VAL" == "" ]; then
+        return 0
+    else
+        #Found bkupconf
+        return 1
+    fi
+}
+
+case "$1" in
+  start)
+        check_bkupconf
+        if [ $? == 1 ]; then
+            echo "Starting fail-safe configuration Service ..."
+            /etc/rsyncconf.sh & 
+        else
+            echo "Starting fail-safe configuration Service Failed."    
+        fi 
+    ;;
+  stop)    	
+      	echo "Stopping fail-safe configuration Service..."
+      	killall inotifywait
+      	echo "." 
+    ;;
+   *)
+    echo "Usage: /etc/init.d/rsyncconfd {start|stop}"
+    exit 1
+esac
+
+exit 0

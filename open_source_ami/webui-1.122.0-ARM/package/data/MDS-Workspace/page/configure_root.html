@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+	<link href="../www/style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../www/lib/include.js" type="text/javascript" ></script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>System Administrator</h3>
+	<p>This page allows the user to enable/disable access and change the 
+	password for the System Administrator account.</p>
+
+	<div class="subSection">
+		<table cellspacing="0" cellpadding="5" border="0" width="500">
+		<tr><td><strong>Username</strong></td>
+		<td><input type="text" id="_txtUsername" readonly 
+			class="classicTxtBox" /></td></tr>
+	
+		<tr><td><strong>User Access</strong></td>
+		<td><input type="checkbox" id="_chkUserAccess" />
+		<label for="_chkUserAccess">Enable</label></td></tr>
+	
+		<tr><td></td>
+		<td><input type="checkbox" id="_chkChangePword" disabled/>
+		<label for="_chkChangePword">Change Password</label></td></tr>
+	
+		<tr><td><strong>Password</strong></td>
+		<td><input type="password" id="_txtPassword" maxlength="64" 
+			class="classicTxtBox" disabled/></td></tr>
+	
+		<tr><td><strong>Confirm Password</strong></td>
+		<td><input type="password" id="_txtConfirmPword" maxlength="64" 
+			class="classicTxtBox" disabled/></td></tr>
+		</table>
+	</div>
+	<br/>
+	<div class="btnTray">
+		<input type="button" value="Save" id="_btnSave" />
+		<input type="button" value="Reset" id="_btnReset" />
+	</div>
+</body>
+</html>

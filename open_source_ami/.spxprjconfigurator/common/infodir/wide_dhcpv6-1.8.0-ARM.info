@@ -1,0 +1,15 @@
+Package : wide_dhcpv6
+Version : 1.8.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : DHCPv6_Client
+Section : app
+Essential : NO
+Owner : AMI
+Maintainer : arunkumars  (arunkumars@amiindia.co.in)
+Source-License : BSD
+Package-License : BSD
+Architecture : ARM
+Urgency : medium
+Description : This package contains wide dhcpv6 client binary (dhcp6c) for ARM architecture.
+.

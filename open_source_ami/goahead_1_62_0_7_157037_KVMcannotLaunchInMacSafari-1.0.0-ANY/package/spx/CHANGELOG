@@ -1,0 +1,9 @@
+Package: goahead_1_62_0_7_157037_KVMcannotLaunchInMacSafari (1.0.0); urgency = new
+
+Abstract:
+	157037_KVMcannotLaunchInMacSafari
+
+Files Added: data, data/00-data_default.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: cindychen (cindychen@ami.com.tw) Tue, 13 May 2014 15:18:27 CST
+

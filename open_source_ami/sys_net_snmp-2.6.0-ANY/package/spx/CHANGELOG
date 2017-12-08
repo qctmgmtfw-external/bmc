@@ -1,0 +1,84 @@
+Package: sys_net_snmp (2.6.0); urgency = high
+
+Abstract:
+	fix file permission problem with snmpcfg.conf
+
+Files Modified: spx/PACKAGES.D/sys_net_snmp/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Wed, 29 Jun 2011 14:25:57 EDT
+
+Package: sys_net_snmp (2.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:41:59 EDT
+
+Package: sys_net_snmp (2.4.0); urgency = high
+
+Abstract:
+	build dependency added for libsnmpusers. if snmp is enabled, the library needs to be included
+
+Files Modified: spx/INFO
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 14:39:24 EDT
+
+Package: sys_net_snmp (2.3.0); urgency = high
+
+Abstract:
+	add LD_LIBRARY_PATH for mib modules in the start script, add a config file for snmpusers support
+
+Files Added: data/snmpcfg.conf
+Files Modified: data/netsnmp, spx/RULES
+
+--Submitter: michaelw (michaelw@ami.com) Wed, 11 May 2011 15:29:10 EDT
+
+Package: sys_net_snmp (2.2.0); urgency = high
+
+Abstract:
+	SNMP buildtime flag support added
+
+Files Added: spx/P.CONFIG
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 06 May 2011 14:51:03 EDT
+
+Package: sys_net_snmp (2.1.0); urgency = high
+
+Abstract:
+	moved snmp options for /etc/features to this main snmp package. corrected binary license.
+
+Files Added: spx/LICENSES/LICENSE.BSD
+Files Modified: spx/INFO, spx/PACKAGES.D/sys_net_snmp/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 22 Apr 2011 16:52:01 EDT
+
+Package: sys_net_snmp (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES, spx/RULES.D/directory.lst, spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:54:44 EST
+
+Package: sys_net_snmp (1.1.0); urgency = medium
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 11 Nov 2010 11:28:12 CST
+
+Package: sys_net_snmp (1.0.0); urgency = new
+
+Abstract:
+	Package provides support for Net-SNMP protocal
+
+Files Added: data, data/netsnmp, data/snmp_users.conf, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/sys_net_snmp, spx/PACKAGES.D/sys_net_snmp/DATA, spx/PACKAGES.D/sys_net_snmp/SCRIPTS, spx/PACKAGES.D/sys_net_snmp/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/CreateTree, spx/RULES.D/device.lst, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 04 Oct 2010 16:54:48 EDT
+

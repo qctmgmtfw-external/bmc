@@ -1,0 +1,889 @@
+Package: libnetwork (1.58.0); urgency = low
+
+Abstract:
+	Removed unwanted debug message.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 18 Aug 2011 18:35:29 IST
+
+Package: libnetwork (1.57.0); urgency = medium
+
+Abstract:
+	Added condition to remove unwanted critical error messge when DISABLE_V4_V6 given using IPMI Pendtask.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 10 Aug 2011 12:32:37 IST
+
+Package: libnetwork (1.56.0); urgency = high
+
+Abstract:
+	Updating error message with interface name for easier identification
+
+Files Modified: data/nwcfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 09 Aug 2011 10:34:10 EDT
+
+Package: libnetwork (1.55.0); urgency = high
+
+Abstract:
+	Correcting the typo to validate correct failure condition
+
+Files Modified: data/nwcfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 09 Aug 2011 10:26:22 EDT
+
+Package: libnetwork (1.54.0); urgency = high
+
+Abstract:
+	Not printing the error message in case of acquiring no ip
+
+Files Modified: data/nwcfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 05 Aug 2011 19:12:17 EDT
+
+Package: libnetwork (1.53.0); urgency = medium
+
+Abstract:
+	Disable the bond vlan interface while sending disable bond interface command.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 04 Aug 2011 20:37:49 IST
+
+Package: libnetwork (1.52.0); urgency = medium
+
+Abstract:
+	validating the unspecified IPv6 DNS address, as it can't be resolved by nsupdate. This will fix the slow network process issue.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 22 Jul 2011 17:45:31 IST
+
+Package: libnetwork (1.51.0); urgency = medium
+
+Abstract:
+	Enabling support to set the activeslave for active-backup mode and added function to get the link status.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 21 Jul 2011 15:02:01 IST
+
+Package: libnetwork (1.50.0); urgency = medium
+
+Abstract:
+	Added function to get interface index using IPv6 Address.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 13 Jul 2011 18:07:02 IST
+
+Package: libnetwork (1.49.0); urgency = medium
+
+Abstract:
+	Closing the iniparser dictionary
+
+Files Modified: data/tcp.c
+
+--Submitter: Gayathri L (gayathril@amiindia.co.in) Wed, 13 Jul 2011 11:55:59 IST
+
+Package: libnetwork (1.48.0); urgency = medium
+
+Abstract:
+	Included hostname header file
+
+Files Modified: data/nwcfg.h
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 21:10:50 IST
+
+Package: libnetwork (1.47.0); urgency = medium
+
+Abstract:
+	Removed MAX_HOSTNAME_LEN definition, as it was defined in multiple places
+
+Files Modified: data/nwcfg.h
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:03:10 IST
+
+Package: libnetwork (1.46.0); urgency = medium
+
+Abstract:
+	Fix for BugID 15225 and 15223 - Changes done in tcp.c to allow TCPProtocolEndpoint to give out instances for established and configured telnet sessions
+
+Files Modified: data/tcp.c, data/tcp.h
+
+--Submitter: Gayathri L (gayathril@amiindia.co.in) Thu, 30 Jun 2011 11:46:24 IST
+
+Package: libnetwork (1.45.0); urgency = medium
+
+Abstract:
+	Added VLAN Support for Bond interface.
+
+Files Modified: data/vlannetworking
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 29 Jun 2011 20:40:25 IST
+
+Package: libnetwork (1.44.0); urgency = medium
+
+Abstract:
+	Incrementing hostname length.
+
+Files Modified: data/nwcfg.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 13 Jun 2011 19:09:26 IST
+
+Package: libnetwork (1.43.0); urgency = high
+
+Abstract:
+	update for DCMI v2.0
+
+Files Modified: data/nwcfg.h
+
+--Submitter: Charles Lilly (charlesl@ami.com) Wed, 08 Jun 2011 17:26:32 EDT
+
+Package: libnetwork (1.42.0); urgency = medium
+
+Abstract:
+	Fix for Updating IP address source, while disabling bond interface.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 06 Jun 2011 19:53:56 IST
+
+Package: libnetwork (1.41.0); urgency = medium
+
+Abstract:
+	Removed unwanted typecasting to get the proper value.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 02 Jun 2011 13:00:06 IST
+
+Package: libnetwork (1.40.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:05:10 EDT
+
+Package: libnetwork (1.39.0); urgency = low
+
+Abstract:
+	IPV6 Support for IPMI RMCP and RMCP+ Communication
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Fri, 13 May 2011 22:00:26 IST
+
+Package: libnetwork (1.38.0); urgency = low
+
+Abstract:
+	Removed unwanted debug messages.
+
+Files Modified: data/nwcfg.c, data/vlannetworking
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 25 Apr 2011 19:50:16 IST
+
+Package: libnetwork (1.37.0); urgency = medium
+
+Abstract:
+	Combine vlanid and vlanpriority into vlansetting.conf.
+Modified ReadVLANFile and WriteVLANFile function accordingly.
+
+Files Added: data/vlansetting.conf
+Files Deleted: data/vlanid, data/vlanpriority
+Files Modified: data/Makefile, data/nwcfg.c, data/nwcfg.h, data/vlannetworking, spx/INFO, spx/PACKAGES.D/libnetwork_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 23 Apr 2011 14:59:46 CST
+
+Package: libnetwork (1.36.0); urgency = medium
+
+Abstract:
+	Made changes to remove the IPMI dependency.
+
+Files Modified: data/Makefile, data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 19 Apr 2011 16:10:27 IST
+
+Package: libnetwork (1.35.0); urgency = medium
+
+Abstract:
+	Enabled the support to disable both the LAN interface in network layer as LAN interface disable validation is 
+handled in IPMI command.
+Modification in IPv6 prefix length calculation.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 05 Apr 2011 17:35:49 IST
+
+Package: libnetwork (1.34.0); urgency = medium
+
+Abstract:
+	Added Macro for Maximum slave and memset the Maxslave.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 30 Mar 2011 14:04:57 IST
+
+Package: libnetwork (1.33.0); urgency = medium
+
+Abstract:
+	Added validation for activeslave command.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 29 Mar 2011 22:37:02 IST
+
+Package: libnetwork (1.32.0); urgency = low
+
+Abstract:
+	Removed unwanted code and some minor change.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 29 Mar 2011 19:45:56 IST
+
+Package: libnetwork (1.31.0); urgency = medium
+
+Abstract:
+	Done code cleanup and the changes for generic support.
+Update the dhcp6c.conf file when disabling the bonding.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 28 Mar 2011 23:30:37 IST
+
+Package: libnetwork (1.30.0); urgency = medium
+
+Abstract:
+	Made changes to get the IP source for bond interface based on bond LAN channel number.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 02 Mar 2011 13:10:04 IST
+
+Package: libnetwork (1.29.0); urgency = low
+
+Abstract:
+	Removed unwanted variable.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 25 Feb 2011 14:37:06 IST
+
+Package: libnetwork (1.28.0); urgency = low
+
+Abstract:
+	Removed unwanted codes.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 24 Feb 2011 17:31:22 IST
+
+Package: libnetwork (1.27.0); urgency = medium
+
+Abstract:
+	Update the DNS conf file when bonding is disabled.
+Modified tmp file name.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 23 Feb 2011 22:02:53 IST
+
+Package: libnetwork (1.26.0); urgency = medium
+
+Abstract:
+	Made changes to enable the old configuration when bonding is disabled.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 23 Feb 2011 20:06:44 IST
+
+Package: libnetwork (1.25.0); urgency = medium
+
+Abstract:
+	Added support to enable both the slaves.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 21 Feb 2011 22:55:21 IST
+
+Package: libnetwork (1.24.0); urgency = medium
+
+Abstract:
+	Modified loop count to avoid structure overflow problem.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 18 Feb 2011 22:22:18 IST
+
+Package: libnetwork (1.23.0); urgency = medium
+
+Abstract:
+	Minor changes in loop count to avoid compile error.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 16 Feb 2011 21:51:12 IST
+
+Package: libnetwork (1.22.0); urgency = medium
+
+Abstract:
+	Save active slave in activeslave.conf so that single slave will be enabled after the reboot.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 16 Feb 2011 01:38:47 IST
+
+Package: libnetwork (1.21.0); urgency = medium
+
+Abstract:
+	Modified dhcp6.conf file update method.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 14 Feb 2011 21:28:24 IST
+
+Package: libnetwork (1.20.0); urgency = medium
+
+Abstract:
+	Set interface Enabled flag before ifup function call.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 10 Feb 2011 18:16:38 IST
+
+Package: libnetwork (1.19.0); urgency = medium
+
+Abstract:
+	Made change to remove bond entry in dns.conf file after the bonding is disabled.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 10 Feb 2011 00:39:45 IST
+
+Package: libnetwork (1.18.0); urgency = high
+
+Abstract:
+	Added function to Active the Single Slave.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Feb 2011 22:37:05 IST
+
+Package: libnetwork (1.17.0); urgency = medium
+
+Abstract:
+	Mii interval datatype is changed to 2bytes, to hold the value maximum value of 1000.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 04 Feb 2011 00:17:32 IST
+
+Package: libnetwork (1.16.0); urgency = high
+
+Abstract:
+	Added bonding support in libnetwork layer.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 03 Feb 2011 15:16:21 IST
+
+Package: libnetwork (1.15.0); urgency = high
+
+Abstract:
+	Removed unused codes.
+Added GetIfcNameByIndex function to get the interface name.
+Removed hard coded interface name and replaced with GetIfcNameByIndex function.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 25 Jan 2011 19:47:37 IST
+
+Package: libnetwork (1.14.0); urgency = high
+
+Abstract:
+	Added FQDN support
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 20 Jan 2011 00:11:51 IST
+
+Package: libnetwork (1.13.0); urgency = medium
+
+Abstract:
+	Modified Reserved byte to support both IPv4 and IPv6.
+
+Files Modified: data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 20:43:45 IST
+
+Package: libnetwork (1.12.0); urgency = low
+
+Abstract:
+	minor changes
+
+Files Modified: data/nwcfg.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 29 Dec 2010 18:45:57 IST
+
+Package: libnetwork (1.11.0); urgency = low
+
+Abstract:
+	Added function to find the network link type - MDIO/NCSI
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 23 Dec 2010 17:12:48 IST
+
+Package: libnetwork (1.10.0); urgency = high
+
+Abstract:
+	Added Emailformat support.
+
+Files Modified: data/valiPrivate.h, data/validate.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 19 Nov 2010 20:44:10 IST
+
+Package: libnetwork (1.9.0); urgency = low
+
+Abstract:
+	Alignment trap error fixed.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 12 Oct 2010 18:06:26 IST
+
+Package: libnetwork (1.8.0); urgency = low
+
+Abstract:
+	Reverting the changes done for BIOS IP Address source as this is breaking IPV6.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 05 Oct 2010 17:42:30 EDT
+
+Package: libnetwork (1.7.0); urgency = medium
+
+Abstract:
+	Set LAN Configuration Parameters Command support option 3 & 4
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 05 Oct 2010 17:38:17 CST
+
+Package: libnetwork (1.6.0); urgency = low
+
+Abstract:
+	- MAX_HOSTNAME_LEN macro changed from 256 to 64. Linux only supports 64 bytes of host name length.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 24 Sep 2010 15:09:49 IST
+
+Package: libnetwork (1.5.0); urgency = medium
+
+Abstract:
+	- Moved V6DNS_CONFIG structure to IPMI_LANConfig.h file. Because this structure is only used for IPMI command.
+
+Files Modified: data/nwcfg.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 22 Sep 2010 18:48:53 IST
+
+Package: libnetwork (1.4.0); urgency = low
+
+Abstract:
+	* condition checking added for host flag settings
+ * error in passing parameter to SetHostNameConf() function is corrected.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 20 Sep 2010 13:33:30 IST
+
+Package: libnetwork (1.3.0); urgency = low
+
+Abstract:
+	Minor change in the debug messages
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 20 Sep 2010 12:03:25 IST
+
+Package: libnetwork (1.2.0); urgency = medium
+
+Abstract:
+	- when there is a change in hostname or register BMC flag, then All the network interfaces has to be restarted to de-register/register with the DNS server for new hostname
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 16 Sep 2010 18:47:01 IST
+
+Package: libnetwork (1.1.0); urgency = medium
+
+Abstract:
+	Bug: while changing the hostname to the new hostname, the older host name is not de-registered with the DNS server. - Fixed.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 15 Sep 2010 17:24:00 IST
+
+Package: libnetwork (1.0.35); urgency = medium
+
+Abstract:
+	Added tcp.c and tcp.h files for CIM_TCPProtocolEndpoint class
+
+Files Added: data/tcp.c, data/tcp.h
+Files Modified: data/Makefile, data/netports.h, spx/PACKAGES.D/libnetwork_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Wed, 01 Sep 2010 19:57:02 IST
+
+Package: libnetwork (1.0.34); urgency = low
+
+Abstract:
+	Added userconn.c and userconn.h files for TelnetProfiles
+
+Files Added: data/userconn.c, data/userconn.h
+Files Modified: data/Makefile, spx/PACKAGES.D/libnetwork_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Gayathri L (gayathril@amiindia.co.in) Tue, 31 Aug 2010 15:14:02 IST
+
+Package: libnetwork (1.0.33); urgency = medium
+
+Abstract:
+	Adding IPv6 DNS configuration structure that is used by AMI OEM command
+
+Files Modified: data/nwcfg.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 18 Aug 2010 21:55:45 IST
+
+Package: libnetwork (1.0.32); urgency = medium
+
+Abstract:
+	Bug: There was a error in getting IPv6 gateway addresses for interface-wise configurations. Gateway address is read from /proc/net/ipv6_route file, and always the first entry in the file is returned.
+Fix: Gateway addresses are got from /proc/net/ipv6_route file using interface name as a filter.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 17 Aug 2010 18:23:20 IST
+
+Package: libnetwork (1.0.31); urgency = medium
+
+Abstract:
+	Fixed bug - Disable eth0 interface and set ipv6 address for eth1 result in loss of both interfaces.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 11 Aug 2010 10:41:56 CST
+
+Package: libnetwork (1.0.30); urgency = critical
+
+Abstract:
+	* LAN Enable issue
+Bug : User is able to do LAN disable for all the available interfaces. i.e. user can do LAN disable for eth0 and eth1. After that device is unable to use.
+Fix : Adding proper conditions while doing LAN Disable. Atleast one interface should be enable at a time.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 10 Aug 2010 16:00:44 IST
+
+Package: libnetwork (1.0.29); urgency = low
+
+Abstract:
+	* unwanted critical messages are moved to debug messages.
+* added feature information in the header note.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 04 Aug 2010 16:09:24 IST
+
+Package: libnetwork (1.0.28); urgency = medium
+
+Abstract:
+	DNS modification - 
+Modified DNS_CONF for EthIndex, HostSetting, and registerBMC.
+Modified other related changes.
+Removed previous AMI DNS related APIs.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 03 Aug 2010 19:11:26 CST
+
+Package: libnetwork (1.0.27); urgency = low
+
+Abstract:
+	Fix for windows compilation of libipmi.
+
+Files Modified: data/nwcfg.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 27 Jul 2010 18:24:12 IST
+
+Package: libnetwork (1.0.26); urgency = low
+
+Abstract:
+	Commenting TCRIT message as this message keeps on coming while flashing via YafuFlash
+
+Files Modified: data/nwcfg.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 07 Jul 2010 20:52:04 IST
+
+Package: libnetwork (1.0.25); urgency = medium
+
+Abstract:
+	Bug : dhcp6 client is not running for eth1 interface.
+Fix : Added missing configuration in dhcp6c.conf file for eth1 dynamically.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 17 Jun 2010 20:24:02 IST
+
+Package: libnetwork (1.0.24); urgency = medium
+
+Abstract:
+	* Support for checking IPv6 support in the kernel is added in libnetwork layer.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 16 Jun 2010 18:33:59 IST
+
+Package: libnetwork (1.0.23); urgency = low
+
+Abstract:
+	Changes done with respect to the DNS architecture change in core
+
+Files Modified: data/nwcfg.c
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Tue, 15 Jun 2010 18:29:29 IST
+
+Package: libnetwork (1.0.22); urgency = low
+
+Abstract:
+	1. New function is added to read both IPv4 and IPv6 data.
+2. NULL checking added for IPv6 data while reading and writing network configurations.
+3. Comments added to functions.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 14 Jun 2010 19:37:31 IST
+
+Package: libnetwork (1.0.21); urgency = low
+
+Abstract:
+	some minor changes done
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 14 Jun 2010 14:33:56 IST
+
+Package: libnetwork (1.0.20); urgency = medium
+
+Abstract:
+	LAN Enable/Disable Feature support added in libnetwork layer.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 10 Jun 2010 20:22:13 IST
+
+Package: libnetwork (1.0.19); urgency = high
+
+Abstract:
+	* DNS architecture changes done in the core level for new DNS web page.
+ * comments added for functions.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 09 Jun 2010 15:22:27 IST
+
+Package: libnetwork (1.0.18); urgency = medium
+
+Abstract:
+	Adding Link Down Resilent support to SPX
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Jun 2010 11:16:47 IST
+
+Package: libnetwork (1.0.17); urgency = medium
+
+Abstract:
+	Fixed for the bug - after setting DNS server ip with IPMI command and DNS server ip is still empty.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Wed, 19 May 2010 12:00:22 EDT
+
+Package: libnetwork (1.0.16); urgency = medium
+
+Abstract:
+	Fixed for nwGetDNSConf function, it should find all flags in conf file.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Wed, 12 May 2010 12:28:02 EDT
+
+Package: libnetwork (1.0.15); urgency = low
+
+Abstract:
+	Added some DNS related functions and removed the unwanted code
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Mon, 03 May 2010 18:54:12 IST
+
+Package: libnetwork (1.0.14); urgency = medium
+
+Abstract:
+	Added some DNS related functions for AMI DNS commands.
+
+Files Modified: data/Makefile, data/nwcfg.c, data/nwcfg.h, spx/INFO
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Sat, 01 May 2010 21:01:11 EDT
+
+Package: libnetwork (1.0.13); urgency = low
+
+Abstract:
+	Modified the Copyright year as per the review comments (http://172.16.96.90/reviews/r/59).
+
+Files Modified: data/sendarp.c, data/sendarp.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 28 Apr 2010 18:41:10 IST
+
+Package: libnetwork (1.0.12); urgency = low
+
+Abstract:
+	Added a function to send Gratuitous ARP packet with the given IP and MAC address.
+(Used in IPMI for sending Gratuitous ARP packet).
+
+Files Added: data/sendarp.c, data/sendarp.h
+Files Modified: data/Makefile, spx/PACKAGES.D/libnetwork_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 27 Apr 2010 19:54:32 IST
+
+Package: libnetwork (1.0.11); urgency = low
+
+Abstract:
+	Added network calls which is needed for IPInterface
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Tue, 30 Mar 2010 18:08:17 IST
+
+Package: libnetwork (1.0.10); urgency = low
+
+Abstract:
+	issue : wrong values shown in web page for IPv6 address when there is no external DHCP server and the IP address source is DHCP. fixed by doing memset for IPv6 stucture variables.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 17 Mar 2010 21:29:44 IST
+
+Package: libnetwork (1.0.9); urgency = low
+
+Abstract:
+	Added functions required for Ethernet Profile
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Tue, 16 Mar 2010 10:56:29 IST
+
+Package: libnetwork (1.0.8); urgency = low
+
+Abstract:
+	Fix for the bug - error in getting IPv6 gateway when source is static
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 15 Mar 2010 22:16:03 IST
+
+Package: libnetwork (1.0.7); urgency = low
+
+Abstract:
+	Added functions required for SSH Profile.
+
+Files Added: data/netports.c, data/netports.h, data/protoendpoint.c, data/protoendpoint.h
+Files Modified: data/Makefile, spx/PACKAGES.D/libnetwork_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Indhu PriyaVathana V (indhuv@amiindia.co.in) Wed, 10 Mar 2010 17:17:24 IST
+
+Package: libnetwork (1.0.6); urgency = low
+
+Abstract:
+	Removing unused codes from libnetwork.
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 09 Mar 2010 17:54:52 IST
+
+Package: libnetwork (1.0.5); urgency = low
+
+Abstract:
+	references for CONFIG_SPX_FEATURE_VLAN_IFC_MTU_SIZE is removed
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 26 Feb 2010 23:04:28 IST
+
+Package: libnetwork (1.0.4); urgency = low
+
+Abstract:
+	inet_ntop() length parameter modified to INET6_ADDRSTRLEN
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 26 Feb 2010 15:33:41 IST
+
+Package: libnetwork (1.0.3); urgency = low
+
+Abstract:
+	domain name is written to resolv.conf file which is from web page, when source is static. Also overwriting problems in resolv.conf file is cleared.
+
+Files Modified: data/nwcfg.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Thu, 25 Feb 2010 13:28:55 IST
+
+Package: libnetwork (1.0.2); urgency = low
+
+Abstract:
+	Changes for IPv6 support in LAN. *Added check for inet6 in GetNooInterface. *Added changes for get DNS server setting
+
+Files Modified: data/nwcfg.c, data/nwcfg.h
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Thu, 18 Feb 2010 22:40:08 IST
+
+Package: libnetwork (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:09:10 EST
+
+Package:libnetwork (1.0.0);urgency=low
+
+Abstract:
+	Change log description.
+
+Files Modified: nwcfg.c, nwcfg.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 3 Feb 2010 00:14:15 +0530
+
+Package:libnetwork (1.0.0);urgency=low
+
+Abstract:
+	Change log description.
+
+Files Modified: nwcfg.c, nwcfg.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 2 Feb 2010 22:25:21 +0530
+
+Package:libnetwork (1.0.0);urgency=new
+
+Abstract:
+	This library package contains network related stuffs
+
+Files Added: validate.c, nwcfg.h, nwcfg.c, vlanpriority, valiPrivate.h, validate.h, vlanid, vlannetworking, Makefile, vlaninterfaces
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 8 Dec 2009 14:25:28 -0500

@@ -1,0 +1,21 @@
+--- linux/drivers/mtd/maps/fmh.h	2011-08-11 12:38:07.677453618 +0530
++++ linux-2.6.28.10/drivers/mtd/maps/fmh.h	2011-08-11 13:05:57.838996670 +0530
+@@ -5,7 +5,7 @@
+ #define FMH_END_SIGNATURE 	0x55AA
+ #define FMH_SIZE			64
+ #define FMH_MAJOR			1
+-#define FMH_MINOR		 	5	
++#define FMH_MINOR		 	6
+ 
+ /*
+ typedef struct
+@@ -31,7 +31,8 @@
+ 	unsigned short	Module_Flags;			/* Refer Module Flags Values Below */
+ 	unsigned long	Module_Load_Address;
+ 	unsigned long 	Module_Checksum;		/* CRC 32 */
+-	unsigned char	Module_Reserved[8];
++	unsigned char   Module_Ver_Aux[2];
++	unsigned char	Module_Reserved[6];
+ } __attribute__ ((packed)) MODULE_INFO;
+ 
+ /* Flash Module Header */

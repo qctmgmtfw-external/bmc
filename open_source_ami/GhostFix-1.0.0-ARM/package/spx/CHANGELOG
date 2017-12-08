@@ -1,0 +1,9 @@
+Package: GhostFix (1.0.0); urgency = new
+
+Abstract:
+	Fix for GHOST vulnerability
+
+Files Added: data, data/GHOST.c, data/Makefile, data/ghost-buster.c, data/ld.so.preload, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/GhostFix, spx/PACKAGES.D/GhostFix/DATA, spx/PACKAGES.D/GhostFix/SCRIPTS, spx/PACKAGES.D/GhostFix/SCRIPTS/dev-install, spx/PACKAGES.D/GhostVulnerabilityCheck, spx/PACKAGES.D/GhostVulnerabilityCheck/DATA, spx/PACKAGES.D/GhostVulnerabilityCheck/SCRIPTS, spx/PACKAGES.D/GhostVulnerabilityCheck/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Thu, 26 Feb 2015 15:37:21 CST
+

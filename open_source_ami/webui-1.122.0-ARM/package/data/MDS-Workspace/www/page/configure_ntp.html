@@ -1,0 +1,110 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+<link href="../style/page_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../lib/include.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnRefresh");
+		elmt.setAttribute("value", eLang.getString("configure_ntp", "CFG_NTP_REFRESH"));
+		var elmt = document.getElementById("_btnSave");
+		elmt.setAttribute("value", eLang.getString("configure_ntp", "CFG_NTP_SAVE"));
+		var elmt = document.getElementById("_btnReset");
+		elmt.setAttribute("value", eLang.getString("configure_ntp", "CFG_NTP_RESET"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_TITLE"));</script>
+</h3>
+<p>
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_DESC"));</script>
+</p>
+
+<div class="subSection">
+	<div class="errorDisplay" id="_divNTPError"></div>
+	<table cellspacing="2" cellpadding="5" border="0" width="500">
+	<tr>
+		<td><b>
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_DATE"));</script>
+</b></td>
+		<td>
+			<select id="_lstMonth" class="classicTxtBox"></select> &nbsp;
+			<select id="_lstDate" class="smallclassicTxtBox"></select> &nbsp;
+			<select id="_lstYear" class="smallclassicTxtBox"></select>
+		</td>
+	</tr>
+	<tr>
+		<td><b>
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_TIME"));</script>
+</b><br><em>
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_HH_MM_SS"));</script>
+</em></td>
+		<td>
+			<input type="text" maxlength="2" style="text-align:center;" id="_txtHour" class="smallclassicTxtBox" /> &nbsp;
+			<input type="text" maxlength="2" style="text-align:center;" id="_txtMinute" class="smallclassicTxtBox" /> &nbsp;
+			<input type="text" maxlength="2" style="text-align:center;" id="_txtSecond" class="smallclassicTxtBox" />
+		</td>
+	</tr>
+	<tr>
+		<td><b>
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_UTC"));</script>
+</b></td>
+		<td><select id="_lstUTCTZone" class="classicTxtBox"></select> 
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_HOURS"));</script>
+</td>
+	</tr>
+	<tr>
+		<td><b>
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_NTP"));</script>
+</b></td>
+		<td><input type="text" id="_txtNTPServer" maxlength="255" class="classicTxtBox" /></td>
+	</tr>
+	<tr><td colspan=2>
+		<input type="checkbox" id="_chkNTPEnable" value="1" />
+		<label for="_chkNTPEnable">
+<script>document.writeln(eLang.getString("configure_ntp", "CFG_NTP_SYNC_NTP"));</script>
+</label>
+	</td></tr>
+	</table>
+	<br>
+</div>
+<div class="btnTray">
+	<input type="button" id="_btnRefresh" />
+	<input type="button" id="_btnSave" />
+	<input type="button" id="_btnReset" />
+</div>
+</body>
+</html>

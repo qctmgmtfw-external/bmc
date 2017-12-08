@@ -1,0 +1,20 @@
+Package : libnetwork_1_58_0_7_84131_AddAutoConfigurationInterfaces
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 7 for libnetwork (1.58.0)
+Depends :  libnetwork(==1.58.0)
+PatchOrder : 7
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  thinkjao (thinkjao@ami.com.tw)
+Urgency : new
+Description : Add configure interfaces in service configuration automatically. If Auto configuration is enabled, then all the services will be restarted automatically.
+.
+

@@ -1,0 +1,40 @@
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2010        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+
+// File Name  : widget_page
+// Brief      : widget_page page string table
+// Author Name:
+//------------------------------------------------------------//
+// widget_page page string table
+//------------------------------------------------------------//
+
+eLang.widget_page_strings = {};
+
+eLang.widget_page_strings["WIDGET_PAGE_CLOSE"] = "Close";
+eLang.widget_page_strings["WIDGET_PAGE_LIVEREAD"] = "Live Reading:";
+eLang.widget_page_strings["WIDGET_PAGE_HELP"] = "Help";
+eLang.widget_page_strings["WIDGET_PAGE_MINIMIZE"] = "Minimize";
+eLang.widget_page_strings["WIDGET_PAGE_SAVE"] = "Save";

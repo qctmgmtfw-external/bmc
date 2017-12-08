@@ -1,0 +1,9 @@
+Package: PECI_over_IPMI_Support (1.0.0); urgency = new
+
+Abstract:
+	Support for Communicating with PECI using IPMI Master Write Read Interface
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 15 Aug 2011 16:52:08 EDT
+

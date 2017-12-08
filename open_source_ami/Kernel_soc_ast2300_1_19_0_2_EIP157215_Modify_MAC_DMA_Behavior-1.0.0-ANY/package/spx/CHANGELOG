@@ -1,0 +1,9 @@
+Package: Kernel_soc_ast2300_1_19_0_2_EIP157215_Modify_MAC_DMA_Behavior (1.0.0); urgency = new
+
+Abstract:
+	Modify MAC and DMA arbitration behavior as Aspeed AP Note#13
+
+Files Added: data, data/00-data_04-drivers_net_arm_ast_ether.c, data/01-data_05-drivers_net_arm_ast_ether.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: royku (royku@ami.com.tw) Fri, 14 Mar 2014 11:35:31 CST
+

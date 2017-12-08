@@ -1,0 +1,18 @@
+Package : upnp
+Non-Editable : YES
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Group : DISCOVERY
+Config-Tag : Upnp Discovery Support
+Required : libdbgout, libunix
+Package-License : AMI
+Description : Provides UPNP Procotol discovery mechanism.
+.

@@ -1,0 +1,20 @@
+Package : libipmi_2_38_0_5_Sensor_Scanning_bit
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 5 for libipmi (2.38.0)
+Depends :  libipmi(==2.38.0)
+PatchOrder : 5
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  muthuchamyk (muthusamyk@amiindia.co.in)
+Urgency : new
+Description : Checking the Sensor Scanning bit and Sensor Accessing error to update the Sensor reading.
+.
+

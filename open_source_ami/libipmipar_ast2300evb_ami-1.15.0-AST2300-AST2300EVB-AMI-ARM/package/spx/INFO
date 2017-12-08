@@ -1,0 +1,20 @@
+Package : libipmipar_ast2300evb_ami
+Non-Editable : YES
+Version : 1.15.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Suresh V  (sureshv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+SOC : AST2300
+PLATFORM : AST2300EVB
+OEM : AMI
+Urgency : medium
+Section : lib
+Essential : YES
+Config-Tag : IPMI Platform Library for AST2300EVB Platform (AMI OEM Version)
+Group : PLATFORM
+Package-License : AMI
+Description : This package contains IPMI Configurations and sensor porting related stuffs for AST2300EVB Platform
+.

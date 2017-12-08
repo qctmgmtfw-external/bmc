@@ -1,0 +1,15 @@
+Package : JViewer_signkey
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : app
+Essential : NO
+Group : KVM
+Owner : AMI
+Maintainer : Othiyappan K  (othiyappank@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This package contains AMIkey to sign the JAR.
+.

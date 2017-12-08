@@ -1,0 +1,10 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %IMAGE_TREE/usr/local/lib/email/
+        COPY_DIR		./ %IMAGE_TREE/usr/local/lib/
+		ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libfixedsub_emailformat.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		CWD %IMAGE_TREE/usr/local/lib/email/
+		CREATE_SOFT_LINK ../libfixedsub_emailformat.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX libfixedsub_emailformat.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		
+debug-install:

@@ -1,0 +1,20 @@
+Package : libifc_1_98_0_14_AddSensorEventReadingTypeCode
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 14 for libifc (1.98.0)
+Depends :  libifc(==1.98.0)
+PatchOrder : 14
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  GrayChen (graychen@ami.com.tw)
+Urgency : new
+Description : Add the Sensor Event Reading Type code in the return value of the function GetAllSensors
+.
+

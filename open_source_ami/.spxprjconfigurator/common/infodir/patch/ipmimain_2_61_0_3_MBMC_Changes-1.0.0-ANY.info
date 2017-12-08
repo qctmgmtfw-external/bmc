@@ -1,0 +1,20 @@
+Package : ipmimain_2_61_0_3_MBMC_Changes
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 3 for ipmimain (2.61.0)
+Depends :  ipmimain(==2.61.0)
+PatchOrder : 3
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Suresh V (sureshv@amiindia.co.in)
+Urgency : new
+Description : MBMC Changes
+.
+

@@ -1,0 +1,17 @@
+Package : GhostFix
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Manoj Ashok  (manoja@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : new
+Section : lib
+Essential : YES
+Group : LIBRARY
+Required : target
+Package-License : AMI
+Description : Contains intercepor function for gethostbyname() to avoid GHOST vulnerability
+.

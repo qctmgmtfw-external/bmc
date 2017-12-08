@@ -1,0 +1,6 @@
+--- linux/drivers/mtd/maps/Makefile	2006-02-10 02:22:48.000000000 -0500
++++ linux.spi/drivers/mtd/maps/Makefile	2006-10-04 10:40:59.963825153 -0400
+@@ -62,2 +62,3 @@
+ obj-$(CONFIG_MTD_INTEL_VR_NOR)	+= intel_vr_nor.o
+ obj-$(CONFIG_MTD_BFIN_ASYNC)	+= bfin-async-flash.o
++obj-$(CONFIG_MTD_RACTRENDS)	+= ractrends.o fmhcore.o

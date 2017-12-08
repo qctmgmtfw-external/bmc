@@ -1,0 +1,8 @@
+#Install Script for Patch Package 
+
+build-install: 
+	MKDIR_CLEAN %PATCHDIR/%PACKAGE
+	INSTALL %PATCHDIR/%PACKAGE
+
+debug-install: 
+

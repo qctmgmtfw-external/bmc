@@ -1,0 +1,9 @@
+Package: libnetwork_1_58_0_3_Modified_StringManipulation_Logic (1.0.0); urgency = new
+
+Abstract:
+	Modified string manipulation logic in protoendpoint.c and tcp.c
+
+Files Added: data, data/00-data_protoendpoint.c, data/01-data_tcp.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Mon, 12 Sep 2011 19:30:45 IST
+

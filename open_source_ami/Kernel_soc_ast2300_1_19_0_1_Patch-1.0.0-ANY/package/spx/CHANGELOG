@@ -1,0 +1,9 @@
+Package: Kernel_soc_ast2300_1_19_0_1_Patch (1.0.0); urgency = new
+
+Abstract:
+	Updates mac driver
+
+Files Added: data, data/00-data_05-drivers_net_arm_ast_ether.h, data/01-data_04-drivers_net_arm_ast_ether.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Thu, 06 Sep 2012 20:02:22 CST
+

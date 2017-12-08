@@ -1,0 +1,20 @@
+Package : libnetwork_1_58_0_2_Null_check
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libnetwork (1.58.0)
+Depends :  libnetwork(==1.58.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  muthuchamyk (muthusamyk@amiindia.co.in)
+Urgency : new
+Description : Added Null check for interface name and free memory in error condition.
+.
+

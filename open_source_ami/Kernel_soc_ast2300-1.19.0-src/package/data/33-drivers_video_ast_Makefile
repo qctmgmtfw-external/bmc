@@ -1,0 +1,13 @@
+--- linux-2.6.28.10/drivers/video/ast/Makefile	1970-01-01 08:00:00.000000000 +0800
++++ linux-2.6.28.10-ami/drivers/video/ast/Makefile	2011-02-21 19:51:16.000000000 +0800
+@@ -0,0 +1,10 @@
++#
++# Makefile for the AST2300 frame buffer device driver
++#
++
++include ${SPXINC}/projdef.mk
++ifeq ($(CONFIG_SPX_FEATURE_GLOBAL_FRAME_BUFFER_SUPPORT), YES)
++obj-$(CONFIG_FB_AST) += astfb.o
++
++astfb-objs := ast_fb.o ast_fb_mode.o
++endif

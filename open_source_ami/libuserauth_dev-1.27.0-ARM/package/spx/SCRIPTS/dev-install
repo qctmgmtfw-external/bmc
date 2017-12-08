@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	#copy header file
+	MKDIR_NOCLEAN %SPXINC/user_auth      
+    COPY_DIR Includes %SPXINC/user_auth  
+	#copy library
+	MKDIR_NOCLEAN %SPXLIB/user_auth
+	COPY_DIR lib %SPXLIB/user_auth
+	ADD_LIBRARY_LINKS %SPXLIB/user_auth  libuserauth.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+debug-install:

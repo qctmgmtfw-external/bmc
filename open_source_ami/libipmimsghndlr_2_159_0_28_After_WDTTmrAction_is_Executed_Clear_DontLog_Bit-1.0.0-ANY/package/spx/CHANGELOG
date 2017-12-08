@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_28_After_WDTTmrAction_is_Executed_Clear_DontLog_Bit (1.0.0); urgency = new
+
+Abstract:
+	After WDTTmrAction is executed, clear the dont_log bit. According to watchdog in SPEC 27.3.
+
+Files Added: data, data/00-data_App_AppDevice_WDT.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter:  () Mon, 03 Dec 2012 01:39:46 EST
+

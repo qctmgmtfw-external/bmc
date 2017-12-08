@@ -1,0 +1,21 @@
+Package : JViewer_1_10_0_1_71562_LogoutCauseJViewerCrashInRHEL
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for JViewer (1.10.0)
+Depends :  JViewer(==1.10.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description : for 71562, Remote redirect session might be disconnect when HOST reboot or logout from GNONE.
+.
+

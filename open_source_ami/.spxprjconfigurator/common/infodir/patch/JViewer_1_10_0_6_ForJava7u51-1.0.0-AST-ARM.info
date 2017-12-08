@@ -1,0 +1,21 @@
+Package : JViewer_1_10_0_6_ForJava7u51
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 6 for JViewer (1.10.0)
+Depends :  JViewer(==1.10.0)
+PatchOrder : 6
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  thinkjao (thinkjao@ami.com.tw)
+Urgency : new
+Description : Added support to select Binary of Source package based on Build Precedence, at build time.
+.
+

@@ -1,0 +1,11 @@
+# Install Script
+#
+build-install:
+	MKDIR_NOCLEAN %SPXINC/snoop
+	COPY_FILE ./snoopifc.h %SPXINC/snoop
+	MKDIR_NOCLEAN %SPXLIB/snoop
+	COPY_FILE ./libsnoop.a %SPXLIB/snoop
+	COPY_FILE libsnoop.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/snoop
+	ADD_LIBRARY_LINKS %SPXLIB/snoop libsnoop.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+        
+debug-install:

@@ -1,0 +1,36 @@
+<layout>
+	<name>iwisp</name>
+	<description></description>
+	<hpos>0</hpos>
+	<vpos>0</vpos>
+	<height>1000</height>
+	<width>800</width>
+	<level>
+		<hpos>0</hpos>
+		<vpos>0</vpos>
+		<height>63</height>
+		<width>797</width>
+		<attach>0</attach>
+	</level>
+	<level>
+		<hpos>0</hpos>
+		<vpos>63</vpos>
+		<height>933</height>
+		<width>797</width>
+		<attach>0</attach>
+		<region>
+			<hpos>0</hpos>
+			<vpos>63</vpos>
+			<height>933</height>
+			<width>374</width>
+			<attach>0</attach>
+		</region>
+		<region>
+			<hpos>374</hpos>
+			<vpos>63</vpos>
+			<height>933</height>
+			<width>422</width>
+			<attach>0</attach>
+		</region>
+	</level>
+</layout>

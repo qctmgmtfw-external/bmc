@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_8_FastSELAccessWebUI
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 8 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 8
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  winston (winstonv@amiindia.co.in)
+Urgency : new
+Description : Added IPMI Command AMIGetSELEntries for faster SEL accessing in WebUI
+.
+

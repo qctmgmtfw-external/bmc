@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+				COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+				ADD_MODULES reset_hw
+				
+debug-install:

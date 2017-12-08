@@ -1,0 +1,9 @@
+Package: sys_base_2_41_0_4_EIP176750_Fix_Crontab (1.0.0); urgency = new
+
+Abstract:
+	Fix the cron does not execute
+
+Files Added: data, data/00-spx_PACKAGES.D_sys_base_SCRIPTS_dev-install, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.OPENSOURCE, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: hanslin (hanslin@ami.com.tw) Mon, 01 Sep 2014 11:45:14 CST
+

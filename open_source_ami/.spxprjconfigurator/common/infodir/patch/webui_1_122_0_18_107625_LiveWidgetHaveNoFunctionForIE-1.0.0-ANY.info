@@ -1,0 +1,20 @@
+Package : webui_1_122_0_18_107625_LiveWidgetHaveNoFunctionForIE
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 18 for webui (1.122.0)
+Depends :  webui(==1.122.0)
+PatchOrder : 18
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description : For EIP 107625, Live Widget has no function, for IE
+.
+

@@ -1,0 +1,161 @@
+Package: libipmiinterruptsensor (2.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:50:52 EDT
+
+Package: libipmiinterruptsensor (2.3.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:45:15 IST
+
+Package: libipmiinterruptsensor (2.2.0); urgency = medium
+
+Abstract:
+	Removing nice as they are not applicable for threads.
+
+Files Modified: data/intrsensormonitor.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 15:01:28 IST
+
+Package: libipmiinterruptsensor (2.1.0); urgency = medium
+
+Abstract:
+	There can be a chance of any positive values from poll, so removed (retval > 1) condition from if statement.
+
+Files Modified: data/ipmi_int.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 11 Apr 2011 19:41:00 IST
+
+Package: libipmiinterruptsensor (2.0.0); urgency = low
+
+Abstract:
+	Incrementing the package version to 2.0.0
+
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:23:59 IST
+
+Package: libipmiinterruptsensor (1.5.0); urgency = medium
+
+Abstract:
+	Releasing SMmutex after all the interrupt registrations are done.
+
+Files Modified: data/ipmi_int.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 25 Feb 2011 21:38:07 IST
+
+Package: libipmiinterruptsensor (1.4.0); urgency = medium
+
+Abstract:
+	Supporting Interrupt handler for SWC controller(PASS-THRU, PWBTIN, Power Good interrupts).
+
+Files Modified: data/ipmi_int.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 16 Feb 2011 11:07:24 IST
+
+Package: libipmiinterruptsensor (1.3.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/intrsensormonitor.c, data/ipmi_int.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:09:46 EDT
+
+Package: libipmiinterruptsensor (1.2.0); urgency = low
+
+Abstract:
+	Adding ipmimain in Depends.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 04 Oct 2010 12:46:06 EDT
+
+Package: libipmiinterruptsensor (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:56:36 EDT
+
+Package: libipmiinterruptsensor (1.0.7); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/Makefile, data/ipmi_int.c, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:49:00 IST
+
+Package: libipmiinterruptsensor (1.0.6); urgency = low
+
+Abstract:
+	Code cleanup for libipmiinterrupt sensor
+
+Files Modified: data/intrsensormonitor.c, data/ipmi_int.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 09 Aug 2010 18:06:42 IST
+
+Package: libipmiinterruptsensor (1.0.5); urgency = medium
+
+Abstract:
+	Handled the interrupt sensor by passing the sensor infor structure to the handler, when an interrupt occurs.
+
+Files Modified: data/ipmi_int.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 05 Aug 2010 23:10:49 IST
+
+Package: libipmiinterruptsensor (1.0.4); urgency = low
+
+Abstract:
+	MBMC Changes for libipmiinterrruptsensor
+
+Files Modified: data/intrsensormonitor.c, data/ipmi_int.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 20:55:02 IST
+
+Package: libipmiinterruptsensor (1.0.3); urgency = low
+
+Abstract:
+	Adding Config Tags
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 24 Jun 2010 19:18:19 IST
+
+Package: libipmiinterruptsensor (1.0.2); urgency = low
+
+Abstract:
+	Changing the Group of libipmiinterruptsensor to IPMI
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 24 Jun 2010 19:03:12 IST
+
+Package: libipmiinterruptsensor (1.0.1); urgency = low
+
+Abstract:
+	Adding interrupt task
+
+Files Added: data/ipmi_int.c
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 10 Jun 2010 22:02:22 IST
+
+Package: libipmiinterruptsensor (1.0.0); urgency = new
+
+Abstract:
+	This package contains source files needed for interrupt sensor monitoring
+
+Files Added: data, data/Makefile, data/intrsensormonitor.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libipmiinterruptsensor, spx/PACKAGES.D/libipmiinterruptsensor/DATA, spx/PACKAGES.D/libipmiinterruptsensor/SCRIPTS, spx/PACKAGES.D/libipmiinterruptsensor/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 07 Jun 2010 22:41:25 IST
+

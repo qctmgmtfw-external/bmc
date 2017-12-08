@@ -1,0 +1,9 @@
+Package: libldapconf_1_11_0_2_LDAP_GroupOfName_Allow_UID (1.0.0); urgency = new
+
+Abstract:
+	ldap objectclaas GroupOfName allow UID as dn
+
+Files Added: data, data/00-data_ldapconf.h, data/01-data_GenericLdapAuth.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: royku (royku@ami.com.tw) Mon, 10 Sep 2012 13:35:28 CST
+

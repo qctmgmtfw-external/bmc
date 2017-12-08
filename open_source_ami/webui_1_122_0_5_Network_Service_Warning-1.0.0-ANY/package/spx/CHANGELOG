@@ -1,0 +1,9 @@
+Package: webui_1_122_0_5_Network_Service_Warning (1.0.0); urgency = new
+
+Abstract:
+	Added Service related warning message, when network/bonding configuration is done.
+
+Files Added: data, data/00-data_MDS-Workspace_www_impl_configure_network_imp.js, data/01-data_MDS-Workspace_www_impl_configure_nw_bond_imp.js, data/02-data_MDS-Workspace_www_str_EN_common_str.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Tue, 27 Sep 2011 18:56:20 IST
+

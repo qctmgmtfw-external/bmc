@@ -1,0 +1,26 @@
+#!/bin/sh
+# Print additional version information for non-release trees.
+
+usage() {
+	echo "Usage: $0 [srctree]" >&2
+	exit 1
+}
+
+cd "${1:-.}" || usage
+
+cp ./buildno/buildno.h . -f
+# Check for svn and a svn repo.
+if rev=`svn info 2>/dev/null | grep '^Revision'`; then
+	rev=`echo $rev | awk '{print $NF}'`
+	changes=`svn status 2>/dev/null | grep '^[AMD]' | wc -l`
+
+	# Are there uncommitted changes?
+	if [ $changes != 0 ]; then
+		echo '{"'-svn "$rev" -uncommitted'"};' >> buildno.h
+	else
+		echo '{"''-svn' "$rev"'"};' >>buildno.h
+	fi
+
+	# All done with svn
+	exit
+fi

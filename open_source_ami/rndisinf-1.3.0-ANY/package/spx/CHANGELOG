@@ -1,0 +1,36 @@
+Package: rndisinf (1.3.0); urgency = medium
+
+Abstract:
+	Support for renaming workspace. Need SET_PATH to generate %TOOLDIR based on the current workspace path
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 22 Jul 2011 16:23:46 EDT
+
+Package: rndisinf (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:33:35 EDT
+
+Package: rndisinf (1.1.0); urgency = medium
+
+Abstract:
+	Manufacturer section changed to American Megatrends
+
+Files Modified: data/ami.inf
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 11 Oct 2010 15:52:41 EDT
+
+Package: rndisinf (1.0.0); urgency = new
+
+Abstract:
+	This package provides INF file for RNDIS/CDC Support
+
+Files Added: data, data/ami.inf, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 11 Oct 2010 11:07:07 EDT
+

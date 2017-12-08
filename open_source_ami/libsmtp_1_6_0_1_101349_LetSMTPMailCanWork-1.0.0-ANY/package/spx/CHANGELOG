@@ -1,0 +1,9 @@
+Package: libsmtp_1_6_0_1_101349_LetSMTPMailCanWork (1.0.0); urgency = new
+
+Abstract:
+	for EIP 101349, Because of the AST2300_2011Q3 SMTP mail content is null, so, add this patch to resolved this issue
+
+Files Added: data, data/00-data_smtpclient.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 26 Oct 2012 11:05:05 CST
+

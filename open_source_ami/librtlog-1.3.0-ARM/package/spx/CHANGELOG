@@ -1,0 +1,70 @@
+Package: librtlog (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:09:52 EDT
+
+Package: librtlog (1.2.0); urgency = high
+
+Abstract:
+	This pkg is not WSMAN specific - so dependecny to WSMAN is removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 12 Nov 2010 14:01:35 EST
+
+Package: librtlog (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:03:54 EDT
+
+Package: librtlog (1.0.4); urgency = low
+
+Abstract:
+	Modified the package configuration based on the feature set
+
+Files Modified: spx/INFO
+
+--Submitter: veerajothir (veerajothir@amiindia.co.in) Wed, 07 Apr 2010 20:09:53 EDT
+
+Package: librtlog (1.0.3); urgency = low
+
+Abstract:
+	Modified the value of Essential and Group fields to NO and WSMAN respectively
+
+Files Modified: spx/INFO
+
+--Submitter: veerajothir (veerajothir@amiindia.co.in) Fri, 02 Apr 2010 15:31:12 EDT
+
+Package: librtlog (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:57:30 EDT
+
+Package: librtlog (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:10:13 EST
+
+Package:librtlog (1.0.0);urgency=new
+
+Abstract:
+	This package is for log the message
+
+Files Added: rt_log.h, rt_log.c, Makefile
+
+--Submitter: Prakash (prakashs@amiindia.co.in) Tue, 2 Feb 2010 12:13:36 +0530

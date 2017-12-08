@@ -1,0 +1,9 @@
+Package: libvmedia_1_13_0_3_EIP68263 (1.0.0); urgency = new
+
+Abstract:
+	moved the macro to header file
+
+Files Added: data, data/00-data_comm.c, data/01-data_comm.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 04 Nov 2011 09:59:04 EDT
+

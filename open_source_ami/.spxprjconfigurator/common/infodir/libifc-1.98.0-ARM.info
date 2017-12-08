@@ -1,0 +1,17 @@
+Package : libifc
+Non-Editable : YES
+Version : 1.98.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Arockia Selva Rani A  (arockiaa@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : YES
+Depends : webui
+Required : libactivedircfg, libnetwork, libradiusconf, libuserm, libsslcertificate, libncml
+Package-License : AMI
+Description : This package contains web interface related files.
+.

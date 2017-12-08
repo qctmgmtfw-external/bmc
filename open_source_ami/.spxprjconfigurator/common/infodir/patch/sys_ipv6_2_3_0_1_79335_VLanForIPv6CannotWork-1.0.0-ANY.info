@@ -1,0 +1,20 @@
+Package : sys_ipv6_2_3_0_1_79335_VLanForIPv6CannotWork
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for sys_ipv6 (2.3.0)
+Depends :  sys_ipv6(==2.3.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  kenttang (kenttang@ami.com.tw)
+Urgency : new
+Description : VLan for IPv6 cannot work.
+.
+

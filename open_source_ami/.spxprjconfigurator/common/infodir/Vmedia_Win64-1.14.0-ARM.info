@@ -1,0 +1,18 @@
+Package : Vmedia_Win64
+Non-Editable : YES
+Version : 1.14.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Othiyappan K  (othiyappank@amiinida.co.in)
+Source-License : AMI
+Architecture : ANY
+Urgency : medium
+Section : lib
+Essential : YES
+Config-Tag : VMedia Support for Windows 64-Bit Clients
+Group : KVM
+Depends : JavaClientSupport
+Package-License : AMI
+Description : This package contains the Windows 64 bit library for Vmedia.
+.

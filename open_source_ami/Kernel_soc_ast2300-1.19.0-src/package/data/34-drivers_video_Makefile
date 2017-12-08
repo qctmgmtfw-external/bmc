@@ -1,0 +1,21 @@
++++ linux-2.6.28.10-ami/drivers/video/Makefile	2011-02-25 15:29:40.000000000 +0800
+@@ -3,7 +3,7 @@
+ # Rewritten to use lists instead of if-statements.
+ 
+ # Each configuration option enables a list of files.
+-
++include ${SPXINC}/projdef.mk
+ obj-$(CONFIG_VGASTATE)            += vgastate.o
+ obj-y                             += fb_notify.o
+ obj-$(CONFIG_FB)                  += fb.o
+@@ -123,7 +123,9 @@
+ obj-$(CONFIG_XEN_FBDEV_FRONTEND)  += xen-fbfront.o
+ obj-$(CONFIG_FB_CARMINE)          += carminefb.o
+ obj-$(CONFIG_FB_MB862XX)	  += mb862xx/
+-
++ifeq ($(CONFIG_SPX_FEATURE_GLOBAL_FRAME_BUFFER_SUPPORT), YES)
++obj-$(CONFIG_FB_AST)		  += ast/
++endif
+ # Platform or fallback drivers go here
+ obj-$(CONFIG_FB_UVESA)            += uvesafb.o
+ obj-$(CONFIG_FB_VESA)             += vesafb.o

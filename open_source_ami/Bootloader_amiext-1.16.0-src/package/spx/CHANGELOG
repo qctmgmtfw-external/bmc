@@ -1,0 +1,261 @@
+Package: Bootloader_amiext (1.16.0); urgency = medium
+
+Abstract:
+	Aux version added in FMH
+
+Files Added: data/85-vendors_ami_fmh_fmh.h_aux
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 11 Aug 2011 15:40:20 IST
+
+Package: Bootloader_amiext (1.15.0); urgency = high
+
+Abstract:
+	Added Macronix 32MB "MX25L25735E" flash part support
+
+Files Modified: data/43-drivers_spiflash_atmel.c, data/44-drivers_spiflash_m25pxx.c, data/45-drivers_spiflash_intels33.c, data/46-drivers_spiflash_generic.c, data/48-drivers_spiflash_spiflash.c, data/50-include_spiflash.h, data/76-drivers_spiflash_default.c, data/78-drivers_spiflash_macronix.c, data/79-drivers_spiflash_spansion.c, data/82-drivers_spiflash_winbond.c
+
+--Submitter: royku (royku@ami.com.tw) Wed, 06 Jul 2011 13:34:11 CST
+
+Package: Bootloader_amiext (1.14.0); urgency = low
+
+Abstract:
+	1. Add mechanism that set the boot_fwupd to 1 and upon successful firmware.
+2. Fix the update fail issue, reset the address when protect off flash.
+
+Files Modified: data/11-vendors_ami_fmh_cmd_fmh.c, data/36-vendors_ami_fwupdate_fwupdate.c, data/39-vendors_ami_IPMI_cmdhandler.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Thu, 16 Jun 2011 09:33:33 CST
+
+Package: Bootloader_amiext (1.13.0); urgency = high
+
+Abstract:
+	Revert to version 1.11.0
+
+Files Modified: data/46-drivers_spiflash_generic.c, data/48-drivers_spiflash_spiflash.c, data/78-drivers_spiflash_macronix.c
+
+--Submitter: royku (royku@ami.com.tw) Tue, 24 May 2011 16:45:16 CST
+
+Package: Bootloader_amiext (1.12.0); urgency = high
+
+Abstract:
+	1. added "MX25L25735E" 32MB flash support.
+2. temporary removed the code for "MX25L25635E" flash type support.
+
+Files Modified: data/46-drivers_spiflash_generic.c, data/48-drivers_spiflash_spiflash.c, data/78-drivers_spiflash_macronix.c
+
+--Submitter: royku (royku@ami.com.tw) Tue, 24 May 2011 13:48:00 CST
+
+Package: Bootloader_amiext (1.11.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:00:08 EDT
+
+Package: Bootloader_amiext (1.10.0); urgency = high
+
+Abstract:
+	Fixed issues with SPI when crossing multiple banks at 16MB boundary
+
+Files Deleted: data/83-drivers_spiflash_spiflash.c
+Files Modified: data/46-drivers_spiflash_generic.c, data/48-drivers_spiflash_spiflash.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 15 Mar 2011 12:49:32 EDT
+
+Package: Bootloader_amiext (1.9.0); urgency = high
+
+Abstract:
+	Fixed random Flash write/read errors in 4 byte addressing mode. This failure is attributed to issuing next command while previous command is still in progress
+
+Files Modified: data/46-drivers_spiflash_generic.c
+
+--Submitter: varadachari sudan ayanam (varadacharia@ami.com) Fri, 25 Feb 2011 10:41:54 EST
+
+Package: Bootloader_amiext (1.8.0); urgency = high
+
+Abstract:
+	DECLARE_GLOBAL_DATA_PTR has to be defined as global (as the name implies). It should not be defined as locals inside functions. Some compiler optimizations generate incorrect code breaking some fucntionality of bootloader
+
+Files Modified: data/28-vendors_ami_r2c_sess_mem.c, data/51-common_env_spi.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 23 Feb 2011 21:04:14 EST
+
+Package: Bootloader_amiext (1.7.0); urgency = medium
+
+Abstract:
+	support for 32 Bit SPI address
+
+Files Modified: data/46-drivers_spiflash_generic.c, data/78-drivers_spiflash_macronix.c
+
+--Submitter: varadachari Sudan Ayanam (varadacharia@ami.com) Wed, 16 Feb 2011 17:46:27 EST
+
+Package: Bootloader_amiext (1.6.0); urgency = medium
+
+Abstract:
+	Add conditional compilation for NCSI command.
+
+Files Modified: data/64-vendors_ami_ncsi_getmac.c, data/66-vendors_ami_ncsi_ncsi.c, data/68-vendors_ami_ncsi_ncsistart.c, data/80-vendors_ami_ncsi_cmd_ncsi.c, data/81-vendors_ami_ncsi_cmd_ncsi.h, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 30 Dec 2010 16:42:37 CST
+
+Package: Bootloader_amiext (1.5.0); urgency = high
+
+Abstract:
+	Aligment Issue on Checksum handled
+Handling network data without Ethernet CRC
+
+Files Modified: data/66-vendors_ami_ncsi_ncsi.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 20 Dec 2010 21:41:18 EST
+
+Package: Bootloader_amiext (1.4.0); urgency = medium
+
+Abstract:
+	Endian macros are to be enabled only if the linux endian.h does not have the 
+macros defined
+
+Files Modified: data/62-vendors_ami_ncsi_endian.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 11 Nov 2010 16:32:31 EST
+
+Package: Bootloader_amiext (1.3.0); urgency = medium
+
+Abstract:
+	Added Macronix 32MB SPI Part
+
+Files Modified: data/78-drivers_spiflash_macronix.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 23:16:57 EST
+
+Package: Bootloader_amiext (1.2.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:22:26 EST
+
+Package: Bootloader_amiext (1.1.0); urgency = medium
+
+Abstract:
+	Added new m25 device
+
+Files Modified: data/44-drivers_spiflash_m25pxx.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 17 Sep 2010 12:48:22 EDT
+
+Package: Bootloader_amiext (1.0.11); urgency = low
+
+Abstract:
+	merging SH related change to a single patch file.
+
+Files Deleted: data/85-vendors_ami_r2c_sess_mem.c
+Files Modified: data/28-vendors_ami_r2c_sess_mem.c
+
+--Submitter: Varadachari Sudan Ayanam (varadacharia@ami.com) Fri, 10 Sep 2010 15:19:52 EDT
+
+Package: Bootloader_amiext (1.0.10); urgency = medium
+
+Abstract:
+	SH specific conditional compilation flag added
+
+Files Added: data/85-vendors_ami_r2c_sess_mem.c
+
+--Submitter: Varadachari Sudan Ayanam (varadacharia@ami.com) Fri, 10 Sep 2010 14:18:49 EDT
+
+Package: Bootloader_amiext (1.0.9); urgency = medium
+
+Abstract:
+	Added Support for NCSI : Setting Speed to 100 MBps Full Duplex when PHY is not present
+
+Files Added: data/84-common_miiphyutil.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 08 Sep 2010 08:47:20 EDT
+
+Package: Bootloader_amiext (1.0.8); urgency = high
+
+Abstract:
+	Added support for multiple banks flashing via KCS in uboot (YAFUKCS)
+
+Files Modified: data/36-vendors_ami_fwupdate_fwupdate.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 27 Aug 2010 11:08:33 EDT
+
+Package: Bootloader_amiext (1.0.7); urgency = high
+
+Abstract:
+	Correction: Changed "params" to "conf"
+Moved hardcodes download locatons to configuration.
+
+Files Modified: data/36-vendors_ami_fwupdate_fwupdate.c, data/39-vendors_ami_IPMI_cmdhandler.c, data/40-vendors_ami_IPMI_cmdhandler.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 26 Aug 2010 13:05:30 EDT
+
+Package: Bootloader_amiext (1.0.6); urgency = medium
+
+Abstract:
+	Added code to prevent unwanted NCSI commands if the NC-SI device is not present (eth_send will fail)
+Some cleanup done
+
+Files Modified: data/64-vendors_ami_ncsi_getmac.c, data/66-vendors_ami_ncsi_ncsi.c, data/67-vendors_ami_ncsi_ncsi.h, data/68-vendors_ami_ncsi_ncsistart.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 25 Aug 2010 16:23:17 EDT
+
+Package: Bootloader_amiext (1.0.5); urgency = medium
+
+Abstract:
+	Passing bank, offset, instead of bank, addr; in read_buff and write_buff
+
+Files Added: data/83-drivers_spiflash_spiflash.c
+
+--Submitter: Varadachari Sudan Ayanam (varadacharia@ami.com) Fri, 23 Jul 2010 18:15:31 EDT
+
+Package: Bootloader_amiext (1.0.4); urgency = medium
+
+Abstract:
+	Add winbond flash chips module initialization.
+
+Files Modified: data/48-drivers_spiflash_spiflash.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 13 Jul 2010 19:01:36 CST
+
+Package: Bootloader_amiext (1.0.3); urgency = medium
+
+Abstract:
+	Support NCSI LAN controllers which do not support NCSI checksum(the checksum field is always 0).
+
+Files Modified: data/66-vendors_ami_ncsi_ncsi.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 09 Jul 2010 10:59:01 CST
+
+Package: Bootloader_amiext (1.0.2); urgency = low
+
+Abstract:
+	1. Add support for SPI flash clock rate configuration.
+2. Add support for Winbond SPI flash chips.
+
+Files Added: data/82-drivers_spiflash_winbond.c
+Files Modified: data/43-drivers_spiflash_atmel.c, data/44-drivers_spiflash_m25pxx.c, data/45-drivers_spiflash_intels33.c, data/47-drivers_spiflash_Makefile, data/48-drivers_spiflash_spiflash.c, data/50-include_spiflash.h, data/76-drivers_spiflash_default.c, data/78-drivers_spiflash_macronix.c, data/79-drivers_spiflash_spansion.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 23 Apr 2010 19:08:31 CST
+
+Package: Bootloader_amiext (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:53:41 EST
+
+Package:Bootloader_amiext (1.0.0);urgency=new
+
+Abstract:
+	AMI Extensions to Bootloader 1.1.6
+
+Files Added: 46-drivers_spiflash_generic.c, 07-StrictBuild.patch, 76-drivers_spiflash_default.c, 32-vendors_default_novendor.c, 74-common_cmd_nvedit.c, 54-include__exports.h, 33-vendors_Makefile, 81-vendors_ami_ncsi_cmd_ncsi.h, 11-vendors_ami_fmh_cmd_fmh.c, 49-drivers_spiflash_spireg.c, 03-Makefile.patch, 39-vendors_ami_IPMI_cmdhandler.c, 61-vendors_ami_ncsi_datadisp.h, 13-vendors_ami_fmh_cmd.h, 52-Makefile.spiflash.patch, 22-vendors_ami_r2c_externs.h, 45-drivers_spiflash_intels33.c, 56-common_env_nowhere.c, 02-r2c-net.c.patch, 35-lib_arm_armlinux.c, 80-vendors_ami_ncsi_cmd_ncsi.c, 66-vendors_ami_ncsi_ncsi.c, 17-vendors_ami_fmh_jffs2part.c, 72-common_env_common.c, 65-net_net.c_ncsi, 41-vendors_ami_IPMI_IPMIDefs.h, 38-vendors_ami_fwupdate_Makefile, 31-vendors_default_Makefile, 40-vendors_ami_IPMI_cmdhandler.h, 12-vendors_ami_fmh_cmd_fmh.h, 25-vendors_ami_r2c_r2c.h, 57-common_flash.c, 04-r2c-net.h.patch, 50-include_spiflash.h, 20-vendors_ami_r2c_cmd_r2c.c, 23-vendors_ami_r2c_Makefile, 26-vendors_ami_r2c_sess_flash.c, 08-define-uboot.patch, 01-spiflash.patch, 18-vendors_ami_fmh_Makefile, 42-vendors_ami_IPMI_Makefile, 71-include_net.h_ncsi, 70-common_main.c_ncsi, 37-vendors_ami_fwupdate_kcs.h, 06-SilentBuild.patch, 19-vendors_ami_Makefile, 59-IncludeProjdef.patch, 24-vendors_ami_r2c_phases.c, 64-vendors_ami_ncsi_getmac.c, 27-vendors_ami_r2c_session.c, 62-vendors_ami_ncsi_endian.h, 16-vendors_ami_fmh_fmh.h, 47-drivers_spiflash_Makefile, 15-vendors_ami_fmh_fmhcore.c, 34-common_cmd_i2c.c, 60-vendors_ami_ncsi_datadisp.c, 30-vendors_ami_r2c_term.c, 55-include_exports.h, 78-drivers_spiflash_macronix.c, 79-drivers_spiflash_spansion.c, 51-common_env_spi.c, 63-vendors_ami_ncsi_Makefile, 29-vendors_ami_r2c_sess_misc.c, 36-vendors_ami_fwupdate_fwupdate.c, 43-drivers_spiflash_atmel.c, 67-vendors_ami_ncsi_ncsi.h, 10-menukey.patch, 21-vendors_ami_r2c_cmd_r2c.h, 48-drivers_spiflash_spiflash.c, 75-include_common.h, 14-vendors_ami_fmh_crc32.h, 68-vendors_ami_ncsi_ncsistart.c, 77-ExtMemTest.patch, 73-common_cmd_nvedit.c, 53-common_exports.c, 44-drivers_spiflash_m25pxx.c, 28-vendors_ami_r2c_sess_mem.c, 69-vendors_ami_ncsi_types.h, 58-tools_Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 22 Dec 2009 00:36:26 -0500

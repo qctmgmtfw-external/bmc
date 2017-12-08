@@ -1,0 +1,117 @@
+Package: libpamhelper (1.12.0); urgency = medium
+
+Abstract:
+	Whenever AD, LDAP user logs in, Inspite of successful login some error messages(info messages) are displayed.changed this info messages to debug messages.
+
+Files Modified: data/pam_helper.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 28 Jun 2011 19:34:35 IST
+
+Package: libpamhelper (1.11.0); urgency = medium
+
+Abstract:
+	Updated license information.
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Tue, 31 May 2011 11:35:03 IST
+
+Package: libpamhelper (1.10.0); urgency = medium
+
+Abstract:
+	Corrected the user table number to support duplicate user name in ldap and ad.
+
+Files Modified: data/pam_helper.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Mon, 30 May 2011 11:52:18 IST
+
+Package: libpamhelper (1.9.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:06:08 EDT
+
+Package: libpamhelper (1.8.0); urgency = medium
+
+Abstract:
+	The pam handle has to be closed in failure case.
+
+Files Modified: data/pam_helper.c
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Fri, 13 May 2011 18:15:51 IST
+
+Package: libpamhelper (1.7.0); urgency = medium
+
+Abstract:
+	Removing Edirectory based changes..
+
+Files Modified: data/pam_helper.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 19 Apr 2011 13:56:14 IST
+
+Package: libpamhelper (1.6.0); urgency = medium
+
+Abstract:
+	Extensible Check included, inorder to verify when adding users in one table, we are cross checking other two pam tables doesn't has the same user name.
+
+Files Modified: data/pam_helper.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 13 Apr 2011 01:04:49 IST
+
+Package: libpamhelper (1.5.0); urgency = medium
+
+Abstract:
+	Increasing the PAM helper table size. to provide Edirectory User info table
+
+Files Modified: data/pam_helper.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 12 Apr 2011 20:56:06 IST
+
+Package: libpamhelper (1.4.0); urgency = medium
+
+Abstract:
+	if Duplicate PAM usernames exists in PAM Helper Table, then it should be validated and deleted.
+
+Files Modified: data/pam_helper.c, data/pam_helper.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 21 Mar 2011 16:31:21 IST
+
+Package: libpamhelper (1.3.0); urgency = low
+
+Abstract:
+	PAM helperd takes too much process allocation. problem solved
+
+Files Modified: data/pam_helper.c, data/pam_helper.h, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 03 Jan 2011 17:14:10 IST
+
+Package: libpamhelper (1.2.0); urgency = low
+
+Abstract:
+	Adding Macro to copy uname to pwd structure. this macro shall be used by libnss_ldap, libnss_ad
+
+Files Modified: data/pam_helper.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 22 Dec 2010 16:07:04 IST
+
+Package: libpamhelper (1.1.0); urgency = low
+
+Abstract:
+	Added non blocking file opening condition and also provided handle passing functionality in the get pam
+
+Files Modified: data/pam_helper.c, data/pam_helper.h
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Thu, 02 Dec 2010 15:54:27 CET
+
+Package: libpamhelper (1.0.0); urgency = new
+
+Abstract:
+	This will provide the function calls to access pam helper daemon as well as it shall contain the default PAM user list
+
+Files Added: data, data/Makefile, data/pam_helper.c, data/pam_helper.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libpamhelper, spx/PACKAGES.D/libpamhelper/DATA, spx/PACKAGES.D/libpamhelper/SCRIPTS, spx/PACKAGES.D/libpamhelper/SCRIPTS/dev-install, spx/PACKAGES.D/libpamhelper_dev, spx/PACKAGES.D/libpamhelper_dev/DATA, spx/PACKAGES.D/libpamhelper_dev/SCRIPTS, spx/PACKAGES.D/libpamhelper_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Wed, 24 Nov 2010 08:32:14 EST
+

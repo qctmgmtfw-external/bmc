@@ -1,0 +1,10 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./timeoutd %IMAGE_TREE/usr/local/bin/
+	COPY_TO_CONF ./timeouts
+	ADD_CONF_LINK /etc timeouts
+	SET_INIT_SCRIPT ./timeout
+	EXECUTE chmod 777 %IMAGE_TREE/etc/init.d/timeout
+
+debug-install:

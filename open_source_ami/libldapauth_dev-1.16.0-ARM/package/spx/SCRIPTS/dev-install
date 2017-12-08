@@ -1,0 +1,14 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %SPXINC/ldapauth
+		COPY_FILE ./Ldap_client.h %SPXINC/ldapauth
+		COPY_FILE ./Ldap_errcodes.h %SPXINC/ldapauth
+		COPY_FILE ./Ldap_query.h %SPXINC/ldapauth
+		MKDIR_NOCLEAN %SPXLIB/ldapauth
+		COPY_FILE ./libldapauth.a %SPXLIB/ldapauth
+		COPY_FILE ./libldapauth.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ldapauth
+		ADD_LIBRARY_LINKS %SPXLIB/ldapauth libldapauth.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		
+debug-install:
+

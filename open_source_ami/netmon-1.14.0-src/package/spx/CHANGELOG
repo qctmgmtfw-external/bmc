@@ -1,0 +1,184 @@
+Package: netmon (1.14.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/netmonitor.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 15:23:37 IST
+
+Package: netmon (1.13.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:20:00 EDT
+
+Package: netmon (1.12.0); urgency = medium
+
+Abstract:
+	fixing race conditions that result in crash when stress tested with BMC warm reboot
+
+Files Modified: data/netmonitor.c
+
+--Submitter: varadachari sudan ayanam (varadacharia@ami.com) Mon, 09 May 2011 17:38:47 EDT
+
+Package: netmon (1.11.0); urgency = high
+
+Abstract:
+	The netmon device driver should not be unloaded durning firmware update stage( runlevel 7).
+The major reason is that IPMImain is hooking this driver by using IOCTL, if we enter runlevel 7, the function of "wait_network_state_change" may cause kernel oops.
+
+Files Modified: spx/PACKAGES.D/netmon/SCRIPTS/dev-install
+
+--Submitter:  () Tue, 26 Apr 2011 17:36:38 CST
+
+Package: netmon (1.10.0); urgency = medium
+
+Abstract:
+	Added ioctls for applicationsn to wait for link down/up/change
+
+Files Modified: data/netmon_io.h, data/netmonitor.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 28 Mar 2011 17:14:19 EDT
+
+Package: netmon (1.9.0); urgency = low
+
+Abstract:
+	Enabled messages for Link Up/Down notifications
+
+Files Modified: data/netmonitor.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 18 Mar 2011 16:21:04 EDT
+
+Package: netmon (1.8.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/Makefile, data/netmonitor.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:53:42 EST
+
+Package: netmon (1.7.0); urgency = low
+
+Abstract:
+	Now netmon will wakeup during network device register,deregister,network up and down only.
+
+Files Modified: data/netmonitor.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 12 Nov 2010 13:22:58 EST
+
+Package: netmon (1.6.0); urgency = medium
+
+Abstract:
+	Changes done in ioctl to come out of sleep state when any state changes in network devices.
+
+Files Modified: data/netmon_io.h, data/netmonitor.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 11 Nov 2010 12:25:45 EST
+
+Package: netmon (1.5.0); urgency = high
+
+Abstract:
+	Description does not end with a . in a new line.
+This confuses MDS and corrupts the package information
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 11 Nov 2010 11:57:54 EST
+
+Package: netmon (1.4.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:33:20 EST
+
+Package: netmon (1.3.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/netmon/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:49:48 EDT
+
+Package: netmon (1.2.0); urgency = high
+
+Abstract:
+	netmon being loaded before platform driver for binary builds is fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 11 Oct 2010 16:18:03 EDT
+
+Package: netmon (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:07:07 EDT
+
+Package: netmon (1.0.5); urgency = medium
+
+Abstract:
+	Depenencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 11:19:34 EDT
+
+Package: netmon (1.0.4); urgency = medium
+
+Abstract:
+	Added support for getting up status of network interfaces.
+
+Files Modified: data/netmon_io.h, data/netmonitor.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Mon, 03 May 2010 21:26:37 EDT
+
+Package: netmon (1.0.3); urgency = medium
+
+Abstract:
+	Added driver development package
+Fix for segmentation fault of the calling application
+
+Files Added: spx/PACKAGES.D/netmon_driver_dev, spx/PACKAGES.D/netmon_driver_dev/DATA, spx/PACKAGES.D/netmon_driver_dev/SCRIPTS, spx/PACKAGES.D/netmon_driver_dev/SCRIPTS/dev-install
+Files Modified: data/netmon_io.h, data/netmonitor.c, spx/INFO, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 20 Apr 2010 12:26:43 EDT
+
+Package: netmon (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:59:01 EDT
+
+Package: netmon (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:12:15 EST
+
+Package:netmon (1.0.0);urgency=new
+
+Abstract:
+	This package provides Network Interface Monitor. Reports changes in the interface status
+
+Files Added: netmonitor.c, netmon_io.h, Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 16 Dec 2009 18:07:51 -0500

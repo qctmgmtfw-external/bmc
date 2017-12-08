@@ -1,0 +1,9 @@
+Package: webui_1_122_0_10_87010_Disable_IPv6_Setting_When_Network_Bonding_is_Enable (1.0.0); urgency = new
+
+Abstract:
+	Disable IPv6 setting when network bonding is enable
+
+Files Added: data, data/00-data_MDS-Workspace_www_impl_configure_network_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 05 Apr 2012 19:08:58 CST
+

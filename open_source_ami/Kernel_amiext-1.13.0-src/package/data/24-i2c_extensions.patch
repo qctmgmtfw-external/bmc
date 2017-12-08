@@ -1,0 +1,311 @@
+diff -Naur linux.org/drivers/i2c/i2c-core.c linux/drivers/i2c/i2c-core.c
+--- linux.org/drivers/i2c/i2c-core.c	2009-02-20 17:41:27.000000000 -0500
++++ linux/drivers/i2c/i2c-core.c	2009-04-17 13:16:17.000000000 -0400
+@@ -35,6 +35,7 @@
+ #include <linux/hardirq.h>
+ #include <linux/irqflags.h>
+ #include <asm/uaccess.h>
++#include <linux/i2c-dev.h>   // For IOCTL defines
+ 
+ #include "i2c-core.h"
+ 
+@@ -989,6 +990,46 @@
+ 	bus_unregister(&i2c_bus_type);
+ }
+ 
++
++#ifdef I2C_BUS_RECOVERY
++int
++i2c_recovery_event(void)
++{
++	int id, ret;
++	struct i2c_adapter	*adap;
++
++	for (id = 0; id < MAX_I2C_ADAPTERS; id++)
++	{
++   		adap = i2c_get_adapter(id);
++		if (adap != NULL) 
++		{
++			if (adap->algo->i2c_recovery) 
++			{
++       //              	mutex_lock(&adap->bus_lock);
++                       	if (in_atomic() || irqs_disabled())
++                       	{
++                              		ret = mutex_trylock(&adap->bus_lock);
++                              		if (!ret)
++                               	{
++                                       	i2c_put_adapter(adap);
++                                       	return -1;
++                               	}
++                       	}		
++                       	else
++                       	{
++                               	mutex_lock_nested(&adap->bus_lock, adap->level);
++                       	}		
++				ret = adap->algo->i2c_recovery(adap);
++				mutex_unlock(&adap->bus_lock);
++			}
++			i2c_put_adapter(adap);
++		}
++	}	
++
++	return 0;
++}
++#endif
++
+ /* We must initialize early, because some subsystems register i2c drivers
+  * in subsys_initcall() code, but are linked (and initialized) before i2c.
+  */
+@@ -1063,6 +1104,75 @@
+ }
+ EXPORT_SYMBOL(i2c_transfer);
+ 
++
++/* AMI Extended IOCTLS */
++int i2c_ioctl(struct i2c_adapter * adap,unsigned long cmd, unsigned long arg)
++{
++	switch (cmd)
++	{
++	case I2C_SLAVEREAD:
++		/* IMPORTANT NOTE:
++			Why we don't lock slave xfer functions?
++	
++  			All SPX compliant i2c hardware should never access hardware.
++			Instead they sleep for slave buffers gets filled up. 
++
++			Since they does access hardware, locking is not needed to 
++  			prevent master and slave access to hardware. Also if we lock
++			the master xfers cannot be done as the slave routines does not 
++			return if if does not have slave data.
++		*/
++		if (adap->algo->slave_recv)
++		{
++			char *tmp;
++			int ret;
++			tmp = kmalloc(MAX_IPMB_MSG_SIZE,GFP_KERNEL);
++			if (!tmp)
++				return -ENOMEM;
++			ret = adap->algo->slave_recv(adap,tmp,MAX_IPMB_MSG_SIZE);
++			if (ret > 0)
++				ret = copy_to_user((char *)arg,tmp,ret)?-EFAULT:ret;
++			kfree(tmp);
++			return ret;
++		}
++		break;
++
++	/* UNTESTED CODE :We don't have any scenario to test slave writes */
++#if 0
++	case I2C_SLAVEWRITE:
++		if (adap->algo->slave_send)
++		{
++			char *tmp;
++			int ret;
++			tmp = kmalloc(MAX_IPMB_MSG_SIZE,GFP_KERNEL);
++			if (!tmp)
++				return -ENOMEM;
++			ret = copy_from_user(tmp,(char *)arg,MAX_IPMB_MSG_SIZE)?-EFAULT:0;
++			if (ret == -EFAULT)
++			{	
++				kfree(tmp);
++				return -EFAULT;
++			}
++			return adap->algo->slave_send(adap,tmp,MAX_IPMB_MSG_SIZE);
++		}
++		break;
++#endif
++	default:	
++		if (adap->algo->i2c_hw_ioctl)
++			return adap->algo->i2c_hw_ioctl(adap,cmd,arg);
++		break;
++	}
++
++	/* NOTE:  returning a fault code here could cause trouble
++	 * in buggy userspace code.  Some old kernel bugs returned
++	 * zero in this case, and userspace code might accidentally
++	 * have depended on that bug.
++	 */
++	return -ENOTTY;
++}
++
++EXPORT_SYMBOL(i2c_ioctl);
++
+ /**
+  * i2c_master_send - issue a single I2C message in master transmit mode
+  * @client: Handle to slave device
+@@ -2004,6 +2114,9 @@
+ 	return res;
+ }
+ EXPORT_SYMBOL(i2c_smbus_xfer);
++#ifdef I2C_BUS_RECOVERY
++EXPORT_SYMBOL(i2c_recovery_event);
++#endif
+ 
+ MODULE_AUTHOR("Simon G. Vogl <simon@tk.uni-linz.ac.at>");
+ MODULE_DESCRIPTION("I2C-Bus main module");
+diff -Naur linux.org/drivers/i2c/i2c-dev.c linux/drivers/i2c/i2c-dev.c
+--- linux.org/drivers/i2c/i2c-dev.c	2009-02-20 17:41:27.000000000 -0500
++++ linux/drivers/i2c/i2c-dev.c	2009-04-17 10:43:15.000000000 -0400
+@@ -37,6 +37,10 @@
+ #include <linux/smp_lock.h>
+ #include <asm/uaccess.h>
+ 
++#ifdef I2C_BUS_RECOVERY
++static struct 	timer_list poll_timer;
++#endif
++
+ static struct i2c_driver i2cdev_driver;
+ 
+ /*
+@@ -425,12 +429,8 @@
+ 		client->adapter->timeout = arg;
+ 		break;
+ 	default:
+-		/* NOTE:  returning a fault code here could cause trouble
+-		 * in buggy userspace code.  Some old kernel bugs returned
+-		 * zero in this case, and userspace code might accidentally
+-		 * have depended on that bug.
+-		 */
+-		return -ENOTTY;
++		/* Call the core ioctl (AMI extended)functions */
++		return i2c_ioctl(client->adapter,cmd,arg);
+ 	}
+ 	return 0;
+ }
+@@ -567,6 +567,15 @@
+ };
+ 
+ /* ------------------------------------------------------------------------- */
++#ifdef I2C_BUS_RECOVERY
++static void
++recover_i2c_bus (unsigned long ptr)
++{
++	i2c_recovery_event ();
++	mod_timer(&poll_timer,jiffies +(10000 * HZ)/1000);
++	return;
++}
++#endif
+ 
+ /*
+  * module load/unload record keeping
+@@ -592,6 +601,14 @@
+ 	if (res)
+ 		goto out_unreg_class;
+ 
++#ifdef I2C_BUS_RECOVERY
++	init_timer(&poll_timer);
++	poll_timer.function = recover_i2c_bus;
++	poll_timer.data = 0;
++	poll_timer.expires = jiffies +(10000 * HZ)/1000;
++	add_timer(&poll_timer);
++#endif
++
+ 	return 0;
+ 
+ out_unreg_class:
+@@ -608,6 +625,9 @@
+ 	i2c_del_driver(&i2cdev_driver);
+ 	class_destroy(i2c_dev_class);
+ 	unregister_chrdev(I2C_MAJOR,"i2c");
++#ifdef I2C_BUS_RECOVERY
++	del_timer(&poll_timer);
++#endif
+ }
+ 
+ MODULE_AUTHOR("Frodo Looijaard <frodol@dds.nl> and "
+diff -Naur linux.org/drivers/i2c/Makefile linux/drivers/i2c/Makefile
+--- linux.org/drivers/i2c/Makefile	2009-02-20 17:41:27.000000000 -0500
++++ linux/drivers/i2c/Makefile	2009-04-17 11:53:51.000000000 -0400
+@@ -10,3 +10,4 @@
+ ifeq ($(CONFIG_I2C_DEBUG_CORE),y)
+ EXTRA_CFLAGS += -DDEBUG
+ endif
++EXTRA_CFLAGS += -DI2C_BUS_RECOVERY
+diff -Naur linux.org/include/linux/i2c-dev.h linux/include/linux/i2c-dev.h
+--- linux.org/include/linux/i2c-dev.h	2009-02-20 17:41:27.000000000 -0500
++++ linux/include/linux/i2c-dev.h	2009-04-17 11:52:45.000000000 -0400
+@@ -51,6 +51,15 @@
+ #define I2C_SMBUS	0x0720	/* SMBus transfer */
+ 
+ 
++/* Extended IOCTLS - Implemented in i2c-core and hardware */
++#define I2C_SLAVEREAD		0x0750	/* Perform Slave Read 	*/
++#define I2C_SLAVEWRITE		0x0751	/* Perform Slave Write  */
++#define I2C_SET_HOST_ADDR	0x0752	/* Set Slave Address of the Controller */
++#define I2C_GET_HOST_ADDR	0x0753	/* Get Slave Address of the Controller */
++#define I2C_SET_REC_INFO	0x0754	/* Set Recovery Parameters */
++#define I2C_GET_REC_INFO	0x0755	/* Get Recovery Parameters */
++#define I2C_RESET		0x0756	/* Reset Controller */
++
+ /* This is the structure as used in the I2C_SMBUS ioctl call */
+ struct i2c_smbus_ioctl_data {
+ 	__u8 read_write;
+diff -Naur linux.org/include/linux/i2c.h linux/include/linux/i2c.h
+--- linux.org/include/linux/i2c.h	2009-02-20 17:41:27.000000000 -0500
++++ linux/include/linux/i2c.h	2009-04-17 11:53:17.000000000 -0400
+@@ -35,6 +35,9 @@
+ #include <linux/sched.h>	/* for completion */
+ #include <linux/mutex.h>
+ 
++#define MAX_IPMB_MSG_SIZE 128
++#define MAX_I2C_ADAPTERS  16
++
+ extern struct bus_type i2c_bus_type;
+ 
+ /* --- General options ------------------------------------------------	*/
+@@ -62,6 +65,9 @@
+ extern int i2c_transfer(struct i2c_adapter *adap, struct i2c_msg *msgs,
+ 			int num);
+ 
++/* Extended IOCTLs -implemented in i2c-core */
++extern int i2c_ioctl(struct i2c_adapter *adap, unsigned long cmd, unsigned long arg);
++
+ /* This is the very generalized SMBus access routine. You probably do not
+    want to use this, though; one of the functions below may be much easier,
+    and probably just as fast.
+@@ -339,8 +345,46 @@
+ 
+ 	/* To determine what the adapter supports */
+ 	u32 (*functionality) (struct i2c_adapter *);
++
++/* AMI Extended Functions */
++	/* i2c recovery */
++	int (*i2c_recovery) (struct i2c_adapter *adap);
++
++	/* Slave Receive and Slave Send Functions */
++	int (*slave_send)(struct i2c_adapter *adap , char *data ,int size);
++	int (*slave_recv)(struct i2c_adapter *adap , char *data ,int size);
++
++	/* Extended IOCTL Calls */
++	int (*i2c_hw_ioctl)(struct i2c_adapter *adap, unsigned long cmd , unsigned long arg); 
++
+ };
+ 
++extern int i2c_recovery_event(void);
++
++/*
++ * i2c_recovery is the structure used to specify the recovery parameters for the bus 
++ */
++#define DEFAULT_NUM_PULSES		16
++#define DEFAULT_PULSE_PERIOD		5
++#define DEFAULT_FREQ			100000
++#define ENABLE_SMBUS_RESET		1
++#define DISABLE_SMBUS_RESET		0
++#define ENABLE_CLOCK_PULSE		1
++#define DISABLE_CLOCK_PULSE		0
++#define ENABLE_FORCE_STOP		1
++#define DISABLE_FORCE_STOP		0
++#define ENABLE_RECOVERY			1
++#define DISABLE_RECOVERY		0	/* Recovery should not be done on multi-master bus - Disable Recovery */
++typedef struct
++{
++	int enable_recovery;
++	int is_smbus_reset_enabled;
++	int is_generate_clock_pulses_enabled;
++	int is_force_stop_enabled;
++	int num_clock_pulses;
++	int frequency;
++} bus_recovery_info_T; 
++
+ /*
+  * i2c_adapter is the structure used to identify a physical i2c bus along
+  * with the access algorithms necessary to access it.

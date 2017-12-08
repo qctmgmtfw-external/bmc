@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+			MKDIR_NOCLEAN	 %IMAGE_TREE/usr/local/www/Java/release/
+			COPY_FILE ./Linux_x86_64.jar  %IMAGE_TREE/usr/local/www/Java/release/
+			
+debug-install:

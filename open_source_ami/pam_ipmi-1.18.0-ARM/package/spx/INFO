@@ -1,0 +1,17 @@
+Package : pam_ipmi
+Non-Editable : YES
+Version : 1.18.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Group : AUTHENTICATION
+Required : libuserauth, libpdkapp
+Package-License : AMI
+Description : PAM module for Authentication using IPMI User database
+.

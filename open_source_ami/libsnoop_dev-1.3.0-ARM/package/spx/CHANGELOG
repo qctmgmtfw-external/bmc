@@ -1,0 +1,36 @@
+Package: libsnoop (1.3.0); urgency = high
+
+Abstract:
+	typo corrected.
+
+Files Modified: data/snoopifc.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 16 May 2011 17:34:50 EDT
+
+Package: libsnoop (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:12:23 EDT
+
+Package: libsnoop (1.1.0); urgency = low
+
+Abstract:
+	Removing the unwanted debug message which causes compilation error when debug is enabled in Makefile.
+
+Files Modified: data/snoopifc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 18 Nov 2010 15:44:30 EST
+
+Package: libsnoop (1.0.0); urgency = new
+
+Abstract:
+	This package includes the API calls to access the snoop driver.
+
+Files Added: data, data/Makefile, data/snoopifc.c, data/snoopifc.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libsnoop, spx/PACKAGES.D/libsnoop/DATA, spx/PACKAGES.D/libsnoop/SCRIPTS, spx/PACKAGES.D/libsnoop/SCRIPTS/dev-install, spx/PACKAGES.D/libsnoop_dev, spx/PACKAGES.D/libsnoop_dev/DATA, spx/PACKAGES.D/libsnoop_dev/SCRIPTS, spx/PACKAGES.D/libsnoop_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 13 Aug 2010 18:16:09 IST
+

@@ -1,0 +1,167 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_ssl help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" onclick="top.closeHelp();">X</a></div>
+	<script type="text/javascript">
+	var doc = top.frames["mainFrame"].pageFrame.document;
+	var helpContent;
+
+	if (doc.getElementById("_tabGenerateSSL").style.fontWeight == "bold") {
+		helpContent = "<div class='helpmainhead'>Generate SSL</div></h2>" +
+		"<div class='subSection'>" +
+		"This tab is used to generate the SSL certificate using the configuration. " +
+		"<br><br>" +
+		"<fieldset>" +
+		"<legend>Actions</legend>" +
+		"<h4>Common Name(CN)</h4>" +
+		"Common name for which certificate to be generated." +
+		"<ul><li>- Maximum length of 64 characters.</li>" +
+			"<li>- It is a string of alpha-numeric characters." +
+			"<li>- Special characters '#' and '$' are not allowed." +
+			"</li></ul>" +
+		"<h4>Organization(O)</h4>" +
+		"Organization name for which certificate to be generated." +
+		"<ul><li>- Maximum length of 64 characters.</li>" +
+			"<li>- It is a string of alpha-numeric characters." +
+			"<li>- Special characters '#' and '$' are not allowed." +
+			"</li></ul>" +
+		"<h4>Organization Unit(OU)</h4>" +
+		"Over all organization section unit name for which " +
+		"certificate to be generated." +
+		"<ul><li>- Maximum length of 64 characters.</li>" +
+			"<li>- It is a string of alpha-numeric characters." +
+			"<li>- Special characters '#' and '$' are not allowed." +
+			"</li></ul>" +
+		"<h4>City or Locality(L)</h4>" +
+		"City or Locality has to be given." +
+		"<ul><li>- Maximum length of 64 characters.</li>" +
+			"<li>- It is a string of alpha-numeric characters." +
+			"<li>- Special characters '#' and '$' are not allowed." +
+			"</li></ul>" +
+		"<h4>State or Province(ST)</h4>" +
+		"State or Province has to be given." +
+		"<ul><li>- Maximum length of 64 characters.</li>" +
+			"<li>- It is a string of alpha-numeric characters." +
+			"<li>- Special characters '#' and '$' are not allowed." +
+			"</li></ul>" +
+		"<h4>Country(C)</h4>" +
+		"Country code has to be given." +
+		"<ul><li>- Only two characters are allowed.</li>" +
+			"<li>- Special characters are not allowed.</li></ul>" +
+		"<h4>Email Address</h4>" +
+		"Email Address of the organization has to be given." +
+		"<h4>Valid for</h4>" +
+		"Number of days the certificate to be validated." +
+		"<ul><li>- Value ranges from 1 to 3650 days.</li></ul>" +
+		"<h4>Key Length</h4>" +
+		"Choose the key length bit value of the certificate." +
+		"<h4>Generate</h4>" +
+		"Click this option to generate the new SSL certificate." +
+		"<br>" +
+		"<strong>NOTE:</strong> HTTPs service will get restarted, " +
+		"to use the newly generated SSL certificate.<br>" +
+		"</fieldset>" +
+		"</div>";
+	} else if (doc.getElementById("_tabViewSSL").style.fontWeight == "bold") {
+		helpContent = "<div class='helpmainhead'>View SSL</div></h2>" +
+		"<div class='subSection'>" +
+		"This tab is used to view the uploaded SSL certificate in user " +
+		"readable format." +
+		"<br><br>" +
+		"<fieldset>" +
+		"<legend>Information</legend>" +
+		"<h4>Basic Information</h4>" +
+		"It displays the basic information about the uploaded SSL certificate." +
+		"It displays the following fields." +
+		"<ul><li>- Version" +
+			"<li>- Serial Number" +
+			"<li>- Signature Algorithm" +
+			"<li>- Public Key</ul>" +
+		"<h4>Issued From</h4>" +
+		"This contains the information about the Certificate Issuer." +
+		"<ul><li>- Common Name(CN)" +
+			"<li>- Organization(O)" +
+			"<li>- Organization Unit(OU)" +
+			"<li>- City or Locality(L)" +
+			"<li>- State or Province(ST)" +
+			"<li>- Country(C)" +
+			"<li>- Email Address</ul>" +
+		"<h4>Validity Information</h4>" +
+		"It displays the validity period of the uploaded certificate." +
+		"<ul><li>- Valid From" +
+		"<li>- Valid To</ul>" +
+		"<h4>Issued To</h4>" +
+		"It displays about the information to whom the certificate is issued." +
+		"<ul><li>- Common Name(CN)" +
+			"<li>- Organization(O)" +
+			"<li>- Organization Unit(OU)" +
+			"<li>- City or Locality(L)" +
+			"<li>- State or Province(ST)" +
+			"<li>- Country(C)" +
+			"<li>- Email Address</ul>";
+	} else {
+		helpContent = "<div class='helpmainhead'>Upload SSL</div></h2>" +
+			"<div class='subSection'>" +
+			"This page is used to upload a new SSL certificate and privacy key. " +
+			"<br>" +
+			"<strong>NOTE:</strong> Please check the current BMC time in NTP under " +
+			"Configuration menu while uploading the SSL certificate." +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Current Certificate</h4>" +
+			"Current certificate, uploaded date/time information will be " +
+			"displayed(readonly)." +
+			"<h4>New Certificate</h4>" +
+			"Browse and navigate to the certificate file." +
+			"<ul><li>- Certificate file should be of pem type</li></ul>" +
+			"<h4>Current Privacy Key</h4>" +
+			"Current privacy key, uploaded date/time information will be " +
+			"displayed(readonly)." +
+			"<h4>New Privacy Key</h4>" +
+			"Browse and navigate to the privacy key file." +
+			"<ul><li>- Privacy key file should be of pem type</li></ul>" +
+			"<h4>Upload</h4>" +
+			"Click 'upload' to upload the SSL certificate and privacy key " +
+			"into the BMC." +
+			"<br>" +
+			"<strong>NOTE:</strong> Upon successful upload, HTTPs service " +
+			"will get restarted to use the newly uploaded SSL certificate." +
+			"</fieldset>" +
+			"</div>";
+	}
+
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

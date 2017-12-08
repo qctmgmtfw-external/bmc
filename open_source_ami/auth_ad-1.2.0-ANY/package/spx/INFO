@@ -1,0 +1,17 @@
+Package : auth_ad
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Required : pam_ad, libnss_ad
+Essential : NO
+Config-Tag : auth_ad
+Group : AUTHENTICATION
+Owner : AMI
+Maintainer : Siva Prakash R  (sivaprakashr@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : All Acive Directory related Authentication Packages are selected, only this package is included
+.

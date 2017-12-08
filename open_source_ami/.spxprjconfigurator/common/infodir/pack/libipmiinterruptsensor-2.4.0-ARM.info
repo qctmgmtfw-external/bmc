@@ -1,0 +1,18 @@
+Package : libipmiinterruptsensor
+Non-Editable : YES
+Version : 2.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Winston  (winstonv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : IPMI Interrupt Sensor Monitoring
+Group : IPMI
+Depends : ipmimain
+Package-License : AMI
+Description : This package contains interrupt sensor monitoring part
+.

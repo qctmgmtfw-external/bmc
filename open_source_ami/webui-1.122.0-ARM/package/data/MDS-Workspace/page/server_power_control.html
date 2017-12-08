@@ -1,0 +1,53 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+<link href="../www/style/page_style.css" rel="stylesheet" type="text/css" />
+<script language='javascript' src='../www/lib/include.js'></script>
+</head>
+<body oncontextmenu='return false;'>
+<h3>Power Control and Status</h3>
+<p>The current server power status is shown below.  To perform a power control operation,
+select one of the options below and press &quot;Perform Action&quot;.</p>
+
+<div class='subSection'>
+	<div class='subSection'>
+		<strong id='_statusMsg'></strong>
+		<p><input type='radio' name='pwrSrvr' id='_resetSrvr' /> Reset Server</p>
+		<p><input type='radio' name='pwrSrvr' id='_iPwrOffSrvr' /> Power Off Server - Immediate</p>
+		<p><input type='radio' name='pwrSrvr' id='_oPwrOffSrvr' /> Power Off Server - Orderly Shutdown</p>
+		<p><input type='radio' name='pwrSrvr' id='_pwrOnSrvr' />Power On Server</p>
+		<p><input type='radio' name='pwrSrvr' id='_pwrCycleSrvr' />Power Cycle Server</p>
+	</div>
+</div>
+
+<div class='btnTray'>
+	<input type='button' id='_prfmAction' value='Perform Action' />
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+Package : libipmisol
+Non-Editable : YES
+Version : 2.8.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : winston  (winstonv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Config-Tag : IPMI SOL Support
+Group : IPMI
+Depends : ipmimain
+Package-License : AMI
+Description : IPMI SOL library binaries
+.

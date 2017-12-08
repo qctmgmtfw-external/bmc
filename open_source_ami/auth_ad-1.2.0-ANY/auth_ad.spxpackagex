@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files/>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>auth_ad</package-name>
+<version>1.2.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>info</section>
+<build-depends/>
+<depends/>
+<required>
+<package-name operator="" version="">pam_ad</package-name>
+<package-name operator="" version="">libnss_ad</package-name>
+</required>
+<conflicts/>
+<essential>NO</essential>
+<group>AUTHENTICATION</group>
+<configtags>auth_ad</configtags>
+<installsize/>
+<description>All Acive Directory related Authentication Packages are selected, only this package is included</description>
+<architecture>ANY</architecture>
+<owner>AMI</owner>
+<maintainer>Siva Prakash R  </maintainer>
+<maintainer-email>sivaprakashr@amiindia.co.in</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/auth_ad-1.2.0-ANY/package/spx/P.CONFIG</pconfig>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/auth_ad-1.2.0-ANY/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/auth_ad-1.2.0-ANY/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

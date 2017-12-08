@@ -1,0 +1,13 @@
+# Install Script
+
+build-install:
+		COPY_FILE ./webgo %IMAGE_TREE/usr/local/bin
+		SET_INIT_SCRIPT ./webgo.sh
+		CREATE_SOFT_LINK /conf/pam_wounix %IMAGE_TREE/etc/pam.d/webgo
+		COPY_FILE ./webauthldap %IMAGE_TREE/etc/pam.d
+		COPY_FILE ./webauthradius %IMAGE_TREE/etc/pam.d
+		COPY_FILE ./webauthactivedir %IMAGE_TREE/etc/pam.d
+		COPY_FILE ./90-up-webserver %IMAGE_TREE/etc/network/if-up.d
+								
+debug-install:
+

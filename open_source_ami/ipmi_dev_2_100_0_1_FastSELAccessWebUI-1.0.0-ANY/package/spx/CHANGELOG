@@ -1,0 +1,9 @@
+Package: ipmi_dev_2_100_0_1_FastSELAccessWebUI (1.0.0); urgency = new
+
+Abstract:
+	Added changes for faster accessing of SEL in WebUI.
+
+Files Added: data, data/00-data_IPMI_AMIConf.h, data/01-data_IPMIDefs.h, data/02-data_Support.h, data/03-data_IPMI_AMI.h, data/04-data_AMIConf.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 15 Sep 2011 23:19:23 IST
+

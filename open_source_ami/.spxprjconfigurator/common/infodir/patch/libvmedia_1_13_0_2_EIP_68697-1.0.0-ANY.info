@@ -1,0 +1,20 @@
+Package : libvmedia_1_13_0_2_EIP_68697
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libvmedia (1.13.0)
+Depends :  libvmedia(==1.13.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Rama Rao Bisa (ramab@ami.com)
+Urgency : new
+Description : Bind server socket to the interface provided in ncml configuration
+.
+

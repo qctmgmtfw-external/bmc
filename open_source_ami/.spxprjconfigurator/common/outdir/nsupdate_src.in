@@ -1,0 +1,9 @@
+config FEATURE_DYNAMIC_DNS
+	bool
+        default y if nsupdate
+        help
+             Enable/Disable dynamic DNS support
+
+endmenu
+
+

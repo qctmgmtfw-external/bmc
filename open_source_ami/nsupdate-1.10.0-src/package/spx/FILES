@@ -1,0 +1,7 @@
+./Makefile 1135 b63dd8b30df8853cd0eefbe25c24de0f
+./config.h 12574 02326a756b81475cf461f40480677863
+./nsupdate.c 76321 5ace93dfe5b312f3e24d8e5dfc2ac88c
+./nsupdate.conf 184 d10aa5c58d6b4714fbc9aaa8bd8f45e2
+./nsupdate.sh 4126 f8c72e34836248fb17b6708dd7c4e9c5
+./scripts/05-down-nsupdate 1600 deca604d9237cd3f3b0c046ec493ebb8
+./scripts/95-up-nsupdate 1601 51cbe3fa6411136b634922b860ab2750

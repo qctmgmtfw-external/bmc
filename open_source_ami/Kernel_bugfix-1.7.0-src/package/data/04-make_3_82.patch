@@ -1,0 +1,20 @@
+--- linux/Makefile	2011-01-13 11:59:48.880422842 -0500
++++ linux.new/Makefile	2011-01-13 00:34:41.563352015 -0500
+@@ -441,7 +441,7 @@
+ include $(srctree)/arch/$(SRCARCH)/Makefile
+ export KBUILD_DEFCONFIG KBUILD_KCONFIG
+ 
+-config %config: scripts_basic outputmakefile FORCE
++%config: scripts_basic outputmakefile FORCE
+ 	$(Q)mkdir -p include/linux include/config
+ 	$(Q)$(MAKE) $(build)=scripts/kconfig $@
+ 
+@@ -1609,7 +1609,7 @@
+ 	$(Q)$(MAKE) $(build)=$(build-dir) $(target-dir)$(notdir $@)
+ 
+ # Modules
+-/ %/: prepare scripts FORCE
++ %/: prepare scripts FORCE
+ 	$(cmd_crmodverdir)
+ 	$(Q)$(MAKE) KBUILD_MODULES=$(if $(CONFIG_MODULES),1) \
+ 	$(build)=$(build-dir)

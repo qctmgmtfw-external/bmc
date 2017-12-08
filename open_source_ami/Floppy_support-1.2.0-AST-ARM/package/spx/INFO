@@ -1,0 +1,19 @@
+Package : Floppy_support
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Required : floppy
+Essential : NO
+Config-Tag : Floppy/USB Key Device Support
+Group : DEVICE
+Provides : FloppyUSBModule
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : This is a dummy pacakge to properly select USB driver modules to support Floppy/USB Key device on a selected SoC.
+.

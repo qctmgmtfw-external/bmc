@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_4_EIP_68695_EIP_68301 (1.0.0); urgency = new
+
+Abstract:
+	Modified the reponse data size for syslog command and fix for getdevice id.
+
+Files Added: data, data/00-data_App_IPMDevice_IPMDevice.c, data/01-data_AMI_AMISyslogConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 08 Sep 2011 22:52:00 IST
+

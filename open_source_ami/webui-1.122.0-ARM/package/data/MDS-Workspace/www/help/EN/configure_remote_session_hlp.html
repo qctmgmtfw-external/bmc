@@ -1,0 +1,73 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>configure_remote_session help</title>
+	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	<script src="../../lib/ui.js"></script>
+	<script src="../../lib/common_fn.js"></script>
+	</head>
+<body>
+	<h2><div class='floatRight'>
+	<a href='javascript://' class='closeBtn' onclick='top.closeHelp();'>X</a></div>
+	<div class='helpmainhead'>Remote Session</div></h2>
+	<div class='subSection'>
+	This page is used to configure virtual media configuration settings for the next redirection session.
+	Encryption is Disabled by default.
+	<br>
+	<fieldset>
+	<legend>Actions</legend>
+	<h4>KVM Encryption</h4>
+	Enable/Disable encryption on KVM data for the next redirection session.
+	<script type="text/javascript">
+	KEYBOARD_LANG = checkProjectCfg("KB_LANG_SELECT_SUPPORT");
+	if (KEYBOARD_LANG) {
+        document.write("<h4>Keyboard Languages</h4> " +
+                "This select box is used to select the keyboard supported " +
+                "languages.");
+	}
+	</script>
+	<h4>Media Encryption</h4>
+	Enable/Disable encryption on Media data for the next redirection session.
+	<h4>Virtual Media Attach Mode</h4>
+	Two types of VM attach mode are available:
+	<ul>
+	<li>Attach - Immediately attaches Virtual Media to the server upon bootup.</li>
+	<li>Auto Attach - Attaches Virtual Media to the server only when a virtual media session is started.</li>
+	</ul>
+	<h4>Save</h4>
+	Click 'Save' to save the current changes.
+	<br>
+	<strong>NOTE:</strong> It will automatically close the existing remote redirection either KVM or Virtual media sessions, if any.
+	<h4>Reset</h4>
+	Click 'Reset' to reset the modified changes.
+	</fieldset>
+	</div>
+</body>
+</html>

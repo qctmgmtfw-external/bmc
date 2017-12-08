@@ -1,0 +1,15 @@
+Package : webifc_dev
+Non-Editable : YES
+Version : 1.18.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : This package includes the header files required to write to web interface.
+.

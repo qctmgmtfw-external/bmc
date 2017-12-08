@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_11_74001_SolvedJavaConsoleButtonDisableWhenOpenContinuely (1.0.0); urgency = new
+
+Abstract:
+	for 74001, rKVM console Button disable when open and close rKVM continuely
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Tue, 22 Nov 2011 11:50:57 CST
+

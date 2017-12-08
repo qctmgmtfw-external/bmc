@@ -1,0 +1,124 @@
+Package: libpeci (1.9.0); urgency = high
+
+Abstract:
+	Adding brief function description/header for all calls provided for PECI communication
+
+Files Modified: data/peciifc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 15 Aug 2011 17:19:10 EDT
+
+Package: libpeci (1.8.0); urgency = high
+
+Abstract:
+	Removed passing the structure to the library and directly passing the variables
+
+Files Modified: data/peciifc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 11 Aug 2011 19:15:22 EDT
+
+Package: libpeci (1.7.0); urgency = high
+
+Abstract:
+	RdPCIConfig and WrPCIConfig command numbers changed to 61 and 65 as per kit
+
+Files Modified: data/peciifc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 05 Aug 2011 18:14:50 EDT
+
+Package: libpeci (1.6.0); urgency = medium
+
+Abstract:
+	Validated peci_cmd input parameter in all peci functions.
+
+Files Modified: data/peciifc.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 28 Jul 2011 20:58:59 IST
+
+Package: libpeci (1.5.0); urgency = medium
+
+Abstract:
+	Validated the input parameter for peci_generic_cmd.
+
+Files Modified: data/peciifc.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 28 Jul 2011 20:29:46 IST
+
+Package: libpeci (1.4.0); urgency = high
+
+Abstract:
+	Added WrMSR, RdPCIConfig, WrPCIConfig, AWFCS, target address domain support
+
+Files Modified: data/Makefile, data/peciifc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 18 Jul 2011 11:46:20 EDT
+
+Package: libpeci (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:06:32 EDT
+
+Package: libpeci (1.2.0); urgency = medium
+
+Abstract:
+	Added support for Get DIB, RdPkgConfig, WrPkgConfig, RdIAmsr command specified in PECI 3.0.
+
+Files Modified: data/Makefile, data/peciifc.c, spx/INFO
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 19 Nov 2010 10:21:29 IST
+
+Package: libpeci (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:02:25 EDT
+
+Package: libpeci (1.0.4); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:14:19 EDT
+
+Package: libpeci (1.0.3); urgency = low
+
+Abstract:
+	Fixed build dependency
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Wed, 17 Mar 2010 20:48:08 EDT
+
+Package: libpeci (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:56:41 EDT
+
+Package: libpeci (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:09:17 EST
+
+Package:libpeci (1.0.0);urgency=new
+
+Abstract:
+	This package includes PECI Library.
+
+Files Added: peciifc.c, Makefile
+
+--Submitter: Dinesh Selvam (dineshs@amiindia.co.in) Thu, 26 Nov 2009 16:53:12 +0530

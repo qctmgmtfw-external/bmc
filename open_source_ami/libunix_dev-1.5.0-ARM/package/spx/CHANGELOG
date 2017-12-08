@@ -1,0 +1,74 @@
+Package: libunix (1.5.0); urgency = medium
+
+Abstract:
+	Added dependency
+
+Files Modified: data/Makefile
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 12 Aug 2011 18:41:53 IST
+
+Package: libunix (1.4.0); urgency = medium
+
+Abstract:
+	Modified to invoke system command using execlp by fork and closing fd of parent process.
+
+Files Modified: data/proc-invok.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 21 Jul 2011 16:43:15 IST
+
+Package: libunix (1.3.0); urgency = low
+
+Abstract:
+	Added Binary Semaphore Functions such that other libraries can use it.
+1.CreateSemaphore
+2.WaitOnSemaphore
+3.ReleaseSemaphore
+
+Files Modified: data/Makefile, data/semaph.c, data/semaph.h, spx/PACKAGES.D/libunix_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 20 Jul 2011 14:01:25 IST
+
+Package: libunix (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:14:30 EDT
+
+Package: libunix (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:05:27 EDT
+
+Package: libunix (1.0.2); urgency = medium
+
+Abstract:
+	Added a function to find whether the given directory is mounted to the given file type and options.
+
+Files Added: data/mount.c
+Files Modified: data/unix.h, data/Makefile
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 17 May 2010 17:20:34 IST
+
+Package: libunix (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:11:00 EST
+
+Package:libunix (1.0.0);urgency=new
+
+Abstract:
+	This Package include Basic Unix functions needed by apps
+
+Files Added: unix-private.h, proc-invok.c, semaph.h, semaph.c, Makefile, pids.c, ipc.c, util.c, examples, unix.h, security.c, signals.c
+
+--Submitter: SPX Core Team (spcoreteam@ami.com) Tue, 8 Dec 2009 12:01:58 -0500

@@ -1,0 +1,18 @@
+Package : phycfg
+Non-Editable : YES
+Version : 1.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Kiran Kumar S  (kirankumars@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Config-Tag : PHY Configuration Support
+Group : FEATURES
+Required : libphyconf
+Package-License : AMI
+Description : PHY configuration application. Based on the user configuraton this is used to configure the network interface.
+.

@@ -1,0 +1,75 @@
+Package: libsslcertificates (1.7.0); urgency = low
+
+Abstract:
+	Included the validation of checking the expired date of the SSL certificate.
+
+Files Modified: data/libsslcertificate.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Tue, 20 Sep 2011 15:40:52 IST
+
+Package: libsslcertificates (1.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:13:20 EDT
+
+Package: libsslcertificates (1.5.0); urgency = low
+
+Abstract:
+	BugFix 55249  : Increased Readline length to read complete line from the certificate file.
+
+Files Modified: data/libsslcertificate.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 23 Mar 2011 14:34:40 IST
+
+Package: libsslcertificates (1.4.0); urgency = low
+
+Abstract:
+	Segmentation error. Closing the file pointer before using it.
+
+Files Modified: data/libsslcertificate.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 08 Feb 2011 19:13:28 IST
+
+Package: libsslcertificates (1.3.0); urgency = low
+
+Abstract:
+	1. Truncated hexa decimal value form the Version of SSL.
+2. Fixed errors in Viewing SSL Certificate.
+3. Fixed static errors.
+4. Code allignment
+
+Files Modified: data/libsslcertificate.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Fri, 04 Feb 2011 12:48:17 IST
+
+Package: libsslcertificates (1.2.0); urgency = low
+
+Abstract:
+	Added to view the default SSL certificate if actual SSL certificate not exists in conf folder.
+
+Files Modified: data/libsslcertificate.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 27 Jan 2011 21:16:05 IST
+
+Package: libsslcertificates (1.1.0); urgency = low
+
+Abstract:
+	Removed Unwanted Debug Messages
+
+Files Modified: data/libsslcertificate.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 25 Jan 2011 23:16:13 IST
+
+Package: libsslcertificates (1.0.0); urgency = new
+
+Abstract:
+	Library to create , view and Validate the SSL certificates
+
+Files Added: data, data/Makefile, data/libsslcertificate.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libsslcertificate, spx/PACKAGES.D/libsslcertificate/DATA, spx/PACKAGES.D/libsslcertificate/SCRIPTS, spx/PACKAGES.D/libsslcertificate/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 25 Jan 2011 21:55:51 IST
+

@@ -1,0 +1,42 @@
+--- org/xconnect.c	2010-05-07 03:45:44.564660885 +0800
++++ mod/libbb/xconnect.c	2010-05-07 05:58:23.891812903 +0800
+@@ -10,6 +10,15 @@
+ #include <net/if.h>
+ #include "libbb.h"
+ 
++int cmdpipe = -1;
++
++#define FW_UPDATE_CANNOT_ESTABLISH_CONNECTION 0x81
++
++typedef struct StructFlasherCmd {
++    unsigned char Command;
++    unsigned char Options;
++} FlasherCmd;
++
+ void FAST_FUNC setsockopt_reuseaddr(int fd)
+ {
+ 	setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &const_int_1, sizeof(const_int_1));
+@@ -35,13 +44,22 @@
+ 
+ void FAST_FUNC xconnect(int s, const struct sockaddr *s_addr, socklen_t addrlen)
+ {
++    FlasherCmd Cmd;
++
+ 	if (connect(s, s_addr, addrlen) < 0) {
+ 		if (ENABLE_FEATURE_CLEAN_UP)
+ 			close(s);
+-		if (s_addr->sa_family == AF_INET)
++		if (s_addr->sa_family == AF_INET){
++            Cmd.Options = FW_UPDATE_CANNOT_ESTABLISH_CONNECTION;
++            write (cmdpipe, &Cmd, sizeof (FlasherCmd));
+ 			bb_perror_msg_and_die("%s (%s)",
+ 				"cannot connect to remote host",
+ 				inet_ntoa(((struct sockaddr_in *)s_addr)->sin_addr));
++        }
++        Cmd.Options = FW_UPDATE_CANNOT_ESTABLISH_CONNECTION;
++        write (cmdpipe, &Cmd, sizeof (FlasherCmd));
++        close(cmdpipe);
++
+ 		bb_perror_msg_and_die("cannot connect to remote host");
+ 	}
+ }

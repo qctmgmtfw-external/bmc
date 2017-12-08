@@ -1,0 +1,21 @@
+Package : i2c_hw_1_12_0_1_Add_i2c_transfer_byte_timeout_check
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for i2c_hw (1.12.0)
+Depends :  i2c_hw(==1.12.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  garypaung (garyapung@amic.om.tw)
+Urgency : new
+Description : Add I2C transfer byte timeout check
+.
+

@@ -1,0 +1,173 @@
+Package: libvideo (1.8.0); urgency = medium
+
+Abstract:
+	For EIP.64376, Host should remain locked when Host OS is rebooted.
+
+Files Modified: data/video_interface.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Fri, 22 Jul 2011 20:29:20 CST
+
+Package: libvideo (1.7.0); urgency = medium
+
+Abstract:
+	For EIP 63532. Web - auto video recording is not working on AST2300
+
+Files Modified: data/video_interface.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Tue, 12 Jul 2011 12:41:55 CST
+
+Package: libvideo (1.6.0); urgency = medium
+
+Abstract:
+	: Added the support to send the Mousem mode,Cd,FD,HD count if user updated in the web sending the data to the opened active JViewer CLients.
+
+Files Modified: data/Makefile
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 09 Jun 2011 02:49:57 IST
+
+Package: libvideo (1.5.0); urgency = medium
+
+Abstract:
+	Fixed Bugs: 13147
+Resume Redirection does not resume the updated video correctly
+
+Files Modified: data/video_interface.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Fri, 20 May 2011 10:34:34 CST
+
+Package: libvideo (1.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:15:39 EDT
+
+Package: libvideo (1.3.0); urgency = medium
+
+Abstract:
+	Change dependency for configuration.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 17 Jan 2011 14:05:19 CST
+
+Package: libvideo (1.2.0); urgency = medium
+
+Abstract:
+	Change buffer offset according to changed videocap.
+
+Files Modified: data/video_interface.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 06 Jan 2011 14:43:23 CST
+
+Package: libvideo (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:05:45 EDT
+
+Package: libvideo (1.0.10); urgency = medium
+
+Abstract:
+	Add hardware cursor support.
+
+Files Modified: data/video_interface.c, data/videopkt_soc.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 09 Jun 2010 14:22:34 CST
+
+Package: libvideo (1.0.9); urgency = medium
+
+Abstract:
+	Implement SoC specific commands.
+
+Files Modified: data/video_interface.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 04 Jun 2010 11:15:06 CST
+
+Package: libvideo (1.0.8); urgency = high
+
+Abstract:
+	development packages should also be kept under provides to avoid conflict
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 23 Apr 2010 15:10:28 EDT
+
+Package: libvideo (1.0.7); urgency = high
+
+Abstract:
+	platform specific pacakges are synced for run-time dependency fixes as in aviator
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 23 Apr 2010 12:52:34 EDT
+
+Package: libvideo (1.0.6); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:48:09 CST
+
+Package: libvideo (1.0.5); urgency = medium
+
+Abstract:
+	package dependencies corrected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Tue, 13 Apr 2010 20:16:48 EDT
+
+Package: libvideo (1.0.4); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:24:00 EDT
+
+Package: libvideo (1.0.3); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:58:08 EDT
+
+Package: libvideo (1.0.2); urgency = low
+
+Abstract:
+	Changes made in interface API with adviser. Libvideo and adviser get common definitions from adviser_dev package.
+
+Files Added: data/videopkt_soc.h
+Files Deleted: data/compress.h, data/videopkt.h, data/video_interface.h
+Files Modified: data/video_interface.c, data/Makefile, spx/PACKAGES.D/libvideo_dev/SCRIPTS/dev-install, spx/RULES, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 12 Mar 2010 11:15:13 CST
+
+Package: libvideo (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:11:14 EST
+
+Package:libvideo (1.0.0);urgency=new
+
+Abstract:
+	This package contains video library for AST2050 SoC.
+
+Files Added: compress.h, videopkt.h, Makefile, video_interface.c, video_interface.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 22 Jan 2010 18:37:52 +0800
+

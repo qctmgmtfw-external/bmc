@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_4_EIP_67881_No_popup_message_for_changing_mousemode_from_Relative_to_Absolute (1.0.0); urgency = new
+
+Abstract:
+	No popup message for changing the mouse mode from Relative to Absolute
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_InfoDialog.java, data/01-data_src_com_ami_kvm_jviewer_gui_JViewerView.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 08 Sep 2011 17:30:26 IST
+

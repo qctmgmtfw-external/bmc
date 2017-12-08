@@ -1,0 +1,5 @@
+./00-data_IPMI_AMIConf.h 751 9c5d7e8c1be68ca630bbf9f3148daffd
+./01-data_IPMIDefs.h 568 0bd047564a7bbe4017aae77a915b6927
+./02-data_Support.h 596 ece7e083deda8ee5e0d4da98270a6f79
+./03-data_IPMI_AMI.h 353 cb4d5bcf765e8887875ac42f792054eb
+./04-data_AMIConf.h 491 75816ad058ea6e1f594b218c1ebd266e

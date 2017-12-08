@@ -1,0 +1,40 @@
+Source : platform
+Version : 1.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : platform
+Build-Depends : crosscc, kernel_dev, rules
+Essential : YES
+Group : DEVICE
+Owner : AMI
+Maintainer : Alex Yang  (alexyang@ami.com.tw)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST2300
+PLATFORM : AST2300EVB
+Urgency : medium
+Description : This package contains the platform-specific hardware initialization module for AST2300EVB.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : platform
+Section : sys
+Essential : YES
+Group : DEVICE
+Provides : PlatformDriver
+Depends : kernel
+Package-License : GPL-V2
+Description : This package contains the built platform-specific hardware initialization module for AST2300EVB.
+.
+

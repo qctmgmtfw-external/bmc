@@ -1,0 +1,68 @@
+#Runlevel : 7 = S50
+#Runlevel : 8 = S50
+#this script creates the flasher ramdisk needed
+#to put the image file and also does all other copy stuff
+#that was originally done in utils.c
+#idea is that now flasher program just enters init 7
+#and everything is readymade for it when init 7 completes
+#this script basically prepares the flash area
+
+#assumes some scripts are executed before this when entering rc7
+#BEFORE THIS SCRIPT
+#assumptions -
+#killall or any variant thereof is called to kill processes
+#umountnfs and umountfs is called and it has done its job like in usual shutdown
+#AFTER THIS SCRIPT
+#stop garbage collection on mtd
+
+#SCRIPT_VERSION : 1.0
+
+#create ramdisk
+#echo "*******************************************************"
+#echo "Creatting Ramdisk for flash area..size 13M using ram4
+#echo "*******************************************************"
+#dd if=/dev/zero of=/dev/ram4 count=13312 bs=1k 2>&3 /dev/null
+
+#echo "done"
+#echo "*******************************************************"
+
+
+#create file system in ramdisk
+#echo "*******************************************************"
+#echo "Creating ext2 filesystem in flash ramdisk size 13M
+#echo "*******************************************************"
+#that is 3840 blocks of each 4k
+#mkfs.ext2 -v -m 0 -b 4096 /dev/ram4 3328  > /dev/null
+#echo "done"
+#echo "*******************************************************"
+
+#mount the ramdisk
+echo "*******************************************************"
+echo "Mounting a tmpfs filesystem in mnt for storign image"
+echo "*******************************************************"
+mount -t tmpfs /dev/shm /mnt > /dev/null
+echo "done"
+echo "*******************************************************"
+
+
+#making mini file system in ram
+echo "*******************************************************"
+echo "Making mini filesystem in flash ramdisk"
+echo "*******************************************************"
+/usr/local/bin/mkMiniMe /mnt
+chmod 777 /mnt
+echo "done"
+echo "*******************************************************"
+
+#backup conf
+echo "*******************************************************"
+echo "Backing up current configuration"
+echo "*******************************************************"
+#we need to mount /conf and then copt everything
+#and then recopy back towards the end
+/usr/local/bin/cpConf /conf /mnt/oldconf
+umount /conf
+umount /bkupconf
+echo "done"
+echo "*******************************************************"
+

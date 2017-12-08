@@ -1,0 +1,60 @@
+#!/bin/sh
+# /etc/init.d/snmpd: snmpd server
+#
+# chkconfig: 2345 25 25
+#Runlevel : 1 = K25
+#Runlevel : 3 = S25
+#Runlevel : 6 = K25
+# Don't add for Runlevel 7, as it is used for ipmi based (YAFU) firmware upgrade
+APP_NAME=snmpd
+
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+APP_PATH=/usr/sbin/$APP_NAME
+APP_OPTION="-c /conf/snmpd.conf -L"
+APP_PARAM=
+
+test -f /usr/sbin/$APP_NAME || exit 0
+
+#export MIBS=UDP-MIB:TCP-MIB:AMI-DEMO-MIB
+export MIBS=ALL
+MIBDIRS=/usr/share/snmp/mibs
+#export MIBDIRS=/conf/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/:/usr/local/lib/
+export SNMP_PERSISTENT_DIR=/conf/snmp
+
+# Options for start/restart the daemons
+case "$1" in
+  start)
+    echo -n "Starting SNMP Daemons : $APP_NAME"
+    cp /conf/snmp_users.conf /conf/snmpd.conf
+    start-stop-daemon --start --quiet --exec $APP_PATH -- $APP_OPTION $APP_PARAM
+    echo "."
+    ;;
+  stop)
+    echo -n "Stopping SNMP Daemons : $APP_NAME"
+    start-stop-daemon --stop --quiet --exec $APP_PATH
+    echo "."
+    ;;
+    reload)
+        echo -n "Reloading SNMP Daemons : $APP_NAME"
+        start-stop-daemon --stop --quiet --exec $APP_PATH --signal 1
+        echo "."
+        ;;
+    force-reload)
+        $0 reload
+        ;;
+    restart)
+        echo -n "Restarting SNMP Daemons: $APP_NAME"
+        start-stop-daemon --stop --quiet --oknodo --exec $APP_PATH
+        start-stop-daemon --start --quiet --exec $APP_PATH -- $APP_OPTION $APP_PARAM
+        echo "."
+        ;;
+   *)
+    echo "Usage: /etc/init.d/$APP_NAME {start|stop|reload|restart|force-reload}"
+    exit 1
+esac
+
+exit 0
+

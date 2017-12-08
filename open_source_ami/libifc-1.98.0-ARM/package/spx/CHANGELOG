@@ -1,0 +1,1361 @@
+Package: libifc (1.98.0); urgency = low
+
+Abstract:
+	removed weblic_logo_copyright.c, It is not needed anymore
+
+Files Deleted: data/webifc_logo_copyright.c
+Files Modified: data/Makefile
+
+--Submitter:  (jonnychang@ami.com.tw) Fri, 12 Aug 2011 15:21:52 CST
+
+Package: libifc (1.97.0); urgency = medium
+
+Abstract:
+	Removing the check to bypass IPMI Configuration for services configuration page.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 09 Aug 2011 17:13:17 IST
+
+Package: libifc (1.96.0); urgency = medium
+
+Abstract:
+	Issue: User could enable/disable bond when VLAN is enabled - fixed.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Mon, 08 Aug 2011 18:00:54 IST
+
+Package: libifc (1.95.0); urgency = medium
+
+Abstract:
+	Changes made to handle the null termination for the interface name.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 05 Aug 2011 11:54:44 IST
+
+Package: libifc (1.94.0); urgency = medium
+
+Abstract:
+	Get NIC count by get lan configuration instead of invoking libncml function directly.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 03 Aug 2011 14:48:02 CST
+
+Package: libifc (1.93.0); urgency = medium
+
+Abstract:
+	Added support build time change logo and copyright string feature
+
+Files Added: data/webifc_logo_copyright.c
+Files Modified: data/Makefile
+
+--Submitter:  (jonnychang@ami.com.tw) Wed, 27 Jul 2011 19:07:24 CST
+
+Package: libifc (1.92.0); urgency = high
+
+Abstract:
+	Service configuration fields are validated for Non-editable and Not-Applicable arguments, as per core support.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 20 Jul 2011 14:15:19 IST
+
+Package: libifc (1.91.0); urgency = medium
+
+Abstract:
+	Removed Overwrite SDR, as preserve configuration individual items added.
+
+Files Modified: data/webifc_flasher.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 14 Jul 2011 18:34:46 IST
+
+Package: libifc (1.90.0); urgency = medium
+
+Abstract:
+	Changed to common macro for timeout value.
+
+Files Modified: data/webifc_AppDevice.c, data/webifc_ChassisDevice.c, data/webifc_IPM.c, data/webifc_OemCommands.c, data/webifc_PEF.c, data/webifc_SensorDevice.c, data/webifc_StorDevice.c, data/webifc_XportDevice.c, data/webifc_flasher.c, data/webifc_misc.c, data/webifc_raw.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 01 Jul 2011 16:23:55 IST
+
+Package: libifc (1.89.0); urgency = medium
+
+Abstract:
+	Modified Set NCSI configuration using IPMI command.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 29 Jun 2011 23:40:04 IST
+
+Package: libifc (1.88.0); urgency = medium
+
+Abstract:
+	Adviserd restart for network change
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 19:01:18 IST
+
+Package: libifc (1.87.0); urgency = medium
+
+Abstract:
+	Redesigned the local media enable support to local media instead of virtual media page.
+
+Files Modified: data/webifc_KVMConsole.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 24 Jun 2011 17:34:02 IST
+
+Package: libifc (1.86.0); urgency = medium
+
+Abstract:
+	Preserve configuration support macro is added in libifc layer.
+
+Files Modified: data/webifc_flasher.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 23 Jun 2011 15:36:31 IST
+
+Package: libifc (1.85.0); urgency = low
+
+Abstract:
+	Used the PreserveConf feature macro
+
+Files Modified: data/Makefile, data/webifc_flasher.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 22 Jun 2011 21:25:12 IST
+
+Package: libifc (1.84.0); urgency = medium
+
+Abstract:
+	Removed the function which is used to check for sign image support.
+
+Files Modified: data/webifc_flasher.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 22 Jun 2011 17:43:29 IST
+
+Package: libifc (1.83.0); urgency = high
+
+Abstract:
+	Added Preserve configuration support for restore factory defaults
+
+Files Modified: data/Makefile, data/webifc_flasher.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 17 Jun 2011 17:59:46 IST
+
+Package: libifc (1.82.0); urgency = medium
+
+Abstract:
+	Added CD, FD and HD Server Status value as arguments
+
+Files Modified: data/webifc_KVMConsole.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Mon, 13 Jun 2011 19:30:56 IST
+
+Package: libifc (1.81.0); urgency = medium
+
+Abstract:
+	KVM and MEdia encryption enabled,restart teh adviser
+
+Files Modified: data/webifc_KVMConsole.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sat, 11 Jun 2011 19:54:43 IST
+
+Package: libifc (1.80.0); urgency = high
+
+Abstract:
+	Following are the bugs fixed,
+* FTS [Flashing Sign Image] : IPMI error is thrown while uploading sign image with wrong key.
+* FTS [Flashing Sign Image] : Flasher service is getting crashed while uploading sign image with invalid key.
+
+Files Modified: data/webifc_flasher.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 10 Jun 2011 11:43:04 IST
+
+Package: libifc (1.79.0); urgency = medium
+
+Abstract:
+	Web:'Modify Role Group' is not Modifying 'Role Group Search Base' and 'Role Group Privilege' for LDAP-fixed.
+
+Files Modified: data/webifc_auth.c
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Fri, 10 Jun 2011 10:54:08 IST
+
+Package: libifc (1.78.0); urgency = medium
+
+Abstract:
+	Following are the changes done,
+* Added seperate RPC to get the service configuration based on service bit.
+* Removed KVM service configuration from firmware configuration and added it in get adviser configuration RPC.
+
+Files Modified: data/webifc_IPM.c, data/webifc_KVMConsole.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 09 Jun 2011 02:19:08 IST
+
+Package: libifc (1.77.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/webifc_KVMConsole.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:25:53 EDT
+
+Package: libifc (1.76.0); urgency = medium
+
+Abstract:
+	The following issue is fixed.
+Users: On delete admin user in user slot throws ipmi error.
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Tue, 31 May 2011 19:59:39 IST
+
+Package: libifc (1.75.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* WEB : Time out for kvm and media under Services Page is not working.
+* Services : The alert message needs to be changed, if the user is trying to launch JViewer console when the KVM service is disabled.
+
+Files Modified: data/webifc_IPM.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Mon, 30 May 2011 19:46:19 IST
+
+Package: libifc (1.74.0); urgency = low
+
+Abstract:
+	Code cleanup for ldap and AD.
+
+Files Modified: data/webifc_auth.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 26 May 2011 13:50:53 EDT
+
+Package: libifc (1.73.0); urgency = medium
+
+Abstract:
+	Removed libifc_dev package, which is not used.
+
+Files Deleted: data/extbmccfg.h, spx/PACKAGES.D/libifc_dev, spx/PACKAGES.D/libifc_dev/DATA, spx/PACKAGES.D/libifc_dev/SCRIPTS, spx/PACKAGES.D/libifc_dev/SCRIPTS/dev-install
+Files Modified: spx/INFO, spx/PACKAGES.D/libifc/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 25 May 2011 08:39:54 EDT
+
+Package: libifc (1.72.0); urgency = high
+
+Abstract:
+	The following issue is solved.
+System and Audit Log config: If you enable remote log, disable audit log, reboot. System Log page shows an IPMI error message
+
+Files Modified: data/webifc_syslog.c
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Fri, 20 May 2011 04:10:41 EDT
+
+Package: libifc (1.71.0); urgency = high
+
+Abstract:
+	SNMP: delete user from snmp conf when user is deleted. set snmp values to 0 if the user is not enabled for snmp
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: michaelw (michaelw@ami.com) Mon, 16 May 2011 15:29:45 EDT
+
+Package: libifc (1.70.0); urgency = high
+
+Abstract:
+	* Added feature support for Overwrite files during firmware flashing.
+* Added PAM ordering support in web.
+* Few SNMP argument order changed.
+
+Files Modified: data/webifc_AppDevice.c, data/webifc_auth.c, data/webifc_flasher.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Sat, 14 May 2011 03:51:34 IST
+
+Package: libifc (1.69.0); urgency = high
+
+Abstract:
+	Updating the vmedia conf params for getvmediacfg
+
+Files Modified: data/webifc_KVMConsole.c, data/webifc_misc.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 17:29:22 EDT
+
+Package: libifc (1.68.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:48:42 EDT
+
+Package: libifc (1.67.0); urgency = high
+
+Abstract:
+	Fixing Build error. Missed those includes
+
+Files Modified: data/webifc_KVMConsole.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 12:51:48 EDT
+
+Package: libifc (1.66.0); urgency = high
+
+Abstract:
+	Added back the accidentally deleted Ifcs for Trigger
+
+Files Modified: data/webifc_KVMConsole.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 04:40:39 EDT
+
+Package: libifc (1.65.0); urgency = high
+
+Abstract:
+	Removed unnecessary fields from the conf files and handled it with ncml config
+
+Files Modified: data/Makefile, data/webifc_KVMConsole.c, data/webifc_misc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 02:12:43 EDT
+
+Package: libifc (1.64.0); urgency = high
+
+Abstract:
+	SNMP features added separately
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 19:28:01 EDT
+
+Package: libifc (1.63.0); urgency = high
+
+Abstract:
+	Added Event Trigger configuration support in web.
+
+Files Modified: data/webifc_KVMConsole.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 11 May 2011 21:16:49 IST
+
+Package: libifc (1.62.0); urgency = medium
+
+Abstract:
+	Fixed the error file location.
+
+Files Modified: data/webifc_syslog.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Tue, 10 May 2011 15:45:13 CST
+
+Package: libifc (1.61.0); urgency = medium
+
+Abstract:
+	ntpdate is called directly instead of the script.
+
+Files Modified: data/Makefile, data/webifc_misc.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 04 May 2011 19:46:44 IST
+
+Package: libifc (1.60.0); urgency = low
+
+Abstract:
+	Removing network link type field from PHY configuration
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Mon, 02 May 2011 20:41:01 IST
+
+Package: libifc (1.59.0); urgency = high
+
+Abstract:
+	Setting not to restart stunnel for mouse mode changes. For other changes stunnel will be restarted
+
+Files Modified: data/webifc_KVMConsole.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 29 Apr 2011 15:03:08 EDT
+
+Package: libifc (1.58.0); urgency = medium
+
+Abstract:
+	* Added BindDN and Bind password option in LDAP configuration page.
+ * Optimized the existing LDAP configuration implementation.
+ * Removed unwanted rpc files.
+
+Files Modified: data/webifc_auth.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 27 Apr 2011 18:24:55 IST
+
+Package: libifc (1.57.0); urgency = low
+
+Abstract:
+	Removed Multiple declaration of Macro EMAIL_FORMAT_SIZE
+
+Files Modified: data/Makefile, data/webifc_AppDevice.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 25 Apr 2011 12:27:40 IST
+
+Package: libifc (1.56.0); urgency = low
+
+Abstract:
+	Added lanchcfg header file.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 19 Apr 2011 16:13:12 IST
+
+Package: libifc (1.55.0); urgency = medium
+
+Abstract:
+	Added support for preserve/dont preserve SDR
+
+Files Modified: data/webifc_flasher.c
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Tue, 19 Apr 2011 00:14:03 IST
+
+Package: libifc (1.54.0); urgency = medium
+
+Abstract:
+	Defect, SSL Key can not upload success - fixed.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 08 Apr 2011 17:38:27 IST
+
+Package: libifc (1.53.0); urgency = medium
+
+Abstract:
+	Issue Fixed : IPMI error 204 is coming once we are trying to delete the user(Due to junk value )
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 07 Apr 2011 10:07:24 IST
+
+Package: libifc (1.52.0); urgency = high
+
+Abstract:
+	* Added services configuration support using libipmi layer.
+* Defect, Web Client : Sensor name is always as 'Any' even after changing the Sensor name under EventFilter in the PEF page - fixed.
+
+Files Modified: data/webifc_PEF.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 04 Apr 2011 13:44:47 IST
+
+Package: libifc (1.51.0); urgency = high
+
+Abstract:
+	Added network bonding changes in UI
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 28 Mar 2011 22:57:22 IST
+
+Package: libifc (1.50.0); urgency = high
+
+Abstract:
+	* Added interfaces configuration support.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 14 Mar 2011 20:00:53 IST
+
+Package: libifc (1.49.0); urgency = high
+
+Abstract:
+	Added support to configure web session timeout value.
+
+Files Modified: data/Makefile, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 07 Mar 2011 19:52:48 IST
+
+Package: libifc (1.48.0); urgency = high
+
+Abstract:
+	* Added VLAN configuration support.
+* Removed hardcoded System administrator username and added a support to get username using getpwuid.
+
+Files Modified: data/webifc_XportDevice.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 04 Mar 2011 17:01:23 IST
+
+Package: libifc (1.47.0); urgency = high
+
+Abstract:
+	Added video record feature in UI.
+
+Files Added: data/webifc_KVMConsole.c
+Files Modified: data/Makefile, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 16:22:06 IST
+
+Package: libifc (1.46.0); urgency = low
+
+Abstract:
+	Added link to libipmiparams which is required by libipmi
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 16 Feb 2011 19:47:37 IST
+
+Package: libifc (1.45.0); urgency = medium
+
+Abstract:
+	Changes added as per network bonding in Network link configuration.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 15 Feb 2011 15:48:18 IST
+
+Package: libifc (1.44.0); urgency = medium
+
+Abstract:
+	Removed hardcode eth interface name from network link configuration.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 10 Feb 2011 19:24:04 IST
+
+Package: libifc (1.43.0); urgency = high
+
+Abstract:
+	Network related changes for enabling bond support.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 10 Feb 2011 00:48:35 IST
+
+Package: libifc (1.42.0); urgency = low
+
+Abstract:
+	Adding the PHY APIs only when PHY support is included
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 09 Feb 2011 15:26:55 IST
+
+Package: libifc (1.41.0); urgency = high
+
+Abstract:
+	Merged network bonding core support with UI.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 03 Feb 2011 23:51:39 IST
+
+Package: libifc (1.40.0); urgency = high
+
+Abstract:
+	Added Network Bonding support in web interface with dummy data, until core is added.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 01 Feb 2011 16:12:27 IST
+
+Package: libifc (1.39.0); urgency = high
+
+Abstract:
+	Incorrect package libsslcerficates fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 26 Jan 2011 12:03:06 EST
+
+Package: libifc (1.38.0); urgency = high
+
+Abstract:
+	Added generate and view SSL Certificate support.
+
+Files Modified: data/Makefile, data/webifc_misc.c, spx/INFO
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 26 Jan 2011 00:45:13 IST
+
+Package: libifc (1.37.0); urgency = medium
+
+Abstract:
+	Changed the WARNING message more meaningful for FRU failure
+
+Files Modified: data/webifc_StorDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 25 Jan 2011 19:19:20 IST
+
+Package: libifc (1.36.0); urgency = medium
+
+Abstract:
+	Removed Password size argument and password size is padded with 7th bit of User ID  argument.
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 24 Jan 2011 17:48:32 IST
+
+Package: libifc (1.35.0); urgency = medium
+
+Abstract:
+	* Added support for password size argument.
+* Removed get reserved users function, since it is added in core.
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 21 Jan 2011 18:39:50 IST
+
+Package: libifc (1.34.0); urgency = high
+
+Abstract:
+	Added support to register FQDN via DHCP.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 20 Jan 2011 00:44:45 IST
+
+Package: libifc (1.33.0); urgency = high
+
+Abstract:
+	Added LIPIPMI library for get and set DNS configuration.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 18 Jan 2011 13:32:50 IST
+
+Package: libifc (1.32.0); urgency = high
+
+Abstract:
+	Enabled v6 enable bit in LAN Enable set operation.
+
+Files Modified: data/webifc_XportDevice.c, spx/INFO
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 13 Jan 2011 15:19:07 IST
+
+Package: libifc (1.31.0); urgency = medium
+
+Abstract:
+	Modified to fix webgo crash when junk data is added in FRU
+
+Files Modified: data/webifc_StorDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 11 Jan 2011 11:35:22 IST
+
+Package: libifc (1.30.0); urgency = high
+
+Abstract:
+	* Added LIPIPMI library for get and set network configuration.
+* Removed unwanted and unused headder files.
+* Removed unwanted code and Code cleanup for network configuration.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 10 Jan 2011 20:36:51 IST
+
+Package: libifc (1.29.0); urgency = low
+
+Abstract:
+	Modified PrepareFlashArea function parameter.
+
+Files Modified: data/webifc_flasher.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 19:21:11 IST
+
+Package: libifc (1.28.0); urgency = medium
+
+Abstract:
+	Changed to show Modified time of the certificate file instead of status change time, this is used to retain the time settings after F/W update
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 05 Jan 2011 20:34:22 IST
+
+Package: libifc (1.27.0); urgency = high
+
+Abstract:
+	Added PHY configuration support.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 29 Dec 2010 17:58:51 IST
+
+Package: libifc (1.26.0); urgency = medium
+
+Abstract:
+	Setting permission for authorized keys.
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Tue, 28 Dec 2010 19:50:01 IST
+
+Package: libifc (1.25.0); urgency = high
+
+Abstract:
+	* Renamed SSH key directory to User home directory
+* Removed deleting SSH directory from libifc, because it is removed by IPMI core layer.
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 28 Dec 2010 18:26:03 IST
+
+Package: libifc (1.24.0); urgency = high
+
+Abstract:
+	Added User Access support in UI.
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 21 Dec 2010 19:55:24 IST
+
+Package: libifc (1.23.0); urgency = high
+
+Abstract:
+	fixed libipmi issues for customfields in fru and memory allocation failures
+
+Files Modified: data/webifc_StorDevice.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 16 Dec 2010 23:42:05 IST
+
+Package: libifc (1.22.0); urgency = high
+
+Abstract:
+	* Added support for Root User configuration in UI.
+* Removed unwanted code from webifc_misc.c
+
+Files Modified: data/webifc_AppDevice.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 16 Dec 2010 19:38:12 IST
+
+Package: libifc (1.21.0); urgency = low
+
+Abstract:
+	Included the OEM LAN config header file location in Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 13 Dec 2010 15:57:43 IST
+
+Package: libifc (1.20.0); urgency = medium
+
+Abstract:
+	Validation for invalid FRU format.
+
+Files Modified: data/webifc_StorDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 10 Dec 2010 10:52:39 EST
+
+Package: libifc (1.19.0); urgency = high
+
+Abstract:
+	Added Secondary SMTP Server configuration.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 10 Dec 2010 14:47:12 IST
+
+Package: libifc (1.18.0); urgency = high
+
+Abstract:
+	Redesigned UTCOffset configuration using IPMI command and removed utcoffset from NTP configuration.
+
+Files Modified: data/webifc_StorDevice.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 02 Dec 2010 20:25:01 IST
+
+Package: libifc (1.17.0); urgency = medium
+
+Abstract:
+	Fixed webgo crash(memory corruption error) while parsing FRU.
+
+Files Modified: data/webifc_StorDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 02 Dec 2010 12:32:22 GMT-5:30
+
+Package: libifc (1.16.0); urgency = medium
+
+Abstract:
+	Email format is an optional feature, so replaced the return error code with 0 and TCRIT with TINFO.
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 24 Nov 2010 19:37:56 IST
+
+Package: libifc (1.15.0); urgency = high
+
+Abstract:
+	* Added Email format support.
+* If a user is deleted, corresponding lan alert destinations also removed.
+
+Files Modified: data/webifc_AppDevice.c, data/webifc_PEF.c, data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 19 Nov 2010 20:43:31 IST
+
+Package: libifc (1.14.0); urgency = medium
+
+Abstract:
+	Network link webifc layer is added with hardcoded data, until core is added.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 15 Nov 2010 18:54:59 IST
+
+Package: libifc (1.13.0); urgency = high
+
+Abstract:
+	* Added support for features based Project configuration.
+ * Added additional webifc function to support Encrypt Flash support and removed from Project configuration.
+
+Files Modified: data/webifc_flasher.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 29 Oct 2010 18:49:05 IST
+
+Package: libifc (1.12.0); urgency = medium
+
+Abstract:
+	Chassis type is changed to string.
+
+Files Modified: data/webifc_StorDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 08 Oct 2010 12:18:34 EDT
+
+Package: libifc (1.11.0); urgency = high
+
+Abstract:
+	* Added NCSI configuration in libifc.
+
+Files Modified: data/Makefile, data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Oct 2010 05:41:48 IST
+
+Package: libifc (1.10.0); urgency = medium
+
+Abstract:
+	SNMP backend APIs added
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 04 Oct 2010 17:05:19 EDT
+
+Package: libifc (1.9.0); urgency = high
+
+Abstract:
+	* Bug: It is unavaialbe to recieve alert after sensor triggering - fixed.
+* Minor changes in FRU page design.
+
+Files Modified: data/webifc_PEF.c, data/webifc_StorDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Oct 2010 02:24:27 IST
+
+Package: libifc (1.8.0); urgency = high
+
+Abstract:
+	Added SignImage Public Key upload support - libifc.
+
+Files Modified: data/webifc_flasher.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Sat, 02 Oct 2010 19:08:34 IST
+
+Package: libifc (1.7.0); urgency = medium
+
+Abstract:
+	The changes are done inorder to send the fru information to the WEBUI
+
+Files Modified: data/webifc_StorDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 01 Oct 2010 10:19:38 EDT
+
+Package: libifc (1.6.0); urgency = high
+
+Abstract:
+	LDAP not working in IE - fixed.
+
+Files Modified: data/webifc_auth.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 24 Sep 2010 17:16:12 IST
+
+Package: libifc (1.5.0); urgency = medium
+
+Abstract:
+	Bug: SMTP Server IP disappear after save clicked - fixed
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 23 Sep 2010 14:46:25 IST
+
+Package: libifc (1.4.0); urgency = medium
+
+Abstract:
+	Adding sign image bytes to image size when sign image support is enabled
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: pavithra.s (pavithras@amiindia.co.in) Wed, 22 Sep 2010 12:48:25 IST
+
+Package: libifc (1.3.0); urgency = medium
+
+Abstract:
+	Bug: There are the same Policy entry item 60 appearing - fixed.
+
+Files Modified: data/webifc_PEF.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 20 Sep 2010 21:07:51 IST
+
+Package: libifc (1.2.0); urgency = medium
+
+Abstract:
+	Bug: while changing the hostname to the new hostname, the older host name is not de-registered with the DNS server. - Fixed
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 15 Sep 2010 17:25:15 IST
+
+Package: libifc (1.1.0); urgency = low
+
+Abstract:
+	Fixed bug - The vertical coordinate scale of widget for sensor is disorder in Web UI.
+
+Files Modified: data/webifc_SensorDevice.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 15 Sep 2010 18:40:14 CST
+
+Package: libifc (1.0.48); urgency = high
+
+Abstract:
+	Bug, There is no any policy option under PEF and Alert page - fixed.
+
+Files Modified: data/webifc_PEF.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 07 Sep 2010 12:55:43 IST
+
+Package: libifc (1.0.47); urgency = medium
+
+Abstract:
+	Add ldap with privilege new web design.
+
+Files Modified: data/webifc_auth.c
+
+--Submitter: joywu (joywu) Sun, 29 Aug 2010 23:17:43 CST
+
+Package: libifc (1.0.46); urgency = high
+
+Abstract:
+	replace image file issue fixed
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 25 Aug 2010 18:56:29 EDT
+
+Package: libifc (1.0.45); urgency = high
+
+Abstract:
+	local media image file upload issue is fixed
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 25 Aug 2010 14:57:20 EDT
+
+Package: libifc (1.0.44); urgency = high
+
+Abstract:
+	Added Local Media configuration - WEB Interface layer.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 20 Aug 2010 20:08:16 IST
+
+Package: libifc (1.0.43); urgency = medium
+
+Abstract:
+	Added Dynamic virtual media device in UI.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 18 Aug 2010 20:05:15 IST
+
+Package: libifc (1.0.42); urgency = medium
+
+Abstract:
+	Synopsis: Add lib & function for ldap with privilege feature.
+
+Add backend libs for ldap web access.
+
+Files Modified: data/webifc_auth.c
+
+--Submitter: joywu (joywu) Sat, 14 Aug 2010 20:41:28 CST
+
+Package: libifc (1.0.41); urgency = medium
+
+Abstract:
+	In PEF configuration, removed hardcoded value for Event trigger parameter and made it as configurable.
+
+Files Modified: data/webifc_PEF.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 12 Aug 2010 17:24:25 IST
+
+Package: libifc (1.0.40); urgency = low
+
+Abstract:
+	Synopsis: Add Ldap account Group support.
+
+Modify web related funciton to read/write correct active directory configuration file.
+
+Files Modified: data/webifc_auth.c
+
+--Submitter: joywu (joywu) Thu, 12 Aug 2010 17:17:54 CST
+
+Package: libifc (1.0.39); urgency = medium
+
+Abstract:
+	Register BMC option added in libifc layer
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 04 Aug 2010 17:41:06 IST
+
+Package: libifc (1.0.38); urgency = low
+
+Abstract:
+	DNS modification - Modified related DNS function for DNS changes.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 03 Aug 2010 19:14:05 CST
+
+Package: libifc (1.0.37); urgency = low
+
+Abstract:
+	MBMC Changes for libifc package
+
+Files Modified: data/webifc_flasher.c, data/webifc_misc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 20:01:26 IST
+
+Package: libifc (1.0.36); urgency = medium
+
+Abstract:
+	Added macro (MAX_NUM_LAN_ALERT_DESTINATIONS) to webifc_XportDevice, This macro will be moved to ipmi_dev package once MBMC changes are merged
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 28 Jul 2010 18:22:40 IST
+
+Package: libifc (1.0.35); urgency = high
+
+Abstract:
+	Redesigned PEF UI.
+
+Files Modified: data/webifc_PEF.c, data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 28 Jul 2010 16:55:34 IST
+
+Package: libifc (1.0.34); urgency = medium
+
+Abstract:
+	All the references to floppy emulation removed.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 08 Jul 2010 14:34:40 EDT
+
+Package: libifc (1.0.33); urgency = medium
+
+Abstract:
+	Bug: Floppy option of USB Key Emulation Type shall be removed - fixed.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 07 Jul 2010 19:45:33 IST
+
+Package: libifc (1.0.32); urgency = high
+
+Abstract:
+	Bug: System is unavailable to set IPv6 IP, it only supports 15 charaters (IPv4) - fixed.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 07 Jul 2010 15:12:17 IST
+
+Package: libifc (1.0.31); urgency = high
+
+Abstract:
+	Get LAN enable/disable data using IPMI command implementation.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 06 Jul 2010 19:31:29 IST
+
+Package: libifc (1.0.30); urgency = low
+
+Abstract:
+	Modification in libifc layer to get and set host name and host settings flag
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 01 Jul 2010 18:33:43 IST
+
+Package: libifc (1.0.29); urgency = medium
+
+Abstract:
+	Issue:
+WEBIFC_IPMICMD_GetAllLANConfig function fails when Get channel info fails for channel 15.
+Solution:
+Make wRet as 0 when Get channel info falis.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 24 Jun 2010 23:28:32 IST
+
+Package: libifc (1.0.28); urgency = medium
+
+Abstract:
+	Issue:
+WEBIFC_IPMICMD_GetAllLANConfig function fails when Get channel info fails for channel 15.
+Solution:
+Make wRet as 0 when Get channel info falis.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 24 Jun 2010 22:19:19 IST
+
+Package: libifc (1.0.27); urgency = medium
+
+Abstract:
+	Minor changes in setting LAN enable argument.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Sat, 19 Jun 2010 18:09:58 IST
+
+Package: libifc (1.0.26); urgency = high
+
+Abstract:
+	* Removed local LAN macros and included common header file.
+* Set Hostname configuration added.
+* Local IPv4 conversion function is replaced with general inet_ntop function.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 11 Jun 2010 18:16:34 IST
+
+Package: libifc (1.0.25); urgency = low
+
+Abstract:
+	Correction in parameter selector to get IPV6 address.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 11 Jun 2010 16:09:44 IST
+
+Package: libifc (1.0.24); urgency = high
+
+Abstract:
+	Added DNS configuration in UI.
+
+Files Modified: data/Makefile, data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 09 Jun 2010 17:00:49 IST
+
+Package: libifc (1.0.23); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:27:04 EDT
+
+Package: libifc (1.0.22); urgency = high
+
+Abstract:
+	Added PEF configuration in UI
+
+Files Modified: data/webifc_PEF.c, data/webifc_SensorDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 08 Jun 2010 15:18:03 IST
+
+Package: libifc (1.0.21); urgency = high
+
+Abstract:
+	Redesigned upload SSH key file and it is moved to configure users.
+
+Files Modified: data/webifc_AppDevice.c, data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 20 May 2010 17:22:03 IST
+
+Package: libifc (1.0.20); urgency = low
+
+Abstract:
+	Add the parameter to let developer control reset BMC or not after firmware update
+
+Files Modified: data/webifc_flasher.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 06 May 2010 23:53:01 CST
+
+Package: libifc (1.0.19); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:22:04 EDT
+
+Package: libifc (1.0.18); urgency = high
+
+Abstract:
+	attach_hd field of vmedia_conf should be set.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 20 Apr 2010 15:06:21 EDT
+
+Package: libifc (1.0.17); urgency = medium
+
+Abstract:
+	Common webs functions for lighttpd and webgo
+
+Files Modified: data/webifc_AppDevice.c, data/webifc_ChassisDevice.c, data/webifc_IPM.c, data/webifc_OemCommands.c, data/webifc_PEF.c, data/webifc_SensorDevice.c, data/webifc_StorDevice.c, data/webifc_XportDevice.c, data/webifc_flasher.c, data/webifc_misc.c, data/webifc_raw.c
+
+--Submitter: Manimehalai (manimehalais@amiindia.co.in) Mon, 19 Apr 2010 16:30:05 IST
+
+Package: libifc (1.0.16); urgency = high
+
+Abstract:
+	SSH Key is now uploading even after it was already uploaded
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 12 Apr 2010 17:48:02 EDT
+
+Package: libifc (1.0.15); urgency = high
+
+Abstract:
+	SSH key issue fixed. The key is now uploaded for the logged-in user in a user-specific directory inside conf
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 08 Apr 2010 12:54:25 EDT
+
+Package: libifc (1.0.14); urgency = low
+
+Abstract:
+	The device doesnot validate the https link with the new SSL certificate - fixed.
+
+Files Modified: spx/PACKAGES.D/libifc_dev/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Mon, 22 Mar 2010 17:18:49 IST
+
+Package: libifc (1.0.13); urgency = low
+
+Abstract:
+	Fixed build dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Wed, 17 Mar 2010 20:47:18 EDT
+
+Package: libifc (1.0.12); urgency = high
+
+Abstract:
+	webifc_dev is a newly created development package. webgo_dev is removed to avoid cercular depenendcies.
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 16:40:37 EDT
+
+Package: libifc (1.0.11); urgency = low
+
+Abstract:
+	Webgo is not reset after SSL upload - fixed.
+
+Files Modified: data/webifc_misc.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Fri, 01 Jan 2038 20:54:00 IST
+
+Package: libifc (1.0.10); urgency = low
+
+Abstract:
+	Negative threshold values for sensor is shown as zero in UI - Fixed.
+
+Files Modified: data/webifc_SensorDevice.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Mon, 01 Mar 2010 20:26:30 IST
+
+Package: libifc (1.0.9); urgency = low
+
+Abstract:
+	inet_ntop() length parameter modified to INET6_ADDRSTRLEN
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 26 Feb 2010 15:33:14 IST
+
+Package: libifc (1.0.8); urgency = low
+
+Abstract:
+	Fix for bug 11868.IPMICMD_AMISetUserEmail should be called before LIBIPMI_HL_DelUser
+
+Files Modified: data/webifc_AppDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 24 Feb 2010 18:35:06 IST
+
+Package: libifc (1.0.7); urgency = low
+
+Abstract:
+	* Removed the function which converts IPv6 address to string, now using inet_ntop pre-defined function.
+ * Changed printf statements to TDBG.
+
+Files Modified: data/webifc_XportDevice.c, data/webifc_PEF.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Wed, 24 Feb 2010 17:52:17 IST
+
+Package: libifc (1.0.6); urgency = low
+
+Abstract:
+	Added IPv6 support for SNMP and SMTP
+
+Files Modified: data/webifc_XportDevice.c, data/webifc_PEF.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Tue, 23 Feb 2010 03:19:32 IST
+
+Package: libifc (1.0.5); urgency = low
+
+Abstract:
+	Domain Name option added to IPv4 in web interface layer
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Mon, 22 Feb 2010 19:28:18 IST
+
+Package: libifc (1.0.4); urgency = low
+
+Abstract:
+	Added IPv6 support in web interface layer.
+
+Files Modified: data/webifc_XportDevice.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Sat, 20 Feb 2010 01:33:37 IST
+
+Package: libifc (1.0.3); urgency = low
+
+Abstract:
+	Added NTP support in web interface layer.
+
+Files Modified: data/webifc_misc.c, data/Makefile, spx/INFO
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Thu, 18 Feb 2010 17:33:05 IST
+
+Package: libifc (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:04:49 EST
+
+Package: libifc (1.0.1); urgency = low
+
+Abstract:
+	version of usbe package dependancy updated to >= 1.0.0
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 09 Feb 2010 12:22:17 EST
+
+Package:libifc (1.0.0);urgency=new
+
+Abstract:
+	This package contains web interface related files.
+
+Files Added: webifc_SensorDevice.c, webifc_IPM.c, webifc_raw.c, webifc_flasher.c, webifc_XportDevice.c, webifc.h, webifc_ChassisDevice.c, Makefile, webifc_PEF.c, webifc_OemCommands.c, webifc_StorDevice.c, webifc_AppDevice.c, webifc_misc.c, extbmccfg.h
+
+--Submitter: arunkumars (arunkumars@amiiindia.co.in) Tue, 8 Dec 2009 17:32:18 -0500

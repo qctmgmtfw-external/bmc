@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_16_FixSELSensorReadingError_EIP75841
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 16 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 16
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Owen Chou (owenchou@ami.com.tw)
+Urgency : new
+Description : Fix the sensor reading error of SEL sensor (internal sensor).
+.
+

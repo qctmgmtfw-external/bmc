@@ -1,0 +1,18 @@
+Package: CDDVD_HW_support (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:04:43 EDT
+
+Package: CDDVD_HW_support (1.0.0); urgency = new
+
+Abstract:
+	Dummy package to select appropriate USB hardware module for the selected device.
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 21 Apr 2010 13:37:48 EDT
+

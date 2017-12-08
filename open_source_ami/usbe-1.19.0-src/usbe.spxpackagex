@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/linux.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/usb_module.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/mod_reg.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/bot_if.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/module.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/setup.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/entry.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/usb_ioctl.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/bot.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/proc.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/scsi.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/header.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/usb_core.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/setup.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/usb_hw.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/hid_usb.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/mod_reg.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/descriptors.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/bot.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/entry.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/driver.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/coreusb.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/Makefile</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/coreusb.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/proc.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/linux.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/arch.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/usb_driver.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/descriptors.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/data/iusb.h</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>usbe</package-name>
+<version>1.19.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">crosscc</package-name>
+<package-name operator="" version="">global_dev</package-name>
+<package-name operator="" version="">helper_driver_dev</package-name>
+<package-name operator="" version="">kernel_dev</package-name>
+<package-name operator="" version="">rules</package-name>
+<package-name operator="" version="">libdbgout_dev</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>DEVICE</group>
+<configtags>USBE Device Support</configtags>
+<installsize/>
+<description>This package provides the common (hardware independent) USB core driver module.</description>
+<architecture>ALL</architecture>
+<owner>AMI</owner>
+<maintainer>Rama Rao Bisa  </maintainer>
+<maintainer-email>RamaB@ami.com</maintainer-email>
+<sourcelocation>AMI</sourcelocation>
+<sourceversion>1.0.0</sourceversion>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/spx/RULES</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages>
+<package>
+<name>usbe</name>
+<section>sys</section>
+<essential>NO</essential>
+<configtags>USBE Device Support</configtags>
+<group>DEVICE</group>
+<license>GPL-V2</license>
+<description>USBE core driver module.</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends>
+<package-name operator="" version="">kernel</package-name>
+<package-name operator="" version="">hw_usb</package-name>
+</depends>
+<required>
+<package-name operator="" version="">helper</package-name>
+</required>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/spx/PACKAGES.D/usbe/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+<package>
+<name>usbe_driver_dev</name>
+<section>dev</section>
+<essential>NO</essential>
+<configtags/>
+<group>LIBRARY</group>
+<license>GPL-V2</license>
+<description>This package includes usbe core driver Development header files.</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends/>
+<required/>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/spx/PACKAGES.D/usbe_driver_dev/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/usbe-1.19.0-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

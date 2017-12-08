@@ -1,0 +1,237 @@
+Package: usb1_hw (1.6.0); urgency = medium
+
+Abstract:
+	Licence change from AMI to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ast_usbhub.c, spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 16:05:34 EDT
+
+Package: usb1_hw (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:56:15 EDT
+
+Package: usb1_hw (1.4.0); urgency = medium
+
+Abstract:
+	The essential field is set to NO. This module will be picked up by the dummy hardware package.
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 03 May 2011 12:16:55 EDT
+
+Package: usb1_hw (1.3.0); urgency = medium
+
+Abstract:
+	Change range to avoid overlay with USB host controller.
+
+Files Modified: data/ast_usbhub.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 17 Mar 2011 13:42:00 CST
+
+Package: usb1_hw (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/usb1_hw/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 16:30:42 EDT
+
+Package: usb1_hw (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:53:50 EDT
+
+Package: usb1_hw (1.0.19); urgency = high
+
+Abstract:
+	SPLIT IN transcation is still needed in AST2300 unless we change the SET ADDRESS procedure to new method.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 02 Jul 2010 17:05:09 CST
+
+Package: usb1_hw (1.0.18); urgency = medium
+
+Abstract:
+	Enable downstream port after the port is reset.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 21 Jun 2010 16:17:51 CST
+
+Package: usb1_hw (1.0.17); urgency = high
+
+Abstract:
+	Fix hub setup state machine disorder problem.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 09 Jun 2010 14:25:54 CST
+
+Package: usb1_hw (1.0.16); urgency = medium
+
+Abstract:
+	Fix the build failed for AST2300.
+
+Files Modified: data/ast_usbhub.c, data/ast_usbhub.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 27 May 2010 16:32:35 CST
+
+Package: usb1_hw (1.0.15); urgency = medium
+
+Abstract:
+	Add support for AST2300.
+
+Files Modified: data/ast_usbhub.c, data/ast_usbhub.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 27 May 2010 13:38:40 CST
+
+Package: usb1_hw (1.0.14); urgency = medium
+
+Abstract:
+	Modified Rules to not to unload module when Firmware upgrade usb being used.
+
+Files Modified: spx/PACKAGES.D/usb1_hw/SCRIPTS/dev-install
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 13 May 2010 11:15:02 CST
+
+Package: usb1_hw (1.0.13); urgency = high
+
+Abstract:
+	Changes result of Support added to use both IN and OUT endpoints of same endpoint number.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 07 May 2010 10:06:45 EDT
+
+Package: usb1_hw (1.0.12); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:49:40 CST
+
+Package: usb1_hw (1.0.11); urgency = medium
+
+Abstract:
+	Disable device when device is disconnected.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 14 Apr 2010 16:25:21 CST
+
+Package: usb1_hw (1.0.10); urgency = low
+
+Abstract:
+	Port status of hub should depends on device speed before port reset since the run speed is determined after port reset.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 13 Apr 2010 17:15:59 CST
+
+Package: usb1_hw (1.0.9); urgency = medium
+
+Abstract:
+	Response IN/OUT token after receive NAK IRQs.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 12 Apr 2010 15:47:16 CST
+
+Package: usb1_hw (1.0.8); urgency = low
+
+Abstract:
+	Re-initialize data for hub and devices when bus reset.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 08 Apr 2010 16:02:15 CST
+
+Package: usb1_hw (1.0.7); urgency = critical
+
+Abstract:
+	Device port should not be enabled before hub is in addressed state.
+
+Files Modified: data/ast_usbhub.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 06 Apr 2010 17:23:59 CST
+
+Package: usb1_hw (1.0.6); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:26:30 EDT
+
+Package: usb1_hw (1.0.5); urgency = medium
+
+Abstract:
+	1. Change device port selection method in init function.
+2. Fix wrong speed mode when upstream is full speed.
+
+Files Modified: data/ast_usbhub.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 26 Mar 2010 16:42:25 CST
+
+Package: usb1_hw (1.0.4); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 18:12:38 EDT
+
+Package: usb1_hw (1.0.3); urgency = low
+
+Abstract:
+	1. Fix power related settings.
+2. Endpoint 0 IN/OUT ACK IRQs are shared with STALL IRQs, do not call USB core on STALL IRQs.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 03 Mar 2010 18:38:12 CST
+
+Package: usb1_hw (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:23:49 EST
+
+Package: usb1_hw (1.0.1); urgency = low
+
+Abstract:
+	Change dependency operator.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 10 Feb 2010 14:39:23 CST
+
+Package:usb1_hw (1.0.0);urgency=new
+
+Abstract:
+	This package contains the USB virtual hub controller driver for AST2050 SoC.
+
+Files Added: ast_usbhub.c, ast_usbhub.h, hub.h, Makefile
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 26 Jan 2010 15:26:19 +0800
+

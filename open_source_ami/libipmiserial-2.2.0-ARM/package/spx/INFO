@@ -1,0 +1,18 @@
+Package : libipmiserial
+Non-Editable : YES
+Version : 2.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Suresh  (sureshv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : IPMI Serial Interface Support
+Group : IPMI
+Depends : ipmimain
+Package-License : AMI
+Description : IPMI Serial Library Binaries.
+.

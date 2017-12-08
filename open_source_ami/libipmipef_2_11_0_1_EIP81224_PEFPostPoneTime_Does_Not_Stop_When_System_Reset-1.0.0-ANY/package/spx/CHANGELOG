@@ -1,0 +1,9 @@
+Package: libipmipef_2_11_0_1_EIP81224_PEFPostPoneTime_Does_Not_Stop_When_System_Reset (1.0.0); urgency = new
+
+Abstract:
+	PEFPostPoneTimer does not stop when system is reset
+
+Files Added: data, data/00-data_PEF.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kenttang (kenttang@ami.com.tw) Thu, 26 Apr 2012 22:27:36 CST
+

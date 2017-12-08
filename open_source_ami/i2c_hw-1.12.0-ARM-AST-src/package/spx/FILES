@@ -1,0 +1,9 @@
+./Makefile 167 4d705f978456bc7267c69372f656be2f
+./i2c-data.c 2556 0865abb7b7887aecbd18cf73cd2faf43
+./i2c-data.h 2976 fdbf174a47b03b189e4c933cf811f827
+./i2c-hardware.c 8585 cd2b8aa447d678e1b7bcc76a9ddd7a26
+./i2c-hardware.h 9689 72eca397afb86bdf8d011812ddae9736
+./i2c-interrupt.c 13430 6dfe939a711dd307f57e876c6574bc72
+./i2c-module.c 6136 265341d75ab60338e0adc8dbf2ddec67
+./i2c-recovery.c 7296 16969e0e16706fdce087084246a2ce36
+./i2c-transfer.c 19779 6c2d9e790967d54f811aac8046b5c4f1

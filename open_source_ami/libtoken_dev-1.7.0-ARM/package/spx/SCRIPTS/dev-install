@@ -1,0 +1,13 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/token
+	COPY_FILE ./token.h %SPXINC/token
+	COPY_FILE ./sessioncfg.h %SPXINC/token
+	MKDIR_NOCLEAN %SPXLIB/token
+	COPY_FILE ./libtoken.a %SPXLIB/token
+	COPY_FILE ./libtoken.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/token
+	ADD_LIBRARY_LINKS %SPXLIB/token libtoken.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+
+debug-install:

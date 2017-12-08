@@ -1,0 +1,183 @@
+Package: libipmiusb (2.3.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/USBIfc.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:39:25 IST
+
+Package: libipmiusb (2.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:02:51 EDT
+
+Package: libipmiusb (2.1.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:49:16 IST
+
+Package: libipmiusb (2.0.0); urgency = medium
+
+Abstract:
+	Minor changes and incrementing the version to 2.0.0
+
+Files Modified: data/USBMetaInfo.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:14:20 IST
+
+Package: libipmiusb (1.3.0); urgency = low
+
+Abstract:
+	The Thread arguments will be made free in startIfc function after the thread mutex is released properly.
+
+Files Modified: data/USBIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Feb 2011 01:00:02 IST
+
+Package: libipmiusb (1.2.0); urgency = medium
+
+Abstract:
+	libipmiusb does not depend on gpio driver. Removed dependency
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 20 Sep 2010 13:16:23 EDT
+
+Package: libipmiusb (1.1.0); urgency = low
+
+Abstract:
+	The signal handler inside IPMImain should handle the signal by itself, but libipmiusb call InitSignals() to register signal again, then the signal who register by libipmiusb will not receive by IPMIMain.
+
+For example, if we send a SIGSEGV to IPMIMain, IPMImain should be terminated, but libipmiusb catch the signal and enter infinite loop.
+
+The libipmiusb should not register any signal by calling InitSignals().
+
+Files Modified: data/USBIfc.c, data/share.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Wed, 15 Sep 2010 14:07:30 CST
+
+Package: libipmiusb (1.0.12); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:57:01 IST
+
+Package: libipmiusb (1.0.11); urgency = low
+
+Abstract:
+	MBMC Changes for USB Interface
+
+Files Modified: data/USBIfc.c, data/USBMetaInfo.c, data/config.c, data/share.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:43:56 IST
+
+Package: libipmiusb (1.0.10); urgency = low
+
+Abstract:
+	Removing gpio from build dependancy for libipmiusb
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 14 Jun 2010 13:40:02 IST
+
+Package: libipmiusb (1.0.9); urgency = medium
+
+Abstract:
+	IPMI hardware interface should be shown/selected only if the corresponding hardware is available
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 13:10:15 EDT
+
+Package: libipmiusb (1.0.8); urgency = low
+
+Abstract:
+	Adding racsessioninfo to build depends of libipmiusb
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 25 May 2010 14:48:12 IST
+
+Package: libipmiusb (1.0.7); urgency = medium
+
+Abstract:
+	Including vmedia and racsessioninfo libraries in Makefile needed by libipmiusb
+
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 24 May 2010 23:31:33 IST
+
+Package: libipmiusb (1.0.6); urgency = low
+
+Abstract:
+	Commenting Received SIGCHLD warning message.
+
+Files Modified: data/share.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 27 Apr 2010 18:30:38 IST
+
+Package: libipmiusb (1.0.5); urgency = high
+
+Abstract:
+	dependencies fixed for ast2050 PRJ creation using MDS
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 26 Apr 2010 18:16:55 EDT
+
+Package: libipmiusb (1.0.4); urgency = medium
+
+Abstract:
+	ln -s repalced with CREATE_SOFT_LINK
+
+Files Modified: spx/PACKAGES.D/libipmiusb/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 05 Mar 2010 10:09:40 EST
+
+Package: libipmiusb (1.0.3); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:08:43 EST
+
+Package: libipmiusb (1.0.2); urgency = low
+
+Abstract:
+	Commenting the SIGINT signal in share.c
+
+Files Modified: data/share.c
+
+--Submitter: Winston Thangapandian (winstont@amiindia.co.in) Wed, 10 Feb 2010 14:38:42 IST
+
+Package: libipmiusb (1.0.1); urgency = low
+
+Abstract:
+	version of usbe package dependancy updated to >= 1.0.0
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 09 Feb 2010 12:23:35 EST
+
+Package:libipmiusb (1.0.0);urgency=new
+
+Abstract:
+	This package contains ipmi usb related files.
+
+Files Added: USBMetaInfo.c, share.c, USBIfc.c, config.c, Makefile
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Wed, 23 Dec 2009 16:06:23 -0500

@@ -1,0 +1,9 @@
+Package: flasher_1_19_0_1_memory_issues (1.0.0); urgency = new
+
+Abstract:
+	Added proper error handling and freeing of dynamically allocated memory.
+
+Files Added: data, data/00-data_utils.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 14 Sep 2011 16:23:39 JST
+

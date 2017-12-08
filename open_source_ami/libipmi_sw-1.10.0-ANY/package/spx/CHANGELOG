@@ -1,0 +1,157 @@
+Package: libipmi_sw (1.10.0); urgency = low
+
+Abstract:
+	Added header file to fix the compile error.
+
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Win/LIBIPMI.vcproj
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 13 Jul 2011 14:55:30 IST
+
+Package: libipmi_sw (1.9.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:02:12 EDT
+
+Package: libipmi_sw (1.8.0); urgency = medium
+
+Abstract:
+	Added necessary header files to fix the compilation error.
+
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Win/LIBIPMI.vcproj
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 27 Apr 2011 19:59:03 IST
+
+Package: libipmi_sw (1.7.0); urgency = medium
+
+Abstract:
+	Added lanparams related files in software package.
+
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Win/LIBIPMI.vcproj
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 22 Feb 2011 14:33:51 IST
+
+Package: libipmi_sw (1.6.0); urgency = low
+
+Abstract:
+	Included necessary header files to avoid Build Error in software package.
+
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Win/LIBIPMI.vcproj
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 21 Dec 2010 14:37:19 IST
+
+Package: libipmi_sw (1.5.0); urgency = low
+
+Abstract:
+	Modifiled output path name.
+
+Files Modified: data/Win/LIBIPMI.ncb, data/Win/LIBIPMI.sln, data/Win/LIBIPMI.suo, data/Win/LIBIPMI.vcproj
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 28 Sep 2010 17:13:38 IST
+
+Package: libipmi_sw (1.4.0); urgency = medium
+
+Abstract:
+	Added libipmi_fru for IPMIApp.Minor changes in make file and project file.
+
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Win/LIBIPMI.ncb, data/Win/LIBIPMI.sln, data/Win/LIBIPMI.suo, data/Win/LIBIPMI.vcproj
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 28 Sep 2010 15:53:33 IST
+
+Package: libipmi_sw (1.3.0); urgency = medium
+
+Abstract:
+	Removed dependcies on libipmi version
+Now it refers the libpmi source using the non versioned links to source directories
+
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Win/LIBIPMI.vcproj, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 16 Sep 2010 13:22:48 EDT
+
+Package: libipmi_sw (1.2.0); urgency = medium
+
+Abstract:
+	Synced with libipmi 1.2.0
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 15 Sep 2010 16:59:55 EDT
+
+Package: libipmi_sw (1.1.0); urgency = low
+
+Abstract:
+	Updating the libipmi version in the depends.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 15 Sep 2010 11:19:46 EDT
+
+Package: libipmi_sw (1.0.6); urgency = medium
+
+Abstract:
+	Added readme file and PACKAGE_DIR macro in make file.
+
+Files Added: data/README
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 07 Sep 2010 14:57:30 IST
+
+Package: libipmi_sw (1.0.5); urgency = medium
+
+Abstract:
+	Added 64-bit Support for libipmi software package.
+
+Files Added: data/Linux, data/Linux/Linux_x86_32, data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64, data/Linux/Linux_x86_64/Makefile, data/Linux/Makefile
+Files Deleted: data/Linux_x86_32, data/Linux_x86_32/Makefile
+Files Modified: data/Win/LIBIPMI.ncb, data/Win/LIBIPMI.sln, data/Win/LIBIPMI.suo, data/Win/LIBIPMI.vcproj, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 06 Sep 2010 19:04:37 IST
+
+Package: libipmi_sw (1.0.4); urgency = medium
+
+Abstract:
+	Synced with libipmi 1.0.25
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 17 Aug 2010 15:47:57 EDT
+
+Package: libipmi_sw (1.0.3); urgency = low
+
+Abstract:
+	Updating libipmi version in depends
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 13 Aug 2010 11:40:02 IST
+
+Package: libipmi_sw (1.0.2); urgency = medium
+
+Abstract:
+	Updated version of Required : libipmi
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 11 Aug 2010 12:55:08 EDT
+
+Package: libipmi_sw (1.0.1); urgency = low
+
+Abstract:
+	Updating the correct libipmi version in depends.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 10 Aug 2010 22:02:53 IST
+
+Package: libipmi_sw (1.0.0); urgency = new
+
+Abstract:
+	This Package contains the files to refer original libipmi library.
+
+Files Added: data, data/Linux_x86_32, data/Linux_x86_32/Makefile, data/Win, data/Win/LIBIPMI.ncb, data/Win/LIBIPMI.sln, data/Win/LIBIPMI.suo, data/Win/LIBIPMI.vcproj, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 05 Aug 2010 19:23:05 IST
+

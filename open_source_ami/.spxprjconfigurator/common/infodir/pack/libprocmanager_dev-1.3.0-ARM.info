@@ -1,0 +1,15 @@
+Package : libprocmanager_dev
+Non-Editable : YES
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Winston  (winstonv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : This package contains development file needed for process manager
+.

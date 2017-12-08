@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_13_Enable_KVM_Support_IPv6 (1.0.0); urgency = new
+
+Abstract:
+	Enable KVM Support IPv6
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, data/01-data_src_com_ami_kvm_jviewer_kvmpkts_IVTPPktHdr.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Fri, 13 Apr 2012 11:48:51 CST
+

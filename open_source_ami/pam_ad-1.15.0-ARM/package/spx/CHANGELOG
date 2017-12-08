@@ -1,0 +1,146 @@
+Package: pam_ad (1.15.0); urgency = low
+
+Abstract:
+	libUserPrivilege is added in build depend and binary required list
+
+Files Modified: spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 18 Aug 2011 19:33:21 IST
+
+Package: pam_ad (1.14.0); urgency = low
+
+Abstract:
+	Code CleanUP.
+
+Files Modified: data/pam_ad.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 17 Aug 2011 12:55:44 IST
+
+Package: pam_ad (1.13.0); urgency = medium
+
+Abstract:
+	Fixing Login/Logout Audit bugs and Optimizing the code
+
+Files Modified: data/pam_ad.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 11 Aug 2011 20:45:37 IST
+
+Package: pam_ad (1.12.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/Makefile, data/pam_ad.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:21:18 IST
+
+Package: pam_ad (1.11.0); urgency = medium
+
+Abstract:
+	passing Session Handle as NULL to AuditHook
+
+Files Modified: data/pam_ad.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 29 Jul 2011 20:03:49 IST
+
+Package: pam_ad (1.10.0); urgency = medium
+
+Abstract:
+	Modified the hook name from PDK_LoginAudit to PDK_LoginLogoutAudit, Also used macro for pam module count
+
+Files Modified: data/pam_ad.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 21 Jul 2011 17:19:58 IST
+
+Package: pam_ad (1.9.0); urgency = medium
+
+Abstract:
+	Removed P.CONFIG script from pam_ad
+
+Files Deleted: spx/P.CONFIG
+Files Modified: data/pam_ad.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 07 Jul 2011 20:54:34 IST
+
+Package: pam_ad (1.8.0); urgency = low
+
+Abstract:
+	logging sel events for ad users
+
+Files Added: spx/P.CONFIG
+Files Modified: data/Makefile, data/pam_ad.c, spx/INFO
+
+--Submitter: sridhar ch (sridharch@amiindia.co.in) Wed, 29 Jun 2011 05:50:26 TLT
+
+Package: pam_ad (1.7.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:22:04 EDT
+
+Package: pam_ad (1.6.0); urgency = medium
+
+Abstract:
+	The pam handle has to be closed in failure case.
+
+Files Modified: data/pam_ad.c, spx/INFO
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Fri, 13 May 2011 17:58:09 IST
+
+Package: pam_ad (1.5.0); urgency = high
+
+Abstract:
+	Dependencies corrected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 09 Mar 2011 17:57:01 EST
+
+Package: pam_ad (1.4.0); urgency = low
+
+Abstract:
+	Including provides, this will make proper overriding the core or OEM packages.
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 19 Jan 2011 17:42:53 IST
+
+Package: pam_ad (1.3.0); urgency = low
+
+Abstract:
+	Changing shared library names as pam_custom_ldap.
+
+Files Modified: data/Makefile, spx/PACKAGES.D/pam_ad/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Sat, 08 Jan 2011 16:39:26 IST
+
+Package: pam_ad (1.2.0); urgency = low
+
+Abstract:
+	Changes includes moving OEM Extensible thing to libuserauth.
+
+Files Modified: data/Makefile, data/pam_ad.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 07 Jan 2011 14:23:49 IST
+
+Package: pam_ad (1.1.0); urgency = low
+
+Abstract:
+	Active Directory user will Use Blocked pipe, here after this enables AD users will have the control for the src pipe
+
+Files Modified: data/pam_ad.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 03 Jan 2011 17:28:08 IST
+
+Package: pam_ad (1.0.0); urgency = new
+
+Abstract:
+	This packages contains the PAM LDAP module with respect to the FTS LDAP Deployment
+
+Files Added: data, data/Makefile, data/pam_ad.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/pam_ad, spx/PACKAGES.D/pam_ad/DATA, spx/PACKAGES.D/pam_ad/SCRIPTS, spx/PACKAGES.D/pam_ad/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 23 Dec 2010 22:51:12 IST
+

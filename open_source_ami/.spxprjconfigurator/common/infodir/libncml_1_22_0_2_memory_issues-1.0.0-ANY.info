@@ -1,0 +1,20 @@
+Package : libncml_1_22_0_2_memory_issues
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libncml (1.22.0)
+Depends :  libncml(==1.22.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  othiyappnk (othiyappank@amiindia.co.in)
+Urgency : new
+Description : Added proper error handling and freeing of dynamically allocated memory.
+.
+

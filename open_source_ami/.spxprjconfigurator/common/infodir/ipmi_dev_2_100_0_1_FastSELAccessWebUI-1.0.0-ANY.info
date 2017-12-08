@@ -1,0 +1,20 @@
+Package : ipmi_dev_2_100_0_1_FastSELAccessWebUI
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for ipmi_dev (2.100.0)
+Depends :  ipmi_dev(==2.100.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  winston (winstonv@amiindia.co.in)
+Urgency : new
+Description : Added changes for faster accessing of SEL in WebUI.
+.
+

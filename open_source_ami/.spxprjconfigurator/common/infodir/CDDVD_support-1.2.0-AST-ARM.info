@@ -1,0 +1,19 @@
+Package : CDDVD_support
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Required : cdrom
+Essential : NO
+Config-Tag : CD/DVD Device Support
+Group : DEVICE
+Provides : CDUSBModule
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : This is a dummy package to properly select USB driver modules to support cd/dvd device on the selected SoC.
+.

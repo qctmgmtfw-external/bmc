@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_19_EIP92790_PhysicalKeyboardSupport
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 19 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 19
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Joey Chen (JoeyChen@ami.com.tw)
+Urgency : new
+Description : Add physical keyboard language selection support
+.
+

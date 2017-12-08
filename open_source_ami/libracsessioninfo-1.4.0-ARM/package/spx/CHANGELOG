@@ -1,0 +1,61 @@
+Package: libracsessioninfo (1.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:08:37 EDT
+
+Package: libracsessioninfo (1.3.0); urgency = low
+
+Abstract:
+	fix to avoid alignment trap.
+
+Files Modified: data/racsessioninfo.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 24 Feb 2011 13:47:48 EST
+
+Package: libracsessioninfo (1.2.0); urgency = medium
+
+Abstract:
+	re-arranged session_info_record_t structure members to avoid unaligned accesses.
+
+Files Modified: data/racsessioninfo.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 29 Nov 2010 18:21:47 EST
+
+Package: libracsessioninfo (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:03:19 EDT
+
+Package: libracsessioninfo (1.0.2); urgency = low
+
+Abstract:
+	Description field is updated properly.
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 14 Jul 2010 18:02:43 EDT
+
+Package: libracsessioninfo (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:09:44 EST
+
+Package:libracsessioninfo (1.0.0);urgency=new
+
+Abstract:
+	This package include rac session information library.
+
+Files Added: racsessioninfo.c, racsessioninfo.h, Makefile
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Wed, 23 Dec 2009 14:19:49 -0500

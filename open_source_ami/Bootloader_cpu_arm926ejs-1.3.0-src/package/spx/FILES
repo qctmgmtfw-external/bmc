@@ -1,0 +1,3 @@
+./01-config.mk.patch 843 e055afc9a14706db7f332dc36486e087
+./02-cpu.c.patch 689 fea75c2a1b3a31081ed4377896c9640a
+./03-start.S.patch 700 902a1c31a58e184075ffcbb3ab9cb895

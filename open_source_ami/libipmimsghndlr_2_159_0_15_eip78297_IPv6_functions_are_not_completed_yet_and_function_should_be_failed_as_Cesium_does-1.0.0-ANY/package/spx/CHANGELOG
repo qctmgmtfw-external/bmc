@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_15_eip78297_IPv6_functions_are_not_completed_yet_and_function_should_be_failed_as_Cesium_does (1.0.0); urgency = new
+
+Abstract:
+	IPv6 functions are not completed yet and function should be failed as Cesium does.
+
+Files Added: data, data/00-data_AMI_AMIConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kenttang (kenttang@ami.com.tw) Thu, 22 Dec 2011 17:50:53 CST
+

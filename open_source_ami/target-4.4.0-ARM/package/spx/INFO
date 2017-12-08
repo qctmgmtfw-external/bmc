@@ -1,0 +1,16 @@
+Package : target
+Version : 4.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : target
+Section : dev
+Essential : YES
+Group : BASE
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+Urgency : medium
+Description : This package provide the Target File System for ARM. This is based on Debian 6.0.2 (Squeeze)
+.

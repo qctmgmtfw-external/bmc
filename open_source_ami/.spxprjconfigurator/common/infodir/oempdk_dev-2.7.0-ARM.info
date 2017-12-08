@@ -1,0 +1,16 @@
+Package : oempdk_dev
+Non-Editable : YES
+Version : 2.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Suresh V  (sureshv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Group : IPMI
+Package-License : AMI
+Description : This Package contains PDK Header files required for pdk packages.
+.

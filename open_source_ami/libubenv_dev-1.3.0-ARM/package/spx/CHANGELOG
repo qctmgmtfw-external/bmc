@@ -1,0 +1,52 @@
+Package: libubenv (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:14:19 EDT
+
+Package: libubenv (1.2.0); urgency = high
+
+Abstract:
+	Modified libubenv to have common structure
+
+Files Modified: data/ubenv.c, data/ubenv.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 18 Mar 2011 16:52:17 EDT
+
+Package: libubenv (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:05:18 EDT
+
+Package: libubenv (1.0.2); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:27:24 EDT
+
+Package: libubenv (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:10:53 EST
+
+Package:libubenv (1.0.0);urgency=new
+
+Abstract:
+	This packages contains the ubenv Library Files.
+
+Files Added: ubenv.h, Makefile, ubenv.c
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Thu, 3 Dec 2009 15:33:40 -0500

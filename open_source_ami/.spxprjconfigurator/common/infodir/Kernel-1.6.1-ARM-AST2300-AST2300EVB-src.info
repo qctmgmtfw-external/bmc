@@ -1,0 +1,51 @@
+Source : Kernel
+Version : 1.6.1
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : kernel, kernel_dev
+Build-Depends : @Kernel_oem_ast2300evb, buildtools, crosscc
+Essential : NO
+Config-Tag : Kernel Source for AST2300EVB
+Group : BASE
+Owner : AMI
+Maintainer : Alex Yang  (alexyang@ami.com.tw)
+Source-Location : AMI
+Source-Version : 2.6.28.10
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST2300
+PLATFORM : AST2300EVB
+Customization-Type : CONFIG
+Urgency : high
+Description : AST2300 EVB Kernel 2.6.28.10
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : kernel
+Section : app
+Essential : YES
+Group : BASE
+Provides : kernel
+Package-License : GPL-V2
+Description : Provides the binary Kernel image that can be used on AST2300EVB
+.
+
+Package : kernel_dev
+Section : dev
+Essential : YES
+Config-Tag : Kernel Development for AST2300EVB
+Group : DEVEL
+Provides : kernel_dev
+Package-License : GPL-V2
+Description : Provides the Kernel Development files. This is needed  for driver developement
+.
+

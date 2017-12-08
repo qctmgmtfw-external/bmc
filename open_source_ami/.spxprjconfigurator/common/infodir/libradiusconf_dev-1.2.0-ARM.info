@@ -1,0 +1,15 @@
+Package : libradiusconf_dev
+Non-Editable : YES
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Maintainer Name  (maintainer@domain.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : LIBRADIUSCONF development header files.
+.

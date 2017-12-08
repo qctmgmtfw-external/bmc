@@ -1,0 +1,9 @@
+Package: webui_1_122_0_7_PortIPV6DNSRelatedFunc_MDS_Release (1.0.0); urgency = new
+
+Abstract:
+	Porting DNSv6 related functions from Q4 release.
+
+Files Added: data, data/00-data_MDS-Workspace_page_configure_dns.html, data/01-data_MDS-Workspace_www_help_EN_configure_dns_hlp.html, data/02-data_MDS-Workspace_www_help_EN_configure_network_hlp.html, data/03-data_MDS-Workspace_www_str_EN_common_str.js, data/04-data_MDS-Workspace_www_str_EN_configure_dns_str.js, data/05-data_MDS-Workspace_www_page_configure_dns.html, data/06-data_MDS-Workspace_www_impl_configure_network_imp.js, data/07-data_MDS-Workspace_www_impl_configure_dns_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Wed, 15 Jul 2015 20:00:02 CST
+

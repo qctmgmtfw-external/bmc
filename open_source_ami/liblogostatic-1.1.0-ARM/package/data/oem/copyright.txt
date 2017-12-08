@@ -1,0 +1,3 @@
+KVM Remote Console Utility Version <=jviewerversion=>
+Plugin Version <=socversion=> for <=soc=>
+Copyright (c) 2011 American Megatrends, Inc.

@@ -1,0 +1,12 @@
+--- .pristine/Vmedia_Win64-1.14.0-src/spx/INFO Thu Jan 23 17:39:43 2014
++++ source/Vmedia_Win64-1.14.0-src/spx/INFO Thu Jan 23 19:12:54 2014
+@@ -10,7 +10,8 @@
+ Source-Version : 1.0.0
+ Source-License : AMI
+ Package-License : AMI
+-Architecture : ALL
++Build-Precedence : CONFIG_SPX_FEATURE_REBUILD_JAVA_APPS 
++Architecture : ANY
+ Urgency : medium
+ Description : This package contains the Windows 64 bit library for Vmedia.
+ .

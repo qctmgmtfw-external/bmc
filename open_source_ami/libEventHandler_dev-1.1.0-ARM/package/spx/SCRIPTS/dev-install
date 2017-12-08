@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	#copy header file
+	MKDIR_NOCLEAN %SPXINC/EventHandler        
+    COPY_DIR Includes %SPXINC/EventHandler    
+	#copy library
+	MKDIR_NOCLEAN %SPXLIB/EventHandler
+	COPY_DIR lib %SPXLIB/EventHandler
+	ADD_LIBRARY_LINKS %SPXLIB/EventHandler libEventHandler.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+debug-install:

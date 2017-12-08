@@ -1,0 +1,10 @@
+--- linux-2.6.28.10-pristine/arch/arm/Makefile	2009-05-03 02:54:43.000000000 +0800
++++ linux-2.6.28.10/arch/arm/Makefile	2011-05-26 16:01:32.550670000 +0800
+@@ -94,6 +94,7 @@
+ head-y		:= arch/arm/kernel/head$(MMUEXT).o arch/arm/kernel/init_task.o
+ textofs-y	:= 0x00008000
+ 
++ machine-$(CONFIG_ARCH_AST2300EVB)    := ast2300evb
+  machine-$(CONFIG_ARCH_RPC)	   := rpc
+  machine-$(CONFIG_ARCH_EBSA110)	   := ebsa110
+  machine-$(CONFIG_ARCH_CLPS7500)   := clps7500

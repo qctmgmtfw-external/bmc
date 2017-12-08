@@ -1,0 +1,47 @@
+--- u-boot-1.1.6/vendors/ami/fwupdate/fwupdate.c	2011-06-15 16:31:27.804842539 +0800
++++ u-boot-1.1.6-ami/vendors/ami/fwupdate/fwupdate.c	2011-06-15 16:41:13.055718371 +0800
+@@ -38,6 +38,7 @@
+ # include "kcs.h"
+ # include "cmdhandler.h"
+ 
++#define MAX_KCS_CHANNELS		    2
+ 
+ #define 	UBOOT_TIMEOUT_VALUE			0xE00000
+ #define 	STR_WRITING					"writing"
+@@ -75,20 +76,23 @@
+ ProcessKCSRequests (void)
+ {
+ 	int retlen;
++	unsigned ChannelNum=0;
+ 
+ 	pKCSCmd  = (KCSCmd_T*) m_KCSCmd;
+ 	pKCSRes  = (KCSCmd_T*) m_KCSRes;
+ 	pIPMICmd = (IPMICmdData_T*) &m_IPMICmd;
+ 
+ 	/* Read KCS Request */
+-	retlen = RecvKCSRequest (m_KCSCmd);
++	for (ChannelNum=0;ChannelNum<MAX_KCS_CHANNELS;ChannelNum++)
++	{
++		retlen = RecvKCSRequest (ChannelNum,m_KCSCmd);
+ 	if (0 != retlen)
+ 	{
+ #ifdef DEBUG
+ 		int i;
+ 		printf ("KCS Packet Received\n");
+ 		for (i = 0; i < retlen; i++)
+-			printf ("0x%x\n", m_KCSCmd [i]);
++				printf ("C%d  0x%x\n", ChannelNum, m_KCSCmd [i]);
+ #endif					
+ 		pIPMICmd->NetFnLUN = pKCSCmd->NetFnLUN;
+ 		pIPMICmd->Cmd	   = pKCSCmd->Cmd;
+@@ -109,8 +113,9 @@
+ #ifdef DEBUG
+ 		printf ("pIPMPCmd->ResLen = 0x%x\n", pIPMICmd->ResLen);
+ #endif
+-		SendKCSResponse (m_KCSRes, (sizeof (pKCSCmd->NetFnLUN) + sizeof (pKCSCmd->Cmd) + Responselen));
++			SendKCSResponse (ChannelNum, m_KCSRes, (sizeof (pKCSCmd->NetFnLUN) + sizeof (pKCSCmd->Cmd) + Responselen));
+ 		
++		}
+ 	}
+ 	return;
+ }

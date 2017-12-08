@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_28_106388_SomeKVMButtonWillNotAutoRelease (1.0.0); urgency = new
+
+Abstract:
+	for EIP 106388, some KVM buttons will not auto released when pressed.
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JVToolBar.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter:  () Tue, 04 Dec 2012 02:13:38 EST
+

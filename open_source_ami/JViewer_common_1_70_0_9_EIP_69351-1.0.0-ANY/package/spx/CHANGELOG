@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_9_EIP_69351 (1.0.0); urgency = new
+
+Abstract:
+	Java preview option shows connection failed status when host video is in sleep mode, issue fixed
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_WebPreviewer.java, data/01-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 19 Sep 2011 19:38:12 IST
+

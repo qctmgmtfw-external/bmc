@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_8_EIP_69633_69766_69836 (1.0.0); urgency = new
+
+Abstract:
+	JViewer hangs in some scenario:fixed
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JVFrame.java, data/01-data_src_com_ami_kvm_jviewer_gui_SystemTimeMonitor.java, data/02-data_src_com_ami_kvm_jviewer_gui_KVMShareDialog.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 16 Sep 2011 16:57:06 IST
+

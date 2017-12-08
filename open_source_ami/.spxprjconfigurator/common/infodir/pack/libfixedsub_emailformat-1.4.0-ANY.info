@@ -1,0 +1,18 @@
+Package : libfixedsub_emailformat
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : sridharch  (sridharch@amiindia.co.in)
+Source-License : AMI
+Architecture : ANY
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : Email Alert fixed subject format
+Group : LIBRARY
+Depends : libunix
+Package-License : AMI
+Description : FTS fixed subject format for Email Alert
+.

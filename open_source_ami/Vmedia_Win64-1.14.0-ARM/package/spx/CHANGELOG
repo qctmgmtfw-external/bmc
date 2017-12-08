@@ -1,0 +1,276 @@
+Package: Vmedia_Win64 (1.14.0); urgency = medium
+
+Abstract:
+	Included condition to check NTFS,FAT 12,16,32 format to read total sector count from redirected Image file.
+
+Files Modified: data/javaharddiskwrapper.dll
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 08 Jul 2011 18:57:54 IST
+
+Package: Vmedia_Win64 (1.13.0); urgency = medium
+
+Abstract:
+	Added the support for USB key Image redirection for FAT & NTFS
+
+Files Modified: data/javaharddiskwrapper.dll
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 27 Jun 2011 12:02:39 IST
+
+Package: Vmedia_Win64 (1.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 16:00:11 EDT
+
+Package: Vmedia_Win64 (1.11.0); urgency = medium
+
+Abstract:
+	Issues Fixed:
+  1.IDE Floppy :LED Lightning
+  2.IDE Floppy :Buffer I/O error
+
+Files Modified: data/javafloppywrapper.dll
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 31 Mar 2011 18:06:58 IST
+
+Package: Vmedia_Win64 (1.10.0); urgency = medium
+
+Abstract:
+	Issue fixed : RHEL5.6 does not re-mount Remote Floppy (Buffer I/O error)
+
+Files Modified: data/javafloppywrapper.dll
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 23 Mar 2011 13:05:39 IST
+
+Package: Vmedia_Win64 (1.9.0); urgency = medium
+
+Abstract:
+	Included condition to avoid reading beyond Max Sector range
+
+Files Modified: data/javacdromwrapper.dll, data/javafloppywrapper.dll, data/javaharddiskwrapper.dll
+
+--Submitter: othiyappank (gopinaths@amiindia.co.in) Wed, 09 Mar 2011 17:58:26 IST
+
+Package: Vmedia_Win64 (1.8.0); urgency = medium
+
+Abstract:
+	Issue Fixed : Remote FD access Lamp keeps lighting on RHEL5
+
+Files Modified: data/javafloppywrapper.dll
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 04 Mar 2011 20:52:38 IST
+
+Package: Vmedia_Win64 (1.7.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+        Linux client Fixed harddisk redirection is redirected only read Mode,res
+tricted the write operation for fixed harddisk
+
+Files Modified: data/javaharddiskwrapper.dll
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 22 Oct 2010 12:02:13 IST
+
+Package: Vmedia_Win64 (1.6.0); urgency = medium
+
+Abstract:
+	USB Floppy detection in windows 7 and windows servers
+
+Files Modified: data/javafloppywrapper.dll
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 19 Oct 2010 18:05:25 IST
+
+Package: Vmedia_Win64 (1.5.0); urgency = medium
+
+Abstract:
+	While stoping the harddisk redirection drivelayout is changed in host,once disconnected it automitacally Update the disk layout  properties  using the DeviceIOControl
+
+Files Modified: data/javaharddiskwrapper.dll
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 05 Oct 2010 20:05:38 IST
+
+Package: Vmedia_Win64 (1.4.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	  While redirecting Cdimage in floppy Drive,proper error message should be thrown..
+
+Files Modified: data/javafloppywrapper.dll
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 05 Oct 2010 05:21:38 IST
+
+Package: Vmedia_Win64 (1.3.0); urgency = medium
+
+Abstract:
+	Fixed Issue :Multiple language encoding support on ISO redirection
+
+Files Modified: data/javacdromwrapper.dll, data/javafloppywrapper.dll, data/javaharddiskwrapper.dll
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 19:50:59 IST
+
+Package: Vmedia_Win64 (1.2.0); urgency = medium
+
+Abstract:
+	Bug Fixed:
+        1.Cannot Format Redirected Hard Drive
+        2.Launching Virtual Media Wizard causes JViewer crashed when three or more removable drives are connected
+        3.USB KEY drive allow access locally and remote redirection console at a time.
+        4.Exclusive access of USB key/CD/DVD shall be give to either host server or local client
+        5.In Redirection mode Files are not updated correctly both USB and Hard disk
+        6.The USB key sutck in the formate mode in the java redirection mode
+
+Files Modified: data/javaharddiskwrapper.dll
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Wed, 29 Sep 2010 12:00:24 IST
+
+Package: Vmedia_Win64 (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:18:17 EDT
+
+Package: Vmedia_Win64 (1.0.14); urgency = medium
+
+Abstract:
+	Fixed IDE Floppy Drive
+
+Files Modified: data/javafloppywrapper.dll
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 27 Aug 2010 23:09:59 IST
+
+Package: Vmedia_Win64 (1.0.13); urgency = medium
+
+Abstract:
+	Issue Fixed in display the Floppy,CD,HD device
+
+Files Modified: data/javacdromwrapper.dll, data/javafloppywrapper.dll, data/javaharddiskwrapper.dll
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 24 Aug 2010 18:33:19 IST
+
+Package: Vmedia_Win64 (1.0.12); urgency = medium
+
+Abstract:
+	Compiled for the latest software package
+
+Files Modified: data/javacdromwrapper.dll, data/javafloppywrapper.dll, data/javaharddiskwrapper.dll
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 02 Aug 2010 22:06:04 IST
+
+Package: Vmedia_Win64 (1.0.11); urgency = medium
+
+Abstract:
+	Issue Fixed:
+Added the Check for USB Floppy in the Harddisk list
+
+Files Modified: data/javaharddiskwrapper.dll
+
+--Submitter: Othiyappan K (othiyappank@amiindia.co.in) Thu, 15 Jul 2010 22:19:09 IST
+
+Package: Vmedia_Win64 (1.0.10); urgency = medium
+
+Abstract:
+	Increased the size of buffer to finding the CD/FD device
+Added the check to find theUSB floppy
+
+Files Modified: data/javacdromwrapper.dll, data/javafloppywrapper.dll, data/javaharddiskwrapper.dll
+
+--Submitter: Othiyappan k (othiyappank@amiindia.co.in) Mon, 05 Jul 2010 15:49:56 IST
+
+Package: Vmedia_Win64 (1.0.9); urgency = high
+
+Abstract:
+	Added the feature Redirecting Entire Physical drive to host
+
+Files Modified: data/javaharddiskwrapper.dll
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 21 Jun 2010 22:56:44 IST
+
+Package: Vmedia_Win64 (1.0.8); urgency = medium
+
+Abstract:
+	Added the SCSI_READ_20 support in Library
+
+Files Modified: data/javacdromwrapper.dll, data/javafloppywrapper.dll, data/javaharddiskwrapper.dll, spx/INFO
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 18 May 2010 18:05:33 IST
+
+Package: Vmedia_Win64 (1.0.7); urgency = medium
+
+Abstract:
+	Added Group and Config Tag for user to select in Configurator
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 12 May 2010 17:51:16 EDT
+
+Package: Vmedia_Win64 (1.0.6); urgency = medium
+
+Abstract:
+	Removed the referenco of Floppy to Harddisk and renaming the Files compiled the library
+
+Files Modified: data/javaharddiskwrapper.dll
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 19 Apr 2010 15:48:44 IST
+
+Package: Vmedia_Win64 (1.0.5); urgency = critical
+
+Abstract:
+	Added the Supported library in the Vmedia packages
+
+Files Added: data/javaharddiskwrapper.dll
+Files Modified: data/javafloppywrapper.dll, spx/RULES.D/createJAR.sh
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sun, 11 Apr 2010 06:09:27 IST
+
+Package: Vmedia_Win64 (1.0.4); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:46:21 EDT
+
+Package: Vmedia_Win64 (1.0.3); urgency = low
+
+Abstract:
+	ALL Vmedia Libaries updated to Commit:61662
+
+Files Modified: data/javacdromwrapper.dll, data/javafloppywrapper.dll
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 23 Feb 2010 02:47:36 IST
+
+Package: Vmedia_Win64 (1.0.2); urgency = low
+
+Abstract:
+	* When Num Lock LED is off at JViewer and client, the direction key(2,4,6,8) can not be used Resolution: the keycode of direction key is different in window and linux, so add the keycode of linux  the detail of key code please visit http://java.sun.com/j2se/1.4.2/docs/api/constant-values.html#java.awt.event.KeyEvent.VK_KP_DOWN
+* while getting the floppy drive list from the client,if the floppy is empty no need to display the floppy drive name in the list if the client as Linux
+* Added the Writeprotect support for Linuxhost to display proper error
+* Merged SP2 bug fixes
+
+Files Modified: data/javacdromwrapper.dll, data/javafloppywrapper.dll
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 17 Feb 2010 19:24:16 IST
+
+Package: Vmedia_Win64 (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:24:56 EST
+
+Package:Vmedia_Win64 (1.0.0);urgency=new
+
+Abstract:
+	This package contains the Windows 64 bit library for Vmedia.
+
+Files Added: javacdromwrapper.dll, javafloppywrapper.dll
+
+--Submitter: Othiyappan K (othiyappank@amiinida.co.in) Fri, 27 Nov 2009 17:01:46 +0530

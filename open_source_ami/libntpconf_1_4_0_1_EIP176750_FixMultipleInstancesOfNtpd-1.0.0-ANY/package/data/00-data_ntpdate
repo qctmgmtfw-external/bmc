@@ -1,0 +1,31 @@
+--- .pristine/libntpconf-1.4.0-src/data/ntpdate	Mon Sep  1 10:55:11 2014
++++ source/libntpconf-1.4.0-src/data/ntpdate	Mon Sep  1 10:58:04 2014
+@@ -9,17 +9,25 @@
+ test -f /etc/ntp.conf || exit  0
+ test -f /conf/ntp.stat || exit 0
+ 
++[ 0 -eq `ps -ef | grep "/usr/sbin/ntpd" | grep -vc "grep"` ] || exit 0
++
+ case "$1" in
+ start)
++#Not setting date to default (010100002012) in case of  
++  #manual ntp update.  
+   grep "Manual" /conf/ntp.stat >/dev/null 2>&1
+   if [ $? == 0 ]
+-  then 
+-	exit 0
++  then
++        #date 010100002012
++        exit 0
+   fi
+   # Fix for ntp offset overflow. Offset can be +/- 0x3FFFFFFF
+   # So if the date is any year below 1972 (as of 2006), ntpdate
+   # will return a negative offset and will set wrong values
+-  date 010100002010
++  if [ ! -f /tmp/ntpdate_init ]; then
++        date 010100002012
++        touch /tmp/ntpdate_init
++  fi
+   echo "Running ntpdate to synchronize clock :"
+   cat /etc/ntp.conf | grep server | awk '{print $2}' \
+   |while read NTPSERVER; do

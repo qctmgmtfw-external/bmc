@@ -1,0 +1,18 @@
+Package : Vmedia_Mac_32
+Non-Editable : YES
+Version : 1.14.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Othiyappank  (Othiyappank@amiindia.co.in)
+Source-License : AMI
+Architecture : ANY
+Urgency : medium
+Section : lib
+Essential : YES
+Config-Tag : VMedia Support for Mac 32-Bit Clients
+Group : KVM
+Depends : JavaClientSupport
+Package-License : AMI
+Description : This package contains the VMedia Mac 32 bit library.
+.

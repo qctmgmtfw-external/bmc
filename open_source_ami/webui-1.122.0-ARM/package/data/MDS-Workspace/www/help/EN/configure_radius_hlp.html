@@ -1,0 +1,77 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+ 	<title>configure_radius help</title>
+  	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	</head>
+	<body>
+	<h2><div class='floatRight'><a href='javascript://' class='closeBtn' onclick='top.closeHelp();'>X</a></div>
+	<div class='helpmainhead'>RADIUS</div></h2>
+	<div class='subSection'>
+		To enable/disable RADIUS, check or uncheck the "RADIUS Authentication" Enable checkbox respectively.
+		<br/>
+		<strong>NOTE: </strong>Generic FreeRADIUS alone is supported in this release.<br/>
+		During login prompt, use your username only to login as a radius user.
+		<br/><br/>
+		<fieldset>
+		<legend>Actions</legend>
+		<h4>RADIUS Authentication </h4>
+		Check the option 'Enable' to enable RADIUS authentication.
+		<h4>Port</h4>
+		Specify the RADIUS Port.
+		<ul><li>- Default Port is 1812.</li></ul>
+		<h4>Time Out</h4>
+		Specify the Time out value .
+		<ul>
+			<li>- Default Time out value is 3 seconds.</li>
+			<li>- Time out value ranges from 3 to 300.</li>
+		</ul>
+		<h4>Server Address</h4>
+		Enter the 'IP address' of RADIUS server
+		<ul>
+			<li>- IP Address made of 4 numbers separated by dots as in "xxx.xxx.xxx.xxx".</li>
+			<li>- Each Number ranges from 0 to 255.</li>
+			<li>- First Number must not be 0.</li>
+		</ul>
+		<h4>Secret</h4>
+		Enter the 'Authentication Secret' for RADIUS server
+		<ul>
+			<li>- Secret must be at least 4 characters long.</li>
+			<li>- White space is not allowed.</li>
+		</ul>
+		<strong>NOTE:</strong> This field will not allow more than 31 characters.
+		<h4>Save</h4>
+		Click 'Save' to save the settings.
+		<h4>Reset</h4>
+		Click 'Reset' to reset the modified changes.
+		<br>
+		</fieldset>
+	</div>
+	</body>
+</html>

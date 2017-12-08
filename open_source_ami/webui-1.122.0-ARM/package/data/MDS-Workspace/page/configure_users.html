@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+	<link href="../www/style/page_style.css" rel="stylesheet" type="text/css" />
+	<link href="../www/lib/listgrid.css" rel="stylesheet" type="text/css" />
+	<script src="../www/lib/include.js"></script>
+	<script type="text/javascript" src="../www/lib/listgrid.js"></script>
+	<script language='javascript' src='../www/lib/form.js'></script>
+</head>
+<body oncontextmenu='return false;'>
+<h3>User Management</h3>
+
+<p>The list below shows the current list of available users. To delete or modify a user,
+select their name in the list and press &quot;Delete User&quot; or &quot;Modify User&quot;.
+To add a new user, select an unconfigured slot and press &quot;Add User&quot;.</p>
+
+<div align='right'>
+<label id='_lblHeader' class='lblHeader'></label>
+</div>
+
+<br style='clear:both' />
+<div id="_usrListHolder"></div>
+<br>
+
+<iframe name='hiddenFrame' class='hide'></iframe>
+
+<div class='btnTray'>
+<input type='button' id='_addUserBtn' value='Add User' />
+<input type='button' id='_modUserBtn' value='Modify User' />
+<input type='button' id='_delUserBtn' value='Delete User' />
+</div>
+</body>
+</html>

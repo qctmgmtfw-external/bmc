@@ -1,0 +1,102 @@
+Package: libcdrom (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:42:26 EDT
+
+Package: libcdrom (1.4.0); urgency = medium
+
+Abstract:
+	Included condition to avoid reading beyond Max Sector range
+
+Files Modified: data/Common/imagereader.c
+
+--Submitter: othiyappank (gopinaths@amiindia.co.in) Wed, 09 Mar 2011 17:56:50 IST
+
+Package: libcdrom (1.3.0); urgency = medium
+
+Abstract:
+	Fixed Issue :Multiple language encoding support on ISO redirection
+
+Files Modified: data/Common/imagereader.c
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 19:44:31 IST
+
+Package: libcdrom (1.2.0); urgency = medium
+
+Abstract:
+	Fix for Java console closed while redirecting CD.
+
+Files Modified: data/Mac/MacMediaReader.cpp
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 28 Sep 2010 19:09:11 IST
+
+Package: libcdrom (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:53:00 EDT
+
+Package: libcdrom (1.0.5); urgency = medium
+
+Abstract:
+	Issue Fixed in display the Floppy,CD,HD device
+
+Files Modified: data/Win/WinNTMediaReader.cpp
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 24 Aug 2010 18:38:12 IST
+
+Package: libcdrom (1.0.4); urgency = medium
+
+Abstract:
+	Moved common file to seperate package.
+Added dependency with libkvm package.
+Made changes in projectfile/Makefiles with respect to libkvm package.
+
+Files Deleted: data/include/libcdrom.h
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Mac/Mac_x86_32/Makefile, data/Mac/Mac_x86_64/Makefile, data/Win/cdromLibWin.vcproj, data/include/CDROMReader.h, data/include/imagereader.h, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 07 Aug 2010 17:06:31 IST
+
+Package: libcdrom (1.0.3); urgency = low
+
+Abstract:
+	Changed section field as software.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 05 Aug 2010 19:17:30 IST
+
+Package: libcdrom (1.0.2); urgency = low
+
+Abstract:
+	Updated Group field for software library package.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 03 Aug 2010 13:13:37 IST
+
+Package: libcdrom (1.0.1); urgency = medium
+
+Abstract:
+	Modified the CDROM device finding technique,Geting the logical drive and check the drive type
+
+Files Added: data/Win/StdAfx.h, data/Win/USBDisk.cpp, data/Win/Usbdisk.h
+Files Modified: data/Mac/MacMediaReader.cpp, data/Win/WinNTMediaReader.cpp, data/Win/cdromLibWin.ncb, data/Win/cdromLibWin.suo, data/Win/cdromLibWin.vcproj
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 02 Aug 2010 22:15:03 IST
+
+Package: libcdrom (1.0.0); urgency = new
+
+Abstract:
+	This Package Contains the cdrom related library files.
+
+Files Added: data, data/Common, data/Common/CDROMImgFileReader.cpp, data/Common/CDROMMediaReader.cpp, data/Common/dbgout.c, data/Common/imagereader.c, data/Doxyfile, data/Linux, data/Linux/LinuxMediaReader.cpp, data/Linux/Linux_x86_32, data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64, data/Linux/Linux_x86_64/Makefile, data/Linux/Makefile, data/Mac, data/Mac/MacMediaReader.cpp, data/Mac/Mac_x86_32, data/Mac/Mac_x86_32/Makefile, data/Mac/Mac_x86_64, data/Mac/Mac_x86_64/Makefile, data/Mac/Makefile, data/Mac/README.txt, data/Win, data/Win/Aspi, data/Win/Aspi/Aspi.cpp, data/Win/Aspi/List.cpp, data/Win/Aspi/Scb.cpp, data/Win/Aspi/Scsibus.cpp, data/Win/Aspi/Scsidev.cpp, data/Win/Win9xMediaReader.cpp, data/Win/WinNTMediaReader.cpp, data/Win/cdromLibWin.ncb, data/Win/cdromLibWin.sln, data/Win/cdromLibWin.suo, data/Win/cdromLibWin.vcproj, data/bldhelp.js, data/build.wsf, data/include, data/include/Aspi, data/include/Aspi/Aspi.h, data/include/Aspi/Scb.h, data/include/Aspi/Scsibus.h, data/include/Aspi/Scsidefs.h, data/include/Aspi/Scsidev.h, data/include/Aspi/list.h, data/include/CDROMImgFileReader.h, data/include/CDROMMediaReader.h, data/include/CDROMReader.h, data/include/LinuxMediaReader.h, data/include/MacMediaReader.h, data/include/Ntddk.inc, data/include/Ntddk.inc/basetsd, data/include/Ntddk.inc/basetsd/basetsd.h, data/include/Ntddk.inc/devioctl.h, data/include/Ntddk.inc/ntddcdrm.h, data/include/Ntddk.inc/ntdddisk.h, data/include/Ntddk.inc/ntddkincludes.h, data/include/Ntddk.inc/ntddscsi.h, data/include/Ntddk.inc/ntddstor.h, data/include/Win9xMediaReader.h, data/include/WinNTMediaReader.h, data/include/imagereader.h, data/include/iso9660.h, data/include/libcdrom.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 28 Jul 2010 12:47:58 IST
+

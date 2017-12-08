@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/checksum
+	MKDIR_NOCLEAN %SPXINC/checksum
+	COPY_FILE ./checksum.h %SPXINC/checksum
+	COPY_FILE ./libchecksum.a %SPXLIB/checksum
+	COPY_FILE ./libchecksum.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/checksum
+	ADD_LIBRARY_LINKS %SPXLIB/checksum  libchecksum.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

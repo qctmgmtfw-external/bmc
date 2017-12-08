@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_6_Enabled_user (1.0.0); urgency = new
+
+Abstract:
+	Fix for Currently enabled user.
+
+Files Added: data, data/00-data_App_AppDevice_AppDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 09 Sep 2011 20:52:39 IST
+

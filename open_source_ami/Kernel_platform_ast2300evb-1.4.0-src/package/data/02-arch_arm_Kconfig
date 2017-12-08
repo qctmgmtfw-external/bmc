@@ -1,0 +1,73 @@
+--- linux-2.6.28.10-pristine/arch/arm/Kconfig	2009-05-03 02:54:43.000000000 +0800
++++ linux-2.6.28.10/arch/arm/Kconfig	2011-05-26 16:03:33.364606000 +0800
+@@ -197,7 +197,15 @@
+ 
+ choice
+ 	prompt "ARM system type"
+-	default ARCH_VERSATILE
++	default ARCH_AST2300EVB
++
++config ARCH_AST2300EVB
++	bool "ASPEED A2300 Evaluation Board"
++	select SOC_AST2300
++	help
++	  This is an evaluation board from ASPEED based on AST2300 SOC
++	  If you would like to build your kernel to run on one of these boards
++	  then you must say 'Y' here. Otherwise say 'N'
+ 
+ config ARCH_AAEC2000
+ 	bool "Agilent AAEC-2000 based"
+@@ -551,6 +559,8 @@
+ 
+ endchoice
+ 
++source "arch/arm/mach-ast2300evb/Kconfig"
++
+ source "arch/arm/mach-clps711x/Kconfig"
+ 
+ source "arch/arm/mach-ep93xx/Kconfig"
+@@ -637,6 +647,44 @@
+ config PLAT_ORION
+ 	bool
+ 
++# Define the SOC if any used here and sub components of the SOC here
++config SOC_AST2300
++	bool
++	select ASTMAC100
++	select CPU_ARM926T
++	default y if ARCH_AST2300EVB
++
++config ASTMAC100
++	tristate "Aspeed MAC 100 support"
++	depends on NET_ETHERNET && SOC_AST2300
++	default y
++
++config ASTSERIAL
++	bool "Aspeed Serial support"
++	depends on SOC_AST2300
++	default y if SOC_AST2300
++
++config AST_PHY_ADDR
++	int "AST200 MAC MII PHY Address" if ASTMAC100
++	default "31"
++
++config NCSI_PHY
++	bool "NCSI protocol support" if ASTMAC100
++	default "y"
++
++config UART_CLK
++	int "UART Clock in Hz"
++	depends on SOC_AST2300
++	default "24000000"
++
++config TIMER_CLK
++	int "TIMER Clock in Hz"
++	depends on SOC_AST2300
++	default "50000000"
++
++#End of SOC components description
++
++
+ source arch/arm/mm/Kconfig
+ 
+ config IWMMXT

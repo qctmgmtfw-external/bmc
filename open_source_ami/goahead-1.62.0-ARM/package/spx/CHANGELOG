@@ -1,0 +1,980 @@
+Package: goahead (1.62.0); urgency = medium
+
+Abstract:
+	Autologout Audit support Added to Web
+
+Files Modified: data/web_session_ifc_ipmi.c, data/web_sessions.c, data/web_sessions.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 11 Aug 2011 20:52:26 IST
+
+Package: goahead (1.61.0); urgency = medium
+
+Abstract:
+	Added support build time change logo and copyright string feature
+
+Files Modified: data/security.c
+
+--Submitter:  (jonnychang@ami.com.tw) Wed, 27 Jul 2011 19:05:00 CST
+
+Package: goahead (1.60.0); urgency = medium
+
+Abstract:
+	Get Device ID Command is triggered as a keep alive packet from web Timer Thread runs for every 30 seconds
+
+Files Modified: data/main.c, data/web_session_ifc_ipmi.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Jul 2011 16:22:04 IST
+
+Package: goahead (1.59.0); urgency = high
+
+Abstract:
+	Following are the bugs fixed,
+* Unable to launch the GUI using ipv6 address in safari browser.
+* Unable to add/modify user in safari browser [ipv6 session].
+
+Files Modified: data/webs.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 22 Jul 2011 18:42:29 IST
+
+Package: goahead (1.58.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/web_sessions.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:40:13 IST
+
+Package: goahead (1.57.0); urgency = high
+
+Abstract:
+	Following are the changes done,
+* Web configuration fields are validated for Non-editable and Not-applicable arguments, as per core support.
+* JNLP arguments for KVM, CD, FD and HD configuration fields are also validated.
+
+Files Modified: data/hapi.c, data/main.c, data/web_session_ifc_ipmi.c, data/web_sessions.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 20 Jul 2011 14:13:51 IST
+
+Package: goahead (1.56.0); urgency = medium
+
+Abstract:
+	reveting commit 16108 and Allowing ipmi authentication first rather than radius user
+
+Files Modified: data/web_session_ifc_ipmi.c, data/web_sessions.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 08 Jul 2011 16:30:47 IST
+
+Package: goahead (1.55.0); urgency = medium
+
+Abstract:
+	Making web to use the common login audit
+
+Files Modified: data/Makefile, data/web_session_ifc_ipmi.c, data/web_sessions.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 08 Jul 2011 14:16:57 IST
+
+Package: goahead (1.54.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:07:10 IST
+
+Package: goahead (1.53.0); urgency = medium
+
+Abstract:
+	Webgo will be started after all the services are started.
+
+Files Modified: data/90-up-webserver
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 29 Jun 2011 17:00:24 IST
+
+Package: goahead (1.52.0); urgency = high
+
+Abstract:
+	Reverting back the GoAhead License to AMI
+
+Files Added: spx/LICENSES/LICENSE.AMI
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 17:28:46 EDT
+
+Package: goahead (1.51.0); urgency = high
+
+Abstract:
+	Updating SourceLicense, PackageLicense, BinaryLicense to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 16:16:49 EDT
+
+Package: goahead (1.50.0); urgency = medium
+
+Abstract:
+	When the yafuflash is in progress, the web is unable to communicate. Since the webgo server is killed.
+Due to that, the web is unable to display the message " The card is flash mode". Now, the webgo server 
+will not be killed and the message will be displayed.
+
+Files Modified: data/webgo.sh
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Mon, 20 Jun 2011 12:34:34 IST
+
+Package: goahead (1.49.0); urgency = high
+
+Abstract:
+	goahead binary pacakge needs to be essential to properly select one of the options provided by WebServer when selected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 09 Jun 2011 15:04:14 EDT
+
+Package: goahead (1.48.0); urgency = high
+
+Abstract:
+	binary package name changed to goahead, essential set to NO
+
+Files Added: spx/PACKAGES.D/goahead, spx/PACKAGES.D/goahead/DATA, spx/PACKAGES.D/goahead/SCRIPTS, spx/PACKAGES.D/goahead/SCRIPTS/dev-install
+Files Deleted: spx/PACKAGES.D/webgo, spx/PACKAGES.D/webgo/DATA, spx/PACKAGES.D/webgo/SCRIPTS, spx/PACKAGES.D/webgo/SCRIPTS/dev-install
+Files Modified: spx/INFO, spx/P.CONFIG, spx/RULES
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 09 Jun 2011 11:26:39 EDT
+
+Package: goahead (1.47.0); urgency = high
+
+Abstract:
+	Following are the changes done,
+* Added seperate library function to extract web port value from wp structure.
+* Added argument tags for all the arguments in Java applications like JViewer, play and download video.
+* Added virtual media status of each devices like CD, FD and HD to Java application.
+* Removed hardcoded URL framing in JNLP arguments, now URL is framed using the logged-in web session configuration.
+
+Files Modified: data/hapi.c, data/wcserver.c, data/web_sessions.h
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 09 Jun 2011 02:26:10 IST
+
+Package: goahead (1.46.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/hapi.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:25:07 EDT
+
+Package: goahead (1.45.0); urgency = medium
+
+Abstract:
+	When IPv6 address goes beyond 32 bytes, then the network info page in the web doesn't work correctly - fixed.
+
+Files Modified: data/wcserver.h
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Mon, 30 May 2011 19:44:16 IST
+
+Package: goahead (1.44.0); urgency = low
+
+Abstract:
+	Correction in dependancy.
+
+Files Modified: spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 27 May 2011 18:51:35 IST
+
+Package: goahead (1.43.0); urgency = high
+
+Abstract:
+	Build Error Fixed for Commit Nos: 13322: Comments not closed properly
+
+Files Modified: data/wcserver.c, data/wcserver.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 17 May 2011 17:06:30 EDT
+
+Package: goahead (1.42.0); urgency = low
+
+Abstract:
+	Added function headers
+
+Files Modified: data/wcserver.c, data/wcserver.h
+
+--Submitter: ManimehalaiS (manimehalais@amiindia.co.in) Tue, 17 May 2011 15:20:54 IST
+
+Package: goahead (1.41.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:16:06 EDT
+
+Package: goahead (1.40.0); urgency = high
+
+Abstract:
+	Removing libipmi dependency and using ncml calls
+
+Files Modified: data/hapi.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 07:59:17 EDT
+
+Package: goahead (1.39.0); urgency = high
+
+Abstract:
+	Handling the jnlp params from NCML config
+
+Files Modified: data/hapi.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 02:03:26 EDT
+
+Package: goahead (1.38.0); urgency = high
+
+Abstract:
+	The authtication mechanism is not working if user select the privilege as operatior and user.
+Becasue the condition is not correct.
+
+Files Modified: data/Makefile, data/web_session_ifc_ipmi.c
+
+--Submitter:  () Fri, 13 May 2011 10:49:27 CST
+
+Package: goahead (1.37.0); urgency = medium
+
+Abstract:
+	Checked for Authorization flag in goahead and proceed with the login
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Fri, 29 Apr 2011 20:15:55 IST
+
+Package: goahead (1.36.0); urgency = medium
+
+Abstract:
+	Privilege verification done for WWW
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Tue, 26 Apr 2011 18:57:50 IST
+
+Package: goahead (1.35.0); urgency = medium
+
+Abstract:
+	Removed Edir-dependency. we can have single page for configuring LDAP/EDir
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 19 Apr 2011 13:37:48 IST
+
+Package: goahead (1.34.0); urgency = medium
+
+Abstract:
+	Adding libedirconf to the goahead, so that webgui can depend on edirectory configuration library
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 12 Apr 2011 20:54:13 IST
+
+Package: goahead (1.33.0); urgency = medium
+
+Abstract:
+	Reverted the temporary fix for client IP argument fix, as fix is added in core
+
+Files Modified: data/hapi.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 28 Mar 2011 23:00:42 IST
+
+Package: goahead (1.32.0); urgency = high
+
+Abstract:
+	Made changes to create IPv6 socket only when IPv6 Support is enabled in stack. This will 
+avoid IPv4 socket creation, which will create problem with IPv6 socket. Also added validation
+to convert mixed form of IPv4 and IPv6 address.
+
+Files Modified: data/sockGen.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 25 Mar 2011 21:14:16 IST
+
+Package: goahead (1.31.0); urgency = medium
+
+Abstract:
+	Temporary fix for invalid client IP argument in create token.
+
+Files Modified: data/hapi.c, data/web_session_ifc_ipmi.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 17 Mar 2011 11:01:41 IST
+
+Package: goahead (1.30.0); urgency = high
+
+Abstract:
+	Dependencies corrected after PAM related packages are deprecated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 14 Mar 2011 14:46:14 EDT
+
+Package: goahead (1.29.0); urgency = high
+
+Abstract:
+	Added support to configure web session timeout value.
+
+Files Modified: data/main.c, data/web_session_ifc_ipmi.c, data/web_sessions.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 07 Mar 2011 19:54:55 IST
+
+Package: goahead (1.28.0); urgency = medium
+
+Abstract:
+	Changes made for build dependency.
+
+Files Modified: spx/INFO
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 21:20:01 IST
+
+Package: goahead (1.27.0); urgency = high
+
+Abstract:
+	Added video record feature in UI.
+
+Files Modified: data/Makefile, data/hapi.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 16:20:07 IST
+
+Package: goahead (1.26.0); urgency = low
+
+Abstract:
+	Instead of restarting web server, now only HTTPS service is restarted for uploading and generating the SSL certificate.
+
+Files Modified: data/main.c, data/web_session_ifc_ipmi.c, data/web_sessions.c, data/web_sessions.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 02 Mar 2011 15:44:17 IST
+
+Package: goahead (1.25.0); urgency = medium
+
+Abstract:
+	Resolved WebGo and CIM Namespace depedency
+
+Files Modified: data/WSManHandler.c, data/WSManHandler.h
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Wed, 23 Feb 2011 18:52:02 IST
+
+Package: goahead (1.24.0); urgency = medium
+
+Abstract:
+	Added support for namespace configuration
+
+Files Modified: data/WSManHandler.h
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Fri, 18 Feb 2011 03:22:24 IST
+
+Package: goahead (1.23.0); urgency = low
+
+Abstract:
+	Added link to libipmiparams which is required by libipmi
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 16 Feb 2011 19:46:29 IST
+
+Package: goahead (1.22.0); urgency = medium
+
+Abstract:
+	Changed a warning message from TCRIT to TWARN.
+
+Files Modified: data/webs.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 10 Feb 2011 00:50:46 IST
+
+Package: goahead (1.21.0); urgency = medium
+
+Abstract:
+	including Auth_flag to determine whether create local session needs to authenticate with given username/password, else null username/password can be used to create session.
+
+Files Modified: data/WSManHandler.c, data/web_session_ifc_ipmi.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 09 Feb 2011 17:44:26 IST
+
+Package: goahead (1.20.0); urgency = medium
+
+Abstract:
+	Storing Null character as last character in the webstoken string
+
+Files Modified: data/web_sessions.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 09 Feb 2011 14:14:59 IST
+
+Package: goahead (1.19.0); urgency = critical
+
+Abstract:
+	Callback and No Access users are not allowed to webpage login.
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 31 Jan 2011 15:19:49 IST
+
+Package: goahead (1.18.0); urgency = low
+
+Abstract:
+	Change includes to provide Admin privilege to Radius users. because Radius login doesn't provides proper privilege for now.
+this fix works well even in future, if Radius login is supported through PAM.
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 25 Jan 2011 19:14:20 IST
+
+Package: goahead (1.17.0); urgency = low
+
+Abstract:
+	Using created libipmi_session, instead of temporary libipmi_session, this will fix the fake session id creations
+
+Files Modified: data/web_session_ifc_ipmi.c, data/web_sessions.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 24 Jan 2011 20:15:57 IST
+
+Package: goahead (1.16.0); urgency = medium
+
+Abstract:
+	Timeout Configuration Fixed
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 Jan 2011 12:55:19 EST
+
+Package: goahead (1.15.0); urgency = low
+
+Abstract:
+	Webserver Sub menu should be hidden if the package is deselected
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 07 Jan 2011 17:46:58 EST
+
+Package: goahead (1.14.0); urgency = medium
+
+Abstract:
+	Removing all OEM extensible things from Webgo, So OEM Extensible things will be available in libuserauth.
+
+Files Modified: data/Makefile, data/web_session_ifc_ipmi.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 07 Jan 2011 14:17:35 IST
+
+Package: goahead (1.13.0); urgency = low
+
+Abstract:
+	OEM Privilege added as option for gid
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 06 Jan 2011 15:54:35 IST
+
+Package: goahead (1.12.0); urgency = low
+
+Abstract:
+	Added Common Audit logs for login/logout/auto-logout with the help of pdkapp hook.
+
+Files Modified: data/web_session_ifc_ipmi.c, data/web_sessions.c, data/web_sessions.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 27 Dec 2010 19:26:38 IST
+
+Package: goahead (1.11.0); urgency = low
+
+Abstract:
+	"Removing the Active Directory login.. it will be supported in DoPAMAuthentication..
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 23 Dec 2010 22:10:52 IST
+
+Package: goahead (1.10.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/WSManHandler.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:52:02 EST
+
+Package: goahead (1.9.0); urgency = medium
+
+Abstract:
+	Synopsis: Let's OpenSSL's version and algorithm can be chosen by MDS
+
+Files Modified: data/websSSL.c, spx/P.CONFIG
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 18 Nov 2010 13:49:36 CST
+
+Package: goahead (1.8.0); urgency = medium
+
+Abstract:
+	PAM changes for webgo- only for ipmi and ldap
+
+Files Modified: data/Makefile, data/web_session_ifc_ipmi.c, spx/INFO, spx/PACKAGES.D/webgo/SCRIPTS/dev-install
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Wed, 17 Nov 2010 16:57:32 IST
+
+Package: goahead (1.7.0); urgency = medium
+
+Abstract:
+	In some target/complier combinations __USE_XOPEN2K8 is defined and the target /usr/include/string.h defines strnlen under this macro. 
+So we don't need a redefintion of strnlen if __USE_XOPEN2K8 is defined
+
+Files Modified: data/misc.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 02 Nov 2010 16:54:14 EDT
+
+Package: goahead (1.6.0); urgency = medium
+
+Abstract:
+	memcpy of larger than data structure size in set webservice configs result in goahead crash. fixed by copying right size
+
+Files Modified: data/web_sessions.c
+
+--Submitter: varadachari sudan ayanam (varadacharia@ami.com) Wed, 27 Oct 2010 14:28:31 EDT
+
+Package: goahead (1.5.0); urgency = high
+
+Abstract:
+	Added dependency for NCSI configuation
+
+Files Modified: spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 05 Oct 2010 11:51:18 CST
+
+Package: goahead (1.4.0); urgency = high
+
+Abstract:
+	* Added NCSI configuation.
+
+Files Modified: data/Makefile
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Oct 2010 05:42:37 IST
+
+Package: goahead (1.3.0); urgency = medium
+
+Abstract:
+	Bug: Web page when launched in IE 8 and refreshed pressing F5 makes the page redirection to login window - fixed.
+
+Files Modified: data/security.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Sat, 02 Oct 2010 19:10:43 IST
+
+Package: goahead (1.2.0); urgency = medium
+
+Abstract:
+	Bug:When user with 'No privilege' is given in login page, the message prompt needs to be modified - fixed.
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 28 Sep 2010 12:47:53 IST
+
+Package: goahead (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:44:38 EDT
+
+Package: goahead (1.0.43); urgency = medium
+
+Abstract:
+	Modified Makefile to include wsman
+
+Files Modified: data/Makefile
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Wed, 01 Sep 2010 20:52:10 IST
+
+Package: goahead (1.0.42); urgency = medium
+
+Abstract:
+	Add ldap with privilege web design.
+Make PAM calls our proprietary ldap authentication lib.
+Change goahead dependency to include ami_pam_genericldap package.
+
+Files Modified: data/webauthldap, spx/INFO
+
+--Submitter: joywu (joywu) Sun, 29 Aug 2010 23:19:30 CST
+
+Package: goahead (1.0.41); urgency = medium
+
+Abstract:
+	Changes to upload file of 16MB size.
+
+Files Modified: data/multipart_handler.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 24 Aug 2010 00:42:52 IST
+
+Package: goahead (1.0.40); urgency = medium
+
+Abstract:
+	Added the numcd,numfd,numhd entry in the jnlp file
+
+Files Modified: data/hapi.c
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 23 Aug 2010 21:00:53 IST
+
+Package: goahead (1.0.39); urgency = low
+
+Abstract:
+	Changed the call for Creating the IPMI Session as LIBIPMI_Create_IPMI_Local_Session
+
+Files Modified: data/WSManHandler.c, data/web_session_ifc_ipmi.c, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 17 Aug 2010 21:27:49 IST
+
+Package: goahead (1.0.38); urgency = medium
+
+Abstract:
+	webui should be selected if webserver is selected
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 16 Aug 2010 12:06:34 EDT
+
+Package: goahead (1.0.37); urgency = medium
+
+Abstract:
+	Give Ldap user Administrator privilege whenever he/she attemps to lgoin.
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: joywu (joywu) Thu, 12 Aug 2010 14:17:57 CST
+
+Package: goahead (1.0.36); urgency = medium
+
+Abstract:
+	Modify function LDAP_Login() protopype and tune WebSessionIfc_Create() in an attempt to support Ldap with privilege feature.
+
+Files Modified: data/web_session_ifc_ipmi.c
+
+--Submitter: joywu (joywu) Mon, 09 Aug 2010 01:20:23 CST
+
+Package: goahead (1.0.35); urgency = low
+
+Abstract:
+	proper conditions added in the script to avoid error messages
+
+Files Modified: data/90-up-webserver
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 03 Aug 2010 13:10:56 IST
+
+Package: goahead (1.0.34); urgency = low
+
+Abstract:
+	MBMC Changes for goahead
+
+Files Modified: data/WSManHandler.c, data/hapi.c, data/web_session_ifc_ipmi.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 20:00:08 IST
+
+Package: goahead (1.0.33); urgency = medium
+
+Abstract:
+	Fixed binary Required dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: pavithra s (pavithras@amiindia.co.in) Tue, 29 Jun 2010 15:40:57 IST
+
+Package: goahead (1.0.32); urgency = medium
+
+Abstract:
+	1. Added the support for setting default value back to conf when read fails with NCML.
+2. Changed related codes by modified libncml functions.
+
+Files Modified: data/WSManHandler.c, data/main.c, data/web_sessions.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 28 Jun 2010 17:08:44 CST
+
+Package: goahead (1.0.31); urgency = low
+
+Abstract:
+	Fixed binary build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 25 Jun 2010 12:55:06 EDT
+
+Package: goahead (1.0.30); urgency = high
+
+Abstract:
+	Bug: Unable to login when username created with Single quotes ['] in the end and in between - fixed.
+
+Files Modified: data/hapi.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 14 Jun 2010 19:39:16 IST
+
+Package: goahead (1.0.29); urgency = high
+
+Abstract:
+	* webgo will not be restarted while doing ifup. 
+ * so checking for webgo running state, if its running just levae it else restart webgo.
+
+Files Modified: data/90-up-webserver, spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 09 Jun 2010 15:20:26 IST
+
+Package: goahead (1.0.28); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:26:17 EDT
+
+Package: goahead (1.0.27); urgency = low
+
+Abstract:
+	URI validation is added in wsman layer
+
+Files Modified: data/WSManHandler.c
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Tue, 25 May 2010 14:18:49 IST
+
+Package: goahead (1.0.26); urgency = medium
+
+Abstract:
+	Firmware upload page is changed to File upload page, which can be used for file upload in UI. So file name in Flash Allow table is corrected.
+
+Files Modified: data/security.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 20 May 2010 17:24:54 IST
+
+Package: goahead (1.0.25); urgency = low
+
+Abstract:
+	Don't restart webserver when "lo" goes up
+
+Files Modified: data/90-up-webserver
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 17:13:30 EDT
+
+Package: goahead (1.0.24); urgency = low
+
+Abstract:
+	Added Runlevel 8 entries
+
+Files Modified: data/webgo.sh
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:10:39 EDT
+
+Package: goahead (1.0.23); urgency = high
+
+Abstract:
+	IPv4/IPv6 kernel independent code is written for webgo using getaddrinfo call. Now webgo will run without IPv6 support in the kernel
+
+Files Modified: data/main.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 11 May 2010 18:05:15 IST
+
+Package: goahead (1.0.22); urgency = low
+
+Abstract:
+	Modified for getting interface name at beginning.
+
+Files Modified: data/main.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Thu, 06 May 2010 11:45:20 EDT
+
+Package: goahead (1.0.21); urgency = low
+
+Abstract:
+	Modified for not getting web timeout value frequently.
+
+Files Modified: data/main.c, data/web_sessions.c, data/web_sessions.h
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Wed, 05 May 2010 18:09:59 EDT
+
+Package: goahead (1.0.20); urgency = medium
+
+Abstract:
+	Modified for reading service configurations with NCML library, and added the support for getting active sessions.
+
+Files Modified: data/Makefile, data/main.c, data/web_sessions.c, data/web_sessions.h, spx/INFO
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Mon, 03 May 2010 21:29:52 EDT
+
+Package: goahead (1.0.19); urgency = low
+
+Abstract:
+	Added hostname library for building.
+
+Files Modified: data/Makefile
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Sat, 01 May 2010 20:59:04 EDT
+
+Package: goahead (1.0.18); urgency = medium
+
+Abstract:
+	Changes in PAM module for Active Directory.
+
+Files Modified: data/webauthactivedir, spx/INFO
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Thu, 29 Apr 2010 12:13:35 EDT
+
+Package: goahead (1.0.17); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:28:21 EDT
+
+Package: goahead (1.0.16); urgency = medium
+
+Abstract:
+	dependencies fixed for MDS
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Tue, 20 Apr 2010 16:51:07 EDT
+
+Package: goahead (1.0.15); urgency = medium
+
+Abstract:
+	Common webs functions for lighttpd and webgo
+
+Files Added: data/wcserver.c, data/wcserver.h
+Files Modified: data/Makefile, data/WSManHandler.c, data/asp.c, data/balloc.c, data/cgi.c, data/default.c, data/ejlex.c, data/ejparse.c, data/form.c, data/h.c, data/handler.c, data/hapi.c, data/main.c, data/misc.c, data/page.c, data/ringq.c, data/security.c, data/sym.c, data/umui.c, data/url.c, data/value.c, data/web_session_ifc_ipmi.c, data/web_session_ifc_ipmi.h, data/web_sessions.h, data/webs.c, data/websSSL.c, data/websda.c, data/websda.h, data/wsIntrn.h, spx/INFO
+
+--Submitter: Manimehalai (manimehalais@amiindia.co.in) Mon, 19 Apr 2010 16:31:26 IST
+
+Package: goahead (1.0.14); urgency = medium
+
+Abstract:
+	Build Dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 14 Apr 2010 23:03:42 EDT
+
+Package: goahead (1.0.13); urgency = medium
+
+Abstract:
+	package dependencies corrected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Tue, 13 Apr 2010 20:14:57 EDT
+
+Package: goahead (1.0.12); urgency = high
+
+Abstract:
+	Added the HD Port argument for JNLP
+
+Files Modified: data/hapi.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sun, 11 Apr 2010 06:04:30 IST
+
+Package: goahead (1.0.11); urgency = low
+
+Abstract:
+	Added changes to Active Directory login using PAM. Privileges used for IPMI login fetched from AD server.
+
+Files Added: data/webauthactivedir
+Files Modified: data/web_session_ifc_ipmi.c, data/web_session_ifc_ipmi.h, spx/PACKAGES.D/webgo/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Fri, 02 Apr 2010 18:01:50 EDT
+
+Package: goahead (1.0.10); urgency = medium
+
+Abstract:
+	Added Configuration Script  to configure WEB Session Timeout
+
+Files Added: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 01 Apr 2010 14:35:31 EDT
+
+Package: goahead (1.0.9); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:44:34 EDT
+
+Package: goahead (1.0.8); urgency = high
+
+Abstract:
+	webifc_dev is a newly created development package. webgo_dev is removed to avoid cercular depenendcies.
+
+Files Deleted: data/uemf.h, data/ej.h, data/sslcertificate.h, data/websSSL.h, data/webifc.h, data/webs.h, data/sshkey.h, data/multipart_handler.h, spx/PACKAGES.D/webgo_dev, spx/PACKAGES.D/webgo_dev/SCRIPTS, spx/PACKAGES.D/webgo_dev/SCRIPTS/dev-install, spx/PACKAGES.D/webgo_dev/DATA
+Files Modified: spx/RULES, spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 16:39:53 EDT
+
+Package: goahead (1.0.7); urgency = low
+
+Abstract:
+	inet_ntop() length parameter modified to INET6_ADDRSTRLEN
+
+Files Modified: data/sockGen.c, data/main.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 26 Feb 2010 15:32:52 IST
+
+Package: goahead (1.0.6); urgency = low
+
+Abstract:
+	Removed the unnecessary libraries in goahead Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Wed, 24 Feb 2010 21:58:31 IST
+
+Package: goahead (1.0.5); urgency = low
+
+Abstract:
+	Added IPv6 support for SNMP and SMTP
+
+Files Modified: data/webifc.h
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Tue, 23 Feb 2010 03:19:03 IST
+
+Package: goahead (1.0.4); urgency = low
+
+Abstract:
+	Added disable_javascript.html in Pre-Login allow table entries
+
+Files Modified: data/security.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Mon, 22 Feb 2010 18:27:46 IST
+
+Package: goahead (1.0.3); urgency = low
+
+Abstract:
+	Issue with java redirection with BMC used with NAT routing - fixed.
+
+Files Modified: data/hapi.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Fri, 19 Feb 2010 16:02:05 IST
+
+Package: goahead (1.0.2); urgency = low
+
+Abstract:
+	Added NTP dependency support in webgo.
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Thu, 18 Feb 2010 17:34:08 IST
+
+Package: goahead (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:57:18 EST
+
+Package:goahead (1.0.0);urgency=new
+
+Abstract:
+	This package includes the GoAhead embedded web server.
+
+Files Added: webs.h, value.c, emfdb.h, web_session_ifc_ipmi.c, um.h, umui.c, sym.c, cgi.c, websuemf.c, webifc.h, uemf.h, WSManHandler.h, base64.c, webauthradius, h.c, balloc.c, security.c, misc.c, web_sessions.h, defines.h, webs.c, md5c.c, ejlex.c, websda.h, handler.c, emfdb.c, ringq.c, ejparse.c, ej.h, sslcertificate.h, asp.c, multipart_handler.c, web_sessions.c, webgo.sh, sock.c, connections.h, jsphandler.c, um.c, webrom.c, jsphandler.h, sshkey.h, mime.c, hapi.c, Makefile, WSManHandler.c, sockGen.c, main.c, wsIntrn.h, ejIntrn.h, 90-up-webserver, url.c, page.c, default.c, websSSL.h, websda.c, uemf.c, multipart_handler.h, connections.c, md5.h, form.c, websSSL.c, hapi.h, rom.c, webauthldap, webcomp.c, web_session_ifc_ipmi.h
+
+--Submitter: SP Core Team (spcoreteam@ami.com) Sun, 31 Jan 2010 11:52:34 +0530

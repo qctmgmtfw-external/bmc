@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/adc
+	MKDIR_NOCLEAN %SPXINC/adc
+	COPY_FILE ./adcifc.h %SPXINC/adc
+	COPY_FILE ./libadc.a %SPXLIB/adc
+	COPY_FILE ./libadc.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/adc
+	ADD_LIBRARY_LINKS %SPXLIB/adc libadc.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

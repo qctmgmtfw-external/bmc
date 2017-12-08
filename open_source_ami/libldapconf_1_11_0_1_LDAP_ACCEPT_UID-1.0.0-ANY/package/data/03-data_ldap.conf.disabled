@@ -1,0 +1,7 @@
+--- .pristine/libldapconf-1.11.0-src/data/ldap.conf.disabled Tue Sep  4 18:16:29 2012
++++ source/libldapconf-1.11.0-src/data/ldap.conf.disabled Fri Sep  7 14:30:42 2012
+@@ -5,3 +5,4 @@
+ #pam_password         crypt               
+ #nss_reconnect_tries  0                   
+ #port                 389                 
++#attribute_userlogin  cn	

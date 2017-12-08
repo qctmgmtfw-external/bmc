@@ -1,0 +1,15 @@
+./01-board_AST2300EVB_AST2300EVB.c.patch 1983 03531bf3c58fa12cecbca00cc8e86084
+./02-board_AST2300EVB_lowlevel_init.S.patch 90757 6f41671f5809a31ced11e67b19db9ce2
+./03-board_AST2300EVB_config.mk.patch 1120 ab0f9d10b41655e0b89ac651785ba694
+./04-board_AST2300EVB_u-boot.lds.patch 1796 8e10d500f958a922f86cbf5363f22a71
+./05-board_AST2300EVB_Makefile.patch 1583 e0084bfc6c649fffda3c1c73f1a2e110
+./06-board_AST2300EVB_fmh.c.patch 201 92568db1b77da9abc9d2e7af527885a2
+./07-include_configs_AST2300EVB.h.patch 11309 4d1474a017db1a66b1d23fb484217762
+./08-MAKEALL.patch 402 2aec9d02f3269cd603aa1e7e3ff92875
+./09-Makefile.patch 515 90a9ea5c18198d9e9a8597a621a10dfd
+./10-ncsi.patch 676 38fed7b5657ca3f2372cbca61b786369
+./11-vendors_ami_fwupdate_fwupdate.c.patch 1373 0d09afe5485b13b164641050ce4f0725
+./12-vendors_ami_fwupdate_kcs.h.patch 656 50f01bde75f031371e1d5566e5ca22e1
+./13-vendors_ami_fmh_cmd_fmh.c.patch 317 9cec17e33f6f1d7f3959b580e2159b45
+./14-vendors_ami_fmh_cmd_fmh.c.patch 780 a724f4fdf21565c7331778fd06e99745
+./15-common_main.c.patch 488 d02c44cc2310f5e2bf7aac5c24f4d908

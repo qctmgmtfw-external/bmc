@@ -1,0 +1,20 @@
+Package : ipmimain_2_61_0_1_EIP_68217
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for ipmimain (2.61.0)
+Depends :  ipmimain(==2.61.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Suresh V (sureshv@amiindia.co.in)
+Urgency : new
+Description : the User is added in Groups based on access limit.The user is stored in ChannelUserInfo table sequentially. But in UserInfo table it based on index(slot).we have to compare userid from userinfo table with the every userid in channelUserInfo table.Now we will get correct accesslimit for the user and added in groups correctly.
+.
+

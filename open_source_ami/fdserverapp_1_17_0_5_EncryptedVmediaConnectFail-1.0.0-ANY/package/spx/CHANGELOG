@@ -1,0 +1,9 @@
+Package: fdserverapp_1_17_0_5_EncryptedVmediaConnectFail (1.0.0); urgency = new
+
+Abstract:
+	encrypted media session also make connection to media servers on loopback interface and so removed restriction on using loopback interface only for local media redirection
+
+Files Added: data, data/00-data_fdserver.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 10 May 2013 18:21:36 CST
+

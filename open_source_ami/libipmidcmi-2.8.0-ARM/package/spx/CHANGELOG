@@ -1,0 +1,180 @@
+Package: libipmidcmi (2.8.0); urgency = low
+
+Abstract:
+	Adding ipmipdk_dev to the build depends and removed an unwanted file
+
+Files Deleted: data/DCMDevice.c~
+Files Modified: data/DCMDevice.c, spx/INFO, spx/PACKAGES.D/libipmidcmi/SCRIPTS/dev-install
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 14 Jul 2011 18:12:49 IST
+
+Package: libipmidcmi (2.7.0); urgency = low
+
+Abstract:
+	updated dcmi
+
+Files Added: data/DCMDevice.c~
+Files Modified: data/DCMDevice.c
+
+--Submitter: Charles Lilly (charlesl@ami.com) Thu, 16 Jun 2011 14:31:54 EDT
+
+Package: libipmidcmi (2.6.0); urgency = high
+
+Abstract:
+	update for DCMI v2.0
+
+Files Modified: data/DCMDevice.c, data/Makefile
+
+--Submitter: Charles Lilly (charlesl@ami.com) Wed, 08 Jun 2011 17:25:53 EDT
+
+Package: libipmidcmi (2.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:50:19 EDT
+
+Package: libipmidcmi (2.4.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:44:55 IST
+
+Package: libipmidcmi (2.3.0); urgency = medium
+
+Abstract:
+	Fix to make flushing of IPMI Configurations to NVRAM faster.
+
+Files Modified: data/DCMDevice.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 19:02:26 IST
+
+Package: libipmidcmi (2.2.0); urgency = medium
+
+Abstract:
+	Modified to use GetHostNameConf and SetHostNameConf for new hostname.conf with INI format.
+
+Files Modified: data/DCMDevice.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 22 Apr 2011 15:55:00 CST
+
+Package: libipmidcmi (2.1.0); urgency = medium
+
+Abstract:
+	Removing unwanted #if defs as the enabling of commands can be done in libipmipdkcmds package and not from support.h.
+
+Files Modified: data/DCMDevice.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 14:57:14 IST
+
+Package: libipmidcmi (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/DCMDevice.c, data/DCMIMetaInfo.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:05:33 IST
+
+Package: libipmidcmi (1.4.0); urgency = low
+
+Abstract:
+	DCMI Version 1.1 support
+
+Files Modified: data/DCMDevice.c, data/GroupExtn.c, data/Makefile
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 13 Jan 2011 16:27:20 CST
+
+Package: libipmidcmi (1.3.0); urgency = low
+
+Abstract:
+	Fix for Build Error
+
+Files Modified: data/DCMDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 23 Nov 2010 19:36:10 IST
+
+Package: libipmidcmi (1.2.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/DCMDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:10:12 EDT
+
+Package: libipmidcmi (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:56:18 EDT
+
+Package: libipmidcmi (1.0.6); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/DCMDevice.c, data/Makefile
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:47:56 IST
+
+Package: libipmidcmi (1.0.5); urgency = low
+
+Abstract:
+	Fix issue: MsgHndlr be auto restarted after the denominator of caculating DCMI average power code is overflow. SPX also had implement this solution.
+
+Files Modified: data/DCMDevice.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 03 Aug 2010 11:59:44 CST
+
+Package: libipmidcmi (1.0.4); urgency = low
+
+Abstract:
+	MBMC Changes for DCMI
+
+Files Modified: data/DCMDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:47:29 IST
+
+Package: libipmidcmi (1.0.3); urgency = low
+
+Abstract:
+	Removig gpio from build dependancy for libipmidcmi
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 14 Jun 2010 12:25:11 IST
+
+Package: libipmidcmi (1.0.2); urgency = medium
+
+Abstract:
+	ln -s repalced with CREATE_SOFT_LINK
+
+Files Modified: spx/PACKAGES.D/libipmidcmi/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 05 Mar 2010 10:08:59 EST
+
+Package: libipmidcmi (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:05:23 EST
+
+Package:libipmidcmi (1.0.0);urgency=new
+
+Abstract:
+	This package contains ipmi dcmi related files.
+
+Files Added: GroupExtn.c, DCMIMetaInfo.c, DCMDevice.c, Makefile
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Tue, 8 Dec 2009 17:32:51 -0500

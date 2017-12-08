@@ -1,0 +1,148 @@
+Package: libnss_ipmi (1.15.0); urgency = medium
+
+Abstract:
+	Passing Session Handle NULL to GetReqUserinfo
+
+Files Modified: data/nss-ipmi.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 29 Jul 2011 19:55:29 IST
+
+Package: libnss_ipmi (1.14.0); urgency = medium
+
+Abstract:
+	Whenever AD, LDAP user logs in, Inspite of successful login some error messages(info messages) are displayed.changed this info messages to debug messages.
+
+Files Modified: data/nss-ipmi.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 28 Jun 2011 19:33:31 IST
+
+Package: libnss_ipmi (1.13.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:05:34 EDT
+
+Package: libnss_ipmi (1.12.0); urgency = low
+
+Abstract:
+	Making libnss_ipmi to be in Authentication group, changes done to move OEM extensible in libuserauth
+
+Files Modified: data/Makefile, data/nss-ipmi.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 07 Jan 2011 14:20:13 IST
+
+Package: libnss_ipmi (1.11.0); urgency = low
+
+Abstract:
+	nss-ipmi is enabled only when IPMI Support is enabled
+
+Files Modified: spx/INFO
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 06 Jan 2011 12:53:53 IST
+
+Package: libnss_ipmi (1.10.0); urgency = high
+
+Abstract:
+	fixed issue to get reserved users info
+
+Files Modified: data/nss-ipmi.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 28 Dec 2010 21:05:25 IST
+
+Package: libnss_ipmi (1.9.0); urgency = high
+
+Abstract:
+	changed dummyusers file access macro to reservedusers
+
+Files Modified: data/nss-ipmi.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Wed, 22 Dec 2010 20:55:51 IST
+
+Package: libnss_ipmi (1.8.0); urgency = low
+
+Abstract:
+	Display the name of the reserved user which is not handled
+
+Files Modified: data/nss-ipmi.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 23:20:43 EST
+
+Package: libnss_ipmi (1.7.0); urgency = high
+
+Abstract:
+	moved dummyusers to sys_base for common use
+
+Files Deleted: data/dummyusers
+Files Modified: spx/PACKAGES.D/libnss_ipmi/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 21 Dec 2010 19:59:07 IST
+
+Package: libnss_ipmi (1.6.0); urgency = medium
+
+Abstract:
+	Using the other params of getpwnam to store strings and refer - this fixes problem for passwdless ssh login
+
+Files Modified: data/Makefile, data/nss-ipmi.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Tue, 30 Nov 2010 15:49:17 IST
+
+Package: libnss_ipmi (1.5.0); urgency = medium
+
+Abstract:
+	NULL user not allowed from nss-ipmi
+
+Files Modified: data/nss-ipmi.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Tue, 23 Nov 2010 17:06:55 IST
+
+Package: libnss_ipmi (1.4.0); urgency = medium
+
+Abstract:
+	removing nssipmi_dev as it is not needed
+
+Files Deleted: spx/PACKAGES.D/libnss_ipmi_dev, spx/PACKAGES.D/libnss_ipmi_dev/DATA, spx/PACKAGES.D/libnss_ipmi_dev/SCRIPTS, spx/PACKAGES.D/libnss_ipmi_dev/SCRIPTS/dev-install
+Files Modified: spx/INFO
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Fri, 12 Nov 2010 14:25:00 IST
+
+Package: libnss_ipmi (1.3.0); urgency = low
+
+Abstract:
+	Description Field Cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 11 Nov 2010 10:33:42 IST
+
+Package: libnss_ipmi (1.2.0); urgency = medium
+
+Abstract:
+	reverting the chges for dummyuser file as etc/passwd will only contain root user
+
+Files Added: data/dummyusers
+Files Modified: data/nss-ipmi.c, spx/PACKAGES.D/libnss_ipmi/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Tue, 09 Nov 2010 17:47:28 IST
+
+Package: libnss_ipmi (1.1.0); urgency = medium
+
+Abstract:
+	removing dummyusers file and related code as sshd entry will be read by nss_compat from etc/passwd
+
+Files Deleted: data/dummyusers
+Files Modified: data/nss-ipmi.c, spx/PACKAGES.D/libnss_ipmi/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 08 Nov 2010 21:27:34 IST
+
+Package: libnss_ipmi (1.0.0); urgency = new
+
+Abstract:
+	Contains implementation of nss-ipmi
+
+Files Added: data, data/Makefile, data/dummyusers, data/nss-ipmi.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libnss_ipmi, spx/PACKAGES.D/libnss_ipmi/DATA, spx/PACKAGES.D/libnss_ipmi/SCRIPTS, spx/PACKAGES.D/libnss_ipmi/SCRIPTS/dev-install, spx/PACKAGES.D/libnss_ipmi_dev, spx/PACKAGES.D/libnss_ipmi_dev/DATA, spx/PACKAGES.D/libnss_ipmi_dev/SCRIPTS, spx/PACKAGES.D/libnss_ipmi_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 04 Nov 2010 08:38:46 IST
+

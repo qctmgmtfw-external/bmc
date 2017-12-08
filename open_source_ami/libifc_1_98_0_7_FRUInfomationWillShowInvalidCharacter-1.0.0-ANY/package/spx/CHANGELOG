@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_7_FRUInfomationWillShowInvalidCharacter (1.0.0); urgency = new
+
+Abstract:
+	FRU Infomation will show invalid character
+
+Files Added: data, data/00-data_webifc_StorDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: benchen (benchen@ami.com.tw) Wed, 04 Jan 2012 17:45:48 CST
+

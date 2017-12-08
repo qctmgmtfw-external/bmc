@@ -1,0 +1,28 @@
+--- u-boot-1.1.6/common/main.c	2010-01-20 18:13:55.000000000 +0800
++++ u-boot-1.1.6-ami/common/main.c	2010-01-20 17:19:48.000000000 +0800
+@@ -38,7 +38,7 @@
+ #include <hush.h>
+ #endif
+ 
+-#if 0  //Change to ifdef CONFIG_NCSI_SUPPORT to Autostart NCSI detection
++#ifdef CONFIG_NCSI_SUPPORT
+ #include <net.h>
+ #endif
+ 
+@@ -369,8 +369,15 @@
+ 	install_auto_complete();
+ #endif
+ 
+-#if 0  //Change to ifdef CONFIG_NCSI_SUPPORT to Autostart NCSI detection
++#ifdef CONFIG_NCSI_SUPPORT
++	#ifdef CONFIG_NCSI_ETH0
++	setenv("ethact", "ast_eth0");
+ 	NetLoop(NCSI);
++	#endif
++	#ifdef CONFIG_NCSI_ETH1
++	setenv("ethact", "ast_eth1");
++	NetLoop(NCSI);
++	#endif
+ #endif
+ 
+ #ifdef CONFIG_PREBOOT

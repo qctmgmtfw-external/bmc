@@ -1,0 +1,8 @@
+./00-data_shadowio.c 435 0b854e2d09fecb840e939ca84690b312
+./01-data_groupio.c 749 46ae6e44c3aed578ff91531eae3d1d33
+./02-data_helpers.c 512 f799de8e4cdb746f4ed3f243b276afc6
+./03-data_usermapis.c 635 92d55f00f1d2e7d602a2858f813dfe79
+./04-data_pwio.c 893 58dd8061aaedc8c4970830c7cacedfe4
+./05-data_authenticate.c 340 08886ad28ff86adb1bb8ba68a5a1ddb7
+./06-data_webshio.c 433 ddb0acd736bcfa520e6d03cd0a131daa
+./07-data_commonio.h 601 df64382e67fcc47eb6f57d97c3e40a1d

@@ -1,0 +1,9 @@
+Package: libtoken_1_7_0_1_EIP_69351 (1.0.0); urgency = new
+
+Abstract:
+	Java preview option shows connection failed status when host video is in sleep mode, issue fixed
+
+Files Added: data, data/00-data_sessioncfg.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 19 Sep 2011 19:45:16 IST
+

@@ -1,0 +1,19 @@
+Package : libi2c
+Non-Editable : YES
+Version : 1.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Dinesh Selvam  (dineshs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Group : LIBRARY
+Config-Tag : I2C Library Support
+Required : libunix
+Depends : i2c
+Package-License : AMI
+Description : I2C Library Binary
+.

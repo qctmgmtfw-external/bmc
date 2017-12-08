@@ -1,0 +1,9 @@
+Package: webui_1_122_0_12_EIP92790_PhysicalKeyboardSupport (1.0.0); urgency = new
+
+Abstract:
+	Physical Keyboard support is added in Web
+
+Files Added: data, data/00-data_MDS-Workspace_page_configure_remote_session.html, data/01-data_MDS-Workspace_www_str_EN_common_str.js, data/02-data_MDS-Workspace_www_str_EN_configure_remote_session_str.js, data/03-data_MDS-Workspace_www_page_configure_remote_session.html, data/04-data_MDS-Workspace_www_help_EN_configure_remote_session_hlp.html, data/05-data_MDS-Workspace_www_impl_configure_remote_session_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 11 Jul 2012 16:20:12 CST
+

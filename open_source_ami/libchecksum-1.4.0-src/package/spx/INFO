@@ -1,0 +1,43 @@
+Source : libchecksum
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : libchecksum, libchecksum_dev
+Build-Depends : crosscc, rules
+Essential : NO
+Group : LIBRARY
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : MIT
+Package-License : MIT
+Architecture : ALL
+Urgency : high
+Description : This package provides Checksum functions - crc32 and modulo100
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : libchecksum
+Section : lib
+Essential : NO
+Package-License : MIT
+Description : This package provides Checksum functions - crc32 and modulo100
+.
+
+Package : libchecksum_dev
+Section : dev
+Essential : NO
+Package-License : MIT
+Description : Development package for checksum functions - crc32 and modulo100
+Contains header files and libraries.
+.
+

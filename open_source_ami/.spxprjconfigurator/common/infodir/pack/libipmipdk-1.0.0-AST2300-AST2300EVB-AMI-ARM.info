@@ -1,0 +1,22 @@
+Package : libipmipdk
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Suresh V  (sureshv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+SOC : AST2300
+PLATFORM : AST2300EVB
+OEM : AMI
+Urgency : new
+Section : lib
+Essential : YES
+Config-Tag : IPMI PDK Library for AST2300EVB Platform(AMI OEM Version)
+Group : PLATFORM
+Provides : IPMI_PDK
+Depends : ipmimain
+Package-License : AMI
+Description : This package contains IPMI PDK Hooks Library for AST2300EVB (AMI OEM Version)
+.

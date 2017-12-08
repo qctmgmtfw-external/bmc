@@ -1,0 +1,193 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_users help</title>
+	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body oncontextmenu='return false;'>
+	<h2><div class='floatRight'><a href='javascript://' class='closeBtn' 
+		onclick='top.closeHelp();'>X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames['mainFrame'].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = '', bodyContent = '', buttonContent = '';
+	var helpContent;
+	if (frameName.length)
+	{
+		bodyContent = "<h4>Password Size</h4>" +
+			"Either 16 Bytes or 20 Bytes password size can be choosen. " +
+			"Default option is 16 Bytes.<br>" +
+			"If '16 Bytes' option is choosen, maximum password size is 16 " +
+			"characters. " +
+			"If '20 Bytes' option is choosen, maximum password size is 20 " +
+			"characters." +
+			"<br>" +
+			"<strong>NOTE:</strong> For 20 Bytes password, lan session will " +
+			"not be established." +
+			"<h4>Password, Confirm Password</h4>" +
+			"Enter and confirm the new password here. " +
+			"<ul><li>- Password must be at least 1 character long.</li>" +
+			"<li>- White space is not allowed.</li></ul>" +
+			"<strong>NOTE:</strong> This field will not allow more than " +
+			"16/20 characters based on Password size field value." +
+			"<h4>User Access</h4>" +
+			"Check the box to enable user access for the user. " +
+			"<h4>Network Privilege</h4>" +
+			"Select the level of network privilege to be assigned to this " +
+			"user. 4 levels are available: Administrator, Operator, User and " +
+			"No Access. " ;
+						
+		if (checkProjectCfg("SNMP")) {
+			bodyContent += "<h4>SNMP Status</h4>" +
+				"Check the box to enable SNMP access for the user. " +
+				"<br>" +
+				"<strong>NOTE:</strong> Password field is mandatory, if " +
+				"SNMP Status is enabled." +
+				"<h4>SNMP Access</h4>" +
+				"Choose the SNMP Access level option for user. Either it " +
+				"can be Read Only or Read Write." +
+				"<h4>Authentication Protocol</h4>" +
+				"Choose the Authentication Protocol to use for SNMP settings." +
+				"<br>" +
+				"<strong>NOTE:</strong> Password field is mandatory, if " +
+				"Authentication protocol is changed." +
+				"<h4>Privacy protocol</h4>" +
+				"Choose the Encryption algorithm to use for SNMP settings.";
+		}
+		bodyContent += "<h4>Email ID</h4>" +
+			"Enter the email ID for the user. If user forgets the password, " +
+			"new password will be mailed to the configured email ID." +
+			"<br>" +
+			"<strong>NOTE:</strong> SMTP Server must be configured to send " +
+			"the email." +
+			"<h4>Email Format</h4>" +
+			"Specify the format for the email. This format will be used, " +
+			"while sending the email. Two type of formats are available:"+
+			" <ul><li>- AMI-Format:" +
+			" The subject of this mail format is 'Alert from (your Hostname)'." +
+			" The mail content shows sensor information, ex: Sensor type " + 
+			" and Description.</li></ul>" +
+			" <ul><li>- FixedSubject-Format:" +
+			" This format displays the message according to user's setting. " +
+			" You must set the subject and message for email alert.</li></ul>";
+
+		if ("addUserForm" == frameName[0].getAttribute('id'))
+		{
+			titleContent = "<div class='helpmainhead'>Add User</div></h2>" +
+			"<div class='subSection'>" +
+			"Use this form to add a new user. " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>User Name</h4>" +
+			"Enter the name of the new user. " +
+			"<ul><li>- User Name is a string of 1 to 16 alpha-numeric " +
+			"characters.</li>" +
+			"<li>- It must start with an alphabetical character.</li>" +
+			"<li>- It is case-sensitive.</li>" +
+			"<li>- Special characters ','(comma), '.'(period), ':'(colon), " +
+			"';'(semicolon), ' '(space), '/'(slash), '\\'(backslash), '('" +
+			"(left bracket) and ')'(right bracket) are not allowed.</li></ul>";
+
+			buttonContent = "<h4>New SSH Key</h4>" +
+			"Use Browse button to navigate to the public SSH key file." +
+			"<ul><li>- SSH key file should be of pub type.</li></ul>" +
+			"<h4>Add</h4>" +
+			"Click  'Add' to save the new user and return to Users list. " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification and return to Users " +
+			"list." +
+			"</fieldset></div>";
+		}
+		else if ("modUserForm" == frameName[0].getAttribute('id'))
+		{
+			titleContent = "<div class='helpmainhead'>Modify User</div></h2>" +
+			"<div class='subSection'>" +
+			"Use this form to modify the existing user's password and " +
+			"permission." +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>User Name</h4>" +
+			"The name of the user being configured (read only). " +
+			"<h4>Change Password</h4>" +
+			"<p>To change the user's password, check the 'Change Password' " +
+			"option. This will enable the password fields. ";
+
+			buttonContent = "<h4>Uploaded SSH Key</h4>" +
+			"The uploaded SSH key information will be displayed (read only)." +
+			"<h4>New SSH Key</h4>" +
+			"Use Browse button to navigate to the public SSH key file." +
+			"<ul><li>- SSH key file should be of pub type.</li></ul>" +
+			"<h4>Modify</h4>" +
+			"Click 'Modify' to accept the modification and return to Users " +
+			"list. " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification and return to Users " +
+			"list. " +
+			"</fieldset></div>";
+		}
+		helpContent = titleContent + bodyContent + buttonContent;
+	}
+	else
+	{
+		helpContent = "<div class='helpmainhead'>Users</div></h2>" +
+		"<div class='subSection'>" +
+		"The displayed table shows any configured Users and available slots. " +
+		"You can modify or add new users from here.<br>" +
+		"A maximum of 10 slots are available and include the default of " +
+		"admin and anonymous. " +
+		"It is advised that the anonymous user's privilege and password " +
+		"should be modified as a security measure. " +
+		"To view the page, you must have Operator privileges.<br>" +
+		"To modify or add a user, You must have Administrator privileges. " +
+		"<br>" +
+		"<strong>NOTE:</strong> Free slots are denoted by \"~\" in all " +
+		"columns for the slot. " +
+		"<br><br>" +
+		"<fieldset>" +
+		"<legend>Actions</legend>" +
+		"<h4>Add User</h4>" +
+		"Select a free slot and click 'Add User' to add a new user to the " +
+		"device. " +
+		"Alternatively, double click on a free slot to add a user. " +
+		"<h4>Modify User</h4>" +
+		"Select a configured slot and click 'Modify User' to modify that " +
+		"user. Alternatively, double click on the configured slot. " +
+		"<h4>Delete User</h4>" +
+		"Select the desired user to be deleted and click 'Delete User'. " +
+		"</fieldset>" +
+		"</div>";
+	}
+	document.write(helpContent);
+	</script>
+
+	</body>
+</html>

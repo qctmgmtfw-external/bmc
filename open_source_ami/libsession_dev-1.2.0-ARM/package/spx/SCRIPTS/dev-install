@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	#copy header file
+	MKDIR_NOCLEAN %SPXINC/session        
+    COPY_DIR include %SPXINC/session    
+	#copy library
+	MKDIR_NOCLEAN %SPXLIB/session
+	COPY_DIR lib %SPXLIB/session
+	ADD_LIBRARY_LINKS %SPXLIB/session libsession.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

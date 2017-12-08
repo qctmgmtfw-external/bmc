@@ -1,0 +1,9 @@
+Package: sys_base_2_41_0_2_Fix_SystemLog_Err_Msg_In_Cron (1.0.0); urgency = new
+
+Abstract:
+	Fix cron error log.
+
+Files Added: data, data/00-data_defaults_etc_defconfig_crontab, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.OPENSOURCE, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Tue, 23 Jul 2013 11:26:50 CST
+

@@ -1,0 +1,10 @@
+--- .pristine/libsnmpusers-1.8.0-src/data/Makefile Fri Sep 16 11:25:18 2011
++++ source/libsnmpusers-1.8.0-src/data/Makefile Tue Sep 20 11:51:48 2011
+@@ -14,6 +14,7 @@
+ 
+ CFLAGS += -I${TARGETDIR}/usr/include
+ CFLAGS += -I${SPXINC}/iniparser
++CFLAGS += -I${SPXINC}/global
+ 
+ LIBS+= -L${SPXLIB}/unix -lunix
+ LIBS+= -Wl,-L${TARGETDIR}/usr/lib -lcrypto

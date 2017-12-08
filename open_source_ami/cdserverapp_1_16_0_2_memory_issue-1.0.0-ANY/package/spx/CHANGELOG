@@ -1,0 +1,9 @@
+Package: cdserverapp_1_16_0_2_memory_issue (1.0.0); urgency = new
+
+Abstract:
+	Added the pthread join to avaoid the memory leak
+
+Files Added: data, data/00-data_cdserver.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 14 Sep 2011 17:02:46 JST
+

@@ -1,0 +1,9 @@
+Package: libncml_1_22_0_1_SSHFIX (1.0.0); urgency = new
+
+Abstract:
+	Added integer 1 to MAX_SERVICE_NAME_SIZE and MAX_SERVICE_IFACE_NAME_SIZE
+
+Files Added: data, data/00-data_ncml.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 08 Sep 2011 18:39:50 IST
+

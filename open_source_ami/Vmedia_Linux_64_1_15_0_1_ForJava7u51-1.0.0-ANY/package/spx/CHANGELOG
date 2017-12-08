@@ -1,0 +1,9 @@
+Package: Vmedia_Linux_64_1_15_0_1_ForJava7u51 (1.0.0); urgency = new
+
+Abstract:
+	Added support to select Binary of Source package based on Build Precedence, at build time.
+
+Files Added: data, data/00-spx_INFO, data/01-spx_RULES.D_createJAR.sh, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 23 Jan 2014 20:30:43 CST
+

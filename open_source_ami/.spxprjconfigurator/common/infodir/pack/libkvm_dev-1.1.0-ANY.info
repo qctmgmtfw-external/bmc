@@ -1,0 +1,15 @@
+Package : libkvm_dev
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : software
+Essential : NO
+Group : SOFTWARE
+Owner : AMI
+Maintainer : muthuchamyk  (muthusamyk@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This Package contains the common header files for KVM.
+.

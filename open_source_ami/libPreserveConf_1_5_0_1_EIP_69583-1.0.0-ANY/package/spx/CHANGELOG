@@ -1,0 +1,9 @@
+Package: libPreserveConf_1_5_0_1_EIP_69583 (1.0.0); urgency = new
+
+Abstract:
+	Restore to factory defaults fix for service configurations
+
+Files Added: data, data/00-data_libpreserveconf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 12 Sep 2011 18:53:17 IST
+

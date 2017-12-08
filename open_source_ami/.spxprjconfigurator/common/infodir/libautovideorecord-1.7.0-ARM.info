@@ -1,0 +1,18 @@
+Package : libautovideorecord
+Non-Editable : YES
+Version : 1.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Viswanathan S  (viswanathans@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : YES
+Group : LIBRARY
+Depends : AutoVideoRecordingSupport, libvideorecordcfg
+Required : video, libvideo, libncml
+Package-License : AMI
+Description : Auto Video Recording functionality
+.

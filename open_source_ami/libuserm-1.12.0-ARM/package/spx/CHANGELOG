@@ -1,0 +1,171 @@
+Package: libuserm (1.12.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/Makefile, data/helpers.c, data/stdgrps.h, data/usermapis.c, data/usermdefs.h, data/validate.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:20:02 IST
+
+Package: libuserm (1.11.0); urgency = high
+
+Abstract:
+	closing the opened file pointer
+
+Files Modified: data/ipmi_userifc.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Tue, 17 May 2011 19:59:25 TLT
+
+Package: libuserm (1.10.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:14:53 EDT
+
+Package: libuserm (1.9.0); urgency = low
+
+Abstract:
+	Removed system function call for creating file with permissions. Now it is created using fopen and chmod system calls.
+
+Files Modified: data/ipmi_userifc.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 25 Apr 2011 12:33:48 IST
+
+Package: libuserm (1.8.0); urgency = high
+
+Abstract:
+	Added new API to rename the user home directory
+
+Files Modified: data/ipmi_userifc.c, data/ipmi_userifc.h
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Tue, 12 Apr 2011 19:40:30 TLT
+
+Package: libuserm (1.7.0); urgency = high
+
+Abstract:
+	fixed problem user directories creation with maximum user length
+
+Files Modified: data/ipmi_userifc.c, data/ipmi_userifc.h
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Mon, 14 Mar 2011 12:11:50 TLT
+
+Package: libuserm (1.6.0); urgency = high
+
+Abstract:
+	Changed SetRootPassword command password length to max 64 bytes
+
+Files Modified: data/ipmi_userifc.c, data/ipmi_userifc.h, data/ipmi_userifc_private.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 08 Feb 2011 19:25:52 IST
+
+Package: libuserm (1.5.0); urgency = high
+
+Abstract:
+	made changes to AMISetRootPassword cmd for maximum length Passwords
+
+Files Modified: data/ipmi_userifc.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Fri, 28 Jan 2011 20:37:52 IST
+
+Package: libuserm (1.4.0); urgency = high
+
+Abstract:
+	Added new AMI-OEM command Get linux root user access
+
+Files Modified: data/ipmi_userifc.c, data/ipmi_userifc.h
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 16 Dec 2010 19:26:48 IST
+
+Package: libuserm (1.3.0); urgency = high
+
+Abstract:
+	Added new IPMI OEM command to change linux root user password
+
+Files Modified: data/ipmi_userifc.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 13 Dec 2010 23:30:49 IST
+
+Package: libuserm (1.2.0); urgency = medium
+
+Abstract:
+	adding functions for creating/del/removing/restoring user ssh directory for passwdless login
+
+Files Modified: data/ipmi_userifc.c, data/ipmi_userifc.h
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Wed, 08 Dec 2010 15:45:21 IST
+
+Package: libuserm (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:05:37 EDT
+
+Package: libuserm (1.0.6); urgency = medium
+
+Abstract:
+	The hard coded string root has been removed, the user name from the uid 0 will be treated as the root user. Some OEM may prefer some other name for root user like admin, USERID etc.,.
+
+Files Modified: data/ipmi_userifc.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 02 Sep 2010 21:23:38 IST
+
+Package: libuserm (1.0.5); urgency = low
+
+Abstract:
+	All users will be created with default shell as "defshell"
+This is the wrapper shell which will spawn the program specified 
+for the project
+
+Files Modified: data/defines.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 10 May 2010 21:40:49 EDT
+
+Package: libuserm (1.0.4); urgency = low
+
+Abstract:
+	Default Shell of users to be taken from PRJ file
+
+Files Modified: data/defines.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 10 May 2010 10:22:10 EDT
+
+Package: libuserm (1.0.3); urgency = medium
+
+Abstract:
+	Removing unwanted codes to modify user permission in groups like sshRW as we no more use it.
+
+Files Modified: data/ipmi_userifc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 31 Mar 2010 13:54:47 IST
+
+Package: libuserm (1.0.2); urgency = low
+
+Abstract:
+	Fix for bug 12185. We no longer user groups for snmp,ssh,vmedia for user configuration and so removing the unwanted codes.
+
+Files Modified: data/usermapis.c, data/ipmi_userifc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 08 Mar 2010 19:23:44 IST
+
+Package: libuserm (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:11:07 EST
+
+Package:libuserm (1.0.0);urgency=new
+
+Abstract:
+	This package contains libuserm related files.
+
+Files Added: usermdefs.h, validate.c, gshadow_.h, commonio.h, usermapis.c, authenticate.c, groupio.h, HelperFuncs.c, sgetpwent.c, rac_numbers.h, ipmi_userifc.c, sgetgrent.c, shadowio.c, webshio.h, locks.c, commonio.c, config.h, groupio.c, webshio.c, shadowio.h, pppConf.c, Makefile, defines.h, stdgrps.h, protos.h, prototypes.h, authenticate.h, usermapis.h, helpers.c, snprintf.h, pppConf.h, pwio.c, fputsx.c, ipmi_userifc.h, LICENSE, ipmi_userifc_private.h, pwio.h
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Thu, 3 Dec 2009 12:01:54 -0500

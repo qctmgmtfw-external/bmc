@@ -1,0 +1,18 @@
+Package : preserveconfig
+Non-Editable : YES
+Version : 1.12.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Prakash S  (prakashs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Config-Tag : File OverRide Support during Preserve Configuration
+Group : FEATURES
+Required : libPreserveConf
+Package-License : AMI
+Description : This package provides a binary application to preserve some of the files while restore to factory default or updating the firmware
+.

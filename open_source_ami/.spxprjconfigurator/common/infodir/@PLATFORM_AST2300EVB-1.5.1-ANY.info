@@ -1,0 +1,18 @@
+Package : @PLATFORM_AST2300EVB
+Version : 1.5.1
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : PLATFORM
+Section : info
+Required : @SOC_AST2300
+Essential : YES
+Config-Tag : AST2300EVB
+Group : BASE
+Owner : AMI
+Maintainer : Alex Yang  (alexyang@ami.com.tw)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : high
+Description : Selects Platform as AST2300 Eval Board
+.

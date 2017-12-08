@@ -1,0 +1,15 @@
+Package : libhostname_dev
+Non-Editable : YES
+Version : 1.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Anurag Bhatia  (anuragb@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : This is the development package for hostname library pacakge.
+.

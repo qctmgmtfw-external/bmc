@@ -1,0 +1,13 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/flash
+	MKDIR_NOCLEAN %SPXINC/flash
+	COPY_FILE ./flashlib.h %SPXINC/flash
+	COPY_FILE ./flshfiles.h %SPXINC/flash
+	COPY_FILE ./flshdefs.h %SPXINC/flash
+	COPY_FILE ./libflash.a %SPXLIB/flash
+	COPY_FILE ./libflash.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/flash
+	ADD_LIBRARY_LINKS %SPXLIB/flash libflash.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

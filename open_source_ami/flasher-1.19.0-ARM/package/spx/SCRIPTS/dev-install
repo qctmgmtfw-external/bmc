@@ -1,0 +1,15 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./flasherapp %IMAGE_TREE/usr/local/bin/flasher
+	COPY_FILE ./cpConf %IMAGE_TREE/usr/local/bin
+	COPY_FILE ./mkMiniMe %IMAGE_TREE/usr/local/bin
+	ADD_CONF_LINK /etc public.pem 
+	SET_INIT_SCRIPT ./flasher
+	SET_INIT_SCRIPT ./prepfl
+	SET_INIT_SCRIPT ./stopgc
+	SET_INIT_SCRIPT ./initcomplete
+	SET_INIT_SCRIPT ./flumount
+	SET_INIT_SCRIPT ./forcekill
+	
+debug-install:

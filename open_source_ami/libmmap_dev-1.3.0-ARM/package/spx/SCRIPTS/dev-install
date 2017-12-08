@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+    MKDIR_NOCLEAN %SPXINC/mmap
+	    COPY_FILE ./mmap.h %SPXINC/mmap
+    MKDIR_NOCLEAN %SPXLIB/mmap
+		COPY_FILE ./libmmap.a %SPXLIB/mmap
+		COPY_FILE libmmap.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/mmap
+	ADD_LIBRARY_LINKS %SPXLIB/mmap libmmap.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

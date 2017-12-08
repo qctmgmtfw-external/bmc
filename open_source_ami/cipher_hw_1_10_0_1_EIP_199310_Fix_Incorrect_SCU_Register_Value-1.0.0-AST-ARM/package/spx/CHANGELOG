@@ -1,0 +1,9 @@
+Package: cipher_hw_1_10_0_1_EIP_199310_Fix_Incorrect_SCU_Register_Value (1.0.0); urgency = new
+
+Abstract:
+	Find out the place to write the incorrect value to SCU04 and fix it.In Cipher_hw driver, fill the incorrect value to SCU04 to reset HAC engine.
+
+Files Added: data, data/00-data_ast_cipher.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Thu, 08 Jan 2015 16:33:19 CST
+

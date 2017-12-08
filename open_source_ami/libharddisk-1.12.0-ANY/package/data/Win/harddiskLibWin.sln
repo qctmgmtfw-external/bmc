@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "harddiskLibWin", "harddiskLibWin.vcproj", "{02EA8C3C-6DA3-4F3E-9816-329A1873758D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02EA8C3C-6DA3-4F3E-9816-329A1873758D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{02EA8C3C-6DA3-4F3E-9816-329A1873758D}.Debug|Win32.Build.0 = Debug|Win32
+		{02EA8C3C-6DA3-4F3E-9816-329A1873758D}.Debug|x64.ActiveCfg = Debug|x64
+		{02EA8C3C-6DA3-4F3E-9816-329A1873758D}.Debug|x64.Build.0 = Debug|x64
+		{02EA8C3C-6DA3-4F3E-9816-329A1873758D}.Release|Win32.ActiveCfg = Release|Win32
+		{02EA8C3C-6DA3-4F3E-9816-329A1873758D}.Release|Win32.Build.0 = Release|Win32
+		{02EA8C3C-6DA3-4F3E-9816-329A1873758D}.Release|x64.ActiveCfg = Release|x64
+		{02EA8C3C-6DA3-4F3E-9816-329A1873758D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

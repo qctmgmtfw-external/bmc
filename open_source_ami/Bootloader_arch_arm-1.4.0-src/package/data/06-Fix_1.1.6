@@ -1,0 +1,19 @@
+diff -Naur u-boot-1.1.4/include/asm-arm/u-boot.h u-boot-1.1.4-common/include/asm-arm/u-boot.h
+--- u-boot-1.1.4/include/asm-arm/u-boot.h	2005-12-16 11:39:27.000000000 -0500
++++ u-boot-1.1.4-common/include/asm-arm/u-boot.h	2006-04-28 10:15:33.354564213 -0400
+@@ -57,10 +57,11 @@
+ 	ulong start;
+ 	ulong size;
+     } 			bi_dram[CONFIG_NR_DRAM_BANKS];
+-#ifdef CONFIG_HAS_ETH1
+-    /* second onboard ethernet port */
+-    unsigned char   bi_enet1addr[6];
+-#endif
++//Uboot 1.1.6 added this which we already have
++//#ifdef CONFIG_HAS_ETH1
++//    /* second onboard ethernet port */
++//    unsigned char   bi_enet1addr[6];
++//#endif
+ } bd_t;
+ 
+ #define bi_env_data bi_env->data

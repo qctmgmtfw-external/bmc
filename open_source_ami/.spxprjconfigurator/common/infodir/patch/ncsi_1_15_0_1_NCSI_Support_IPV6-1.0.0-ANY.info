@@ -1,0 +1,20 @@
+Package : ncsi_1_15_0_1_NCSI_Support_IPV6
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for ncsi (1.15.0)
+Depends :  ncsi(==1.15.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  erichsu (erichsu@ami.com.tw)
+Urgency : new
+Description : NCSI Support IPV6
+.
+

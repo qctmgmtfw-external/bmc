@@ -1,0 +1,1361 @@
+Package: ipmimain (2.61.0); urgency = low
+
+Abstract:
+	libUserPrivilege is added in build depend and binary required list
+
+Files Modified: spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 18 Aug 2011 20:20:37 IST
+
+Package: ipmimain (2.60.0); urgency = medium
+
+Abstract:
+	Fix the syntax error.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Thu, 18 Aug 2011 11:26:23 CST
+
+Package: ipmimain (2.59.0); urgency = low
+
+Abstract:
+	Correction in usage.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 17 Aug 2011 14:28:39 IST
+
+Package: ipmimain (2.58.0); urgency = medium
+
+Abstract:
+	Made changes so that ipmistack will be daemonized only when --daemonize option is given as argument.
+
+Files Modified: data/IPMI_Main.c, data/ipmistack
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 17 Aug 2011 12:35:09 IST
+
+Package: ipmimain (2.57.0); urgency = medium
+
+Abstract:
+	Made changes so that IPMI Stack will not be daemonized when started with "/usr/local/bin/IPMIMain -d" option. By default IPMI stack will be daemonized.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 11 Aug 2011 17:56:04 IST
+
+Package: ipmimain (2.56.0); urgency = medium
+
+Abstract:
+	PAM Reordering option is moved from IPMI configuration and included in features.
+
+Files Modified: spx/PACKAGES.D/ipmimain/SCRIPTS/dev-install
+
+--Submitter: akshay (akshayp@amiindia.co.in) Mon, 08 Aug 2011 18:47:33 IST
+
+Package: ipmimain (2.55.0); urgency = medium
+
+Abstract:
+	PAM Reordering option is moved from IPMI configuration and included in features.
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: akshay (akshayp@amiindia.co.in) Mon, 08 Aug 2011 18:31:43 IST
+
+Package: ipmimain (2.54.0); urgency = low
+
+Abstract:
+	1. PEF Startup Delay time function works abnormally.
+   Sec 17.4 .The PEF Startup Delay causes Platform Event Filtering triggered power-down, reset, and power-cycle actions to be postponed when the system is
+   either powered up or is reset locally via a pushbutton or other local front-panel user interface. the time is to delay PEF after a system powerup, from
+   S4 or S5 and resets.
+
+2. PEF Alert startup delay works abnormally.
+   table 30-6 field 4, the alert startup delay time is to delay Alerts after system powerups, from S4 or S5 and resets.
+
+3. The first Priority of PEF Action is wrong.
+   If a event trigger a lot of filter, we should choose a power action onlt, if do power action every filter, it isn't reasonable.
+
+Files Modified: data/HostReset.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Mon, 08 Aug 2011 11:00:51 CST
+
+Package: ipmimain (2.53.0); urgency = medium
+
+Abstract:
+	Changes done for MBMC to move global m_internal_sensor_tbl inside BMCInfo_t structure.
+
+Files Modified: data/SharedMem.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 03 Aug 2011 20:26:15 IST
+
+Package: ipmimain (2.52.0); urgency = medium
+
+Abstract:
+	Adding PDK Hooks that helps in storing OEM related IPMI Configurations in NVRAM.
+
+Files Modified: data/FlushToIni.c, data/PMConfig.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 03 Aug 2011 14:34:24 IST
+
+Package: ipmimain (2.51.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c, data/Makefile
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:17:27 IST
+
+Package: ipmimain (2.50.0); urgency = medium
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/IfcSupport.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Fri, 29 Jul 2011 20:06:04 IST
+
+Package: ipmimain (2.49.0); urgency = medium
+
+Abstract:
+	Adding IPMI Configuration Version Check in P.Config
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 29 Jul 2011 14:29:34 IST
+
+Package: ipmimain (2.48.0); urgency = low
+
+Abstract:
+	Adding code to flush Version configurations to version.ini during firmware upgrade.
+
+Files Modified: data/FlushToIni.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 28 Jul 2011 18:12:57 IST
+
+Package: ipmimain (2.47.0); urgency = medium
+
+Abstract:
+	Added support for IPMI Configuration Version check. The version of IPMI_CONFIG_VERSION will be compared with CDF Version of libipmipar pakcage.This support can be enabled in PRJ using MDS.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 28 Jul 2011 17:06:02 IST
+
+Package: ipmimain (2.46.0); urgency = medium
+
+Abstract:
+	Made changes so that Init will start other processes only when all the threads of IPMI process is started.
+
+Files Modified: data/IPMI_Main.c, data/ipmistack
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 25 Jul 2011 21:17:21 IST
+
+Package: ipmimain (2.45.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/FlushToIni.c, data/HostReset.c, data/IPMI_Main.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 22:01:23 IST
+
+Package: ipmimain (2.44.0); urgency = medium
+
+Abstract:
+	Added code to retrieve the BT support status from IPMI.conf file.
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 19 Jul 2011 19:20:21 IST
+
+Package: ipmimain (2.43.0); urgency = medium
+
+Abstract:
+	Corrected the PRESERVECONF_LIB macro in error print
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 13 Jul 2011 15:14:02 IST
+
+Package: ipmimain (2.42.0); urgency = low
+
+Abstract:
+	Reverted the changes.
+
+Files Modified: data/FlushToIni.c, data/IPMIConf.c, data/PMConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Jul 2011 19:27:55 IST
+
+Package: ipmimain (2.41.0); urgency = low
+
+Abstract:
+	Added missing code.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Jul 2011 19:00:55 IST
+
+Package: ipmimain (2.40.0); urgency = medium
+
+Abstract:
+	Made changes to load the LAN channel configuration using MAX_LAN_CHANNELS macro.
+
+Files Modified: data/FlushToIni.c, data/IPMIConf.c, data/PMConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Jul 2011 18:15:50 IST
+
+Package: ipmimain (2.39.0); urgency = medium
+
+Abstract:
+	Added Enable/Disable Support in PRJ for internal sensor.
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 08 Jul 2011 16:31:40 IST
+
+Package: ipmimain (2.38.0); urgency = medium
+
+Abstract:
+	Added PRJ configure support for IPMI PAM-ReOrder command
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/ipmimain/SCRIPTS/dev-install
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 08 Jul 2011 10:34:33 IST
+
+Package: ipmimain (2.37.0); urgency = medium
+
+Abstract:
+	Add Operational State support for SSI Compute Blade.
+
+Files Modified: data/SharedMem.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 05 Jul 2011 20:26:46 CST
+
+Package: ipmimain (2.36.0); urgency = high
+
+Abstract:
+	Updating dependency for libncsiconf for ipmimain
+
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 29 Jun 2011 11:41:31 EDT
+
+Package: ipmimain (2.35.0); urgency = medium
+
+Abstract:
+	Removed unwanted code.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 29 Jun 2011 20:48:36 IST
+
+Package: ipmimain (2.34.0); urgency = low
+
+Abstract:
+	Correction in BMC Instace value in for loop iteration.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 27 Jun 2011 21:24:11 IST
+
+Package: ipmimain (2.33.0); urgency = medium
+
+Abstract:
+	Sockets are closed properly during shutting down of IPMI Process.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 27 Jun 2011 21:17:53 IST
+
+Package: ipmimain (2.32.0); urgency = low
+
+Abstract:
+	Removed the static linked preserveconf library
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 22 Jun 2011 21:23:02 IST
+
+Package: ipmimain (2.31.0); urgency = medium
+
+Abstract:
+	Calling libpreservecfg to generate the preserve configuration INI file
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Sat, 18 Jun 2011 17:13:19 IST
+
+Package: ipmimain (2.30.0); urgency = medium
+
+Abstract:
+	Initializing CmdHndlrMutex.
+
+Files Modified: data/SharedMem.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Sat, 18 Jun 2011 14:41:50 IST
+
+Package: ipmimain (2.29.0); urgency = medium
+
+Abstract:
+	Added PreserveConf library to avoid linker error
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Fri, 17 Jun 2011 15:46:05 IST
+
+Package: ipmimain (2.28.0); urgency = low
+
+Abstract:
+	Slight changes in menu configurations.
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 14 Jun 2011 16:48:15 IST
+
+Package: ipmimain (2.27.0); urgency = medium
+
+Abstract:
+	Add SSI Commands for SSI Compute Blade support.
+
+Files Modified: data/SharedMem.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Sat, 11 Jun 2011 22:00:20 EDT
+
+Package: ipmimain (2.26.0); urgency = medium
+
+Abstract:
+	Add Circular SEL support.
+
+Files Modified: data/FlushToIni.c, data/PMConfig.c, spx/P.CONFIG
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Fri, 10 Jun 2011 19:33:33 EDT
+
+Package: ipmimain (2.25.0); urgency = high
+
+Abstract:
+	ipmimain build dependency fixed to include libfwinfo_dev package instead of libfwinfo
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 09 Jun 2011 18:04:43 EDT
+
+Package: ipmimain (2.24.0); urgency = low
+
+Abstract:
+	Added support for timeout completion code
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 06 Jun 2011 22:23:44 IST
+
+Package: ipmimain (2.23.0); urgency = high
+
+Abstract:
+	IPv6 added to P.CONFIG of ipmimain. New ipmi_ipv6 package to be removed
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 25 May 2011 12:11:02 EDT
+
+Package: ipmimain (2.22.0); urgency = medium
+
+Abstract:
+	Add SSI LAN Parameters support for SSI Compute Blade.
+
+Files Modified: data/FlushToIni.c, data/PMConfig.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Wed, 18 May 2011 16:19:17 EDT
+
+Package: ipmimain (2.21.0); urgency = medium
+
+Abstract:
+	Add Event Forwarding support for SSI Compute Blade.
+
+Files Modified: data/IPMI_Main.c, data/SharedMem.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 17 May 2011 20:08:45 EDT
+
+Package: ipmimain (2.20.0); urgency = medium
+
+Abstract:
+	Add SEL Timestamp Clock Sync support.
+
+Files Added: spx/P.CONFIG
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Mon, 16 May 2011 17:27:10 EDT
+
+Package: ipmimain (2.19.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:27:20 EDT
+
+Package: ipmimain (2.18.0); urgency = high
+
+Abstract:
+	Made changes to support OPMA command at run time.
+
+Files Modified: data/FlushToIni.c, data/IPMIConf.c, data/PMConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 May 2011 14:53:42 IST
+
+Package: ipmimain (2.17.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:55:50 IST
+
+Package: ipmimain (2.16.0); urgency = medium
+
+Abstract:
+	Passing Channel Number properly to save Channel configuration.
+
+Files Modified: data/FlushToIni.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 05 May 2011 04:30:34 IST
+
+Package: ipmimain (2.15.0); urgency = medium
+
+Abstract:
+	Fix to flush NVRAM IPMI configurations to INI during flashing.
+
+Files Modified: data/FlushToIni.c, data/IPMI_Main.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 05 May 2011 00:47:53 IST
+
+Package: ipmimain (2.14.0); urgency = medium
+
+Abstract:
+	Fix to make flushing of IPMI Configurations to NVRAM faster.
+
+Files Added: data/FlushToIni.c
+Files Modified: data/IPMI_Main.c, data/Makefile, data/PMConfig.c, data/SignalHndlr.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 18:51:37 IST
+
+Package: ipmimain (2.13.0); urgency = high
+
+Abstract:
+	Accessing IPMI.conf file properly in migrated case
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Mon, 02 May 2011 22:07:52 TLT
+
+Package: ipmimain (2.12.0); urgency = high
+
+Abstract:
+	providing the corresponding path for IPMI.conf file in migrated case
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Fri, 29 Apr 2011 20:27:27 TLT
+
+Package: ipmimain (2.11.0); urgency = low
+
+Abstract:
+	Implement ARP suspend function
+
+Files Modified: data/SharedMem.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Fri, 29 Apr 2011 17:59:42 CST
+
+Package: ipmimain (2.10.0); urgency = medium
+
+Abstract:
+	Fix for IPMI not responding when continous cold reboot is done.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 27 Apr 2011 20:00:45 IST
+
+Package: ipmimain (2.9.0); urgency = high
+
+Abstract:
+	changed ssh directory path for disable users in CheckForUsersHomeDirectory
+
+Files Modified: data/PMConfig.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Tue, 12 Apr 2011 19:45:53 TLT
+
+Package: ipmimain (2.8.0); urgency = low
+
+Abstract:
+	Added login Audit configuration for RMCP and Web
+
+Files Modified: data/PMConfig.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 05 Apr 2011 17:45:00 IST
+
+Package: ipmimain (2.7.0); urgency = medium
+
+Abstract:
+	Host Reset Functions are added as a seperate file and Added condition check to send signal to adviser when LPC Reset occurs.
+
+Files Added: data/HostReset.c
+Files Deleted: data/NVRData.c
+Files Modified: data/IPMI_Main.c, data/Makefile
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 01 Apr 2011 16:54:42 IST
+
+Package: ipmimain (2.6.0); urgency = low
+
+Abstract:
+	Replacing Macros instead of Hard coded values
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 29 Mar 2011 14:48:58 IST
+
+Package: ipmimain (2.5.0); urgency = medium
+
+Abstract:
+	Proper error handling is done while loading IPMI Configurations.
+
+Files Modified: data/IPMI_Main.c, data/PMConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 25 Mar 2011 19:36:19 IST
+
+Package: ipmimain (2.4.0); urgency = medium
+
+Abstract:
+	PDK hooks condition changed for Primary IPMB address and Secondary IPMB address.
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 25 Mar 2011 12:44:09 IST
+
+Package: ipmimain (2.3.0); urgency = medium
+
+Abstract:
+	Initiailization of Trigger Event Configuration is done when booting up
+
+Files Modified: data/PMConfig.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 24 Mar 2011 19:36:58 IST
+
+Package: ipmimain (2.2.0); urgency = medium
+
+Abstract:
+	primary, secondary ipmb variable name changes.
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c, data/PMConfig.c, data/SharedMem.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 24 Mar 2011 12:37:53 IST
+
+Package: ipmimain (2.1.0); urgency = high
+
+Abstract:
+	Removed libipmipar_dev - Not needed and creates Build dependency failures
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 22 Mar 2011 11:59:56 EDT
+
+Package: ipmimain (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/IPMI_Main.c, data/IfcSupport.c, data/NVRData.c, data/PMConfig.c, data/SharedMem.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 16:53:51 IST
+
+Package: ipmimain (1.35.0); urgency = medium
+
+Abstract:
+	Fix for SIGSEV fault.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 04 Mar 2011 14:58:45 IST
+
+Package: ipmimain (1.34.0); urgency = medium
+
+Abstract:
+	Fix to get SEL entries properly from NVRAM.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Mar 2011 15:08:18 IST
+
+Package: ipmimain (1.33.0); urgency = low
+
+Abstract:
+	Made changes so that PMConfigs will be stored in RAM seperately and no more clubbed with SEL and SDR
+
+Files Modified: data/PMConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Mar 2011 14:11:07 IST
+
+Package: ipmimain (1.32.0); urgency = low
+
+Abstract:
+	Handling the error condition when IPMI Configurations failed to load in Single BMC Instance.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 02 Mar 2011 11:31:00 IST
+
+Package: ipmimain (1.31.0); urgency = low
+
+Abstract:
+	IPMI Configurations are validated for all the BMC's when Multiple BMC's are available.When single BMC is present only the IPMI Configurations are loaded.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 01 Mar 2011 20:10:53 IST
+
+Package: ipmimain (1.30.0); urgency = low
+
+Abstract:
+	Removed signal handling functions for SIGKILL and SIGSTOP as they are untrappable.Removed signal handling function for SIGHUP as it will be handled by process manager.
+
+Files Modified: data/SignalHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 01 Mar 2011 13:21:07 IST
+
+Package: ipmimain (1.29.0); urgency = low
+
+Abstract:
+	The Thread arguments will be made free in startIfc function after the thread mutex is released properly.
+
+Files Modified: data/IfcSupport.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Feb 2011 01:02:38 IST
+
+Package: ipmimain (1.28.0); urgency = low
+
+Abstract:
+	Initialization of APML is done once all the tasks are created.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 17 Feb 2011 19:20:09 IST
+
+Package: ipmimain (1.27.0); urgency = low
+
+Abstract:
+	Added link to libipmiparams which is required by libipmi
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 16 Feb 2011 19:47:06 IST
+
+Package: ipmimain (1.26.0); urgency = low
+
+Abstract:
+	Closing the Handle properly which was opened by dlopen
+
+Files Modified: data/IfcSupport.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Feb 2011 18:22:51 IST
+
+Package: ipmimain (1.25.0); urgency = low
+
+Abstract:
+	Closing the Handle properly.
+
+Files Modified: data/IfcSupport.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Feb 2011 17:54:12 IST
+
+Package: ipmimain (1.24.0); urgency = low
+
+Abstract:
+	Removing phy library from build depends of ipmimain
+
+Files Modified: data/Makefile
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 09 Feb 2011 15:09:51 IST
+
+Package: ipmimain (1.23.0); urgency = medium
+
+Abstract:
+	Using SIGHUP instead of SIGINT for proper termination of IPMI process.
+
+Files Modified: data/IPMI_Main.c, data/ipmistack
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Feb 2011 14:34:20 IST
+
+Package: ipmimain (1.22.0); urgency = medium
+
+Abstract:
+	Adding code to get the value of APML Bus number from IPMI.conf file
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 01 Feb 2011 17:28:07 IST
+
+Package: ipmimain (1.21.0); urgency = high
+
+Abstract:
+	Added function to get the BoardID.
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 18 Jan 2011 19:02:30 IST
+
+Package: ipmimain (1.20.0); urgency = low
+
+Abstract:
+	Added hook to get BMC Slave Address from the OEM
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 18 Jan 2011 09:42:49 IST
+
+Package: ipmimain (1.19.0); urgency = medium
+
+Abstract:
+	Build-Depends changed from libipmipar to libipmipar_dev
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 14 Jan 2011 13:36:10 EST
+
+Package: ipmimain (1.18.0); urgency = medium
+
+Abstract:
+	Made changes to retrieve configuration for rearming based on configurations from IPMI.conf
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 13 Jan 2011 21:20:46 IST
+
+Package: ipmimain (1.17.0); urgency = low
+
+Abstract:
+	pam-ipmi and nss-ipmi is now enabled when IPMI Support is enabled
+
+Files Modified: spx/INFO
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 06 Jan 2011 12:37:08 IST
+
+Package: ipmimain (1.16.0); urgency = medium
+
+Abstract:
+	Changes done to load the handles of libipmipdkcmd library initially when the ipmi stack is started.
+
+Files Modified: data/IPMI_Main.c, data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 05 Jan 2011 20:31:58 IST
+
+Package: ipmimain (1.15.0); urgency = low
+
+Abstract:
+	passing BMCInst to PDKHooks
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Mon, 03 Jan 2011 00:24:37 IST
+
+Package: ipmimain (1.14.0); urgency = high
+
+Abstract:
+	Checking for .ssh directory and authorized key files of ipmi users
+
+Files Modified: data/Makefile, data/PMConfig.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 27 Dec 2010 19:45:59 IST
+
+Package: ipmimain (1.13.0); urgency = low
+
+Abstract:
+	Including the PHY configuration library
+
+Files Modified: data/Makefile
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 23 Dec 2010 17:00:55 IST
+
+Package: ipmimain (1.12.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/IPMI_Main.c, data/SignalHndlr.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:52:41 EST
+
+Package: ipmimain (1.11.0); urgency = medium
+
+Abstract:
+	Changes based on LAN interface changes.
+
+Files Modified: data/IPMI_Main.c, data/Makefile, data/SharedMem.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 10 Dec 2010 19:03:20 EST
+
+Package: ipmimain (1.10.0); urgency = medium
+
+Abstract:
+	Fix can't reset "set in progress" parameter when a system reset or transition to powered down state occurs
+
+Files Modified: data/PMConfig.c, data/SharedMem.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 01 Dec 2010 20:10:54 CST
+
+Package: ipmimain (1.9.0); urgency = medium
+
+Abstract:
+	Add core support for LPCRESET notification.
+
+Files Modified: data/IPMI_Main.c, spx/INFO
+
+--Submitter: joywu (joywu) Fri, 12 Nov 2010 15:04:53 CST
+
+Package: ipmimain (1.8.0); urgency = medium
+
+Abstract:
+	Removing related code for user sync with linux db
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Tue, 09 Nov 2010 17:54:30 IST
+
+Package: ipmimain (1.7.0); urgency = medium
+
+Abstract:
+	Add library reference for NCSI configuration access
+
+Files Modified: data/Makefile
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 04 Oct 2010 15:16:07 CST
+
+Package: ipmimain (1.6.0); urgency = low
+
+Abstract:
+	Adding libipmiuds to the required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 30 Sep 2010 13:25:10 EDT
+
+Package: ipmimain (1.5.0); urgency = low
+
+Abstract:
+	UDS Interface will be enabled by default if the LAN Interface support is enabled in IPMI.conf.
+
+Files Modified: data/IPMIConf.c, data/IfcSupport.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 28 Sep 2010 17:53:34 EDT
+
+Package: ipmimain (1.4.0); urgency = medium
+
+Abstract:
+	Conditions to enable System Interface Channel is corrected properly
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 22 Sep 2010 14:53:36 EDT
+
+Package: ipmimain (1.3.0); urgency = low
+
+Abstract:
+	1. Remove dummy fucntions
+2. Add the "static" as prefix if fuction is used for internal usage
+3. Add the explaination for entry function "InitSignals"
+
+Files Modified: data/SignalHndlr.c
+
+--Submitter: bensonchuang (BensonChuang@ami.com.tw) Mon, 20 Sep 2010 15:23:48 CST
+
+Package: ipmimain (1.2.0); urgency = low
+
+Abstract:
+	Removing unused codes.
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 17 Sep 2010 19:05:43 EDT
+
+Package: ipmimain (1.1.0); urgency = low
+
+Abstract:
+	The signal handler inside IPMImain should handle the signal by itself, but libipmiusb call InitSignals() to register signal again, then the signal who register by libipmiusb will not receive by IPMIMain.
+
+For example, if we send a SIGSEGV to IPMIMain, IPMImain should be terminated, but libipmiusb catch the signal and enter infinite loop.
+
+The libipmiusb should not register any signal by calling InitSignals().
+
+Files Added: data/SignalHndlr.c
+Files Modified: data/IPMI_Main.c, data/Makefile
+
+--Submitter: terrychen (terrychen@ami.com.tw) Wed, 15 Sep 2010 14:06:12 CST
+
+Package: ipmimain (1.0.50); urgency = medium
+
+Abstract:
+	Added NULL in the last byte of string which comes from strncpy, found the problem and IPMIMain crashed when tried to enable DEBUG option in makefile.
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 08 Sep 2010 18:04:41 IST
+
+Package: ipmimain (1.0.49); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/IPMI_Main.c, data/Makefile, data/PMConfig.c, data/SharedMem.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:46:56 IST
+
+Package: ipmimain (1.0.48); urgency = low
+
+Abstract:
+	Bug :- IPMI Main (LAN Interface) is not loaded properly when there are two BMCInstances.
+Fix :- Added a mutex lock for MsgHndlr Task.
+Description :- The Mutex lock waits till the MsgHndlr gets started for each BMCInstance
+               and it is released when the initialization in MsgHndlr gets completed for
+               each BMC Instances.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 17 Aug 2010 21:21:03 IST
+
+Package: ipmimain (1.0.47); urgency = low
+
+Abstract:
+	Uncommented the GET_TASK_ID in IPMI Main as this made ipmistack script not working.
+IPMI Main can be killed and restarted using the script now.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 17 Aug 2010 17:05:04 IST
+
+Package: ipmimain (1.0.46); urgency = low
+
+Abstract:
+	Incrementing BMC Shared Memory MsgHndlrTblSize Variable in the Correct place
+
+Files Modified: data/IfcSupport.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 17 Aug 2010 10:35:25 IST
+
+Package: ipmimain (1.0.45); urgency = low
+
+Abstract:
+	Fix for Apml Support.Incremented the BMC shared Memory variable MsgHndlrTblSize while the Interface Support is loaded in IPMI Main
+
+Files Modified: data/IfcSupport.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 16 Aug 2010 21:56:58 IST
+
+Package: ipmimain (1.0.44); urgency = low
+
+Abstract:
+	Removed the sleep of two seconds in ipmimain and initialized the MsgHndlrTblSize,MsgHndlrTbl in BMC Shared Memory.
+
+Files Modified: data/IPMI_Main.c, data/IfcSupport.c, data/SharedMem.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 13 Aug 2010 18:04:56 IST
+
+Package: ipmimain (1.0.43); urgency = low
+
+Abstract:
+	Bug Description - DCMI is not working
+Fix - All the Interface Tasks are started after MsgHndlr Task as this was causing problem
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 12 Aug 2010 19:53:35 IST
+
+Package: ipmimain (1.0.42); urgency = low
+
+Abstract:
+	MsgHndlrTblSize and TimerTaskTblSize are initalized in InitBMCSharedMem
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c, data/SharedMem.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 11 Aug 2010 22:49:34 IST
+
+Package: ipmimain (1.0.41); urgency = low
+
+Abstract:
+	Commented the unwanted #endif as it was causing build error
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 06 Aug 2010 18:54:14 IST
+
+Package: ipmimain (1.0.40); urgency = low
+
+Abstract:
+	Changes Done for Starting LAN Interface along with other Interface Tasks
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c, data/IfcSupport.c, data/PMConfig.c, data/SharedMem.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 06 Aug 2010 17:46:34 IST
+
+Package: ipmimain (1.0.39); urgency = low
+
+Abstract:
+	Added libipmiuds as  dependency for ipmimain
+
+Files Modified: spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 03 Aug 2010 13:16:07 IST
+
+Package: ipmimain (1.0.38); urgency = low
+
+Abstract:
+	MBMC Changes for IPMI Main
+
+Files Modified: data/IPMIConf.c, data/IPMI_Main.c, data/IfcSupport.c, data/PMConfig.c, data/SharedMem.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:40:23 IST
+
+Package: ipmimain (1.0.37); urgency = low
+
+Abstract:
+	Commenting the error message "Conf directory is not mounted as read/write" as this is not a critical error.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 30 Jul 2010 17:13:37 IST
+
+Package: ipmimain (1.0.36); urgency = medium
+
+Abstract:
+	Added the HAL handles initial function into initial function table.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 13 Jul 2010 20:19:45 CST
+
+Package: ipmimain (1.0.35); urgency = medium
+
+Abstract:
+	Fixed binary Required dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: pavithra s (pavithras@amiindia.co.in) Tue, 29 Jun 2010 15:40:24 IST
+
+Package: ipmimain (1.0.34); urgency = low
+
+Abstract:
+	Changes made to start Message handler and timer task first followed by interface specific tasks
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 15 Jun 2010 21:18:55 IST
+
+Package: ipmimain (1.0.33); urgency = low
+
+Abstract:
+	Removed i2c dependancy
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 11 Jun 2010 19:41:19 IST
+
+Package: ipmimain (1.0.32); urgency = medium
+
+Abstract:
+	Fix in getting SOL port details from IPMI.conf
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 10 Jun 2010 16:33:49 IST
+
+Package: ipmimain (1.0.31); urgency = low
+
+Abstract:
+	Removing gpio,adc,pwmtach and peci from dependency
+
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 20:06:56 IST
+
+Package: ipmimain (1.0.30); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:26:33 EDT
+
+Package: ipmimain (1.0.29); urgency = medium
+
+Abstract:
+	Adding Link Down Resilent support to SPX
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Jun 2010 11:18:54 IST
+
+Package: ipmimain (1.0.28); urgency = medium
+
+Abstract:
+	Unwanted libraries removed. This cause build failure, when those libraries are not present
+
+Files Modified: data/Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 20 May 2010 16:27:00 EDT
+
+Package: ipmimain (1.0.27); urgency = medium
+
+Abstract:
+	Added a check to verify /conf is accessible before starting IPMIMain and exits when /conf is not accessible.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 17 May 2010 17:19:00 IST
+
+Package: ipmimain (1.0.26); urgency = low
+
+Abstract:
+	Removed unwanted codes used by ATCA.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 14 May 2010 16:49:16 IST
+
+Package: ipmimain (1.0.25); urgency = medium
+
+Abstract:
+	Allocated full size of the length for SDR and SEL files while initializing. This avoids a propability of /conf full error.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 13 May 2010 21:50:41 IST
+
+Package: ipmimain (1.0.24); urgency = low
+
+Abstract:
+	Added Runlevel 8 entries
+
+Files Modified: data/ipmistack
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:10:59 EDT
+
+Package: ipmimain (1.0.23); urgency = low
+
+Abstract:
+	Replacing hardcoded value of BMC_SLAVE_ADDRESS with g_BMCSlaveAddr.
+
+Files Modified: data/SharedMem.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 10 May 2010 17:31:24 IST
+
+Package: ipmimain (1.0.22); urgency = low
+
+Abstract:
+	Add libncml library for building process.
+
+Files Modified: data/IPMIConf.c, data/Makefile, spx/INFO
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Mon, 03 May 2010 21:24:06 EDT
+
+Package: ipmimain (1.0.21); urgency = low
+
+Abstract:
+	Add hostname library for building
+
+Files Modified: data/Makefile
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Sat, 01 May 2010 21:20:22 EDT
+
+Package: ipmimain (1.0.20); urgency = low
+
+Abstract:
+	Add the SOL idle timeout function, the sol session will be timeout due to inactivity.
+
+Files Modified: data/IPMIConf.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Tue, 27 Apr 2010 20:27:21 EDT
+
+Package: ipmimain (1.0.19); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:21:50 EDT
+
+Package: ipmimain (1.0.18); urgency = medium
+
+Abstract:
+	Build Dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 14 Apr 2010 23:03:59 EDT
+
+Package: ipmimain (1.0.17); urgency = medium
+
+Abstract:
+	fixes for build-dependencies only during build
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 14 Apr 2010 22:01:36 EDT
+
+Package: ipmimain (1.0.16); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 14 Apr 2010 17:43:06 EDT
+
+Package: ipmimain (1.0.15); urgency = low
+
+Abstract:
+	Dependecies version removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 13 Apr 2010 16:50:02 EDT
+
+Package: ipmimain (1.0.14); urgency = medium
+
+Abstract:
+	Changes made to call platform intialization after PDK Hooks initialization.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 06 Apr 2010 13:06:35 IST
+
+Package: ipmimain (1.0.13); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:23:02 EDT
+
+Package: ipmimain (1.0.12); urgency = low
+
+Abstract:
+	Addressed following issues:
+1. Current MegaRAC firmware doesn't check whether the alert was successfully delivered or not. MegaRAC firmware should retry the alert according to LAN configuration parameter #18 if the alert was not delivered.
+2. Current MegaRAC firmware has five tables for alert event to wait receiving PET Acknowledge command, but it may overflow. MegaRAC firmware should check whether the alert was successfully delivered or not even if many events occur at the same time.
+3. On IPMI Spec of "Alert Policy Table", whether a given destination will be used or not can be configured to be dependent on whether the alert to the previous destination was successful or not.
+4. Follow 17.13 Alert Processing in IPMI2.0 spec.
+5. Follow 17.13.1 Alert Processing after Power Loss in IPMI2.0 spec.
+
+Files Modified: data/SharedMem.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 31 Mar 2010 20:27:16 IST
+
+Package: ipmimain (1.0.11); urgency = medium
+
+Abstract:
+	Depenencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 30 Mar 2010 16:03:07 EDT
+
+Package: ipmimain (1.0.10); urgency = medium
+
+Abstract:
+	Removing OEMConfigs from IPMI core part. If needed OEM Configs can be configured in libipmipdk package.
+
+Files Modified: data/PMConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 30 Mar 2010 14:45:51 IST
+
+Package: ipmimain (1.0.9); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:48:42 EDT
+
+Package: ipmimain (1.0.8); urgency = low
+
+Abstract:
+	Added libprocmanager_dev, libpeci and libvmedia build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Wed, 10 Mar 2010 16:04:03 EST
+
+Package: ipmimain (1.0.7); urgency = low
+
+Abstract:
+	Increasing the build dependency verision of libipmipar to 1.0.6
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 26 Feb 2010 02:07:38 IST
+
+Package: ipmimain (1.0.6); urgency = low
+
+Abstract:
+	Changing the build dependency for libipmipar,libipmipdk in ipmimain package.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 22 Feb 2010 15:14:26 IST
+
+Package: ipmimain (1.0.5); urgency = low
+
+Abstract:
+	Changes in ipmistack to comply process manager and removed unwanted debug messages.
+
+Files Modified: data/IPMI_Main.c, data/IPMIConf.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 18 Feb 2010 15:22:01 IST
+
+Package: ipmimain (1.0.4); urgency = low
+
+Abstract:
+	Changes in ipmistack to comply with process manager.
+
+Files Modified: data/IPMI_Main.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 16 Feb 2010 21:36:12 IST
+
+Package: ipmimain (1.0.3); urgency = low
+
+Abstract:
+	Changing the build dependency of libipmipar,libipmipdk,libipmipdkcmds to >=1.0.2 in ipmimain.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 11 Feb 2010 22:36:42 IST
+
+Package: ipmimain (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:59:27 EST
+
+Package: ipmimain (1.0.1); urgency = low
+
+Abstract:
+	Changes in Ipmi stack to comply with process manager.
+
+Files Modified: data/IPMI_Main.c, data/ipmistack, data/Makefile, spx/INFO
+
+--Submitter: Winston Thangapandian (winstont@amiindia.co.in) Wed, 10 Feb 2010 14:25:40 IST
+
+Package:ipmimain (1.0.0);urgency=new
+
+Abstract:
+	This package contains IPMI related stuffs
+
+Files Added: IPMI_Main.c, IPMIConf.c, IPMI.conf, NVRData.c, Makefile, SharedMem.c, ipmistack, PMConfig.c, IfcSupport.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 9 Dec 2009 15:21:27 +0800

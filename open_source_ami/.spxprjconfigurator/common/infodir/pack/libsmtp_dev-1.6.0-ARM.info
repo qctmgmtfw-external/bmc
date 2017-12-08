@@ -1,0 +1,15 @@
+Package : libsmtp_dev
+Non-Editable : YES
+Version : 1.6.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Dinesh Selvam  (dineshs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : SMTP development header files
+.

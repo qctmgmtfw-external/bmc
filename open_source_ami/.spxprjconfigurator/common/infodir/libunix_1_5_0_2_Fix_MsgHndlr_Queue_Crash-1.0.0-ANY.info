@@ -1,0 +1,20 @@
+Package : libunix_1_5_0_2_Fix_MsgHndlr_Queue_Crash
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libunix (1.5.0)
+Depends :  libunix(==1.5.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  joeychen (JoeyChen@ami.com.tw)
+Urgency : new
+Description : Fixed for execute command line function causes ipmistack to exit
+.
+

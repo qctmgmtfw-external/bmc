@@ -1,0 +1,6 @@
+./etc/init.d/slpd 997 9d386cb0dda5f809d32e406641f6d320
+./etc/slp.conf 9053 1ca4ae3e225458076a85036fd7df94dc
+./etc/slp.reg 1185 b88158c718dba6fa338a8b31aecadbfd
+./etc/slp.spi 2707 345ca0628a850e607d4e84fa1e1ef4ee
+./usr/lib/libslp.so.1.0.1 55644 1eb6944cf5060edd22fea6e690142f4d
+./usr/sbin/slpd 80008 451e0a4d6731079f1b4be8cdc988d71c

@@ -1,0 +1,5 @@
+config FEATURE_GLOBAL_PECI_OVER_IPMI
+        bool
+        default y if PECI_over_IPMI_Support
+        help
+             Enable Communicating with PECI through IPMI Master Write Read channel

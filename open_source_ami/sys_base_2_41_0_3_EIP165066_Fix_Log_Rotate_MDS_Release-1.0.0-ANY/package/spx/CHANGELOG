@@ -1,0 +1,9 @@
+Package: sys_base_2_41_0_3_EIP165066_Fix_Log_Rotate_MDS_Release (1.0.0); urgency = new
+
+Abstract:
+	Fix log rotate
+
+Files Added: data, data/00-data_defaults_etc_logrotate.conf, data/01-data_defaults_etc_defconfig_rotate.conf, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.OPENSOURCE, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Wed, 15 Jul 2015 19:59:19 CST
+

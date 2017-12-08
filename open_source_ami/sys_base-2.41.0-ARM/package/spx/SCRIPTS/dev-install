@@ -1,0 +1,24 @@
+# Install Script
+
+build-install:
+	COPY_DIR .  %IMAGE_TREE
+	CREATE_DEV_TREE ../spx/DATA/device.lst
+	WRITE_TO_FILE %CONFIG_SPX_FEATURE_GLOBAL_CONSOLE_TTY %IMAGE_TREE/conf/console_tty
+	WRITE_TO_FILE %CONFIG_SPX_FEATURE_GLOBAL_CONSOLE_TTY %IMAGE_TREE/etc/defconfig/console_tty
+	WRITE_TO_FILE [defaultshell] %IMAGE_TREE/conf/default_sh
+    APPEND_TO_FILE default_shell="%CONFIG_SPX_FEATURE_GLOBAL_DEFAULT_SHELL" %IMAGE_TREE/conf/default_sh
+    COPY_FILE %IMAGE_TREE/conf/default_sh %IMAGE_TREE/etc/defconfig/default_sh
+	COPY_FILE %IMAGE_TREE/etc/defconfig/interfaces.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/etc/defconfig/interfaces
+	COPY_FILE %IMAGE_TREE/etc/defconfig/interfaces.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/conf/interfaces
+	DELETE %IMAGE_TREE/etc/defconfig/interfaces.0x1
+	DELETE %IMAGE_TREE/etc/defconfig/interfaces.0x2
+	DELETE %IMAGE_TREE/etc/defconfig/interfaces.0x3
+	DELETE %IMAGE_TREE/etc/defconfig/interfaces.0x4
+	DELETE %IMAGE_TREE/conf/interfaces.0x1
+	DELETE %IMAGE_TREE/conf/interfaces.0x2
+	DELETE %IMAGE_TREE/conf/interfaces.0x3
+	DELETE %IMAGE_TREE/conf/interfaces.0x4
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_GLOBAL_ENC_HASH_IMAGE" == "YES" ]; then echo "ENC_IMAGE" >> %IMAGE_TREE/etc/features; fi
+	EXECUTE chmod 644 %IMAGE_TREE/conf/crontab
+debug-install:
+

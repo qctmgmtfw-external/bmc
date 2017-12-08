@@ -1,0 +1,9 @@
+Package: hdserverapp_1_17_0_1_Active_Session_Count_Increases_More_Than_Maxsession (1.0.0); urgency = new
+
+Abstract:
+	Active session count incrementing more then max session count
+
+Files Added: data, data/00-data_hdserver.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 08 Sep 2011 13:20:59 IST
+

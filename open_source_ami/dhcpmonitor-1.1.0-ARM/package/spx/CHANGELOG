@@ -1,0 +1,18 @@
+Package: dhcpmonitor (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:12:08 EDT
+
+Package: dhcpmonitor (1.0.0); urgency = new
+
+Abstract:
+	Provides DHCP renewal upon link status change
+
+Files Added: data, data/Makefile, data/dhcpmon, data/dhcpmonitor.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/dhcpmonitor, spx/PACKAGES.D/dhcpmonitor/DATA, spx/PACKAGES.D/dhcpmonitor/SCRIPTS, spx/PACKAGES.D/dhcpmonitor/SCRIPTS/dev-install, spx/RULES
+
+--Submitter:  () Tue, 03 May 2011 11:16:15 CST
+

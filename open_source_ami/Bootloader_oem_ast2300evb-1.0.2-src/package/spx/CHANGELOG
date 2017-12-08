@@ -1,0 +1,28 @@
+Package: Bootloader_oem_ast2300evb (1.0.2); urgency = medium
+
+Abstract:
+	EIP-216975 sync uboot flash code to RR5 to support winbond25Q256.
+
+Files Added: data/02-cpu_arm926ejs_AST2300_ast_spiflash.c, data/03-drivers_spiflash_spiflash.c, data/04-drivers_spiflash_generic.c, data/05-drivers_spiflash_macronix.c, data/06-drivers_spiflash_winbond.c, data/07-include_spiflash.h
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Tue, 26 May 2015 16:49:11 CST
+
+Package: Bootloader_oem_ast2300evb (1.0.1); urgency = medium
+
+Abstract:
+	EIP189236 Add the command "Read Configuration Register" to support new MX25L25635/MX25L25735 F type.
+
+Files Added: data/01-drivers_spiflash_macronix.c
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Tue, 11 Nov 2014 14:39:50 CST
+
+Package: Bootloader_oem_ast2300evb (1.0.0); urgency = new
+
+Abstract:
+	ast2300evb OEM Patches to Bootloader (U-boot 1.1.6)
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/@Bootloader_oem_ast2300evb, spx/PACKAGES.D/@Bootloader_oem_ast2300evb/DATA, spx/PACKAGES.D/@Bootloader_oem_ast2300evb/SCRIPTS, spx/PACKAGES.D/@Bootloader_oem_ast2300evb/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/ApplyPatch
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Tue, 11 Nov 2014 10:48:54 CST
+

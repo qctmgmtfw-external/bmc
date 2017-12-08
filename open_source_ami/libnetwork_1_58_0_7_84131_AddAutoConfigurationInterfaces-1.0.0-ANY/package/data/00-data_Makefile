@@ -1,0 +1,12 @@
+--- .pristine/libnetwork-1.58.0-src/data/Makefile Wed Mar  7 21:55:03 2012
++++ source/libnetwork-1.58.0-src/data/Makefile Wed Mar  7 22:02:57 2012
+@@ -17,7 +17,9 @@
+ CFLAGS += -I${SPXINC}/unix
+ CFLAGS += -I${SPXINC}/hostname
+ CFLAGS += -I${SPXINC}/iniparser
++CFLAGS += -I${SPXINC}/ncml
+ 
+ LIBS += -L${SPXLIB}/hostname -lhostname
++LIBS += -L${SPXLIB}/ncml -lncml
+ include ${TOOLDIR}/rules/Rules.make.libs
+ #------------------------------------------------------------------------------

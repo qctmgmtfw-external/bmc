@@ -1,0 +1,34 @@
+Package: libdbgout (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:44:34 EDT
+
+Package: libdbgout (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:53:45 EDT
+
+Package: libdbgout (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:03:53 EST
+
+Package:libdbgout (1.0.0);urgency=new
+
+Abstract:
+	This package includes debug function APIs.
+
+Files Added: dbgout.h, Makefile, dbgout.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 25 Nov 2009 14:52:12 -0500

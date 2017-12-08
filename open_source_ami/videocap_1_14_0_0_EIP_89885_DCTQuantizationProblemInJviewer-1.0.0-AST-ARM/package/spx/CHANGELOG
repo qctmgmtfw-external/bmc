@@ -1,0 +1,9 @@
+Package: videocap_1_14_0_0_EIP_89885_DCTQuantizationProblemInJviewer (1.0.0); urgency = new
+
+Abstract:
+	for EIP 89885, DCT Quantization problem in JViewer
+
+Files Added: data, data/00-data_ast_videocap_engine.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 24 May 2012 14:41:24 CST
+

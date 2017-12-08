@@ -1,0 +1,42 @@
+#!/bin/sh
+
+if [ -f  "/conf/dhcp.conf" ]
+then
+    . /conf/dhcp.conf
+    #echo "AMI DHCP4 script : dhcp.conf found."
+#else
+    #echo "AMI DHCP4 script : dhcp.conf not found. The extend parameters will not use."
+fi
+
+if [ -f  "/conf/dhcp.conf" ]
+then
+    . /conf/dns.conf
+    #echo "AMI DHCP4 script : dns.conf found."
+#else
+    #echo "AMI DHCP4 script : dns.conf not found. The extend parameters will not use."
+fi
+
+
+
+
+if [ -n "$SET_DHCP_PREIP4" ];then
+	REQ_PRE_IP="-r $SET_DHCP_PREIP4"
+fi
+
+    echo "Calling udhcpc.... "
+    
+if [ -f  "/conf/dhcp.conf" ];then
+	if [ "$SET_FQDN" == 'yes'  -o "$SET_FQDN" == 'y' ]; then
+         echo "DHCP CLIENT FQDN"
+         udhcpc -b -p /var/run/udhcpc.$1.pid -i $1 -t $SET_RETRY -T $SET_TIMEOUT  $REQ_PRE_IP -F $FQDN
+    	#udhcpc -b -p /var/run/udhcpc.$1.pid -i $1 -t $SET_RETRY -T $SET_TIMEOUT -I $SET_INTERVAL $REQ_PRE_IP $FULLFQDN
+	else
+    		udhcpc -b -p /var/run/udhcpc.$1.pid -i $1
+	fi
+
+else
+    udhcpc -b -p /var/run/udhcpc.$1.pid -i $1
+fi
+
+exit 0
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files/>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>Bootloader</package-name>
+<version>1.7.2</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">@Bootloader_oem_ast2300evb</package-name>
+<package-name operator="" version="">buildtools</package-name>
+<package-name operator="" version="">crosscc</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>YES</essential>
+<group/>
+<configtags>Bootloader for AST2300EVB</configtags>
+<installsize/>
+<description>This package contains bootloader for AST2300EVB (U-boot)</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>Alex Yang  </maintainer>
+<maintainer-email>alexyang@ami.com.tw</maintainer-email>
+<sourcelocation>http://sourceforge.net/projects/u-boot/</sourcelocation>
+<sourceversion>1.1.6</sourceversion>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc>AST2300</soc>
+<build-order/>
+<build-precedence/>
+<platform>AST2300EVB</platform>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Bootloader-1.7.2-ARM-AST2300-AST2300EVB-src/package/spx/RULES</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Bootloader-1.7.2-ARM-AST2300-AST2300EVB-src/package/spx/DEFCONFIG</deconfig>
+<pconfig/>
+<buildconfig/>
+<packages>
+<package>
+<name>Bootloader</name>
+<section>sys</section>
+<essential>YES</essential>
+<configtags/>
+<group>BASE</group>
+<license>GPL-V2</license>
+<description>Bootloader for AST2300EVB.</description>
+<provides>Bootloader</provides>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends/>
+<required/>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Bootloader-1.7.2-ARM-AST2300-AST2300EVB-src/package/spx/PACKAGES.D/Bootloader/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Bootloader-1.7.2-ARM-AST2300-AST2300EVB-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

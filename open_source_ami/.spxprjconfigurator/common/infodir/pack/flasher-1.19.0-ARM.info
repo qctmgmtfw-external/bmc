@@ -1,0 +1,18 @@
+Package : flasher
+Non-Editable : YES
+Version : 1.19.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Dinesh Selvam  (dineshs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : app
+Essential : YES
+Config-Tag : Firmware Flash Support
+Group : FEATURES
+Required : libflash, libdbgout, libfmh, libchecksum
+Package-License : AMI
+Description : This package includes the binary for Flasher application.
+.

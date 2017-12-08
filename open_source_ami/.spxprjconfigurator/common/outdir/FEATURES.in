@@ -1,0 +1,234 @@
+menu "Features Configuration"
+
+source NWBonding_Support_ANY.in
+
+source Pamreorder_Support_ANY.in
+
+source PreserveSDR_Support_ANY.in
+
+source ServicesConf_Support_ANY.in
+
+source nsupdate_src.in
+
+source timeoutd_src.in
+
+source webPreview_support_ANY.in
+
+config NWBonding_Support (1.1.0)
+	bool "Network Bonding Support"
+	default n
+	depends on sys_base
+	help
+		This is dummy Package to enable the bonding support.
+
+#--------------------------------------
+config Pamreorder_Support (1.0.0)
+	bool "PAM Reorder Support"
+	default n
+	help
+		This is a dummy package for PAM Reorder Support.
+
+#--------------------------------------
+config PreserveSDR_Support (1.3.0)
+	bool "File Override support during firmware upgrade"
+	default n
+	help
+		This is a dummy binary package for PreserverSDR
+
+#--------------------------------------
+config ServicesConf_Support (1.1.0)
+	bool "Services Configuration Support"
+	default n
+	help
+		This is a dummy package for Services Configuration Support.
+
+#--------------------------------------
+config goahead (1.62.0)
+	bool "GoAhead Web Server"
+	default y
+	select libifc
+	select  libldapauth
+	select  libldapconf
+	select  libntpconf
+	select  libradiusconf
+	select  libuserm
+	select  libncml
+	select  libchecksum
+	select  libfmh
+	select  libadvisercfg
+	select  libvmedia
+	select  libtoken
+	select  webui
+	select  libncsiconf
+	select  libuserauth
+	select  libvideorecordcfg
+	select  libactivedircfg
+	depends on @ARCH_ARM
+	help
+		This package includes the goahead binary module.
+
+#--------------------------------------
+config defaultbondcfg (1.9.0)
+	bool "Bonding Configuration"
+	default y
+	depends on NWBonding_Support
+	depends on @ARCH_ARM
+	help
+		This Package will configure the default bonding configurations.
+
+#--------------------------------------
+config dhcpmonitor (1.1.0)
+	bool "DHCP Renewal Support upon Link-Up"
+	default n
+	depends on netmon
+	depends on @ARCH_ARM
+	help
+		Used to renew DHCP lease upon link status change.
+
+#--------------------------------------
+config flasher (1.19.0)
+	bool "Firmware Flash Support"
+	default y
+	select libflash
+	select  libdbgout
+	select  libfmh
+	select  libchecksum
+	depends on @ARCH_ARM
+	help
+		This package includes the binary for Flasher application.
+
+#--------------------------------------
+config libiptables (1.4.0)
+	bool "System Firewall Support"
+	default n
+	depends on @ARCH_ARM
+	help
+		Package provides iptables library files
+
+#--------------------------------------
+config liblogostatic (1.1.0)
+	bool "Dynamic change OEM logo and copyright files"
+	default n
+	depends on @ARCH_ARM
+	help
+		This Package contains OEM logo and copyright file for dynamic change.
+
+#--------------------------------------
+config libsnmp_hostname_mib (1.6.0)
+	bool "SNMP Hostname Extension"
+	default n
+	select libhostname
+	depends on sys_net_snmp(>=1.0.0)
+	depends on @ARCH_ARM
+	help
+		SNMP Hostname Extension
+
+#--------------------------------------
+config libsnmp_template_mib (1.3.0)
+	bool "SNMP Template Extension"
+	default n
+	depends on sys_net_snmp(>=1.0.0)
+	depends on @ARCH_ARM
+	help
+		SNMP Template Extension
+
+#--------------------------------------
+config libsyslogconf (1.4.0)
+	bool "SysLog Library Support"
+	default n
+	depends on @ARCH_ARM
+	help
+		syslog configuration library.
+
+#--------------------------------------
+config nsupdate (1.10.0)
+	bool "Dynamic DNS Support"
+	default n
+	select target
+	select  crosscc
+	select  rules
+	depends on sys_base
+	help
+		Dynamic DNS Updates - Registers Name to DNS Server for Name resolution
+
+#--------------------------------------
+config phycfg (1.5.0)
+	bool "PHY Configuration Support"
+	default n
+	select libphyconf
+	depends on @ARCH_ARM
+	help
+		PHY configuration application. Based on the user configuraton this is used to configure the network interface.
+
+#--------------------------------------
+config preserveconfig (1.12.0)
+	bool "File OverRide Support during Preserve Configuration"
+	default n
+	select libPreserveConf
+	depends on @ARCH_ARM
+	help
+		This package provides a binary application to preserve some of the files while restore to factory default or updating the firmware
+
+#--------------------------------------
+config processmanager (1.3.0)
+	bool "Process Manager Support"
+	default n
+	select libprocmanager
+	depends on @ARCH_ARM
+	help
+		This package contains sources to monitor process started by AMI
+
+#--------------------------------------
+config solssh (1.10.0)
+	bool "SOLSSH Support"
+	default n
+	select libiniparser
+	depends on @ARCH_ARM
+	help
+		This package include build solssh application
+
+#--------------------------------------
+config sys_failsafeconf (2.4.0)
+	bool "Fail-safe conf support"
+	default n
+	help
+		fail-safe conf system package which contains required files for fail-safe conf functionalities
+
+#--------------------------------------
+config sys_net_snmp (2.6.0)
+	bool "NET-SNMP Support"
+	default n
+	select libsnmpusers
+	help
+		Systen package which provides support for NET-SNMP protocol
+
+#--------------------------------------
+config sys_radius (2.3.0)
+	bool "RADIUS Support"
+	default n
+	depends on @ARCH_ARM
+	help
+		Systen package which provides support for RADIUS protocol
+
+#--------------------------------------
+config timeoutd (1.9.0)
+	bool "Timeout Daemon Support"
+	default n
+	select crosscc
+	select  kernel
+	select  sys_base
+	help
+		Timeoutd application package.
+
+#--------------------------------------
+config webPreview_support (1.3.0)
+	bool "Web Preview Support"
+	default n
+	help
+		This package is used to make web preview feature as configurable
+
+#--------------------------------------
+
+endmenu
+
+

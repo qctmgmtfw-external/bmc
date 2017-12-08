@@ -1,0 +1,20 @@
+Package : libipmipef_2_11_0_2_EIP93209_To_Fix_PEFPostponeTimer_Ineffective_Issue
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libipmipef (2.11.0)
+Depends :  libipmipef(==2.11.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Prakash (prakashs@amiindia.co.in)
+Urgency : new
+Description : Fix the PEF Postpone Timer ineffective issue
+.
+

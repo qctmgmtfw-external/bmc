@@ -1,0 +1,9 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>  <options>               <dump>  <pass>
+/dev/root       /               auto    defaults,rw                     0 0
+proc            /proc           proc    defaults                        0 0
+sys				/sys			sysfs	defaults						0 0
+devpts			/dev/pts		devpts	gid=5,mode=620					0 0
+/dev/mtdblock1  /conf           jffs2   defaults                        0 0
+/dev/mtdblock3 	/usr/local/www	cramfs	defaults,ro						0 0

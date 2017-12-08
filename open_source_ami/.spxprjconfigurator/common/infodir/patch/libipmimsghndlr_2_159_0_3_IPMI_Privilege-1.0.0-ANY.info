@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_3_IPMI_Privilege
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 3 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 3
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  muthuchamyk (muthusamyk@amiindia.co.in)
+Urgency : new
+Description : Modified the AMI OEM IPMI command privilege and change for setiface command.
+.
+

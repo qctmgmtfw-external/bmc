@@ -1,0 +1,9 @@
+Package: webui_1_122_0_8_84131_AddAutoConfigurationInterfaces (1.0.0); urgency = new
+
+Abstract:
+	Add configure interfaces in service configuration automatically.
+
+Files Added: data, data/00-data_MDS-Workspace_www_str_EN_common_str.js, data/01-data_MDS-Workspace_www_str_EN_configure_nw_bond_str.js, data/02-data_MDS-Workspace_www_page_configure_nw_bond.html, data/03-data_MDS-Workspace_www_impl_configure_nw_bond_imp.js, data/04-data_MDS-Workspace_www_help_EN_configure_nw_bond_hlp.html, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Fri, 09 Mar 2012 15:47:53 CST
+

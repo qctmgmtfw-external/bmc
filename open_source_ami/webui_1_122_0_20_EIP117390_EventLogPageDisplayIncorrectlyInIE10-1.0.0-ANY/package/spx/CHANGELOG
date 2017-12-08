@@ -1,0 +1,9 @@
+Package: webui_1_122_0_20_EIP117390_EventLogPageDisplayIncorrectlyInIE10 (1.0.0); urgency = new
+
+Abstract:
+	Event log page of web UI displays incorrectly in IE10
+
+Files Added: data, data/00-data_MDS-Workspace_www_lib_listgrid.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 16 Apr 2013 16:48:53 CST
+

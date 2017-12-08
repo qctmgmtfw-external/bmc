@@ -1,0 +1,17 @@
+Package : auth_ldap
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Required : pam_ldap, libnss_ldap
+Essential : NO
+Config-Tag : auth_ldap
+Group : AUTHENTICATION
+Owner : AMI
+Maintainer : Siva Prakash R  (sivaprakashr@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : All LDAP related Authentication Packages are selected, only this package is included
+.

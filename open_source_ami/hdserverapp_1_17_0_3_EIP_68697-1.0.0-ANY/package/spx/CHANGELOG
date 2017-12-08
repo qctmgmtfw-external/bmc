@@ -1,0 +1,9 @@
+Package: hdserverapp_1_17_0_3_EIP_68697 (1.0.0); urgency = new
+
+Abstract:
+	Bind server socket tp the interface provided in ncml configuration
+
+Files Added: data, data/00-data_hdserver.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 21 Sep 2011 14:31:57 EDT
+

@@ -1,0 +1,15 @@
+Package : rules
+Version : 1.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : tool
+Essential : YES
+Group : BASE
+Owner : AMI
+Maintainer : Vinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : Global build rules and Build rules for  drivers,libraries, applications.
+.

@@ -1,0 +1,10 @@
+# Install Script
+
+build-install:
+			MKDIR_NOCLEAN %SPXINC/pamhelper
+			MKDIR_NOCLEAN %SPXLIB/pamhelper
+			COPY_FILE ./pam_helper.h %SPXINC/pamhelper
+			COPY_FILE ./libpamhelper.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/pamhelper
+			ADD_LIBRARY_LINKS %SPXLIB/pamhelper libpamhelper.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

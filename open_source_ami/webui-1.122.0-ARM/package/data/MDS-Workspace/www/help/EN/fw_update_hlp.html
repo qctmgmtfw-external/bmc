@@ -1,0 +1,58 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>fw_update help</title>
+	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body>
+		<h2><div class='floatRight'><a href='javascript://' class='closeBtn' onclick='top.closeHelp();'>X</a></div>
+		<div class='helpmainhead'>Firmware Update</div></h2>
+		<div class='subSection'>
+		This wizard takes you through the process of firmware upgradation.
+		A reset of the box will automatically follow whether the upgrade is completed or cancelled.
+		An option to Preserve configuration will be presented. 
+		Enable the option, if you wish to preserve configured settings through the upgrade.
+		<br/><br/>
+		<fieldset>
+		<legend>Actions</legend>
+		<script type="text/javascript">
+		if (checkProjectCfg("ENC_IMAGE")) {
+			var signimage_help = "<h4>Upload SignImage Key</h4>";
+			signimage_help += "Check this button to upload the Sign Image " +
+				"public key of the encrypted firmware.";
+			document.write(signimage_help);
+		}
+		</script>
+		<h4>Enter Update Mode</h4>
+		Click 'Enter Update Mode' to upgrade the current device firmware.
+		</fieldset>
+	</body>
+</html>

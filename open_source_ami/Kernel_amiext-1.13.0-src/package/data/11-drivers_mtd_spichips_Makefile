@@ -1,0 +1,18 @@
+diff -Naur linux-2.6.28.10/drivers/mtd/spichips/Makefile linux-2.6.28.10-ami/drivers/mtd/spichips/Makefile
+--- linux-2.6.28.10/drivers/mtd/spichips/Makefile	1970-01-01 08:00:00.000000000 +0800
++++ linux-2.6.28.10-ami/drivers/mtd/spichips/Makefile	2010-04-26 11:41:20.000000000 +0800
+@@ -0,0 +1,14 @@
++#
++# linux/drivers/spichips/Makefile
++#
++obj-$(CONFIG_MTD_SPI)		+= spimtd.o spiaccess.o spireg.o generic.o
++
++obj-$(CONFIG_MTD_SPI_ST)   	+= m25pxx.o
++obj-$(CONFIG_MTD_SPI_SPANSION) += spansion.o
++obj-$(CONFIG_MTD_SPI_MACRONIX) += macronix.o
++obj-$(CONFIG_MTD_SPI_AT)   	+= atmel.o
++obj-$(CONFIG_MTD_SPI_INTEL_S33) += intels33.o
++obj-$(CONFIG_MTD_SPI_WINBOND) += winbond.o
++
++# The default driver  should be the last in the list of suppported devices
++obj-$(CONFIG_MTD_SPI_DEFAULT)   += default.o

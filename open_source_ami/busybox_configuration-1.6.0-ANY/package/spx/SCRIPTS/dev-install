@@ -1,0 +1,6 @@
+# Install Script
+
+build-install:
+	INSTALL %IMAGE_TREE/etc/busybox 
+	
+debug-install:

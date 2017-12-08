@@ -1,0 +1,9 @@
+Package: libipmipdkcmds_2_13_0_2_EnableAMIGetSensorInfo (1.0.0); urgency = new
+
+Abstract:
+	Enabling AMIGetSensorInfo Command for faster access.
+
+Files Added: data, data/00-data_cmdselect.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 17 Sep 2011 16:52:23 IST
+

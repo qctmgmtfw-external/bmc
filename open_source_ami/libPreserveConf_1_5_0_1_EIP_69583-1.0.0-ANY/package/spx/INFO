@@ -1,0 +1,20 @@
+Package : libPreserveConf_1_5_0_1_EIP_69583
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libPreserveConf (1.5.0)
+Depends :  libPreserveConf(==1.5.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  banuprakashreddym (banuprakashreddym@amiindia.co.in)
+Urgency : new
+Description : Restore to factory defaults fix for service configurations
+.
+

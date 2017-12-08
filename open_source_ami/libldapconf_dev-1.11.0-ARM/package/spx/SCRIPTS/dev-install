@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/ldapconf
+	MKDIR_NOCLEAN %SPXINC/ldapconf
+	COPY_FILE ./libldapconf.a %SPXLIB/ldapconf
+    COPY_FILE ./ldapconf.h %SPXINC/ldapconf
+	COPY_FILE libldapconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ldapconf
+	ADD_LIBRARY_LINKS %SPXLIB/ldapconf libldapconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+        
+debug-install:
+

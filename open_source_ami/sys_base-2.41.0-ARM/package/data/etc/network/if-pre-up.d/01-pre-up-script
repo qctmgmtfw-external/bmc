@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Interface $IFACE is going to go up"
+exit 0

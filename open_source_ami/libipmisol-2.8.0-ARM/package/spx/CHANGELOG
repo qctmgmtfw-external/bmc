@@ -1,0 +1,188 @@
+Package: libipmisol (2.8.0); urgency = low
+
+Abstract:
+	SOL timeout was not really happening because of incorrect return value check. Because of this few characters were not reaching the client tool till the buffer gets filled. Fixed it
+
+Files Modified: data/SOL.c
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 29 Jul 2011 12:50:04 EDT
+
+Package: libipmisol (2.7.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/SOL.c, data/SOLSend.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:28:56 IST
+
+Package: libipmisol (2.6.0); urgency = low
+
+Abstract:
+	Reverted the changes.
+
+Files Modified: data/SOL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Jul 2011 19:30:34 IST
+
+Package: libipmisol (2.5.0); urgency = medium
+
+Abstract:
+	Made changes to load the SOL configuration using MAX_LAN_CHANNELS macro.
+
+Files Modified: data/SOL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Jul 2011 18:18:34 IST
+
+Package: libipmisol (2.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:01:45 EDT
+
+Package: libipmisol (2.3.0); urgency = high
+
+Abstract:
+	Made changes to Support OPMA at run time.
+
+Files Modified: data/SOL.c, data/SOLSend.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 May 2011 15:06:07 IST
+
+Package: libipmisol (2.2.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:48:03 IST
+
+Package: libipmisol (2.1.0); urgency = medium
+
+Abstract:
+	Removing nice as they are not applicable for threads.
+
+Files Modified: data/SOL.c, data/SOLSend.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 15:00:03 IST
+
+Package: libipmisol (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/SOL.c, data/SOLMetaInfo.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:04:49 IST
+
+Package: libipmisol (1.3.0); urgency = low
+
+Abstract:
+	The Thread arguments will be made free in startIfc function after the thread mutex is released properly.
+
+Files Modified: data/SOL.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Feb 2011 01:00:47 IST
+
+Package: libipmisol (1.2.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/SOL.c, data/SOLSend.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:15:22 EDT
+
+Package: libipmisol (1.1.0); urgency = medium
+
+Abstract:
+	Corrected the SOL functionality. Now able to connect SOL via ipmitool or freeipmi.
+
+Files Modified: data/SOL.c, data/SOLRecv.c
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Thu, 16 Sep 2010 14:56:17 IST
+
+Package: libipmisol (1.0.8); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency and removed unwanted inclusion PDK Header Files
+
+Files Modified: data/Makefile, data/SOLSend.c, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:54:37 IST
+
+Package: libipmisol (1.0.7); urgency = low
+
+Abstract:
+	MBMC Changes for SOL Interface
+
+Files Modified: data/SOL.c, data/SOLBuf.c, data/SOLMetaInfo.c, data/SOLRecv.c, data/SOLSend.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:42:47 IST
+
+Package: libipmisol (1.0.6); urgency = low
+
+Abstract:
+	Removing gpio depends from libipmisol
+
+Files Modified: data/Makefile, data/SOLSend.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 14 Jun 2010 15:32:35 IST
+
+Package: libipmisol (1.0.5); urgency = low
+
+Abstract:
+	Exiting from SOL task when initialization of SOL port fails
+
+Files Modified: data/SOL.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 10 Jun 2010 16:34:45 IST
+
+Package: libipmisol (1.0.4); urgency = low
+
+Abstract:
+	Replacing PDK_SwitchEMPMux with function pointers
+
+Files Modified: data/SOL.c, data/SOLSend.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 23:32:31 IST
+
+Package: libipmisol (1.0.3); urgency = medium
+
+Abstract:
+	ln -s repalced with CREATE_SOFT_LINK
+
+Files Modified: spx/PACKAGES.D/libipmisol/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 05 Mar 2010 10:09:34 EST
+
+Package: libipmisol (1.0.2); urgency = low
+
+Abstract:
+	Including Joey's changes to drop packet in SOL after maximum retires.
+
+Files Modified: data/SOLSend.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 19 Feb 2010 15:55:22 IST
+
+Package: libipmisol (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:08:22 EST
+
+Package:libipmisol (1.0.0);urgency=new
+
+Abstract:
+	This library package contains IPMI SOL stuffs
+
+Files Added: SOLBuf.c, SOLRecv.c, Makefile, SOLMetaInfo.c, SOL.c, SOLSend.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 9 Dec 2009 14:17:02 +0800

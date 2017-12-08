@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+	ADD_MODULES_ONLY watchdog_hw
+	ADD_UNLOAD_MODULE watchdog_hw 7
+	ADD_UNLOAD_MODULE watchdog_hw 8
+
+debug-install:

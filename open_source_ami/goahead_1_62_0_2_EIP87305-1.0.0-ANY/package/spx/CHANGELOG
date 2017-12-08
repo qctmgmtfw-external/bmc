@@ -1,0 +1,9 @@
+Package: goahead_1_62_0_2_EIP87305 (1.0.0); urgency = new
+
+Abstract:
+	EIP#87305
+
+Files Added: data, data/00-data_90-up-webserver, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter:  () Thu, 24 May 2012 18:23:20 CST
+

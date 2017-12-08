@@ -1,0 +1,8 @@
+config FEATURE_GLOBAL_^ARM^_ENDIAN_LITTLE
+	bool
+	default y if @ARCH_ARM
+
+
+endmenu
+
+

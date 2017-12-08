@@ -1,0 +1,16 @@
+Package : pam_helperd
+Non-Editable : YES
+Version : 1.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Jothiram Selvam  (jothirams@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Group : AUTHENTICATION
+Package-License : AMI
+Description : This application shall be used by the pam and libnss libraries
+.

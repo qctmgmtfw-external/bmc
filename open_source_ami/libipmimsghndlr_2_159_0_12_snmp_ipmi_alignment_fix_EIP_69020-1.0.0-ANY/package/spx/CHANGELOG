@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_12_snmp_ipmi_alignment_fix_EIP_69020 (1.0.0); urgency = new
+
+Abstract:
+	snmp_ipmi_alignment_fix_EIP_69020
+
+Files Added: data, data/00-data_AMI_AMIConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Tue, 20 Sep 2011 12:26:18 EDT
+

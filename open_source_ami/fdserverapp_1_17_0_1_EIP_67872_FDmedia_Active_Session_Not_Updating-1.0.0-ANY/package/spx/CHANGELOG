@@ -1,0 +1,9 @@
+Package: fdserverapp_1_17_0_1_EIP_67872_FDmedia_Active_Session_Not_Updating (1.0.0); urgency = new
+
+Abstract:
+	EIP_67872:FDmedia Active Session count is not Updating
+
+Files Added: data, data/00-data_fdserver.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 08 Sep 2011 13:18:11 IST
+

@@ -1,0 +1,9 @@
+Package: webui_1_122_0_14_ResIPMatchThroughETHInterface (1.0.0); urgency = new
+
+Abstract:
+	Through eth1 to access BMC website, let dashboard page displays eth1's IP, MAC etc.
+
+Files Added: data, data/00-data_MDS-Workspace_www_impl_login_imp.js, data/01-data_MDS-Workspace_www_impl_dashboard_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 30 Aug 2012 18:28:02 CST
+

@@ -1,0 +1,17 @@
+Package : libphyconf
+Non-Editable : YES
+Version : 1.8.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Kiran Kumar S  (kirankumars@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : PHY Library Support
+Group : LIBRARY
+Package-License : AMI
+Description : This package contains PHY configuration related APIs
+.

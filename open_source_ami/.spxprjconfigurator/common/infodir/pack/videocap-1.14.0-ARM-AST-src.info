@@ -1,0 +1,49 @@
+Source : videocap
+Version : 1.14.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : videocap, videocap_driver_dev
+Build-Depends : crosscc, helper_driver_dev, kernel_dev, rules
+Essential : YES
+Group : DEVICE
+Owner : AMI
+Maintainer : David Chang  (DavidChang@ami.com.tw)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : This package contains the video capture dirver for AST SoC.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : videocap
+Section : sys
+Essential : YES
+Group : DEVICE
+Provides : VideoDriver
+Depends : internal_video, video, kernel
+Package-License : GPL-V2
+Description : This package contains the built video capture dirver for AST SoC.
+.
+
+Package : videocap_driver_dev
+Section : dev
+Essential : NO
+Group : DEVEL
+Provides : VideoDriverDevelopment
+Depends : internal_video
+Package-License : GPL-V2
+Description : This package contains video capture driver development header files.
+.
+

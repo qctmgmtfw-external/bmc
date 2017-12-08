@@ -1,0 +1,18 @@
+Package : JViewer_common
+Non-Editable : YES
+Version : 1.70.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Othiyappan.K  (othiyappank@amiindia.co.in)
+Source-License : AMI
+Architecture : ANY
+Urgency : medium
+Section : app
+Essential : YES
+Group : KVM
+Depends : JavaClientSupport
+Required : adviser
+Package-License : AMI
+Description : This package contains JViewer common source such as GUI,Vmedia source package.
+.

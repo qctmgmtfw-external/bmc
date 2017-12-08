@@ -1,0 +1,128 @@
+menu "User Management Configuration"
+
+source auth_ad_ANY.in
+
+source auth_ldap_ANY.in
+
+config pam_ad (1.15.0)
+	bool 
+	default n
+	select pam_helperd
+	select  libuserauth
+	select  libactivedircfg
+	select  libldapauth
+	select  libUserPrivilege
+	depends on @ARCH_ARM
+	help
+		This packages contains the PAM module for Active Directory based login according to the FTS Active Directory Deployment.
+
+#--------------------------------------
+config pam_ldap (1.24.0)
+	bool 
+	default n
+	select pam_helperd
+	select  libuserauth
+	select  libldapconf
+	select  libldapauth
+	select  libUserPrivilege
+	depends on @ARCH_ARM
+	help
+		This packages contains the PAM module for LDAP based login
+
+#--------------------------------------
+config auth_ad (1.2.0)
+	bool "auth_ad"
+	default n
+	select pam_ad
+	select  libnss_ad
+	help
+		All Acive Directory related Authentication Packages are selected, only this package is included
+
+#--------------------------------------
+config auth_ldap (1.2.0)
+	bool "auth_ldap"
+	default n
+	select pam_ldap
+	select  libnss_ldap
+	help
+		All LDAP related Authentication Packages are selected, only this package is included
+
+#--------------------------------------
+config libnss_ad (1.9.0)
+	bool 
+	default n
+	select pam_helperd
+	select  libuserauth
+	select  libUserPrivilege
+	depends on @ARCH_ARM
+	help
+		Implementation contains libnss for Active directory
+
+#--------------------------------------
+config libnss_ipmi (1.15.0)
+	bool 
+	default n
+	select libuserauth
+	depends on @ARCH_ARM
+	help
+		Implements nss-ipmi
+
+#--------------------------------------
+config libnss_ldap (1.12.0)
+	bool 
+	default n
+	select pam_helperd
+	select  libuserauth
+	select  libUserPrivilege
+	depends on @ARCH_ARM
+	help
+		Provides the libnss_ldap functionality
+
+#--------------------------------------
+config libpamhelper (1.12.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains the PAM Helper Library
+
+#--------------------------------------
+config libuserauth (1.27.0)
+	bool 
+	default n
+	select libUserPrivilege
+	depends on @ARCH_ARM
+	help
+		User Authentication package
+
+#--------------------------------------
+config libuserauth_dev (1.27.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Package Contains Helper macros which shall be used by NSS and PAM modules.
+
+#--------------------------------------
+config pam_helperd (1.7.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This application shall be used by the pam and libnss libraries
+
+#--------------------------------------
+config pam_ipmi (1.18.0)
+	bool 
+	default n
+	select libuserauth
+	select  libpdkapp
+	depends on @ARCH_ARM
+	help
+		PAM module for Authentication using IPMI User database
+
+#--------------------------------------
+
+endmenu
+
+

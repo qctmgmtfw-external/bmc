@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_26_EIP102436_AddFullKeyboardSupport (1.0.0); urgency = new
+
+Abstract:
+	Add full keyboard support option
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, data/01-data_src_com_ami_kvm_jviewer_gui_WindowFrame.java, data/02-data_src_com_ami_kvm_jviewer_gui_JViewerView.java, data/03-data_src_com_ami_kvm_jviewer_gui_JVMenu.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 03 Oct 2012 11:28:08 CST
+

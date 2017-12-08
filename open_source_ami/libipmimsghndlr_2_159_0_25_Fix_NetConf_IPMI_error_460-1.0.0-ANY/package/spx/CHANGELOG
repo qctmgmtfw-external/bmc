@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_25_Fix_NetConf_IPMI_error_460 (1.0.0); urgency = new
+
+Abstract:
+	Fix getting network configuration IPMI error 460
+
+Files Added: data, data/00-data_AMI_AMIConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: AutumnChen (autumnchen@ami.com.tw) Wed, 04 Jul 2012 17:04:42 CST
+

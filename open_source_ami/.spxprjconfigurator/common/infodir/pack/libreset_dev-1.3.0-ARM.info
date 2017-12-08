@@ -1,0 +1,16 @@
+Package : libreset_dev
+Non-Editable : YES
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Vinay Tandon  (vinayt@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Group : DEVEL
+Package-License : AMI
+Description : This package contains the development package for RESET library.
+.

@@ -1,0 +1,17 @@
+Package : libncml_dev
+Non-Editable : YES
+Version : 1.22.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Joey Chen  (JoeyChen@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Config-Tag : NCML development header files
+Group : DEVEL
+Package-License : AMI
+Description : Network connection manager library development package
+.

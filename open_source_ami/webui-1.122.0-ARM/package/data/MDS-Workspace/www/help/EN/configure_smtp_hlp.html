@@ -1,0 +1,115 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_smtp help</title>
+	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+	</head>
+	<body>
+	<h2><div class='floatRight'>
+	<a href='javascript://' class='closeBtn' onclick='top.closeHelp();'>X</a>
+	</div>
+	<div class='helpmainhead'>SMTP</div></h2>
+	<div class='subSection'>
+	This page is used to configure the SMTP settings.
+	<fieldset>
+	<legend>Actions</legend>
+	<script type="text/javascript">
+	if (fnCookie.read('gMultiLAN'))
+	{
+		document.write("<h4>LAN Channel Number</h4>");
+		document.write("Select the LAN channel to configure.");
+	}
+	</script>
+	<h4>Sender Address</h4>
+	Enter the 'Sender Address' valid on the SMTP Server.
+	<h4>Machine Name</h4>
+	Enter the 'Machine Name' of the SMTP Server.
+	<ul>
+	<li>- Machine Name is a string of maximum 15 alpha-numeric characters.</li>
+	<li>- Space, special characters are not allowed.</li>
+	</ul>
+	<h4>Primary SMTP Server </h4>
+	It lists the Primary SMTP Server configuration.
+<!--	<h4>Port</h4>
+	Specify the SMTP Port.
+	<ul>
+	<li>- Default Port is 25.</li>
+	</ul>-->
+	<h4>Server Address</h4>
+	Enter the 'IP address' of the SMTP Server. It is a mandatory field.
+	<ul>
+		<li>- IP Address made of 4 numbers separated by dots as in "xxx.xxx.
+			xxx.xxx".</li>
+		<li>- Each Number ranges from 0 to 255.</li>
+		<li>- First Number must not be 0.</li>
+	</ul>
+	Server address will support the following:
+	<ul>
+		<li>- IPv4 Address format.
+		<li>- IPv6 Address format.
+	</ul>
+	<h4>SMTP Server requires Authentication</h4>
+	Check the option 'Enable' to enable SMTP Authentication.
+	</br>
+	Note: SMTP Server Authentication Types supported are:
+	<ul>
+	<li>- CRAM-MD5</li>
+	<li>- LOGIN</li>
+	<li>- PLAIN</li>
+	</ul>
+	If the SMTP server does not support any one of the above authentication 
+	types, the user will get an error message stating,
+	<i>"Authentication type is not supported by SMTP Server"</i>
+	<h4>Username</h4>
+	Enter the username to access SMTP Accounts.
+	<ul>
+	<li>- User Name can be of length 4 to 64 alpha-numeric characters.</li>
+	<li>- It must start with an alphabet.</li>
+	<li>- Special characters ','(comma), ':'(colon), ';'(semicolon), ' '(space) 
+		and '\'(backslash) are not allowed.</li>
+	</ul>
+	<h4>Password</h4>
+	Enter the password for the SMTP User Account.
+	<ul>
+		<li>- Password must be at least 4 characters long.</li>
+		<li>- White space is not allowed.</li>
+	</ul>
+	<strong>NOTE:</strong> This field will not allow more than 64 characters.
+	<h4>Secondary SMTP Server </h4>
+	It lists the Secondary SMTP Server configuration. It is a optional field.
+	<br>If the Primary SMTP server is not working fine, then it tries with 
+	Secondary SMTP Server configuration.
+	<h4>Save</h4>
+	Click 'Save' to save the new SMTP server configuration.
+	<h4>Reset</h4>
+	Click 'Reset' to reset the modified changes.
+	</fieldset>
+	</div>
+	</body>
+</html>

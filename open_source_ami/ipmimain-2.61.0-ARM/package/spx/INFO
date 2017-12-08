@@ -1,0 +1,18 @@
+Package : ipmimain
+Non-Editable : YES
+Version : 2.61.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Winston  (winstonv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : app
+Essential : NO
+Config-Tag : IPMI Support
+Group : IPMI
+Required : libflash, libipmistack, libipmihalapi, libipmihalhw, libipmipdkapi, libfwinfo, libipmichassis, libipmipef, libipmitimer, libipmipdk, libipmipar, libipmipdkcmds, libprocmanager, libuserm, libchecksum, libfmh, libiniparser, libadvisercfg, libencryption, libubenv, libipmiuds, pam_ipmi, libnss_ipmi, libncsiconf, libUserPrivilege
+Package-License : AMI
+Description : This package contains ipmi binaries
+.

@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_13_LDAP_ACCEPT_UID (1.0.0); urgency = new
+
+Abstract:
+	LDAP accept uid as bindn and dn
+
+Files Added: data, data/00-data_webifc_auth.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: royku (royku@ami.com.tw) Fri, 07 Sep 2012 17:09:54 CST
+

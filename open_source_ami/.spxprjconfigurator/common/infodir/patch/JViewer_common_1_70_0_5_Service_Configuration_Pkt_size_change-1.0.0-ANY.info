@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_5_Service_Configuration_Pkt_size_change
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 5 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 5
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  gopinaths (gopinahts@amiindia.co.in)
+Urgency : new
+Description : included needed change for Service Configuration Pkt size change in libncml
+.
+

@@ -1,0 +1,19 @@
+--- linux-2.6.28.10/drivers/usb/host/Kconfig	2009-05-03 02:54:43.000000000 +0800
++++ linux-2.6.28.10-ami/drivers/usb/host/Kconfig	2011-03-17 16:29:10.000000000 +0800
+@@ -225,6 +225,16 @@
+ 	  To compile this driver as a module, choose M here: the
+ 	  module will be called uhci-hcd.
+ 
++config USB_AST_UHCI_HCD
++        tristate "AST UHCI HCD support"
++        depends on USB
++        ---help---
++          The AST UHCI host controller is an embedded HC based on AMBA bus.
++          You may want to read <file:Documentation/usb/uhci.txt>.
++
++          To compile this driver as a module, choose M here: the
++          module will be called uhci-hcd.
++
+ config USB_U132_HCD
+ 	tristate "Elan U132 Adapter Host Controller"
+ 	depends on USB && USB_FTDI_ELAN

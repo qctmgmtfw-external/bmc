@@ -1,0 +1,20 @@
+Package : Kernel_soc_ast2300_1_19_0_2_EIP157215_Modify_MAC_DMA_Behavior
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for Kernel_soc_ast2300 (1.19.0)
+Depends :  @Kernel_soc_ast2300(==1.19.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ANY
+Maintainer :  rotky (royku@ami.com.tw)
+Urgency : new
+Description : Modify MAC and DMA arbitration behavior as Aspeed AP Note#13
+.
+

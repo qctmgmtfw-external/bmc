@@ -1,0 +1,21 @@
+Package : videocap_1_14_0_1_167645_KVMRedirectionShaking
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for videocap (1.14.0)
+Depends :  videocap(==1.14.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST
+Maintainer :  Neal Chen (nealchen@ami.com.tw)
+Urgency : new
+Description : for EIP 167645, the screen would shake if system server changed the resolution 1440 x 900,1600 x 900,1680 x 1050
+.
+

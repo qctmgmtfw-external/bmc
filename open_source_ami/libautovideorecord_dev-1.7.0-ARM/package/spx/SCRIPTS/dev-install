@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %SPXINC/autovideorecord
+		COPY_FILE ./video_record.h %SPXINC/autovideorecord
+		MKDIR_NOCLEAN %SPXLIB/autovideorecord
+		COPY_FILE ./libautovideorecord.a %SPXLIB/autovideorecord
+		COPY_FILE ./libautovideorecord.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/autovideorecord
+		ADD_LIBRARY_LINKS %SPXLIB/autovideorecord libautovideorecord.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

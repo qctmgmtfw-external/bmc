@@ -1,0 +1,244 @@
+Package: sys_ipv6 (2.3.0); urgency = high
+
+Abstract:
+	Adding support for Interfaces 3 and 4 for ipv6
+
+Files Added: data/dhcp6c.conf.0x3, data/dhcp6c.conf.0x4, data/interfaces.0x3, data/interfaces.0x4
+Files Modified: spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 05 Aug 2011 19:01:45 EDT
+
+Package: sys_ipv6 (2.2.0); urgency = high
+
+Abstract:
+	licensing corrected
+
+Files Added: spx/LICENSES/LICENSE.BSD
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 23 Jun 2011 16:33:56 EDT
+
+Package: sys_ipv6 (2.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:41:20 EDT
+
+Package: sys_ipv6 (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:54:05 EST
+
+Package: sys_ipv6 (1.2.0); urgency = low
+
+Abstract:
+	* By default enabling the configurations for dhcp6c client in dhcp6c.conf file according to the number of NIC available in PRJ file
+
+Files Added: data/dhcp6c.conf.0x1, data/dhcp6c.conf.0x2
+Files Deleted: data/dhcp6c.conf
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 06 Oct 2010 01:20:36 IST
+
+Package: sys_ipv6 (1.1.0); urgency = high
+
+Abstract:
+	support added for two network interfaces at build time
+
+Files Added: data/interfaces.0x1, data/interfaces.0x2
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 17 Sep 2010 14:58:35 EDT
+
+Package: sys_ipv6 (1.0.19); urgency = high
+
+Abstract:
+	*  wide-dhcpv6 package added as a build dependency for sys_ipv6 package. so that it will include architecture dependent wide-dhcpv6 client binary package.
+*  hereafter dhcp6c client binary will be copied from wide-dhcpv6-<arch> package and not from sys_ipv6 package.
+
+Files Modified: spx/INFO, spx/RULES.D/directory.lst, spx/RULES.D/files.lst
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 14 Jul 2010 21:52:03 IST
+
+Package: sys_ipv6 (1.0.18); urgency = high
+
+Abstract:
+	* Interface name given by dhcp6c client is stored and the same passed to dns.conf file for new DNS architecture.
+
+Files Modified: data/dhcp6c-script
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 09 Jun 2010 15:16:17 IST
+
+Package: sys_ipv6 (1.0.17); urgency = low
+
+Abstract:
+	Package Description added
+
+Files Modified: spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 28 Apr 2010 21:00:36 IST
+
+Package: sys_ipv6 (1.0.16); urgency = medium
+
+Abstract:
+	Commenting out Eth1 related configurations in dhcp6c.conf file as it is creating problem when there is a single interface in the device.
+
+Files Modified: data/dhcp6c.conf
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Sat, 24 Apr 2010 17:23:31 IST
+
+Package: sys_ipv6 (1.0.15); urgency = medium
+
+Abstract:
+	*Eth1 related configurations added in dhcp6c.conf file. Now dhcp6c client will also run for eth1 interface, if there is a entry in interfaces file.
+
+Files Modified: data/dhcp6c.conf
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 22 Apr 2010 20:24:24 IST
+
+Package: sys_ipv6 (1.0.14); urgency = medium
+
+Abstract:
+	IPv6 autoconfiguration script modified. Bug: Eventhough there is only one inet6 entry for an interface, ipv6 autoconfiguration is done for all the avilable interfaces in the etc/network/interfaces file. Fix: ipv6 autoconfiguration is done seperately for each interface through ipv6autoconf script.
+
+Files Modified: data/ipv6autoconf.sh
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 22 Apr 2010 14:31:00 IST
+
+Package: sys_ipv6 (1.0.13); urgency = medium
+
+Abstract:
+	modified 'only eth0 specific' scripts to generic scripts
+
+Files Modified: data/ipv6autoconf.sh
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 21 Apr 2010 12:50:19 IST
+
+Package: sys_ipv6 (1.0.12); urgency = medium
+
+Abstract:
+	Bug - DNS server addresses are not written correctly after changing source from static-dhcp. Fix - New API is added to replace/append DNS server entries when source is dhcp. so there will not be any unwanted old entries in resolv.conf.
+
+Files Modified: data/dhcp6c-script, spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 20 Apr 2010 16:34:46 IST
+
+Package: sys_ipv6 (1.0.11); urgency = medium
+
+Abstract:
+	Dependencies fixed and config added.
+
+Files Added: spx/P.CONFIG
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:36:21 EDT
+
+Package: sys_ipv6 (1.0.10); urgency = high
+
+Abstract:
+	Bug: After disbaling IPv6 enable check box in web page, device is able to get IPv6 address. Fix:ipv6autoconf script modified for checking IPv6 enable option from /etc/network/interfaces file.
+
+Files Modified: data/ipv6autoconf.sh, spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 02 Apr 2010 20:18:11 IST
+
+Package: sys_ipv6 (1.0.9); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:45:42 EDT
+
+Package: sys_ipv6 (1.0.8); urgency = low
+
+Abstract:
+	Entry for copying dhcp6c binary is removed. It will be done by wide_dhcpv6 package
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 31 Mar 2010 13:17:26 IST
+
+Package: sys_ipv6 (1.0.7); urgency = high
+
+Abstract:
+	NTP support added for dhcp6c client, so that IPv6 NTP server address is stored in ntp.conf
+
+Files Modified: data/dhcp6c-script
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 30 Mar 2010 19:53:28 IST
+
+Package: sys_ipv6 (1.0.6); urgency = low
+
+Abstract:
+	issue : Device is getting IPv6 address from router advertisement, even when IPv6 address source is static. Fix : proc entry added to reject RA when source is static. ipv6autoconf script file is added for this in if-pre-up.d
+
+Files Added: data/ipv6autoconf.sh
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 19 Mar 2010 13:21:03 IST
+
+Package: sys_ipv6 (1.0.5); urgency = low
+
+Abstract:
+	inet6 entry in interfaces file is appended from sys_ipv6 package
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 11 Mar 2010 21:02:40 IST
+
+Package: sys_ipv6 (1.0.4); urgency = low
+
+Abstract:
+	Removing nwhelperapi.sh from sys_ipv6 package. This helper function already moved to sys_base package.
+
+Files Deleted: data/nwhelperapi.sh
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 10 Mar 2010 01:48:04 IST
+
+Package: sys_ipv6 (1.0.3); urgency = low
+
+Abstract:
+	Added missing files which are lost in previous committ - dhcp6c and wide-dhcpv6 folder added
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 08 Mar 2010 23:12:10 IST
+
+Package: sys_ipv6 (1.0.2); urgency = low
+
+Abstract:
+	removed unwanted presence of dhcp6c.conf, dhcp6c-script and nwhelperapi.sh files from / directory
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 08 Mar 2010 19:14:59 IST
+
+Package: sys_ipv6 (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:15:55 EST
+
+Package:sys_ipv6 (1.0.0);urgency=new
+
+Abstract:
+	Package Description.
+
+Files Added: dhcp6c.conf, dhcp6c-script
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 29 Jan 2010 18:17:45 +0530

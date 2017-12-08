@@ -1,0 +1,9 @@
+Package: ipmipdk_dev_2_41_0_1_MBMC_Changes (1.0.0); urgency = new
+
+Abstract:
+	MBMC Changes
+
+Files Added: data, data/00-data_PDKAccess.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Sat, 24 Sep 2011 00:29:00 IST
+

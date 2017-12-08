@@ -1,0 +1,148 @@
+--- u-boot-1.1.6/cpu/arm926ejs/AST2300/ast_timer.c	1970-01-01 08:00:00.000000000 +0800
++++ u-boot-1.1.6-ami/cpu/arm926ejs/AST2300/ast_timer.c	2010-01-18 10:37:10.000000000 +0800
+@@ -0,0 +1,145 @@
++/*
++ * (C) Copyright 2006
++ * American Megatrends Inc.
++ *
++ * Timer functions for the AST2300 SOC
++ *
++ * See file CREDITS for list of people who contributed to this
++ * project.
++ *
++ * This program is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU General Public License as
++ * published by the Free Software Foundation; either version 2 of
++ * the License, or (at your option) any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the
++ * GNU General Public License for more details.
++ *
++ * You should have received a copy of the GNU General Public License
++ * along with this program; if not, write to the Free Software
++ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
++ * MA 02111-1307 USA
++ */
++
++#include <common.h>
++#include <arm926ejs.h>
++#include <ast2300_hw.h>
++
++#define TIMER_LOAD_VAL 0xffffffff
++#define READ_TIMER (*(volatile ulong *) TIMER1_COUNT_REG) /* use timer 1 */
++
++static ulong timestamp;
++static ulong lastdec;
++
++int timer_init (void)
++{
++
++	/* Load the counter and start timer */
++	*((volatile ulong *) TIMER1_RELOAD_REG) = TIMER_LOAD_VAL;
++	*((volatile ulong *) TIMER_CONTROL_REG) = (TIMER1_ENABLE | TIMER1_CLOCK_SELECT);  /* enable timer 1, use external clock, disable interrupt */
++
++	/* init the timestamp and lastdec value */
++	reset_timer_masked();
++
++	return (0);
++}
++
++/*
++ * timer without interrupts
++ */
++
++void reset_timer (void)
++{
++	reset_timer_masked ();
++}
++
++ulong get_timer (ulong base)
++{
++	return get_timer_masked () - base;
++}
++
++void set_timer (ulong t)
++{
++	timestamp = t;
++}
++
++/* delay x useconds AND perserve advance timstamp value */
++void udelay (unsigned long usec)
++{
++	udelay_masked(usec);
++}
++
++void reset_timer_masked (void)
++{
++	/* reset time */
++	lastdec = READ_TIMER;  /* capure current decrementer value time */
++	timestamp = 0;	       /* start "advancing" time stamp from 0 */
++}
++
++ulong get_timer_masked (void)
++{
++	ulong now = READ_TIMER;		/* current tick value */
++
++	if (lastdec >= now) {		/* normal mode (non roll) */
++		/* normal mode */
++		timestamp += lastdec - now; /* move stamp fordward with absoulte diff ticks */
++	} else {			/* we have overflow of the count down timer */
++		/* nts = ts + ld + (TLV - now)
++		 * ts=old stamp, ld=time that passed before passing through -1
++		 * (TLV-now) amount of time after passing though -1
++		 * nts = new "advancing time stamp"...it could also roll and cause problems.
++		 */
++		timestamp += lastdec + TIMER_LOAD_VAL - now;
++	}
++	lastdec = now;
++
++	return timestamp;
++}
++
++/* waits specified delay value and resets timestamp */
++void udelay_masked (unsigned long usec)
++{
++	ulong tmo;
++	ulong endtime;
++	signed long diff;
++
++	if (usec >= 1000) {		/* if "big" number, spread normalization to seconds */
++		tmo = usec / 1000;	/* start to normalize for usec to ticks per sec */
++		tmo *= CFG_HZ;		/* find number of "ticks" to wait to achieve target */
++		tmo /= 1000;		/* finish normalize. */
++	} else {			/* else small number, don't kill it prior to HZ multiply */
++		tmo = usec * CFG_HZ;
++		tmo /= (1000*1000);
++	}
++
++	endtime = get_timer_masked () + tmo;
++
++	do {
++		ulong now = get_timer_masked ();
++		diff = endtime - now;
++	} while (diff >= 0);
++}
++
++/*
++ * This function is derived from PowerPC code (read timebase as long long).
++ * On ARM it just returns the timer value.
++ */
++unsigned long long get_ticks(void)
++{
++	return get_timer(0);
++}
++
++/*
++ * This function is derived from PowerPC code (timebase clock frequency).
++ * On ARM it returns the number of timer ticks per second.
++ */
++ulong get_tbclk (void)
++{
++	ulong tbclk;
++
++	tbclk = CFG_HZ;
++	return tbclk;
++}
++

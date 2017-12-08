@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_25_EIP100725_VMediaMenuAndToolbarButtonEnabledIfPowerOff
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 25 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 25
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description : for EIP 100725, VMedia menu and toolbar buttons enabled even if host is powered off
+.
+

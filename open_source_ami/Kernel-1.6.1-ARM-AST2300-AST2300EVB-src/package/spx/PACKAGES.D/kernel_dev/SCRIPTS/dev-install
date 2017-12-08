@@ -1,0 +1,7 @@
+# This will install the linux header files
+
+build-install:
+		MKDIR_CLEAN %SPXINC/linux
+		COPY_DIR   ./usr/include/linux  %SPXINC/linux
+
+debug-install:

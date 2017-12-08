@@ -1,0 +1,17 @@
+Package : PECI_over_IPMI_Support
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : app
+Required : peci, libpeci
+Essential : NO
+Config-Tag : PECI Over IPMI Support
+Group : IPMI
+Owner : AMI
+Maintainer : Viswanathan S  (viswanathans@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : new
+Description : Support for Communicating with PECI using IPMI Master Write Read Interface
+.

@@ -1,0 +1,6 @@
+./00-data_IPMIDefs.h 491 a64693775580dced9b94dcfd1dd570ec
+./01-data_AMIConf.h 587 1e7be14f33d7f9a2c5a0149b917f9724
+./02-data_IPMI_AMI.h 345 f1bb0ad95ad74c08a897447dbd7a3d6f
+./03-data_IPMI_AMIConf.h 2104 cd2d2beaf553c43ab4c726b62a67f57b
+./04-data_Support.h 682 b8d3031bc1f50c6917fc3b159b3e0125
+./05-data_Sensor.h 560 bfefc152e9c96dac7defd208372fd97c

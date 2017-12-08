@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_46_EIP_188650_FixWdtPreTimeOut
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 46 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 46
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Johnny Chen (JohnnyChen@ami.com.tw)
+Urgency : new
+Description : Fix watchdog pre-timeout interrupt flag cannot be cleared via Set Watchdog Timer command.
+.
+

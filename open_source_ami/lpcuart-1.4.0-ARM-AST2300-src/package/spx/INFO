@@ -1,0 +1,48 @@
+Source : lpcuart
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : lpcuart, lpcuart_driver_dev
+Build-Depends : crosscc, kernel_dev, rules, global_dev, helper_driver_dev
+Essential : NO
+Group : DEVICE
+Owner : AMI
+Maintainer : alexyang  (alexyang@ami.com.tw)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST2300
+Urgency : medium
+Description : This package contains driver to control routing between io com ports and uarts
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : lpcuart
+Section : sys
+Essential : NO
+Config-Tag : LPCUART Device Support
+Group : DEVICE
+Depends : kernel
+Required : helper
+Package-License : GPL-V2
+Description : This package contains lpcuart driver for ast2300 to control routing between io com ports and uarts
+.
+
+Package : lpcuart_driver_dev
+Section : dev
+Essential : NO
+Group : DEVEL
+Package-License : GPL-V2
+Description : This package contains lpcuart driver development header files.
+.
+

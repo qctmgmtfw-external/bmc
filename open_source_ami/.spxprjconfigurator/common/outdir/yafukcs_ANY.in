@@ -1,0 +1,15 @@
+if yafukcs
+
+menu "YafuKCS Configuration"
+
+config FEATURE_YAFUKCS_ENABLE_INTERACTIVE_UPGRADE
+    bool "Enable/Disable Interactive Upgrade in YafuKcs"
+    default n
+    help
+        Enable or Disable Interactive Upgrade in YafuKcs
+        
+endmenu
+endif
+endmenu
+
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="true" readonly="true" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/JViewer_common_1_70_0_5_Service_Configuration_Pkt_size_change-1.0.0-ANY/package/data/00-data_src_com_ami_kvm_jviewer_kvmpkts_ConfPkt.java</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>JViewer_common_1_70_0_5_Service_Configuration_Pkt_size_change</package-name>
+<version>1.0.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>patch</section>
+<patch-order>5</patch-order>
+<build-depends/>
+<depends>
+<package-name operator="==" version="1.70.0">JViewer_common</package-name>
+</depends>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>PATCH</group>
+<configtags>Patch 5 for JViewer_common (1.70.0)</configtags>
+<installsize/>
+<description>included needed change for Service Configuration Pkt size change in libncml</description>
+<architecture>ANY</architecture>
+<owner>AMI</owner>
+<maintainer>gopinaths </maintainer>
+<maintainer-email>gopinahts@amiindia.co.in</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="new">new</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/JViewer_common_1_70_0_5_Service_Configuration_Pkt_size_change-1.0.0-ANY/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/JViewer_common_1_70_0_5_Service_Configuration_Pkt_size_change-1.0.0-ANY/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

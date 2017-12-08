@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/syslogconf
+	COPY_FILE ./syslogconf.h %SPXINC/syslogconf       
+	MKDIR_NOCLEAN %SPXLIB/syslogconf
+	COPY_FILE ./libsyslogconf.a %SPXLIB/syslogconf
+	COPY_FILE libsyslogconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/syslogconf
+	ADD_LIBRARY_LINKS %SPXLIB/syslogconf libsyslogconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

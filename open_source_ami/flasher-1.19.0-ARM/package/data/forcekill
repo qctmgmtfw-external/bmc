@@ -1,0 +1,53 @@
+#Runlevel : 7 = K99
+#Runlevel : 8 = K99
+
+Stack=""
+
+ShouldBeSkipped()
+{
+    echo $1 | grep "^#" > /dev/null
+    if [ $? == 0 ]
+    then
+        return 1
+    fi
+    if [ "`echo $1`" == "" ]
+    then
+    	return 1
+    fi
+
+    return 0
+}
+
+
+# ----------------------Start of  Script ------------------
+InitLevel=`runlevel | awk ' { print $2 } '`
+echo "FORCEKILL($InitLevel): Killing Processes ..."
+#killall -9 qomd adviserd cdserverapp fdserverapp hdserverapp ntpd stunnel4 sfcbd sdrd frud seld processmanager slpd syslogd upnp kbapp mouseapp dhcp6c udhcpc 2>/dev/null
+killall -9  dhcp6c udhcpc 2>/dev/null
+
+while read line
+do
+	# Skip comments and empty line 
+	ShouldBeSkipped $line
+	if [ $? == 1 ]
+	then
+		continue
+	fi
+
+	# Only the module name is needed to remove. Ignore args
+	line=`echo $line | awk '{ print $1}'`
+
+	# Put in Stack in reverse order
+	Stack="$line "$Stack
+done < /etc/unload.$InitLevel
+
+
+# Call modprobe -r for entry in stack
+echo -n "FORCEKILL($InitLevel) : Unloading Modules :"
+for entry in $Stack
+do
+	echo -n "$entry "
+	modprobe -r $entry 2>/dev/null
+done
+echo ""
+

@@ -1,0 +1,21 @@
+diff -Naur linux/drivers/i2c/i2c-core.c linux.fix/drivers/i2c/i2c-core.c
+--- linux/drivers/i2c/i2c-core.c	2010-04-28 11:17:44.736717108 -0400
++++ linux.fix/drivers/i2c/i2c-core.c	2010-04-30 11:17:45.946715692 -0400
+@@ -1610,7 +1610,16 @@
+ {
+ 	struct i2c_adapter *adapter;
+ 
+-	mutex_lock(&core_lock);
++//	mutex_lock(&core_lock);
++	if (in_atomic() || irqs_disabled())
++	{
++		int ret;
++		ret =mutex_trylock(&core_lock);
++		if (!ret)
++			return NULL;
++	}
++	else
++		mutex_lock(&core_lock);
+ 	adapter = (struct i2c_adapter *)idr_find(&i2c_adapter_idr, id);
+ 	if (adapter && !try_module_get(adapter->owner))
+ 		adapter = NULL;

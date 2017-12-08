@@ -1,0 +1,9 @@
+Package: cdserverapp_1_16_0_4_EIP68263 (1.0.0); urgency = new
+
+Abstract:
+	listen on loopback interface along with the network interface name specified in ncml configuration
+
+Files Added: data, data/00-data_cdserver.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 04 Nov 2011 09:57:04 EDT
+

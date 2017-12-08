@@ -1,0 +1,7 @@
+--- linux-2.6.28.10-pristine/arch/arm/tools/mach-types	2009-05-03 02:54:43.000000000 +0800
++++ linux-2.6.28.10/arch/arm/tools/mach-types	2011-05-26 17:11:13.742569000 +0800
+@@ -1899,3 +1899,4 @@
+ asusp535		MACH_ASUSP535		ASUSP535		1909
+ htcraphael		MACH_HTCRAPHAEL		HTCRAPHAEL		1910
+ sygdg1			MACH_SYGDG1		SYGDG1			1911
++ast2300evb		MACH_AST2300EVB		AST2300EVB		900

@@ -1,0 +1,9 @@
+Package: webui_1_122_0_23_149370_Fix_AutoVideoCannotPlay (1.0.0); urgency = new
+
+Abstract:
+	149370_Fix_AutoVideoCannotPlay
+
+Files Added: data, data/00-data_MDS-Workspace_www_impl_video_record_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: cindychen (cindychen@ami.com.tw) Thu, 09 Jan 2014 03:17:01 PST
+

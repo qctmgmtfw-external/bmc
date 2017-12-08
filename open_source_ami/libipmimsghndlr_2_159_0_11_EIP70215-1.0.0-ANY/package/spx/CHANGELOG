@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_11_EIP70215 (1.0.0); urgency = new
+
+Abstract:
+	Fix for WebUI login while changing username using IPMI raw commands.
+
+Files Added: data, data/00-data_AMI_AMIConf.c, data/01-data_App_AppDevice_AppDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 19 Sep 2011 17:40:08 IST
+

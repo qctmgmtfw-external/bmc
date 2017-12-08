@@ -1,0 +1,9 @@
+Package: goahead_1_62_0_5_EIP119560_SSLConnectionRunOutOfMemory (1.0.0); urgency = new
+
+Abstract:
+	Web console using SSL https accesses have access issue and will run out of memory in stress test
+
+Files Added: data, data/00-data_websSSL.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 12 Apr 2013 11:20:40 CST
+

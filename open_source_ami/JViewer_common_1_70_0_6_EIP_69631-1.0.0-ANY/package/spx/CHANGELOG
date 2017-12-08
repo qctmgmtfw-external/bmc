@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_6_EIP_69631 (1.0.0); urgency = new
+
+Abstract:
+	Trying to launch a third KVM session, after launching 2 sessions in same client, leads to Maximum no: of session reached message to be displayed
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 16 Sep 2011 16:49:20 IST
+

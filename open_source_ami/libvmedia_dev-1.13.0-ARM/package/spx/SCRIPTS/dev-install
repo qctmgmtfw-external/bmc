@@ -1,0 +1,16 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/vmedia
+	MKDIR_NOCLEAN %SPXINC/vmedia
+	COPY_FILE ./comm.h %SPXINC/vmedia
+	COPY_FILE ./redirimage.h %SPXINC/vmedia
+	COPY_FILE ./apphead.h %SPXINC/vmedia	
+	COPY_FILE ./vmedia_ifc.h %SPXINC/vmedia	
+	COPY_FILE ./vmedia_cfg.h %SPXINC/vmedia	
+	COPY_FILE ./vmedia_instance.h %SPXINC/vmedia	
+	COPY_FILE ./libvmedia.a %SPXLIB/vmedia
+	COPY_FILE libvmedia.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/vmedia
+	ADD_LIBRARY_LINKS %SPXLIB/vmedia libvmedia.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

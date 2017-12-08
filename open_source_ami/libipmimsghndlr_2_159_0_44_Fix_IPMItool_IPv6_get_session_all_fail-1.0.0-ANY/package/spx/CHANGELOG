@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_44_Fix_IPMItool_IPv6_get_session_all_fail (1.0.0); urgency = new
+
+Abstract:
+	Fix IPMItool IPv6 get session all cause buffer overflow.
+
+Files Added: data, data/00-data_App_AppDevice_AppDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kennywu (kennywu@ami.com.tw) Fri, 31 May 2013 16:42:23 CST
+

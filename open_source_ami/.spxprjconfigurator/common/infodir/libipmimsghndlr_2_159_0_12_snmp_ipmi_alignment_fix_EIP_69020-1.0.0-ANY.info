@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_12_snmp_ipmi_alignment_fix_EIP_69020
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 12 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 12
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  michaelw (michaelw@ami.com)
+Urgency : new
+Description : snmp_ipmi_alignment_fix_EIP_69020
+.
+

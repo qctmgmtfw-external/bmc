@@ -1,0 +1,7 @@
+./01-cramfs.initrd.patch 508 9e2ba38998dd5c3a7b24118da50c924e
+./02-nand_bad_block_options_issue.patch 442 56af59706fe21db6b9d680aa035fb61b
+./03-arpflux.fix.patch 7416 1861d7a9671cc68d3b7bccba5255a308
+./04-make_3_82.patch 662 8971e7ba31514420198d90d384134ee5
+./05-drivers_net_bonding_bond_main.c 405 92b279a1d697f7dac7224f3e6bc4232c
+./06-IPv6_DAD.patch 546 0db1b7055f069717e8bf7837841ad4c1
+./07-drivers_net_bonding_bond_main.c 952 a0f2a79d8b4cf32e52dc80183dd27530

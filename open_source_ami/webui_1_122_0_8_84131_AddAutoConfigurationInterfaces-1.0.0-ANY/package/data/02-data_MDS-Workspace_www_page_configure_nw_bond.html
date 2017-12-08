@@ -1,0 +1,17 @@
+--- .pristine/webui-1.122.0-src/data/MDS-Workspace/www/page/configure_nw_bond.html Thu Feb 23 11:47:33 2012
++++ source/webui-1.122.0-src/data/MDS-Workspace/www/page/configure_nw_bond.html Mon Mar  5 19:07:50 2012
+@@ -65,6 +65,14 @@
+ </strong></td>
+ 			<td><select id="_lstBondIfc" class="smallclassicTxtBox"></select>
+ 			</td></tr>
++
++			<tr><td><strong>
++<script>document.writeln(eLang.getString("configure_nw_bond", "CFG_NW_BOND_AUTO"));</script>
++</strong></td>
++			<td><input type="checkbox" id="_chkAutoConf" />
++			<label for="_chkAutoConf">
++<script>document.writeln(eLang.getString("configure_nw_bond", "CFG_NW_BOND_ENABLE"));</script>
++</label></td></tr>
+ 		</table>
+ 	</div>
+ 	<br/>

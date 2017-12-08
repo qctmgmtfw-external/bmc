@@ -1,0 +1,10 @@
+./oem/banner_bg.jpg 11167 30741c0fb43ebaad430eaf034bc6702a
+./oem/banner_left.jpg 20857 415feb7821871223f692839483e67226
+./oem/banner_right.jpg 20449 70d7d66a4a0418dafdf4959c44123245
+./oem/copyright.txt 141 1eaadc54fa3eae4d5382b2158bdc287b
+./oem/jviewerlogo.jpg 3280 690538ca3608e047caf4490eb219c914
+./script/ChangeJViewerCopyrightText.sh 1137 2873a95d9cf87eb97cd8d1ff10024a0f
+./script/ChangeJViewerLogo.sh 1137 f85dc979a064c6f7ada0a325f524033e
+./script/ChangeWebBannerBackground.sh 1135 b64e31110ad2f0e0045121c79bf1092d
+./script/ChangeWebBannerLeftImage.sh 1147 efd236a543cca9d47d5a57de74da30e1
+./script/ChangeWebBannerRightImage.sh 1150 a7f70b1513b1a89d7d784489d920d4e2

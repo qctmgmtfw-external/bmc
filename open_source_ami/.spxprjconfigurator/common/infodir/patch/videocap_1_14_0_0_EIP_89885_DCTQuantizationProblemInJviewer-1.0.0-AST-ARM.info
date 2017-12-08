@@ -1,0 +1,21 @@
+Package : videocap_1_14_0_0_EIP_89885_DCTQuantizationProblemInJviewer
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 0 for videocap (1.14.0)
+Depends :  videocap(==1.14.0)
+PatchOrder : 0
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description : for EIP 89885, DCT Quantization problem in JViewer
+.
+

@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_8_FastSELAccessWebUI (1.0.0); urgency = new
+
+Abstract:
+	Added IPMI Command AMIGetSELEntries for faster SEL accessing in WebUI
+
+Files Added: data, data/00-data_AMI_AMIConf.c, data/01-data_AMI_AMI.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 15 Sep 2011 23:22:24 IST
+

@@ -1,0 +1,16 @@
+Package : libipmiparams
+Non-Editable : YES
+Version : 2.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : senathipathy  (senathipathyt@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Group : IPMI
+Package-License : AMI
+Description : Library to convert configuration parameter values.
+.

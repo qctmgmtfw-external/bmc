@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_15_eip78297_IPv6_functions_are_not_completed_yet_and_function_should_be_failed_as_Cesium_does
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 15 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 15
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  kenttang (kenttang@ami.com.tw)
+Urgency : new
+Description : IPv6 functions are not completed yet and function should be failed as Cesium does.
+.
+

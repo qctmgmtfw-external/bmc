@@ -1,0 +1,38 @@
+Source : nsupdate
+Version : 1.10.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : nsupdate
+Build-Depends : target, crosscc, rules
+Essential : NO
+Config-Tag : Dynamic DNS update Support
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-Location : Internet Systems Consortium, Inc. ("ISC")
+Source-Version : Debian 6.0 (bind9-9.7.2.dfsg.P3)
+Source-License : BSD
+Package-License : BSD
+Architecture : ALL
+Urgency : low
+Description : Dynamic DNS Updates - Registers Name to DNS Server for Name resolution
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : nsupdate
+Section : app
+Essential : NO
+Config-Tag : Dynamic DNS Support
+Group : FEATURES
+Depends : sys_base
+Package-License : BSD
+Description : Dynamic DNS Updates - Registers Name to DNS Server for Name resolution
+.
+

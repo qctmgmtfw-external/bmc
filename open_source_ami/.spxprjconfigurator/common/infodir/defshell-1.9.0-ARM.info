@@ -1,0 +1,17 @@
+Package : defshell
+Non-Editable : YES
+Version : 1.9.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : YES
+Group : BASE
+Required : libunix, libdbgout
+Package-License : AMI
+Description : Provides the default shell all user logins.  This will launch
+.

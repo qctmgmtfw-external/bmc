@@ -1,0 +1,47 @@
+diff -Naur linux/include/linux/netdevice.h linux.new/include/linux/netdevice.h
+--- linux/include/linux/netdevice.h	2009-05-02 14:54:43.000000000 -0400
++++ linux.new/include/linux/netdevice.h	2011-03-17 14:59:05.000000000 -0400
+@@ -1680,6 +1680,8 @@
+ extern void		netdev_state_change(struct net_device *dev);
+ extern void		netdev_bonding_change(struct net_device *dev);
+ extern void		netdev_features_change(struct net_device *dev);
++extern void		netdev_link_up(struct net_device *dev);
++extern void		netdev_link_down(struct net_device *dev);
+ /* Load a device via the kmod */
+ extern void		dev_load(struct net *net, const char *name);
+ extern void		dev_mcast_init(void);
+diff -Naur linux/include/linux/notifier.h linux.new/include/linux/notifier.h
+--- linux/include/linux/notifier.h	2009-05-02 14:54:43.000000000 -0400
++++ linux.new/include/linux/notifier.h	2011-03-17 17:00:46.000000000 -0400
+@@ -199,6 +199,9 @@
+ #define NETDEV_FEAT_CHANGE	0x000B
+ #define NETDEV_BONDING_FAILOVER 0x000C
+ 
++#define NETDEV_LINK_UP		0x0101				/* Link up Notifier   */
++#define NETDEV_LINK_DOWN	0x0102				/* Link down Notifier */
++
+ #define SYS_DOWN	0x0001	/* Notify of system down */
+ #define SYS_RESTART	SYS_DOWN
+ #define SYS_HALT	0x0002	/* Notify of system halt */
+diff -Naur linux/net/core/dev.c linux.new/net/core/dev.c
+--- linux/net/core/dev.c	2009-05-02 14:54:43.000000000 -0400
++++ linux.new/net/core/dev.c	2011-03-17 16:59:31.000000000 -0400
+@@ -1019,6 +1019,18 @@
+ }
+ EXPORT_SYMBOL(netdev_bonding_change);
+ 
++void netdev_link_up(struct net_device *dev)
++{
++	call_netdevice_notifiers(NETDEV_LINK_UP, dev);
++}
++EXPORT_SYMBOL(netdev_link_up);
++
++void netdev_link_down(struct net_device *dev)
++{
++	call_netdevice_notifiers(NETDEV_LINK_DOWN, dev);
++}
++EXPORT_SYMBOL(netdev_link_down);
++
+ /**
+  *	dev_load 	- load a network module
+  *	@net: the applicable net namespace

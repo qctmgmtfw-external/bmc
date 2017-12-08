@@ -1,0 +1,9 @@
+Package: usb1_hw_1_6_0_1_200772_KVMMouseKeyboardNotWork (1.0.0); urgency = new
+
+Abstract:
+	for EIP 200772, RKVM keyboard and mouse does not work in Windows2012R2
+
+Files Added: data, data/00-data_ast_usbhub.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 12 Feb 2015 13:50:04 AWST
+

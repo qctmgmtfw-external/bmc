@@ -1,0 +1,9 @@
+Package: ipmimain_2_61_0_1_EIP_68217 (1.0.0); urgency = new
+
+Abstract:
+	the User is added in Groups based on access limit.The user is stored in ChannelUserInfo table sequentially. But in UserInfo table it based on index(slot).we have to compare userid from userinfo table with the every userid in channelUserInfo table.Now we will get correct accesslimit for the user and added in groups correctly.
+
+Files Added: data, data/00-data_IPMI_Main.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 12 Sep 2011 16:13:07 IST
+

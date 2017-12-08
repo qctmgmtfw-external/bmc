@@ -1,0 +1,9 @@
+Package: libuserauth_1_27_0_1_no_access_user_block (1.0.0); urgency = new
+
+Abstract:
+	Blocking no access user acount when login.
+
+Files Added: data, data/00-data_user_auth.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kentyeh (kentyeh@ami.com.tw) Mon, 19 Nov 2012 19:02:22 PST
+

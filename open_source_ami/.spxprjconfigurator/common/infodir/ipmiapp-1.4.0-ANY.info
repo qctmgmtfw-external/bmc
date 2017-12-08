@@ -1,0 +1,17 @@
+Package : ipmiapp
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : software
+Required : libipmi_sw
+Essential : NO
+Config-Tag : ipmi application(Network and USB)
+Group : SOFTWARE
+Owner : AMI
+Maintainer : muthuchamyk  (muthusamyk@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This package contains source code for IPMI based application(Network and USB )Software Module.
+.

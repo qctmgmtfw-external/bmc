@@ -1,0 +1,15 @@
+Package : libtoken_dev
+Non-Editable : YES
+Version : 1.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : This package includes development header files of token library.
+.

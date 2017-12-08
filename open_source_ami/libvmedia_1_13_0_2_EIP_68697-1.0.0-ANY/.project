@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>libvmedia_1_13_0_2_EIP_68697-1.0.0-ANY</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.ami.megarac.spx.packagecreator.spxnature</nature>
+	</natures>
+	<filteredResources>
+		<filter>
+			<id>1438845696444</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*:*</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+</projectDescription>

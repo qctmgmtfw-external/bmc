@@ -1,0 +1,15 @@
+Package : libldapconf
+Non-Editable : YES
+Version : 1.11.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Package-License : AMI
+Description : LDAPCONF Library Binary
+.

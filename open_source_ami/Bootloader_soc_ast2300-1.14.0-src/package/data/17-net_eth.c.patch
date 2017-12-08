@@ -1,0 +1,20 @@
+--- u-boot-1.1.6/net/eth.c	2010-01-20 14:19:53.000000000 +0800
++++ u-boot-1.1.6-ami/net/eth.c	2010-01-20 14:23:02.000000000 +0800
+@@ -54,6 +54,7 @@
+ extern int skge_initialize(bd_t*);
+ extern int tsec_initialize(bd_t*, int, char *);
+ extern int npe_initialize(bd_t *);
++extern int ast_eth_initialize(bd_t *bis);
+ 
+ static struct eth_device *eth_devices, *eth_current;
+ 
+@@ -251,6 +252,9 @@
+ #if defined(CONFIG_RTL8169)
+ 	rtl8169_initialize(bis);
+ #endif
++#if defined(CONFIG_AST2300)
++	ast_eth_initialize(bis);
++#endif
+ 
+ 	if (!eth_devices) {
+ 		puts ("No ethernet found.\n");

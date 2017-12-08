@@ -1,0 +1,15 @@
+Package : libtoken
+Non-Editable : YES
+Version : 1.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : lib
+Essential : NO
+Package-License : AMI
+Description : This Package includes build token library
+.

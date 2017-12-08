@@ -1,0 +1,77 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+<link href="../www/style/page_style.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../www/lib/include.js"></script>
+</head>
+<body oncontextmenu="return false;">
+<h3>NTP Settings</h3>
+<p>Here you can either configure the NTP server or view and modify the device's Date &amp; Time settings.</p>
+
+<div class="subSection">
+	<div class="errorDisplay" id="_divNTPError"></div>
+	<table cellspacing="2" cellpadding="5" border="0" width="500">
+	<tr>
+		<td><b>Date:</b></td>
+		<td>
+			<select id="_lstMonth" class="classicTxtBox"></select> &nbsp;
+			<select id="_lstDate" class="smallclassicTxtBox"></select> &nbsp;
+			<select id="_lstYear" class="smallclassicTxtBox"></select>
+		</td>
+	</tr>
+	<tr>
+		<td><b>Time:</b><br><em>(hh:mm:ss)</em></td>
+		<td>
+			<input type="text" maxlength="2" style="text-align:center;" id="_txtHour" class="smallclassicTxtBox"/> &nbsp;
+			<input type="text" maxlength="2" style="text-align:center;" id="_txtMinute" class="smallclassicTxtBox"/> &nbsp;
+			<input type="text" maxlength="2" style="text-align:center;" id="_txtSecond" class="smallclassicTxtBox"/>
+		</td>
+	</tr>
+	<tr>
+		<td><b>UTC Timezone:</b></td>
+		<td><select id="_lstUTCTZone" class="classicTxtBox"></select> Hour(s)</td>
+	</tr>
+	<tr>
+		<td><b>NTP Server:</b></td>
+		<td><input type="text" id="_txtNTPServer" maxlength="255" class="classicTxtBox"/></td>
+	</tr>
+	<tr><td colspan=2>
+		<input type="checkbox" id="_chkNTPEnable" value="1"/>
+		<label for="_chkNTPEnable">Automatically synchronize Date & Time with NTP Server</label>
+	</td></tr>
+	</table>
+	<br>
+</div>
+<div class="btnTray">
+	<input type="button" id="_btnRefresh" value="Refresh" />
+	<input type="button" id="_btnSave" value="Save" />
+	<input type="button" id="_btnReset" value="Reset" />
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+Package: JavaClientSupport (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:28:22 EDT
+
+Package: JavaClientSupport (1.2.0); urgency = low
+
+Abstract:
+	License file corrected
+
+Files Added: spx/LICENSES/LICENSE.AMI
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 03 May 2011 12:42:11 EDT
+
+Package: JavaClientSupport (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:47:42 EDT
+
+Package: JavaClientSupport (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:48:58 EDT
+
+Package: JavaClientSupport (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:59:40 EST
+
+Package:JavaClientSupport (1.0.0);urgency=new
+
+Abstract:
+	This Dummy Package is used to select/deselect Java Client Support
+
+Files Added: 
+
+--Submitter: othiyappan K (othiyappank@amiindia.co.in) Tue, 19 Jan 2010 21:08:52 -0500

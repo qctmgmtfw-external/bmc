@@ -1,0 +1,29 @@
+Package: hw_host_spi_flash (1.2.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Sun, 26 Jun 2011 23:56:55 CST
+
+Package: hw_host_spi_flash (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:23:02 EDT
+
+Package: hw_host_spi_flash (1.0.0); urgency = new
+
+Abstract:
+	SoC supports host SPI flash.
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 28 Oct 2010 11:04:37 CST
+

@@ -1,0 +1,50 @@
+Package: lpcuart (1.4.0); urgency = medium
+
+Abstract:
+	There are bugs in function route_uart_to_uart(), route_io_to_uart(), and route_uart_to_io();
+Any new routing makes the HICRA register as 0x00000000 at first. 
+This was wrong, and should be fixed.
+
+Files Modified: data/lpcuart_mod.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 12 Oct 2011 18:18:24 CST
+
+Package: lpcuart (1.3.0); urgency = high
+
+Abstract:
+	Updating SourceLicense?, PackageLicense?, BinaryLicense? & Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/lpcuart_mod.c, spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 24 Jun 2011 14:49:27 CST
+
+Package: lpcuart (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:17:30 EDT
+
+Package: lpcuart (1.1.0); urgency = medium
+
+Abstract:
+	fix compiler errot:
+may be used uninitialized in this function
+
+Files Modified: data/lpcuart_mod.c
+
+--Submitter:  () Tue, 22 Mar 2011 17:53:52 CST
+
+Package: lpcuart (1.0.0); urgency = new
+
+Abstract:
+	This package contains driver to control routing between io com ports and uarts
+
+Files Added: data, data/Makefile, data/lpcuart.h, data/lpcuart_mod.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/lpcuart, spx/PACKAGES.D/lpcuart/DATA, spx/PACKAGES.D/lpcuart/SCRIPTS, spx/PACKAGES.D/lpcuart/SCRIPTS/dev-install, spx/PACKAGES.D/lpcuart_driver_dev, spx/PACKAGES.D/lpcuart_driver_dev/DATA, spx/PACKAGES.D/lpcuart_driver_dev/SCRIPTS, spx/PACKAGES.D/lpcuart_driver_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Wed, 22 Dec 2010 15:01:14 CST
+

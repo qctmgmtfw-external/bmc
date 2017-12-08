@@ -1,0 +1,1 @@
+int ReInitUSB_Disk_Letter(char *);

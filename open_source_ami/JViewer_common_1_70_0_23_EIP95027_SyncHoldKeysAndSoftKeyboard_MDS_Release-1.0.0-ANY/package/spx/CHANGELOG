@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_23_EIP95027_SyncHoldKeysAndSoftKeyboard_MDS_Release (1.0.0); urgency = new
+
+Abstract:
+	Synchronize hold key sets and SoftKeyboard pad
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, data/01-data_src_com_ami_kvm_jviewer_gui_SoftKeyboard.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Wed, 15 Jul 2015 20:01:16 CST
+

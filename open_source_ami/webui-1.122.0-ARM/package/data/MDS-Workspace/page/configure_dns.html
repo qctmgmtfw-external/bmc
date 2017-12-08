@@ -1,0 +1,131 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<link href="../www/style/page_style.css" rel="stylesheet" type="text/css" />
+	<script src="../www/lib/include.js" type="text/javascript"></script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>DNS Server Settings</h3>
+	<p>Manage DNS settings of the device.</p>
+
+	<strong>Host Configuration</strong>
+	<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+		<tr><td width="40%"><strong>Host Settings</strong></td>
+		<td><select id="_lstHostSetting" class="classicTxtBox"></select>
+		</td></tr>
+
+		<tr><td><strong>Host Name</strong></td>
+		<td><input type="text" id="_txtHostName" class="classicTxtBox"
+			 maxlength="63" /></td></tr>
+	</table>
+	</div>
+
+	<strong>Register BMC</strong>
+	<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+		<tr id="_rowRegisterBMC0" class="hiddenRow">
+		<td width="40%" id="_tdRegisterBMC0"><strong></strong></td>
+		<td><input type="checkbox" id="_chkRegisterBMC0">
+		<label for="_chkRegisterBMC0">Register BMC</label><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" id="_rdoRegisterDDNS0" name="_rdoRegiserBMC0">
+		<label for="_rdoRegisterDDNS0">Direct Dynamic DNS</label>&nbsp;&nbsp;
+		<input type="radio" id="_rdoRegisterDHCP0" name="_rdoRegiserBMC0">
+		<label for="_rdoRegisterDHCP0">DHCP Client FQDN</label>
+		</td></tr>
+
+		<tr id="_rowRegisterBMC1" class="hiddenRow">
+		<td width="40%" id="_tdRegisterBMC1"><strong></strong></td>
+		<td><input type="checkbox" id="_chkRegisterBMC1">
+		<label for="_chkRegisterBMC1">Register BMC</label><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" id="_rdoRegisterDDNS1" name="_rdoRegiserBMC1">
+		<label for="_rdoRegisterDDNS1">Direct Dynamic DNS</label>&nbsp;&nbsp;
+		<input type="radio" id="_rdoRegisterDHCP1" name="_rdoRegiserBMC1">
+		<label for="_rdoRegisterDHCP1">DHCP Client FQDN</label>
+		</td></tr>
+
+		<tr id="_rowRegisterBMC2" class="hiddenRow">
+		<td width="40%" id="_tdRegisterBMC2"><strong></strong></td>
+		<td><input type="checkbox" id="_chkRegisterBMC2">
+		<label for="_chkRegisterBMC2">Register BMC</label><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" id="_rdoRegisterDDNS2" name="_rdoRegiserBMC2">
+		<label for="_rdoRegisterDDNS2">Direct Dynamic DNS</label>&nbsp;&nbsp;
+		<input type="radio" id="_rdoRegisterDHCP2" name="_rdoRegiserBMC2">
+		<label for="_rdoRegisterDHCP2">DHCP Client FQDN</label>
+		</td></tr>
+	</table>
+	</div>
+
+	<strong>Domain Name Configuration</strong>
+	<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+		<tr><td width="40%"><strong>Domain Settings</strong></td>
+		<td><select id="_lstDomainSetting" class="classicTxtBox"></select></td></tr>
+		<tr><td><strong>Domain Name</strong></td>
+		<td><input type="text" id="_txtDomainName" class="classicTxtBox"
+			 maxlength="255" /></td></tr>
+	</table>
+	</div>
+
+	<strong>Domain Name Server Configuration</strong>
+	<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+		<tr><td width="40%"><strong>DNS Server Settings</strong></td>
+		<td><select id="_lstDNSSetting" class="classicTxtBox"></select>
+		</td></tr>
+
+		<tr><td width="40%"><strong>IP Priority</strong></td>
+		<td><input type="radio" id="_rdoV4Priority" name="_rdoIPPriority">
+		<label for="_rdoV4Priority">IPv4</label>&nbsp;&nbsp;
+		<input type="radio" id="_rdoV6Priority" name="_rdoIPPriority">
+		<label for="_rdoV6Priority">IPv6</label></td></tr>
+
+		<tr><td><strong>DNS Server1</strong></td>
+		<td><input type="text" id="_txtDNS1" class="classicTxtBox"
+			 maxlength="39" /></td></tr>
+
+		<tr><td><strong>DNS Server2</strong></td>
+		<td><input type="text" id="_txtDNS2" class="classicTxtBox"
+			 maxlength="39" /></td></tr>
+
+		<tr><td><strong>DNS Server3</strong></td>
+		<td><input type="text" id="_txtDNS3" class="classicTxtBox"
+			 maxlength="39" /></td></tr>
+	</table>
+	</div>
+
+	<div class="btnTray">
+		<input type="button" id="_btnSave" value="Save" />
+		<input type="button" id="_btnReset" value="Reset" />
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+Package: liblogostatic (1.1.0); urgency = medium
+
+Abstract:
+	Change images banner_right.jpg, banner_left.jpg, banner_bg.jgp in /oem
+
+Files Modified: data/oem/banner_bg.jpg, data/oem/banner_left.jpg, data/oem/banner_right.jpg
+
+--Submitter:  (jonnychang@ami.com.tw) Wed, 24 Aug 2011 18:57:43 CST
+
+Package: liblogostatic (1.0.0); urgency = new
+
+Abstract:
+	This Package contains OEM logo and copyright file for dynamic change.
+
+Files Added: data, data/oem, data/oem/banner_bg.jpg, data/oem/banner_left.jpg, data/oem/banner_right.jpg, data/oem/copyright.txt, data/oem/jviewerlogo.jpg, data/script, data/script/ChangeJViewerCopyrightText.sh, data/script/ChangeJViewerLogo.sh, data/script/ChangeWebBannerBackground.sh, data/script/ChangeWebBannerLeftImage.sh, data/script/ChangeWebBannerRightImage.sh, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/liblogostatic, spx/PACKAGES.D/liblogostatic/DATA, spx/PACKAGES.D/liblogostatic/SCRIPTS, spx/PACKAGES.D/liblogostatic/SCRIPTS/dev-install, spx/RULES
+
+--Submitter:  (jonnychang@ami.com.tw) Wed, 27 Jul 2011 19:03:12 CST
+

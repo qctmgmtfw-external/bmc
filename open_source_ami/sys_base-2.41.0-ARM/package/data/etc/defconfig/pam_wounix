@@ -1,0 +1,12 @@
+auth       required     /lib/security/pam_nologin.so
+auth       sufficient   /lib/security/pam_ipmi.so
+auth       sufficient   /lib/security/pam_custom_ldap.so use_first_pass
+auth       sufficient   /lib/security/pam_custom_ad.so use_first_pass
+account    sufficient   /lib/security/pam_ipmi.so
+account    sufficient   /lib/security/pam_custom_ldap.so
+account    sufficient   /lib/security/pam_custom_ad.so
+password   sufficient   /lib/security/pam_ipmi.so
+password   sufficient   /lib/security/pam_custom_ldap.so
+password   sufficient   /lib/security/pam_custom_ad.so
+session    required     /lib/security/pam_ipmi.so
+

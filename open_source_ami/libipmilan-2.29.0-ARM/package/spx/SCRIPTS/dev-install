@@ -1,0 +1,8 @@
+
+build-install:
+		COPY_DIR		./ %IMAGE_TREE/usr/local/lib/
+		ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libipmilan.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		CWD %IMAGE_TREE/usr/local/lib/ipmi
+		CREATE_SOFT_LINK ../libipmilan.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX libipmilan.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

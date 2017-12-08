@@ -1,0 +1,9 @@
+Package: libipmihalhw_2_5_1_1_AddNodeMgrFeature (1.0.0); urgency = new
+
+Abstract:
+	Implement Intel Node Manage Feature
+
+Files Added: data, data/00-data_hal_hw.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: owenchou (owenchou@ami.com.tw) Wed, 21 Dec 2011 04:45:32 EST
+

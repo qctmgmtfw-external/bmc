@@ -1,0 +1,18 @@
+Package : pam_ad
+Non-Editable : YES
+Version : 1.15.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Siva Prakash R  (sivaprakashr@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Group : AUTHENTICATION
+Provides : AuthAD
+Required : pam_helperd, libuserauth, libactivedircfg, libldapauth, libUserPrivilege
+Package-License : AMI
+Description : This packages contains the PAM module for Active Directory based login according to the FTS Active Directory Deployment.
+.

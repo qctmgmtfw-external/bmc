@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/rtlog
+	COPY_FILE ./rt_log.h %SPXINC/rtlog  
+	MKDIR_NOCLEAN %SPXLIB/rtlog
+	COPY_FILE ./librtlog.a %SPXLIB/rtlog
+	COPY_FILE librtlog.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/rtlog
+	ADD_LIBRARY_LINKS %SPXLIB/rtlog librtlog.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

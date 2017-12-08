@@ -1,0 +1,39 @@
+diff -Naur uboot.old/lib_arm/board.c uboot/lib_arm/board.c
+--- uboot.old/lib_arm/board.c	2010-04-22 14:03:00.627967574 -0400
++++ uboot/lib_arm/board.c	2010-04-22 13:54:41.446715049 -0400
+@@ -213,9 +213,16 @@
+ 
+ int print_cpuinfo (void); /* test-only */
+ 
++#if defined(CONFIG_MISC_INIT)
++extern int  misc_init(void);
++#endif
++
+ init_fnc_t *init_sequence[] = {
+ 	cpu_init,		/* basic cpu dependent setup */
+ 	board_init,		/* basic board dependent setup */
++#if defined(CONFIG_MISC_INIT)
++	misc_init,		/* Other other init */
++#endif
+ 	interrupt_init,		/* set up exceptions */
+ 	env_init,		/* initialize environment */
+ 	init_baudrate,		/* initialze baudrate settings */
+diff -Naur uboot.old/lib_arm/Makefile uboot/lib_arm/Makefile
+--- uboot.old/lib_arm/Makefile	2010-04-22 14:03:00.668046227 -0400
++++ uboot/lib_arm/Makefile	2010-04-22 13:49:18.477967454 -0400
+@@ -23,11 +23,13 @@
+ 
+ include $(TOPDIR)/config.mk
+ 
++-include misc.mk
++
+ LIB	= $(obj)lib$(ARCH).a
+ 
+-SOBJS	= _ashldi3.o _ashrdi3.o _divsi3.o _modsi3.o _udivsi3.o _umodsi3.o
++SOBJS	+= _ashldi3.o _ashrdi3.o _divsi3.o _modsi3.o _udivsi3.o _umodsi3.o
+ 
+-COBJS	= armlinux.o board.o \
++COBJS	+= armlinux.o board.o \
+ 	  cache.o div0.o
+ 
+ SRCS 	:= $(SOBJS:.o=.S) $(COBJS:.o=.c)

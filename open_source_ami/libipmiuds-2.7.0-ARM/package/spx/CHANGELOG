@@ -1,0 +1,298 @@
+Package: libipmiuds (2.7.0); urgency = low
+
+Abstract:
+	Modified AddUDSInfo() to copy username and ipaddr from UDS Msg Header to Session table
+(Review ID: 821)
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 17 Aug 2011 12:19:02 IST
+
+Package: libipmiuds (2.6.0); urgency = medium
+
+Abstract:
+	Timeout for the sessions is reduced to 60 seconds and done code clean up
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Jul 2011 16:18:55 IST
+
+Package: libipmiuds (2.5.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:29:49 IST
+
+Package: libipmiuds (2.4.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:09:43 IST
+
+Package: libipmiuds (2.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:02:40 EDT
+
+Package: libipmiuds (2.2.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:48:57 IST
+
+Package: libipmiuds (2.1.0); urgency = medium
+
+Abstract:
+	Changing the Permission of Unix Domain Socket File for other users
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 21 Apr 2011 12:42:42 IST
+
+Package: libipmiuds (2.0.0); urgency = medium
+
+Abstract:
+	Incrementing the package version to 2.0.0
+
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:24:54 IST
+
+Package: libipmiuds (1.19.0); urgency = low
+
+Abstract:
+	The Thread arguments will be made free in startIfc function after the thread mutex is released properly.
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Feb 2011 00:58:27 IST
+
+Package: libipmiuds (1.18.0); urgency = low
+
+Abstract:
+	When client shutdown abruptly, the closing of socket in server takes place when recvfrom returns zero and while the packet is sent for processing also which makes the closing ofsocket to take place twice.The socket is closed only when the recvfrom returns zero because that indicates the orderely shutdown of the peer.
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 16 Feb 2011 14:06:24 IST
+
+Package: libipmiuds (1.17.0); urgency = low
+
+Abstract:
+	Removed unwanted code
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 09 Feb 2011 19:13:17 IST
+
+Package: libipmiuds (1.16.0); urgency = low
+
+Abstract:
+	Header changed in Makefile
+
+Files Modified: data/Makefile, data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 08 Feb 2011 16:01:01 IST
+
+Package: libipmiuds (1.15.0); urgency = low
+
+Abstract:
+	After accepting the client connection,doing a continue to receive the packet sent by the client
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 07 Feb 2011 16:58:40 IST
+
+Package: libipmiuds (1.14.0); urgency = medium
+
+Abstract:
+	Changes done inorder to handle null user authentication even if it is disabled
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 04 Feb 2011 20:31:59 IST
+
+Package: libipmiuds (1.13.0); urgency = medium
+
+Abstract:
+	Session Informations are added only when the user name and password are authenticated.Handled the SIGPIPE error while sending the packet to client.
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 03 Feb 2011 11:43:45 IST
+
+Package: libipmiuds (1.12.0); urgency = medium
+
+Abstract:
+	Changes done to close the session after the packet is sent back to the client successfully
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 26 Jan 2011 12:04:34 IST
+
+Package: libipmiuds (1.11.0); urgency = medium
+
+Abstract:
+	Optimization of Code is done in UDS, inorder to avoid the time delays which aviods the data to be sent after the client is shutdown.
+UDS Monitor Queue is added to monitor the abrupt closing of the client and closing the open socket in server side to avoid the CPU Utilization.
+
+Files Modified: data/Makefile, data/UDSIfc.c, spx/PACKAGES.D/libipmiuds/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 24 Jan 2011 21:49:16 IST
+
+Package: libipmiuds (1.10.0); urgency = medium
+
+Abstract:
+	Changed the authentication mechanism to solve the login problem
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 20 Jan 2011 19:51:17 IST
+
+Package: libipmiuds (1.9.0); urgency = low
+
+Abstract:
+	Session increment is done only if the user exists when login is attempted and if it is successful
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 12 Jan 2011 12:25:24 IST
+
+Package: libipmiuds (1.8.0); urgency = medium
+
+Abstract:
+	Changes done inorder to make the socket listen till the last user name is tried up for the authentication
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 10 Jan 2011 14:22:03 IST
+
+Package: libipmiuds (1.7.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:53:14 EST
+
+Package: libipmiuds (1.6.0); urgency = high
+
+Abstract:
+	Bug :- UDS Interface utilizies 100 percent of the CPU when login with invalid user name is tried
+Fix :- Closed the socket accordingly when a login is tried using invalid user name.so that the CPU Usage by UDS Interface is drastically reduced
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 14 Dec 2010 19:26:34 IST
+
+Package: libipmiuds (1.5.0); urgency = low
+
+Abstract:
+	Reverting the changes done in rev no.5664,as this case doesn't allow the socket to get closed
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 22 Nov 2010 17:17:03 IST
+
+Package: libipmiuds (1.4.0); urgency = low
+
+Abstract:
+	Removed the unwanted else part while sending the response UDS packet
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 22 Nov 2010 16:10:59 IST
+
+Package: libipmiuds (1.3.0); urgency = medium
+
+Abstract:
+	Blocked the user who was disabled using set user password command to authenticate through web
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 17 Nov 2010 15:20:04 IST
+
+Package: libipmiuds (1.2.0); urgency = medium
+
+Abstract:
+	Blocked the disabled user to authenticate through web and removed unwanted comments
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 17 Nov 2010 11:29:57 IST
+
+Package: libipmiuds (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:01:05 EDT
+
+Package: libipmiuds (1.0.5); urgency = low
+
+Abstract:
+	Added ipmmipdk package as dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:56:35 IST
+
+Package: libipmiuds (1.0.4); urgency = low
+
+Abstract:
+	Done Proper alignment and given doxygen format for the functions
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 10 Aug 2010 18:31:32 IST
+
+Package: libipmiuds (1.0.3); urgency = low
+
+Abstract:
+	Code Cleanup in libipmiuds package
+
+Files Modified: data/UDSIfc.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 06 Aug 2010 10:35:58 IST
+
+Package: libipmiuds (1.0.2); urgency = low
+
+Abstract:
+	Changed the Essential Parameter to Yes in libipmiuds package
+
+Files Modified: spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 05 Aug 2010 12:01:14 IST
+
+Package: libipmiuds (1.0.1); urgency = low
+
+Abstract:
+	Removed the Config Tags as this package was marked in ipmimain as dependency package
+
+Files Modified: spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 03 Aug 2010 13:17:33 IST
+
+Package: libipmiuds (1.0.0); urgency = new
+
+Abstract:
+	This Package contains the source for unix domain socket for internal communication with IPMI Stack.
+
+Files Added: data, data/Makefile, data/UDSIfc.c, data/UDSMetaInfo.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libipmiuds, spx/PACKAGES.D/libipmiuds/DATA, spx/PACKAGES.D/libipmiuds/SCRIPTS, spx/PACKAGES.D/libipmiuds/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:44:24 IST
+

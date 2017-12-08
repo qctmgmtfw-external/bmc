@@ -1,0 +1,9 @@
+Package: webui_1_122_0_6_77209_ThePopWindowSizeOfNewSELEventIsTooSmallThatUserCanNotUseScrollBarEasily (1.0.0); urgency = new
+
+Abstract:
+	for solved the pop window size of new SEL event is too small that user can't use scroll bar easily
+
+Files Added: data, data/00-data_MDS-Workspace_www_lib_web_alerts.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Mon, 12 Dec 2011 10:16:04 CST
+

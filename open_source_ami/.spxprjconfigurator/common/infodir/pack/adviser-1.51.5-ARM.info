@@ -1,0 +1,18 @@
+Package : adviser
+Non-Editable : YES
+Version : 1.51.5
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Viswanathan S  (viswanathans@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Config-Tag : Video Server Support
+Group : KVM
+Required : libvideo, libcompress, libadvisercfg, libencryption, libunix, libracsessioninfo, libdbgout, libiniparser, libsmtp, HID_support, libncml
+Package-License : AMI
+Description : This package includes the binary for ADVISER application.
+.

@@ -1,0 +1,646 @@
+menu "Miscellaneous Configuration"
+
+config @Bootloader_platform_ast2300evb (1.14.5)
+	bool 
+	default n
+	select @Bootloader_soc_ast2300
+	help
+		This is a dummy package because the SPX package Architecturerequires atleast one binary package to be specified for a source package.
+
+#--------------------------------------
+config @Bootloader_soc_ast2300 (1.14.0)
+	bool 
+	default n
+	select @Bootloader_cpu_arm926ejs
+	help
+		This is a dummy package because the SPX package Architecturerequires atleast one binary package to be specified for a source package.
+
+#--------------------------------------
+config wide_dhcpv6 (1.8.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains wide dhcpv6 client binary (dhcp6c) for ARM architecture.
+
+#--------------------------------------
+config adviser_dev (1.18.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains the common header files for adviser and libvideo packages.
+
+#--------------------------------------
+config bt_driver_dev (1.1.0)
+	bool 
+	default n
+	select crosscc
+	select  rules
+	select  global_dev
+	select  kernel_dev
+	select  helper_driver_dev
+	select  libdbgout_dev
+	help
+		BT driver dev package
+
+#--------------------------------------
+config cipher_driver_dev (1.16.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	help
+		This package contains cipher driver development header files.
+
+#--------------------------------------
+config global_dev (1.6.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package includes all the global header files used across various modules in the stack.
+
+#--------------------------------------
+config iUSB_driver_dev (1.8.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  usbe_driver_dev
+	select  libdbgout_dev
+	help
+		This package includes iUSB driver Development header files.
+
+#--------------------------------------
+config ipmi_dev (2.100.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This Package contains IPMI include files used in IPMI stack
+
+#--------------------------------------
+config ipmipdk_dev (2.41.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This Package contains PDK Common Header files required for IPMI.
+
+#--------------------------------------
+config libactivedircfg (1.11.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the binary package for activedircfg library.
+
+#--------------------------------------
+config libactivedircfg_dev (1.11.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the development package for activedircfg library.
+
+#--------------------------------------
+config libadvisercfg (1.8.0)
+	bool 
+	default n
+	select libracsessioninfo
+	select  libncml
+	depends on @ARCH_ARM
+	help
+		This is the binary package for advisercfg library.
+
+#--------------------------------------
+config libadvisercfg_dev (1.8.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the development package for advisercfg library.
+
+#--------------------------------------
+config libchecksum (1.4.0)
+	bool 
+	default n
+	select crosscc
+	select  rules
+	help
+		This package provides Checksum functions - crc32 and modulo100
+
+#--------------------------------------
+config libchecksum_dev (1.4.0)
+	bool 
+	default n
+	select crosscc
+	select  rules
+	help
+		Development package for checksum functions - crc32 and modulo100
+
+#--------------------------------------
+config libcompress (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains the COMPRESS Library Binary.
+
+#--------------------------------------
+config libcompress_dev (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains the LIBCOMPRESS development header files.
+
+#--------------------------------------
+config libdbgout (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the binary package for dbgout library.
+
+#--------------------------------------
+config libdbgout_dev (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This pacakge includes the development headers for dbgout library.
+
+#--------------------------------------
+config libencryption (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains lib encryption binary.
+
+#--------------------------------------
+config libencryption_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains development headers for libencryption.
+
+#--------------------------------------
+config libflash (1.11.0)
+	bool 
+	default n
+	select libunix
+	select  libubenv
+	select  libdbgout
+	select  libchecksum
+	select  libfmh
+	depends on @ARCH_ARM
+	help
+		This contains the flash Library Binary.
+
+#--------------------------------------
+config libflash_dev (1.11.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This contains Headers for Flash Library.
+
+#--------------------------------------
+config libfmh (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		FMH (Firmware Module Header)Access routines
+
+#--------------------------------------
+config libfmh_dev (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Development Package for FMH (Firmware Module Header)Access routines
+
+#--------------------------------------
+config libfwinfo (1.3.0)
+	bool 
+	default n
+	select libdbgout
+	select  libchecksum
+	select  libfmh
+	depends on @ARCH_ARM
+	help
+		This package includes the binary fwinfo library.
+
+#--------------------------------------
+config libfwinfo_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the development package for fwinfo library pacakge.
+
+#--------------------------------------
+config libhostname (1.7.0)
+	bool 
+	default n
+	select libdbgout
+	select libiniparser
+	depends on @ARCH_ARM
+	help
+		This package includes the binary hostname library.
+
+#--------------------------------------
+config libhostname_dev (1.7.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the development package for hostname library pacakge.
+
+#--------------------------------------
+config libifc (1.98.0)
+	bool 
+	default y
+	select libactivedircfg
+	select  libnetwork
+	select  libradiusconf
+	select  libuserm
+	select  libsslcertificate
+	select  libncml
+	depends on webui
+	depends on @ARCH_ARM
+	help
+		This package contains web interface related files.
+
+#--------------------------------------
+config libiniparser (1.7.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  rules
+	help
+		This package includes the binary iniparser library.
+
+#--------------------------------------
+config libiniparser_dev (1.7.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  rules
+	help
+		This is the development package for iniparser library package.
+
+#--------------------------------------
+config libipmimsghndlr (2.159.0)
+	bool 
+	default y
+	select libuserm
+	select  libunix
+	select  libUserPrivilege
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		IPMI MsgHndlr Library binaries
+
+#--------------------------------------
+config libipmistack (2.52.0)
+	bool 
+	default y
+	depends on ipmimain
+	depends on @ARCH_ARM
+	help
+		This contains the ipmi stack lib binary.
+
+#--------------------------------------
+config libiptables_dev (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Package provides iptables library files.
+
+#--------------------------------------
+config libldapauth (1.16.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the binary package for libldapauth library.
+
+#--------------------------------------
+config libldapauth_dev (1.16.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the development package for libldapauth library.
+
+#--------------------------------------
+config libldapconf (1.11.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		LDAPCONF Library Binary
+
+#--------------------------------------
+config libldapconf_dev (1.11.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		LIBLDAPCONF development header files.
+
+#--------------------------------------
+config libnetwork (1.58.0)
+	bool 
+	default n
+	select libunix
+	depends on libhostname
+	depends on @ARCH_ARM
+	help
+		Network library binaries
+
+#--------------------------------------
+config libnetwork_dev (1.58.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Network library development package
+
+#--------------------------------------
+config libntpconf (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		NTPCONF Library Binary
+
+#--------------------------------------
+config libntpconf_dev (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		LIBNTPCONF development header files.
+
+#--------------------------------------
+config libpamhelper_dev (1.12.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		libpamhelper development header files.
+
+#--------------------------------------
+config libpdkapp (1.22.0)
+	bool 
+	default y
+	depends on @ARCH_ARM
+	help
+		Package Description.
+
+#--------------------------------------
+config libprocmanager_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains development file needed for process manager
+
+#--------------------------------------
+config libracsessioninfo (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This Package includes built rac session info library module.
+
+#--------------------------------------
+config libracsessioninfo_dev (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This Package includes racsessioninfo library Development Header files.
+
+#--------------------------------------
+config libradiusconf (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		RADIUSCONF Library Binary
+
+#--------------------------------------
+config libradiusconf_dev (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		LIBRADIUSCONF development header files.
+
+#--------------------------------------
+config librtlog_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		rtlog development package has the header files
+
+#--------------------------------------
+config libsession (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Installs libsession library.
+
+#--------------------------------------
+config libsession_dev (1.2.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Installs libsession library.
+
+#--------------------------------------
+config libsmtp (1.6.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		SMTP Library Binary
+
+#--------------------------------------
+config libsmtp_dev (1.6.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		SMTP development header files
+
+#--------------------------------------
+config libsnmpusers_dev (1.8.0)
+	bool 
+	default n
+	select libiniparser
+	depends on @ARCH_ARM
+	help
+		SNMP Users Dev package
+
+#--------------------------------------
+config libsyslogconf_dev (1.4.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		Syslog Configuration header files.
+
+#--------------------------------------
+config libtoken (1.7.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This Package includes build token library
+
+#--------------------------------------
+config libtoken_dev (1.7.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package includes development header files of token library.
+
+#--------------------------------------
+config libubenv (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This contains ubenv Library Binary.
+
+#--------------------------------------
+config libubenv_dev (1.3.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This contains Headers for ubenv Library.
+
+#--------------------------------------
+config libunix (1.5.0)
+	bool 
+	default n
+	select libdbgout
+	depends on @ARCH_ARM
+	help
+		This Package includes Basic Unix functions
+
+#--------------------------------------
+config libunix_dev (1.5.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package includes development header files for libunix
+
+#--------------------------------------
+config libuserm (1.12.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package contains libuserm Binary.
+
+#--------------------------------------
+config libuserm_dev (1.12.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		LIBUSERM development header files.
+
+#--------------------------------------
+config libvideorecordcfg (1.14.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the binary package for libvideorecordcfg package
+
+#--------------------------------------
+config libvideorecordcfg_dev (1.14.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This is the development package for libvideorecordcfg package
+
+#--------------------------------------
+config libvmedia_dev (1.13.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package includes VMEDIA library Development Header files.
+
+#--------------------------------------
+config peci_driver_dev (1.11.0)
+	bool 
+	default n
+	select crosscc
+	select  global_dev
+	select  helper_driver_dev
+	select  kernel_dev
+	select  rules
+	select  libdbgout_dev
+	help
+		This package includes PECI driver Development header files.
+
+#--------------------------------------
+config stunnel4 (1.4.0)
+	bool 
+	default y
+	depends on sys_base
+	depends on @ARCH_ARM
+	help
+		This package contains the stunnel binary for ARM architecture which supports both IPv4 and IPv6 connections.
+
+#--------------------------------------
+config webifc_dev (1.18.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This package includes the header files required to write to web interface.
+
+#--------------------------------------
+config webui (1.122.0)
+	bool 
+	default n
+	depends on @ARCH_ARM
+	help
+		This Package contains web page related (workspace and www)files.
+
+#--------------------------------------
+
+endmenu
+
+

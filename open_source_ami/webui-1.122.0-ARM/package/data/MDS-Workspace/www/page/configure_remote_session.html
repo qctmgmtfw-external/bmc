@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnSave");
+		elmt.setAttribute("value", eLang.getString("configure_remote_session", "CFG_REMOTE_SAVE"));
+		var elmt = document.getElementById("_btnReset");
+		elmt.setAttribute("value", eLang.getString("configure_remote_session", "CFG_REMOTE_RESET"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("configure_remote_session", "CFG_REMOTE_TITLE"));</script>
+</h3>
+	<p>
+<script>document.writeln(eLang.getString("configure_remote_session", "CFG_REMOTE_DESC"));</script>
+</p>
+
+	<div class="subSection">
+		<table cellspacing="0" cellpadding="5" border="0" width="450">
+		<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_remote_session", "CFG_REMOTE_KVMENCRYPT"));</script>
+</strong></td>
+			<td><input type="checkbox" id="_chkKVMEncrypt" />
+			<label for="_chkKVMEncrypt">
+<script>document.writeln(eLang.getString("configure_remote_session", "CFG_REMOTE_ENABLE"));</script>
+</label></td></tr>
+
+        <tr id="_rowKeyboardLang" class="hiddenRow">
+            <td><strong>
+<script>document.writeln(eLang.getString("configure_remote_session", "CFG_REMOTE_KEYBOARDLANG"));</script>
+</strong></td>
+	        <td><select id="_lstKeyboardLang" class="classicTxtBox"></select></td></tr>
+	        
+		<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_remote_session", "CFG_REMOTE_MEDIAENCRYPT"));</script>
+</strong></td>
+			<td><input type="checkbox" id="_chkMediaEncrypt" />
+			<label for="_chkMediaEncrypt">
+<script>document.writeln(eLang.getString("configure_remote_session", "CFG_REMOTE_ENABLE"));</script>
+</label></td></tr>
+
+		<tr><td><strong>
+<script>document.writeln(eLang.getString("configure_remote_session", "CFG_REMOTE_ATTACH"));</script>
+</strong></td>
+			<td><select id="_lstVMAttach" class="classicTxtBox"></select></td></tr>
+		</table>
+	</div>
+	<br/>
+	<div class="btnTray">
+		<input type="button" id="_btnSave" />
+		<input type="button" id="_btnReset" />
+	</div>
+</body>
+</html>

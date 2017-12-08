@@ -1,0 +1,17 @@
+Package : defaulthost
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Anurag Bhatia  (anuragb@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : app
+Essential : YES
+Group : BASE
+Required : libhostname, sys_base
+Package-License : AMI
+Description : This package includes the defaulthost application.
+.

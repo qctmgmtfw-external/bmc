@@ -1,0 +1,9 @@
+Package: webui_1_122_0_11_ClassDENotAccepted (1.0.0); urgency = new
+
+Abstract:
+	Class D and E addresses are no longer accepted
+
+Files Added: data, data/00-data_MDS-Workspace_www_lib_eVal.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Fri, 29 Jun 2012 12:42:23 CST
+

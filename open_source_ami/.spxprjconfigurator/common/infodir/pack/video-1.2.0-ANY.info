@@ -1,0 +1,17 @@
+Package : video
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : sys
+Depends : kernel, hw_videocap
+Essential : NO
+Config-Tag : Video Device Support
+Group : DEVICE
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : Dummy package for SoC video driver selection.
+.

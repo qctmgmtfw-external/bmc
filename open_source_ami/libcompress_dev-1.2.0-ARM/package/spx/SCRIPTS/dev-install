@@ -1,0 +1,16 @@
+# Install Script
+
+build-install:
+			MKDIR_NOCLEAN %SPXINC/compress
+			MKDIR_NOCLEAN %SPXLIB/compress
+        	COPY_FILE ./lzoconf.h %SPXINC/compress
+        	COPY_FILE ./minilzo.h %SPXINC/compress
+        	COPY_FILE ./qlzw.h %SPXINC/compress
+        	COPY_FILE ./rle.h %SPXINC/compress
+        	COPY_FILE ./compress.h %SPXINC/compress
+        	COPY_FILE ./compress_types.h %SPXINC/compress
+        	COPY_FILE ./libcompress.a %SPXLIB/compress
+			COPY_FILE ./libcompress.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/compress
+			ADD_LIBRARY_LINKS %SPXLIB/compress libcompress.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

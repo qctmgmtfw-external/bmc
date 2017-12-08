@@ -1,0 +1,9 @@
+Package: libautovideorecord_1_7_0_1_149370_Fix_AutoVideoErrorWhenKVMOpen (1.0.0); urgency = new
+
+Abstract:
+	149370_Fix_AutoVideoErrorWhenKVMOpen
+
+Files Added: data, data/00-data_video_record.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: cindychen (cindychen@ami.com.tw) Thu, 09 Jan 2014 23:38:18 PST
+

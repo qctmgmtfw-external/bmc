@@ -1,0 +1,5 @@
+./00-data_libipmi_AMIOEM.c 6929 d40c14ff0959bc2da3a99982e582a73d
+./01-data_libipmi_StorDevice.c 2733 cee1ebeaf1b011d3b438b33c9cbba6df
+./02-data_include_libipmi_StorDevice.h 675 046f732dc886b0533280436b21b0b0e5
+./03-data_include_libipmi_AMIOEM.h 1163 fbe2b28629f347214716004dfdd1965f
+./04-data_include_libipmi_errorcodes.h 553 ce69dcb2fc95bc1e178609d2631b2b76

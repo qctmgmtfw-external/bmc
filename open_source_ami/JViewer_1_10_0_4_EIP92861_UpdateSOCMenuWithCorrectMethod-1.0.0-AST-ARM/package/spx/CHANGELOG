@@ -1,0 +1,9 @@
+Package: JViewer_1_10_0_4_EIP92861_UpdateSOCMenuWithCorrectMethod (1.0.0); urgency = new
+
+Abstract:
+	Update SOCMenu with correct method
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_soc_SOCKVMclient.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 29 Jun 2012 19:54:40 CST
+

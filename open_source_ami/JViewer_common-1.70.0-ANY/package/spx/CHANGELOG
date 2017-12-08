@@ -1,0 +1,1179 @@
+Package: JViewer_common (1.70.0); urgency = medium
+
+Abstract:
+	#System Time Monitor thread added to varify whether client system time has been 
+cahnged, to avoid abnormal conditions in JViewer.
+#Video Recording:Length of recorded video differs when video record duration is 
+given under 1 minute(60 second), issue fixed.
+A	data/src/com/ami/kvm/jviewer/gui/SystemTimeMonitor.java
+M	data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+M	data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java
+M	data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+M	data/src/com/ami/kvm/jviewer/gui/JVFrame.java
+
+Files Added: data/src/com/ami/kvm/jviewer/gui/SystemTimeMonitor.java
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 19 Aug 2011 18:48:31 IST
+
+Package: JViewer_common (1.69.0); urgency = medium
+
+Abstract:
+	#Video Recorder App recording blank screen during Auto Video Record, issue fixed.
+#Included software keyboard support for Turkish-F and Turkish-Q keyboard language layouts.
+M	data/src/com/ami/kvm/jviewer/videorecord/DisplayVideoDataTask.java
+M	data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java
+M	data/src/com/ami/kvm/jviewer/gui/VideoRecord.java
+M	data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java
+M	data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+M	data/src/com/ami/kvm/jviewer/gui/JVMenu.java
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/videorecord/DisplayVideoDataTask.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 18 Aug 2011 20:41:24 IST
+
+Package: JViewer_common (1.68.0); urgency = medium
+
+Abstract:
+	Changed to dynamic load JViewers logo and copyright from web
+
+Files Added: data/src/com/ami/kvm/jviewer/gui/OEMResourceURLProcessor.java
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter:  (jonnychang@ami.com.tw) Fri, 12 Aug 2011 15:35:49 CST
+
+Package: JViewer_common (1.67.0); urgency = medium
+
+Abstract:
+	#Modifier key status in JViewer invalid aftert host reboot, issue fixed.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorEnglish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorFrench.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorGerman.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorJapanese.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorSpanish.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 10 Aug 2011 20:08:44 IST
+
+Package: JViewer_common (1.66.0); urgency = medium
+
+Abstract:
+	#Video Record Settings menu gets enabled when host resolution changes, while video recording is in progress
+          issue fixed.
+	 #Power On server menu gets enabled on video pause and resume issue fixed.
+         #Mouse mode change information dialog not shown when the mode is changed for the first time issue fixed.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/ImagesToVideo.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 08 Aug 2011 14:02:33 IST
+
+Package: JViewer_common (1.65.0); urgency = low
+
+Abstract:
+	Virtual Media file filter add support capital letter.
+
+Files Modified: data/src/com/ami/iusb/IUSBRedirSession.java
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Wed, 03 Aug 2011 16:27:20 CST
+
+Package: JViewer_common (1.64.0); urgency = medium
+
+Abstract:
+	Fixed web preview is not working on AST.
+
+Files Modified: data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 01 Aug 2011 10:03:34 CST
+
+Package: JViewer_common (1.63.0); urgency = medium
+
+Abstract:
+	Added support build time change logo and copyright string feature
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter:  (jonnychang@ami.com.tw) Wed, 27 Jul 2011 19:06:42 CST
+
+Package: JViewer_common (1.62.0); urgency = medium
+
+Abstract:
+	Services configuration redesigned to have support of Non-Editable and Not-Applicable for the individual fields.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/kvmpkts/ConfPkt.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 20 Jul 2011 13:12:48 IST
+
+Package: JViewer_common (1.61.0); urgency = medium
+
+Abstract:
+	#Added the Imagepath combo fox-replaced the existing imagepath is already found
+#MenuItem and Toolbar icons disabled if the Host is off
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Tue, 12 Jul 2011 18:29:24 IST
+
+Package: JViewer_common (1.60.0); urgency = medium
+
+Abstract:
+	Added the SOC interface to disable the SOC menu item,if the Partial permission is given to the CLient
+
+Files Modified: data/src/com/ami/kvm/jviewer/common/ISOCMenu.java, data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 11 Jul 2011 18:25:33 IST
+
+Package: JViewer_common (1.59.0); urgency = medium
+
+Abstract:
+	Notify the thread for video recording thread to store the balnk screen information in the video file
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Fri, 08 Jul 2011 18:23:40 IST
+
+Package: JViewer_common (1.58.0); urgency = medium
+
+Abstract:
+	Active cleint Image added to display in Toolbar
+MACCleint full screen MEnubar display size arranged
+
+Files Added: data/src/com/ami/kvm/jviewer/res/green.png, data/src/com/ami/kvm/jviewer/res/user.png
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 30 Jun 2011 18:21:34 IST
+
+Package: JViewer_common (1.57.0); urgency = medium
+
+Abstract:
+	KVM session User Active client information display in the JViewer
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/KVMShareDialog.java, data/src/com/ami/kvm/jviewer/gui/PowerStatusMonitor.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java, data/src/com/ami/kvm/jviewer/kvmpkts/IVTPPktHdr.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 21:11:54 IST
+
+Package: JViewer_common (1.56.0); urgency = medium
+
+Abstract:
+	Issues Fixed:
+	1.synchonised the error msg for CD/FD/HD with the servie related messages
+	2.PAck added for KVM share dialog
+	3.handled the socket exception in CD/FD/HD socket conenct
+
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/protocol/PacketMaster.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/KVMShareDialog.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 18:59:39 IST
+
+Package: JViewer_common (1.55.0); urgency = medium
+
+Abstract:
+	Added the support for USB key Image redirection for FAT & NTFS
+
+Files Modified: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 27 Jun 2011 12:00:32 IST
+
+Package: JViewer_common (1.54.0); urgency = medium
+
+Abstract:
+	Feature to change Mouse mode from the Jviewer
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/kvmpkts/IVTPPktHdr.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Thu, 16 Jun 2011 15:50:32 IST
+
+Package: JViewer_common (1.53.0); urgency = medium
+
+Abstract:
+	# Exit menu disables while pausing redirection.
+	# Service configuration changes for vmedia handled using thread synchronization.
+	# Moved the mouse mode change message dialog into JViewerApp.
+
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Sat, 11 Jun 2011 19:00:35 IST
+
+Package: JViewer_common (1.52.0); urgency = medium
+
+Abstract:
+	#Service configuration change in the web to reflect in jviewer
+        #Parameter parsing added for each argument need to specify key value
+        #mouse mode change & cd,fd&hd count updated at runtime
+
+Files Added: data/jviewer.jnlp, data/src/com/ami/kvm/jviewer/BC3565.tmp, data/src/com/ami/kvm/jviewer/gui/InfoDialog.java, data/src/com/ami/kvm/jviewer/kvmpkts/ConfPkt.java
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/WebPreviewer.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/kvmpkts/IVTPPktHdr.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, data/src/com/ami/kvm/jviewer/videorecord/URLHandler.java, data/src/com/ami/kvm/jviewer/videorecord/URLProcessor.java, data/src/com/ami/kvm/jviewer/videorecord/VideoRecordApp.java, spx/PACKAGES.D/JViewer_common/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 09 Jun 2011 03:05:31 IST
+
+Package: JViewer_common (1.51.0); urgency = high
+
+Abstract:
+	#Media redirection and Power Control options for KVM session with "Video Only" privilege, disabled.
+	#Mouse calibration operation is not allowed if zoom value is not equal to 100%.
+	#Input to Video Length textfield of Video record settings dialog limited to 4 characters.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 07 Jun 2011 12:52:10 IST
+
+Package: JViewer_common (1.50.0); urgency = high
+
+Abstract:
+	build error fix
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/videorecord/DisplayVideoDataTask.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 03 Jun 2011 14:20:36 IST
+
+Package: JViewer_common (1.49.0); urgency = high
+
+Abstract:
+	#Video recording stop on host reboot issue fixed.
+ #Recorded AVI file is palyable in VLC media player also.
+ #Video Download app file chooser dialog can't be closed issue solved.
+
+Files Modified: data/src/com/ami/kvm/jviewer/avistream/AVIOutputStream.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/gui/customizefilechooser.java, data/src/com/ami/kvm/jviewer/videorecord/DisplayVideoDataTask.java, data/src/com/ami/kvm/jviewer/videorecord/VideoRecordApp.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 03 Jun 2011 10:23:08 IST
+
+Package: JViewer_common (1.48.0); urgency = high
+
+Abstract:
+	Power Feature added
+
+Files Added: data/src/com/ami/kvm/jviewer/gui/PowerStatusMonitor.java, data/src/com/ami/kvm/jviewer/res/poweroff.png, data/src/com/ami/kvm/jviewer/res/poweron.png
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, data/src/com/ami/kvm/jviewer/kvmpkts/IVTPPktHdr.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 01 Jun 2011 23:23:18 IST
+
+Package: JViewer_common (1.47.0); urgency = medium
+
+Abstract:
+	Disabling Menu's,Status bar and Icon's till first user allows access to second user
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVStatusBar.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 01 Jun 2011 19:19:46 IST
+
+Package: JViewer_common (1.46.0); urgency = medium
+
+Abstract:
+	Modified startredirection() failure case
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 31 May 2011 15:49:38 IST
+
+Package: JViewer_common (1.45.0); urgency = medium
+
+Abstract:
+	optimizing web Previewer code
+
+Files Modified: data/src/com/ami/kvm/jviewer/WebPreviewer.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Mon, 23 May 2011 14:45:02 IST
+
+Package: JViewer_common (1.44.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:30:30 EDT
+
+Package: JViewer_common (1.43.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	Mouse synchronous added based on the new frame received
+	Buffer overlow keep on sending the mouse evnet in relative mode for sync
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSFrame.java, data/src/com/ami/kvm/jviewer/gui/FrameRateTask.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/hid/USBMouseRep.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, data/src/com/ami/kvm/jviewer/kvmpkts/Mousecaliberation.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 04 May 2011 21:33:47 IST
+
+Package: JViewer_common (1.42.0); urgency = medium
+
+Abstract:
+	Issue fixed:
+	1.Send the Mouse button status while sedning the mouse move in thread
+	2.Updated the CD/FLoppy?HD icon in the tool bar for Image redirection
+
+Files Modified: data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/gui/FrameRateTask.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 02 May 2011 18:34:07 IST
+
+Package: JViewer_common (1.41.0); urgency = medium
+
+Abstract:
+	Web console preview feature support
+
+Files Added: data/src/com/ami/kvm/jviewer/WebPreviewer.java
+Files Modified: data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, data/src/com/ami/kvm/jviewer/kvmpkts/IVTPPktHdr.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 27 Apr 2011 17:00:41 IST
+
+Package: JViewer_common (1.40.0); urgency = medium
+
+Abstract:
+	Issue fixed:
+1.vKVM:'Invaild Mouse mode.Mouse Mode response Packet not reciever' .The following mesage appears when javaConsole lanched for the first time after flashing and also every time after changing the MOuseMOde in UI and also when second JAvaCOnsole session is launched from a second client.
+2.KVM Sharing:Full access control is given to the second client without any time out if second client was allowed to take full control for the first time while launching java console by not choosing any option in the first client when Pop up appears and time expires.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/KVMShareDialog.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 21 Apr 2011 17:06:07 IST
+
+Package: JViewer_common (1.39.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	Mouse caliberation Issue fixed mouse synchronisation while  caliberating
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, data/src/com/ami/kvm/jviewer/kvmpkts/Mousecaliberation.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 20 Apr 2011 20:05:01 IST
+
+Package: JViewer_common (1.38.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	#CD eject in the host and supported Image eject support
+	#Mouse sync issue
+
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/gui/FSFrame.java, data/src/com/ami/kvm/jviewer/gui/FrameRateTask.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 15 Apr 2011 16:55:39 IST
+
+Package: JViewer_common (1.37.0); urgency = high
+
+Abstract:
+	Re-enabling the mouse sync when window gets back focus. We will disable it when window loses focus
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSFrame.java
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 13 Apr 2011 18:33:46 EDT
+
+Package: JViewer_common (1.36.0); urgency = medium
+
+Abstract:
+	Issues Fixed:
+1) Host mouse cursor, client mouse cursor and JViewer draw cursor sychronized for RHEL
+		* The client cursor is always hidden
+		* The draw cursor is shown when ShowCursor option is enabled.
+2) Fullscreen menubar for Mac OS client modified.
+3) JVToolbar Pause button gaining focus on clicking JViewerView issue solved.
+4) Client mosue cursor resent while resolution change or mouse calibration operation issue fixed.
+5) JViewer is unavailable to perform a encryped KVM connection.
+
+Files Modified: data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/gui/FSFrame.java, data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java, data/src/com/ami/kvm/jviewer/gui/FrameRateTask.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/videorecord/VideoRecordApp.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 11 Apr 2011 18:14:41 IST
+
+Package: JViewer_common (1.35.0); urgency = high
+
+Abstract:
+	Fixed Auto Video Recording/Playback issues: Handled the 3 bytes of Padding for alignment, Handled the timestamp difference between frames for better playback
+
+Files Modified: data/src/com/ami/kvm/jviewer/videorecord/DisplayVideoDataTask.java
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 10:43:44 EDT
+
+Package: JViewer_common (1.34.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	#JViewer auto-keyboard layout issue in Mac-OS cilent fixed.
+	#Hebrew softkeyboard layout modified.
+	#Error message shown when two sessions launched from same client to same host corrected.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java, data/src/com/ami/kvm/jviewer/gui/ImagesToVideo.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/KVMShareDialog.java, data/src/com/ami/kvm/jviewer/gui/KVMSharing.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java, data/src/com/ami/kvm/jviewer/gui/customizefilechooser.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 01 Apr 2011 16:37:31 IST
+
+Package: JViewer_common (1.33.0); urgency = high
+
+Abstract:
+	Mouse non-sync fixed for Rainier in 1440x900 and 1600x1200. Added Width & height APIs for Mouse for all projects.
+
+Files Modified: data/src/com/ami/kvm/jviewer/common/ISOCFrameHdr.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Mar 2011 15:49:05 EDT
+
+Package: JViewer_common (1.32.0); urgency = medium
+
+Abstract:
+	Initial Version FOr converting the JViewer Application to Player as well as Downlaod and save the video in the clientt system
+
+Files Added: data/src/com/ami/kvm/jviewer/gui/RecorderToolBar.java, data/src/com/ami/kvm/jviewer/gui/customizefilechooser.java, data/src/com/ami/kvm/jviewer/videorecord, data/src/com/ami/kvm/jviewer/videorecord/DisplayVideoDataTask.java, data/src/com/ami/kvm/jviewer/videorecord/URLHandler.java, data/src/com/ami/kvm/jviewer/videorecord/URLProcessor.java, data/src/com/ami/kvm/jviewer/videorecord/VideoRecordApp.java
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/common/ISOCFrameHdr.java, data/src/com/ami/kvm/jviewer/communication/Client.java, data/src/com/ami/kvm/jviewer/gui/ImagesToVideo.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, spx/RULES.D/buildjar.sh
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 02 Mar 2011 20:36:16 IST
+
+Package: JViewer_common (1.31.0); urgency = medium
+
+Abstract:
+	#Multiple instance CD/FD/HD redirection is disconnect,not updating the VMEdia dialog
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 01 Feb 2011 18:58:49 IST
+
+Package: JViewer_common (1.30.0); urgency = medium
+
+Abstract:
+	Feature added;
+	1.KVM sharing timeout or default value to Full access control.
+Issue Fixed:
+	1.Redirections are not working and target drive name is not displaying
+	2.No Zoom Size hint of zoom scroll bar is shown without adjusting the zoom size
+	3.- Hard disk/USB key redirection Icon is green color once it is not connected in the session.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/KVMShareDialog.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 31 Jan 2011 18:47:57 IST
+
+Package: JViewer_common (1.29.0); urgency = medium
+
+Abstract:
+	KVM Sharing Feature added
+
+Files Added: data/src/com/ami/kvm/jviewer/gui/Dialog_Thread.java, data/src/com/ami/kvm/jviewer/gui/KVMShareDialog.java, data/src/com/ami/kvm/jviewer/gui/KVMSharing.java
+Files Deleted: data/jmf.jar
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/protocol/CDROMProtocol.java, data/src/com/ami/iusb/protocol/FloppyProtocol.java, data/src/com/ami/iusb/protocol/HarddiskProtocol.java, data/src/com/ami/iusb/protocol/IUSBHeader.java, data/src/com/ami/iusb/protocol/RedirHeader.java, data/src/com/ami/iusb/protocol/RedirProtocol.java, data/src/com/ami/kvm/jviewer/communication/Client.java, data/src/com/ami/kvm/jviewer/gui/AutoBWDlg.java, data/src/com/ami/kvm/jviewer/gui/AutoKeyboardLayout.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVStatusBar.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/kvmpkts/IVTPPktHdr.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, spx/RULES.D/buildjar.sh
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 17 Jan 2011 21:29:54 IST
+
+Package: JViewer_common (1.28.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	LED status update if the softkeyboard is invoked and then press any LED key it should update in the Softkeyboard
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 14 Jan 2011 11:34:49 IST
+
+Package: JViewer_common (1.27.0); urgency = medium
+
+Abstract:
+	Support high resolution.
+
+Files Modified: data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 05 Jan 2011 16:32:39 CST
+
+Package: JViewer_common (1.26.0); urgency = medium
+
+Abstract:
+	Pause and play redirection button is not working in Java console.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 31 Dec 2010 14:53:50 IST
+
+Package: JViewer_common (1.25.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	1. Using shift key with some alphabet it trigger twice event
+	2. Alt + option display no keys in softkeyboard option
+	3.The message in the jaVA window shows Pause Redirection when Java console window is closed.
+
+Files Modified: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 29 Dec 2010 19:07:08 IST
+
+Package: JViewer_common (1.24.0); urgency = medium
+
+Abstract:
+	Fixed the video recording Issue failure cases handled:
+1.No space in harddisk
+2.while recording closing the JVIewer
+
+Files Modified: data/src/com/ami/kvm/jviewer/avistream/AVIOutputStream.java, data/src/com/ami/kvm/jviewer/gui/ImagesToVideo.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 15 Dec 2010 09:31:31 IST
+
+Package: JViewer_common (1.23.0); urgency = medium
+
+Abstract:
+	Video issue fixed
+
+Files Added: data/src/com/ami/kvm/jviewer/gui/ImagesToVideo.java
+Files Deleted: data/src/com/ami/kvm/jviewer/avistream/ImagesToVideo.java
+Files Modified: data/src/com/ami/kvm/jviewer/avistream/AVIOutputStream.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 10 Dec 2010 20:24:01 IST
+
+Package: JViewer_common (1.22.0); urgency = medium
+
+Abstract:
+	Modified the Video record Feature using AVI stream recorder,without the need of JMF
+
+Files Added: data/src/com/ami/kvm/jviewer/avistream, data/src/com/ami/kvm/jviewer/avistream/AVIOutputStream.java, data/src/com/ami/kvm/jviewer/avistream/DataChunkOutputStream.java, data/src/com/ami/kvm/jviewer/avistream/FilterImageOutputStream.java, data/src/com/ami/kvm/jviewer/avistream/ImagesToVideo.java
+Files Deleted: data/src/com/ami/kvm/jviewer/gui/JpegImagesToMovie.java
+Files Modified: data/src/com/ami/kvm/jviewer/gui/AutoKeyboardLayout.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorJapanese.java, spx/RULES.D/buildjar.sh
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 03 Dec 2010 19:59:25 IST
+
+Package: JViewer_common (1.21.0); urgency = medium
+
+Abstract:
+	Japanese keyboard ISsue fixed
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorEnglish.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 02 Dec 2010 22:00:08 IST
+
+Package: JViewer_common (1.20.0); urgency = medium
+
+Abstract:
+	MOuse Polling event timer thread time reduced. Added the interface to send command afer the session is valid
+
+Files Modified: data/src/com/ami/kvm/jviewer/common/ISOCApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 02 Dec 2010 10:10:33 IST
+
+Package: JViewer_common (1.19.0); urgency = low
+
+Abstract:
+	JViewer ToolBar support and Code optimization
+
+Files Added: data/src/com/ami/kvm/jviewer/gui/JVToolBar.java, data/src/com/ami/kvm/jviewer/res/Hot-keys.png, data/src/com/ami/kvm/jviewer/res/Maxi.png, data/src/com/ami/kvm/jviewer/res/pause.png
+Files Deleted: data/src/com/ami/kvm/jviewer/res/pause.jpg
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/iusb/RedirProtocolException.java, data/src/com/ami/iusb/protocol/CDROMProtocol.java, data/src/com/ami/iusb/protocol/FloppyProtocol.java, data/src/com/ami/iusb/protocol/HarddiskProtocol.java, data/src/com/ami/iusb/protocol/IUSBHeader.java, data/src/com/ami/iusb/protocol/IUSBSCSI.java, data/src/com/ami/iusb/protocol/PacketMaster.java, data/src/com/ami/iusb/protocol/RedirPacket.java, data/src/com/ami/iusb/protocol/RedirProtocol.java, data/src/com/ami/iusb/vCDMonitorThread.java, data/src/com/ami/iusb/vFlpyMonitorThread.java, data/src/com/ami/iusb/vHarddiskMonitorThread.java, data/src/com/ami/kvm/jviewer/Debug.java, data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/common/ISOCApp.java, data/src/com/ami/kvm/jviewer/common/ISOCCreateBuffer.java, data/src/com/ami/kvm/jviewer/common/ISOCFrameHdr.java, data/src/com/ami/kvm/jviewer/common/ISOCJVVideo.java, data/src/com/ami/kvm/jviewer/common/ISOCKvmClient.java, data/src/com/ami/kvm/jviewer/common/ISOCManager.java, data/src/com/ami/kvm/jviewer/common/ISOCMenu.java, data/src/com/ami/kvm/jviewer/communication/Client.java, data/src/com/ami/kvm/jviewer/communication/NWListener.java, data/src/com/ami/kvm/jviewer/gui/AutoBWDlg.java, data/src/com/ami/kvm/jviewer/gui/AutoKeyboardLayout.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/FSFrame.java, data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java, data/src/com/ami/kvm/jviewer/gui/FrameRateTask.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVStatusBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/JpegImagesToMovie.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/hid/KeyProcessor.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorEnglish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorFrench.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorGerman.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorJapanese.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorSpanish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyboardRep.java, data/src/com/ami/kvm/jviewer/hid/USBMessage.java, data/src/com/ami/kvm/jviewer/hid/USBMouseRep.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, data/src/com/ami/kvm/jviewer/kvmpkts/AutoDetectBw.java, data/src/com/ami/kvm/jviewer/kvmpkts/CfgBandwidth.java, data/src/com/ami/kvm/jviewer/kvmpkts/CtrlReader.java, data/src/com/ami/kvm/jviewer/kvmpkts/FragNumReader.java, data/src/com/ami/kvm/jviewer/kvmpkts/FragReader.java, data/src/com/ami/kvm/jviewer/kvmpkts/HeaderReader.java, data/src/com/ami/kvm/jviewer/kvmpkts/IVTPPktHdr.java, data/src/com/ami/kvm/jviewer/kvmpkts/KMCrypt.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMReader.java, data/src/com/ami/kvm/jviewer/kvmpkts/Mousecaliberation.java, data/src/com/ami/kvm/jviewer/kvmpkts/NullReader.java, data/src/com/ami/kvm/jviewer/res/CD.png, data/src/com/ami/kvm/jviewer/res/CDR.png, data/src/com/ami/kvm/jviewer/res/Floppy.png, data/src/com/ami/kvm/jviewer/res/FloppyR.png, data/src/com/ami/kvm/jviewer/res/HD.png, data/src/com/ami/kvm/jviewer/res/HDR.png, data/src/com/ami/kvm/jviewer/res/Mouse2Btn.png, data/src/com/ami/kvm/jviewer/res/Thumbs.db, data/src/com/ami/kvm/jviewer/res/keyboard.png, data/src/com/ami/kvm/jviewer/res/play.png
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 17 Nov 2010 14:47:06 IST
+
+Package: JViewer_common (1.18.0); urgency = medium
+
+Abstract:
+	Create the seperate thread for sending the mouse event to the host
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 16 Nov 2010 21:47:49 IST
+
+Package: JViewer_common (1.17.0); urgency = medium
+
+Abstract:
+	select radio button to the appropriate redirected device fixed
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 12 Oct 2010 14:21:06 IST
+
+Package: JViewer_common (1.16.0); urgency = medium
+
+Abstract:
+	Issue Fixed:	
+	#unable to access virtual media wizard in java console after connect and Disconnect the devices
+	#USB Key-Reading Bytes still shows even we unplug USB key
+	#File path for Video Record can be accepted
+	#cosmetic issue in video record settings
+	#Icon text is not updated for mouse show cursor
+
+Files Added: data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorGerman.java
+Files Deleted: data/src/com/ami/kvm/jviewer/hid/USBKeyProcessordDutch.java
+Files Modified: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/vHarddiskMonitorThread.java, data/src/com/ami/kvm/jviewer/gui/AutoKeyboardLayout.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 11 Oct 2010 21:54:12 IST
+
+Package: JViewer_common (1.15.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+#  In Jviewer the prompt message on clicking Connect CD/DVD needs to be edited for spell check. 
+#  When Java console is open and virtual media configurations are reset, the error message needs to be edited.
+
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 05 Oct 2010 20:06:41 IST
+
+Package: JViewer_common (1.14.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	1. Softkeyboard Mapping error
+	2. COndition added for harddisk physical device not for Image.if the dvie is physical device split with seperator '-' if the  client is windowws
+
+Files Modified: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 04 Oct 2010 23:15:23 IST
+
+Package: JViewer_common (1.13.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	1.  Alt + slash option alone not working in Dutch(Belgium) keyboard 
+	2.  In Java console,the Redirection icons representation does not vary when they are enabled and disabled.
+
+Files Added: data/src/com/ami/kvm/jviewer/res/CDR.png, data/src/com/ami/kvm/jviewer/res/FloppyR.png, data/src/com/ami/kvm/jviewer/res/HDR.png
+Files Modified: data/src/com/ami/kvm/jviewer/gui/AutoKeyboardLayout.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorEnglish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorFrench.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorJapanese.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorSpanish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessordDutch.java, data/src/com/ami/kvm/jviewer/res/CD.png, data/src/com/ami/kvm/jviewer/res/Floppy.png, data/src/com/ami/kvm/jviewer/res/HD.png
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 04 Oct 2010 17:37:44 IST
+
+Package: JViewer_common (1.12.0); urgency = medium
+
+Abstract:
+	Fixed Issue :Multiple language encoding support on ISO redirection
+
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 19:38:33 IST
+
+Package: JViewer_common (1.11.0); urgency = medium
+
+Abstract:
+	Fixed issue : KB/Mouse Encryption Fail
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/kvmpkts/KMCrypt.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 17:19:09 IST
+
+Package: JViewer_common (1.10.0); urgency = medium
+
+Abstract:
+	FIX for Maximum zoom and minimum zoom in Java Console
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/Macrows.java
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Thu, 30 Sep 2010 13:10:17 IST
+
+Package: JViewer_common (1.9.0); urgency = medium
+
+Abstract:
+	Modified the return value from boolean to integer to show the proper error message to the USer,whether the device opened in Read mode or Read/write mode
+
+Files Modified: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Wed, 29 Sep 2010 11:52:44 IST
+
+Package: JViewer_common (1.8.0); urgency = medium
+
+Abstract:
+	Fix for Mac Full screen menu display
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 28 Sep 2010 09:53:14 IST
+
+Package: JViewer_common (1.7.0); urgency = high
+
+Abstract:
+	Updated Session handling user messages
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Sep 2010 16:07:16 EDT
+
+Package: JViewer_common (1.6.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+If Media 1 is redirected - Media 2 should be disabled in the virtual media wizard
+When Java console is minimized, the menus shrink and are not readable and accessible.
+Shortcut option-Display a softkeyboard option was not displaying properly
+Short cut Zoom option not able to use when we launch java console
+
+Files Modified: data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/JVStatusBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Thu, 23 Sep 2010 18:22:43 IST
+
+Package: JViewer_common (1.5.0); urgency = medium
+
+Abstract:
+	Issue fixed
+  1.Mouse calibration is not stable after changing the resolution in linux
+  2.ALT+F did not work for more than 2 times while pressing continously
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java
+
+--Submitter: Gopinath.s (gopinaths@amiindia.co.in) Thu, 23 Sep 2010 12:07:31 IST
+
+Package: JViewer_common (1.4.0); urgency = medium
+
+Abstract:
+	Stress Keyboard /mouse encryption in console - multiple sesssion are running is displayed
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: Gopinath.s (gopinaths@amiindia.co.in) Wed, 22 Sep 2010 16:09:55 IST
+
+Package: JViewer_common (1.3.0); urgency = medium
+
+Abstract:
+	1.When "Pause Redirection" is selected in the Java console window, it can't mount cd/dvd media successfully.
+ 2.when redirection is paused, and Auto detect in bandwidth is given it doesnt work even after redirection is resumed.
+ 3.In Java console,when we copy and paste files the mouse doesn't sync and unable to access the console thereafter
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java
+
+--Submitter: Gopinath.s (gopinaths@amiindia.co.in) Mon, 20 Sep 2010 10:01:12 IST
+
+Package: JViewer_common (1.2.0); urgency = medium
+
+Abstract:
+	When screen is blank and redirection is paused, refresh operation should be resume -> pause.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 17 Sep 2010 15:10:57 CST
+
+Package: JViewer_common (1.1.0); urgency = high
+
+Abstract:
+	In J-viewer console, when wrong file is redirected the message format thrown should be similar
+In Cd/DVD Media, the message should come as " Invalid image file: Cannot redirect CD/DVD image".
+
+Files Modified: data/src/com/ami/iusb/IUSBRedirSession.java
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 16 Sep 2010 15:06:46 CST
+
+Package: JViewer_common (1.0.42); urgency = medium
+
+Abstract:
+	#BUg Fixes:
+	# Add one space between Hard and disk 
+	# In Java console, when clicking the Ctrl+Alt+Del in the bottom righ tof console, keyboard gets hanged. 
+	# When Java console is minimized, the menus shrink and are not readable and accessible. 
+	# In Java console,when we click settings under Video recording, the popup title needs to be edited. 
+	# Modified the Gettable panel to getjpanel for VMedia dialog to be displayed in SPX MultiViewer
+
+Files Modified: data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JVStatusBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 13 Sep 2010 18:50:21 IST
+
+Package: JViewer_common (1.0.41); urgency = medium
+
+Abstract:
+	Issue Fixed
+ 1.Num lock ,cap lock,scroll lock blinking in client keyboard
+ 2.Mouse calibration is active when Absolute mode(Windows)
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: Gopinath.s (gopinaths@amiindia.co.in) Tue, 07 Sep 2010 11:45:36 IST
+
+Package: JViewer_common (1.0.40); urgency = medium
+
+Abstract:
+	NULL Condition checked
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 27 Aug 2010 23:08:27 IST
+
+Package: JViewer_common (1.0.39); urgency = medium
+
+Abstract:
+	Minor change in displaying the string for fixed harddisk after redirection is started
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Thu, 26 Aug 2010 20:10:59 IST
+
+Package: JViewer_common (1.0.38); urgency = medium
+
+Abstract:
+	Display the Error message if the JMF not installed on the Client system,Menu always appear in the JViewer
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Wed, 25 Aug 2010 19:00:36 IST
+
+Package: JViewer_common (1.0.37); urgency = medium
+
+Abstract:
+	Issue Fixed in display the Floppy,CD,HD device
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 24 Aug 2010 18:40:50 IST
+
+Package: JViewer_common (1.0.36); urgency = medium
+
+Abstract:
+	Removed the HD redirection thread for finding the physical redirected device is removed
+
+Files Modified: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 23 Aug 2010 19:44:43 IST
+
+Package: JViewer_common (1.0.35); urgency = high
+
+Abstract:
+	Added the Mulitple instance support for CD,HD and FD.
+Listed below the issues to be checked:
+1. Image EJECT and Physical device Eject
+2. Window7 not able to redirect harddrive
+3. Disable the redirected CD/HD/FD device in the another device display list
+
+Files Added: data/src/com/ami/iusb/vHarddiskMonitorThread.java
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/iusb/protocol/IUSBHeader.java, data/src/com/ami/iusb/vCDMonitorThread.java, data/src/com/ami/iusb/vFlpyMonitorThread.java, data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/gui/FrameRateTask.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/JpegImagesToMovie.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 23 Aug 2010 18:47:27 IST
+
+Package: JViewer_common (1.0.34); urgency = medium
+
+Abstract:
+	1. Disable keyboard-related operations in paused mode.
+2. Change refresh mechanism, in paused mode, first resume, wait a new frame, then pause again.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 20 Aug 2010 10:58:46 CST
+
+Package: JViewer_common (1.0.33); urgency = high
+
+Abstract:
+	Host monitor lock feature updated
+
+Files Modified: data/src/com/ami/kvm/jviewer/common/ISOCApp.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 16 Aug 2010 19:30:41 EDT
+
+Package: JViewer_common (1.0.32); urgency = medium
+
+Abstract:
+	Issue Fixed:
+1.Mouse Dragging in relative mode it moves the cursor to (0,0), now its in same place
+2.Moved the SOC menu Macro to SOC package
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 13 Aug 2010 21:02:29 IST
+
+Package: JViewer_common (1.0.31); urgency = high
+
+Abstract:
+	Added Host monitor lock feature support in JViewer client
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 12 Aug 2010 20:33:28 EDT
+
+Package: JViewer_common (1.0.30); urgency = medium
+
+Abstract:
+	1. Ctrl+Esc Issue fixed
+2. Multiviewer Code cleanup,duplicate method removed
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/hid/USBKeyboardRep.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, data/src/com/ami/kvm/jviewer/kvmpkts/Mousecaliberation.java
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 02 Aug 2010 22:02:17 IST
+
+Package: JViewer_common (1.0.29); urgency = medium
+
+Abstract:
+	Alt+F- Full screen option is unable to do frequently
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 29 Jul 2010 14:39:07 CST
+
+Package: JViewer_common (1.0.28); urgency = medium
+
+Abstract:
+	Bug Fixes related to MouseCalibration in Jviewer
+
+Files Modified: data/src/com/ami/kvm/jviewer/communication/NWListener.java, data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/kvmpkts/Mousecaliberation.java
+
+--Submitter: santhoshkumar p (santhoshkumarp@amiindia.co.in) Mon, 26 Jul 2010 12:10:30 IST
+
+Package: JViewer_common (1.0.27); urgency = medium
+
+Abstract:
+	Feature Added:
+	->Macros in the status bar
+	->Zoom video in and out
+	->Video Recording USING JMF,Client to be install JMF otherwise video recording menu disabled.
+
+Files Added: data/jmf.jar, data/src/com/ami/kvm/jviewer/gui/JpegImagesToMovie.java, data/src/com/ami/kvm/jviewer/gui/Macrows.java, data/src/com/ami/kvm/jviewer/gui/VideoRecord.java, data/src/com/ami/kvm/jviewer/gui/VideoRecordSettings.java, data/src/com/ami/kvm/jviewer/res/CD.png, data/src/com/ami/kvm/jviewer/res/Floppy.png, data/src/com/ami/kvm/jviewer/res/Fullscreen.png, data/src/com/ami/kvm/jviewer/res/HD.png, data/src/com/ami/kvm/jviewer/res/Mouse2Btn-gray.png, data/src/com/ami/kvm/jviewer/res/Mouse2Btn.png, data/src/com/ami/kvm/jviewer/res/keyboard.png, data/src/com/ami/kvm/jviewer/res/pause.jpg, data/src/com/ami/kvm/jviewer/res/play.png, data/src/com/ami/kvm/jviewer/res/videoRecord.png, data/src/com/ami/kvm/jviewer/res/videoicon.jpg, data/src/com/ami/kvm/jviewer/res/videoplayer.jpg
+Files Modified: data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/hid/USBMouseRep.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, spx/RULES.D/buildjar.sh
+
+--Submitter: Othiyappan K (othiyappank@amiindia.co.in) Tue, 20 Jul 2010 21:06:38 IST
+
+Package: JViewer_common (1.0.26); urgency = medium
+
+Abstract:
+	Feature Added:
+1. Context menu added in Menu Macro 
+2. Added the button in the Softkeyboard dialog
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java
+
+--Submitter: Othiyappan K (othiyappank@amiindia.co.in) Thu, 15 Jul 2010 22:16:37 IST
+
+Package: JViewer_common (1.0.25); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	# Num,Caps,Scroll options do not syn with host machine.
+	# HardDisk/USB key emulation-Select USB or hard Disk-Virtual media window buttons gets grayed out  
+	# The device name shown on the multiple Hard disk/USB Key Redirecton dialogue is not correct  
+	# Add one space between Hard and disk  
+	# Press the windows keys using client keyboard invoke windows menu popup in both host and client windows.  
+	# Improper message displayed for redirection already in use  
+	# Media encryption-enabled by one client but the other client dont know when the console is opened
+
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java
+
+--Submitter: Othiyappan k (othiyappank@amiindia.co.in) Wed, 07 Jul 2010 20:03:11 IST
+
+Package: JViewer_common (1.0.24); urgency = medium
+
+Abstract:
+	Moved printstacktrace to Debug output
+Virtual Media wizard: if you disconnect the USB key, Virtual Floppy is reported as Disconnected.  
+Read bytes showing values even when we disconnect cd or dvd
+
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/iusb/protocol/PacketMaster.java, data/src/com/ami/iusb/vCDMonitorThread.java, data/src/com/ami/iusb/vFlpyMonitorThread.java, data/src/com/ami/kvm/jviewer/communication/Client.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, data/src/com/ami/kvm/jviewer/kvmpkts/Mousecaliberation.java
+
+--Submitter: Othiyappan k (othiyappank@amiindia.co.in) Mon, 05 Jul 2010 15:47:45 IST
+
+Package: JViewer_common (1.0.23); urgency = medium
+
+Abstract:
+	Issue Fixed:
+pressed and hold one of two shift keys down and, by accident, pressed the other shift key. This operation must be ignored and should not take effect on any subsequent key operations. However, even after the both shift keys were completely released off
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorEnglish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorFrench.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorJapanese.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorSpanish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessordDutch.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 30 Jun 2010 15:32:44 IST
+
+Package: JViewer_common (1.0.22); urgency = high
+
+Abstract:
+	JViewer Modified for MultiViewer Support.
+Refer Change Impact Analysis document for JViewer in the following svnPath:-
+svnrepos/servmgt/projects-x/core/docs/SPX/PortingGuides/JViewer.
+
+Files Modified: data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/protocol/PacketMaster.java, data/src/com/ami/iusb/vFlpyMonitorThread.java, data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/gui/AutoKeyboardLayout.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/FSFrame.java, data/src/com/ami/kvm/jviewer/gui/FSMenuBar.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, data/src/com/ami/kvm/jviewer/kvmpkts/Mousecaliberation.java
+
+--Submitter: shirleyh (shirleyh@amiindia.co.in) Tue, 29 Jun 2010 15:22:59 IST
+
+Package: JViewer_common (1.0.21); urgency = medium
+
+Abstract:
+	1. Moved the compression menu from common package to porting
+2. FIxed displaying the conencted device twice in the List
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 23 Jun 2010 16:58:02 IST
+
+Package: JViewer_common (1.0.20); urgency = high
+
+Abstract:
+	Added the Feature:
+1. Redirecting hte entire physical drive to the Host
+Pending Issues:
+1.MAC client to be support
+2.WinXP is working Fine,Windows Vista and windows7 write failure to be Fix
+
+Files Modified: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 21 Jun 2010 22:53:47 IST
+
+Package: JViewer_common (1.0.19); urgency = low
+
+Abstract:
+	Issue : Client keyboard malfunctions after enabling Auto Detect of Keyboard Layout - Fixed
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/AutoKeyboardLayout.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Fri, 28 May 2010 16:33:36 IST
+
+Package: JViewer_common (1.0.18); urgency = low
+
+Abstract:
+	Removed unwanted file from JViewer res folder
+
+Files Deleted: data/src/com/ami/kvm/jviewer/res/Thumbs.db:encryptable
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Wed, 05 May 2010 17:40:23 IST
+
+Package: JViewer_common (1.0.17); urgency = low
+
+Abstract:
+	Modified the package description
+
+Files Modified: spx/INFO
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 29 Apr 2010 20:53:46 IST
+
+Package: JViewer_common (1.0.16); urgency = medium
+
+Abstract:
+	Removed the referenco of Floppy to Harddisk and renaming the Files compiled the library
+
+Files Modified: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 19 Apr 2010 15:46:08 IST
+
+Package: JViewer_common (1.0.15); urgency = low
+
+Abstract:
+	Bug : 1.Alt+Gr keys are not working in Softkeyboard.2.AMI logo is not available in JViewer Help. Fixed
+
+Files Added: data/src/com/ami/kvm/jviewer/res/Thumbs.db:encryptable, data/src/com/ami/kvm/jviewer/res/ami.jpg
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/res/Thumbs.db
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Fri, 16 Apr 2010 15:23:38 IST
+
+Package: JViewer_common (1.0.14); urgency = critical
+
+Abstract:
+	Added the harddisk redirection support
+
+Files Added: data/src/com/ami/iusb/HarddiskRedir.java, data/src/com/ami/iusb/protocol/HarddiskProtocol.java
+Files Modified: data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/JViewer.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/FrameRateTask.java, data/src/com/ami/kvm/jviewer/gui/JVFrame.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sun, 11 Apr 2010 06:07:42 IST
+
+Package: JViewer_common (1.0.13); urgency = low
+
+Abstract:
+	Bug Fixes for Issues:
+	 1.Java Console: Bad file format is redirected for Floppy image
+         2.Click Connect Floppy or Connect DVD in virtual media-Virtual Media buttons gets grayed out
+         3.Alt + options are not working in German keyboard
+
+Files Modified: data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java, spx/INFO
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Fri, 09 Apr 2010 22:06:27 IST
+
+Package: JViewer_common (1.0.12); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:43:44 EDT
+
+Package: JViewer_common (1.0.11); urgency = medium
+
+Abstract:
+	Depenencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 30 Mar 2010 16:03:36 EDT
+
+Package: JViewer_common (1.0.10); urgency = low
+
+Abstract:
+	Added the thread for monitoring the CD/Floppy device unplug
+
+Files Added: data/src/com/ami/iusb/vFlpyMonitorThread.java, data/src/com/ami/iusb/vCDMonitorThread.java
+Files Modified: data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Mon, 22 Mar 2010 04:16:53 IST
+
+Package: JViewer_common (1.0.9); urgency = low
+
+Abstract:
+	Bug Fixed:
+12520 - Ctrl+Alt in console and DEL in keyboard not working
+12514 - ALT+ENTER functionality is not working in Java Console.
+12455 - Soft Keyboard functionality is not proper
+12454 - Alt+E is given as shortcut for two options in java console Menu
+11462 - CTRL key is not working for choosing files and folders
+12454 - Alt+E is given as shortcut for two options in java console Menu
+12091 - Mouse calibration is not stable after changing the resolution in linux
+Refresh option enabled in Fullscreen menu.
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 19 Mar 2010 14:22:29 IST
+
+Package: JViewer_common (1.0.8); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:49:53 EDT
+
+Package: JViewer_common (1.0.7); urgency = low
+
+Abstract:
+	#Added the ISOImage and Floppy Image path reminder in the Vmedia dilog
+#Modified the Status bar alignment to Box layout,if the screen size changes the LED state should be displayed properly
+
+Files Modified: data/src/com/ami/iusb/IUSBRedirSession.java, data/src/com/ami/kvm/jviewer/gui/JVStatusBar.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/vMediaDialog.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 08 Mar 2010 17:18:11 IST
+
+Package: JViewer_common (1.0.6); urgency = low
+
+Abstract:
+	1.Modified the JVVideo interface,some of the sommon methos in JVVideo class fiel
+ moved in to Common package
+2.Version no also added for SOC package and appeneded in already existing help dialog
+
+Files Added: data/src/com/ami/kvm/jviewer/jvvideo, data/src/com/ami/kvm/jviewer/jvvideo/JVVideo.java
+Files Modified: data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/common/ISOCJVVideo.java, data/src/com/ami/kvm/jviewer/common/ISOCFrameHdr.java, data/src/com/ami/kvm/jviewer/common/ISOCManager.java, data/src/com/ami/kvm/jviewer/common/ISOCKvmClient.java, data/src/com/ami/kvm/jviewer/common/ISOCCreateBuffer.java, spx/RULES.D/buildjar.sh
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sat, 06 Mar 2010 23:45:27 IST
+
+Package: JViewer_common (1.0.5); urgency = low
+
+Abstract:
+	1.Modified the softkeyboard LED status if the Mainframe in focus,Redrawing the sofkkeyboard window if the LED change in host
+2.Naming conventions in SOC API
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/WindowMenu.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java, data/src/com/ami/kvm/jviewer/gui/FSMenu.java, data/src/com/ami/kvm/jviewer/common/ISOCMenu.java, data/src/com/ami/kvm/jviewer/common/ISOCManager.java, data/src/com/ami/kvm/jviewer/common/ISOCApp.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 01 Mar 2010 20:21:22 IST
+
+Package: JViewer_common (1.0.4); urgency = low
+
+Abstract:
+	Removed the invalid Error messages and proper return for error if the socket is closed
+
+Files Modified: data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/iusb/CDROMRedir.java, data/src/com/ami/kvm/jviewer/kvmpkts/HeaderReader.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 25 Feb 2010 22:43:53 IST
+
+Package: JViewer_common (1.0.3); urgency = low
+
+Abstract:
+	*Menu status updated
+ *Vmedia Dialog IImage path seteditable false
+
+Files Modified: data/src/com/ami/iusb/FloppyRedir.java, data/src/com/ami/kvm/jviewer/kvmpkts/KVMClient.java, data/src/com/ami/kvm/jviewer/gui/JVMenu.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/gui/DevicePanel.java, data/src/com/ami/kvm/jviewer/gui/WindowFrame.java, data/src/com/ami/kvm/jviewer/gui/FrameRateTask.java, data/src/com/ami/kvm/jviewer/gui/SoftKeyboard.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 23 Feb 2010 01:42:25 IST
+
+Package: JViewer_common (1.0.2); urgency = low
+
+Abstract:
+	Set the Session autokeybreakmode as true
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerApp.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 18 Feb 2010 01:17:49 IST
+
+Package: JViewer_common (1.0.1); urgency = low
+
+Abstract:
+	* When Num Lock LED is off at JViewer and client, the direction key(2,4,6,8) can not be used Resolution: the keycode of direction key is different in window and linux, so add the keycode of linux  the detail of key code please visit http://java.sun.com/j2se/1.4.2/docs/api/constant-values.html#java.awt.event.KeyEvent.VK_KP_DOWN
+* while getting the floppy drive list from the client,if the floppy is empty no need to display the floppy drive name in the list if the client as Linux
+* Added the Writeprotect support for Linuxhost to display proper error
+* Merged SP2 bug fixes
+
+Files Modified: data/src/com/ami/kvm/jviewer/gui/JViewerView.java, data/src/com/ami/kvm/jviewer/gui/JViewerApp.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorFrench.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorSpanish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorJapanese.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessorEnglish.java, data/src/com/ami/kvm/jviewer/hid/USBKeyProcessordDutch.java
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 17 Feb 2010 19:26:00 IST
+
+Package:JViewer_common (1.0.0);urgency=new
+
+Abstract:
+	JViewer common package.
+
+Files Added: src
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 8 Feb 2010 22:44:48 +0530
+

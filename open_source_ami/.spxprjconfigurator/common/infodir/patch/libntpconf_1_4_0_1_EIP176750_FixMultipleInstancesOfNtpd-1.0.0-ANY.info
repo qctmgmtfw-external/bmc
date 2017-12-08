@@ -1,0 +1,20 @@
+Package : libntpconf_1_4_0_1_EIP176750_FixMultipleInstancesOfNtpd
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libntpconf (1.4.0)
+Depends :  libntpconf(==1.4.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  HansLin (hanslin@ami.com.tw)
+Urgency : new
+Description : Fix the multiple instances of ntpd
+.
+

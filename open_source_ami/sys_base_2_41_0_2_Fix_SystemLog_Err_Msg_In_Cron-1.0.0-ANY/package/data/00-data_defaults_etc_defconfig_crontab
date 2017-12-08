@@ -1,0 +1,13 @@
+--- .pristine/sys_base-2.41.0-src/data/defaults/etc/defconfig/crontab Mon Jul 22 17:24:12 2013
++++ source/sys_base-2.41.0-src/data/defaults/etc/defconfig/crontab Tue Jul 23 10:27:55 2013
+@@ -10,7 +10,7 @@
+ 
+ # Run logrotate every minute
+ 
+-  * * * * *	 0	/usr/sbin/logrotate /etc/logrotate.conf
+-  * * * * *	 0	echo "2" > /var/cache/samba/unexpected.tdb
+- 01 * * * *	 0   /etc/init.d/ntpdate start
++  * * * * *	 sysadmin	/usr/sbin/logrotate /etc/logrotate.conf
++  * * * * *	 sysadmin	echo "2" > /var/cache/samba/unexpected.tdb
++ 01 * * * *	 sysadmin   /etc/init.d/ntpdate start
+ # end of crontab

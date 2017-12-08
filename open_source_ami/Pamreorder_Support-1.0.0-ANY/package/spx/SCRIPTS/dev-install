@@ -1,0 +1,6 @@
+# Install Script
+
+build-install:
+	APPEND_TO_FILE PAM_REORDERING %IMAGE_TREE/etc/features
+
+debug-install:

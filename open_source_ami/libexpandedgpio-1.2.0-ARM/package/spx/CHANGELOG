@@ -1,0 +1,25 @@
+Package: libexpandedgpio (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:46:23 EDT
+
+Package: libexpandedgpio (1.1.0); urgency = high
+
+Abstract:
+	change library link to i2c from static to dynamic
+
+Files Modified: data/Makefile, data/expanded_gpio_ifc.c, spx/INFO
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 27 Jan 2011 17:06:56 CST
+
+Package:libexpandedgpio (1.0.0);urgency=new
+
+Abstract:
+	Expanded GPIO support for AST2150
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Tue, 23 Mar 2010 14:16:28 +0800
+

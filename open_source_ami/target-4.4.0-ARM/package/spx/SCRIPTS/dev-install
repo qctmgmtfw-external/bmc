@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+    DELETE %TARGETDIR
+    UNTAR_BZ2 target.arm.full.tar.bz2 %BLDPRJAREA
+    RENAME %BLDPRJAREA/target.arm.full %TARGETDIR
+
+debug-install:

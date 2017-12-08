@@ -1,0 +1,40 @@
+Source : pwmtach_hw
+Version : 1.10.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : pwmtach_hw
+Build-Depends : crosscc, helper_driver_dev, kernel_dev, pwmtach_driver_dev, rules
+Essential : YES
+Group : DEVICE
+Owner : AMI
+Maintainer : David Chang  (DavidChang@ami.com.tw)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : Added get_pwm_dutycycle functionality.   Also added alternate initialization register values for either max or min fan speeds
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : pwmtach_hw
+Section : sys
+Essential : YES
+Group : DEVICE
+Provides : pwmtachDriver
+Depends : pwmtach, kernel
+Required : helper
+Package-License : GPL-V2
+Description : This pacakge contains built PWMTACH hardware driver module for AST SoC.
+.
+

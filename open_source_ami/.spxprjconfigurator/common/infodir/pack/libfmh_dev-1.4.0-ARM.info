@@ -1,0 +1,17 @@
+Package : libfmh_dev
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : This package has fmh related functions
+.
+Description : Development Package for FMH (Firmware Module Header)Access routines
+.

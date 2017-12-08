@@ -1,0 +1,30 @@
+#!/bin/sh
+
+ DO_DDNS=n
+ SET_FQDN=n
+ SET_DOMAIN=n
+ SET_v6DOMAIN=n
+ SET_DNS=n
+ SET_IPV6_PRIORITY=n
+ 
+case ${IFACE} in
+
+	eth0)
+		DO_DDNS=y
+		SET_FQDN=n
+		SET_DOMAIN=y
+		SET_v6DOMAIN=n
+		SET_DNS=y
+		SET_IPV6_PRIORITY=n
+		;;
+	eth1)
+		DO_DDNS=y
+		SET_FQDN=n
+		SET_DOMAIN=n
+		SET_v6DOMAIN=n
+		SET_DNS=n
+		SET_IPV6_PRIORITY=n
+		;;
+	*)
+		;;
+esac

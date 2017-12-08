@@ -1,0 +1,16 @@
+Package : libi2c_dev
+Non-Editable : YES
+Version : 1.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Dinesh Selvam  (dineshs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Group : DEVEL
+Essential : NO
+Package-License : AMI
+Description : I2C Development Header files.
+.

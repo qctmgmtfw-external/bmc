@@ -1,0 +1,37 @@
+Source : Kernel_oem_ast2300evb
+Version : 1.0.3
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : @Kernel_oem_ast2300evb
+Build-Depends : @Kernel_platform_ast2300evb
+Essential : NO
+Owner : AMI
+Maintainer : Viswanathan S  (viswanathans@ami.com)
+Source-Location : AMI
+Source-Version : 2.6.28.10
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ANY
+Customization-Type : OEMEXTN
+Urgency : medium
+Description : AST2300 OEM Patches to Kernel 2.6.28.10
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : @Kernel_oem_ast2300evb
+Section : info
+Essential : NO
+Group : BASE
+Package-License : AMI
+Description : AST2300 OEM Patches to Kernel 2.6.28.10
+This is a empty dummy binary package because according to SPX a source package has to generate a binary package
+.
+

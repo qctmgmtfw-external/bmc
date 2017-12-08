@@ -1,0 +1,36 @@
+Package: upnp_dsc (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:54:27 EDT
+
+Package: upnp_dsc (1.2.0); urgency = low
+
+Abstract:
+	Description fields cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 10:46:21 EST
+
+Package: upnp_dsc (1.1.0); urgency = medium
+
+Abstract:
+	Fix for failure during IMAGE option
+
+Files Modified: spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 15 Oct 2010 13:16:04 EDT
+
+Package: upnp_dsc (1.0.0); urgency = new
+
+Abstract:
+	This package overrides the default upnp device description
+
+Files Added: data, data/CreateDsc.sh, data/Makefile, data/params, data/template, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/upnp_dsc, spx/PACKAGES.D/upnp_dsc/DATA, spx/PACKAGES.D/upnp_dsc/SCRIPTS, spx/PACKAGES.D/upnp_dsc/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 27 May 2010 18:01:39 CST
+

@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+		COPY_FILE ./dhcpmonitor %IMAGE_TREE/usr/local/bin/
+		SET_INIT_SCRIPT ./dhcpmon
+		
+debug-install:
+

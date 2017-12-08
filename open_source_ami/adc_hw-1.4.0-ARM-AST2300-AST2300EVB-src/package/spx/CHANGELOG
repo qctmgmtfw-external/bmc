@@ -1,0 +1,64 @@
+Package: adc_hw (1.4.0); urgency = high
+
+Abstract:
+	Updating the SourceLicense, PackageLicense, BinaryLicense and Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/adcmain_hw.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 16:00:47 EDT
+
+Package: adc_hw (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 13:55:06 EDT
+
+Package: adc_hw (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/adc_hw/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 16:25:26 EDT
+
+Package: adc_hw (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 12:55:15 EDT
+
+Package: adc_hw (1.0.2); urgency = medium
+
+Abstract:
+	move adc voltage counting from adcapp to here
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Tue, 27 Jul 2010 14:34:26 CST
+
+Package: adc_hw (1.0.1); urgency = low
+
+Abstract:
+	Dependency updated
+
+Files Modified: spx/INFO
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Thu, 22 Jul 2010 12:05:15 CST
+
+Package: adc_hw (1.0.0); urgency = new
+
+Abstract:
+	This package contains ADC hardware level driver for AST2300EVB
+
+Files Added: data, data/Makefile, data/adc_hw.h, data/adcmain_hw.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/adc_hw, spx/PACKAGES.D/adc_hw/DATA, spx/PACKAGES.D/adc_hw/SCRIPTS, spx/PACKAGES.D/adc_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Mon, 19 Jul 2010 18:52:10 CST
+

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/data/pwmtachmain.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/data/pwmtach_ioctl.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/data/Makefile</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/data/pwmtach.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/data/fan_structs.h</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>pwmtach</package-name>
+<version>1.8.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">kernel_dev</package-name>
+<package-name operator="" version="">global_dev</package-name>
+<package-name operator="" version="">rules</package-name>
+<package-name operator="" version="">crosscc</package-name>
+<package-name operator="" version="">helper_driver_dev</package-name>
+<package-name operator="" version="">libdbgout_dev</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>DEVICE</group>
+<configtags>PWMTACH Device Support</configtags>
+<installsize/>
+<description>Added get_pwm_dutycycle function.  Also changed set_duty_cycle to allow values from 1 - 100 for better precision (0x01 - 0xff); pwm max is (0x00)</description>
+<architecture>ALL</architecture>
+<owner>AMI</owner>
+<maintainer>Vinay Tandon  </maintainer>
+<maintainer-email>vinayt@ami.com</maintainer-email>
+<sourcelocation>AMI</sourcelocation>
+<sourceversion>1.0.0</sourceversion>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/spx/RULES</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages>
+<package>
+<name>pwmtach</name>
+<section>sys</section>
+<essential>NO</essential>
+<configtags>PWMTACH Device Support</configtags>
+<group>DEVICE</group>
+<license>GPL-V2</license>
+<description>PWMTACH common driver module</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends>
+<package-name operator="" version="">kernel</package-name>
+<package-name operator="" version="">hw_pwmtach</package-name>
+</depends>
+<required>
+<package-name operator="" version="">helper</package-name>
+</required>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/spx/PACKAGES.D/pwmtach/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+<package>
+<name>pwmtach_driver_dev</name>
+<section>dev</section>
+<essential>NO</essential>
+<configtags/>
+<group>DEVEL</group>
+<license>GPL-V2</license>
+<description>This package includes PWMATACH driver Development header files.</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends/>
+<required/>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/spx/PACKAGES.D/pwmtach_driver_dev/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/pwmtach-1.8.0-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

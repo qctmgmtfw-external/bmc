@@ -1,0 +1,3959 @@
+Package: libipmimsghndlr (2.159.0); urgency = medium
+
+Abstract:
+	Reverted the changes.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Aug 2011 22:56:01 IST
+
+Package: libipmimsghndlr (2.158.0); urgency = medium
+
+Abstract:
+	Code cleanup.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Aug 2011 13:05:20 IST
+
+Package: libipmimsghndlr (2.157.0); urgency = low
+
+Abstract:
+	Commenting to fix "Send Test Alert" option successfully from WebUI.
+
+Files Modified: data/SensorEvent/PEFDevice/PEFDevice.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 18 Aug 2011 19:51:01 IST
+
+Package: libipmimsghndlr (2.156.0); urgency = low
+
+Abstract:
+	libUserPrivilege is added in build depend and binary required list
+
+Files Modified: spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 18 Aug 2011 19:32:38 IST
+
+Package: libipmimsghndlr (2.155.0); urgency = low
+
+Abstract:
+	1. Removed the hard coding of Current channel as 1(LAN Channel) for UDS channels in MsgHndlr and moved this hard coding to GetchannelInfo function
+2. Modified Chassis Control cmd's cmdhndler function to call the PowerONOFFhook
+(Review ID: 821)
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/Chassis/ChassisDevice.c, data/MsgHndlr.c
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 17 Aug 2011 12:14:08 IST
+
+Package: libipmimsghndlr (2.154.0); urgency = high
+
+Abstract:
+	Adding domain support in the library itself instead of in msghndlr
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 15 Aug 2011 17:22:20 EDT
+
+Package: libipmimsghndlr (2.153.0); urgency = high
+
+Abstract:
+	Adding support to communicate with PECI thru IPMI I2c Master Write Read Interface. Selecting PECI_Over_IPMI support package enables this feature
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 15 Aug 2011 16:54:43 EDT
+
+Package: libipmimsghndlr (2.152.0); urgency = medium
+
+Abstract:
+	Added a condition check to restart webgo or lighttpd
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 12 Aug 2011 18:43:17 IST
+
+Package: libipmimsghndlr (2.151.0); urgency = medium
+
+Abstract:
+	LoginAudit coniguration support for telnet and ssh
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 11 Aug 2011 21:15:20 IST
+
+Package: libipmimsghndlr (2.150.0); urgency = low
+
+Abstract:
+	Removed unwated code.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 10 Aug 2011 18:29:42 IST
+
+Package: libipmimsghndlr (2.149.0); urgency = medium
+
+Abstract:
+	Removed unwanted code.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 10 Aug 2011 18:00:27 IST
+
+Package: libipmimsghndlr (2.148.0); urgency = high
+
+Abstract:
+	Modified Circular SEL implementation to reduce the higher write cycle to conf section.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 10 Aug 2011 15:05:07 IST
+
+Package: libipmimsghndlr (2.147.0); urgency = medium
+
+Abstract:
+	Fixed the bug that it cannot delete 2rd added user in webUI
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 10 Aug 2011 10:00:06 CST
+
+Package: libipmimsghndlr (2.146.0); urgency = medium
+
+Abstract:
+	Removing IPMI service configuration using ncml.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 09 Aug 2011 17:07:58 IST
+
+Package: libipmimsghndlr (2.145.0); urgency = medium
+
+Abstract:
+	User Privilege by default is set to NOACCESS for new user created using set user name ipmi cmd.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 08 Aug 2011 20:23:28 IST
+
+Package: libipmimsghndlr (2.144.0); urgency = low
+
+Abstract:
+	1. PEF Startup Delay time function works abnormally.
+   Sec 17.4 .The PEF Startup Delay causes Platform Event Filtering triggered power-down, reset, and power-cycle actions to be postponed when the system is
+   either powered up or is reset locally via a pushbutton or other local front-panel user interface. the time is to delay PEF after a system powerup, from
+   S4 or S5 and resets.
+
+2. PEF Alert startup delay works abnormally.
+   table 30-6 field 4, the alert startup delay time is to delay Alerts after system powerups, from S4 or S5 and resets.
+
+3. The first Priority of PEF Action is wrong.
+   If a event trigger a lot of filter, we should choose a power action onlt, if do power action every filter, it isn't reasonable.
+
+Files Modified: data/MsgHndlr.c, data/SensorEvent/PEFDevice/PEFTmr.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Mon, 08 Aug 2011 11:01:46 CST
+
+Package: libipmimsghndlr (2.143.0); urgency = medium
+
+Abstract:
+	Check the VLAN interface presence before enabling bond interface to send proper error completion code.
+Added new parameter to check the bond vlan interface presence and properly disable the bond vlan configuration
+when disabling bond interface.
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 04 Aug 2011 20:40:11 IST
+
+Package: libipmimsghndlr (2.142.0); urgency = medium
+
+Abstract:
+	Added Missing header file to fix build error.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 03 Aug 2011 22:59:11 IST
+
+Package: libipmimsghndlr (2.141.0); urgency = medium
+
+Abstract:
+	Changes done for MBMC to move global m_internal_sensor_tbl inside BMCInfo_t structure.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/SensorEvent/SensorDevice/internal_sensor.c, data/Storage/SELDevice/SEL.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 03 Aug 2011 20:25:39 IST
+
+Package: libipmimsghndlr (2.140.0); urgency = medium
+
+Abstract:
+	Iface count value takes a reference to CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 03 Aug 2011 16:34:29 CST
+
+Package: libipmimsghndlr (2.139.0); urgency = medium
+
+Abstract:
+	Added NULL Condition check for pChannelInfo.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 01 Aug 2011 19:55:24 IST
+
+Package: libipmimsghndlr (2.138.0); urgency = medium
+
+Abstract:
+	IPv6 related configuration will be preserved in NVRAM to get the previous status of IPv6.
+
+Files Modified: data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 01 Aug 2011 19:16:31 IST
+
+Package: libipmimsghndlr (2.137.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/Makefile
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:18:14 IST
+
+Package: libipmimsghndlr (2.136.0); urgency = medium
+
+Abstract:
+	Fixed Circular SEL issues. First and highest SEL Record will be calculated based on
+First SEL Record ID in Circular SEL Mode.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 29 Jul 2011 20:46:59 IST
+
+Package: libipmimsghndlr (2.135.0); urgency = medium
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 28 Jul 2011 21:53:00 IST
+
+Package: libipmimsghndlr (2.134.0); urgency = medium
+
+Abstract:
+	Fixed IPMI ARP function for bonding interface.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 25 Jul 2011 18:21:45 CST
+
+Package: libipmimsghndlr (2.133.0); urgency = low
+
+Abstract:
+	Added switch case to execute tasks based on Hook return values
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 22 Jul 2011 21:41:10 IST
+
+Package: libipmimsghndlr (2.132.0); urgency = medium
+
+Abstract:
+	Invoked post monitor hook in all failure and success case.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 22 Jul 2011 17:48:41 IST
+
+Package: libipmimsghndlr (2.131.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/AMI/AMIDevice.c, data/App/AppDevice/WDT.c, data/PendTask.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Transport/LANConfig.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:25:43 IST
+
+Package: libipmimsghndlr (2.130.0); urgency = high
+
+Abstract:
+	Updating the stunnel configuration from ipmi instead of libifc
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 21 Jul 2011 10:26:34 EDT
+
+Package: libipmimsghndlr (2.129.0); urgency = low
+
+Abstract:
+	Added code to Restart webgo after changing pam order.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 16:04:42 IST
+
+Package: libipmimsghndlr (2.128.0); urgency = medium
+
+Abstract:
+	Enabling active-backup bonding mode and added support to check the link status of active slave
+interface (only) for active-backup mode.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 21 Jul 2011 15:00:00 IST
+
+Package: libipmimsghndlr (2.127.0); urgency = low
+
+Abstract:
+	Getting Msghandlr Map based on GroupExt code and also added support to retrive OEM supported NetFn for 
+GetNetFn Support command.
+
+Files Modified: data/App/IPMDevice/Firewall.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 20 Jul 2011 22:07:00 IST
+
+Package: libipmimsghndlr (2.126.0); urgency = low
+
+Abstract:
+	Removing unused flashing related commands.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 20 Jul 2011 17:17:52 IST
+
+Package: libipmimsghndlr (2.125.0); urgency = low
+
+Abstract:
+	Removed unwanted variables and done changes in Set Service Configuration
+to support Not Editable and Not Applicable Data Field
+
+Files Modified: data/AMI/AMIConf.c, data/App/IPMDevice/IPMDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 20 Jul 2011 14:07:00 IST
+
+Package: libipmimsghndlr (2.124.0); urgency = medium
+
+Abstract:
+	Get DCMI Sensor Info cmd: To provide interoperability with both DCMI and IPMI specs for sensor Entity IDs
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 14 Jul 2011 18:00:55 IST
+
+Package: libipmimsghndlr (2.123.0); urgency = medium
+
+Abstract:
+	Modified SELTimeClockSync function. To track the relationship between timestamps, one event is logged with old timestamp and one event is logged with the modified new timestamp
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: ManimehalaiS (manimehalais@amiindia.co.in) Wed, 13 Jul 2011 11:19:26 IST
+
+Package: libipmimsghndlr (2.122.0); urgency = medium
+
+Abstract:
+	Added Enable/Disable Support in PRJ for internal sensor
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/Makefile, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/SELDevice/SEL.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 08 Jul 2011 16:30:46 IST
+
+Package: libipmimsghndlr (2.121.0); urgency = low
+
+Abstract:
+	Inserted a hook to fwd cmds with LUN 01
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 08 Jul 2011 14:09:04 IST
+
+Package: libipmimsghndlr (2.120.0); urgency = medium
+
+Abstract:
+	Restart Service -Pend task argument is changed.
+According to that the Pend task call is changed in Yafu reset command function.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 08 Jul 2011 11:58:57 IST
+
+Package: libipmimsghndlr (2.119.0); urgency = medium
+
+Abstract:
+	Added PRJ configure support for IPMI PAM-ReOrder command
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 08 Jul 2011 10:35:37 IST
+
+Package: libipmimsghndlr (2.118.0); urgency = medium
+
+Abstract:
+	Code optimization done
+
+Files Modified: data/AMI/AMIRestoreDefaults.c, data/PendTask.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Thu, 07 Jul 2011 17:05:48 IST
+
+Package: libipmimsghndlr (2.117.0); urgency = low
+
+Abstract:
+	Changing SensorSharedMemMutex mutex type and removing unwanted mutex.
+
+Files Modified: data/AMI/AMIDevice.c, data/App/IPMDevice/IPMDevice.c, data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/SELDevice/SEL.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 06 Jul 2011 21:11:34 IST
+
+Package: libipmimsghndlr (2.116.0); urgency = medium
+
+Abstract:
+	Change in AMIYAFUResetDevice inorder to support Preserve configuration.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 06 Jul 2011 19:53:41 IST
+
+Package: libipmimsghndlr (2.115.0); urgency = low
+
+Abstract:
+	not reserving conf space for SEL's while sel clear by using new pdk
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Wed, 06 Jul 2011 12:30:35 TLT
+
+Package: libipmimsghndlr (2.114.0); urgency = low
+
+Abstract:
+	Register Sensor Hooks is called in sensor monitor task
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 05 Jul 2011 18:50:20 IST
+
+Package: libipmimsghndlr (2.113.0); urgency = medium
+
+Abstract:
+	Add Operational State support for SSI Compute Blade.
+
+Files Modified: data/App/AppDevice/WDT.c, data/MsgHndlr.c, data/SensorEvent/SensorDevice/internal_sensor.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 05 Jul 2011 20:29:29 CST
+
+Package: libipmimsghndlr (2.112.0); urgency = medium
+
+Abstract:
+	Adviser restart for restore facory default
+
+Files Modified: data/AMI/restoredefaults.sh
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 30 Jun 2011 18:26:10 IST
+
+Package: libipmimsghndlr (2.111.0); urgency = medium
+
+Abstract:
+	Call the restoredefaults script, if preserveconf support not supported
+
+Files Modified: data/AMI/AMIRestoreDefaults.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 29 Jun 2011 21:40:54 IST
+
+Package: libipmimsghndlr (2.110.0); urgency = medium
+
+Abstract:
+	Modification done to enable the VLAN, based on LAN interface state change.
+
+Files Deleted: data/OPMA, data/OPMA/OPMA.c, data/OPMA/OPMACommands.c
+Files Modified: data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 29 Jun 2011 20:45:22 IST
+
+Package: libipmimsghndlr (2.109.0); urgency = medium
+
+Abstract:
+	Moved PDK hook at proper place.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 29 Jun 2011 20:21:11 IST
+
+Package: libipmimsghndlr (2.108.0); urgency = medium
+
+Abstract:
+	Adviserd restart script nmae modified
+
+Files Modified: data/AMI/restoredefaults.sh
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 19:08:15 IST
+
+Package: libipmimsghndlr (2.107.0); urgency = medium
+
+Abstract:
+	BMC Rebooting task is moved to pend task, to avoid ipmitool error.
+
+Files Modified: data/AMI/AMIRestoreDefaults.c, data/PendTask.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 29 Jun 2011 16:01:03 IST
+
+Package: libipmimsghndlr (2.106.0); urgency = low
+
+Abstract:
+	For IPMI spec 2.0 table 35-10 byte 2, the disable scanning sensor should be BIT6
+(R/B 235)
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Tue, 28 Jun 2011 18:38:43 CST
+
+Package: libipmimsghndlr (2.105.0); urgency = low
+
+Abstract:
+	removed the unwanted printf's
+
+Files Modified: data/AMI/AMIRestoreDefaults.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Thu, 23 Jun 2011 12:20:03 IST
+
+Package: libipmimsghndlr (2.104.0); urgency = medium
+
+Abstract:
+	Bugfix:
+1.Watchdog timer counts down from incorrect value when the watchdog timer is running.
+2.Present countdown value will be incorrect if set watchdog timer command is sent when the timer is running.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c
+
+--Submitter: garypaung (garypaung@ami.com.tw) Thu, 23 Jun 2011 11:07:45 CST
+
+Package: libipmimsghndlr (2.103.0); urgency = low
+
+Abstract:
+	Dynamically load the preserveconf library. removed libPreserveConf_dev from depends
+
+Files Modified: data/AMI/AMIRestoreDefaults.c, data/Makefile, spx/INFO
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 22 Jun 2011 21:20:44 IST
+
+Package: libipmimsghndlr (2.102.0); urgency = low
+
+Abstract:
+	Chassis Force Identify Flag is made zero when ever the request bytes are less than 2 bytes
+
+Files Modified: data/Chassis/ChassisDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 22 Jun 2011 21:03:44 IST
+
+Package: libipmimsghndlr (2.101.0); urgency = medium
+
+Abstract:
+	CmdHndlrMutex is locked before execution of any command in Message Handler.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Sat, 18 Jun 2011 14:37:48 IST
+
+Package: libipmimsghndlr (2.100.0); urgency = medium
+
+Abstract:
+	Fix to avoid multiple sel entries for watchdog.
+
+Files Modified: data/SensorEvent/SensorDevice/internal_sensor.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 17 Jun 2011 19:28:50 IST
+
+Package: libipmimsghndlr (2.99.0); urgency = low
+
+Abstract:
+	Modified the restoredefault command to invoke the application to do the restore factory defaults
+
+Files Modified: data/AMI/AMIRestoreDefaults.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Fri, 17 Jun 2011 18:39:20 IST
+
+Package: libipmimsghndlr (2.98.0); urgency = low
+
+Abstract:
+	Added AMI command for Set/Get Preserve Configuration
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIRestoreDefaults.c, data/Makefile, spx/INFO
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Fri, 17 Jun 2011 15:50:05 IST
+
+Package: libipmimsghndlr (2.97.0); urgency = medium
+
+Abstract:
+	Pend task function for restarting services.
+
+Files Modified: data/PendTask.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 17 Jun 2011 10:57:44 IST
+
+Package: libipmimsghndlr (2.96.0); urgency = medium
+
+Abstract:
+	Fix build error in AMISetSELPolicy function.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Thu, 16 Jun 2011 18:55:05 EDT
+
+Package: libipmimsghndlr (2.95.0); urgency = medium
+
+Abstract:
+	Add AMI Get/Set SEL Policy Commands support.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Thu, 16 Jun 2011 15:09:38 EDT
+
+Package: libipmimsghndlr (2.94.0); urgency = low
+
+Abstract:
+	Added reserved bit check for GetSysIfcCaps Command.
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 16 Jun 2011 17:47:17 IST
+
+Package: libipmimsghndlr (2.93.0); urgency = medium
+
+Abstract:
+	Add FlushIPMI in SetSELPolicy function.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Mon, 13 Jun 2011 19:30:47 EDT
+
+Package: libipmimsghndlr (2.92.0); urgency = medium
+
+Abstract:
+	SEL UTC Offset is added along with the GMT Time in order to compare the trigger time with the exact UTC Time in Set Trigger Event
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 14 Jun 2011 00:22:27 IST
+
+Package: libipmimsghndlr (2.91.0); urgency = medium
+
+Abstract:
+	Fix done to set hostname properly of length 64.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 13 Jun 2011 19:08:48 IST
+
+Package: libipmimsghndlr (2.90.0); urgency = medium
+
+Abstract:
+	Pre-timeout fix
+
+Files Modified: data/App/AppDevice/WDT.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Mon, 13 Jun 2011 17:21:54 IST
+
+Package: libipmimsghndlr (2.89.0); urgency = medium
+
+Abstract:
+	Adding missed out argument for IsCommandEnabled function.
+
+Files Modified: data/MsgHndlr.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 13 Jun 2011 16:42:31 IST
+
+Package: libipmimsghndlr (2.88.0); urgency = medium
+
+Abstract:
+	Add SSI Commands for SSI Compute Blade support.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Sat, 11 Jun 2011 22:01:26 EDT
+
+Package: libipmimsghndlr (2.87.0); urgency = medium
+
+Abstract:
+	Fix build error in GetNextSELEntry function.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Sat, 11 Jun 2011 20:03:58 EDT
+
+Package: libipmimsghndlr (2.86.0); urgency = medium
+
+Abstract:
+	Add Circular SEL support.
+
+Files Deleted: data/Storage/SELDevice/SELCircularLog.c
+Files Modified: data/MsgHndlr.c, data/Storage/SELDevice/SEL.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Fri, 10 Jun 2011 19:34:38 EDT
+
+Package: libipmimsghndlr (2.85.0); urgency = high
+
+Abstract:
+	Removing sigusr1 to be sent to adviser. That is moved for mouse_mode and cd,fd and hd count
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 10 Jun 2011 14:02:27 EDT
+
+Package: libipmimsghndlr (2.84.0); urgency = low
+
+Abstract:
+	Fixed UDS login issue
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 10 Jun 2011 14:16:32 IST
+
+Package: libipmimsghndlr (2.83.0); urgency = medium
+
+Abstract:
+	Added Before Watchdog Action Hook.
+
+Files Modified: data/App/AppDevice/WDT.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 10 Jun 2011 11:51:31 IST
+
+Package: libipmimsghndlr (2.82.0); urgency = low
+
+Abstract:
+	Operation Support in SDR and SEL are manipulated based on command enabled or disabled
+
+Files Modified: data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 08 Jun 2011 21:50:29 IST
+
+Package: libipmimsghndlr (2.81.0); urgency = high
+
+Abstract:
+	Sending the service configuration to the clients upon startup and whenever configuration changes
+
+Files Modified: data/AMI/AMIConf.c, data/Makefile, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 07 Jun 2011 15:52:05 EDT
+
+Package: libipmimsghndlr (2.80.0); urgency = low
+
+Abstract:
+	#ifdef Commented the IPMI response failure handling function
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 07 Jun 2011 14:21:52 IST
+
+Package: libipmimsghndlr (2.79.0); urgency = high
+
+Abstract:
+	Modified the media to individual cd, fd and hd components
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 07 Jun 2011 01:20:15 EDT
+
+Package: libipmimsghndlr (2.78.0); urgency = low
+
+Abstract:
+	Added support for timeout completion code
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 06 Jun 2011 22:25:09 IST
+
+Package: libipmimsghndlr (2.77.0); urgency = medium
+
+Abstract:
+	Proper fix for updating DNS configuration in static IP mode.
+
+Files Modified: data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 06 Jun 2011 19:52:28 IST
+
+Package: libipmimsghndlr (2.76.0); urgency = low
+
+Abstract:
+	Update LICENSE.AMI
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Sat, 04 Jun 2011 04:37:58 CST
+
+Package: libipmimsghndlr (2.75.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:26:25 EDT
+
+Package: libipmimsghndlr (2.74.0); urgency = low
+
+Abstract:
+	Add new field "Session Handle." of Close Session Command
+
+Files Modified: data/App/App.c, data/App/AppDevice/AppDevice.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 03 Jun 2011 19:37:51 CST
+
+Package: libipmimsghndlr (2.73.0); urgency = medium
+
+Abstract:
+	Fixing  cc Field bug
+
+Files Modified: data/AMI/AMISmtp.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 02 Jun 2011 14:08:49 IST
+
+Package: libipmimsghndlr (2.72.0); urgency = low
+
+Abstract:
+	Changes in ValidateMsgHdr function and PendingBridgeResTimerTask function to post response to respective queue when bridged internally
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: ManimehalaiS (manimehalais@amiindia.co.in) Wed, 01 Jun 2011 10:17:47 IST
+
+Package: libipmimsghndlr (2.71.0); urgency = medium
+
+Abstract:
+	Modifying the adviser restart status such that, appropriate configuration change message will be displayed in client if available
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 31 May 2011 15:09:19 EDT
+
+Package: libipmimsghndlr (2.70.0); urgency = medium
+
+Abstract:
+	In AMIGetSol function memset added for the response structure.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 27 May 2011 21:00:59 IST
+
+Package: libipmimsghndlr (2.69.0); urgency = medium
+
+Abstract:
+	Add SSI LAN Parameters support for SSI Compute Blade.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Wed, 18 May 2011 16:20:03 EDT
+
+Package: libipmimsghndlr (2.68.0); urgency = medium
+
+Abstract:
+	Add Event Forwarding support for SSI Compute Blade.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 17 May 2011 20:11:25 EDT
+
+Package: libipmimsghndlr (2.67.0); urgency = medium
+
+Abstract:
+	Bugfix: Alert Immediate doesn't reject when IPMI messaging session active on the channel.
+
+Files Modified: data/SensorEvent/PEFDevice/PEFDevice.c
+
+--Submitter: garypaung (garypaung@ami.com.tw) Tue, 17 May 2011 17:31:23 CST
+
+Package: libipmimsghndlr (2.66.0); urgency = medium
+
+Abstract:
+	Add SEL Timestamp Clock Sync support.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Mon, 16 May 2011 17:27:56 EDT
+
+Package: libipmimsghndlr (2.65.0); urgency = high
+
+Abstract:
+	add snmp user if it should be enabled, delete the user from snmp if not enabled
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: michaelw (michaelw@ami.com) Mon, 16 May 2011 15:25:02 EDT
+
+Package: libipmimsghndlr (2.64.0); urgency = medium
+
+Abstract:
+	Added the script call to restart the HDServer,if the media and stunel port modified
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sat, 14 May 2011 03:50:56 IST
+
+Package: libipmimsghndlr (2.63.0); urgency = high
+
+Abstract:
+	SNMP pointer error.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 13 May 2011 18:12:48 EDT
+
+Package: libipmimsghndlr (2.62.0); urgency = high
+
+Abstract:
+	Reboot the service only if modified. Also dont reset service for currentactivesession field update. Also corrected the kvm script to restart.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 14:34:41 EDT
+
+Package: libipmimsghndlr (2.61.0); urgency = medium
+
+Abstract:
+	GetSocketInfoIndex is called when IPv6 Support is enabled for IPMI.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Fri, 13 May 2011 23:47:40 IST
+
+Package: libipmimsghndlr (2.60.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:11:55 EDT
+
+Package: libipmimsghndlr (2.59.0); urgency = high
+
+Abstract:
+	IPMI message length problem for SNMP
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 13 May 2011 13:24:04 EDT
+
+Package: libipmimsghndlr (2.58.0); urgency = low
+
+Abstract:
+	IPV6 Support for IPMI RMCP and RMCP+ Communication
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Fri, 13 May 2011 21:59:57 IST
+
+Package: libipmimsghndlr (2.57.0); urgency = high
+
+Abstract:
+	SNMP Library include added to Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 15:39:00 EDT
+
+Package: libipmimsghndlr (2.56.0); urgency = low
+
+Abstract:
+	Modifications done for SNMP related commands.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 12 May 2011 17:34:21 IST
+
+Package: libipmimsghndlr (2.55.0); urgency = high
+
+Abstract:
+	Made changes to support OPMA at run time.
+
+Files Modified: data/AMI/AMIDevice.c, data/App/IPMDevice/FFConfig.c, data/MsgHndlr.c, data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 May 2011 14:59:19 IST
+
+Package: libipmimsghndlr (2.54.0); urgency = medium
+
+Abstract:
+	Add SSI Boot Option Parameters support.
+
+Files Modified: data/Chassis/ChassisDevice.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Wed, 11 May 2011 19:54:10 EDT
+
+Package: libipmimsghndlr (2.53.0); urgency = high
+
+Abstract:
+	add snmp user management support. only included for CONFIG_SPX_FEATURE_SNMP_SUPPORT
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/Makefile
+
+--Submitter: michaelw (michaelw@ami.com) Wed, 11 May 2011 16:05:13 EDT
+
+Package: libipmimsghndlr (2.52.0); urgency = low
+
+Abstract:
+	Removed the Trigger Event Configuration Macros and included in header file
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 11 May 2011 21:17:19 IST
+
+Package: libipmimsghndlr (2.51.0); urgency = low
+
+Abstract:
+	Changed the completion code to Invalid date and time
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 11 May 2011 19:06:24 IST
+
+Package: libipmimsghndlr (2.50.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:57:16 IST
+
+Package: libipmimsghndlr (2.49.0); urgency = medium
+
+Abstract:
+	PEF Action related event messages are prevented from posting to PEF Queue.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 10 May 2011 18:51:29 IST
+
+Package: libipmimsghndlr (2.48.0); urgency = low
+
+Abstract:
+	In case of receive the OEM parameter, the default length checker should be skip.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter:  () Tue, 10 May 2011 16:01:37 CST
+
+Package: libipmimsghndlr (2.47.0); urgency = medium
+
+Abstract:
+	Fix the bugs of internal sensor.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c, data/SensorEvent/SensorDevice/internal_sensor.c, data/Storage/SELDevice/SEL.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Mon, 09 May 2011 20:18:26 EDT
+
+Package: libipmimsghndlr (2.46.0); urgency = low
+
+Abstract:
+	Removed adding audit log event to SEL from pend task
+
+Files Modified: data/PendTask.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 09 May 2011 17:57:31 IST
+
+Package: libipmimsghndlr (2.45.0); urgency = medium
+
+Abstract:
+	Modified to open the proper snoop library
+
+Files Modified: data/AMI/AMIBiosCode.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 09 May 2011 17:15:11 IST
+
+Package: libipmimsghndlr (2.44.0); urgency = medium
+
+Abstract:
+	Fix to make flushing of IPMI Configurations to NVRAM faster.
+
+Files Modified: data/AMI/AMIDevice.c, data/AMI/AMIResetPass.c, data/AMI/AMISmtp.c, data/App/App.c, data/App/AppDevice/AppDevice+.c, data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/App/IPMDevice/Firewall.c, data/Chassis/ChassisDevice.c, data/MsgHndlr.c, data/OPMA/OPMACommands.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c, data/Transport/SerialModem.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 18:53:06 IST
+
+Package: libipmimsghndlr (2.43.0); urgency = low
+
+Abstract:
+	Removing network link type field from PHY configuration
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Mon, 02 May 2011 20:38:17 IST
+
+Package: libipmimsghndlr (2.42.0); urgency = low
+
+Abstract:
+	Checking reserve bit validation after validating Request length.
+
+Files Modified: data/SensorEvent/PEFDevice/PEFDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 02 May 2011 20:04:25 IST
+
+Package: libipmimsghndlr (2.41.0); urgency = low
+
+Abstract:
+	Fixed incorrect response data issue for AMISetLoginAuditCfg cmd
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 02 May 2011 18:58:55 IST
+
+Package: libipmimsghndlr (2.40.0); urgency = low
+
+Abstract:
+	Added function in ncml to check request port and services
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 02 May 2011 18:48:41 IST
+
+Package: libipmimsghndlr (2.39.0); urgency = medium
+
+Abstract:
+	Reserve bit validation should be done after validating Request length.
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c, data/Storage/SELDevice/SELCircularLog.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 02 May 2011 16:30:30 IST
+
+Package: libipmimsghndlr (2.38.0); urgency = low
+
+Abstract:
+	Check reserved bits after validating invalid Request length.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 29 Apr 2011 21:11:29 IST
+
+Package: libipmimsghndlr (2.37.0); urgency = low
+
+Abstract:
+	Implement ARP suspend function
+
+Files Added: data/Transport/ArpSwitch.sh
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/MsgHndlr.c, data/Transport/LANConfig.c, spx/PACKAGES.D/libipmimsghndlr/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Fri, 29 Apr 2011 17:58:53 CST
+
+Package: libipmimsghndlr (2.36.0); urgency = medium
+
+Abstract:
+	Adding PAM re-ordering Command Support
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 29 Apr 2011 12:25:38 EDT
+
+Package: libipmimsghndlr (2.35.0); urgency = medium
+
+Abstract:
+	Made changes to calculate the netindex value which is specific to libnetwork layer.
+We can use this index value to Get/Set network configuration even if bonding interface is enabled.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 28 Apr 2011 18:33:26 IST
+
+Package: libipmimsghndlr (2.34.0); urgency = medium
+
+Abstract:
+	Fix for IPMI not responding when continous cold reboot is done.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 27 Apr 2011 20:01:17 IST
+
+Package: libipmimsghndlr (2.33.0); urgency = medium
+
+Abstract:
+	Modified the Macro for Hook PDK_GETIFACECOUNT
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 26 Apr 2011 17:27:36 IST
+
+Package: libipmimsghndlr (2.32.0); urgency = medium
+
+Abstract:
+	Modify the checking for reserved bytes in GetChassisIdentify command
+
+Files Modified: data/Chassis/ChassisDevice.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Tue, 26 Apr 2011 14:11:18 CST
+
+Package: libipmimsghndlr (2.31.0); urgency = high
+
+Abstract:
+	Issue :- Primary IPMB,Secondary IPMB Communication does not work.
+Fix :- Pipe Name length is increased from 20 to 64 Bytes.Assigning the Slave Address based on
+requested channel number.If requested with IPMB Channel Number then primary IPMB slave address is set as requester's slave address.
+If requested with SM link IPMB Channel Number then secondary IPMB slave address is set as requester's slave address.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/MsgHndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Apr 2011 21:16:51 IST
+
+Package: libipmimsghndlr (2.30.0); urgency = low
+
+Abstract:
+	Proper BMC Slave Address is used when send message is sent through system interface.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/MsgHndlr.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 25 Apr 2011 13:42:10 IST
+
+Package: libipmimsghndlr (2.29.0); urgency = medium
+
+Abstract:
+	Combine vlanid and vlanpriority into vlansetting.conf.
+Modified ReadVLANFile and WriteVLANFile function accordingly.
+
+Files Modified: data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 23 Apr 2011 14:59:08 CST
+
+Package: libipmimsghndlr (2.28.0); urgency = medium
+
+Abstract:
+	Fix for accessing FRU as per spec.
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 19 Apr 2011 21:08:50 IST
+
+Package: libipmimsghndlr (2.27.0); urgency = high
+
+Abstract:
+	fixed ipmi spec violation for set user name command in duplicate user case
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Tue, 19 Apr 2011 14:41:05 TLT
+
+Package: libipmimsghndlr (2.26.0); urgency = medium
+
+Abstract:
+	fixing ipmi spec violation for master read write command
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 19 Apr 2011 14:16:51 IST
+
+Package: libipmimsghndlr (2.25.0); urgency = medium
+
+Abstract:
+	Added a new hook to overwrite the number of interface support.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 19 Apr 2011 11:51:21 IST
+
+Package: libipmimsghndlr (2.24.0); urgency = low
+
+Abstract:
+	Removed unwanted unlocking of BMC Shared Memory Mutex
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 18 Apr 2011 21:23:40 IST
+
+Package: libipmimsghndlr (2.23.0); urgency = medium
+
+Abstract:
+	Fix in completion code for "Set User name" command.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 18 Apr 2011 15:39:19 IST
+
+Package: libipmimsghndlr (2.22.0); urgency = medium
+
+Abstract:
+	Removing unwanted #if defs as the enabling of commands can be done in libipmipdkcmds package and not from support.h.
+
+Files Modified: data/App/AppDevice/AppDevice+.c, data/App/AppDevice/AppDevice.c, data/App/IPMDevice/IPMDevice.c, data/Chassis/ChassisDevice.c, data/MsgHndlr.c, data/SensorEvent/EventDevice/Events.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/FRUDevice/FRU.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Transport/LANConfig.c, data/Transport/SerialModem.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 14:55:54 IST
+
+Package: libipmimsghndlr (2.21.0); urgency = medium
+
+Abstract:
+	SetSysInfo read-only completion code
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: AutumnChen (autumnchen@ami.com.tw) Thu, 14 Apr 2011 20:00:33 CST
+
+Package: libipmimsghndlr (2.20.0); urgency = medium
+
+Abstract:
+	Fix typo mistake inside function SDR_DeleteSDR.
+
+Files Modified: data/Storage/SDRDevice/SDR.c
+
+--Submitter:  () Thu, 14 Apr 2011 16:51:52 CST
+
+Package: libipmimsghndlr (2.19.0); urgency = high
+
+Abstract:
+	blocking dummy user names for existing users
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Tue, 12 Apr 2011 19:38:40 TLT
+
+Package: libipmimsghndlr (2.18.0); urgency = medium
+
+Abstract:
+	Fix for ACPI. The ACPI state is set to S0/G0 when the BMC boots up.
+
+Files Modified: data/App/IPMDevice/IPMDevice.c, data/MsgHndlr.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 12 Apr 2011 15:18:23 IST
+
+Package: libipmimsghndlr (2.17.0); urgency = medium
+
+Abstract:
+	PDK hooks is added for lan configuration-> IP source (argument) -> Other BMC IP source and BIOS IP source(options)
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 08 Apr 2011 15:08:06 IST
+
+Package: libipmimsghndlr (2.16.0); urgency = low
+
+Abstract:
+	Added login Audit configuration for RMCP and Web
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c, data/PendTask.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 05 Apr 2011 17:46:07 IST
+
+Package: libipmimsghndlr (2.15.0); urgency = medium
+
+Abstract:
+	AMIGetSolConf AMI command added
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 05 Apr 2011 15:35:39 IST
+
+Package: libipmimsghndlr (2.14.0); urgency = medium
+
+Abstract:
+	Added condition check to send signal to adviser when status of the FAN Changes from Present to absent
+
+Files Modified: data/AMI/AMIDevice.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 01 Apr 2011 16:56:08 IST
+
+Package: libipmimsghndlr (2.13.0); urgency = medium
+
+Abstract:
+	Validation added in SetACPIPwrState. If invalid power state is requested, error will returned.
+PDK hooks is added for checking whether the requested power state is system supported or not.
+
+Files Modified: data/App/IPMDevice/IPMDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 01 Apr 2011 15:58:20 IST
+
+Package: libipmimsghndlr (2.12.0); urgency = medium
+
+Abstract:
+	Unwanted commented definition removed from Chasses Status
+
+Files Modified: data/Chassis/ChassisDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 31 Mar 2011 14:44:40 IST
+
+Package: libipmimsghndlr (2.11.0); urgency = medium
+
+Abstract:
+	Replace hard code value with Macro.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 30 Mar 2011 14:05:51 IST
+
+Package: libipmimsghndlr (2.10.0); urgency = medium
+
+Abstract:
+	Modified loop count to check the slave interface properly.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 29 Mar 2011 22:38:19 IST
+
+Package: libipmimsghndlr (2.9.0); urgency = low
+
+Abstract:
+	Removing the global variables used in Sensor Monitoring,SDR and included those variables in the BMCInfo Structure for supporting MBMC
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/SDRDevice/SDR.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 29 Mar 2011 14:47:58 IST
+
+Package: libipmimsghndlr (2.8.0); urgency = medium
+
+Abstract:
+	Added validation for unsupported Bonding modes.
+Removed activeslave command and merged into the interfacestate command.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 28 Mar 2011 23:26:20 IST
+
+Package: libipmimsghndlr (2.7.0); urgency = low
+
+Abstract:
+	Updated the SetMACAddress functionality. Set the new mac in uboot and linux using ioctl and get the new ip. Upon reboot anytime later, this change will become permanent. This avoids BMC reboot.
+
+Files Modified: data/PendTask.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 28 Mar 2011 13:43:31 EDT
+
+Package: libipmimsghndlr (2.6.0); urgency = medium
+
+Abstract:
+	Removing static declaration for ServiceNameList
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 28 Mar 2011 15:26:51 IST
+
+Package: libipmimsghndlr (2.5.0); urgency = medium
+
+Abstract:
+	The username is made NULL when the user is not yet enabled.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Mon, 28 Mar 2011 13:26:16 IST
+
+Package: libipmimsghndlr (2.4.0); urgency = medium
+
+Abstract:
+	changing system reset function to API
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 25 Mar 2011 18:33:04 IST
+
+Package: libipmimsghndlr (2.3.0); urgency = medium
+
+Abstract:
+	Added the condition checks for sending the signal from ipmimain to adviser based on the trigger event configuration
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c, data/App/AppDevice/WDT.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 24 Mar 2011 19:38:55 IST
+
+Package: libipmimsghndlr (2.2.0); urgency = medium
+
+Abstract:
+	primary, secondary ipmb variable name changes.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/MsgHndlr.c, data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/SDRDevice/SDR.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 24 Mar 2011 12:43:42 IST
+
+Package: libipmimsghndlr (2.1.0); urgency = medium
+
+Abstract:
+	Added function to generate System and Device GUID.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 21 Mar 2011 19:58:12 IST
+
+Package: libipmimsghndlr (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/AMI/AMIDevice.c, data/AMI/AMIResetPass.c, data/AMI/AMISmtp.c, data/App/AppDevice/AppDevice+.c, data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/App/IPMDevice/FFConfig.c, data/App/IPMDevice/Firewall.c, data/Chassis/ChassisDevice.c, data/MsgHndlr.c, data/OPMA/OPMACommands.c, data/PendTask.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/SensorEvent/PEFDevice/PEFTmr.c, data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/SensorEvent/SensorDevice/internal_sensor.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c, data/Transport/Badpasswd.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c, data/Transport/SerialModem.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 16:58:59 IST
+
+Package: libipmimsghndlr (1.121.0); urgency = low
+
+Abstract:
+	Fix that the commpletion code of Set Session Privilege Level Command is error when requested level is not available for the user
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Thu, 10 Mar 2011 15:21:01 CST
+
+Package: libipmimsghndlr (1.120.0); urgency = medium
+
+Abstract:
+	Return proper error completion code when try to disable the all the interfaces(i.e any one interface should be up).
+Return proper error completion code when try to enable/disable Eth interfaces in bonding mode.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Mar 2011 19:29:53 IST
+
+Package: libipmimsghndlr (1.119.0); urgency = medium
+
+Abstract:
+	Made changes to Enable Active slave Command based on project configuration.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 04 Mar 2011 21:20:15 IST
+
+Package: libipmimsghndlr (1.118.0); urgency = medium
+
+Abstract:
+	Made change to Enable Bonding IPMI command based on project configuration.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 04 Mar 2011 20:27:28 IST
+
+Package: libipmimsghndlr (1.117.0); urgency = low
+
+Abstract:
+	Made changes so that PMConfigs will be stored in RAM seperately and no more clubbed with SEL and SDR.
+
+Files Modified: data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Mar 2011 14:14:16 IST
+
+Package: libipmimsghndlr (1.116.0); urgency = low
+
+Abstract:
+	Cleared MonitorBusy flag, to avoid the break in the middle of sensor monitor thread
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: prakashs (prakashs@amiindia.co.in) Wed, 02 Mar 2011 13:22:33 IST
+
+Package: libipmimsghndlr (1.115.0); urgency = medium
+
+Abstract:
+	Made changes to get the IP source for bond interface based on bond LAN channel number.
+
+Files Modified: data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 02 Mar 2011 13:09:23 IST
+
+Package: libipmimsghndlr (1.114.0); urgency = high
+
+Abstract:
+	added condition for invalid users in setusershell command implementation to fix  segmentation error
+
+Files Modified: data/AMI/AMIResetPass.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Mon, 28 Feb 2011 13:19:40 TLT
+
+Package: libipmimsghndlr (1.113.0); urgency = medium
+
+Abstract:
+	Fix for Segmentation fault. Moved spawning of threads from InitMshHndlr function to MsgHndlr.
+
+Files Modified: data/App/AppDevice/WDT.c, data/MsgHndlr.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 25 Feb 2011 21:21:40 IST
+
+Package: libipmimsghndlr (1.112.0); urgency = medium
+
+Abstract:
+	Invoking IsCommandEnabled function in MsgHndlr which checks whether the command is enabled before its execution.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 24 Feb 2011 15:34:42 IST
+
+Package: libipmimsghndlr (1.111.0); urgency = medium
+
+Abstract:
+	Telnet service doesn't have restart option and so it has to be stopped and start again.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 23 Feb 2011 18:33:20 IST
+
+Package: libipmimsghndlr (1.110.0); urgency = medium
+
+Abstract:
+	Added support to enable both the slaves.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 21 Feb 2011 22:56:33 IST
+
+Package: libipmimsghndlr (1.109.0); urgency = low
+
+Abstract:
+	moved ami/oem parameter conversion to the beginning of Get/Set LAN config command functions
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 21 Feb 2011 19:39:34 IST
+
+Package: libipmimsghndlr (1.108.0); urgency = low
+
+Abstract:
+	Fix done to get the Interface name properly instead of Junk Values in Web-UI.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 21 Feb 2011 15:32:40 IST
+
+Package: libipmimsghndlr (1.107.0); urgency = low
+
+Abstract:
+	Assigning proper error completion codes for Bonding Related AMI OEM commands.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 21 Feb 2011 14:37:19 IST
+
+Package: libipmimsghndlr (1.106.0); urgency = low
+
+Abstract:
+	Removing APML Initialization code as it is initialized after all the tasks are created.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 17 Feb 2011 19:22:18 IST
+
+Package: libipmimsghndlr (1.105.0); urgency = low
+
+Abstract:
+	1. Included string "AMI" in all OEM parameter macros
+2. Added function calls to convert OEM param values to AMI values
+3. Moved oem hook that handles oem specific param definitions, from default case to outside, before the switch case
+
+Files Modified: data/Makefile, data/Transport/LANConfig.c, spx/INFO
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 16 Feb 2011 19:56:14 IST
+
+Package: libipmimsghndlr (1.104.0); urgency = medium
+
+Abstract:
+	Removed unwanted validation.
+
+Files Modified: data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 16 Feb 2011 01:33:44 IST
+
+Package: libipmimsghndlr (1.103.0); urgency = low
+
+Abstract:
+	Minor changes in g_ethindex.
+
+Files Modified: data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 14 Feb 2011 21:26:50 IST
+
+Package: libipmimsghndlr (1.102.0); urgency = medium
+
+Abstract:
+	Made changes to send the request for IPv4 Header in bonding mode.
+Passing NULL value if IPv6 Support is diabled.
+
+Files Modified: data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 10 Feb 2011 18:12:23 IST
+
+Package: libipmimsghndlr (1.101.0); urgency = low
+
+Abstract:
+	UDS Channel number is changed to 1 when processing IPMI request
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 10 Feb 2011 14:37:15 IST
+
+Package: libipmimsghndlr (1.100.0); urgency = medium
+
+Abstract:
+	Removed unwanted code and minor changes in LANConfig validation.
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 10 Feb 2011 00:45:53 IST
+
+Package: libipmimsghndlr (1.99.0); urgency = medium
+
+Abstract:
+	If the request is from UDS then the channel number is changed accrordingly to support bonding feature in web page
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 09 Feb 2011 21:11:28 IST
+
+Package: libipmimsghndlr (1.98.0); urgency = low
+
+Abstract:
+	Removing libphy from the build depends of libipmimsghndlr.
+
+Files Modified: data/Makefile, data/Transport/LANConfig.c, spx/INFO
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 09 Feb 2011 15:22:41 IST
+
+Package: libipmimsghndlr (1.97.0); urgency = medium
+
+Abstract:
+	Bad Password attempts count is reset,when Bad Password Threshold parameter is rewritten as per IPMI Spec
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Feb 2011 14:44:08 IST
+
+Package: libipmimsghndlr (1.96.0); urgency = medium
+
+Abstract:
+	Compilation error fixed
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Feb 2011 23:54:04 EST
+
+Package: libipmimsghndlr (1.95.0); urgency = high
+
+Abstract:
+	Added Active Slave Command.
+Added Extra parameter to get Interface related information in AMIGetIfaceState command.
+Modified Get/Set LanConfig command to pass the correct EthIndex in bonding mode also.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Feb 2011 22:27:28 IST
+
+Package: libipmimsghndlr (1.94.0); urgency = high
+
+Abstract:
+	Changed SetRootPassword command password length to max 64 bytes
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIResetPass.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 08 Feb 2011 19:25:21 IST
+
+Package: libipmimsghndlr (1.93.0); urgency = medium
+
+Abstract:
+	Modify Delete SEL implementation so when SEL is deleted it will not leave empty slots.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: bensonchuang (poshuntseng@ami.com.tw) Tue, 08 Feb 2011 15:34:20 CST
+
+Package: libipmimsghndlr (1.92.0); urgency = medium
+
+Abstract:
+	Badpasswd.c: printf is changed to TDBG.
+SEL.c: The verification of sel erase status is moved before reserve id cancellation validation.
+
+Files Modified: data/Storage/SELDevice/SEL.c, data/Transport/Badpasswd.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 04 Feb 2011 11:57:24 IST
+
+Package: libipmimsghndlr (1.91.0); urgency = medium
+
+Abstract:
+	Size of mii interval is changed to 2bytes. So according to that, param length and request length is changed.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 04 Feb 2011 00:15:05 IST
+
+Package: libipmimsghndlr (1.90.0); urgency = high
+
+Abstract:
+	Modified AMI Interface State Command to support both Eth and Bond Interfaces.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 03 Feb 2011 15:18:21 IST
+
+Package: libipmimsghndlr (1.89.0); urgency = medium
+
+Abstract:
+	Added Mutex lock for proper passing of BMC Instance in Message Handler.
+
+Files Modified: data/App/AppDevice/WDT.c, data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 02 Feb 2011 19:42:57 IST
+
+Package: libipmimsghndlr (1.88.0); urgency = medium
+
+Abstract:
+	Added proper error code for invalid command in the request
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 01 Feb 2011 18:08:44 IST
+
+Package: libipmimsghndlr (1.87.0); urgency = medium
+
+Abstract:
+	Passing BMC Instance for APMLInit
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 01 Feb 2011 17:25:50 IST
+
+Package: libipmimsghndlr (1.86.0); urgency = medium
+
+Abstract:
+	Setting the MsgFlag when data is fed into Receive Message Queue and revering the changes done in Send Message command.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 31 Jan 2011 17:13:55 IST
+
+Package: libipmimsghndlr (1.85.0); urgency = medium
+
+Abstract:
+	Setting SMS Attention and OBF bit when data is fed into Receive Message Queue in Send Message Command.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 31 Jan 2011 15:25:37 IST
+
+Package: libipmimsghndlr (1.84.0); urgency = low
+
+Abstract:
+	Added PDK UART Serial MUX Swicthing using SetChannelaccess Command
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/Transport/SerialModem.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 29 Jan 2011 00:21:54 IST
+
+Package: libipmimsghndlr (1.83.0); urgency = high
+
+Abstract:
+	made changes to AMISetRootPassword cmd for maximum length Passwords
+
+Files Modified: data/AMI/AMIResetPass.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Fri, 28 Jan 2011 20:36:46 IST
+
+Package: libipmimsghndlr (1.82.0); urgency = medium
+
+Abstract:
+	Correction in Reserved bit checking for "Get User Payload Access" command.
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 27 Jan 2011 19:58:14 IST
+
+Package: libipmimsghndlr (1.81.0); urgency = medium
+
+Abstract:
+	Changes in Watchdog Timer implementation to handle Jiffy Overflow conditions.
+
+Files Modified: data/App/AppDevice/WDT.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 27 Jan 2011 17:14:28 IST
+
+Package: libipmimsghndlr (1.80.0); urgency = medium
+
+Abstract:
+	Post Monitor sensor hook is invoked twice if HAL function is failed.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 27 Jan 2011 14:53:23 IST
+
+Package: libipmimsghndlr (1.79.0); urgency = high
+
+Abstract:
+	Added new OEM commands SetUserShell and GetUserShelltype
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIResetPass.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Wed, 26 Jan 2011 22:08:58 IST
+
+Package: libipmimsghndlr (1.78.0); urgency = medium
+
+Abstract:
+	SEL log is not proper when there is a change in Reading Mask 
+Bits 12, 13, and 14 of
+Assertion Event Mask : Byte 15, 16.
+Deassertion Event Mask : Byte 15, 16.
+
+These bits should not be validated in sensor init and it is used only for sending Get Sensor Reading (Byte 4).
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 25 Jan 2011 19:59:58 IST
+
+Package: libipmimsghndlr (1.77.0); urgency = high
+
+Abstract:
+	DNS Configuration will be updated based on IP Address source.
+Common Network configuration function is used to get the Network information.
+Getting interface name using Index value.
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 25 Jan 2011 19:35:12 IST
+
+Package: libipmimsghndlr (1.76.0); urgency = low
+
+Abstract:
+	Added SHA2 support for GetAuth Code command function
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 25 Jan 2011 17:40:31 IST
+
+Package: libipmimsghndlr (1.75.0); urgency = medium
+
+Abstract:
+	Clearing SMS attention bit for all the kcs enabled channels.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 25 Jan 2011 16:27:32 IST
+
+Package: libipmimsghndlr (1.74.0); urgency = high
+
+Abstract:
+	Added FQDN support
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 20 Jan 2011 00:14:31 IST
+
+Package: libipmimsghndlr (1.73.0); urgency = medium
+
+Abstract:
+	Changes made to return proper error code given by i2c driver for Master Write-Read command
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 19 Jan 2011 14:19:25 IST
+
+Package: libipmimsghndlr (1.72.0); urgency = medium
+
+Abstract:
+	Added support for power on and power reset delay in sensor monitoring.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 19 Jan 2011 11:11:07 IST
+
+Package: libipmimsghndlr (1.71.0); urgency = medium
+
+Abstract:
+	Rearming of sensor is done based on IPMI Configurations when set sensor threshold command is received.
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 13 Jan 2011 21:18:01 IST
+
+Package: libipmimsghndlr (1.70.0); urgency = medium
+
+Abstract:
+	Removing Old Hostname characters if the new Hostname length is less then old Hostname.
+
+Files Modified: data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 13 Jan 2011 18:04:32 IST
+
+Package: libipmimsghndlr (1.69.0); urgency = high
+
+Abstract:
+	Changed command completion codes properly for GetRootUserAccess and SetRootPassword commands
+
+Files Modified: data/AMI/AMIResetPass.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 11 Jan 2011 17:54:45 IST
+
+Package: libipmimsghndlr (1.68.0); urgency = medium
+
+Abstract:
+	Added missing configuration.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 22:13:27 IST
+
+Package: libipmimsghndlr (1.67.0); urgency = medium
+
+Abstract:
+	Modified SetDNSConf command for Registering hostname with both IPv4 and IPv6 DNS Server.
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 20:37:45 IST
+
+Package: libipmimsghndlr (1.66.0); urgency = medium
+
+Abstract:
+	Used sysinfo function call to get the free RAM memory.
+Modified PrepareFlashArea function call.
+
+Files Modified: data/AMI/AMIDevice.c, data/AMI/AMIRestoreDefaults.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 19:09:36 IST
+
+Package: libipmimsghndlr (1.65.0); urgency = medium
+
+Abstract:
+	Changes done to load libipmipdkcmd functions to load dynamically.
+
+Files Modified: data/AMI/AMIDevice.c, data/App/IPMDevice/FFConfig.c, data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 05 Jan 2011 20:25:15 IST
+
+Package: libipmimsghndlr (1.64.0); urgency = high
+
+Abstract:
+	Fixed 16231 and 16232 bugs,for proper command completion codes
+
+Files Modified: data/AMI/AMIResetPass.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 03 Jan 2011 19:45:06 IST
+
+Package: libipmimsghndlr (1.63.0); urgency = medium
+
+Abstract:
+	Bug - Invalid message displaying while we arer trying to add duplicate user - fixed.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 03 Jan 2011 15:26:57 IST
+
+Package: libipmimsghndlr (1.62.0); urgency = medium
+
+Abstract:
+	Reservation ID for SEL will be validated when it is Non-Zero
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 03 Jan 2011 15:13:57 IST
+
+Package: libipmimsghndlr (1.61.0); urgency = low
+
+Abstract:
+	minor changes
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 29 Dec 2010 18:45:20 IST
+
+Package: libipmimsghndlr (1.60.0); urgency = medium
+
+Abstract:
+	duplicate ipmi users not allowed
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Fri, 24 Dec 2010 16:11:27 IST
+
+Package: libipmimsghndlr (1.59.0); urgency = high
+
+Abstract:
+	check for reserved users while adding ipmi users
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/Makefile
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Fri, 24 Dec 2010 15:34:39 IST
+
+Package: libipmimsghndlr (1.58.0); urgency = low
+
+Abstract:
+	Added support for forcing network link modes(speed/duplex)
+
+Files Modified: data/Makefile, data/Transport/LANConfig.c, spx/INFO
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 23 Dec 2010 17:10:08 IST
+
+Package: libipmimsghndlr (1.57.0); urgency = low
+
+Abstract:
+	Setting OBF bit when data is posted to Receive Message Queue.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 17 Dec 2010 16:15:13 EST
+
+Package: libipmimsghndlr (1.56.0); urgency = medium
+
+Abstract:
+	Included a hook to get Mfg ID and Product ID.
+
+Files Modified: data/App/IPMDevice/IPMDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 17 Dec 2010 18:33:44 IST
+
+Package: libipmimsghndlr (1.55.0); urgency = low
+
+Abstract:
+	Fix reading wrong values from Non-threshold sensors in the command GetSensorReading.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Fri, 17 Dec 2010 17:26:12 CST
+
+Package: libipmimsghndlr (1.54.0); urgency = low
+
+Abstract:
+	Added Secondary SMTP server support in Forgot Password of User and made code reusablilty.
+
+Files Modified: data/AMI/AMIResetPass.c, data/AMI/AMISmtp.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 17 Dec 2010 07:37:24 IST
+
+Package: libipmimsghndlr (1.53.0); urgency = medium
+
+Abstract:
+	Changes in WDT to use jiffies instead of usleep due to accuracy problems in WDT.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 16 Dec 2010 21:19:31 EST
+
+Package: libipmimsghndlr (1.52.0); urgency = high
+
+Abstract:
+	Added new AMI-OEM command Get linux root user access
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIResetPass.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 16 Dec 2010 19:25:32 IST
+
+Package: libipmimsghndlr (1.51.0); urgency = medium
+
+Abstract:
+	Introduced new PDK hook which will be invoked when there is a change in the LAN param.
+
+Files Modified: data/MsgHndlr.c, data/Transport/LANConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 15 Dec 2010 15:07:29 IST
+
+Package: libipmimsghndlr (1.50.0); urgency = high
+
+Abstract:
+	Added new IPMI OEM command to change linux root user password
+
+Files Modified: data/AMI/AMIResetPass.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 14 Dec 2010 00:09:38 IST
+
+Package: libipmimsghndlr (1.49.0); urgency = high
+
+Abstract:
+	Added new IPMI OEM command to change linux root user password
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIResetPass.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 13 Dec 2010 23:29:04 IST
+
+Package: libipmimsghndlr (1.48.0); urgency = low
+
+Abstract:
+	Included the OEM LAN config header file location in Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 13 Dec 2010 15:57:04 IST
+
+Package: libipmimsghndlr (1.47.0); urgency = medium
+
+Abstract:
+	Adding support to accept IPMI LAN packets based on NCML configurations.
+
+Files Modified: data/AMI/AMIConf.c, data/MsgHndlr.c, data/PendTask.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 10 Dec 2010 19:04:54 EST
+
+Package: libipmimsghndlr (1.46.1); urgency = low
+
+Abstract:
+	Support command, 
+1. Get Device SDR Info
+2. Get Device SDR
+3. Reserve Device SDR Repository
+So add "BMCInst".
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Fri, 10 Dec 2010 18:17:01 CST
+
+Package: libipmimsghndlr (1.46.0); urgency = medium
+
+Abstract:
+	I2C Debug Board Sensor Porting related changes.Moved the disabling of GlobalSensorScanningEnable Flag upward
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 09 Dec 2010 18:25:14 IST
+
+Package: libipmimsghndlr (1.45.0); urgency = low
+
+Abstract:
+	Added Secondary SMTP server configuration.
+
+Files Modified: data/AMI/AMISmtp.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Wed, 08 Dec 2010 21:58:26 IST
+
+Package: libipmimsghndlr (1.44.0); urgency = medium
+
+Abstract:
+	changes in ipmi for ssh passwdless login
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Wed, 08 Dec 2010 15:46:02 IST
+
+Package: libipmimsghndlr (1.43.0); urgency = medium
+
+Abstract:
+	Fix for Alignment trap in SetSelTime command, Also used library without version which will change often in msghndlr.c.
+
+Files Modified: data/MsgHndlr.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 06 Dec 2010 10:22:35 GMT-5:30
+
+Package: libipmimsghndlr (1.42.0); urgency = medium
+
+Abstract:
+	Added return value handling for PDK_PreAddSEL which decides whether to add an event to SEL/PEF
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 02 Dec 2010 16:40:23 IST
+
+Package: libipmimsghndlr (1.41.0); urgency = low
+
+Abstract:
+	Fix can't reset "set in progress" parameter when a system reset or transition to powered down state occurs
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c, data/Transport/SerialModem.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 01 Dec 2010 20:12:12 CST
+
+Package: libipmimsghndlr (1.40.0); urgency = medium
+
+Abstract:
+	Added the support for changing timezone of BMC by Set SEL UTC Offset command.
+Also Modified SEL to log events in the local time (UTC time + offset).
+
+Files Modified: data/SensorEvent/EventDevice/Events.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 23 Nov 2010 09:03:14 GMT-5:30
+
+Package: libipmimsghndlr (1.39.0); urgency = low
+
+Abstract:
+	Added Email formatting support For users, PEF email alert is configured using user ID  instead emailid and Added support to Attach a file to smtp email alert
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIResetPass.c, data/AMI/AMISmtp.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 19 Nov 2010 23:14:02 IST
+
+Package: libipmimsghndlr (1.38.0); urgency = medium
+
+Abstract:
+	The ProcessSMMessages() function in Sensormonitor.c handles only -1 return value of getMsg().
+Hence changed it as "!= 0" which will cover all error return values.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 15 Nov 2010 10:37:01 IST
+
+Package: libipmimsghndlr (1.37.0); urgency = medium
+
+Abstract:
+	Fixed the bug - The VLAN priority bit in ethernet packets cannot be modified by IPMI VLAN priority parameter.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 10 Nov 2010 12:04:23 CST
+
+Package: libipmimsghndlr (1.36.0); urgency = medium
+
+Abstract:
+	Fix Watchdog countdown timer not accurate issue
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 10 Nov 2010 11:16:13 CST
+
+Package: libipmimsghndlr (1.35.0); urgency = medium
+
+Abstract:
+	Removing related code for user sync with linux db
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Tue, 09 Nov 2010 17:53:43 IST
+
+Package: libipmimsghndlr (1.34.0); urgency = medium
+
+Abstract:
+	Add reserved bits checking of IPMI commands
+
+Files Modified: data/App/AppDevice/AppDevice+.c, data/App/AppDevice/AppDevice.c, data/App/IPMDevice/Firewall.c, data/Chassis/ChassisDevice.c, data/SensorEvent/EventDevice/Events.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/SensorEvent/SensorDevice/Sensor.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c, data/Transport/LANConfig.c, data/Transport/SerialModem.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 09 Nov 2010 13:24:08 CST
+
+Package: libipmimsghndlr (1.33.0); urgency = low
+
+Abstract:
+	Compilation error during Debug Build Fixed
+
+Files Modified: data/AMI/AMIBiosCode.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 03 Nov 2010 21:16:11 EDT
+
+Package: libipmimsghndlr (1.32.0); urgency = medium
+
+Abstract:
+	Fix Set User Access Command - Disable message issue
+
+Files Modified: data/App/AppDevice/AppDevice+.c, data/App/AppDevice/AppDevice.c, data/MsgHndlr.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 28 Oct 2010 17:26:54 CST
+
+Package: libipmimsghndlr (1.31.0); urgency = medium
+
+Abstract:
+	Fix IPMI CMD "Set/Get Lan Configuration : Secondary RMCP Port Number" command issue
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 19 Oct 2010 15:51:14 CST
+
+Package: libipmimsghndlr (1.30.0); urgency = medium
+
+Abstract:
+	Fix in getting supported cipher suite entries using "Get LAN Configuration" command.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 15 Oct 2010 15:47:30 EDT
+
+Package: libipmimsghndlr (1.29.0); urgency = high
+
+Abstract:
+	msghandler should only be picked up when ipmimain is selected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 14 Oct 2010 15:42:56 EDT
+
+Package: libipmimsghndlr (1.28.0); urgency = medium
+
+Abstract:
+	Fix done to get Next SDR record ID properly for "Get SDR" command.
+
+Files Modified: data/Storage/SDRDevice/SDR.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 12 Oct 2010 13:03:08 EDT
+
+Package: libipmimsghndlr (1.27.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/App/IPMDevice/IPMDevice.c, data/Chassis/ChassisDevice.c, data/MsgHndlr.c, data/OPMA/OPMACommands.c, data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/FRUDevice/FRU.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c, data/Transport/SerialModem.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:04:06 EDT
+
+Package: libipmimsghndlr (1.26.0); urgency = low
+
+Abstract:
+	Changes made to show Maximum Record size in allocation Units of SEL repository.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 07 Oct 2010 16:23:07 EDT
+
+Package: libipmimsghndlr (1.25.0); urgency = low
+
+Abstract:
+	Reverting the changes done to add BIOS ip address source as this is breaking IPV6.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 05 Oct 2010 17:20:34 EDT
+
+Package: libipmimsghndlr (1.24.0); urgency = medium
+
+Abstract:
+	Get/Set NCSI configuration by using interface name instead of port number
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Tue, 05 Oct 2010 22:47:19 CST
+
+Package: libipmimsghndlr (1.23.0); urgency = medium
+
+Abstract:
+	Set LAN Configuration Parameters Command support option 3 & 4
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 05 Oct 2010 17:38:46 CST
+
+Package: libipmimsghndlr (1.22.0); urgency = low
+
+Abstract:
+	Corrections for endianess.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 04 Oct 2010 17:00:15 EDT
+
+Package: libipmimsghndlr (1.21.0); urgency = low
+
+Abstract:
+	Fix that client always get incorrect count of enabled User IDs on target channel
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 04 Oct 2010 16:50:43 CST
+
+Package: libipmimsghndlr (1.20.0); urgency = medium
+
+Abstract:
+	Add OEM parameter selectors regarding NCSI configuration access in Set/Get LAN Configuration commands
+
+Files Modified: data/Makefile, data/Transport/LANConfig.c, spx/INFO
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 04 Oct 2010 15:09:24 CST
+
+Package: libipmimsghndlr (1.19.0); urgency = medium
+
+Abstract:
+	changed to memset for response.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 01 Oct 2010 10:24:15 EDT
+
+Package: libipmimsghndlr (1.18.0); urgency = medium
+
+Abstract:
+	Added new fields EntityID,Entity Instance and FRUName to the OEM FRU Device locator SDR.
+
+Files Modified: data/AMI/AMIDevice.c, data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 29 Sep 2010 19:07:44 EDT
+
+Package: libipmimsghndlr (1.17.0); urgency = medium
+
+Abstract:
+	Removing the SensorThreshold.dat file atlast while Intializing msghndlr
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 29 Sep 2010 14:29:15 IST
+
+Package: libipmimsghndlr (1.16.0); urgency = medium
+
+Abstract:
+	Removing of SensorThresholds.dat file is done after SensorMonitorTask and SensorThresholds update are done based on the Sensor Number inorder to avoid the loop updation of Senso
+r thresholds.This change is done to avoid the sensor readings from becoming zero sometimes.
+
+Files Modified: data/MsgHndlr.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 28 Sep 2010 22:28:51 IST
+
+Package: libipmimsghndlr (1.15.0); urgency = medium
+
+Abstract:
+	Changes done for preserving Sensor thresholds when ever a warm reset is done
+
+Files Modified: data/App/IPMDevice/IPMDevice.c, data/MsgHndlr.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 28 Sep 2010 20:12:39 IST
+
+Package: libipmimsghndlr (1.14.0); urgency = medium
+
+Abstract:
+	An AMI command is added for get the total fru and the fru device id.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c, data/Storage/FRUDevice/FRU.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 28 Sep 2010 05:39:25 EDT
+
+Package: libipmimsghndlr (1.13.0); urgency = medium
+
+Abstract:
+	Fix A password that has been stored as a 20-byte password can be used for establishing an IPMI v1.5 session.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 24 Sep 2010 09:27:55 CST
+
+Package: libipmimsghndlr (1.12.0); urgency = medium
+
+Abstract:
+	OBF bit is set based on KCS OBF settings from project file.
+
+Files Modified: data/App/AppDevice/WDT.c, data/SensorEvent/EventDevice/Events.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 22 Sep 2010 20:47:04 EDT
+
+Package: libipmimsghndlr (1.11.0); urgency = low
+
+Abstract:
+	Uncommented the Gratitous ARP Task in MsgHndlr and done some changes in Gratitous ARP Task Function
+
+Files Modified: data/MsgHndlr.c, data/Transport/LANConfig.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 22 Sep 2010 19:59:33 IST
+
+Package: libipmimsghndlr (1.10.0); urgency = medium
+
+Abstract:
+	- Added IPMI command for Set/Get IPv6 network configurations. Includes DNS configurations too.
+
+Files Modified: data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 22 Sep 2010 18:46:20 IST
+
+Package: libipmimsghndlr (1.9.0); urgency = low
+
+Abstract:
+	Fix that the IPMI session can be activated with a out-of-range session sequence number
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 20 Sep 2010 09:57:40 CST
+
+Package: libipmimsghndlr (1.8.0); urgency = low
+
+Abstract:
+	- Added support to allow the user to select the protocol type as tcp/udp while blockin/un-blocking ports.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 17 Sep 2010 14:40:55 IST
+
+Package: libipmimsghndlr (1.7.0); urgency = medium
+
+Abstract:
+	Fix for accessing the FRU's properly from EEPROM using FRU Device locator SDR.
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 16 Sep 2010 12:25:28 EDT
+
+Package: libipmimsghndlr (1.6.0); urgency = low
+
+Abstract:
+	Modified script to stop the kvm servers when restoring default configuration.
+
+Files Modified: data/AMI/restoredefaults.sh
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 16 Sep 2010 18:28:29 IST
+
+Package: libipmimsghndlr (1.5.0); urgency = medium
+
+Abstract:
+	Corrected the SOL functionality. Now able to connect SOL via ipmitool or freeipmi.
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Thu, 16 Sep 2010 14:58:15 IST
+
+Package: libipmimsghndlr (1.4.0); urgency = low
+
+Abstract:
+	When minor number of library increases,the version of library links also changes.Using only "library.so" instead of "library.so.1.0",so that there won't be any issues in future.
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 15 Sep 2010 20:27:24 EDT
+
+Package: libipmimsghndlr (1.3.0); urgency = medium
+
+Abstract:
+	Bug: while changing the hostname to the new hostname, the older host name is not de-registered with the DNS server. - Fixed
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 15 Sep 2010 17:24:42 IST
+
+Package: libipmimsghndlr (1.2.0); urgency = medium
+
+Abstract:
+	Invoked a PDK hook to verify/change the SDR values after initialization during Run time.
+
+Files Modified: data/Storage/SDRDevice/SDR.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 14 Sep 2010 18:51:34 IST
+
+Package: libipmimsghndlr (1.1.0); urgency = low
+
+Abstract:
+	Bug fixed - Added reserved bits for watchdog timer commands
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 14 Sep 2010 17:41:05 CST
+
+Package: libipmimsghndlr (1.0.138); urgency = medium
+
+Abstract:
+	Added Node Manager Discovery Support
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/SensorEvent/SensorDevice/Sensor.c, data/Storage/SDRDevice/SDR.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 13 Sep 2010 11:46:49 IST
+
+Package: libipmimsghndlr (1.0.137); urgency = medium
+
+Abstract:
+	Fix can't send send message to LUN 10b (SMS message)
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 08 Sep 2010 20:20:21 CST
+
+Package: libipmimsghndlr (1.0.136); urgency = low
+
+Abstract:
+	proper error conditions handled
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 08 Sep 2010 17:36:34 IST
+
+Package: libipmimsghndlr (1.0.135); urgency = low
+
+Abstract:
+	- Added IS_BLOCK_ALL support in Get Firewall configuration command.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 08 Sep 2010 15:32:04 IST
+
+Package: libipmimsghndlr (1.0.134); urgency = low
+
+Abstract:
+	- Allowing the user to select block/accept in the rule, while doing Set Cmd for Firewall. Also retrieving the same in Get Cmd.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 03 Sep 2010 18:17:47 IST
+
+Package: libipmimsghndlr (1.0.133); urgency = low
+
+Abstract:
+	-Modifying retVal data type to handle errors.
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 02 Sep 2010 22:13:58 IST
+
+Package: libipmimsghndlr (1.0.132); urgency = medium
+
+Abstract:
+	- Adding "Get" Command for Firewall configurations
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 02 Sep 2010 20:20:20 IST
+
+Package: libipmimsghndlr (1.0.131); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency and removed unwanted inclusion of PDK Header Files
+
+Files Modified: data/App/AppDevice/WDT.c, data/App/IPMDevice/IPMDevice.c, data/Chassis/ChassisDevice.c, data/Makefile, data/MsgHndlr.c, data/PendTask.c, data/SensorEvent/SensorDevice/Sensor.c, data/Storage/FRUDevice/FRU.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Transport/SerialModem.c, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:51:18 IST
+
+Package: libipmimsghndlr (1.0.130); urgency = medium
+
+Abstract:
+	corrections in Receive message queues array handling.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 01 Sep 2010 17:41:07 IST
+
+Package: libipmimsghndlr (1.0.129); urgency = low
+
+Abstract:
+	Add Set MAC Address support in the command "Set LAN Configuration Parameters"
+
+Files Modified: data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Tue, 31 Aug 2010 15:22:01 CST
+
+Package: libipmimsghndlr (1.0.128); urgency = low
+
+Abstract:
+	Correcting the retun size of Set command for firewall configurations
+
+Files Modified: data/AMI/AMIConf.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 27 Aug 2010 14:18:31 IST
+
+Package: libipmimsghndlr (1.0.127); urgency = medium
+
+Abstract:
+	*Added Firewall support
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 26 Aug 2010 17:44:21 IST
+
+Package: libipmimsghndlr (1.0.126); urgency = medium
+
+Abstract:
+	Fix KCS interface will be closed after watchdog timeout issue
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/SensorEvent/EventDevice/Events.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 25 Aug 2010 21:03:32 CST
+
+Package: libipmimsghndlr (1.0.125); urgency = medium
+
+Abstract:
+	Bug :- Bridging between Hornet and  aviator fails when the BMC Slave address is other than 0x20
+Fix :- It was due to the hardcoded BMC Slave Address (0x20) in Send Message Command.Changed 
+it to use Slave address from the IPMI.conf File.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 25 Aug 2010 16:26:16 IST
+
+Package: libipmimsghndlr (1.0.124); urgency = medium
+
+Abstract:
+	Adding AMI OEM command to get/set IPv6 DNS configurations.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 18 Aug 2010 21:57:03 IST
+
+Package: libipmimsghndlr (1.0.123); urgency = medium
+
+Abstract:
+	Invoke PDK_PreMonitorIndividualSensor hook for each sensor and for every monitor interval.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 18 Aug 2010 22:33:46 IST
+
+Package: libipmimsghndlr (1.0.122); urgency = low
+
+Abstract:
+	Added the Mutex Broadcast when the Initialization part in MsgHndlr gets completed
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 17 Aug 2010 22:10:04 IST
+
+Package: libipmimsghndlr (1.0.121); urgency = low
+
+Abstract:
+	Removed the unwanted memcpy of MsgHndlrTbl,GroupExtnTbl,TimerTaskTbl from Initialization of MsgHndlr
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 16 Aug 2010 21:55:19 IST
+
+Package: libipmimsghndlr (1.0.120); urgency = low
+
+Abstract:
+	Removed the Initialization of MsgHndlrTblSize from MsgHndlr and included it in Shared Memory
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 13 Aug 2010 18:02:16 IST
+
+Package: libipmimsghndlr (1.0.119); urgency = medium
+
+Abstract:
+	Modified the Get Bios Code to get the information from the libsnoop.
+
+Files Modified: data/AMI/AMIBiosCode.c, data/Makefile, spx/INFO
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 13 Aug 2010 18:15:34 IST
+
+Package: libipmimsghndlr (1.0.118); urgency = low
+
+Abstract:
+	Removed unused Commands and functions
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Thu, 12 Aug 2010 21:20:59 IST
+
+Package: libipmimsghndlr (1.0.117); urgency = medium
+
+Abstract:
+	Added snoop driver as dependend package for libipmimsghndlr package for getting bios code.
+
+Files Modified: data/AMI/AMIBiosCode.c, spx/INFO
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 13 Aug 2010 00:06:10 IST
+
+Package: libipmimsghndlr (1.0.116); urgency = medium
+
+Abstract:
+	Added Get Bios Code command (0x73) in AMI net function.
+
+Files Added: data/AMI/AMIBiosCode.c
+Files Modified: data/AMI/AMI.c, data/Makefile
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 12 Aug 2010 18:12:49 IST
+
+Package: libipmimsghndlr (1.0.115); urgency = low
+
+Abstract:
+	Removing MsgHndlrTblSize and TimerTaskTblSize and it will be initialized in InitBMCSharedMem
+
+Files Modified: data/MsgHndlr.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 11 Aug 2010 22:47:34 IST
+
+Package: libipmimsghndlr (1.0.114); urgency = medium
+
+Abstract:
+	Added SDR pointer in the SensorInfo Structure, this will help SensorMonitor to point SDR.
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 11 Aug 2010 22:35:04 IST
+
+Package: libipmimsghndlr (1.0.113); urgency = high
+
+Abstract:
+	Added seperate command to get the interface status.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 10 Aug 2010 20:44:03 IST
+
+Package: libipmimsghndlr (1.0.112); urgency = low
+
+Abstract:
+	Added support for inbound/outbound payload size, for SOL Payload
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 09 Aug 2010 18:54:03 IST
+
+Package: libipmimsghndlr (1.0.111); urgency = low
+
+Abstract:
+	Be default we support non modal mode of SDR Updation.
+
+Files Modified: data/Storage/SDRDevice/SDR.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 09 Aug 2010 15:39:10 IST
+
+Package: libipmimsghndlr (1.0.110); urgency = low
+
+Abstract:
+	Changes for Initializing the Pre-monitor and Post Monitor hooks for sensors in msghandler
+
+Files Modified: data/MsgHndlr.c, data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/SensorEvent/SensorDevice/internal_sensor.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Fri, 06 Aug 2010 20:59:15 IST
+
+Package: libipmimsghndlr (1.0.109); urgency = low
+
+Abstract:
+	Corrected proper SMS OBF Bit settings.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 06 Aug 2010 17:21:10 IST
+
+Package: libipmimsghndlr (1.0.108); urgency = high
+
+Abstract:
+	Implementing the KCS Non Communication Interrupt
+
+Files Modified: data/App/AppDevice/WDT.c, data/SensorEvent/EventDevice/Events.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 05 Aug 2010 23:02:07 IST
+
+Package: libipmimsghndlr (1.0.107); urgency = low
+
+Abstract:
+	Removing AMISetSystemGUID command as the GUID is created while the IPMI stack is started.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 04 Aug 2010 19:14:11 IST
+
+Package: libipmimsghndlr (1.0.106); urgency = low
+
+Abstract:
+	Reformat codes.
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 04 Aug 2010 19:55:54 CST
+
+Package: libipmimsghndlr (1.0.105); urgency = medium
+
+Abstract:
+	DNS modification - Modified AMI DNS commands for network library changes.
+
+Files Modified: data/AMI/AMIConf.c, data/Makefile, data/PendTask.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 03 Aug 2010 19:13:11 CST
+
+Package: libipmimsghndlr (1.0.104); urgency = low
+
+Abstract:
+	Modified interface name to EthIndex in AMI Set Iface State Command
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 03 Aug 2010 13:19:33 CST
+
+Package: libipmimsghndlr (1.0.103); urgency = low
+
+Abstract:
+	MBMC Changes for MsgHndlr
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/AMI/AMIDevice.c, data/AMI/AMIResetPass.c, data/AMI/AMIRestoreDefaults.c, data/AMI/AMISmtp.c, data/AMI/AMISyslogConf.c, data/App/AppDevice/AppDevice+.c, data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/App/IPMDevice/FFConfig.c, data/App/IPMDevice/Firewall.c, data/App/IPMDevice/IPMDevice.c, data/Chassis/ChassisDevice.c, data/MsgHndlr.c, data/OPMA/OPMA.c, data/OPMA/OPMACommands.c, data/PendTask.c, data/SensorEvent/EventDevice/Events.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/SensorEvent/PEFDevice/PEFTmr.c, data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/SensorEvent/SensorDevice/internal_sensor.c, data/SensorEvent/SensorEvent.c, data/Storage/FRUDevice/FRU.c, data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c, data/Transport/Badpasswd.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c, data/Transport/SerialModem.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:46:28 IST
+
+Package: libipmimsghndlr (1.0.102); urgency = medium
+
+Abstract:
+	Restore Factory Defaults: no event entry getting logged for this operation - fixed.
+
+Files Modified: data/AMI/AMIRestoreDefaults.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 14 Jul 2010 14:13:35 IST
+
+Package: libipmimsghndlr (1.0.101); urgency = medium
+
+Abstract:
+	Fix the issue : Master Write Read command wrong parameter will return unexpectted data (EIP 40252)
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Tue, 13 Jul 2010 19:50:18 CST
+
+Package: libipmimsghndlr (1.0.100); urgency = medium
+
+Abstract:
+	Fix Watch dog timer still running after system power off issue
+
+Files Modified: data/App/AppDevice/WDT.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 13 Jul 2010 17:33:19 CST
+
+Package: libipmimsghndlr (1.0.99); urgency = medium
+
+Abstract:
+	Made changes to verify Flash image properly using VerifyFlashStatusCode flag.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 12 Jul 2010 19:56:22 IST
+
+Package: libipmimsghndlr (1.0.98); urgency = low
+
+Abstract:
+	1. Fix the reserved bits of Authentication Type to 0xC8.
+2. Fix the reserved bits of data 2 of IPv4 Header to {0x0, 0x1F, 0x01}.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 12 Jul 2010 15:10:49 CST
+
+Package: libipmimsghndlr (1.0.97); urgency = medium
+
+Abstract:
+	Bug: Getting IPv6 SNMP Address through IPMI tool is giving wrong values.
+Fix: Returning proper response length.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 06 Jul 2010 17:31:27 IST
+
+Package: libipmimsghndlr (1.0.96); urgency = low
+
+Abstract:
+	Added the AMI Interface State Commands for enable/disable lan interfaces.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/PendTask.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 02 Jul 2010 15:40:02 CST
+
+Package: libipmimsghndlr (1.0.95); urgency = medium
+
+Abstract:
+	Reverting the changes done for pam_ipmi login support
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 01 Jul 2010 21:05:57 IST
+
+Package: libipmimsghndlr (1.0.94); urgency = low
+
+Abstract:
+	Fix issue for SPX will allow 16 session activated when channel session limit is set to 15.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: JCChiu (jcchiu@ami.com.tw) Tue, 29 Jun 2010 14:25:08 CST
+
+Package: libipmimsghndlr (1.0.93); urgency = low
+
+Abstract:
+	Fixed binary build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 25 Jun 2010 12:57:02 EDT
+
+Package: libipmimsghndlr (1.0.92); urgency = low
+
+Abstract:
+	Support ssh pam_ipmi login, add account entry in /etc/passwd when a new uer is created in web or through ipmitool.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: joywu (joywu@ami.com.tw) Wed, 23 Jun 2010 03:44:42 CST
+
+Package: libipmimsghndlr (1.0.91); urgency = low
+
+Abstract:
+	Add two new Pend Task functions "PendSetIPv6Cfg", "PendSetDNSv6Cfg" for the IPv6
+
+Files Modified: data/PendTask.c
+
+--Submitter: Gray Chen (GrayChen@ami.com.tw) Fri, 25 Jun 2010 18:54:52 CST
+
+Package: libipmimsghndlr (1.0.90); urgency = medium
+
+Abstract:
+	Fix the badpassword threshold issue : once ID10 is locked, it cannot be unlocked.
+
+Files Modified: data/Transport/Badpasswd.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Wed, 23 Jun 2010 15:46:41 CST
+
+Package: libipmimsghndlr (1.0.89); urgency = medium
+
+Abstract:
+	Modified to include OEM privilege for set session privilege level command
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 21 Jun 2010 23:00:27 IST
+
+Package: libipmimsghndlr (1.0.88); urgency = medium
+
+Abstract:
+	Modified CMD_AMI_GET_ETH_INDEX command privilege level to USER
+
+Files Modified: data/AMI/AMI.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Sat, 19 Jun 2010 18:05:08 IST
+
+Package: libipmimsghndlr (1.0.87); urgency = low
+
+Abstract:
+	Made changes to log SEL_ALMOST_FULL and SEL_FULL event Messages.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 18 Jun 2010 18:11:37 IST
+
+Package: libipmimsghndlr (1.0.86); urgency = low
+
+Abstract:
+	Made changes to return proper return values in FindUserLockStatus function
+
+Files Modified: data/Transport/Badpasswd.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 16 Jun 2010 17:50:41 IST
+
+Package: libipmimsghndlr (1.0.85); urgency = low
+
+Abstract:
+	Corrections in Session limit validation for user.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 16 Jun 2010 14:36:12 IST
+
+Package: libipmimsghndlr (1.0.84); urgency = low
+
+Abstract:
+	Proper NULL checking done for Bad Password
+
+Files Modified: data/Transport/Badpasswd.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 15 Jun 2010 15:58:06 IST
+
+Package: libipmimsghndlr (1.0.83); urgency = low
+
+Abstract:
+	Removing i2c dependancies from message handler
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 11 Jun 2010 19:37:40 IST
+
+Package: libipmimsghndlr (1.0.82); urgency = high
+
+Abstract:
+	LAN macros removed from c file
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 11 Jun 2010 18:07:08 IST
+
+Package: libipmimsghndlr (1.0.81); urgency = low
+
+Abstract:
+	Corrections in validation of parameter selector to get IPV6 Address.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 11 Jun 2010 16:15:45 IST
+
+Package: libipmimsghndlr (1.0.80); urgency = medium
+
+Abstract:
+	Issue:
+While issuing Add SDR or Add Partial SDR commands, it is possible to add the SDRs that exceeds the Maximum Record Length which is defined for each SDR type. 
+
+Solution: 
+Added check to validate the length of SDR while giving Add SDR / Partial Add SDR command.
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c, data/Storage/SDRDevice/SDR.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 11 Jun 2010 21:12:05 IST
+
+Package: libipmimsghndlr (1.0.79); urgency = low
+
+Abstract:
+	Moving interrupt task to libipmiinterruptsensor to remove gpio dependency in Message handler
+
+Files Deleted: data/INT, data/INT/ipmi_int.c
+Files Modified: data/Makefile, data/MsgHndlr.c, data/PendTask.c, data/SensorEvent/SensorDevice/SensorMonitor.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 10 Jun 2010 22:00:44 IST
+
+Package: libipmimsghndlr (1.0.78); urgency = low
+
+Abstract:
+	Return Completion code as 0x80 when try to Resume/Suspend Encryption for given payload which is already configured.
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 10 Jun 2010 14:57:02 IST
+
+Package: libipmimsghndlr (1.0.77); urgency = low
+
+Abstract:
+	Replacing PDK_SwitchEMPMux with function pointers
+
+Files Modified: data/INT/ipmi_int.c, data/Transport/SerialModem.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 23:31:34 IST
+
+Package: libipmimsghndlr (1.0.76); urgency = low
+
+Abstract:
+	Restore Old password while getting SMTP Email failure in ResetPassword.
+
+Files Modified: data/AMI/AMIResetPass.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Jun 2010 17:59:53 IST
+
+Package: libipmimsghndlr (1.0.75); urgency = low
+
+Abstract:
+	Interrupt sensor monitoring is moved to a seperate library and it is loaded dynamically.
+
+Files Modified: data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 07 Jun 2010 22:43:33 IST
+
+Package: libipmimsghndlr (1.0.74); urgency = medium
+
+Abstract:
+	Issue:
+While setting the Event Receiver from the BMC to another device, it seems that the device does not function as the Event Receiver.
+And the Event Message is generated while setting the Event Receiver Slave Address to FFh. (This is a specification breach)
+
+Solution:
+Modified to forward the event using IPMB when the slave address is not 0x20. Also disabled the event generation when 0xff is set to the slave address.
+
+Files Modified: data/MsgHndlr.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 07 Jun 2010 20:46:57 IST
+
+Package: libipmimsghndlr (1.0.73); urgency = medium
+
+Abstract:
+	Adding Link Down Resilent support to SPX
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Jun 2010 11:18:26 IST
+
+Package: libipmimsghndlr (1.0.72); urgency = medium
+
+Abstract:
+	Issue 1: 
+Get LAN Configuration Parameters Command: If the Request Data byte3 (=Set Selector) is set to any value, BMC FW returns the LAN Configuration set for the corresponding Request Data byte2 (=Parameter seletor). The same issue exists about Request Data byte4 (=Block Selector). Expected the command to return CCh (=Error Completion code) when the Request Data byte2 is set to the parameter which does not use a Set Selector and byte3 is set to any value except 00h. 
+For the Block Selector too. 
+
+Solution 1: 
+Added the validation check for SetSelector? and BlockSelector? for Get LAN Configuration Parameters Command.
+
+
+Issue 2: 
+In Set Sensor Event Enable command, if the Request Data byte3:6 is not set, the command sets 00h to each byte. It is not appropriate for byte3:6 to set to 00h when Request Data byte2 bit[7] is 1b, bit[5:4] is 01/10b. 
+ 
+Solution 2: 
+Modofied to Disable/Enable only the selected sensor events. Also added check for reserved bit validation.
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c, data/Transport/LANConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 01 Jun 2010 22:33:54 IST
+
+Package: libipmimsghndlr (1.0.71); urgency = medium
+
+Abstract:
+	Issue 1:
+While issuing Set SOL Configuration Parameters command, if the Request Data byte2 (=Parameter selector) is set to 07h (=SOL Payload Channel), the command does not return 82h (Error Completion Code). This parameter is Read Only, so please correct for the command to return 82h (=Error Completion Code) when the Request Data byte2 is set to 07h.
+
+Solution 2:
+Modified parameter #7(SOL Payload Channel), and #8(SOL Payload Port Number) has been made Read only parameter.
+
+Issue 2:
+When issuing get parameter configuration on parameter revision, BMC not cheking for the validity of selsctor.
+
+Solution 2:
+Checked the validity of the parameter selector.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 31 May 2010 12:42:41 IST
+
+Package: libipmimsghndlr (1.0.70); urgency = low
+
+Abstract:
+	Correcting commpletion code for Get Channel OEM Payload info command
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 26 May 2010 21:32:45 IST
+
+Package: libipmimsghndlr (1.0.69); urgency = medium
+
+Abstract:
+	Issue:
+While issuing Get SOL Configuration Parameters command, if the Request Data byte1 bit[7] is set to 1b, whatever the Request Data byte2 (=Parameter Selector) value, BMC FW returns the parameter revision. Expected that the command to return 80h (=Error Completion code) when the Request Data byte2 is set to unsupported parameter.
+
+Solution:
+Modified to send the parameter revision only for the supported parameter selector.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 26 May 2010 18:40:44 IST
+
+Package: libipmimsghndlr (1.0.68); urgency = medium
+
+Abstract:
+	Issue:
+About Set/Get Configuration Parameters Command: If we try to set Reserved Bit fields, it does not return error completion code (Completion Code is not CCh). 
+
+Solution:
+Modified all set/get configuration parameter to have the conditional check for all reserved bits.
+
+Files Modified: data/Chassis/ChassisDevice.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 24 May 2010 17:26:07 IST
+
+Package: libipmimsghndlr (1.0.67); urgency = medium
+
+Abstract:
+	Proxy for J.C Chiu. Fix the race condition between Verify and GetVirifyStatus commands.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 24 May 2010 18:33:22 CST
+
+Package: libipmimsghndlr (1.0.66); urgency = low
+
+Abstract:
+	Added Support for Bad Password Threshold in Serial interface
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/Transport/SerialModem.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 21 May 2010 18:50:14 IST
+
+Package: libipmimsghndlr (1.0.65); urgency = medium
+
+Abstract:
+	Adding Bad Password detection support in IPMI for SPX
+
+Files Added: data/Transport/Badpasswd.c
+Files Modified: data/App/AppDevice/AppDevice.c, data/Makefile, data/MsgHndlr.c, data/Transport/LANConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 21 May 2010 15:12:14 IST
+
+Package: libipmimsghndlr (1.0.64); urgency = medium
+
+Abstract:
+	Firmware update through by TFTP, HTTP and FTP.
+To avoid IPMI processes be removed, now we use PrepareFlashArea_USB() to enter init7 mode instead.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Fri, 21 May 2010 00:24:24 CST
+
+Package: libipmimsghndlr (1.0.63); urgency = medium
+
+Abstract:
+	Fix the wrong parameter when setting the pend task status of DNS function.
+Corret it as PEND_OP_SET_ALL_DNS_CFG.
+
+Files Modified: data/PendTask.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Wed, 19 May 2010 06:27:06 CST
+
+Package: libipmimsghndlr (1.0.62); urgency = medium
+
+Abstract:
+	Issue: 
+Platform Event Message command returned the Error Completion Code (= D5h) and the messages is not set in the Event Message Buffer after setting Request Data byte1 bit[3] (=Enable System Event Logging) to 0b. 
+
+
+Solution: 
+Platform event message command should post the message to Event message Buffer, when SEL is Enabled or Disabled. The RecordID will be 0xFFFF in case of SEL disabled.
+
+Files Modified: data/SensorEvent/EventDevice/Events.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 18 May 2010 22:41:55 IST
+
+Package: libipmimsghndlr (1.0.61); urgency = medium
+
+Abstract:
+	Add PDK to hook SOL configuration, to support OEM parameter
+
+Files Modified: data/Transport/SOLConfig.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Sat, 15 May 2010 03:56:09 CST
+
+Package: libipmimsghndlr (1.0.60); urgency = low
+
+Abstract:
+	Use the funtcion to indicate the file descriptor while processing firmware update.
+
+The file descriptor also use it as status control. If the sequence is wrong while calling the AMIFwStatus, then the error will be returned.
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Fri, 14 May 2010 22:31:44 CST
+
+Package: libipmimsghndlr (1.0.59); urgency = low
+
+Abstract:
+	Removing unwanted codes which is used for ATCA.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 14 May 2010 16:47:57 IST
+
+Package: libipmimsghndlr (1.0.58); urgency = medium
+
+Abstract:
+	Add PDK to hook LAN configuration, to support System INFO OEM parameter
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 13 May 2010 22:36:23 CST
+
+Package: libipmimsghndlr (1.0.57); urgency = medium
+
+Abstract:
+	Adding GetPendStatus function to retrive the status of command execution in Pend Task.
+
+Files Modified: data/PendTask.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 12 May 2010 21:23:24 IST
+
+Package: libipmimsghndlr (1.0.56); urgency = medium
+
+Abstract:
+	Added condition to check the status of commands executed in Pend Task.
+
+Files Modified: data/AMI/AMIConf.c, data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 12 May 2010 18:37:40 IST
+
+Package: libipmimsghndlr (1.0.55); urgency = medium
+
+Abstract:
+	Add PDK to hook LAN configuration, to support OEM parameter
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Wed, 12 May 2010 08:22:48 CST
+
+Package: libipmimsghndlr (1.0.54); urgency = low
+
+Abstract:
+	The User Payload Access Parameter which is set by SetUserPayloadAccess Cmd is changed to non-volatile value
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: pavithra s (pavithras@amiindia.co.in) Tue, 11 May 2010 12:14:17 IST
+
+Package: libipmimsghndlr (1.0.53); urgency = low
+
+Abstract:
+	Replacing hardcoded value of BMC_SLAVE_ADDRESS with g_BMCSlaveAddr.
+
+Files Modified: data/Storage/SDRDevice/SDR.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 10 May 2010 17:32:03 IST
+
+Package: libipmimsghndlr (1.0.52); urgency = medium
+
+Abstract:
+	Fix in send message command.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 10 May 2010 16:29:53 IST
+
+Package: libipmimsghndlr (1.0.51); urgency = low
+
+Abstract:
+	Enhance the Firmware update ability.
+The firmware update now support three AMI OEM commands:
+1. AMIFwUpdate
+2. AMIFwStatus
+3. AMIFwProgram
+
+The AMIFwStatus also implemented non-block reading status, it can return status immediately without IPMI timiout.
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c, data/App/AppDevice/AppDevice.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Sun, 09 May 2010 05:35:46 CST
+
+Package: libipmimsghndlr (1.0.50); urgency = low
+
+Abstract:
+	1.Add a parameter to let developer control reset BMC or not after firmware update
+2.Add AMI OEM command for updating firmware through TFTP WGET and HTTP
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIDevice.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Fri, 07 May 2010 00:03:40 CST
+
+Package: libipmimsghndlr (1.0.49); urgency = low
+
+Abstract:
+	Changing the privileg of AMI Get Service Conf Command and AMI Get DNS Conf Command from Administrator privilege to User privilege
+
+Files Modified: data/AMI/AMI.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Thu, 06 May 2010 11:50:21 EDT
+
+Package: libipmimsghndlr (1.0.48); urgency = low
+
+Abstract:
+	Changing the privileg of AMIGetLogConf from Administrator privilege to User privilege.
+
+Files Modified: data/AMI/AMI.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 06 May 2010 15:47:58 IST
+
+Package: libipmimsghndlr (1.0.47); urgency = medium
+
+Abstract:
+	Modified the declaration of nRet from INT8U to int, so that -1 can be checked for FlushSEL/FlushSDR.
+
+Files Modified: data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 05 May 2010 13:25:01 IST
+
+Package: libipmimsghndlr (1.0.46); urgency = medium
+
+Abstract:
+	Added for AMI service commands
+
+Files Modified: data/AMI/AMI.c, data/AMI/AMIConf.c, data/Makefile, spx/INFO
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Mon, 03 May 2010 21:24:51 EDT
+
+Package: libipmimsghndlr (1.0.45); urgency = medium
+
+Abstract:
+	Added AMI DNS commands.
+
+Files Added: data/AMI/AMIConf.c
+Files Modified: data/AMI/AMI.c, data/Makefile, data/PendTask.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Sat, 01 May 2010 20:59:46 EDT
+
+Package: libipmimsghndlr (1.0.44); urgency = low
+
+Abstract:
+	Modified according to the Review comments for the feature Gratuitous ARP(http://172.16.96.90/reviews/r/59).
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 28 Apr 2010 18:39:08 IST
+
+Package: libipmimsghndlr (1.0.43); urgency = low
+
+Abstract:
+	Add the SOL idle timeout function, the sol session will be timeout due to inactivity.
+
+Files Modified: data/App/AppDevice/AppDevice+.c, data/App/AppDevice/AppDevice.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Tue, 27 Apr 2010 20:32:50 EDT
+
+Package: libipmimsghndlr (1.0.42); urgency = low
+
+Abstract:
+	1.Check for smtp Authentication enable when using forgot password option.
+2.Now from field will contain name as administrator for without authentication using forgot password option.
+
+Files Modified: data/AMI/AMIResetPass.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 27 Apr 2010 22:12:18 IST
+
+Package: libipmimsghndlr (1.0.41); urgency = low
+
+Abstract:
+	Issue: 
+It seems that the BMC did not generate Gratuitous ARPs packet when the Set LAN Configuration Parameter Command was set 01h (=enable BMC-generated Gratuitous ARPs) to LAN Configuration Parameter#10 (=BMC-geterated ARP contorl). 
+
+Solution: 
+Implemented a new function to send gratuitous ARP packet. 
+Updated the Suspend BMC ARP command according to spec.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/WDT.c, data/MsgHndlr.c, data/Transport/LANConfig.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 27 Apr 2010 19:51:30 IST
+
+Package: libipmimsghndlr (1.0.40); urgency = medium
+
+Abstract:
+	system() crash issue is fixed (fix is in sys_base package). 
+So now "free" can be used to get the available free memory for YAFU
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Apr 2010 16:07:07 EDT
+
+Package: libipmimsghndlr (1.0.39); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:33:09 EDT
+
+Package: libipmimsghndlr (1.0.38); urgency = low
+
+Abstract:
+	Corrections in IPAddrCheck()? function to support valid Subnet Mask.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 22 Apr 2010 18:06:37 IST
+
+Package: libipmimsghndlr (1.0.37); urgency = medium
+
+Abstract:
+	Fix for Clrmsg command when issue through SMM interface.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/MsgHndlr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 20 Apr 2010 13:44:06 IST
+
+Package: libipmimsghndlr (1.0.36); urgency = critical
+
+Abstract:
+	Kernel Crashes during YAFU based flashing - Fixed
+
+Files Modified: data/AMI/AMIDevice.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 16 Apr 2010 11:50:00 EDT
+
+Package: libipmimsghndlr (1.0.35); urgency = low
+
+Abstract:
+	Issue 1:
+About Get Sensor Reading Command, Response Data byte4 bit[7:6] (=reserved) is 00b if the Request Data byte1 (=sensor number) is set to a threshold-based sensor. And Response Data byte5 bit[7] (=reserved) is 0b if the Request Data byte1 is set to a discrete reading sensor.
+This is a specification breach (Please refer Table 35-15 "Get Sensor Reading Command" in IPMI specification).
+Solution 1:
+Modified to send proper response for get sensor reading command
+
+Issue 2:
+The Get Sensor Event Status Command does not return the Error Completion Code (Command Completed Normally) if the Request Data length is not 1 byte.
+Solution 2:
+Modified to return error completion code for Get Sensor Event Status Command when the request length is more than one byte.
+
+Files Modified: data/SensorEvent/SensorDevice/Sensor.c, data/SensorEvent/SensorEvent.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 15 Apr 2010 13:18:10 IST
+
+Package: libipmimsghndlr (1.0.34); urgency = low
+
+Abstract:
+	The reservation should be cancelled when "ClearSEL" command is given with "initiate erase" option. 
+The reservation need not be cancelled when "ClearSEL" command is given with "get erasure status" option.
+
+Files Modified: data/Storage/SDRDevice/SDR.c, data/Storage/SELDevice/SEL.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 15 Apr 2010 11:42:49 IST
+
+Package: libipmimsghndlr (1.0.33); urgency = low
+
+Abstract:
+	Issue: 
+The Clear SDR Repository Command does not return the Error Completion Code if the Request Data byte6 is set to the data except AAh/00h. 
+Solution: 
+Modified to send error completion code when byte6 has value other than 0x00 and 0xAA.
+
+Files Modified: data/Storage/SDRDevice/SDR.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 13 Apr 2010 19:51:48 IST
+
+Package: libipmimsghndlr (1.0.32); urgency = low
+
+Abstract:
+	Issue: 
+About the Set In Progress of Configuration Parameter, it seems that Rollback feature is not implemented, but Commit Write (= 10b) can be set by the Set Configuration Parameter Command. 
+
+Solution: 
+Modified to provide error completion code (0x80 - Parameter not supported), when Commit Write is given.
+
+Files Modified: data/Chassis/ChassisDevice.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/Transport/LANConfig.c, data/Transport/SOLConfig.c, data/Transport/SerialModem.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 13 Apr 2010 14:21:15 IST
+
+Package: libipmimsghndlr (1.0.31); urgency = low
+
+Abstract:
+	Issue: 
+When we cannot access SEL device or SDR Repository, the Get Self Test Results Command does not set the Response Data byte3 bit[7] (=Cannot access SEL device) or bit[6] (=Cannot access SDR Repository) to 1b. 
+
+Solution: 
+Modified to get the proper bit[7] and bit[6] when SEL or SDR is not accessible.
+
+Files Modified: data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c, data/Storage/SDRDevice/SDR.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 12 Apr 2010 17:42:04 IST
+
+Package: libipmimsghndlr (1.0.30); urgency = low
+
+Abstract:
+	Reserved bit check for setting IPv4 headers.
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Sat, 10 Apr 2010 02:04:50 JST
+
+Package: libipmimsghndlr (1.0.29); urgency = low
+
+Abstract:
+	Issue:
+After issuing Reserve SEL cmd, the Get SEL Entry Command does not return the Error Completion Code (= C5h) if the Request Data byte1:2 (= Reservation ID) is set to 0000h for partial Get.
+Solution:
+Modified the code to send the error code when the offset is non-zero and reservationID is zero.
+
+Files Modified: data/Storage/SELDevice/SEL.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 08 Apr 2010 21:42:07 IST
+
+Package: libipmimsghndlr (1.0.28); urgency = low
+
+Abstract:
+	ISSUE:
+The SMS_ATN bit is cleared if the message is read by the Read Event Message Buffer Command or got by the Get Message Commnad, after the messages is set in both the Event Message Buffer and the Recive Message Queue. 
+Solution:
+SMS_ATN bit will not be cleared if get message flag command returns any value other than 0 in byte 2 (Flags).
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 07 Apr 2010 12:47:00 IST
+
+Package: libipmimsghndlr (1.0.27); urgency = medium
+
+Abstract:
+	Fix in SMTP port setting.The port number which is greater than a byte can be set.
+
+Files Modified: data/AMI/AMISmtp.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 02 Apr 2010 08:08:57 IST
+
+Package: libipmimsghndlr (1.0.26); urgency = low
+
+Abstract:
+	Addressed following issues:
+1. Current MegaRAC firmware doesn't check whether the alert was successfully delivered or not. MegaRAC firmware should retry the alert according to LAN configuration parameter #18 if the alert was not delivered.
+2. Current MegaRAC firmware has five tables for alert event to wait receiving PET Acknowledge command, but it may overflow. MegaRAC firmware should check whether the alert was successfully delivered or not even if many events occur at the same time.
+3. On IPMI Spec of "Alert Policy Table", whether a given destination will be used or not can be configured to be dependent on whether the alert to the previous destination was successful or not.
+4. Follow 17.13 Alert Processing in IPMI2.0 spec.
+5. Follow 17.13.1 Alert Processing after Power Loss in IPMI2.0 spec.
+
+Files Modified: data/Storage/SELDevice/SEL.c, data/SensorEvent/PEFDevice/PEFDevice.c, data/SensorEvent/PEFDevice/PEFTmr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 31 Mar 2010 20:19:36 IST
+
+Package: libipmimsghndlr (1.0.25); urgency = low
+
+Abstract:
+	Watchdog : When watchdog timeout and pre-timeout interupt is happened, The SEL Event Record Byte15 (= The Event Data 2) bit[7:4] (= interrupt type) is not register to interrupt type set by Set Watchdog Timer Command.
+Change: Modified the parameter of SetWD2SensorReading() to send the global TmrAction instead of the modified Action.
+	Modified EventMsg of time-out event to send TmrAction also.
+
+Files Modified: data/App/AppDevice/WDT.c, data/SensorEvent/SensorDevice/internal_sensor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 31 Mar 2010 21:00:12 IST
+
+Package: libipmimsghndlr (1.0.24); urgency = medium
+
+Abstract:
+	Depenencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 30 Mar 2010 16:04:07 EDT
+
+Package: libipmimsghndlr (1.0.23); urgency = low
+
+Abstract:
+	35578: Get Session Challenge should return 0x82 (null user name (User 1) not enabled), when NULL user is disabled
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 30 Mar 2010 01:04:04 IST
+
+Package: libipmimsghndlr (1.0.22); urgency = low
+
+Abstract:
+	Fix for Bug 12585:Password Authentication in Terminal Mode(Serial Interface) works fine.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Sat, 20 Mar 2010 17:04:44 IST
+
+Package: libipmimsghndlr (1.0.21); urgency = low
+
+Abstract:
+	Changing the error completion code from CC to 80 in case the payload type is unavailable on a given channel.
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 15 Mar 2010 18:23:05 IST
+
+Package: libipmimsghndlr (1.0.20); urgency = low
+
+Abstract:
+	Added libsyslogconfg_dev build dependency
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Wed, 10 Mar 2010 16:03:06 EST
+
+Package: libipmimsghndlr (1.0.19); urgency = low
+
+Abstract:
+	In Get AuthCode Command, IPMI v2.0/RMCP+ Integrity Algorithm Number is neglected if the Authentication type is of IPMI v2.0/RMCP+ Algorithm Number - Request Data byte1 bit[7:6].
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/Makefile
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Sat, 06 Mar 2010 02:31:20 IST
+
+Package: libipmimsghndlr (1.0.18); urgency = low
+
+Abstract:
+	Fix for EIP Tracker #34756.Performing suspend/resume operations only for Encryption(not Authentication) while issuing Suspend/Resume Payload Encryption command.
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 04 Mar 2010 18:23:59 IST
+
+Package: libipmimsghndlr (1.0.17); urgency = low
+
+Abstract:
+	IPMI Spec violation, 
+1. When the watchdog timer is already running, the Set Watchdog Timer command does not clear the Watchdog pre-timeout interrupt flag. 
+2. when a pre-timeout interrupt has been configured, the Reset Watchdog Timer command restarted the timer once the pre-timeout interrupt interval has been reached.
+
+Files Modified: data/App/AppDevice/WDT.c, data/App/AppDevice/AppDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 04 Mar 2010 21:46:53 IST
+
+Package: libipmimsghndlr (1.0.16); urgency = low
+
+Abstract:
+	*Fix for EIP Tracker #35349.Now, disallowing IPMI Messaging payload type for Activate/De-activate payload commands and Get Payload Instance Info command. 
+*Fix for EIP Tracker #34786.Corrected the validation for checking Set and Block selectors 
+*Fix for EIP Tracker #35189.SEL logging is disabled if it is set by BMC Global Enables command, but SEL logging is always enabled if the event is generated via System Interface.
+
+Files Modified: data/App/AppDevice/AppDevice+.c, data/Storage/SELDevice/SEL.c, data/Storage/SELDevice/SELCircularLog.c, data/SensorEvent/EventDevice/Events.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/Chassis/ChassisDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 03 Mar 2010 18:48:40 IST
+
+Package: libipmimsghndlr (1.0.15); urgency = low
+
+Abstract:
+	IPMI Spec violation, About Set Channel Security Key Command, the‘lock key’operation (Request Data byte2 bit[1:0]) cannot return the lock status (Response Data byte2).
+
+Files Modified: data/App/AppDevice/AppDevice+.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 03 Mar 2010 17:58:41 IST
+
+Package: libipmimsghndlr (1.0.14); urgency = low
+
+Abstract:
+	IPMI Spec violation. Setting Request Data byte2 (=Channel State) bit[1:0] to 00b of About Enable Message Channel Receive Command, the message can be received from the Receive Message Queue. Modified, so that the message can not be posted from the Receive Message Queue.
+
+Files Modified: data/MsgHndlr.c, data/App/AppDevice/AppDevice.c, data/SensorEvent/SensorDevice/SensorMonitor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 03 Mar 2010 00:35:12 IST
+
+Package: libipmimsghndlr (1.0.13); urgency = low
+
+Abstract:
+	Fix for bug 11481.Made changes so that when an attempt of invalid ip's like 127.0.0.1 and 255.255.255.255 are issued to set then a proper completion code 0xcc will be returned in "Set Lan Configuration Command".
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 01 Mar 2010 18:40:30 IST
+
+Package: libipmimsghndlr (1.0.12); urgency = medium
+
+Abstract:
+	The changes done to address the NEC Bug, That the sensor is not return state unavailable even when the entity is absent (when sensor caps 7th bit is 1).
+The procedure is as per the IPMI Spec section 40.2, 
+1. The sensor initialization happens.
+2. The sensor monitor thread starts.
+3. When the sensor reading is done for all the sensors, then the initialization of sensor scanning bit happens.
+
+Note : 
+1. Sensor scanning bit initialization will be done only once.
+2. Entity association record is not yet analysed and will be done at later point.
+
+Get sensor reading command will look for the sensor scanning and will work appropriately.
+
+Files Modified: data/Storage/SDRDevice/SDR.c, data/SensorEvent/SensorDevice/SensorMonitor.c, data/SensorEvent/SensorDevice/Sensor.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 26 Feb 2010 18:29:38 IST
+
+Package: libipmimsghndlr (1.0.11); urgency = low
+
+Abstract:
+	Fix for bug 11761. Added codes to change RMCP port number
+
+Files Modified: data/PendTask.c, data/Transport/LANConfig.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 26 Feb 2010 01:22:45 IST
+
+Package: libipmimsghndlr (1.0.10); urgency = low
+
+Abstract:
+	Fix for user management and changed the privilege of GetEthIndex command from Adminstrator to Operator.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/AMI/AMI.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 24 Feb 2010 18:37:19 IST
+
+Package: libipmimsghndlr (1.0.9); urgency = low
+
+Abstract:
+	comments removed for getting IPv6 snmp address
+
+Files Modified: data/Transport/LANConfig.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Tue, 23 Feb 2010 03:21:46 IST
+
+Package: libipmimsghndlr (1.0.8); urgency = low
+
+Abstract:
+	Added reserved bit checking validation.
+
+Files Modified: data/App/AppDevice/AppDevice.c, data/App/AppDevice/AppDevice+.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 22 Feb 2010 23:11:08 IST
+
+Package: libipmimsghndlr (1.0.7); urgency = low
+
+Abstract:
+	* IPv6 support Added in SNMP and SMTP.
+
+Files Modified: data/AMI/AMISmtp.c, data/Transport/LANConfig.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 19 Feb 2010 23:04:50 IST
+
+Package: libipmimsghndlr (1.0.6); urgency = low
+
+Abstract:
+	Validating the bit rate received in set serial modem configuration Baud Rate command
+
+Files Modified: data/Transport/SerialModem.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 17 Feb 2010 17:24:29 IST
+
+Package: libipmimsghndlr (1.0.5); urgency = low
+
+Abstract:
+	SPX: Added comments to get more visiblity for syslog feature
+
+Files Modified: data/AMI/AMISyslogConf.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 17 Feb 2010 15:56:46 IST
+
+Package: libipmimsghndlr (1.0.4); urgency = low
+
+Abstract:
+	Proxy for muthuchamy.Added reseved bit condition validation for spx also.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 16 Feb 2010 20:19:19 IST
+
+Package: libipmimsghndlr (1.0.3); urgency = low
+
+Abstract:
+	SPX: Allowed provision to test password for finding the number of bytes(16 or 20) as per IPMI spec.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 15 Feb 2010 20:07:22 IST
+
+Package: libipmimsghndlr (1.0.2); urgency = low
+
+Abstract:
+	Validation of authentication type based on privilege in get session challenge command. Committed in SP revision : 61241.
+
+Files Modified: data/App/AppDevice/AppDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 12 Feb 2010 18:47:28 IST
+
+Package: libipmimsghndlr (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:06:03 EST
+
+Package:libipmimsghndlr (1.0.0);urgency=new
+
+Abstract:
+	This library package contains IPMI Message Handler related stuffs
+
+Files Added: OPMA, Storage, Chassis, AMI, Bridge, INT, App, SensorEvent, Makefile, Transport, MsgHndlr.c, PendTask.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 9 Dec 2009 15:08:23 +0800

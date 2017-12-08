@@ -1,0 +1,18 @@
+--- linux/net/ipv6/addrconf.c	2011-05-11 16:11:16.676715001 -0500
++++ linux.new/net/ipv6/addrconf.c	2011-05-11 16:09:59.213638000 -0500
+@@ -185,7 +185,7 @@
+ 	.proxy_ndp		= 0,
+ 	.accept_source_route	= 0,	/* we do not accept RH0 by default. */
+ 	.disable_ipv6		= 0,
+-	.accept_dad		= 1,
++	.accept_dad		= 2,
+ };
+ 
+ static struct ipv6_devconf ipv6_devconf_dflt __read_mostly = {
+@@ -219,7 +219,7 @@
+ 	.proxy_ndp		= 0,
+ 	.accept_source_route	= 0,	/* we do not accept RH0 by default. */
+ 	.disable_ipv6		= 0,
+-	.accept_dad		= 1,
++	.accept_dad		= 2,
+ };

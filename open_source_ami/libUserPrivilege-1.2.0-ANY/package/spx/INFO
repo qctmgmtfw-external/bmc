@@ -1,0 +1,17 @@
+Package : libUserPrivilege
+Non-Editable : YES
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Revanth A  (revantha@amiindia.co.in)
+Source-License : AMI
+Architecture : ANY
+Urgency : medium
+Section : lib
+Essential : YES
+Config-Tag : USER Privilege
+Group : LIBRARY
+Package-License : AMI
+Description : Library to Get user Privilege
+.

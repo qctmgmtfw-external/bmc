@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+			MKDIR_NOCLEAN %SPXINC/ntpserver
+			MKDIR_NOCLEAN %SPXLIB/ntpconf
+			COPY_FILE ./ntpserver.h %SPXINC/ntpserver
+			COPY_FILE ./libntpconf.a %SPXLIB/ntpconf
+			COPY_FILE ./libntpconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ntpconf
+			ADD_LIBRARY_LINKS %SPXLIB/ntpconf libntpconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+    	MKDIR_NOCLEAN %SPXLIB/ncml
+    	MKDIR_NOCLEAN %SPXINC/ncml
+    	COPY_FILE ./ncml.h %SPXINC/ncml
+    	COPY_FILE ./stunnel_cfg.h %SPXINC/ncml
+    	COPY_FILE ./libncml.a %SPXLIB/ncml
+    	COPY_FILE libncml.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ncml
+    	ADD_LIBRARY_LINKS %SPXLIB/ncml libncml.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

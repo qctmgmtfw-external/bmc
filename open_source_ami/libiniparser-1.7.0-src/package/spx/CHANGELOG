@@ -1,0 +1,85 @@
+Package: libiniparser (1.7.0); urgency = low
+
+Abstract:
+	Correction in licensing.
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 11:08:20 IST
+
+Package: libiniparser (1.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:49:04 EDT
+
+Package: libiniparser (1.5.0); urgency = low
+
+Abstract:
+	Changing Package-License to MIT
+
+Files Modified: spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 29 Apr 2011 13:34:57 IST
+
+Package: libiniparser (1.4.0); urgency = low
+
+Abstract:
+	Messages reduced to minimial
+
+Files Modified: data/parse-ex.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 25 Mar 2011 10:18:40 EDT
+
+Package: libiniparser (1.3.0); urgency = low
+
+Abstract:
+	Fix to create backup file when Absolute path is given.
+
+Files Modified: data/parse-ex.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 24 Feb 2011 17:10:55 IST
+
+Package: libiniparser (1.2.0); urgency = medium
+
+Abstract:
+	Added Extended Ini Parser Functions over the existing
+iniparser library. Will be used for all future configurations files
+which supports backward/forward migration across different versions of firmware
+
+Files Added: data/parse-ex.c, data/parse-ex.h
+Files Modified: data/Makefile, data/iniparser.c, spx/PACKAGES.D/libiniparser_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 06 Jan 2011 22:32:08 EST
+
+Package: libiniparser (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:55:33 EDT
+
+Package: libiniparser (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:04:55 EST
+
+Package:libiniparser (1.0.0);urgency=new
+
+Abstract:
+	This package includes iniparser Library. 
+Original code written by Nicolas Devillard <ndevilla@free.fr>
+Available from http://ndevilla.free.fr/iniparser/ini2/index.html under MIT License
+
+Files Added: iniparser.c, dictionary.c, Makefile, strlib.c, strlib.h, iniparser.h, LICENSE, dictionary.h
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Thu, 19 Nov 2009 08:51:29 -0500

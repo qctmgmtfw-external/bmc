@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_4_EIP_67881_No_popup_message_for_changing_mousemode_from_Relative_to_Absolute
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 4 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 4
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  gopinaths (gopianths@amiindia.co.in)
+Urgency : new
+Description : No popup message for changing the mouse mode from Relative to Absolute
+.
+

@@ -1,0 +1,199 @@
+/*
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+*/
+
+body{
+	padding:0px;
+	margin:0px;
+	font-family:Arial;
+	overflow:hidden;
+}
+
+.menuHolder{
+	background:#6b8bb5; /* #7A9BC8; */
+	width:100%;
+	/*border-top:2px solid #6988A0;	 shadow color 6988A0 */
+	border-bottom:2px solid #6988A0;
+}
+
+.menuHolder a{
+	background:#6b8bb5;
+	color:#fff;
+	text-decoration:none;
+	padding:6px;
+	margin-left:5px;
+	margin-right:5px;
+	display:block;
+	float:left;
+	font-weight:bold;
+	font-size:13px;
+	border-left:1px solid #6b8bb5;
+	border-right:1px solid #6b8bb5;
+}
+
+.menuHolder a.helpBtn{
+	display:block;
+	float:right;
+	padding-left:25px;
+	margin-right:0px;
+}
+
+.menuHolder a.hiLight{
+	border-left :1px solid #A1BBDE;
+	border-right :1px solid #A1BBDE;
+	background: #4C6C9B;
+	color:#eef;
+}
+
+.menuHolder a.normal{
+	border-left :1px solid #6B8BB5;
+	border-right :1px solid #6B8BB5;
+	background: #6B8BB5;
+	color:#fff;
+}
+
+.menuHolder a.disabled{
+	color:#a37738;
+	cursor:default;
+}
+
+.breadScrumb{
+	font-family:Verdana;
+	font-size:10px;
+	color:#666;
+	background:url(../res/breadscrumb_end.png) no-repeat top right;
+	height:15px;
+	padding-right:20px;
+	margin-left:20px;
+}
+
+.breadScrumb a{
+	color:#57A;
+}
+
+.bsh{
+	/*background:url(../res/breadscrumb_bg.png) repeat-x;*/
+	background:#e7eef6;
+	display:block;
+	float:left;
+	position:absolute;
+}
+
+.loader_t{
+	position:absolute;
+	display:none;
+	float:right;
+	right:40px;
+	color:#4D5C71;
+	font-variant:small-caps;
+	text-transform:capitalize;
+	margin:5px;
+	padding:7px;
+	background:#f6fAff;
+	border:2px solid #fAfDff;
+}
+
+.fPage{
+	width:100%;
+}
+
+.dropdownmenu{
+	position:absolute;
+	border:1px solid #6988A0;
+	background: #7A9BC8;
+}
+
+.dropdownmenu a.submenu{
+	display:block;
+	font-size:13px;
+	text-decoration: none;
+	padding:5px;
+	border-bottom:1px solid #6988A0;
+	color: white;
+}
+
+.menuNavArrow{
+	display:#7A9BC8;
+	padding-top:7;
+	border-bottom:1px solid #6988A0;
+	color:#7A9BC8;
+	width:150;
+	cursor:pointer;
+	text-align:center;
+	height:20;
+}
+.widget{
+	width:220px;
+	height:200px;
+	position:absolute;
+	border:1px solid #999;
+	border-bottom:0;
+}
+
+.eventDescription{
+	font-size:.8em;
+	position:absolute;
+	display:block;
+	border:5px solid #6B8BB5;
+	width:75%;
+	background:#fff;
+	color:#000;
+}
+
+.eventDescription h3{
+	color: #4D5C71;
+	font-size:14px;
+	padding-bottom:0px;
+	margin-top:5px;
+	border-bottom:1px solid #000;
+	padding:7px;
+}
+
+a.floatRight{
+	display:block;
+	float:right;
+	width:15px;
+}
+
+.eventDescription .grey{
+	font-size:16px;
+	color:#BBB;
+}
+
+.eventDescription p{
+	margin:10px;
+}
+
+.btnTray{
+	width:100%;
+	text-align:right;
+	border-top:1px solid #444;
+}
+
+.btnTray input{
+	margin:5px;
+}

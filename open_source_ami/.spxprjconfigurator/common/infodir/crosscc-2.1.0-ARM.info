@@ -1,0 +1,19 @@
+Package : crosscc
+Version : 2.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : crosscc
+Section : tool
+Essential : YES
+Depends : sys_base
+Group : BASE
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-Location : http://www.codesourcery.com
+Source-Version : arm-2010.09-50-arm-none-linux-gnueabi-i686-pc-linux-gnu
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+Urgency : medium
+Description : This package provide the Cross compiler for ARM from Code Sourcery
+.

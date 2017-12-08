@@ -1,0 +1,10 @@
+./Makefile 226 4ea13348f5fbae6611a11ef06f55a526
+./ast_videocap_data.h 1411 814075bb69bb5b0c6c795a8f11bbfdbd
+./ast_videocap_engine.c 43601 288489d5738a7f3509d6c1beabb0e0f5
+./ast_videocap_functions.h 2672 7ef51e829e3a74aa7eb55db7e3df2396
+./ast_videocap_hw.h 20385 c33b8e7bd899c0847891d5179906038b
+./ast_videocap_ioctl.c 4244 fdf722d254de1f09dc8a625b889250f7
+./ast_videocap_ioctl.h 1764 1111944c9869948defdc0c9e268f2060
+./ast_videocap_mmap.c 2833 5710dabd23000c8ebc80df4555a1f4e2
+./ast_videocap_module.c 6231 d5ff7fc5fe59af8b29906660232f45d9
+./ast_videocap_proc.c 6631 97362507ef884b49bf1ab49af83d46c5

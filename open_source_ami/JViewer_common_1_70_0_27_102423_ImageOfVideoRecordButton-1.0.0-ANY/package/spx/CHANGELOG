@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_27_102423_ImageOfVideoRecordButton (1.0.0); urgency = new
+
+Abstract:
+	for EIP 102423, Image of Video Record Button is not clear
+
+Files Added: data, data/videoRecord.png, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 04 Oct 2012 11:48:54 CST
+

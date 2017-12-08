@@ -1,0 +1,9 @@
+Package: libuserm_1_12_0_1_memory_issues (1.0.0); urgency = new
+
+Abstract:
+	Added proper error handling and freeing of dynamically allocated memory.
+
+Files Added: data, data/00-data_shadowio.c, data/01-data_groupio.c, data/02-data_helpers.c, data/03-data_usermapis.c, data/04-data_pwio.c, data/05-data_authenticate.c, data/06-data_webshio.c, data/07-data_commonio.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 14 Sep 2011 15:45:43 JST
+

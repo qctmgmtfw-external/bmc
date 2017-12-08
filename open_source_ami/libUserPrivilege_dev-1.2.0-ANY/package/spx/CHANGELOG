@@ -1,0 +1,28 @@
+Package: libUserPrivilege (1.2.0); urgency = medium
+
+Abstract:
+	Added dev section to the package.
+
+Files Added: spx/PACKAGES.D/libUserPrivilege_dev, spx/PACKAGES.D/libUserPrivilege_dev/DATA, spx/PACKAGES.D/libUserPrivilege_dev/SCRIPTS, spx/PACKAGES.D/libUserPrivilege_dev/SCRIPTS/dev-install
+Files Modified: spx/INFO, spx/PACKAGES.D/libUserPrivilege/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 18 Aug 2011 19:22:07 IST
+
+Package: libUserPrivilege (1.1.0); urgency = low
+
+Abstract:
+	Code CleanUP.
+
+Files Modified: data/userprivilege.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 17 Aug 2011 12:55:13 IST
+
+Package: libUserPrivilege (1.0.0); urgency = new
+
+Abstract:
+	Library to Get user Privilege using Groups
+
+Files Added: data, data/Makefile, data/TFXC9E4.tmp, data/userprivilege.c, data/userprivilege.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libUserPrivilege, spx/PACKAGES.D/libUserPrivilege/DATA, spx/PACKAGES.D/libUserPrivilege/SCRIPTS, spx/PACKAGES.D/libUserPrivilege/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:20:39 IST
+

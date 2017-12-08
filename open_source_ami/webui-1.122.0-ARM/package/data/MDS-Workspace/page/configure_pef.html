@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<link rel='stylesheet' href='../www/style/page_style.css' type='text/css'/>
+	<link rel='stylesheet' href='../www/lib/listgrid.css' type='text/css'/>
+	<script language='javascript' src='../www/lib/include.js'></script>
+	<script language='javascript' src='../www/lib/listgrid.js'></script>
+	<script language='javascript' src='../www/lib/form.js'></script>
+	<script language='javascript' src='../www/impl/alert_policy_imp.js'></script>
+	<script language='javascript' src='../www/impl/lan_dest_imp.js'></script>
+	<script>
+	document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+	</script>
+</head>
+<body oncontextmenu='return false;'>
+<h3>PEF Management</h3>
+<p>Use this page to configure Event Filter, Alert Policy and LAN Destination. 
+To delete or modify a entry, select it in the list and press &quot;Delete&quot; 
+or &quot;Modify&quot;. To add a new entry, select an unconfigured slot and press 
+&quot;Add&quot;.</p>
+
+<table cellspacing='0' cellpadding='0' border='0'><tbody>
+<tr>
+	<td class='roundedtable_topleft'></td>
+	<td class='roundedtable_top'></td>
+	<td class='roundedtable_topright'></td>
+	<td class='roundedtable_topleft'></td>
+	<td class='roundedtable_top' ></td>
+	<td class='roundedtable_topright'></td>
+	<td class='roundedtable_topleft'></td>
+	<td class='roundedtable_top'></td>
+	<td class='roundedtable_topright'></td>
+</tr>
+<tr>
+	<td class='roundedtable_left'></td>
+	<td id='_eventFilter' class='classicTab'>Event Filter</td>
+	<td class='roundedtable_right'></td>
+	<td class='roundedtable_left'></td>
+	<td id='_alertPolicy' class='classicTab'>Alert Policy</td>
+	<td class='roundedtable_right'></td>
+	<td class='roundedtable_left'></td>
+	<td id='_lanDests' class='classicTab'>LAN Destination</td>
+	<td class='roundedtable_right'></td>
+</tr>
+</tbody></table>
+
+<table cellspacing='0' cellpadding='10' border='1' width='100%'>
+<tr><td>
+	<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+	<tr><td>
+		<label id='_lanChannelLabel'><strong>&nbsp;&nbsp;LAN Channel: </strong></label>
+		<select id='_lanChannel' class='smallclassicTxtBox'></select>
+	</td><td>
+		<label class='alignRight' id='_lblHeader'></label>
+	</td></tr>
+	<tr><td colspan='2'><br/>
+		<script>if(window.ActiveXObject) document.write("<br>");</script>
+	</td></tr>
+	<tr><td colspan='2'>
+		<div id="_listGridHolder"></div>
+	</td></tr>
+	<tr><td colspan='2'>
+		<div class='btnTray'>
+		<input type='button' id='_sendAlert' value='Send Test Alert' style='display: none;'/>
+		<input type='button' id='_addBtn' value='Add' />
+		<input type='button' id='_modBtn' value='Modify' />
+		<input type='button' id='_delBtn' value='Delete' />
+		</div>
+	</td></tr>	
+	</table>
+</td></tr>
+</table>
+</body>
+</html>

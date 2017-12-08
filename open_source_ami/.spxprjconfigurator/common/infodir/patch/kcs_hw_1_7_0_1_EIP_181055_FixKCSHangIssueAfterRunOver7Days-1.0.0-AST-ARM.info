@@ -1,0 +1,21 @@
+Package : kcs_hw_1_7_0_1_EIP_181055_FixKCSHangIssueAfterRunOver7Days
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for kcs_hw (1.7.0)
+Depends :  kcs_hw(==1.7.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST
+Maintainer :  amy tsai (AmyTsai@ami.com.tw)
+Urgency : new
+Description : Fix KCS hang issue after run over 7 days.
+.
+

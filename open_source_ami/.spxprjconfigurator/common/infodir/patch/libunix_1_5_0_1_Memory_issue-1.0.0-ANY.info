@@ -1,0 +1,20 @@
+Package : libunix_1_5_0_1_Memory_issue
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libunix (1.5.0)
+Depends :  libunix(==1.5.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  othiyappank (othiyappank@amiindia.co.in)
+Urgency : new
+Description : Modified the sizeof to strlen for string lenth check
+.
+

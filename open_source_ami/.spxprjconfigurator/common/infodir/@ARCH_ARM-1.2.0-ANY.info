@@ -1,0 +1,17 @@
+Package : @ARCH_ARM
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : ARCH
+Section : info
+Required : target, crosscc
+Essential : YES
+Group : BASE
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : Selects Architecure as ARM
+.

@@ -1,0 +1,9 @@
+Package: libvideo_1_8_0_1_187740_KVMPauseResumeIssue (1.0.0); urgency = new
+
+Abstract:
+	for EIP 187740, KVM pause and resume continuously will hang.
+
+Files Added: data, data/00-data_video_interface.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Tue, 14 Oct 2014 16:30:49 CST
+

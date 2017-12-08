@@ -1,0 +1,18 @@
+Package : libsslcertificate
+Non-Editable : YES
+Version : 1.7.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Revanth A  (revantha@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : YES
+Config-Tag : SSL Certificate Library
+Group : LIBRARY
+Required : opensslapp
+Package-License : AMI
+Description : Library to create, view and validate the SSL certificates
+.

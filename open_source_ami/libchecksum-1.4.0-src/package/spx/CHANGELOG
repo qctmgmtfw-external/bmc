@@ -1,0 +1,47 @@
+Package: libchecksum (1.4.0); urgency = high
+
+Abstract:
+	Updating the license from AMI to MIT
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 27 Jun 2011 14:55:55 EDT
+
+Package: libchecksum (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:42:41 EDT
+
+Package: libchecksum (1.2.0); urgency = medium
+
+Abstract:
+	Added support for CRC-8 Polynomial Algorithm.
+
+Files Added: data/crc8.c, data/crc8.h
+Files Modified: data/Makefile, data/checksum.h, spx/INFO
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 19 Nov 2010 10:19:25 IST
+
+Package: libchecksum (1.1.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:32:40 EST
+
+Package: libchecksum (1.0.0); urgency = new
+
+Abstract:
+	This package includes checksum functions - crc32 and modulo100
+
+Files Added: data, data/Makefile, data/checksum.h, data/crc32.c, data/crc32.h, data/module100.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.MIT, spx/PACKAGES.D, spx/PACKAGES.D/libchecksum, spx/PACKAGES.D/libchecksum/DATA, spx/PACKAGES.D/libchecksum/SCRIPTS, spx/PACKAGES.D/libchecksum/SCRIPTS/dev-install, spx/PACKAGES.D/libchecksum_dev, spx/PACKAGES.D/libchecksum_dev/DATA, spx/PACKAGES.D/libchecksum_dev/SCRIPTS, spx/PACKAGES.D/libchecksum_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:22:56 EDT
+

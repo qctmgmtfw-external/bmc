@@ -1,0 +1,21 @@
+menu "Test Tools Configuration"
+
+config GhostVulnerabilityCheck (1.0.0)
+	bool "Ghost Vulnerability Verification Tool"
+	default n
+	depends on @ARCH_ARM
+	help
+		This Tool verifies whether the current gcc is vulnerable to GHOST vulnerability(CVE-2015-0235) or not
+
+#--------------------------------------
+config opensslapp (1.2.0)
+	bool "openssl App"
+	default y
+	help
+		openssl app to generate and view the SSL certificates.
+
+#--------------------------------------
+
+endmenu
+
+

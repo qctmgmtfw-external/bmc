@@ -1,0 +1,47 @@
+Package: stunnel4 (1.4.0); urgency = high
+
+Abstract:
+	Need to create init.d from this package to install the script to prevent Extract error
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 02 May 2011 16:01:26 EDT
+
+Package: stunnel4 (1.3.0); urgency = high
+
+Abstract:
+	Updating the stunnel4 binary for ARM
+
+Files Added: data/binary, data/binary/stunnel4, data/script, data/script/stunnel4
+Files Deleted: data/stunnel4, spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO, spx/SCRIPTS/dev-install
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 29 Apr 2011 11:42:02 EDT
+
+Package: stunnel4 (1.2.0); urgency = low
+
+Abstract:
+	* changed the stunnel4 wrong binary path from /usr/sbin to /usr/bin.
+
+Files Modified: spx/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 06 Oct 2010 01:56:34 IST
+
+Package: stunnel4 (1.1.0); urgency = low
+
+Abstract:
+	* stunnel is dependent to sys_base package
+
+Files Modified: spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 06 Oct 2010 00:28:26 IST
+
+Package: stunnel4 (1.0.0); urgency = new
+
+Abstract:
+	This package contains the stunnel binary for ARM architecture which supports both IPv4 and IPv6 connections.
+
+Files Added: data, data/stunnel4, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 05 Oct 2010 22:53:16 IST
+

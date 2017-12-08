@@ -1,0 +1,20 @@
+Package : i2c
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : sys
+Depends : kernel, hw_i2c
+Essential : NO
+Config-Tag : I2C Device Support
+Group : DEVICE
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : I2C Core Driver. This is a empty package because 
+the I2C Core functionality is provided in the Linux Kernel
+This is provided to maintain the SPX Driver Architecture
+of Core and Hardware Dirver  
+.

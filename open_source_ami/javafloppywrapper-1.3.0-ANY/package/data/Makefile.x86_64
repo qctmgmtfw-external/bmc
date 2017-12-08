@@ -1,0 +1,73 @@
+ifeq ($(shell uname), Linux)
+CPP = g++
+OUTPUTDIR = ../lib/javafloppywrapper/linux_x86_64
+FLOPPYLIB = ../lib/libfloppy/Linux_x86_64/libfloppyLinux.a
+CFLAGS = -fPIC
+else
+CPP = /opt/sfw/bin/g++
+INCLUDES += -I/usr/j2se/include -I/usr/j2se/include/solaris
+LIBS = -lstdc++ -R/usr/sfw/lib:/opt/sfw/lib
+ifeq ($(shell arch), i86pc)
+OUTPUTDIR = ../lib/javafloppywrapper/solaris-x86
+FLOPPYLIB = ../lib/libfloppy/Solaris-x86/libfloppySolaris.a
+else
+OUTPUTDIR = ../lib/javafloppywrapper/solaris-sparc
+FLOPPYLIB = ../lib/libfloppy/Solaris-sparc/libfloppySolaris.a
+endif
+endif
+
+OUTPUT = $(OUTPUTDIR)/libjavafloppywrapper.so
+
+## This check for MAC
+ifeq ($(shell uname), Darwin)
+CPP = g++
+OUTPUTDIR = ../lib/javafloppywrapper/mac_x86_64
+OUTPUT = $(OUTPUTDIR)/libjavafloppywrapper.jnilib
+FLOPPYLIB = ../lib/libfloppy/Mac_x86_64/libfloppyMac.a
+INCLUDES += -I /System/Library/Frameworks/JavaVM.framework/Headers 
+CFLAGS = $(INCLUDES) -Wall -O2 -dynamiclib -fPIC -framework IOKit -framework JavaVM
+LIBS += $(FLOPPYLIB) -lX11 -L/usr/X11R6/lib -L/usr/X11/lib
+else
+
+## NOTE: the following java related includes changes from machine to machine depending on their java installation directories.
+## Also there might be version change for JDK. This also must be taken care everytime there is a version change for JDK.
+INCLUDES += -I/usr/java/jdk1.6.0/include
+INCLUDES += -I/usr/java/jdk1.6.0/include/linux
+CFLAGS = $(INCLUDES) -Wall -O2 -shared -fPIC
+endif
+INCLUDES += -I../../Build/include
+INCLUDES += -I../../Build/include/global
+INCLUDES += -I../../Build/include/usbe
+INCLUDES += -I../include/floppy
+INCLUDES += -I../include/libkvm
+
+#LIBS += $(FLOPPYLIB) /usr/X11R6/lib64/libX11.a
+
+LIBS += $(FLOPPYLIB) -lX11 -L/usr/X11R6/lib64 -L/usr/X11/lib64
+
+javafloppywrapper:	javafloppywrapper.cpp java_prototypes.h $(FLOPPYLIB)
+
+ifeq (${shell arch},x86_64)
+	mkdir -p $(OUTPUTDIR)
+	$(CPP) $(CFLAGS) -o $(OUTPUT) javafloppywrapper.cpp $(LIBS)
+	@echo -e "\n*****************\nOutput file libjavafloppywrapper.so is stored in output/linux_x86_64.\n*****************"
+else
+ifeq (${shell echo $$HOSTTYPE},x86_64)
+	mkdir -p $(OUTPUTDIR)
+		$(CPP) $(CFLAGS) -o $(OUTPUT) javafloppywrapper.cpp $(LIBS)
+	@echo -e "\n*****************\nOutput file libjavafloppywrapper.so is stored in output/mac_x86_64.\n*****************"
+else
+	@echo -e "Architecture Mismatch. Please use Makefile.x86 for x86 architecture."
+endif
+endif
+
+clean:
+ifeq (${shell arch},x86_64)
+	$(RM) $(OUTPUT) *~
+else
+ifeq (${shell echo $$HOSTTYPE},x86_64)
+	$(RM) $(OUTPUT) *~
+else
+	@echo -e "Architecture Mismatch. Please use Makefile.x86 for x86 architecture."
+endif
+endif

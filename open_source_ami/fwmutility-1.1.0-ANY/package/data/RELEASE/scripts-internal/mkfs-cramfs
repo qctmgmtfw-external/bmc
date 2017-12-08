@@ -1,0 +1,6 @@
+#!/bin/sh
+./mkcramfs -r l $1 $2 > /dev/null
+if [ $? != 0 ]; then
+        exit 1
+fi
+exit 0

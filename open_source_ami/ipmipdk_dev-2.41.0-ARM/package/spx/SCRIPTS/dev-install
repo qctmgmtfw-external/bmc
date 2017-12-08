@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+    MKDIR_CLEAN %SPXINC/pdk
+    COPY_DIR   . %SPXINC/pdk
+
+debug-install:

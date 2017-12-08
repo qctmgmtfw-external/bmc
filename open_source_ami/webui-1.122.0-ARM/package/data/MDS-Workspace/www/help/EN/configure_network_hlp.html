@@ -1,0 +1,103 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+		<title>configure_network help</title>
+		<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body>
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<div class="helpmainhead">Network</div></h2>
+	<div class="subSection">
+	This page is used to configure the network settings for available LAN channels.
+	<br/><br/>
+	<fieldset>
+	<legend>Actions</legend>
+	<h4>LAN Interface</h4>
+	Select the LAN interface to be configured.
+	<h4>LAN Settings</h4>
+	Check this option to enable LAN support for the selected interface.
+	<h4>MAC Address</h4>
+	This field displays the MAC address of the selected interface (read only).
+	<h4>IPv4 Configuration</h4>
+	It lists the IPv4 configuration settings.
+	<h4>Obtain an IP address automatically</h4>
+	Enable 'Use DHCP' to dynamically configure IPv4 address using Dynamic Host 
+	Configuration Protocol (DHCP).
+	<h4>IPv4 Address, Subnet Mask, Default Gateway</h4>
+	If DHCP is disabled, specify a static IPv4 address, Subnet Mask and Default 
+	Gateway to be configured for the selected interface.
+	<ul>
+		<li>- IP Address consists of 4 sets of numbers separated by dots as in 
+			"xxx.xxx.xxx.xxx".</li>
+		<li>- Each set ranges from 0 to 255.</li>
+		<li>- First Number must not be 0.</li>
+	</ul>
+
+	<h4>IPv6 Configuration</h4>
+	It lists the IPv6 configuration settings.
+	<h4>IPv6 Settings</h4>
+	Check this option to enable IPv6 support for the selected interface.
+	<h4>Obtain an IP address automatically</h4>
+	Enable 'Use DHCP' to dynamically configure IPv4 address using Dynamic Host 
+	Configuration Protocol (DHCP).
+	<h4>IPv6 Address</h4>
+	Specify a static IPv6 address to be configured for the selected interface.
+	<h4>Subnet Prefix length</h4>
+	Specify the subnet prefix length for the IPv6 settings.
+	<ul><li>- Value ranges from 0 to 128.</li></ul>
+	<h4>Default Gateway</h4>
+	Specify the v6 default gateway for IPv6 settings.
+
+	<h4>VLAN Configuration</h4>
+	It lists the VLAN configuration settings.
+	<h4>VLAN Settings</h4>
+	Check this option to enable VLAN support for the selected interface.
+	<h4>VLAN ID</h4>
+	Specify the Identification for VLAN configuration.
+	<ul><li>- Value ranges from 2 to 4094.</li></ul>
+	<strong>NOTE:</strong> VLAN ID cannot be changed without resetting the VLAN
+		configuration.
+	<br>
+	VLAN ID 0, 1, 4095 are reserved VLAN ID's.
+	<h4>VLAN Priority</h4>
+	Specify the priority for VLAN configuration.
+	<ul><li>- Value ranges from 1 to 7.</li></ul>
+	<strong>NOTE:</strong> 7 is the highest priority for VLAN.
+
+	<h4>Save</h4>
+	Click 'Save' to save any changes made.
+	You will be prompted to log out of current UI session and log back in at 
+	the new IP address.
+	<h4>Reset</h4>
+	Click 'Reset' to reset the modified changes.
+	</fieldset>
+	</div>
+	</body>
+</html>

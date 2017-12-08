@@ -1,0 +1,4 @@
+./00-data_defaults_etc_nwhelperapi.sh 1166 a46492fdc38348635ff648f080429489
+./01-data_defaults_etc_defconfig_nsswitch.conf 285 a5d755e296bed1244bb920ae26e96589
+./02-data_defaults_etc_defconfig_dns.conf 623 371ee7606fb51471663bd818b74017e8
+./03-data_defaults_etc_network_udhcpc.script 538 0e7e4b05722eb78627c831b0f1a2aed8

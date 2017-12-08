@@ -1,0 +1,17 @@
+Package : sys_ipv6
+Non-Editable : YES
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : arunkumars  (arunkumars@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : sys
+Essential : NO
+Config-Tag : IPv6 Support
+Group : BASE
+Package-License : BSD
+Description : ipv6 System Package which creates ipv6 spported files.
+.

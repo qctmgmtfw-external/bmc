@@ -1,0 +1,64 @@
+Package: sys_failsafeconf (2.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:40:45 EDT
+
+Package: sys_failsafeconf (2.3.0); urgency = low
+
+Abstract:
+	Remove ldconfig for its size is too large.
+
+Files Modified: spx/RULES.D/directory.lst, spx/RULES.D/files.lst
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 25 Apr 2011 16:35:47 CST
+
+Package: sys_failsafeconf (2.2.0); urgency = medium
+
+Abstract:
+	Added delete parameter for rsync, and bkupconf will not keep those files that are deleted from conf folder now.
+
+Files Modified: data/defaults/etc/rsyncconf.sh
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 07 Apr 2011 15:25:46 CST
+
+Package: sys_failsafeconf (2.1.0); urgency = medium
+
+Abstract:
+	Added ldconfig for linking the libraries that fail-safe function needs.
+
+Files Modified: spx/RULES.D/directory.lst, spx/RULES.D/files.lst
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 01 Apr 2011 18:21:11 CST
+
+Package: sys_failsafeconf (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:53:23 EST
+
+Package: sys_failsafeconf (1.1.0); urgency = high
+
+Abstract:
+	Added function to check if bkupconf exists before starting fail-safe conf service.
+
+Files Modified: data/defaults/etc/init.d/rsyncconfd
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 05 Oct 2010 16:28:16 CST
+
+Package: sys_failsafeconf (1.0.0); urgency = new
+
+Abstract:
+	This package contains fail-safe configuration related files.
+
+Files Added: data, data/defaults, data/defaults/etc, data/defaults/etc/init.d, data/defaults/etc/init.d/rsyncconfd, data/defaults/etc/rsync-excludes, data/defaults/etc/rsyncconf.sh, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/sys_failsafeconf, spx/PACKAGES.D/sys_failsafeconf/DATA, spx/PACKAGES.D/sys_failsafeconf/SCRIPTS, spx/PACKAGES.D/sys_failsafeconf/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/CreateTree, spx/RULES.D/device.lst, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 30 Sep 2010 21:52:10 CST
+

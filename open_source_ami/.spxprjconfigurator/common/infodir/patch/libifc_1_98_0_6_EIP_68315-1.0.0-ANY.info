@@ -1,0 +1,20 @@
+Package : libifc_1_98_0_6_EIP_68315
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 6 for libifc (1.98.0)
+Depends :  libifc(==1.98.0)
+PatchOrder : 6
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  arockiaa (arockiaa@amiindia.co.in)
+Urgency : new
+Description : Web - Expired SSL certificate able to upload - fixed.
+.
+

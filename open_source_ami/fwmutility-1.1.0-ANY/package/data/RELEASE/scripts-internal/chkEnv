@@ -1,0 +1,11 @@
+#!/bin/sh
+if [ -d ./processing ]; then
+	rm ./processing/* -f
+else
+	mkdir processing
+fi
+if [ -d ./output ]; then
+	rm ./output/* -f
+else
+	mkdir output
+fi

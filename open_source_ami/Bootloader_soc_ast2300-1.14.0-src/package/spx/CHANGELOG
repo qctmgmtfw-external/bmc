@@ -1,0 +1,156 @@
+Package: Bootloader_soc_ast2300 (1.14.0); urgency = medium
+
+Abstract:
+	Fixed HOST UART parameter is changed when AST2300 is reset.
+AST2300 UART1 and UART2 can be HOST UART.
+
+Files Modified: data/18-drivers_serial.c.patch
+
+--Submitter:  () Wed, 27 Jul 2011 04:21:37 EDT
+
+Package: Bootloader_soc_ast2300 (1.13.0); urgency = high
+
+Abstract:
+	Added Macronix 32MB "MX25L25735E" flash part support
+
+Files Modified: data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch
+
+--Submitter: royku (royku@ami.com.tw) Wed, 06 Jul 2011 13:35:08 CST
+
+Package: Bootloader_soc_ast2300 (1.12.0); urgency = medium
+
+Abstract:
+	Fix detect PHY error and add support REALTEK RTL82X1
+
+Files Modified: data/05-cpu_arm926ejs_AST2300_ast_eth.c.patch
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Tue, 31 May 2011 15:25:50 CST
+
+Package: Bootloader_soc_ast2300 (1.11.0); urgency = high
+
+Abstract:
+	Revert to version 1.9.0
+
+Files Modified: data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch
+
+--Submitter: royku (royku@ami.com.tw) Tue, 24 May 2011 16:46:35 CST
+
+Package: Bootloader_soc_ast2300 (1.10.0); urgency = high
+
+Abstract:
+	1. added "MX25L25735E" 32MB flash support.
+2. temporary removed the code for "MX25L25635E" flash type support.
+
+Files Modified: data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch
+
+--Submitter: royku (royku@ami.com.tw) Tue, 24 May 2011 13:48:42 CST
+
+Package: Bootloader_soc_ast2300 (1.9.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:03:13 EDT
+
+Package: Bootloader_soc_ast2300 (1.8.0); urgency = medium
+
+Abstract:
+	Change clock setting for MAC.
+
+Files Modified: data/05-cpu_arm926ejs_AST2300_ast_eth.c.patch
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 22 Mar 2011 13:28:34 CST
+
+Package: Bootloader_soc_ast2300 (1.7.0); urgency = medium
+
+Abstract:
+	Fix clock.
+
+Files Modified: data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 17 Mar 2011 18:10:04 CST
+
+Package: Bootloader_soc_ast2300 (1.6.0); urgency = medium
+
+Abstract:
+	Fix CPU reference clock.
+
+Files Modified: data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 17 Mar 2011 15:25:12 CST
+
+Package: Bootloader_soc_ast2300 (1.5.0); urgency = medium
+
+Abstract:
+	Fix clock problem.
+
+Files Modified: data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 17 Mar 2011 15:07:23 CST
+
+Package: Bootloader_soc_ast2300 (1.4.0); urgency = low
+
+Abstract:
+	Following APEED SDK 2.1 relese, to fix "reference ARM CPU clock is not correct", modify "the AST2300 DRAM controller initialization and calibration code", fix "the ASPM problem which will cause the host's VGA lock" and Program  "MAC controller's clock delay and MAC bus clock divider"
+
+Files Modified: data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 04 Mar 2011 21:25:26 CST
+
+Package: Bootloader_soc_ast2300 (1.3.0); urgency = medium
+
+Abstract:
+	Change clock delay value.
+
+Files Modified: data/05-cpu_arm926ejs_AST2300_ast_eth.c.patch
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 03 Dec 2010 11:38:58 CST
+
+Package: Bootloader_soc_ast2300 (1.2.0); urgency = medium
+
+Abstract:
+	The KCS status byte is set to ERROR_STATE in ast2300evb u-boot.
+
+Files Modified: data/08-cpu_arm926ejs_AST2300_ast_kcs.c.patch
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 29 Oct 2010 08:04:00 EDT
+
+Package: Bootloader_soc_ast2300 (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:39:38 EDT
+
+Package: Bootloader_soc_ast2300 (1.0.2); urgency = high
+
+Abstract:
+	Change clock definitions for AST2300.
+
+Files Modified: data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 06 Jul 2010 15:51:50 CST
+
+Package: Bootloader_soc_ast2300 (1.0.1); urgency = high
+
+Abstract:
+	Support AST2300 A0 chip.
+
+Files Added: data/02-cpu_arm926ejs_AST2300_reset.c.patch, data/03-cpu_arm926ejs_AST2300_ast_timer.c.patch, data/04-cpu_arm926ejs_AST2300_ast_irq.c.patch, data/05-cpu_arm926ejs_AST2300_ast_eth.c.patch, data/06-cpu_arm926ejs_AST2300_ast_spiflash.c.patch, data/07-cpu_arm926ejs_AST2300_ast_i2c.c.patch, data/08-cpu_arm926ejs_AST2300_ast_kcs.c.patch, data/09-cpu_arm926ejs_AST2300_kcsreg.h.patch, data/10-cpu_arm926ejs_AST2300_misc.c.patch, data/11-cpu_arm926ejs_AST2300_soc_hw.h.patch, data/12-cpu_arm926ejs_AST2300_Makefile.patch, data/13-include_ast2300_hw.h.patch, data/14-include_ast2300_hwdef.h.patch, data/15-include_ast2300_hwmap.h.patch, data/16-include_ast2300_hwreg.h.patch
+Files Deleted: data/02-cpu_arm926ejs_AST2050_reset.c.patch, data/03-cpu_arm926ejs_AST2050_ast_timer.c.patch, data/04-cpu_arm926ejs_AST2050_ast_irq.c.patch, data/05-cpu_arm926ejs_AST2050_ast_eth.c.patch, data/06-cpu_arm926ejs_AST2050_ast_spiflash.c.patch, data/07-cpu_arm926ejs_AST2050_ast_i2c.c.patch, data/08-cpu_arm926ejs_AST2050_ast_kcs.c.patch, data/09-cpu_arm926ejs_AST2050_kcsreg.h.patch, data/10-cpu_arm926ejs_AST2050_misc.c.patch, data/11-cpu_arm926ejs_AST2050_soc_hw.h.patch, data/12-cpu_arm926ejs_AST2050_Makefile.patch, data/13-include_ast2050_hw.h.patch, data/14-include_ast2050_hwdef.h.patch, data/15-include_ast2050_hwmap.h.patch, data/16-include_ast2050_hwreg.h.patch
+Files Modified: data/01-cpu_arm926ejs_interrupts.c.patch, data/17-net_eth.c.patch
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 01 Jul 2010 16:22:44 CST
+
+Package: Bootloader_soc_ast2300 (1.0.0); urgency = new
+
+Abstract:
+	This package contains patches to u-boot 1.1.6 for AST2300 SoC.
+
+Files Added: data, data/01-cpu_arm926ejs_interrupts.c.patch, data/02-cpu_arm926ejs_AST2050_reset.c.patch, data/03-cpu_arm926ejs_AST2050_ast_timer.c.patch, data/04-cpu_arm926ejs_AST2050_ast_irq.c.patch, data/05-cpu_arm926ejs_AST2050_ast_eth.c.patch, data/06-cpu_arm926ejs_AST2050_ast_spiflash.c.patch, data/07-cpu_arm926ejs_AST2050_ast_i2c.c.patch, data/08-cpu_arm926ejs_AST2050_ast_kcs.c.patch, data/09-cpu_arm926ejs_AST2050_kcsreg.h.patch, data/10-cpu_arm926ejs_AST2050_misc.c.patch, data/11-cpu_arm926ejs_AST2050_soc_hw.h.patch, data/12-cpu_arm926ejs_AST2050_Makefile.patch, data/13-include_ast2050_hw.h.patch, data/14-include_ast2050_hwdef.h.patch, data/15-include_ast2050_hwmap.h.patch, data/16-include_ast2050_hwreg.h.patch, data/17-net_eth.c.patch, data/18-drivers_serial.c.patch, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/@Bootloader_soc_ast2300, spx/PACKAGES.D/@Bootloader_soc_ast2300/DATA, spx/PACKAGES.D/@Bootloader_soc_ast2300/SCRIPTS, spx/PACKAGES.D/@Bootloader_soc_ast2300/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/ApplyPatch
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Thu, 27 May 2010 17:57:41 CST
+

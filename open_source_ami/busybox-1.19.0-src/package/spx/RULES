@@ -1,0 +1,33 @@
+#Extract Source	in %SOURCE
+extract_source:
+	MKDIR_CLEAN %SOURCE/%PACKAGE/data/.workspace
+	UNTAR_GZ  %SOURCE/%PACKAGE/data/busybox-1.13.2.tar.gz  %SOURCE/%PACKAGE/data/.workspace
+    	RENAME %SOURCE/%PACKAGE/data/.workspace/busybox-1.13.2  %SOURCE/%PACKAGE/data/.workspace/busybox
+
+#Build Source in %BUILD
+build_source:
+	COPY_FILE %BUILD/%PACKAGE/spx/DEFCONFIG %BUILD/%PACKAGE/data/.workspace/busybox/.config
+	COPY_FILE_IF_EXISTS %IMAGE_TREE/etc/busybox/DEFCONFIG %BUILD/%PACKAGE/data/.workspace/busybox/.config
+        DELETE %IMAGE_TREE/etc/busybox	
+        CWD %BUILD/%PACKAGE/data/.workspace/busybox        
+        INVOKE_MAKE oldconfig
+        INVOKE_MAKE all
+
+#Clean Source
+clean_source:
+	CWD %BUILD/%PACKAGE/data/.workspace/busybox
+        INVOKE_MAKE clean
+        INVOKE_MAKE distclean
+
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create busybox package
+build_package-busybox:
+	CWD %BUILD/%PACKAGE/data/.workspace/busybox
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/OUTPUT
+	INVOKE_MAKE install CONFIG_PREFIX=%TEMPDIR/%PACKAGE/OUTPUT
+    COPY_FILE %BUILD/%PACKAGE/data/dhcp4.script  %TEMPDIR/%PACKAGE/OUTPUT/usr/sbin
+    COPY_FILE %BUILD/%PACKAGE/data/dhcp6.script  %TEMPDIR/%PACKAGE/OUTPUT/usr/sbin
+	PACK_SPX  .  %TEMPDIR/%PACKAGE/OUTPUT
+		

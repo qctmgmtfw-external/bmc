@@ -1,0 +1,437 @@
+/*
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+*/
+
+body{
+	margin:8px;
+	padding:8px;
+	font-family:Arial;
+	font-size:12px;
+	background:url(../res/shadow.png) repeat-x;
+	background-attachment: fixed;
+}
+
+table{
+	font-size:12px;
+}
+
+h3{
+	color: #4D5C71;
+	font-size:20px;
+	padding-bottom:0px;
+	margin-top:5px;
+	border-bottom:1px solid #000;
+}
+
+h4{
+	font-size:14px;
+}
+
+h4 small{
+	font-size:11px;
+}
+
+.dashboardHolder{
+	min-width:985px;
+/*	width:100%;*/
+}
+
+.dashboardHolder table tr td{
+	white-space:nowrap;
+}
+
+.infoLeft label{
+	font-size:13px;
+}
+
+.roundedtable_topleft{
+	background:url(../res/topleft_round.gif) no-repeat;
+	width: 18px;
+	height: 18px;
+}
+
+.roundedtable_topright{
+	background:url(../res/topright_round.gif) no-repeat;
+	width: 18px;
+	height: 18px;
+}
+
+.roundedtable_btmleft{
+	background:url(../res/btmleft_round.gif) no-repeat;
+	width: 18px;
+	height: 18px;
+}
+
+.roundedtable_btmright{
+	background:url(../res/btmright_round.gif) no-repeat;
+	width: 18px;
+	height: 18px;
+}
+
+.roundedtable_top{
+	background:url(../res/top_line.gif);
+}
+
+.roundedtable_btm{
+	background:url(../res/btm_line.gif);
+}
+
+.roundedtable_left{
+	background:url(../res/left_line.gif) repeat-y;
+}
+
+.roundedtable_right{
+	background:url(../res/right_line.gif) repeat-y;
+}
+
+.dashboard_tbl{
+	font-size:12px;
+	width:250px;
+}
+
+.dashboard_tbl td{
+	border-left:1px solid #eee;
+	border-right:1px solid #eee;
+	border-top:1px solid #eee;
+	white-space:nowrap;
+}
+
+.dashboard_tbl .lastcell{
+	border-top:1px solid #eee;
+	border-left:1px solid #eee;
+	border-right:1px solid #eee;
+	border-bottom:1px solid #eee;
+}
+
+.infoGraph{
+	border:0px solid #EEE;
+}
+
+.gCanvas{
+	display:block;
+	border:0px solid #EEE;
+}
+
+.smallColor{
+	text-decoration:none;
+	border:1px solid #000;
+}
+
+.graphLegends{
+	display:block;
+	float:right;
+	padding:0px;
+	margin:5px;
+	font-size:11px;
+}
+
+.graphLegends li{
+	margin:3px;
+	list-style-type:none;
+	padding:0px;
+}
+
+.lightblueframe{
+	background:#FFF;
+	border:1px solid #CCC;
+	padding:20px;
+	/*width:60%;
+	float:right;
+	display:block;
+	*/
+	text-align:center;
+}
+
+.floatRight{
+	display:block;
+	float:right;
+	width:150px;
+}
+
+.floatRightBlue{
+	text-align:right;
+	background:#fff; /*url(../res/detailer_bg.png);*/
+	color:#334;
+	font-variant:small-caps;
+	text-transform:capitalize;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.floatRightBlue a.widgetStatus{
+	text-decoration:none;
+	color:#4D5C71;
+	cursor:default;
+}
+
+.floatRightBlue h4{
+	border-bottom:1.4px solid #8D8D8D;
+	padding-bottom:10px;
+	display:block;
+	color:#000;
+}
+
+.floatRightBlue h4 strong{
+	font-size:16px;
+	margin:0px;
+	padding:2px;
+	float:left;
+	display:block;
+	font-variant:normal;
+}
+
+.alignRight{
+	display:block;
+	float:right;
+	white-space:nowrap;
+	text-align:right;
+}
+
+.st{
+	color:#4D5C71;
+}
+
+.launchBtn{
+	visibility:hidden;
+}
+
+/*
+.infoLeft{
+	display:block;
+	float:left;
+	width:40%;
+}
+*/
+
+h4{
+	font-size:15px;
+	width:auto;
+	margin:3px;
+	padding:2px;
+}
+
+h4 small{
+	font-size:12px;
+}
+
+.h5{
+	text-decoration:underline;
+	margin-bottom:7px;
+	display:block;
+	font-size:14px;
+	color:#4D5C71;
+	text-align:left;
+}
+
+.lowerThresholdList{
+	margin:5px;
+	padding:0px;
+	display:block;
+	float:left;
+	list-style-type:none;
+}
+
+.upperThresholdList{
+	margin:2px;
+	padding:0px;
+	display:block;
+	float:right;
+	list-style-type:none;
+}
+
+.lowerThresholdList li, .upperThresholdList li{
+	margin:3px;
+	padding:0px;
+}
+
+.lowerThresholdList li label, .upperThresholdList li label{
+	display:block;
+	float:left;
+	width:185px;
+	text-align:left;
+}
+
+.lowerThresholdList li span{
+	clear:right;
+}
+
+.subSection{
+	padding:20px;
+	padding-top:0px;
+}
+
+.widget{
+	border:2px solid #CCC;
+}
+
+.eventDescription{
+	position:absolute;
+	display:block;
+	border:5px solid #6B8BB5;
+	width:75%;
+	background:#fff;
+	color:#000;
+}
+
+.eventDescription h3{
+	font-size:14px;
+	padding:7px;
+}
+
+.eventDescription .grey{
+	font-size:16px;
+	color:#BBB;
+}
+
+.eventDescription p{
+	margin:10px;
+}
+
+.btnTray{
+	width:100%;
+	text-align:right;
+	border-top:1px solid #444;
+}
+
+.btnTray input{
+	margin:5px;
+}
+
+.wizard{
+	list-style-type:none;
+	color:#AAA;
+	vertical-align:middle;
+	display:none;
+}
+
+.wizard li{
+	vertical-align:middle;
+	height:30px;
+	font-size:20px;
+	line-height:30px;
+	white-space:nowrap;
+}
+
+.wizard li.hiLite{
+	background:#efefef;
+}
+
+.wizard li.normal{
+	background:#fff;
+}
+
+.hide{
+	display:none;
+}
+
+.section,.wizardsection{
+	padding:15px;
+	border:3px solid #EFEFEF;
+	background:transparent;
+}
+
+.wizardsection{
+	background-color:#B3CDE8;
+}
+
+.section h3,.wizardsection{
+	color:#000;
+	font-size:13px;
+	margin:3px;
+}
+
+.classicTab{
+	width:105px;
+	font-size:13px;
+	font-weight:normal;
+	text-align:center;
+	color:#000000;
+	cursor:pointer;
+	padding-bottom:5px;
+	white-space:nowrap;
+}
+
+.classicTab:hover{
+	font-weight:bold;
+	color:#0000FF;
+	text-decoration:underline;
+}
+
+.classicTab:active{
+	font-weight:bold;
+	color:#000000;
+	text-decoration:none;
+}
+
+.errorDisplay{
+	display:block;
+	width:100%;
+	color:#900;
+	font-size:14px;
+	font-weight:bold;
+	text-transform:capitalize;
+	font-variant:small-caps;
+	margin-left:5px;
+	margin-bottom:10px;
+	clear:both;
+	text-align:center;
+	white-space:normal;
+	vertical-align:middle;
+}
+
+.classicTxtBox{
+	width:150px;
+}
+
+.smallclassicTxtBox{
+	width:70px;
+}
+
+.bigclassicTxtBox{
+	width:200px;
+}
+
+.hiddenRow{
+	display:none;
+}
+
+.visibleRow{
+	display:'';
+}
+
+.pamNormal{
+	margin:8px;
+	padding:8px;
+	font-family:Arial;
+	font-size:12px;
+	margin:5px;
+	border:1px solid #000;
+	width:120px;
+	height:17px;
+	cursor:default;
+	background-color:white;
+}

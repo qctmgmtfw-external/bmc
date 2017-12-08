@@ -1,0 +1,23 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+	COPY_FILE %BUILD/%PACKAGE/spx/DEFCONFIG  %BOOT_SRC/uboot/include/configs/AST2300EVB.h
+	CWD %BOOT_SRC/uboot
+	SET_ENVIRONMENT BUILD_DIR
+	INVOKE_MAKE AST2300EVB_config
+	INVOKE_MAKE 
+
+#Clean Source
+clean_source:
+	CWD %BOOT_SRC/uboot
+	SET_ENVIRONMENT BUILD_DIR
+	INVOKE_MAKE clean
+	INVOKE_MAKE distclean
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create Bootloader package
+build_package-Bootloader:
+	PACK_SPX  ./  %BOOT_SRC/uboot/u-boot.bin

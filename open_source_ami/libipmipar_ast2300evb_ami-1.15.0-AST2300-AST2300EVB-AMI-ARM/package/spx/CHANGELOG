@@ -1,0 +1,146 @@
+Package: libipmipar_ast2300evb_ami (1.15.0); urgency = medium
+
+Abstract:
+	Adjust thresholds of fan, and formula of ADT7468's temperature.
+
+Files Modified: data/SDR.dat, data/ast2300evb.pmc, data/ast2300evb.sdr
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 07 Sep 2011 19:52:32 CST
+
+Package: libipmipar_ast2300evb_ami (1.14.0); urgency = medium
+
+Abstract:
+	Enabling BT interface support by default in pmc
+
+Files Modified: data/ast2300evb.pmc
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 15 Aug 2011 20:44:14 CST
+
+Package: libipmipar_ast2300evb_ami (1.13.0); urgency = medium
+
+Abstract:
+	Enables BT interface support in IPMI.conf for ast2300.
+
+Files Modified: data/IPMI.conf
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 15 Aug 2011 20:29:05 CST
+
+Package: libipmipar_ast2300evb_ami (1.12.0); urgency = medium
+
+Abstract:
+	Modified Circular SEL flag and incremented the cdf version.
+
+Files Modified: data/amicfg.c, data/ast2300evb.pmc, data/version.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 10 Aug 2011 15:50:11 IST
+
+Package: libipmipar_ast2300evb_ami (1.11.0); urgency = medium
+
+Abstract:
+	Incremented IPMI config version.
+
+Files Modified: data/ast2300evb.pmc, data/version.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 02 Aug 2011 14:09:42 IST
+
+Package: libipmipar_ast2300evb_ami (1.10.0); urgency = medium
+
+Abstract:
+	Added default IPv6 Configurations.
+
+Files Modified: data/ast2300evb.pmc, data/lancfg1.c, data/lancfg2.c, data/lancfg3.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 01 Aug 2011 19:19:36 IST
+
+Package: libipmipar_ast2300evb_ami (1.9.0); urgency = medium
+
+Abstract:
+	Added FirstSEL Record field.
+
+Files Modified: data/amicfg.c, data/ast2300evb.pmc
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 29 Jul 2011 21:31:19 IST
+
+Package: libipmipar_ast2300evb_ami (1.8.0); urgency = medium
+
+Abstract:
+	Added support for IPMI Configuration Version check. The version of IPMI_CONFIG_VERSION will be compared with CDF Version of libipmipar pakcage.This support can be enabled in PRJ using MDS.
+
+Files Added: data/ssicfg.c, data/version.c
+Files Modified: data/IPMI.conf, data/Makefile, data/ast2300evb.pmc, data/ipmbchannel.c, data/ipmiconfigs.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 29 Jul 2011 20:13:06 IST
+
+Package: libipmipar_ast2300evb_ami (1.7.0); urgency = low
+
+Abstract:
+	Change the SDR to correct value.
+
+Files Modified: data/SDR.dat, data/ast2300evb.pmc, data/ast2300evb.sdr
+
+--Submitter: terrychen (terrychen@ami.com.tw) Fri, 01 Jul 2011 17:38:19 CST
+
+Package: libipmipar_ast2300evb_ami (1.6.0); urgency = medium
+
+Abstract:
+	Add SSI Commands for SSI Compute Blade support.
+
+Files Modified: data/IPMI.conf, data/ast2300evb.pmc
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Sat, 11 Jun 2011 22:04:55 EDT
+
+Package: libipmipar_ast2300evb_ami (1.5.0); urgency = medium
+
+Abstract:
+	Add Circular SEL support.
+
+Files Added: data/amicfg.c
+Files Modified: data/Makefile, data/ipmiconfigs.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Fri, 10 Jun 2011 19:39:24 EDT
+
+Package: libipmipar_ast2300evb_ami (1.4.0); urgency = low
+
+Abstract:
+	Changed default sensor threshold value for i2c debug board.
+
+Files Modified: data/SDR.dat, data/ast2300evb.c, data/ast2300evb.pmc, data/ast2300evb.sdr
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 07 Jun 2011 19:56:20 CST
+
+Package: libipmipar_ast2300evb_ami (1.3.0); urgency = low
+
+Abstract:
+	Enabling SHA256 Algorithm
+
+Files Modified: data/ast2300evb.pmc, data/icmbchannel.c, data/lancfg1.c, data/lancfg2.c, data/lancfg3.c, data/lanchannel1.c, data/lanchannel2.c, data/lanchannel3.c, data/pefcfg.c, data/rmcppluscfg1.c, data/rmcppluscfg2.c, data/rmcppluscfg3.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 27 May 2011 19:22:50 IST
+
+Package: libipmipar_ast2300evb_ami (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:54:13 EDT
+
+Package: libipmipar_ast2300evb_ami (1.1.0); urgency = medium
+
+Abstract:
+	Added OPMA Support Configuration in PMC file.
+
+Files Modified: data/IPMI.conf, data/ast2300evb.pmc
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 May 2011 18:53:36 IST
+
+Package: libipmipar_ast2300evb_ami (1.0.0); urgency = new
+
+Abstract:
+	This package contains I2C Debug Board sensor porting related stuffs for AST2300EVB Platform
+
+Files Added: data, data/BMC.conf, data/IPMI.conf, data/Makefile, data/SDR.dat, data/ast2300evb.c, data/ast2300evb.pmc, data/ast2300evb.sdr, data/bridgecfg.c, data/chassiscfg.c, data/dcmicfg.c, data/ffirewallcfg.c, data/genericcfg.c, data/icmbchannel.c, data/ipmbchannel.c, data/ipmiconfigs.h, data/lancfg1.c, data/lancfg2.c, data/lancfg3.c, data/lanchannel1.c, data/lanchannel2.c, data/lanchannel3.c, data/loginadtcfg.c, data/opmacfg.c, data/pefcfg.c, data/rmcppluscfg1.c, data/rmcppluscfg2.c, data/rmcppluscfg3.c, data/serialcfg.c, data/serialchannel.c, data/smbuschannel.c, data/smlinkipmbchannel.c, data/smmchannel.c, data/smtpcfg1.c, data/smtpcfg2.c, data/smtpcfg3.c, data/solcfg1.c, data/solcfg2.c, data/solcfg3.c, data/sysifchannel.c, data/systeminfo.c, data/triggerevtcfg.c, data/usrinfo.c, data/wdogcfg.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libipmipar_ast2300evb_ami, spx/PACKAGES.D/libipmipar_ast2300evb_ami/DATA, spx/PACKAGES.D/libipmipar_ast2300evb_ami/SCRIPTS, spx/PACKAGES.D/libipmipar_ast2300evb_ami/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 11 May 2011 18:26:39 IST
+

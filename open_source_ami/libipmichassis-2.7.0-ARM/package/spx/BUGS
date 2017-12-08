@@ -1,0 +1,1 @@
+VLAN filtering is not enabled during bringup even if VLAN interface is enabled.

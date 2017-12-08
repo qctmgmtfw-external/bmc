@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_22_Synchronized_addKeyListener (1.0.0); urgency = new
+
+Abstract:
+	There are two thread will called addKeyListener due the second thread might be finished early than the first thread Then iKVM keylistener function would be receives keyPressed event twice
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerView.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: George Hsin (georgehsin@ami.com.tw) Thu, 30 Aug 2012 19:03:15 CST
+

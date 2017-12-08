@@ -1,0 +1,9 @@
+Package: libsnmp_template_mib_1_3_0_2_FixErrorMsgWhenSnmpLoadTemplateMib (1.0.0); urgency = new
+
+Abstract:
+	FixErrorMsgWhenSnmpLoadTemplateMib
+
+Files Added: data, data/00-data_Makefile, data/01-spx_RULES, data/02-spx_PACKAGES.D_libsnmp_template_mib_SCRIPTS_dev-install, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 05 Jul 2012 15:12:47 CST
+

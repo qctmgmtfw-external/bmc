@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/ncsiconf
+	COPY_FILE ./libncsiconf.h %SPXINC/ncsiconf
+    MKDIR_NOCLEAN %SPXLIB/ncsiconf
+	COPY_FILE ./libncsiconf.a %SPXLIB/ncsiconf
+	COPY_FILE libncsiconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ncsiconf
+	ADD_LIBRARY_LINKS %SPXLIB/ncsiconf libncsiconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

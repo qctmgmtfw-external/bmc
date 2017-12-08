@@ -1,0 +1,28 @@
+Package: opensslapp (1.2.0); urgency = high
+
+Abstract:
+	Updating opensslapp license from AMI to GPL-v2
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 27 Jun 2011 15:03:23 EDT
+
+Package: opensslapp (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:21:53 EDT
+
+Package: opensslapp (1.0.0); urgency = new
+
+Abstract:
+	openssl app to generate and view the SSL certificates
+
+Files Added: data, data/Makefile, data/app_rand.c, data/apps.c, data/apps.h, data/e_os.h, data/openssl.c, data/progs.h, data/req.c, data/x509.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/opensslapp, spx/PACKAGES.D/opensslapp/DATA, spx/PACKAGES.D/opensslapp/SCRIPTS, spx/PACKAGES.D/opensslapp/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 25 Jan 2011 21:56:22 IST
+

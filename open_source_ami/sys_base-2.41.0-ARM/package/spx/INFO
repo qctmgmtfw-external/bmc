@@ -1,0 +1,17 @@
+Package : sys_base
+Non-Editable : YES
+Version : 2.41.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : sys
+Essential : YES
+Group : BASE
+Provides : BaseSystem
+Package-License : OPENSOURCE
+Description : Base System Package which creates a minimal working linux root filesystem .
+.

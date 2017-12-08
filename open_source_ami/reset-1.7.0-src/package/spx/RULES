@@ -1,0 +1,25 @@
+#Extract Source in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE
+
+#Clean Source
+clean_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE clean
+
+#-----------------Mandatory Rules for every binary Package ----------------------------
+#Rules to create reset package
+build_package-reset:
+		PACK_SPX ./ %BUILD/%PACKAGE/data/reset.ko
+
+#Rules to create reset_driver_dev package
+build_package-reset_driver_dev:
+		MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/reset.h %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/reset_ioctl.h %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/Module.symvers %TEMPDIR/%PACKAGE/tmp
+		PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp

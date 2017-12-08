@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="true" readonly="true" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/libipmipdkcmds_2_13_0_1_EnableAMIGetSelEntries-1.0.0-AST2300-AST2300EVB-ARM/package/data/00-data_cmdselect.c</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>libipmipdkcmds_2_13_0_1_EnableAMIGetSelEntries</package-name>
+<version>1.0.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>patch</section>
+<patch-order>1</patch-order>
+<build-depends/>
+<depends>
+<package-name operator="==" version="2.13.0">libipmipdkcmds</package-name>
+</depends>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>PATCH</group>
+<configtags>Patch 1 for libipmipdkcmds (2.13.0)</configtags>
+<installsize/>
+<description>Enabling AMIGetSelEntries command for faster SEL accessing in WebUI</description>
+<architecture>ARM</architecture>
+<owner>AMI</owner>
+<maintainer>winston </maintainer>
+<maintainer-email>winstonv@amiindia.co.in</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc>AST2300</soc>
+<build-order/>
+<build-precedence/>
+<platform>AST2300EVB</platform>
+<oem/>
+<feature-required/>
+<urgency base-urgency="new">new</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/libipmipdkcmds_2_13_0_1_EnableAMIGetSelEntries-1.0.0-AST2300-AST2300EVB-ARM/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/libipmipdkcmds_2_13_0_1_EnableAMIGetSelEntries-1.0.0-AST2300-AST2300EVB-ARM/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

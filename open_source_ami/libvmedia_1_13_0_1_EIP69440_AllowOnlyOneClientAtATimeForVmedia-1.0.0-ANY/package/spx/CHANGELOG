@@ -1,0 +1,9 @@
+Package: libvmedia_1_13_0_1_EIP69440_AllowOnlyOneClientAtATimeForVmedia (1.0.0); urgency = new
+
+Abstract:
+	Allow only one vmedia client at one time
+
+Files Added: data, data/00-data_vmedia_instance.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 13 Sep 2011 14:18:03 EDT
+

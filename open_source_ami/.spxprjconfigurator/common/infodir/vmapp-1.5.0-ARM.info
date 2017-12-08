@@ -1,0 +1,17 @@
+Package : vmapp
+Non-Editable : YES
+Version : 1.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : app
+Essential : NO
+Group : MEDIA
+Required : libtoken, libunix, libvmedia
+Package-License : AMI
+Description : This package includes built Virtual Media application.
+.

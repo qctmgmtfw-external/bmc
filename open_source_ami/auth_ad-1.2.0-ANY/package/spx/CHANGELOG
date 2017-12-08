@@ -1,0 +1,27 @@
+Package: auth_ad (1.2.0); urgency = medium
+
+Abstract:
+	Module count macro's are moved to common package auth_ad
+
+Files Added: spx/P.CONFIG
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 07 Jul 2011 20:46:49 IST
+
+Package: auth_ad (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 13:56:58 EDT
+
+Package: auth_ad (1.0.0); urgency = new
+
+Abstract:
+	All Acive Directory related Authentication Packages are selected, only this package is included
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 03 Jan 2011 17:33:21 IST
+

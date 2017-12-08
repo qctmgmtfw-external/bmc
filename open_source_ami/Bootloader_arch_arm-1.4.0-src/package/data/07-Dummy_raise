@@ -1,0 +1,20 @@
+diff -Naur u-boot-1.1.4/lib_arm/board.c u-boot-1.1.4-common/lib_arm/board.c
+--- u-boot-1.1.4/lib_arm/board.c	2005-12-16 11:39:27.000000000 -0500
++++ u-boot-1.1.4-common/lib_arm/board.c	2006-04-28 10:15:49.223464529 -0400
+@@ -532,3 +532,16 @@
+ 	}
+ }
+ #endif	/* CONFIG_MODEM_SUPPORT */
++
++void
++raise(void)
++{
++       printf("FATAL (raise): Divide by Zero !!!!!!!!!\n");
++}
++
++void
++__aeabi_unwind_cpp_pr0(void)
++{
++
++}
++

@@ -1,0 +1,8 @@
+Install Script
+
+build-install:
+	MKDIR_CLEAN %SOFTWARE/%PACKAGE
+	MKDIR_CLEAN %SOURCE/%PACKAGE
+	COPY_DIR ./RELEASE %SOFTWARE/%PACKAGE
+	COPY_DIR ./source %SOURCE/%PACKAGE/data
+debug-install:

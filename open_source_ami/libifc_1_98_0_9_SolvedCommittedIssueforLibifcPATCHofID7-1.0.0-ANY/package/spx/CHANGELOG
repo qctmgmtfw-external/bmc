@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_9_SolvedCommittedIssueforLibifcPATCHofID7 (1.0.0); urgency = new
+
+Abstract:
+	Solved committed issue for libifc Patch of ID7
+
+Files Added: data, data/00-data_webifc_StorDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: benchen (benchen@ami.com.tw) Wed, 07 Mar 2012 13:59:50 CST
+

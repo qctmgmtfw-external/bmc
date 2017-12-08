@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/pmbus
+        COPY_FILE ./libpmb-private.h %SPXINC/pmbus
+    MKDIR_NOCLEAN %SPXLIB/pmbus
+	COPY_FILE ./libpmbus.a %SPXLIB/pmbus
+	COPY_FILE libpmbus.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/pmbus
+	ADD_LIBRARY_LINKS %SPXLIB/pmbus libpmbus.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

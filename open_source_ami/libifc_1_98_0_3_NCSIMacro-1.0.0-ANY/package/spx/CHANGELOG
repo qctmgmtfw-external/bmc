@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_3_NCSIMacro (1.0.0); urgency = new
+
+Abstract:
+	Added global macro support for NCSI.
+
+Files Added: data, data/00-data_webifc_XportDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 15 Sep 2011 14:55:05 IST
+

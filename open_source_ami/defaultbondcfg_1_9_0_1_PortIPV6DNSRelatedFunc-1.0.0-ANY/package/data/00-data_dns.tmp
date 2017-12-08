@@ -1,0 +1,29 @@
+--- .pristine/defaultbondcfg-1.9.0-src/data/dns.tmp Fri Feb  3 16:18:07 2012
++++ source/defaultbondcfg-1.9.0-src/data/dns.tmp Fri Jan 20 21:54:31 2012
+@@ -5,7 +5,7 @@
+  SET_DOMAIN=n
+  SET_v6DOMAIN=n
+  SET_DNS=n
+- SET_v6DNS=n
++ SET_IPV6_PRIORITY=n
+  
+ case ${IFACE} in
+ 
+@@ -15,7 +15,7 @@
+ 		SET_DOMAIN=y
+ 		SET_v6DOMAIN=n
+ 		SET_DNS=y
+-		SET_v6DNS=y
++		SET_IPV6_PRIORITY=n
+ 		;;
+ 	eth1)
+ 		DO_DDNS=y
+@@ -23,7 +23,7 @@
+ 		SET_DOMAIN=n
+ 		SET_v6DOMAIN=n
+ 		SET_DNS=n
+-		SET_v6DNS=n
++		SET_IPV6_PRIORITY=n
+ 		;;
+ 	*)
+ 		;;

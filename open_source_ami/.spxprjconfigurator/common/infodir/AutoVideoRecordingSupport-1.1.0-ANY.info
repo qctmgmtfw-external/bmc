@@ -1,0 +1,17 @@
+Package : AutoVideoRecordingSupport
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Required : libautovideorecord, adviser, libvideorecordcfg
+Essential : NO
+Config-Tag : Auto Video Recording Support
+Group : KVM
+Owner : AMI
+Maintainer : Viswanathan S  (viswanathans@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This Dummy Package is used to select/deselect the Auto Video Recording Support
+.

@@ -1,0 +1,231 @@
+Package: libpdkapp (1.22.0); urgency = medium
+
+Abstract:
+	Added ManufactureID for auditlogs
+
+Files Modified: data/AuditHooks.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 19 Aug 2011 11:32:25 IST
+
+Package: libpdkapp (1.21.0); urgency = medium
+
+Abstract:
+	Timestamp and IANA number added to AuditLogs
+
+Files Modified: data/AuditHooks.c, data/Helper.c, data/Helper.h, data/Makefile
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 11 Aug 2011 20:56:24 IST
+
+Package: libpdkapp (1.20.0); urgency = medium
+
+Abstract:
+	Added PDK_PlatformID function within PlatformHooks.c
+
+Files Added: data/PlatformHooks.c
+Files Modified: data/Makefile
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 11 Aug 2011 13:19:09 CST
+
+Package: libpdkapp (1.19.0); urgency = medium
+
+Abstract:
+	Passing Session Handle to login/logout AuditHook
+
+Files Modified: data/AuditHooks.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 29 Jul 2011 19:21:08 IST
+
+Package: libpdkapp (1.18.0); urgency = medium
+
+Abstract:
+	Code Cleanup
+
+Files Added: data/AuditHooks.c, data/Helper.c, data/Helper.h
+Files Deleted: data/WebserverHooks.c
+Files Modified: data/Makefile
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 21 Jul 2011 17:16:08 IST
+
+Package: libpdkapp (1.17.0); urgency = medium
+
+Abstract:
+	Closed IPMI Session Properly
+
+Files Modified: data/WebserverHooks.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 21 Jul 2011 15:33:50 IST
+
+Package: libpdkapp (1.16.0); urgency = high
+
+Abstract:
+	Removing unwanted header file inclusions
+
+Files Modified: data/VideoHooks.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 13 Jul 2011 12:31:39 EDT
+
+Package: libpdkapp (1.15.0); urgency = high
+
+Abstract:
+	Removed unnecessary dependency on libvideo for libpdkapp
+
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 13 Jul 2011 12:01:31 EDT
+
+Package: libpdkapp (1.14.0); urgency = medium
+
+Abstract:
+	Removed Web_hook and used Login_hook is common for all audits
+
+Files Modified: data/WebserverHooks.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 08 Jul 2011 14:28:23 IST
+
+Package: libpdkapp (1.13.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 21:15:17 IST
+
+Package: libpdkapp (1.12.0); urgency = low
+
+Abstract:
+	added pdkhook for login logout audit
+
+Files Modified: data/WebserverHooks.c
+
+--Submitter: sridhar ch (sridharch@amiindia.co.in) Wed, 29 Jun 2011 05:45:21 TLT
+
+Package: libpdkapp (1.11.0); urgency = high
+
+Abstract:
+	Removing the pdk hook to lock host monitor upon kvm session start & stop. Default behavior is JViewer client based host locking
+
+Files Modified: data/VideoHooks.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 28 Jun 2011 12:42:20 EDT
+
+Package: libpdkapp (1.10.0); urgency = high
+
+Abstract:
+	Updated the build dependency
+
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 26 May 2011 13:14:28 EDT
+
+Package: libpdkapp (1.9.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:06:21 EDT
+
+Package: libpdkapp (1.8.0); urgency = high
+
+Abstract:
+	add network library for ipmi library dependency
+
+Files Modified: data/Makefile
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 16:22:15 EDT
+
+Package: libpdkapp (1.7.0); urgency = low
+
+Abstract:
+	Added login Audit configuration for RMCP and Web
+
+Files Modified: data/Makefile, data/WebserverHooks.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 05 Apr 2011 17:46:41 IST
+
+Package: libpdkapp (1.6.0); urgency = low
+
+Abstract:
+	Added PDK Pre-Flash hook function
+
+Files Added: data/FlashHooks.c
+Files Modified: data/Makefile
+
+--Submitter: prakashs (prakashs@amiindia.co.in) Tue, 08 Feb 2011 17:13:39 IST
+
+Package: libpdkapp (1.5.0); urgency = low
+
+Abstract:
+	Using created libipmi_session, instead of temporary libipmi_session, this will fix the fake session id creations
+
+Files Modified: data/WebserverHooks.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 24 Jan 2011 20:17:01 IST
+
+Package: libpdkapp (1.4.0); urgency = low
+
+Abstract:
+	Fixing the build dependency.. adding libpamhelper to libpdkapp
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 28 Dec 2010 12:04:42 IST
+
+Package: libpdkapp (1.3.0); urgency = low
+
+Abstract:
+	Adding seperate hooks to supports web based functionalities. this hook can be used by web services..
+
+Files Added: data/WebserverHooks.c
+Files Modified: data/Makefile
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Mon, 27 Dec 2010 19:35:30 IST
+
+Package: libpdkapp (1.2.0); urgency = high
+
+Abstract:
+	Added Hook which will be called whenever a new session starts and stops
+
+Files Modified: data/Makefile, data/VideoHooks.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 01 Dec 2010 17:20:27 EST
+
+Package: libpdkapp (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:02:17 EDT
+
+Package: libpdkapp (1.0.2); urgency = low
+
+Abstract:
+	Dependecies Resolved
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 27 Aug 2010 15:35:56 EDT
+
+Package: libpdkapp (1.0.1); urgency = medium
+
+Abstract:
+	Removed the ADD_LIBRARY_LINK  which was causing probelm in loading IPMI Main during boot time.
+The library link was added in /usr/local/lib in ImageTree as well as in usr/loca/lib/ipmi folder in ImageTree.
+Library link inside /usr/loca/lib/ipmi is not necessary so removed those links.
+
+Files Modified: spx/PACKAGES.D/libpdkapp/SCRIPTS/dev-install
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 19 Aug 2010 11:00:50 IST
+
+Package: libpdkapp (1.0.0); urgency = new
+
+Abstract:
+	Package Description.
+
+Files Added: data, data/Makefile, data/VideoHooks.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libpdkapp, spx/PACKAGES.D/libpdkapp/DATA, spx/PACKAGES.D/libpdkapp/SCRIPTS, spx/PACKAGES.D/libpdkapp/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 Aug 2010 21:20:50 EDT
+

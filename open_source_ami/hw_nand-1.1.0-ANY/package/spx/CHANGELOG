@@ -1,0 +1,18 @@
+Package: hw_nand (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:23:35 EDT
+
+Package: hw_nand (1.0.0); urgency = new
+
+Abstract:
+	SoC supports NAND flash.
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 15 Nov 2010 15:19:41 CST
+

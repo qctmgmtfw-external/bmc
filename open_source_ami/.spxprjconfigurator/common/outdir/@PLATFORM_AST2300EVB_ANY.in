@@ -1,0 +1,103 @@
+if @PLATFORM_AST2300EVB
+menu "AST2300EVB  Configuration"
+
+config FEATURE_GLOBAL_^AST2300EVB^_FLASH_TYPE_SPI
+	bool  
+	default y
+	help 
+	    Make sure the SOC supports booting from SPI. Most newer SOC support this
+
+config FEATURE_GLOBAL_^AST2300EVB^_FRAME_BUFFER_SUPPORT
+	bool "Frame buffer driver support"
+	default n
+	help 
+	    Support of Frame buffer driver
+
+config FEATURE_GLOBAL_^AST2300EVB^_FLASH_START
+	hex 
+	default 0x14000000
+	help
+	    Starting Address of Flash. This is SOC specific and  may not be 0x0
+
+config FEATURE_GLOBAL_^AST2300EVB^_FLASH_SIZE
+	hex "Total Size of Flash (hex)"
+	default 0x1000000
+	help
+	    Entire size of Flash range, including all banks (if multiple banks are supported)
+
+config FEATURE_GLOBAL_^AST2300EVB^_ERASE_BLOCK_SIZE
+	hex "Flash Erase Block Size (hex)"
+	default 0x10000
+	help
+	    Block Size of the Flash.
+
+config FEATURE_GLOBAL_^AST2300EVB^_FLASH_BANKS
+	int "Max Flash Banks"
+	default 1
+	help
+	    Number of Flash parts (banks)
+
+config FEATURE_GLOBAL_^AST2300EVB^_USED_FLASH_START
+	hex 
+	default 0x14000000
+	help
+	     Firmware may not use the entire flash. Specify the start of used area.
+	     This will reduce the Size of Firmware Image
+
+config FEATURE_GLOBAL_^AST2300EVB^_USED_FLASH_SIZE
+	hex  "Total Size of the Used Flash (hex)"
+	default 0x1000000
+	help
+	     Firmware may not use the entire flash. Specify the size of used area.
+	     This will reduce the Size of Firmware Image
+
+	
+config FEATURE_GLOBAL_^AST2300EVB^_UBOOT_MONITOR_SIZE
+	hex "Size of Boot Loader (hex)"
+	default 0x30000
+	help
+	     Size of U-boot Code size. Should be a multiple of Flash Block Size
+
+config FEATURE_GLOBAL_^AST2300EVB^_UBOOT_ENV_START
+	hex "Start of Boot Loader Environment (hex)"
+	default 0x14030000
+	help
+	     Start location  of U-boot Environment. Normally follows the U-boot
+
+config FEATURE_GLOBAL_^AST2300EVB^_UBOOT_ENV_SIZE
+	hex "Size of Boot Loader Environment (hex)"
+	default 0x10000
+	help
+	     Size of U-boot Environment. Normally one Flash Block Size
+
+config FEATURE_GLOBAL_^AST2300EVB^_MEMORY_START
+	hex "Start Address of Memory (hex)"
+	default 0x40000000
+	help	
+	     Start Address of memory. Platform/SOC specific
+
+config FEATURE_GLOBAL_^AST2300EVB^_MEMORY_SIZE
+	hex "Total Memory Size (hex)"
+	default 0x7800000
+	help
+	     Total Usable memory. Platform/SOC specific
+
+config FEATURE_GLOBAL_^AST2300EVB^_MEMORY_ECC_ENABLE
+	bool "Memory ECC support"
+	default n
+	help
+	     Support ECC protection function, the overhead of memory size equals to 1/8 ECC protected memory size.
+
+config FEATURE_GLOBAL_^AST2300EVB^_NIC_COUNT
+	int "Number of Network Interfaces"
+	default 2
+	range 1  2
+	help
+	     Specify the number of Network Interfaces to be used
+	     
+endmenu
+endif
+
+endmenu
+
+

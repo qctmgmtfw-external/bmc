@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_7_EIP_69004 (1.0.0); urgency = new
+
+Abstract:
+	Host won't wake up from sleep mode if mouse is moved in JViewer
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, data/01-data_src_com_ami_kvm_jviewer_gui_JViewerView.java, data/02-data_src_com_ami_kvm_jviewer_jvvideo_JVVideo.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 16 Sep 2011 16:51:52 IST
+

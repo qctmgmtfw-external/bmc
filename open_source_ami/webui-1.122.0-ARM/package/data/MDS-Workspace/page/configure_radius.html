@@ -1,0 +1,63 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+<link href="../www/style/page_style.css" rel="stylesheet" type="text/css" />
+<script language='javascript' src='../www/lib/include.js'></script>
+</head>
+<body oncontextmenu='return false;'>
+<h3>RADIUS Settings</h3>
+
+<p>Check the box below to enable RADIUS authentication and enter the required information to access the RADIUS server.
+   Press the Save button to save your changes.</p>
+
+ <div class='subSection'>
+ 	<div class='subSection'>
+		<table cellspacing="0" cellpadding="5" border="0" width='450'>
+		<tr><td><strong>RADIUS Authentication</strong></td>
+		<td>
+			<input type='checkbox' id='_enableRADIUS' value='1' />
+			<label for="_enableRADIUS">Enable</label>
+		</td></tr>
+		<tr><td><strong>Port</strong></td>
+		<td><input type='text' id='_port' disabled maxlength='5' class='smallclassicTxtBox'/></td></tr>
+		<tr><td><strong>Time Out</strong></td>
+		<td><input type='text' id='_timeout' disabled maxlength='3' class='smallclassicTxtBox'/> seconds</td></tr>
+		<tr><td><strong>Server Address</strong></td>
+		<td><input type='text' id='_ipaddr' disabled maxlength='15' class='classicTxtBox'/></td></tr>
+		<tr><td><strong>Secret</strong></td>
+		<td><input type='password' id='_secret' disabled maxlength='31' class='classicTxtBox'/></td></tr>
+		</table>
+ 	</div>
+ </div>
+<div class="btnTray">
+	<input type='button' value='Save' id='_saveBtn' />
+	<input type='button' value='Reset' id='_resetBtn' />
+</div>
+</body>
+</html>

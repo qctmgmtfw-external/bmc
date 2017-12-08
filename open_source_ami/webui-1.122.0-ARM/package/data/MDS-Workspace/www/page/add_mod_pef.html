@@ -1,0 +1,242 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" rel="stylesheet" type="text/css" />
+	<script src="/lib/include.js" type="text/javascript"></script>
+	<script>
+	document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+	</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_saveBtn");
+		elmt.setAttribute("value", eLang.getString("add_mod_pef", "PEF_ADD"));
+		var elmt = document.getElementById("_resetBtn");
+		elmt.setAttribute("value", eLang.getString("add_mod_pef", "PEF_RESET"));
+		var elmt = document.getElementById("_cancelBtn");
+		elmt.setAttribute("value", eLang.getString("add_mod_pef", "PEF_CANCEL"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<h3><label id="_pageTitle"></label></h3>
+<p id="_pageDesc"></p>
+<div class="subSection">
+<strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_PEF_CFG"));</script>
+</strong>
+<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+	<tr><td width="40%"><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_ID"));</script>
+</strong></td>
+	<td><input type="text" id="_pefID" readonly class="smallclassicTxtBox" /></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_FILTER"));</script>
+</strong></td>
+	<td><input type="checkbox" id="_enablePEF" value="1" />
+		<label for="_enablePEF">
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_ENABLE"));</script>
+</label></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT"));</script>
+</strong></td>
+	<td><select id="_eventSeverity" class="classicTxtBox"></select></td></tr>
+	</table>
+</div>
+
+<strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_ACTION_CFG"));</script>
+</strong>
+<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+	<tr><td width="40%"><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_ACTION"));</script>
+</strong></td>
+	<td><input type="checkbox" id="_pefAlert" value="1" />
+		<label for="_pefAlert">
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_ALERT"));</script>
+</label></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_POWER"));</script>
+</strong></td>
+	<td><select id="_powerAction" class="classicTxtBox"></select></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_POLICY"));</script>
+</strong></td>
+	<td><select id="_policyNo" class="smallclassicTxtBox"></select></td></tr>
+	</table>
+</div>
+	
+<strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_GNTR_CFG"));</script>
+</strong>
+<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+	<tr><td width="40%"><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_GNTR_DATA"));</script>
+</strong></td>
+
+	<td><input type="checkbox" id="_rawType" checked="true">
+	<label for="_rawType">
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_GNTR_RAW"));</script>
+</label></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_GNTR_ID1"));</script>
+</strong></td>
+	<td><input type="text" id="_genID1" class="classicTxtBox"></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_GNTR_ID2"));</script>
+</strong></td>
+	<td><input type="text" id="_genID2" class="classicTxtBox"></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT_GNTR"));</script>
+</strong></td>
+	<td><input type="radio" id="_slaveType" name="generatorType">
+	<label for="_slaveType">
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_SLAVE_ADDR"));</script>
+</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" id="_softwareType" name="generatorType">
+	<label for="_softwareType">
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_SW_ID"));</script>
+</label></td></tr>
+
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_SLAVE_SW"));</script>
+</strong></td>
+	<td><input type="text" id="_slave_software" class="classicTxtBox"></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_CHANNEL_NO"));</script>
+</strong></td>
+	<td><select id="_channelNo" class="smallclassicTxtBox"></select></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_IPMB_DEVICE"));</script>
+</strong></td>
+	<td><select id="_ipmbDevice" class="smallclassicTxtBox"></select></td></tr>
+	</tr>
+	</table>
+</div>
+
+<strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_SENSOR_CFG"));</script>
+</strong>
+<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+	<tr><td width="40%"><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_SENSORTYPE"));</script>
+</strong></td>
+	<td><select id="_sensorType" class="bigclassicTxtBox"></select></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_SENSORNAME"));</script>
+</strong></td>
+	<td><select id="_sensorName" class="bigclassicTxtBox"></select></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT_OPT"));</script>
+</strong></td>
+	<td><select id="_eventOpt" class="classicTxtBox"></select></td></tr>
+	<tr id="_sensorEventRow"><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_SENSOREVENTS"));</script>
+</strong></td>
+	<td><div id="_sensorEvent"></div></td></tr>
+	</table>
+</div>
+
+<strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVT_DATA_CFG"));</script>
+</strong>
+<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+	<tr><td width="40%"><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_TRIGGER"));</script>
+</strong></td>
+	<td><input type="text" id="_eventTrigger" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	<tr><td><strong>Event Data 1 AND Mask</strong></td>
+	<td><input type="text" id="_event1ANDMask" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT1_COMPARE1"));</script>
+</strong></td>
+	<td><input type="text" id="_event1Compare1" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT1_COMPARE2"));</script>
+</strong></td>
+	<td><input type="text" id="_event1Compare2" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	</table>
+</div>
+
+<strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVT_DATA2_CFG"));</script>
+</strong>
+<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+	<tr><td width="40%"><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT2_AND"));</script>
+</strong></td>
+	<td><input type="text" id="_event2ANDMask" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT2_COMPARE1"));</script>
+</strong></td>
+	<td><input type="text" id="_event2Compare1" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT2_COMPARE2"));</script>
+</strong></td>
+	<td><input type="text" id="_event2Compare2" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	</table>
+</div>
+
+<strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVT_DATA3_CFG"));</script>
+</strong>
+<div class="subSection">
+	<table cellspacing="0" cellpadding="5" border="0" width="600">
+	<tr><td width="40%"><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT3_AND"));</script>
+</strong></td>
+	<td><input type="text" id="_event3ANDMask" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT3_COMPARE1"));</script>
+</strong></td>
+	<td><input type="text" id="_event3Compare1" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	<tr><td><strong>
+<script>document.writeln(eLang.getString("add_mod_pef", "PEF_EVENT3_COMPARE2"));</script>
+</strong></td>
+	<td><input type="text" id="_event3Compare2" maxlength="3" class="smallclassicTxtBox" /></td></tr>
+	</table>
+</div></div>
+<div class="btnTray">
+	<input type="button" class="classicBtn" id="_saveBtn" />
+	<input type="button" class="classicBtn" id="_resetBtn" />
+	<input type="button" class="classicBtn" id="_cancelBtn" />
+</div>
+</body>
+</html>

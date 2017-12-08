@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+    MKDIR_NOCLEAN %IMAGE_TREE/usr/bin/
+    MKDIR_NOCLEAN %IMAGE_TREE/etc/init.d/
+    COPY_FILE ./binary/stunnel4 %IMAGE_TREE/usr/bin/
+    COPY_FILE ./script/stunnel4 %IMAGE_TREE/etc/init.d/
+
+debug-install:

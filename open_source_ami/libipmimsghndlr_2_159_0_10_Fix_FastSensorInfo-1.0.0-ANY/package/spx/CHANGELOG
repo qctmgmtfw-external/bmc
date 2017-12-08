@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_10_Fix_FastSensorInfo (1.0.0); urgency = new
+
+Abstract:
+	Added a new command to get the sensor Info for faster Web-UI.
+
+Files Added: data, data/00-data_SensorEvent_SensorDevice_Sensor.c, data/01-data_AMI_AMI.c, data/02-data_AMI_AMIConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 17 Sep 2011 16:48:53 IST
+

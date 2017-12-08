@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_5_Fix_FastSensorInfo (1.0.0); urgency = new
+
+Abstract:
+	Made changes to call the new API to get the sensor Info for faster web access.
+
+Files Added: data, data/00-data_webifc_SensorDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 17 Sep 2011 16:50:33 IST
+

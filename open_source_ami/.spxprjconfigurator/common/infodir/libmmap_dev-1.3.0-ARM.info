@@ -1,0 +1,16 @@
+Package : libmmap_dev
+Non-Editable : YES
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Dinesh Selvam  (dineshs@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Group : DEVEL
+Package-License : AMI
+Description : MMAP development header files
+.

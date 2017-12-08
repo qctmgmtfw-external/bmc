@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN	 %IMAGE_TREE/usr/local/www/Java/release/
+		COPY_FILE ./JViewer.jar  %IMAGE_TREE/usr/local/www/Java/release/
+		COPY_FILE ./jviewer.jnlp %IMAGE_TREE/usr/local/www/Java				
+
+debug-install:

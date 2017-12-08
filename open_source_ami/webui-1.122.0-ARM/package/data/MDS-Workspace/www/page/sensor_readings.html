@@ -1,0 +1,123 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+<link rel="stylesheet" href="../lib/listgrid.css" type="text/css" />
+<link rel="stylesheet" href="../style/page_style.css" type="text/css" />
+<script language="javascript" src="../lib/include.js"></script>
+<script language="javascript" src="../lib/excanvas.js"></script>
+<script language="javascript" src="../lib/listgrid.js"></script>
+<script language="javascript" src="../lib/graph.js"></script>
+<script>
+document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+</script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_showEventLog");
+		elmt.setAttribute("value", eLang.getString("sensor_readings", "SENSOR_READ_EVENT_LOG"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<h3>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_TITLE"));</script>
+</h3>
+<p>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_DESC"));</script>
+</p>
+
+	<label class="floatRight" id="_lblHeader"></label>
+	<select id="_sensorType"></select>
+	<br style="clear:both" />
+	<br style="clear:both" />
+	<table cellspacing="0" cellpadding="0" border="0" width="100%">
+	<tr>
+	<td id="_infoLeft" class="infoLeft" width="40%" valign="top">
+	</td>
+	<td id="_infoRight" class="lightblueframe" width="60%" valign="top">
+	
+		<table cellspacing="0" cellpadding="0" border="0" width="100%" class="detailer">
+		<tr><td>
+		<div class="floatRightBlue">
+		<h4><strong id="_sensorName"></strong><b id="_sensorState"></b></h4></div> 
+		<table width="100%"><tr>
+		<td><strong>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_THRESHOLD_TITLE"));</script>
+</strong></td>
+		<td align="right"><div class="floatRightBlue">
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_WIDGET"));</script>
+ &nbsp;<a href="javascript://" id="_widgetStatus" class="widgetStatus"></a>
+		 | <a href="javascript://" id="_toggleWidget"></a></div></td>
+		</tr></table>
+		<br style="clear:both" />
+		<ul class="lowerThresholdList">
+			<li><label>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_LNR"));</script>
+</label><span id="_lowerNR"></span></li>
+			<li><label>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_LC"));</script>
+</label><span id="_lowerC"></span></li>
+			<li><label>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_LNC"));</script>
+</label><span id="_lowerNC"></span></li>
+		</ul>
+		<ul class="upperThresholdList">
+			<li><label>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_UNR"));</script>
+</label><span id="_upperNR"></span></li>
+			<li><label>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_UC"));</script>
+</label><span id="_upperC"></span></li>
+			<li><label>
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_UNC"));</script>
+</label><span id="_upperNC"></span></li>		
+		</ul>
+		<br style="clear:both" />
+		<hr/>
+		<br style="clear:both" />
+		<strong class="h5">
+<script>document.writeln(eLang.getString("sensor_readings", "SENSOR_READ_GRAPH_TITLE"));</script>
+</strong>
+		<canvas id="graphCanvas" width="550" height="300" class="gCanvas"></canvas>
+		<div align="right">
+			<input type="button" id="_showEventLog" />
+		</div>
+		</td></tr>
+		</table>
+		
+	</td>
+	</tr>
+	</table>
+
+</body>
+</html>

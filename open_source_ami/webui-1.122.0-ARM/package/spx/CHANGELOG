@@ -1,0 +1,1553 @@
+Package: webui (1.122.0); urgency = medium
+
+Abstract:
+	Redesign LDAP for including E-Directory support.
+
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_ldap.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_ldap_hlp.html, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_ldap_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 18 Aug 2011 14:44:50 IST
+
+Package: webui (1.121.0); urgency = medium
+
+Abstract:
+	The following issue is solved:
+When we resize the browser window, all the menus in the Configuration page is not getting displayed.
+
+Files Modified: data/MDS-Workspace/www/lib/menu.js, data/MDS-Workspace/www/style/app_style.css
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Wed, 17 Aug 2011 15:46:48 IST
+
+Package: webui (1.120.0); urgency = medium
+
+Abstract:
+	Added not applicable field support for interfaces field.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_services_imp.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 17 Aug 2011 12:23:11 IST
+
+Package: webui (1.119.0); urgency = medium
+
+Abstract:
+	Added build time change OEM logo and copyright string feature
+
+Files Modified: data/MDS-Workspace/page/header.html, data/MDS-Workspace/www/impl/header_imp.js, data/MDS-Workspace/www/page/header.html, data/MDS-Workspace/www/str/EN/header_str.js, data/MDS-Workspace/www/style/header_style.css
+
+--Submitter:  (jonnychang@ami.com.tw) Tue, 09 Aug 2011 18:08:26 CST
+
+Package: webui (1.118.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* Java console still alive after closing web session.
+* User could enable/disable bond when VLAN is enabled.
+
+Files Modified: data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_nw_bond_hlp.html, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/impl/configure_triggers_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/index.html, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Mon, 08 Aug 2011 17:58:23 IST
+
+Package: webui (1.117.0); urgency = medium
+
+Abstract:
+	Reverted the Logo changes, As it is not done via MDS-WDPX.
+
+Files Deleted: data/MDS-Workspace/www/rpc/getoemcopyright.asp, data/MDS-Workspace/www/rpc/useoemlogocopyright.asp
+Files Modified: data/MDS-Workspace/www/impl/header_imp.js, data/MDS-Workspace/www/index.html, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/page/header.html
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 28 Jul 2011 14:29:43 IST
+
+Package: webui (1.116.0); urgency = medium
+
+Abstract:
+	Added support build time change logo and copyright string feature
+
+Files Added: data/MDS-Workspace/www/rpc/getoemcopyright.asp, data/MDS-Workspace/www/rpc/useoemlogocopyright.asp
+Files Modified: data/MDS-Workspace/www/impl/header_imp.js, data/MDS-Workspace/www/index.html, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/page/header.html
+
+--Submitter:  (jonnychang@ami.com.tw) Wed, 27 Jul 2011 19:08:09 CST
+
+Package: webui (1.115.0); urgency = medium
+
+Abstract:
+	Following are the changes done,
+* Added web changes to intimate the user regarding, web server restarted for PAM reordering.
+* Confirmation message when deleting auto video recorded files displays prematurely - fixed.
+* The advanced Settings UI Page of AD,LDAP and Radius on Clicking the 'Save' Button without making any changes or Enabling shows message as 'The <AD/LDAP/Radius> Settings is Successfull' - fixed.
+
+Files Modified: data/MDS-Workspace/page/configure_pamorder.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_pamorder_hlp.html, data/MDS-Workspace/www/impl/configure_active_directory_imp.js, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/impl/configure_pamorder_imp.js, data/MDS-Workspace/www/impl/configure_radius_imp.js, data/MDS-Workspace/www/impl/video_record_imp.js, data/MDS-Workspace/www/page/configure_pamorder.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_pamorder_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 22 Jul 2011 17:47:31 IST
+
+Package: webui (1.114.0); urgency = high
+
+Abstract:
+	Following are the changes done,
+* Service configuration fields are validated for Non-Editable and Not-Applicable values.
+* Service configuration page redesigned to show the Non-Editable and Not-Applicable values.
+* Removed hardcoded service name values for individual services.
+* JNLP launch issue of Port number - fixed.
+* Preserve configuration are disabled after canceling Upload SignImageKey form - fixed.
+* Timestamp in System and Audit Log (WebUI) is not synchronizing w/ real local current time (NTP) - fixed.
+* Updated Services Help with CD, FD and HD media configuration details.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_services_hlp.html, data/MDS-Workspace/www/impl/configure_services_imp.js, data/MDS-Workspace/www/impl/configure_triggers_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/jviewer_launch_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 20 Jul 2011 14:21:01 IST
+
+Package: webui (1.113.0); urgency = medium
+
+Abstract:
+	The following issues are fixed:-
+
+1.On continuous clicking of the Dashboard page in Firefox,
+Safari and Chrome browsers, getting the message " 
+There was a problem while getting Network configuration
+2.POPUP are not blocked in Chrome.
+3.Opera Browser 11.01: The values in the PoP message while 
+opening Java Console could not be viewed. Image attached
+
+Files Modified: data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/widget_page_imp.js, data/MDS-Workspace/www/lib/common_fn.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Tue, 19 Jul 2011 16:48:46 IST
+
+Package: webui (1.112.0); urgency = high
+
+Abstract:
+	Following are the changes done,
+* Redesigned Preserve configuration page with listgrid holding the checkboxes.
+* Redesigned Firmware update page to show the preserve configuration items along with Preserve option.
+* Redesigned Restore Factory defaults page to show the preserve configuration items.
+* Added option to redirect to Preserve Configuration page from firmware update and restore factory defaults page.
+* Removed Overwrite SDR support and Preserve configuration from Firmware update wizard.
+* Listgrid Trace issue - fixed.
+* Listgrid Trace clearance issue - fixed.
+* Also added support not to sort the header of the listgrid, when needed.
+* Added function handler for before and after sorting of the listgrid.
+* Listgrid library code cleanup for few functions.
+
+Files Modified: data/MDS-Workspace/page/dashboard.html, data/MDS-Workspace/page/fw_update.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/preserve_cfg.html, data/MDS-Workspace/page/restore_factory.html, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/preserve_cfg_imp.js, data/MDS-Workspace/www/impl/restore_factory_imp.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/page/fw_update.html, data/MDS-Workspace/www/page/preserve_cfg.html, data/MDS-Workspace/www/page/restore_factory.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/fw_update_str.js, data/MDS-Workspace/www/str/EN/preserve_cfg_str.js, data/MDS-Workspace/www/str/EN/restore_factory_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 14 Jul 2011 18:25:11 IST
+
+Package: webui (1.111.0); urgency = high
+
+Abstract:
+	fixed spelling error for help content
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_users_hlp.html
+
+--Submitter: royku (royku@ami.com.tw) Mon, 04 Jul 2011 11:18:21 CST
+
+Package: webui (1.110.0); urgency = high
+
+Abstract:
+	moved help content for Email format to correct position.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_users_hlp.html
+
+--Submitter: royku (royku@ami.com.tw) Thu, 30 Jun 2011 14:41:49 CST
+
+Package: webui (1.109.0); urgency = low
+
+Abstract:
+	Update typo "Therman Trip" to "Thermal Trip".
+
+Files Modified: data/MDS-Workspace/www/str/EN/sensor_specific_event_str.js
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 30 Jun 2011 14:09:16 CST
+
+Package: webui (1.108.0); urgency = high
+
+Abstract:
+	Added help content for "Email Format" field.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_users_hlp.html
+
+--Submitter: royku (royku@ami.com.tw) Thu, 30 Jun 2011 13:35:37 CST
+
+Package: webui (1.107.0); urgency = medium
+
+Abstract:
+	Following are the changes done,
+* Modifed Menu library to check for features list for TOPNAV elements.
+* Added Auto video recording in features list.
+* Issue in IPv6-Active directory - fixed.
+
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_active_directory_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/lib/menu.js, data/MDS-Workspace/www/nav/navobj.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 29 Jun 2011 17:43:48 IST
+
+Package: webui (1.106.0); urgency = high
+
+Abstract:
+	Including the changes, which was reverted for RR1 release.
+
+Files Added: data/MDS-Workspace/page/preserve_cfg.html, data/MDS-Workspace/www/help/EN/preserve_cfg_hlp.html, data/MDS-Workspace/www/impl/preserve_cfg_imp.js, data/MDS-Workspace/www/page/preserve_cfg.html, data/MDS-Workspace/www/rpc/getpreservecfg.asp, data/MDS-Workspace/www/rpc/setlmediacfg.asp, data/MDS-Workspace/www/rpc/setpreservecfg.asp, data/MDS-Workspace/www/str/EN/preserve_cfg_str.js
+Files Deleted: data/MDS-Workspace/www/rpc/checksignimagesupport.asp
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/restore_factory.html, data/MDS-Workspace/www/help/EN/configure_lmedia_hlp.html, data/MDS-Workspace/www/help/EN/configure_triggers_hlp.html, data/MDS-Workspace/www/help/EN/configure_vmedia_devices_hlp.html, data/MDS-Workspace/www/help/EN/fw_update_hlp.html, data/MDS-Workspace/www/help/EN/restore_factory_hlp.html, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_triggers_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/impl/console_redirection_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/restore_factory_imp.js, data/MDS-Workspace/www/impl/widget_page_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page/configure_lmedia.html, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/page/restore_factory.html, data/MDS-Workspace/www/rpc/getlmediaimage.asp, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_lmedia_str.js, data/MDS-Workspace/www/str/EN/configure_vmedia_devices_str.js, data/MDS-Workspace/www/str/EN/restore_factory_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 29 Jun 2011 12:21:03 IST
+
+Package: webui (1.105.0); urgency = medium
+
+Abstract:
+	Following are the chnages done,
+* Reverted the changes for RR1 release.
+* IPv6 support issue for KVM redirection issue - fixed.
+* IPv6 support enabled for LDAP configuration.
+* Added support in SNMP, If a user has snmp disabled and snmp becomes enabled, then a password must be provided.
+* Added support in SNMP, If a user has the snmp Authentication Protocol changed, then a password must be provided.
+
+Files Added: data/MDS-Workspace/www/rpc/checksignimagesupport.asp
+Files Deleted: data/MDS-Workspace/page/preserve_cfg.html, data/MDS-Workspace/www/help/EN/preserve_cfg_hlp.html, data/MDS-Workspace/www/impl/preserve_cfg_imp.js, data/MDS-Workspace/www/page/preserve_cfg.html, data/MDS-Workspace/www/rpc/getpreservecfg.asp, data/MDS-Workspace/www/rpc/setlmediacfg.asp, data/MDS-Workspace/www/rpc/setpreservecfg.asp, data/MDS-Workspace/www/str/EN/preserve_cfg_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/restore_factory.html, data/MDS-Workspace/www/help/EN/configure_ldap_hlp.html, data/MDS-Workspace/www/help/EN/configure_lmedia_hlp.html, data/MDS-Workspace/www/help/EN/configure_triggers_hlp.html, data/MDS-Workspace/www/help/EN/configure_users_hlp.html, data/MDS-Workspace/www/help/EN/configure_vmedia_devices_hlp.html, data/MDS-Workspace/www/help/EN/fw_update_hlp.html, data/MDS-Workspace/www/help/EN/restore_factory_hlp.html, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_triggers_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/impl/console_redirection_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/restore_factory_imp.js, data/MDS-Workspace/www/impl/widget_page_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page/configure_lmedia.html, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/page/restore_factory.html, data/MDS-Workspace/www/rpc/getlmediaimage.asp, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_lmedia_str.js, data/MDS-Workspace/www/str/EN/configure_vmedia_devices_str.js, data/MDS-Workspace/www/str/EN/restore_factory_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Tue, 28 Jun 2011 22:57:43 IST
+
+Package: webui (1.104.0); urgency = high
+
+Abstract:
+	Following are the changes done,
+* Redesigned Local media enable support as advanced settings in Local media Page.
+* Updated Help contents of Local media page.
+* Issue in IPv6 address format of JNLP argument and Web Preview - fixed.
+* Removed local media support in Virtual media page, also updated the help contents.
+
+Files Added: data/MDS-Workspace/www/rpc/setlmediacfg.asp
+Files Modified: data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_lmedia_hlp.html, data/MDS-Workspace/www/help/EN/configure_vmedia_devices_hlp.html, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/jviewer_launch_imp.js, data/MDS-Workspace/www/page/configure_lmedia.html, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/rpc/getlmediaimage.asp, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_lmedia_str.js, data/MDS-Workspace/www/str/EN/configure_vmedia_devices_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 24 Jun 2011 17:32:07 IST
+
+Package: webui (1.103.0); urgency = medium
+
+Abstract:
+	The following issues are solved:-
+
+1.In Event logs page, the timstamp for the event logs on booting shows inbuilt timestamp which is misleading.
+2.Sensor readings shows wrong values in Live sensor reading graph.
+
+Files Modified: data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/widget_page_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Thu, 23 Jun 2011 17:35:20 IST
+
+Package: webui (1.102.0); urgency = medium
+
+Abstract:
+	Following are the changes done,
+* Added Features list support to Preserve configuration page.
+* Updated the description of Restory Factory defaults page, as button caption changed as Restory Factory Defaults.
+* Updated Preserve configuration option in Restore factory defaults based on the feature support.
+* Updated Preserve configuration help contents in restore factory defaults page.
+* No Message to the User when Duplicate ipmi user is added via UI - fixed.
+* Unable to view the SEL entries from sensor reading page when the user is trying to click View this Event Log button - fixed.
+* Help page is mismatch for trigger configuration page - fixed.
+
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/restore_factory.html, data/MDS-Workspace/www/help/EN/configure_triggers_hlp.html, data/MDS-Workspace/www/help/EN/restore_factory_hlp.html, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/restore_factory_imp.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/page/restore_factory.html, data/MDS-Workspace/www/str/EN/restore_factory_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 23 Jun 2011 15:08:42 IST
+
+Package: webui (1.101.0); urgency = medium
+
+Abstract:
+	Following are the changes done,
+* Removed RPC, which checks the Sign Image Support in Project. Now the support can get from /etc/features list.
+* Added features support for PAM Ordering page.
+* Replaced sign image support with features list implementation.
+* For non admin users, Java and ActiveX launch buttons are made greyed out.
+* Added help contents for Sign Image Key support in firmware update page based on features list.
+
+Files Deleted: data/MDS-Workspace/www/rpc/checksignimagesupport.asp
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/fw_update_hlp.html, data/MDS-Workspace/www/impl/console_redirection_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 22 Jun 2011 17:42:38 IST
+
+Package: webui (1.100.0); urgency = medium
+
+Abstract:
+	The following issue is fixed:-
+Should not allow users to log into UI using an unsupported browser.
+
+Files Modified: data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Mon, 20 Jun 2011 14:01:59 IST
+
+Package: webui (1.99.0); urgency = high
+
+Abstract:
+	* Added Preserve configuration support for restore factory defaults.
+* Designed Restore Factory Defaults, with adding Preserve configuration option to move to that page.
+
+Files Added: data/MDS-Workspace/page/preserve_cfg.html, data/MDS-Workspace/www/help/EN/preserve_cfg_hlp.html, data/MDS-Workspace/www/impl/preserve_cfg_imp.js, data/MDS-Workspace/www/page/preserve_cfg.html, data/MDS-Workspace/www/rpc/getpreservecfg.asp, data/MDS-Workspace/www/rpc/setpreservecfg.asp, data/MDS-Workspace/www/str/EN/preserve_cfg_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/restore_factory.html, data/MDS-Workspace/www/help/EN/restore_factory_hlp.html, data/MDS-Workspace/www/impl/configure_triggers_imp.js, data/MDS-Workspace/www/impl/restore_factory_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page/restore_factory.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/restore_factory_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 17 Jun 2011 18:14:03 IST
+
+Package: webui (1.98.0); urgency = medium
+
+Abstract:
+	Web - Auto Recording Video file is not generated for Particular Date and Time Event trigger - fixed.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_triggers_imp.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Mon, 13 Jun 2011 20:18:32 IST
+
+Package: webui (1.97.0); urgency = medium
+
+Abstract:
+	The following issue is solved:-
+Set Hostname with 255 characters, shows an IPMI ERROR:255
+
+Files Modified: data/MDS-Workspace/page/configure_dns.html, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/page/configure_dns.html
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Mon, 13 Jun 2011 12:30:49 IST
+
+Package: webui (1.96.0); urgency = high
+
+Abstract:
+	Following are the bugs fixed,
+* FTS [Flashing Sign Image] : IPMI error is thrown while uploading sign image with wrong key.
+* FTS [Flashing Sign Image] : Flasher service is getting crashed while uploading sign image with invalid key.
+
+Files Added: data/MDS-Workspace/www/rpc/validatesignkey.asp
+Files Modified: data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Fri, 10 Jun 2011 12:42:18 IST
+
+Package: webui (1.95.0); urgency = high
+
+Abstract:
+	Following are the issues solved,
+* Services : The alert message needs to be changed, if the user is trying to launch JViewer console when the KVM service is disabled - fixed.
+* Web - Invalid error message is appearing once we login to BMC - fixed.
+* Services page: timeout entered for ssh or telnet is not retained correctly - fixed.
+* Added proper error strings for set service configuration.
+* Minimum timeout value for SSH and telnet is changed to 60 for validation.
+* Added support to get the KVM service configuration in Triggers configuration page.
+* If KVM service is disabled, added help contents and information, when the user saves the trigger configuration.
+* JViewer and ActiveX launch buttons will be greyed out, when the KVM service is disabled.
+* Removed hardcoded URL framing in JNLP arguments, now URL is framed using the logged-in web session configuration.
+* Added arguments like KVM secure channel, KVM port and web port to Web Console Preview feature.
+* Added seperate RPC to get the service configuration based on service bit.
+* Updated help contents for services and triggers configuration page.
+
+Files Added: data/MDS-Workspace/www/rpc/getallservicescfg.asp, data/MDS-Workspace/www/rpc/getservicecfg.asp
+Files Deleted: data/MDS-Workspace/www/rpc/getservicescfg.asp
+Files Modified: data/MDS-Workspace/page/console_redirection.html, data/MDS-Workspace/page/dashboard.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_services_hlp.html, data/MDS-Workspace/www/help/EN/configure_triggers_hlp.html, data/MDS-Workspace/www/impl/configure_services_imp.js, data/MDS-Workspace/www/impl/configure_triggers_imp.js, data/MDS-Workspace/www/impl/console_redirection_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/jviewer_launch_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/page/console_redirection.html, data/MDS-Workspace/www/page/dashboard.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/style/page_style.css
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 09 Jun 2011 02:14:08 IST
+
+Package: webui (1.94.0); urgency = high
+
+Abstract:
+	Updated the condition to not display the timeout field for kvm and media services
+
+Files Modified: data/MDS-Workspace/www/impl/configure_services_imp.js
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 16:11:23 EDT
+
+Package: webui (1.93.0); urgency = high
+
+Abstract:
+	Updated the media string to appropriate individual components strings
+
+Files Modified: data/MDS-Workspace/www/impl/configure_services_imp.js
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 13:54:39 EDT
+
+Package: webui (1.92.0); urgency = medium
+
+Abstract:
+	The following issue is fixed.
+Users: On delete admin user in user slot throws ipmi error.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_users_imp.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Tue, 31 May 2011 19:58:04 IST
+
+Package: webui (1.91.0); urgency = medium
+
+Abstract:
+	The following issues are solved.
+
+IPMI error 213 throws on try to change vlan ID using vlan IP
+Help:- Help content is not available for Video Recording page. 
+The window displaying list of recent events needs some corrections.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_network_hlp.html, data/MDS-Workspace/www/help/EN/video_record_hlp.html, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/lib/web_alerts.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Mon, 30 May 2011 11:44:50 EDT
+
+Package: webui (1.90.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* When viewing UI pages that have sub-tabs (e.g. System & Audit Logs, PEF), the Refresh button always brings back to 1st tab.
+* Configuring users : Unable to enable SNMP status and access.
+* Web Client: In IE Browser clicking the arrow in the PAM Order page shows Error. Also in the Sensor readings page after sorting Sensor Name and Selecting 'ON' in Live Widget shows Error.
+* WEB : Time out for kvm and media under Services Page is not working.
+* Services : The alert message needs to be changed, if the user is trying to launch JViewer console when the KVM service is disabled.
+
+Files Added: data/MDS-Workspace/www/rpc/getfwinfo.asp
+Files Deleted: data/MDS-Workspace/www/rpc/getbldtime.asp, data/MDS-Workspace/www/rpc/getdeviceid.asp
+Files Modified: data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/system_audit_log.html, data/MDS-Workspace/www/impl/configure_pamorder_imp.js, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/impl/configure_services_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/header_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/system_audit_log_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/page/system_audit_log.html
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Mon, 30 May 2011 19:47:09 IST
+
+Package: webui (1.89.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* WEB GUI : Popup window is getting closed while pressing backspace key in IE.
+* Generate SSL page: fields should not accept inputs that are all numerics.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/impl/configure_services_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/lib/ui.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 04 May 2011 10:32:31 IST
+
+Package: webui (1.88.0); urgency = medium
+
+Abstract:
+	The following issues are solved:-
+
+1.When a window with the login page is open and that window is closed,
+the logged in sessions of the same browser expires.
+2.Live Widget is not opening in mozilla browser 3.6 version.
+
+Files Modified: data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/graph.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Fri, 27 May 2011 02:42:35 EDT
+
+Package: webui (1.87.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* User Privilege:IPMI Error 212 is thrown  in the 'Network Bond' page while Logging with a user having 'User' Privilege .Image attached for reference.
+* Web UI - There is no help text for Bind DN in LDAP
+* Services page: If you click on Cancel after trying to modify the web service, the page still gets logged out.
+* Network Link: Configuration confirmation message needs minor correction.
+* Web - Generate SSL fields are not clearing
+* Web Client: In IE Browser clicking the arrow in the PAM Order page shows Error. Also in the Sensor readings page after sorting Sensor Name and Selecting 'ON' in Live Widget shows Error.
+* Help page for PAM Ordering is wrongly named "Event Triggers".
+* Users:- user and operator privilege are not able to log into web page
+* Triggers configuration page: text on page and Help contents are confusing.
+* System Administrator age: typo on the page needs correction
+* User Management:- User Access check box is getting unchecked while clicking the SNMP status's check box of text
+* Web support for web console preview
+* Also removed SNMP related seperate confte
+
+Files Deleted: data/MDS-Workspace/page/configure_snmp.html, data/MDS-Workspace/www/help/EN/configure_snmp_hlp.html, data/MDS-Workspace/www/impl/configure_snmp_imp.js, data/MDS-Workspace/www/rpc/getsnmpconfig.asp, data/MDS-Workspace/www/rpc/getsnmpstatus.asp, data/MDS-Workspace/www/rpc/setsnmpconfig.asp, data/MDS-Workspace/www/str/EN/configure_snmp_str.js
+Files Modified: data/MDS-Workspace/page/configure_root.html, data/MDS-Workspace/page/configure_triggers.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_ldap_hlp.html, data/MDS-Workspace/www/help/EN/configure_pamorder_hlp.html, data/MDS-Workspace/www/help/EN/configure_triggers_hlp.html, data/MDS-Workspace/www/help/EN/configure_users_hlp.html, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_root_str.js, data/MDS-Workspace/www/str/EN/configure_triggers_str.js
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 26 May 2011 14:09:43 EDT
+
+Package: webui (1.86.0); urgency = high
+
+Abstract:
+	The following issues are solved:-
+1.System and Audit Log config: If you enable remote log, disable audit log, reboot. System Log page shows an IPMI error message
+2.The colour of the Live widget not changing based on the colour indicated in the graph.
+3.Save Network settings with unplugged network shows the status as network status has been saved successfully.
+4.Sensor Readings update in graph while the lan is unplugged.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/video_record_imp.js, data/MDS-Workspace/www/impl/widget_page_imp.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/lib/xmit.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Fri, 20 May 2011 04:08:44 EDT
+
+Package: webui (1.85.0); urgency = high
+
+Abstract:
+	* Added PAM Ordering support in web.
+* Removed seperate SNMP configuration from web.
+* Added features support for Overwrite files during Firmware flash.
+* Enabled SSH & Telnet timeout configurable in web.
+
+Files Added: data/MDS-Workspace/page/configure_pamorder.html, data/MDS-Workspace/www/help/EN/configure_pamorder_hlp.html, data/MDS-Workspace/www/impl/configure_pamorder_imp.js, data/MDS-Workspace/www/page/configure_pamorder.html, data/MDS-Workspace/www/res/arrow_down_16x16.png, data/MDS-Workspace/www/res/arrow_up_16x16.png, data/MDS-Workspace/www/rpc/getpamorder.asp, data/MDS-Workspace/www/rpc/setpamorder.asp, data/MDS-Workspace/www/str/EN/configure_pamorder_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_services_hlp.html, data/MDS-Workspace/www/impl/configure_services_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/style/page_style.css
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Sat, 14 May 2011 03:56:35 IST
+
+Package: webui (1.84.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 16:02:01 EDT
+
+Package: webui (1.83.0); urgency = high
+
+Abstract:
+	Added Event Trigger configuration support in web.
+
+Files Added: data/MDS-Workspace/page/configure_triggers.html, data/MDS-Workspace/www/help/EN/configure_triggers_hlp.html, data/MDS-Workspace/www/impl/configure_triggers_imp.js, data/MDS-Workspace/www/page/configure_triggers.html, data/MDS-Workspace/www/rpc/gettriggercfg.asp, data/MDS-Workspace/www/rpc/settriggercfg.asp, data/MDS-Workspace/www/str/EN/configure_triggers_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 11 May 2011 21:15:54 IST
+
+Package: webui (1.82.0); urgency = high
+
+Abstract:
+	* Added Console Web Preview support.
+* Added common function in library to check for the Project configuration.
+* Added help content based on Project configuration support.
+
+Files Modified: data/MDS-Workspace/page/dashboard.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_vmedia_devices_hlp.html, data/MDS-Workspace/www/help/EN/dashboard_hlp.html, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/page/dashboard.html, data/MDS-Workspace/www/str/EN/dashboard_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 09 May 2011 18:00:47 IST
+
+Package: webui (1.81.0); urgency = medium
+
+Abstract:
+	* Web:Invalid NTP server gives some date for BMC - Using the error code, defect fixed in UI.
+ * Added Event type filters with respect to System software Type in IPMI specification.
+
+Files Modified: data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_ntp_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 05 May 2011 11:16:35 IST
+
+Package: webui (1.80.0); urgency = low
+
+Abstract:
+	Removing network link type field Network Link webpage
+
+Files Modified: data/MDS-Workspace/page/configure_phy.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_phy_hlp.html, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/page/configure_phy.html, data/MDS-Workspace/www/str/EN/configure_phy_str.js
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Mon, 02 May 2011 20:43:23 IST
+
+Package: webui (1.79.0); urgency = medium
+
+Abstract:
+	* Added BindDN and Bind password option in LDAP configuration page.
+* Optimized the existing LDAP configuration implementation.
+* Removed unwanted rpc files.
+
+Files Added: data/MDS-Workspace/www/rpc/getldapcfg.asp, data/MDS-Workspace/www/rpc/getldaprolegroupcfg.asp, data/MDS-Workspace/www/rpc/setldapcfg.asp, data/MDS-Workspace/www/rpc/setldaprolegroupcfg.asp
+Files Deleted: data/MDS-Workspace/www/rpc/getldapconfig.asp, data/MDS-Workspace/www/rpc/ldap_addrolegroup.asp, data/MDS-Workspace/www/rpc/ldap_delrolegroup.asp, data/MDS-Workspace/www/rpc/ldap_getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/ldap_getldapgroupcfg.asp, data/MDS-Workspace/www/rpc/ldap_modrolegroup.asp, data/MDS-Workspace/www/rpc/setldapconfig.asp
+Files Modified: data/MDS-Workspace/page/configure_ldap.html, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/page/configure_ldap.html, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 27 Apr 2011 18:19:44 IST
+
+Package: webui (1.78.0); urgency = high
+
+Abstract:
+	Following are the bugs fixed,
+ * In web-page,Newly generated Event not dispalyed its content in detail.
+ * Logs in event & systemlog are not meaningful.
+ * When the prompt " new events occured" is clicked events appear in misalligned manner.
+ * When we generate some new events in sel, the pop up is not reguarly shown in the web page.
+ * Content in local media area sould get vanishes after we click delete images button.
+
+Files Modified: data/MDS-Workspace/page/event_log.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/lib/web_alerts.js, data/MDS-Workspace/www/page/event_log.html
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 20 Apr 2011 17:32:27 IST
+
+Package: webui (1.77.0); urgency = medium
+
+Abstract:
+	Added provision for not to preseve SDR
+
+Files Modified: data/MDS-Workspace/www/impl/fw_update_imp.js
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Tue, 19 Apr 2011 00:12:49 IST
+
+Package: webui (1.76.0); urgency = medium
+
+Abstract:
+	Removed Interfaces page, as Services configuration is added
+
+Files Deleted: data/MDS-Workspace/page/configure_interfaces.html, data/MDS-Workspace/www/help/EN/configure_interfaces_hlp.html, data/MDS-Workspace/www/impl/configure_interfaces_imp.js, data/MDS-Workspace/www/page/configure_interfaces.html, data/MDS-Workspace/www/rpc/getsession.asp, data/MDS-Workspace/www/rpc/setsession.asp, data/MDS-Workspace/www/str/EN/configure_interfaces_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 18 Apr 2011 17:40:49 IST
+
+Package: webui (1.75.0); urgency = high
+
+Abstract:
+	Redesigned SSL page to upload both certificate and privacy key simultaneously.
+Following are the bugs fixed,
+* User: 20 bytes password is not accepted in google chrome browser.
+* Web clicent - IPMI error is displaying for wrong Email ID.
+* WebClient: IPv4 Address on the DashBoard page is displayed as '0.0.0.0' when eth0 is connected and when logged with eth1 ip.Image attached for reference.
+* SMTP: Valid user credentials for secondary SMTP servers is not accessible.
+* SSL:-Uploaded ssl file should get vanished once we abort ssl upload process.
+
+Files Modified: data/MDS-Workspace/page/configure_ssl.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/page/configure_ssl.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_ssl_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 11 Apr 2011 19:51:15 IST
+
+Package: webui (1.74.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* Generate SSL page: fields should not accept inputs that are all numerics.
+* [MegaRAC SP-X-Rainier] SSL Key can not upload success.
+* Web(Event Log): Event Log under Server Health tab is not displayed for 'BIOS Generated Events' and 'System Management Software Events'.
+* Subnetmask:Validation need to be done in subnetmask field.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_interfaces_imp.js, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_ncsi_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_ntp_imp.js, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/impl/configure_remote_session_imp.js, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/impl/configure_services_imp.js, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/video_record_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 08 Apr 2011 16:23:27 IST
+
+Package: webui (1.73.0); urgency = medium
+
+Abstract:
+	The following Bugs are Fixed:-
+
+1.Both 16 and 20 bytes password size options checked when Modifing User password in IE 7 browser.
+2.The "20 Bytes password size "option can not be choosen when adding new users in IE 7 browser.
+3.Help text shows wrong description for creating the new user name.
+4.FRU page: the text on page includes the word Information a total of 6 times in 1 sentence.
+5.SSL: After uploading SSL certificate it says 'SSL or Key File does not exist' and values 
+  of 'Current Certificate and Current Privacy Key ' are NONE.
+
+Files Modified: data/MDS-Workspace/page/fru_info.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_users_hlp.html, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/form.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/fru_info_str.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Wed, 06 Apr 2011 12:55:06 IST
+
+Package: webui (1.72.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* WEB GUI [Add LAN Destination] : Help page should get updated according to page design.
+* WEB GUI [Add Alert Policy]: Help Page should get updated as per page design.
+* Video recording page: Message displayed when no video files are present needs minor correction.
+
+Files Modified: data/MDS-Workspace/page/configure_users.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_pef_hlp.html, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/page/configure_users.html, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Apr 2011 12:34:27 IST
+
+Package: webui (1.71.0); urgency = medium
+
+Abstract:
+	* Added validation and proper set arguments for various services.
+* Added help contents for Services page.
+* Added features support for services configuration.
+* Optimized help coding in PEF page.
+* Defect, Help text - System Administrator help text heading is displays wrongly - fixed.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_pef_hlp.html, data/MDS-Workspace/www/help/EN/configure_root_hlp.html, data/MDS-Workspace/www/help/EN/configure_services_hlp.html, data/MDS-Workspace/www/impl/configure_services_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 04 Apr 2011 13:42:09 IST
+
+Package: webui (1.70.0); urgency = high
+
+Abstract:
+	Added network bonding changes in UI
+
+Files Added: data/MDS-Workspace/www/rpc/checknwbond.asp
+Files Modified: data/MDS-Workspace/page/configure_nw_bond.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_nw_bond_hlp.html, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/page/configure_nw_bond.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_nw_bond_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 28 Mar 2011 22:56:14 IST
+
+Package: webui (1.69.0); urgency = medium
+
+Abstract:
+	Added Sevices configuration support in UI, and the menu option is made as disabled, till complete core is added.
+
+Files Added: data/MDS-Workspace/page/configure_services.html, data/MDS-Workspace/www/help/EN/configure_services_hlp.html, data/MDS-Workspace/www/impl/configure_services_imp.js, data/MDS-Workspace/www/page/configure_services.html, data/MDS-Workspace/www/rpc/getservicescfg.asp, data/MDS-Workspace/www/rpc/setservicecfg.asp, data/MDS-Workspace/www/str/EN/configure_services_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_sys_audit_log_imp.js, data/MDS-Workspace/www/lib/form.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 25 Mar 2011 16:58:43 IST
+
+Package: webui (1.68.0); urgency = medium
+
+Abstract:
+	Following are the defects fixed,
+* Web Client : Field Validation fails for 'Server Domain Addresses' under Active Directory ->Advanced Settings. Image attached for reference.
+* Web:Unable to set primary and secondary SMTP server ip address.
+* Web client : In View SSL page, all the fields is showing only 32 characters.
+
+Files Modified: data/MDS-Workspace/page/configure_ssl.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/page/configure_ssl.html
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 23 Mar 2011 19:13:16 IST
+
+Package: webui (1.67.1); urgency = low
+
+Abstract:
+	Discrete sensor should not be always as a "critical" status.
+If sensor reading checked no any event, the status should be as a normal.
+
+Files Modified: data/MDS-Workspace/www/impl/dashboard_imp.js
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 23 Mar 2011 18:06:52 CST
+
+Package: webui (1.67.0); urgency = high
+
+Abstract:
+	Following are the defects fixed,
+ * WebClient-The message "Couldn't retrieve lan channel information" is displayed when login with new user[priv level -user]
+ * Help:SSL Help page are not displaying while navigating in web-page.
+Also updated file format for all UI files.
+
+Files Modified: data/MDS-Workspace/page/activex_launch.html, data/MDS-Workspace/page/add_mod_pef.html, data/MDS-Workspace/page/blank.html, data/MDS-Workspace/page/configure_active_directory.html, data/MDS-Workspace/page/configure_dns.html, data/MDS-Workspace/page/configure_interfaces.html, data/MDS-Workspace/page/configure_ldap.html, data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/configure_mouse_mode.html, data/MDS-Workspace/page/configure_ncsi.html, data/MDS-Workspace/page/configure_network.html, data/MDS-Workspace/page/configure_ntp.html, data/MDS-Workspace/page/configure_nw_bond.html, data/MDS-Workspace/page/configure_pef.html, data/MDS-Workspace/page/configure_phy.html, data/MDS-Workspace/page/configure_radius.html, data/MDS-Workspace/page/configure_remote_session.html, data/MDS-Workspace/page/configure_root.html, data/MDS-Workspace/page/configure_smtp.html, data/MDS-Workspace/page/configure_ssl.html, data/MDS-Workspace/page/configure_sys_audit_log.html, data/MDS-Workspace/page/configure_users.html, data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/page/console_redirection.html, data/MDS-Workspace/page/dashboard.html, data/MDS-Workspace/page/disable_javascript.html, data/MDS-Workspace/page/event_log.html, data/MDS-Workspace/page/file_upload.html, data/MDS-Workspace/page/fru_info.html, data/MDS-Workspace/page/fw_update.html, data/MDS-Workspace/page/header.html, data/MDS-Workspace/page/jviewer_launch.html, data/MDS-Workspace/page/login.html, data/MDS-Workspace/page/main.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/resetDevice.html, data/MDS-Workspace/page/restore_factory.html, data/MDS-Workspace/page/sensor_readings.html, data/MDS-Workspace/page/server_power_control.html, data/MDS-Workspace/page/session_expired.html, data/MDS-Workspace/page/system_audit_log.html, data/MDS-Workspace/page/video_record.html, data/MDS-Workspace/page/widget_page.html, data/MDS-Workspace/releasenotes.txt, data/MDS-Workspace/www/help/EN/activex_launch_hlp.html, data/MDS-Workspace/www/help/EN/blank_hlp.html, data/MDS-Workspace/www/help/EN/configure_mouse_mode_hlp.html, data/MDS-Workspace/www/help/EN/configure_network_hlp.html, data/MDS-Workspace/www/help/EN/configure_remote_session_hlp.html, data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/help/EN/configure_users_hlp.html, data/MDS-Workspace/www/help/EN/console_redirection_hlp.html, data/MDS-Workspace/www/help/EN/dashboard_hlp.html, data/MDS-Workspace/www/help/EN/event_log_hlp.html, data/MDS-Workspace/www/help/EN/fw_update_hlp.html, data/MDS-Workspace/www/help/EN/header_hlp.html, data/MDS-Workspace/www/help/EN/jviewer_launch_hlp.html, data/MDS-Workspace/www/help/EN/login_hlp.html, data/MDS-Workspace/www/help/EN/main_hlp.html, data/MDS-Workspace/www/help/EN/resetDevice_hlp.html, data/MDS-Workspace/www/help/EN/sensor_readings_hlp.html, data/MDS-Workspace/www/help/EN/server_power_control_hlp.html, data/MDS-Workspace/www/help/EN/widget_page_hlp.html, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/index.html, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/bitset.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/eExt.js, data/MDS-Workspace/www/lib/eGUI.js, data/MDS-Workspace/www/lib/eLang.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/lib/events.js, data/MDS-Workspace/www/lib/factory.js, data/MDS-Workspace/www/lib/form.js, data/MDS-Workspace/www/lib/graph.js, data/MDS-Workspace/www/lib/include.js, data/MDS-Workspace/www/lib/listgrid.css, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/lib/menu.js, data/MDS-Workspace/www/lib/mini_inc.js, data/MDS-Workspace/www/lib/ns_inc.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/lib/web_alerts.js, data/MDS-Workspace/www/lib/widget.js, data/MDS-Workspace/www/lib/xmit.css, data/MDS-Workspace/www/lib/xmit.js, data/MDS-Workspace/www/page/activex_launch.html, data/MDS-Workspace/www/page/add_mod_pef.html, data/MDS-Workspace/www/page/blank.html, data/MDS-Workspace/www/page/configure_active_directory.html, data/MDS-Workspace/www/page/configure_dns.html, data/MDS-Workspace/www/page/configure_interfaces.html, data/MDS-Workspace/www/page/configure_ldap.html, data/MDS-Workspace/www/page/configure_lmedia.html, data/MDS-Workspace/www/page/configure_mouse_mode.html, data/MDS-Workspace/www/page/configure_ncsi.html, data/MDS-Workspace/www/page/configure_network.html, data/MDS-Workspace/www/page/configure_ntp.html, data/MDS-Workspace/www/page/configure_nw_bond.html, data/MDS-Workspace/www/page/configure_pef.html, data/MDS-Workspace/www/page/configure_phy.html, data/MDS-Workspace/www/page/configure_radius.html, data/MDS-Workspace/www/page/configure_remote_session.html, data/MDS-Workspace/www/page/configure_root.html, data/MDS-Workspace/www/page/configure_smtp.html, data/MDS-Workspace/www/page/configure_ssl.html, data/MDS-Workspace/www/page/configure_sys_audit_log.html, data/MDS-Workspace/www/page/configure_users.html, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/page/console_redirection.html, data/MDS-Workspace/www/page/dashboard.html, data/MDS-Workspace/www/page/disable_javascript.html, data/MDS-Workspace/www/page/event_log.html, data/MDS-Workspace/www/page/file_upload.html, data/MDS-Workspace/www/page/fru_info.html, data/MDS-Workspace/www/page/fw_update.html, data/MDS-Workspace/www/page/header.html, data/MDS-Workspace/www/page/jviewer_launch.html, data/MDS-Workspace/www/page/login.html, data/MDS-Workspace/www/page/main.html, data/MDS-Workspace/www/page/resetDevice.html, data/MDS-Workspace/www/page/restore_factory.html, data/MDS-Workspace/www/page/sensor_readings.html, data/MDS-Workspace/www/page/server_power_control.html, data/MDS-Workspace/www/page/session_expired.html, data/MDS-Workspace/www/page/system_audit_log.html, data/MDS-Workspace/www/page/video_record.html, data/MDS-Workspace/www/page/widget_page.html, data/MDS-Workspace/www/rpc/WEBSES/create.asp, data/MDS-Workspace/www/rpc/WEBSES/logout.asp, data/MDS-Workspace/www/rpc/WEBSES/validate.asp, data/MDS-Workspace/www/rpc/addmoduser.asp, data/MDS-Workspace/www/rpc/addrolegroup.asp, data/MDS-Workspace/www/rpc/checksignimagesupport.asp, data/MDS-Workspace/www/rpc/clearsel.asp, data/MDS-Workspace/www/rpc/configurepef.asp, data/MDS-Workspace/www/rpc/deletevideo.asp, data/MDS-Workspace/www/rpc/delrolegroup.asp, data/MDS-Workspace/www/rpc/deluser.asp, data/MDS-Workspace/www/rpc/downloadvideo.asp, data/MDS-Workspace/www/rpc/flash_browserclosed.asp, data/MDS-Workspace/www/rpc/flashfile_upload_starts.asp, data/MDS-Workspace/www/rpc/flashstatus.asp, data/MDS-Workspace/www/rpc/generatessl.asp, data/MDS-Workspace/www/rpc/getactiveconsolestatus.asp, data/MDS-Workspace/www/rpc/getactivedircfg.asp, data/MDS-Workspace/www/rpc/getactivexcfg.asp, data/MDS-Workspace/www/rpc/getadvisercfg.asp, data/MDS-Workspace/www/rpc/getalertlevels.asp, data/MDS-Workspace/www/rpc/getalllancfg.asp, data/MDS-Workspace/www/rpc/getallpefcfg.asp, data/MDS-Workspace/www/rpc/getallpolicycfg.asp, data/MDS-Workspace/www/rpc/getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/getallselentries.asp, data/MDS-Workspace/www/rpc/getallsensors.asp, data/MDS-Workspace/www/rpc/getalluserinfo.asp, data/MDS-Workspace/www/rpc/getauditlog.asp, data/MDS-Workspace/www/rpc/getbldtime.asp, data/MDS-Workspace/www/rpc/getdatetime.asp, data/MDS-Workspace/www/rpc/getdeviceid.asp, data/MDS-Workspace/www/rpc/getdnscfg.asp, data/MDS-Workspace/www/rpc/getemailformat.asp, data/MDS-Workspace/www/rpc/getfruinfo.asp, data/MDS-Workspace/www/rpc/getlanalertdests.asp, data/MDS-Workspace/www/rpc/getlanchannelinfo.asp, data/MDS-Workspace/www/rpc/getlandeststable.asp, data/MDS-Workspace/www/rpc/getldapconfig.asp, data/MDS-Workspace/www/rpc/getlmediaimage.asp, data/MDS-Workspace/www/rpc/getlogcfg.asp, data/MDS-Workspace/www/rpc/getmaxselentries.asp, data/MDS-Workspace/www/rpc/getmousemode.asp, data/MDS-Workspace/www/rpc/getncsicfg.asp, data/MDS-Workspace/www/rpc/getntpcfg.asp, data/MDS-Workspace/www/rpc/getnwbondcfg.asp, data/MDS-Workspace/www/rpc/getnwconfig.asp, data/MDS-Workspace/www/rpc/getphycfg.asp, data/MDS-Workspace/www/rpc/getphysupportcfg.asp, data/MDS-Workspace/www/rpc/getprojectcfg.asp, data/MDS-Workspace/www/rpc/getradiuscfg.asp, data/MDS-Workspace/www/rpc/getremotesession.asp, data/MDS-Workspace/www/rpc/getrole.asp, data/MDS-Workspace/www/rpc/getromfilesize.asp, data/MDS-Workspace/www/rpc/getrootcfg.asp, data/MDS-Workspace/www/rpc/getselentries.asp, data/MDS-Workspace/www/rpc/getsession.asp, data/MDS-Workspace/www/rpc/getsessiontoken.asp, data/MDS-Workspace/www/rpc/getsignimagekey.asp, data/MDS-Workspace/www/rpc/getsmtpcfg.asp, data/MDS-Workspace/www/rpc/getsslcertstatus.asp, data/MDS-Workspace/www/rpc/getsystemlog.asp, data/MDS-Workspace/www/rpc/getvideoinfo.asp, data/MDS-Workspace/www/rpc/getvmediacfg.asp, data/MDS-Workspace/www/rpc/hostctl.asp, data/MDS-Workspace/www/rpc/hoststatus.asp, data/MDS-Workspace/www/rpc/ldap_addrolegroup.asp, data/MDS-Workspace/www/rpc/ldap_delrolegroup.asp, data/MDS-Workspace/www/rpc/ldap_getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/ldap_getldapgroupcfg.asp, data/MDS-Workspace/www/rpc/ldap_modrolegroup.asp, data/MDS-Workspace/www/rpc/modrolegroup.asp, data/MDS-Workspace/www/rpc/postflashreset.asp, data/MDS-Workspace/www/rpc/prepflash.asp, data/MDS-Workspace/www/rpc/rebootcard.asp, data/MDS-Workspace/www/rpc/restartwebserver.asp, data/MDS-Workspace/www/rpc/setactivedircfg.asp, data/MDS-Workspace/www/rpc/setalertentry.asp, data/MDS-Workspace/www/rpc/setalertpolicy.asp, data/MDS-Workspace/www/rpc/setdatetime.asp, data/MDS-Workspace/www/rpc/setdnscfg.asp, data/MDS-Workspace/www/rpc/setfactorydefaults.asp, data/MDS-Workspace/www/rpc/setlandest.asp, data/MDS-Workspace/www/rpc/setldapconfig.asp, data/MDS-Workspace/www/rpc/setlmediaimage.asp, data/MDS-Workspace/www/rpc/setlogcfg.asp, data/MDS-Workspace/www/rpc/setmousemode.asp, data/MDS-Workspace/www/rpc/setncsicfg.asp, data/MDS-Workspace/www/rpc/setntpcfg.asp, data/MDS-Workspace/www/rpc/setnwbondcfg.asp, data/MDS-Workspace/www/rpc/setnwconfig.asp, data/MDS-Workspace/www/rpc/setphycfg.asp, data/MDS-Workspace/www/rpc/setradiuscfg.asp, data/MDS-Workspace/www/rpc/setremotesession.asp, data/MDS-Workspace/www/rpc/setrootcfg.asp, data/MDS-Workspace/www/rpc/setsession.asp, data/MDS-Workspace/www/rpc/setsmtpcfg.asp, data/MDS-Workspace/www/rpc/setvmediacfg.asp, data/MDS-Workspace/www/rpc/startflash.asp, data/MDS-Workspace/www/rpc/testalert.asp, data/MDS-Workspace/www/rpc/validatesslcert.asp, data/MDS-Workspace/www/rpc/verifyimage.asp, data/MDS-Workspace/www/rpc/viewssl.asp, data/MDS-Workspace/www/str/EN/bios_post_event_str.js, data/MDS-Workspace/www/str/EN/chassistype_str.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/err_str.js, data/MDS-Workspace/www/str/EN/event_str.js, data/MDS-Workspace/www/str/EN/global_str.js, data/MDS-Workspace/www/str/EN/noreading_str.js, data/MDS-Workspace/www/str/EN/sensor_specific_event_str.js, data/MDS-Workspace/www/str/EN/sensortype_str.js, data/MDS-Workspace/www/str/EN/threshstate_str.js, data/MDS-Workspace/www/str/EN/tz_str.js, data/MDS-Workspace/www/str/EN/unittype_str.js, data/MDS-Workspace/www/str/title_str.js, data/MDS-Workspace/www/style/app_style.css, data/MDS-Workspace/www/style/header_style.css, data/MDS-Workspace/www/style/help_style.css, data/MDS-Workspace/www/style/login_style.css, data/MDS-Workspace/www/style/page_style.css, data/MDS-Workspace/www/style/widget_style.css
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 22 Mar 2011 19:03:48 IST
+
+Package: webui (1.66.0); urgency = low
+
+Abstract:
+	Use cookie to replace 'gMulitLAN' variables.
+Due to the second browser can't read global variables.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/impl/login_imp.js
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Mon, 21 Mar 2011 14:36:29 CST
+
+Package: webui (1.65.0); urgency = medium
+
+Abstract:
+	* Added core supported bonding modes in UI.
+* Added features configuration for Interfaces.
+
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_interfaces_imp.js, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 17 Mar 2011 11:07:13 IST
+
+Package: webui (1.64.0); urgency = high
+
+Abstract:
+	* Added Interfaces configuration support.
+* Removed seperate web configuration page and added the web configuration in interfaces configuration.
+
+Files Added: data/MDS-Workspace/page/configure_interfaces.html, data/MDS-Workspace/www/help/EN/configure_interfaces_hlp.html, data/MDS-Workspace/www/impl/configure_interfaces_imp.js, data/MDS-Workspace/www/page/configure_interfaces.html, data/MDS-Workspace/www/rpc/getsession.asp, data/MDS-Workspace/www/rpc/setsession.asp, data/MDS-Workspace/www/str/EN/configure_interfaces_str.js
+Files Deleted: data/MDS-Workspace/page/configure_web_session.html, data/MDS-Workspace/www/help/EN/configure_web_session_hlp.html, data/MDS-Workspace/www/impl/configure_web_session_imp.js, data/MDS-Workspace/www/page/configure_web_session.html, data/MDS-Workspace/www/rpc/getwebsession.asp, data/MDS-Workspace/www/rpc/setwebsession.asp, data/MDS-Workspace/www/str/EN/configure_web_session_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 14 Mar 2011 19:59:33 IST
+
+Package: webui (1.63.0); urgency = medium
+
+Abstract:
+	The following bugs are fixed:-
+
+1.SSL certificate expiration period should be supported upto 3650 days as like fts.
+2.Generating ssl certificate with special characters is misleading.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/lib/eVal.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Thu, 10 Mar 2011 20:05:22 IST
+
+Package: webui (1.62.0); urgency = high
+
+Abstract:
+	Added support to configure web session timeout value.
+
+Files Added: data/MDS-Workspace/page/configure_web_session.html, data/MDS-Workspace/www/help/EN/configure_web_session_hlp.html, data/MDS-Workspace/www/impl/configure_web_session_imp.js, data/MDS-Workspace/www/page/configure_web_session.html, data/MDS-Workspace/www/rpc/getwebsession.asp, data/MDS-Workspace/www/rpc/setwebsession.asp, data/MDS-Workspace/www/str/EN/configure_web_session_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_remote_session.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_remote_session_hlp.html, data/MDS-Workspace/www/impl/configure_remote_session_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page/configure_remote_session.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_remote_session_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 07 Mar 2011 19:52:03 IST
+
+Package: webui (1.61.0); urgency = high
+
+Abstract:
+	* Added VLAN configuration support.
+* Removed hardcoded System administrator username and added a support to get username using getpwuid.
+
+Files Deleted: data/MDS-Workspace/www/rpc/playvideo.asp
+Files Modified: data/MDS-Workspace/page/configure_network.html, data/MDS-Workspace/page/configure_root.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_network_hlp.html, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/page/configure_network.html, data/MDS-Workspace/www/page/configure_root.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_network_str.js, data/MDS-Workspace/www/str/EN/configure_root_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 04 Mar 2011 17:00:32 IST
+
+Package: webui (1.60.0); urgency = high
+
+Abstract:
+	Added video record feature in UI.
+
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_ncsi_imp.js, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/impl/jviewer_launch_imp.js, data/MDS-Workspace/www/impl/video_record_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/mini_inc.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/page/configure_lmedia.html
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 16:21:06 IST
+
+Package: webui (1.59.0); urgency = low
+
+Abstract:
+	Instead of restarting web server, now only HTTPS service is restarted for uploading and generating the SSL certificate.
+
+Files Added: data/MDS-Workspace/www/rpc/restarthttps.asp
+Files Modified: data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 02 Mar 2011 15:45:33 IST
+
+Package: webui (1.58.0); urgency = medium
+
+Abstract:
+	The following Bugs are fixed:-
+1.UI: Notification message for Recent Events has a minor type.
+2.In SMTP Settings ,able to set the same Server Addresses for both Primary SMTP Server and Secondary SMTP Server.
+3.On changing Encryption or VM Attachmode, console closes without any confirmation messages.
+4.Mismatching the board Information in FRU Information page & in it's HELP page.
+5.Common name[CN] field in Generate SSL doesn't accepts more than 64 bytes.
+6.After uploading ssl, message showing whole device should reset for new ssl to take effect.
+
+Files Modified: data/MDS-Workspace/page/configure_ssl.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/help/EN/fru_info_hlp.html, data/MDS-Workspace/www/impl/configure_remote_session_imp.js, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/lib/web_alerts.js, data/MDS-Workspace/www/page/configure_ssl.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_ssl_str.js
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Mon, 28 Feb 2011 12:24:57 IST
+
+Package: webui (1.57.0); urgency = high
+
+Abstract:
+	* Added Video recording UI design alone.
+* Added comments for implementation.
+
+Files Added: data/MDS-Workspace/page/video_record.html, data/MDS-Workspace/www/help/EN/video_record_hlp.html, data/MDS-Workspace/www/impl/video_record_imp.js, data/MDS-Workspace/www/page/video_record.html, data/MDS-Workspace/www/rpc/deletevideo.asp, data/MDS-Workspace/www/rpc/downloadvideo.asp, data/MDS-Workspace/www/rpc/getvideoinfo.asp, data/MDS-Workspace/www/rpc/playvideo.asp, data/MDS-Workspace/www/str/EN/video_record_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/configure_root.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/jviewer_launch_imp.js, data/MDS-Workspace/www/index.html, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/mini_inc.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page/configure_lmedia.html, data/MDS-Workspace/www/page/configure_root.html, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 28 Feb 2011 11:23:22 IST
+
+Package: webui (1.56.0); urgency = medium
+
+Abstract:
+	Added comments for implementation functions.
+
+Files Modified: data/MDS-Workspace/page/configure_ncsi.html, data/MDS-Workspace/page/configure_phy.html, data/MDS-Workspace/page/configure_smtp.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_ncsi_imp.js, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/page/configure_ncsi.html, data/MDS-Workspace/www/page/configure_phy.html, data/MDS-Workspace/www/page/configure_smtp.html, data/MDS-Workspace/www/str/EN/configure_smtp_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 24 Feb 2011 20:42:45 IST
+
+Package: webui (1.55.0); urgency = medium
+
+Abstract:
+	Added comments for implementation functions.
+
+Files Modified: data/MDS-Workspace/page/configure_nw_bond.html, data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/page/configure_nw_bond.html, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 23 Feb 2011 20:20:51 IST
+
+Package: webui (1.54.0); urgency = medium
+
+Abstract:
+	Changes added as per network bonding in Network link page.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_phy_imp.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 15 Feb 2011 15:49:17 IST
+
+Package: webui (1.53.0); urgency = medium
+
+Abstract:
+	Increased the system administrator password size to 64characters.
+
+Files Modified: data/MDS-Workspace/page/configure_root.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_root_hlp.html, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/page/configure_root.html, data/MDS-Workspace/www/str/EN/configure_root_str.js
+
+--Submitter: arockia (arockiaa@ami.com) Mon, 14 Feb 2011 18:06:15 IST
+
+Package: webui (1.52.0); urgency = medium
+
+Abstract:
+	Network related changes added in network link page.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/lib/common_fn.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 10 Feb 2011 19:28:16 IST
+
+Package: webui (1.51.0); urgency = medium
+
+Abstract:
+	* Updated help contents as per network configuration page.
+* Added proper error message, when there is not in supported capabiliites of phy configuration.
+* Minor changes in interface name string in network and ncsi page.
+
+Files Modified: data/MDS-Workspace/page/configure_ncsi.html, data/MDS-Workspace/page/configure_network.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_ncsi_hlp.html, data/MDS-Workspace/www/help/EN/configure_network_hlp.html, data/MDS-Workspace/www/impl/configure_ncsi_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/page/configure_ncsi.html, data/MDS-Workspace/www/page/configure_network.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_ncsi_str.js, data/MDS-Workspace/www/str/EN/configure_network_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 10 Feb 2011 18:31:35 IST
+
+Package: webui (1.50.0); urgency = medium
+
+Abstract:
+	Added proper error message, when enabling network bonding with insufficient interfaces count.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_nw_bond_hlp.html, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 10 Feb 2011 01:22:57 IST
+
+Package: webui (1.49.0); urgency = high
+
+Abstract:
+	Network related changes for enabling bond support.
+
+Files Modified: data/MDS-Workspace/page/configure_dns.html, data/MDS-Workspace/page/configure_network.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_dns_hlp.html, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/impl/configure_remote_session_imp.js, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/configure_snmp_imp.js, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/impl/fru_info_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/page/configure_dns.html, data/MDS-Workspace/www/page/configure_network.html, data/MDS-Workspace/www/str/EN/configure_network_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 10 Feb 2011 00:46:16 IST
+
+Package: webui (1.48.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* Help texts are not displaying properly.
+* In PEF Management page, when we click Event filter the description shows wrongly.
+* Sensor Readings page: the graph representing event log entries needs a few minor changes.
+* pilot3-spx) Ipv6-Active Directory not support.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_active_directory_hlp.html, data/MDS-Workspace/www/help/EN/configure_ldap_hlp.html, data/MDS-Workspace/www/impl/configure_active_directory_imp.js, data/MDS-Workspace/www/impl/sensor_readings_imp.js, data/MDS-Workspace/www/lib/graph.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: arockia (arockiaa@ami.com) Fri, 04 Feb 2011 17:44:44 IST
+
+Package: webui (1.47.0); urgency = high
+
+Abstract:
+	Merged network bonding core support with UI.
+
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_nw_bond.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_nw_bond_hlp.html, data/MDS-Workspace/www/help/EN/configure_phy_hlp.html, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/page/configure_nw_bond.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_nw_bond_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 03 Feb 2011 23:46:30 IST
+
+Package: webui (1.46.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* No help text for Network link configuration page.
+* Fru details should be same in Web-page & IPMI.
+* Saved UTC time Zone is not shown in the NTP page.
+* BMC timeZone and client time zone differs.
+* If you click on Send Test Alert, the info message mentions emails only, even if the alert destination was of type SNMP trap.
+
+Files Modified: data/MDS-Workspace/page/fru_info.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_phy_hlp.html, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/page/fru_info.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/fru_info_str.js
+
+--Submitter: arockia (arockiaa@ami.com) Wed, 02 Feb 2011 18:54:48 IST
+
+Package: webui (1.45.0); urgency = high
+
+Abstract:
+	* Added Network Bonding configuration support in UI and made it disabled, until core is added.
+* Added Network Link as features list.
+* Bug, Key length field in generate ssl page is misleading - fixed.
+
+Files Added: data/MDS-Workspace/page/configure_nw_bond.html, data/MDS-Workspace/www/help/EN/configure_nw_bond_hlp.html, data/MDS-Workspace/www/impl/configure_nw_bond_imp.js, data/MDS-Workspace/www/page/configure_nw_bond.html, data/MDS-Workspace/www/rpc/getnwbondcfg.asp, data/MDS-Workspace/www/rpc/setnwbondcfg.asp, data/MDS-Workspace/www/str/EN/configure_nw_bond_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 01 Feb 2011 14:54:33 IST
+
+Package: webui (1.44.0); urgency = high
+
+Abstract:
+	Minor changes in DNS page as per core changes in Register BMC option.
+
+Files Modified: data/MDS-Workspace/page/configure_root.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_root_hlp.html, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/page/configure_root.html
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 28 Jan 2011 13:29:16 IST
+
+Package: webui (1.43.0); urgency = high
+
+Abstract:
+	* Added generate and view SSL certificate information in UI.
+* Added 64 characters support for SMTP username and password.
+
+Files Added: data/MDS-Workspace/www/rpc/generatessl.asp, data/MDS-Workspace/www/rpc/viewssl.asp
+Files Modified: data/MDS-Workspace/page/configure_smtp.html, data/MDS-Workspace/page/configure_ssl.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/page/configure_smtp.html, data/MDS-Workspace/www/page/configure_ssl.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_ssl_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 26 Jan 2011 00:46:28 IST
+
+Package: webui (1.42.0); urgency = medium
+
+Abstract:
+	* Added support to configure password size option in UI.
+* Removed getreserved users RPC.
+* Changed minimum password size check from 8 to 1.
+* Changed minimum IPMI username length check from 4 to 1.
+
+Files Deleted: data/MDS-Workspace/www/rpc/getreservedusers.asp
+Files Modified: data/MDS-Workspace/www/help/EN/configure_users_hlp.html, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/lib/form.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 21 Jan 2011 18:43:30 IST
+
+Package: webui (1.41.0); urgency = high
+
+Abstract:
+	Added UI support to register FQDN via DHCP.
+
+Files Modified: data/MDS-Workspace/page/configure_dns.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_dns_hlp.html, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/page/configure_dns.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_dns_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 20 Jan 2011 00:42:35 IST
+
+Package: webui (1.40.0); urgency = high
+
+Abstract:
+	* UI Changes as per get and set DNS configuration in LIBIFC.
+* Bug, Event log's time stamp shows a wrong value - fixed.
+
+Files Modified: data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/rpc/getdnscfg.asp, data/MDS-Workspace/www/rpc/setdnscfg.asp
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 18 Jan 2011 13:37:00 IST
+
+Package: webui (1.39.0); urgency = high
+
+Abstract:
+	Following are the bugs fixed,
+* In web-page we are getting NULL as value in FRU Information page.
+* Reset button not working in system administrator page.
+* Allignment is not proper in Server Healt -> Event Log page in IE7 browser.
+* Allignment is not proper in Server Health -> System & Audit Logs page in IE7 browser.
+* Mismatching the Chassis Information in the Web.
+
+Files Modified: data/MDS-Workspace/page/configure_active_directory.html, data/MDS-Workspace/page/configure_ldap.html, data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/configure_pef.html, data/MDS-Workspace/page/event_log.html, data/MDS-Workspace/page/fru_info.html, data/MDS-Workspace/page/main.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/system_audit_log.html, data/MDS-Workspace/www/help/EN/fru_info_hlp.html, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/page/configure_active_directory.html, data/MDS-Workspace/www/page/configure_ldap.html, data/MDS-Workspace/www/page/configure_lmedia.html, data/MDS-Workspace/www/page/configure_pef.html, data/MDS-Workspace/www/page/event_log.html, data/MDS-Workspace/www/page/fru_info.html, data/MDS-Workspace/www/page/main.html, data/MDS-Workspace/www/page/system_audit_log.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/fru_info_str.js, data/MDS-Workspace/www/str/EN/system_audit_log_str.js, data/MDS-Workspace/www/style/page_style.css
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 13 Jan 2011 15:15:48 IST
+
+Package: webui (1.38.0); urgency = high
+
+Abstract:
+	UI Changes as per get and set network configuration in LIBIFC.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/rpc/getalllancfg.asp, data/MDS-Workspace/www/rpc/setnwconfig.asp
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 10 Jan 2011 20:41:32 IST
+
+Package: webui (1.37.0); urgency = medium
+
+Abstract:
+	Bug - Invalid message displaying while we arer trying to add duplicate user - fixed.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 03 Jan 2011 15:24:10 IST
+
+Package: webui (1.36.0); urgency = high
+
+Abstract:
+	Added error message for reserved user check.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 30 Dec 2010 17:43:00 IST
+
+Package: webui (1.35.0); urgency = high
+
+Abstract:
+	Added PHY configuration support.
+
+Files Added: data/MDS-Workspace/www/rpc/getphysupportcfg.asp
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_phy.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/page/configure_phy.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_phy_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 29 Dec 2010 17:58:03 IST
+
+Package: webui (1.34.0); urgency = medium
+
+Abstract:
+	Synopsis : Typo in r6165.
+
+This is sync from the r4491 in 125.
+
+Files Modified: data/MDS-Workspace/www/lib/graph.js
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 29 Dec 2010 14:51:48 CST
+
+Package: webui (1.33.0); urgency = medium
+
+Abstract:
+	Bug: Validation error in AD advance timesetting page - fixed.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_active_directory_imp.js, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 23 Dec 2010 15:40:51 IST
+
+Package: webui (1.32.0); urgency = high
+
+Abstract:
+	Added User Access support in UI.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/lib/form.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 21 Dec 2010 19:56:27 IST
+
+Package: webui (1.31.0); urgency = medium
+
+Abstract:
+	Synopsis : The vertical ordinate scale of live widget for sensor in WEB UI is confused.
+This commit resolved the following issues:
+1. Previous path is not cleared in Firefox.
+2. If the sensor reading is beyond the UNR, then the live widget will draw downward.
+
+This is sync from the r4441 in 125.
+
+Files Modified: data/MDS-Workspace/www/lib/graph.js
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 20 Dec 2010 09:51:12 CST
+
+Package: webui (1.30.0); urgency = high
+
+Abstract:
+	* Added support for Root User configuration in UI.
+* In web-page we are getting NULL as value in FRU Information page - fixed.
+* Date/Time with UTC offset conversion - fixed.
+* Increased timeout value, since lighty takes nearly 1.45mins to verify the firmware image.
+
+Files Added: data/MDS-Workspace/page/configure_root.html, data/MDS-Workspace/www/help/EN/configure_root_hlp.html, data/MDS-Workspace/www/impl/configure_root_imp.js, data/MDS-Workspace/www/page/configure_root.html, data/MDS-Workspace/www/rpc/getrootcfg.asp, data/MDS-Workspace/www/rpc/setrootcfg.asp, data/MDS-Workspace/www/str/EN/configure_root_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/fru_info.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_ntp_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/fru_info_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page/fru_info.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/fru_info_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 16 Dec 2010 19:37:16 IST
+
+Package: webui (1.29.0); urgency = high
+
+Abstract:
+	* Added Secondary SMTP Server configuration.
+ * SMTP Port option is not used in core, so it is hidden in UI for now.
+
+Files Modified: data/MDS-Workspace/page/configure_smtp.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/page/configure_smtp.html, data/MDS-Workspace/www/str/EN/configure_smtp_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 10 Dec 2010 14:45:45 IST
+
+Package: webui (1.28.0); urgency = medium
+
+Abstract:
+	Bug id : 15168
+fix  : IPv6 and IPv4 Manual DNS function defect
+
+Files Modified: data/MDS-Workspace/www/impl/configure_dns_imp.js
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 09 Dec 2010 10:12:09 CST
+
+Package: webui (1.27.0); urgency = high
+
+Abstract:
+	Redesigned UTCOffset configuration using IPMI command.
+
+Files Modified: data/MDS-Workspace/page/configure_ntp.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_ntp_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/system_audit_log_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/web_alerts.js, data/MDS-Workspace/www/page/configure_ntp.html, data/MDS-Workspace/www/rpc/getdatetime.asp, data/MDS-Workspace/www/rpc/setdatetime.asp, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_ntp_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 02 Dec 2010 20:23:14 IST
+
+Package: webui (1.26.0); urgency = medium
+
+Abstract:
+	Added timezone support in Event Log page.
+
+Files Modified: data/MDS-Workspace/page/event_log.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_ntp_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/page/event_log.html, data/MDS-Workspace/www/str/EN/event_log_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 30 Nov 2010 11:40:50 IST
+
+Package: webui (1.25.0); urgency = medium
+
+Abstract:
+	* Added help contents for PEF Configuration - Generator ID fields.
+* Replaced the error code checking for non-zero values.
+
+Files Modified: data/MDS-Workspace/www/help/EN/add_mod_pef_hlp.html, data/MDS-Workspace/www/impl/configure_users_imp.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 24 Nov 2010 19:41:23 IST
+
+Package: webui (1.24.0); urgency = low
+
+Abstract:
+	Handling IPMI error 1 in GUI
+
+Files Modified: data/MDS-Workspace/www/impl/configure_users_imp.js
+
+--Submitter: Aruna Devi D (arunadevid@amiindia.co.in) Tue, 23 Nov 2010 16:48:12 IST
+
+Package: webui (1.23.0); urgency = high
+
+Abstract:
+	* Added Email format support.
+* If a user is deleted, corresponding lan alert destinations also removed.
+* Removed local definition of isIE and used common macro from ui.js.
+
+Files Added: data/MDS-Workspace/www/rpc/getemailformat.asp
+Files Modified: data/MDS-Workspace/page/configure_pef.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_ncsi_imp.js, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/sensor_readings_imp.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/page/configure_pef.html, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 19 Nov 2010 20:42:36 IST
+
+Package: webui (1.22.0); urgency = medium
+
+Abstract:
+	Added Network Link configuration page and made it disabled, untill core is added
+
+Files Added: data/MDS-Workspace/page/configure_phy.html, data/MDS-Workspace/www/help/EN/configure_phy_hlp.html, data/MDS-Workspace/www/impl/configure_phy_imp.js, data/MDS-Workspace/www/page/configure_phy.html, data/MDS-Workspace/www/rpc/getphycfg.asp, data/MDS-Workspace/www/rpc/setphycfg.asp, data/MDS-Workspace/www/str/EN/configure_phy_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/style/page_style.css
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 15 Nov 2010 18:52:55 IST
+
+Package: webui (1.21.0); urgency = medium
+
+Abstract:
+	Dynamic disply of Local Media enable support in Virtual Media configuration page based on project configuration details.
+
+Files Modified: data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_vmedia_devices_hlp.html, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_vmedia_devices_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 01 Nov 2010 19:01:23 IST
+
+Package: webui (1.20.0); urgency = high
+
+Abstract:
+	* Added support to display the menu options based on features supported in Project configuration.
+* Redesigned the nav object to support the Features based navigation object.
+* Added additional RPC to support Encrypt Flash support and removed from Project configuration.
+
+Files Added: data/MDS-Workspace/www/rpc/checksignimagesupport.asp
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/configure_snmp_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/main_imp.js, data/MDS-Workspace/www/lib/menu.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 29 Oct 2010 18:46:02 IST
+
+Package: webui (1.19.0); urgency = medium
+
+Abstract:
+	* Code cleanup for SNMP page.
+* SNMP page is now disabled in UI.
+* Alerts page is removed from workspace.
+
+Files Deleted: data/MDS-Workspace/page/configure_alerts.html, data/MDS-Workspace/www/help/EN/configure_alerts_hlp.html, data/MDS-Workspace/www/impl/configure_alerts_imp.js, data/MDS-Workspace/www/page/configure_alerts.html, data/MDS-Workspace/www/str/EN/configure_alerts_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_smtp.html, data/MDS-Workspace/page/configure_snmp.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/help/EN/configure_snmp_hlp.html, data/MDS-Workspace/www/impl/configure_snmp_imp.js, data/MDS-Workspace/www/impl/main_imp.js, data/MDS-Workspace/www/lib/menu.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/page/configure_smtp.html, data/MDS-Workspace/www/page/configure_snmp.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_snmp_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 27 Oct 2010 11:52:52 IST
+
+Package: webui (1.18.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* Configure NCSI page:if trying to configure via FF (3.6.10), the page shows "Requesting..." forever after hitting Save.
+* Help content-No information about FRU Information & NCSI.
+* System and Audit log settings page-validation issue.
+* Automatically the page scrolled up.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_ldap_hlp.html, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_ncsi_imp.js, data/MDS-Workspace/www/impl/configure_sys_audit_log_imp.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 21 Oct 2010 18:44:00 IST
+
+Package: webui (1.17.0); urgency = medium
+
+Abstract:
+	Hostname size reduces to 63characters.
+
+Files Modified: data/MDS-Workspace/page/configure_dns.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/page/configure_dns.html
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 18 Oct 2010 19:23:47 IST
+
+Package: webui (1.16.0); urgency = medium
+
+Abstract:
+	Few bug fixes in FRU & NCSI
+
+Files Modified: data/MDS-Workspace/page/configure_ncsi.html, data/MDS-Workspace/page/fru_info.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_ncsi_hlp.html, data/MDS-Workspace/www/help/EN/fru_info_hlp.html, data/MDS-Workspace/www/impl/configure_ncsi_imp.js, data/MDS-Workspace/www/impl/fru_info_imp.js, data/MDS-Workspace/www/page/fru_info.html, data/MDS-Workspace/www/str/EN/configure_ncsi_str.js, data/MDS-Workspace/www/str/EN/fru_info_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 08 Oct 2010 19:29:44 IST
+
+Package: webui (1.15.0); urgency = medium
+
+Abstract:
+	Added confirm and information message to user while configuring Virtual media settings.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Oct 2010 23:24:34 IST
+
+Package: webui (1.14.0); urgency = medium
+
+Abstract:
+	Changed macro name with respect to libifc macros.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_ncsi_imp.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Oct 2010 17:38:47 IST
+
+Package: webui (1.13.0); urgency = high
+
+Abstract:
+	* Added NCSI configuration in UI.
+* Added SNMP configuration in UI.
+
+Files Added: data/MDS-Workspace/page/configure_ncsi.html, data/MDS-Workspace/page/configure_snmp.html, data/MDS-Workspace/www/help/EN/configure_ncsi_hlp.html, data/MDS-Workspace/www/help/EN/configure_snmp_hlp.html, data/MDS-Workspace/www/impl/configure_ncsi_imp.js, data/MDS-Workspace/www/impl/configure_snmp_imp.js, data/MDS-Workspace/www/page/configure_ncsi.html, data/MDS-Workspace/www/page/configure_snmp.html, data/MDS-Workspace/www/rpc/getncsicfg.asp, data/MDS-Workspace/www/rpc/getsnmpconfig.asp, data/MDS-Workspace/www/rpc/getsnmpstatus.asp, data/MDS-Workspace/www/rpc/setncsicfg.asp, data/MDS-Workspace/www/rpc/setsnmpconfig.asp, data/MDS-Workspace/www/str/EN/configure_ncsi_str.js, data/MDS-Workspace/www/str/EN/configure_snmp_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/main_imp.js, data/MDS-Workspace/www/lib/menu.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Oct 2010 05:31:01 IST
+
+Package: webui (1.12.0); urgency = high
+
+Abstract:
+	* Bug: It is unavaialbe to recieve alert after sensor triggering - fixed.
+* Minor changes in FRU page design.
+
+Files Modified: data/MDS-Workspace/page/add_mod_pef.html, data/MDS-Workspace/page/fru_info.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/impl/fru_info_imp.js, data/MDS-Workspace/www/page/add_mod_pef.html, data/MDS-Workspace/www/page/fru_info.html, data/MDS-Workspace/www/str/EN/add_mod_pef_str.js, data/MDS-Workspace/www/str/EN/fru_info_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Oct 2010 02:22:44 IST
+
+Package: webui (1.11.0); urgency = high
+
+Abstract:
+	* Bug:When refresh web page using refresh option in browser it shows- Access Denied message - fixed.
+* Added SignImage Public Key upload support.
+
+Files Added: data/MDS-Workspace/www/rpc/getprojectcfg.asp, data/MDS-Workspace/www/rpc/getsignimagekey.asp
+Files Modified: data/MDS-Workspace/page/fw_update.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/page/fw_update.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/fw_update_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Sat, 02 Oct 2010 19:06:59 IST
+
+Package: webui (1.10.0); urgency = high
+
+Abstract:
+	Added FRU Info Page in UI.
+
+Files Added: data/MDS-Workspace/page/fru_info.html, data/MDS-Workspace/www/help/EN/fru_info_hlp.html, data/MDS-Workspace/www/impl/fru_info_imp.js, data/MDS-Workspace/www/page/fru_info.html, data/MDS-Workspace/www/rpc/getfruinfo.asp, data/MDS-Workspace/www/str/EN/fru_info_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 29 Sep 2010 21:08:35 IST
+
+Package: webui (1.9.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* All the event details are not viewable in the System & Audit log page when Live widgets or open and minimized also.
+* NTP Page: get a Date out of range error for valid date/time configurations or if you restore to factory defaults.
+* LDAP role group page: Search Base field should accept "cn", which is common for that variable.
+* Help texts are not displaying properly.
+* Live widgets: the y-axis ticks are not spaced correctly.
+
+Files Modified: data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/system_audit_log.html, data/MDS-Workspace/www/help/EN/configure_lmedia_hlp.html, data/MDS-Workspace/www/help/EN/configure_ntp_hlp.html, data/MDS-Workspace/www/help/EN/configure_pef_hlp.html, data/MDS-Workspace/www/help/EN/configure_radius_hlp.html, data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/help/EN/console_redirection_hlp.html, data/MDS-Workspace/www/help/EN/dashboard_hlp.html, data/MDS-Workspace/www/impl/configure_ntp_imp.js, data/MDS-Workspace/www/impl/system_audit_log_imp.js, data/MDS-Workspace/www/impl/widget_page_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/str/EN/system_audit_log_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 29 Sep 2010 15:47:11 IST
+
+Package: webui (1.8.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* When User is added with more than one invalid data, the number of times prompt comes can be conmsolidated.
+* When user with "No privilege" is given in login page, the message prompt needs to be modified.
+* When we right click on any links, and select " Open in new window " or " Open in New Tab " options the junk new page is opened.
+* When we login with a user of any privilege, and go and modify the permission for same user, the modified status is updated in the User management list.
+* For non-Threshold sensor, Y axis gets junk value.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/sensor_readings_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 28 Sep 2010 12:46:10 IST
+
+Package: webui (1.7.0); urgency = high
+
+Abstract:
+	Following are the bugs fixed,
+* In all browsers, when we go to the Add/Modify frame, when we press the arrow keys in the fields, the screen scrolling image is reflected in the back screen.
+* When we right click on any links, and select " Open in new window " or " Open in New Tab " options the junk new page is opened.
+* In all pages where check box is there, when we continuously keep checking and unchecking, say 10 times it fails to get checked once.
+* Login page-some of the typed letter are not properly visible in Mozila & Opera.
+* In Chrome,when we login giving the username and password and the card is flashed at the time before page loads completely getting "Developer Error".
+* PEF Help page: gives max of 15 Alert Policies but in fact there are 60 slots on page.
+* LDAP page not working in IE.
+
+Files Modified: data/MDS-Workspace/page/activex_launch.html, data/MDS-Workspace/page/add_mod_pef.html, data/MDS-Workspace/page/configure_active_directory.html, data/MDS-Workspace/page/configure_alerts.html, data/MDS-Workspace/page/configure_dns.html, data/MDS-Workspace/page/configure_ldap.html, data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/configure_mouse_mode.html, data/MDS-Workspace/page/configure_network.html, data/MDS-Workspace/page/configure_ntp.html, data/MDS-Workspace/page/configure_pef.html, data/MDS-Workspace/page/configure_radius.html, data/MDS-Workspace/page/configure_remote_session.html, data/MDS-Workspace/page/configure_smtp.html, data/MDS-Workspace/page/configure_ssl.html, data/MDS-Workspace/page/configure_sys_audit_log.html, data/MDS-Workspace/page/configure_users.html, data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/page/console_redirection.html, data/MDS-Workspace/page/dashboard.html, data/MDS-Workspace/page/disable_javascript.html, data/MDS-Workspace/page/event_log.html, data/MDS-Workspace/page/file_upload.html, data/MDS-Workspace/page/fw_update.html, data/MDS-Workspace/page/header.html, data/MDS-Workspace/page/jviewer_launch.html, data/MDS-Workspace/page/login.html, data/MDS-Workspace/page/main.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/resetDevice.html, data/MDS-Workspace/page/restore_factory.html, data/MDS-Workspace/page/sensor_readings.html, data/MDS-Workspace/page/server_power_control.html, data/MDS-Workspace/page/session_expired.html, data/MDS-Workspace/page/system_audit_log.html, data/MDS-Workspace/page/widget_page.html, data/MDS-Workspace/www/help/EN/add_mod_pef_hlp.html, data/MDS-Workspace/www/help/EN/configure_active_directory_hlp.html, data/MDS-Workspace/www/help/EN/configure_alerts_hlp.html, data/MDS-Workspace/www/help/EN/configure_ldap_hlp.html, data/MDS-Workspace/www/help/EN/configure_lmedia_hlp.html, data/MDS-Workspace/www/help/EN/configure_pef_hlp.html, data/MDS-Workspace/www/help/EN/configure_users_hlp.html, data/MDS-Workspace/www/help/EN/dashboard_hlp.html, data/MDS-Workspace/www/help/EN/fw_update_hlp.html, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_active_directory_imp.js, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/lib/form.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/lib/xmit.js, data/MDS-Workspace/www/page/activex_launch.html, data/MDS-Workspace/www/page/add_mod_pef.html, data/MDS-Workspace/www/page/configure_active_directory.html, data/MDS-Workspace/www/page/configure_alerts.html, data/MDS-Workspace/www/page/configure_dns.html, data/MDS-Workspace/www/page/configure_ldap.html, data/MDS-Workspace/www/page/configure_lmedia.html, data/MDS-Workspace/www/page/configure_mouse_mode.html, data/MDS-Workspace/www/page/configure_network.html, data/MDS-Workspace/www/page/configure_ntp.html, data/MDS-Workspace/www/page/configure_pef.html, data/MDS-Workspace/www/page/configure_radius.html, data/MDS-Workspace/www/page/configure_remote_session.html, data/MDS-Workspace/www/page/configure_smtp.html, data/MDS-Workspace/www/page/configure_ssl.html, data/MDS-Workspace/www/page/configure_sys_audit_log.html, data/MDS-Workspace/www/page/configure_users.html, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/page/console_redirection.html, data/MDS-Workspace/www/page/dashboard.html, data/MDS-Workspace/www/page/disable_javascript.html, data/MDS-Workspace/www/page/event_log.html, data/MDS-Workspace/www/page/file_upload.html, data/MDS-Workspace/www/page/fw_update.html, data/MDS-Workspace/www/page/header.html, data/MDS-Workspace/www/page/jviewer_launch.html, data/MDS-Workspace/www/page/login.html, data/MDS-Workspace/www/page/main.html, data/MDS-Workspace/www/page/resetDevice.html, data/MDS-Workspace/www/page/restore_factory.html, data/MDS-Workspace/www/page/sensor_readings.html, data/MDS-Workspace/www/page/server_power_control.html, data/MDS-Workspace/www/page/session_expired.html, data/MDS-Workspace/www/page/system_audit_log.html, data/MDS-Workspace/www/page/widget_page.html, data/MDS-Workspace/www/str/EN/activex_launch_str.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_active_directory_str.js, data/MDS-Workspace/www/str/EN/configure_alerts_str.js, data/MDS-Workspace/www/str/EN/configure_mouse_mode_str.js, data/MDS-Workspace/www/str/EN/configure_ssl_str.js, data/MDS-Workspace/www/str/EN/configure_users_str.js, data/MDS-Workspace/www/str/EN/console_redirection_str.js, data/MDS-Workspace/www/str/EN/dashboard_str.js, data/MDS-Workspace/www/str/EN/disable_javascript_str.js, data/MDS-Workspace/www/str/EN/file_upload_str.js, data/MDS-Workspace/www/str/EN/fw_update_str.js, data/MDS-Workspace/www/str/EN/header_str.js, data/MDS-Workspace/www/str/EN/jviewer_launch_str.js, data/MDS-Workspace/www/str/EN/login_str.js, data/MDS-Workspace/www/str/EN/main_str.js, data/MDS-Workspace/www/str/EN/resetDevice_str.js, data/MDS-Workspace/www/str/EN/restore_factory_str.js, data/MDS-Workspace/www/str/EN/sensor_readings_str.js, data/MDS-Workspace/www/str/EN/server_power_control_str.js, data/MDS-Workspace/www/str/EN/session_expired_str.js, data/MDS-Workspace/www/str/EN/widget_page_str.js, data/MDS-Workspace/www/style/login_style.css
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 24 Sep 2010 17:00:14 IST
+
+Package: webui (1.6.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* Register BMC help is missing in DNS Server Setting Page.
+* Opera Browswer-After We log out it doesnot show login page.
+* Default Network Privelege mismatches in Chrome and Opera browser.
+* Grammmatical correction made for strings and help contents.
+
+Files Modified: data/MDS-Workspace/www/help/EN/add_mod_pef_hlp.html, data/MDS-Workspace/www/help/EN/configure_active_directory_hlp.html, data/MDS-Workspace/www/help/EN/configure_dns_hlp.html, data/MDS-Workspace/www/help/EN/configure_lmedia_hlp.html, data/MDS-Workspace/www/help/EN/configure_mouse_mode_hlp.html, data/MDS-Workspace/www/help/EN/configure_network_hlp.html, data/MDS-Workspace/www/help/EN/configure_ntp_hlp.html, data/MDS-Workspace/www/help/EN/configure_pef_hlp.html, data/MDS-Workspace/www/help/EN/configure_radius_hlp.html, data/MDS-Workspace/www/help/EN/configure_remote_session_hlp.html, data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/help/EN/configure_sys_audit_log_hlp.html, data/MDS-Workspace/www/help/EN/configure_users_hlp.html, data/MDS-Workspace/www/help/EN/configure_vmedia_devices_hlp.html, data/MDS-Workspace/www/help/EN/console_redirection_hlp.html, data/MDS-Workspace/www/help/EN/dashboard_hlp.html, data/MDS-Workspace/www/help/EN/event_log_hlp.html, data/MDS-Workspace/www/help/EN/fw_update_hlp.html, data/MDS-Workspace/www/help/EN/login_hlp.html, data/MDS-Workspace/www/help/EN/sensor_readings_hlp.html, data/MDS-Workspace/www/help/EN/server_power_control_hlp.html, data/MDS-Workspace/www/help/EN/system_audit_log_hlp.html, data/MDS-Workspace/www/help/EN/widget_page_hlp.html, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 21 Sep 2010 13:01:41 IST
+
+Package: webui (1.5.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* Destination selector adress was given wrong in Add alert policy entry.
+* In PEF Management page, in Modify Event Filter entry, validation for Event trigger column value shows some mismatch.
+* In PEF-Add Event filter entry, Event Filter Action checking is mandatory,in which case checking option can be disabled.
+* In PEF Management page, when we click Event filter the description shows wrongly.
+* In PEF, user with operator privilege can view Event Filter but couldn't view Alert Policy and LAN Destination.
+* It is unavailable to delete Alert Policy item under webUI.
+
+Files Modified: data/MDS-Workspace/www/help/EN/add_mod_pef_hlp.html, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 20 Sep 2010 21:07:02 IST
+
+Package: webui (1.4.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* It isn't add new event logs in Event Log page.
+* In User Management, after adding or deleting or modifying a user, if we click F5 then we are able to do only Delete operation in the Users page.
+* In System and Audit Logs page, when file size is given as 008, it gets saved and shows value as 0.
+* User name and password accepts more than 20000 characters in Login page.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_sys_audit_log_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/common_fn.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Sat, 18 Sep 2010 18:59:47 IST
+
+Package: webui (1.3.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* Help content is not sufficient for Local media Area page.
+* LOCAL MEDIA AREA -same image can be uploded in Floppy,cd/dvd & harddisk.
+* Image uploading in local media Area needs restriction.
+* Add image page should get disabled after we click add button for uploading an image.
+* In Local Media page, the work Press is wrongly spelled.
+* User with OEM propritary level not showing privillege level.
+
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/configure_lmedia_hlp.html, data/MDS-Workspace/www/help/EN/configure_vmedia_devices_hlp.html, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_lmedia_str.js, data/MDS-Workspace/www/str/EN/configure_vmedia_devices_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 17 Sep 2010 13:51:08 IST
+
+Package: webui (1.2.0); urgency = high
+
+Abstract:
+	Fix for libifc.so.1.0 to libifc.so in UI.
+
+Files Modified: data/MDS-Workspace/www/rpc/addmoduser.asp, data/MDS-Workspace/www/rpc/addrolegroup.asp, data/MDS-Workspace/www/rpc/clearsel.asp, data/MDS-Workspace/www/rpc/configurepef.asp, data/MDS-Workspace/www/rpc/delrolegroup.asp, data/MDS-Workspace/www/rpc/deluser.asp, data/MDS-Workspace/www/rpc/flash_browserclosed.asp, data/MDS-Workspace/www/rpc/flashfile_upload_starts.asp, data/MDS-Workspace/www/rpc/flashstatus.asp, data/MDS-Workspace/www/rpc/getactiveconsolestatus.asp, data/MDS-Workspace/www/rpc/getactivedircfg.asp, data/MDS-Workspace/www/rpc/getactivexcfg.asp, data/MDS-Workspace/www/rpc/getadvisercfg.asp, data/MDS-Workspace/www/rpc/getalertlevels.asp, data/MDS-Workspace/www/rpc/getalllancfg.asp, data/MDS-Workspace/www/rpc/getallpefcfg.asp, data/MDS-Workspace/www/rpc/getallpolicycfg.asp, data/MDS-Workspace/www/rpc/getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/getallselentries.asp, data/MDS-Workspace/www/rpc/getallsensors.asp, data/MDS-Workspace/www/rpc/getalluserinfo.asp, data/MDS-Workspace/www/rpc/getauditlog.asp, data/MDS-Workspace/www/rpc/getbldtime.asp, data/MDS-Workspace/www/rpc/getdatetime.asp, data/MDS-Workspace/www/rpc/getdeviceid.asp, data/MDS-Workspace/www/rpc/getdnscfg.asp, data/MDS-Workspace/www/rpc/getlanalertdests.asp, data/MDS-Workspace/www/rpc/getlanchannelinfo.asp, data/MDS-Workspace/www/rpc/getlandeststable.asp, data/MDS-Workspace/www/rpc/getldapconfig.asp, data/MDS-Workspace/www/rpc/getlmediaimage.asp, data/MDS-Workspace/www/rpc/getlogcfg.asp, data/MDS-Workspace/www/rpc/getmaxselentries.asp, data/MDS-Workspace/www/rpc/getmousemode.asp, data/MDS-Workspace/www/rpc/getntpcfg.asp, data/MDS-Workspace/www/rpc/getnwconfig.asp, data/MDS-Workspace/www/rpc/getradiuscfg.asp, data/MDS-Workspace/www/rpc/getremotesession.asp, data/MDS-Workspace/www/rpc/getreservedusers.asp, data/MDS-Workspace/www/rpc/getrole.asp, data/MDS-Workspace/www/rpc/getromfilesize.asp, data/MDS-Workspace/www/rpc/getselentries.asp, data/MDS-Workspace/www/rpc/getsessiontoken.asp, data/MDS-Workspace/www/rpc/getsmtpcfg.asp, data/MDS-Workspace/www/rpc/getsslcertstatus.asp, data/MDS-Workspace/www/rpc/getsystemlog.asp, data/MDS-Workspace/www/rpc/getvmediacfg.asp, data/MDS-Workspace/www/rpc/hostctl.asp, data/MDS-Workspace/www/rpc/hoststatus.asp, data/MDS-Workspace/www/rpc/ldap_addrolegroup.asp, data/MDS-Workspace/www/rpc/ldap_delrolegroup.asp, data/MDS-Workspace/www/rpc/ldap_getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/ldap_getldapgroupcfg.asp, data/MDS-Workspace/www/rpc/ldap_modrolegroup.asp, data/MDS-Workspace/www/rpc/modrolegroup.asp, data/MDS-Workspace/www/rpc/postflashreset.asp, data/MDS-Workspace/www/rpc/prepflash.asp, data/MDS-Workspace/www/rpc/rebootcard.asp, data/MDS-Workspace/www/rpc/restartwebserver.asp, data/MDS-Workspace/www/rpc/setactivedircfg.asp, data/MDS-Workspace/www/rpc/setalertentry.asp, data/MDS-Workspace/www/rpc/setalertpolicy.asp, data/MDS-Workspace/www/rpc/setdatetime.asp, data/MDS-Workspace/www/rpc/setdnscfg.asp, data/MDS-Workspace/www/rpc/setfactorydefaults.asp, data/MDS-Workspace/www/rpc/setlandest.asp, data/MDS-Workspace/www/rpc/setldapconfig.asp, data/MDS-Workspace/www/rpc/setlmediaimage.asp, data/MDS-Workspace/www/rpc/setlogcfg.asp, data/MDS-Workspace/www/rpc/setmousemode.asp, data/MDS-Workspace/www/rpc/setntpcfg.asp, data/MDS-Workspace/www/rpc/setnwconfig.asp, data/MDS-Workspace/www/rpc/setradiuscfg.asp, data/MDS-Workspace/www/rpc/setremotesession.asp, data/MDS-Workspace/www/rpc/setsmtpcfg.asp, data/MDS-Workspace/www/rpc/setvmediacfg.asp, data/MDS-Workspace/www/rpc/startflash.asp, data/MDS-Workspace/www/rpc/testalert.asp, data/MDS-Workspace/www/rpc/validatesslcert.asp, data/MDS-Workspace/www/rpc/verifyimage.asp
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 17 Sep 2010 11:49:54 IST
+
+Package: webui (1.1.0); urgency = medium
+
+Abstract:
+	Following are the bugs fixed,
+* User name and password accepts more than 20000 characters in Login page.
+* Domain name in email address fields accepts only 3 characters.
+* There is no help text for UTC offset function in Event Log.
+* Date/Time: list of UTC offsets is missing a few items.
+* System & Audit Log configuration: minor corrections suggested for text on page and Help section.
+* System & Audit Log page: minor corrections suggested for text on page.
+* DNS CONFIGURATION-Save button validation.
+
+Files Modified: data/MDS-Workspace/page/configure_sys_audit_log.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/system_audit_log.html, data/MDS-Workspace/www/help/EN/configure_sys_audit_log_hlp.html, data/MDS-Workspace/www/help/EN/event_log_hlp.html, data/MDS-Workspace/www/help/EN/system_audit_log_hlp.html, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_ntp_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/system_audit_log_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/page/system_audit_log.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_sys_audit_log_str.js, data/MDS-Workspace/www/str/EN/system_audit_log_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 15 Sep 2010 15:54:05 IST
+
+Package: webui (1.0.14); urgency = high
+
+Abstract:
+	Bug, There is no any policy option under PEF and Alert page - fixed.
+
+Files Modified: data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 07 Sep 2010 12:56:07 IST
+
+Package: webui (1.0.13); urgency = medium
+
+Abstract:
+	Removed duplicate rpc files
+
+Files Deleted: data/MDS-Workspace/www/rpc/Ldap_addrolegroup.asp, data/MDS-Workspace/www/rpc/Ldap_delrolegroup.asp, data/MDS-Workspace/www/rpc/Ldap_getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/Ldap_getldapgroupcfg.asp, data/MDS-Workspace/www/rpc/Ldap_modrolegroup.asp
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 03 Sep 2010 17:14:52 IST
+
+Package: webui (1.0.12); urgency = medium
+
+Abstract:
+	* In gateway field it accept invalid ip address - fixed.
+* There are no help information about some button at Dashboard, SSL Management, SMTP Setting page - fixed.
+
+Files Modified: data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/help/EN/console_redirection_hlp.html, data/MDS-Workspace/www/help/EN/dashboard_hlp.html, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/lib/eVal.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 03 Sep 2010 16:26:39 IST
+
+Package: webui (1.0.11); urgency = medium
+
+Abstract:
+	Add ldap with privilege new web design.
+
+Files Added: data/MDS-Workspace/www/rpc/ldap_addrolegroup.asp, data/MDS-Workspace/www/rpc/ldap_delrolegroup.asp, data/MDS-Workspace/www/rpc/ldap_getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/ldap_getldapgroupcfg.asp, data/MDS-Workspace/www/rpc/ldap_modrolegroup.asp
+Files Modified: data/MDS-Workspace/page/configure_ldap.html, data/MDS-Workspace/www/help/EN/configure_ldap_hlp.html, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/page/configure_ldap.html, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_ldap_str.js
+
+--Submitter: joywu (joywu) Sun, 29 Aug 2010 23:16:33 CST
+
+Package: webui (1.0.10); urgency = high
+
+Abstract:
+	local media image file upload issue is fixed
+
+Files Modified: data/MDS-Workspace/www/impl/configure_lmedia_imp.js
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 25 Aug 2010 14:57:47 EDT
+
+Package: webui (1.0.9); urgency = medium
+
+Abstract:
+	Changes to upload file of 16MB size.
+
+Files Modified: data/MDS-Workspace/www/impl/configure_lmedia_imp.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 24 Aug 2010 00:42:15 IST
+
+Package: webui (1.0.8); urgency = medium
+
+Abstract:
+	Added Local media configuration - UI layer
+
+Files Added: data/MDS-Workspace/page/configure_lmedia.html, data/MDS-Workspace/www/help/EN/configure_lmedia_hlp.html, data/MDS-Workspace/www/impl/configure_lmedia_imp.js, data/MDS-Workspace/www/page/configure_lmedia.html, data/MDS-Workspace/www/rpc/getlmediaimage.asp, data/MDS-Workspace/www/rpc/setlmediaimage.asp, data/MDS-Workspace/www/str/EN/configure_lmedia_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 23 Aug 2010 21:07:59 IST
+
+Package: webui (1.0.7); urgency = high
+
+Abstract:
+	Added Dynamic virtual media device in UI.
+
+Files Added: data/MDS-Workspace/page/configure_vmedia_devices.html, data/MDS-Workspace/www/help/EN/configure_vmedia_devices_hlp.html, data/MDS-Workspace/www/impl/configure_vmedia_devices_imp.js, data/MDS-Workspace/www/page/configure_vmedia_devices.html, data/MDS-Workspace/www/rpc/setvmediacfg.asp, data/MDS-Workspace/www/str/EN/configure_vmedia_devices_str.js
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/rpc/getvmediacfg.asp, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 18 Aug 2010 20:07:01 IST
+
+Package: webui (1.0.6); urgency = medium
+
+Abstract:
+	Synopsis: Add backend lib/function for ldap with privilege feature.
+
+Add asp files to be called when ldap web page wanna access underlying ldap configuraiton files.
+
+Files Added: data/MDS-Workspace/www/rpc/Ldap_addrolegroup.asp, data/MDS-Workspace/www/rpc/Ldap_delrolegroup.asp, data/MDS-Workspace/www/rpc/Ldap_getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/Ldap_getldapgroupcfg.asp, data/MDS-Workspace/www/rpc/Ldap_modrolegroup.asp
+
+--Submitter: joywu (joywu) Sat, 14 Aug 2010 20:43:54 CST
+
+Package: webui (1.0.5); urgency = medium
+
+Abstract:
+	* Lan channel occurs repeatedly under LAN Destination when we naviagte within PEF Page - fixed.
+ * Channel number not avilable in Add alert policy Entry page in PEF - fixed.
+
+Files Modified: data/MDS-Workspace/page/add_mod_pef.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/add_mod_pef_hlp.html, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/page/add_mod_pef.html, data/MDS-Workspace/www/str/EN/add_mod_pef_str.js, data/MDS-Workspace/www/str/EN/common_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 12 Aug 2010 17:35:28 IST
+
+Package: webui (1.0.4); urgency = medium
+
+Abstract:
+	* Added Register BMC option in UI.
+ * Added validation to compare IPv6 IP's.
+
+Files Modified: data/MDS-Workspace/page/configure_dns.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/page/configure_dns.html, data/MDS-Workspace/www/str/EN/configure_dns_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 04 Aug 2010 17:44:05 IST
+
+Package: webui (1.0.3); urgency = high
+
+Abstract:
+	* File upload changes for lighttpd web server.
+ * Minor alignment changes in PEF page.
+
+Files Modified: data/MDS-Workspace/page/configure_pef.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/page/configure_pef.html
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 30 Jul 2010 19:44:16 IST
+
+Package: webui (1.0.2); urgency = high
+
+Abstract:
+	* Bug - Image flashing cannot be done in browser with different tab - fixed.
+ * Added Help contents for redesigned PEF page.
+ * Added validation for redesigned PEF page.
+
+Files Modified: data/MDS-Workspace/page/configure_pef.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/www/help/EN/add_mod_pef_hlp.html, data/MDS-Workspace/www/help/EN/configure_pef_hlp.html, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/impl/restore_factory_imp.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_pef_str.js
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 29 Jul 2010 17:58:00 IST
+
+Package: webui (1.0.1); urgency = high
+
+Abstract:
+	Redesigned PEF UI.
+
+Files Added: data/MDS-Workspace/page/add_mod_pef.html, data/MDS-Workspace/www/help/EN/add_mod_pef_hlp.html, data/MDS-Workspace/www/impl/add_mod_pef_imp.js, data/MDS-Workspace/www/impl/alert_policy_imp.js, data/MDS-Workspace/www/impl/lan_dest_imp.js, data/MDS-Workspace/www/page/add_mod_pef.html, data/MDS-Workspace/www/rpc/getallpolicycfg.asp, data/MDS-Workspace/www/rpc/getlandeststable.asp, data/MDS-Workspace/www/rpc/setalertpolicy.asp, data/MDS-Workspace/www/rpc/setlandest.asp, data/MDS-Workspace/www/str/EN/add_mod_pef_str.js
+Files Deleted: spx/DATA
+Files Modified: data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page/configure_pef.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/system_audit_log.html, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/server_power_control_imp.js, data/MDS-Workspace/www/impl/system_audit_log_imp.js, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page/configure_pef.html, data/MDS-Workspace/www/page/system_audit_log.html, data/MDS-Workspace/www/rpc/getlanalertdests.asp, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_pef_str.js, data/MDS-Workspace/www/style/page_style.css, spx/INFO
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 28 Jul 2010 16:59:15 IST
+
+Package: webui (1.0.0); urgency = new
+
+Abstract:
+	This Package contains web page related (workspace and www)files.
+
+Files Added: data, data/MDS-Workspace, data/MDS-Workspace/.project, data/MDS-Workspace/iwisp.layout, data/MDS-Workspace/nav, data/MDS-Workspace/nav/iwisp.nav, data/MDS-Workspace/page, data/MDS-Workspace/page/activex_launch.html, data/MDS-Workspace/page/blank.html, data/MDS-Workspace/page/configure_active_directory.html, data/MDS-Workspace/page/configure_alerts.html, data/MDS-Workspace/page/configure_dns.html, data/MDS-Workspace/page/configure_ldap.html, data/MDS-Workspace/page/configure_mouse_mode.html, data/MDS-Workspace/page/configure_network.html, data/MDS-Workspace/page/configure_ntp.html, data/MDS-Workspace/page/configure_pef.html, data/MDS-Workspace/page/configure_radius.html, data/MDS-Workspace/page/configure_remote_session.html, data/MDS-Workspace/page/configure_smtp.html, data/MDS-Workspace/page/configure_ssl.html, data/MDS-Workspace/page/configure_sys_audit_log.html, data/MDS-Workspace/page/configure_users.html, data/MDS-Workspace/page/console_redirection.html, data/MDS-Workspace/page/dashboard.html, data/MDS-Workspace/page/disable_javascript.html, data/MDS-Workspace/page/event_log.html, data/MDS-Workspace/page/file_upload.html, data/MDS-Workspace/page/fw_update.html, data/MDS-Workspace/page/header.html, data/MDS-Workspace/page/jviewer_launch.html, data/MDS-Workspace/page/login.html, data/MDS-Workspace/page/main.html, data/MDS-Workspace/page/page.string, data/MDS-Workspace/page/resetDevice.html, data/MDS-Workspace/page/restore_factory.html, data/MDS-Workspace/page/sensor_readings.html, data/MDS-Workspace/page/server_power_control.html, data/MDS-Workspace/page/session_expired.html, data/MDS-Workspace/page/system_audit_log.html, data/MDS-Workspace/page/widget_page.html, data/MDS-Workspace/releasenotes.txt, data/MDS-Workspace/site, data/MDS-Workspace/site/index.sitex, data/MDS-Workspace/www, data/MDS-Workspace/www/certs, data/MDS-Workspace/www/certs/privkey.pem, data/MDS-Workspace/www/certs/server.pem, data/MDS-Workspace/www/gdate, data/MDS-Workspace/www/help, data/MDS-Workspace/www/help/EN, data/MDS-Workspace/www/help/EN/activex_launch_hlp.html, data/MDS-Workspace/www/help/EN/blank_hlp.html, data/MDS-Workspace/www/help/EN/configure_active_directory_hlp.html, data/MDS-Workspace/www/help/EN/configure_alerts_hlp.html, data/MDS-Workspace/www/help/EN/configure_dns_hlp.html, data/MDS-Workspace/www/help/EN/configure_ldap_hlp.html, data/MDS-Workspace/www/help/EN/configure_mouse_mode_hlp.html, data/MDS-Workspace/www/help/EN/configure_network_hlp.html, data/MDS-Workspace/www/help/EN/configure_ntp_hlp.html, data/MDS-Workspace/www/help/EN/configure_pef_hlp.html, data/MDS-Workspace/www/help/EN/configure_radius_hlp.html, data/MDS-Workspace/www/help/EN/configure_remote_session_hlp.html, data/MDS-Workspace/www/help/EN/configure_smtp_hlp.html, data/MDS-Workspace/www/help/EN/configure_ssl_hlp.html, data/MDS-Workspace/www/help/EN/configure_sys_audit_log_hlp.html, data/MDS-Workspace/www/help/EN/configure_users_hlp.html, data/MDS-Workspace/www/help/EN/console_redirection_hlp.html, data/MDS-Workspace/www/help/EN/dashboard_hlp.html, data/MDS-Workspace/www/help/EN/disable_javascript_hlp.html, data/MDS-Workspace/www/help/EN/event_log_hlp.html, data/MDS-Workspace/www/help/EN/file_upload_hlp.html, data/MDS-Workspace/www/help/EN/fw_update_hlp.html, data/MDS-Workspace/www/help/EN/header_hlp.html, data/MDS-Workspace/www/help/EN/jviewer_launch_hlp.html, data/MDS-Workspace/www/help/EN/login_hlp.html, data/MDS-Workspace/www/help/EN/main_hlp.html, data/MDS-Workspace/www/help/EN/resetDevice_hlp.html, data/MDS-Workspace/www/help/EN/restore_factory_hlp.html, data/MDS-Workspace/www/help/EN/sensor_readings_hlp.html, data/MDS-Workspace/www/help/EN/server_power_control_hlp.html, data/MDS-Workspace/www/help/EN/session_expired_hlp.html, data/MDS-Workspace/www/help/EN/system_audit_log_hlp.html, data/MDS-Workspace/www/help/EN/widget_page_hlp.html, data/MDS-Workspace/www/impl, data/MDS-Workspace/www/impl/activex_launch_imp.js, data/MDS-Workspace/www/impl/blank_imp.js, data/MDS-Workspace/www/impl/configure_active_directory_imp.js, data/MDS-Workspace/www/impl/configure_alerts_imp.js, data/MDS-Workspace/www/impl/configure_dns_imp.js, data/MDS-Workspace/www/impl/configure_ldap_imp.js, data/MDS-Workspace/www/impl/configure_mouse_mode_imp.js, data/MDS-Workspace/www/impl/configure_network_imp.js, data/MDS-Workspace/www/impl/configure_ntp_imp.js, data/MDS-Workspace/www/impl/configure_pef_imp.js, data/MDS-Workspace/www/impl/configure_radius_imp.js, data/MDS-Workspace/www/impl/configure_remote_session_imp.js, data/MDS-Workspace/www/impl/configure_smtp_imp.js, data/MDS-Workspace/www/impl/configure_ssl_imp.js, data/MDS-Workspace/www/impl/configure_sys_audit_log_imp.js, data/MDS-Workspace/www/impl/configure_users_imp.js, data/MDS-Workspace/www/impl/console_redirection_imp.js, data/MDS-Workspace/www/impl/dashboard_imp.js, data/MDS-Workspace/www/impl/disable_javascript_imp.js, data/MDS-Workspace/www/impl/event_log_imp.js, data/MDS-Workspace/www/impl/file_upload_imp.js, data/MDS-Workspace/www/impl/fw_update_imp.js, data/MDS-Workspace/www/impl/header_imp.js, data/MDS-Workspace/www/impl/jviewer_launch_imp.js, data/MDS-Workspace/www/impl/login_imp.js, data/MDS-Workspace/www/impl/main_imp.js, data/MDS-Workspace/www/impl/resetDevice_imp.js, data/MDS-Workspace/www/impl/restore_factory_imp.js, data/MDS-Workspace/www/impl/sensor_readings_imp.js, data/MDS-Workspace/www/impl/server_power_control_imp.js, data/MDS-Workspace/www/impl/session_expired_imp.js, data/MDS-Workspace/www/impl/system_audit_log_imp.js, data/MDS-Workspace/www/impl/widget_page_imp.js, data/MDS-Workspace/www/index.html, data/MDS-Workspace/www/index_imp.js, data/MDS-Workspace/www/lib, data/MDS-Workspace/www/lib/bitset.js, data/MDS-Workspace/www/lib/common_fn.js, data/MDS-Workspace/www/lib/eExt.js, data/MDS-Workspace/www/lib/eGUI.js, data/MDS-Workspace/www/lib/eLang.js, data/MDS-Workspace/www/lib/eVal.js, data/MDS-Workspace/www/lib/events.js, data/MDS-Workspace/www/lib/excanvas.js, data/MDS-Workspace/www/lib/factory.js, data/MDS-Workspace/www/lib/form.js, data/MDS-Workspace/www/lib/graph.js, data/MDS-Workspace/www/lib/include.js, data/MDS-Workspace/www/lib/listgrid.css, data/MDS-Workspace/www/lib/listgrid.js, data/MDS-Workspace/www/lib/menu.js, data/MDS-Workspace/www/lib/mini_inc.js, data/MDS-Workspace/www/lib/ns_inc.js, data/MDS-Workspace/www/lib/ui.js, data/MDS-Workspace/www/lib/web_alerts.js, data/MDS-Workspace/www/lib/widget.js, data/MDS-Workspace/www/lib/xmit.css, data/MDS-Workspace/www/lib/xmit.js, data/MDS-Workspace/www/nav, data/MDS-Workspace/www/nav/navobj.js, data/MDS-Workspace/www/nav/str, data/MDS-Workspace/www/nav/str/EN, data/MDS-Workspace/www/nav/str/EN/navobj_str.js, data/MDS-Workspace/www/page, data/MDS-Workspace/www/page/activex_launch.html, data/MDS-Workspace/www/page/blank.html, data/MDS-Workspace/www/page/configure_active_directory.html, data/MDS-Workspace/www/page/configure_alerts.html, data/MDS-Workspace/www/page/configure_dns.html, data/MDS-Workspace/www/page/configure_ldap.html, data/MDS-Workspace/www/page/configure_mouse_mode.html, data/MDS-Workspace/www/page/configure_network.html, data/MDS-Workspace/www/page/configure_ntp.html, data/MDS-Workspace/www/page/configure_pef.html, data/MDS-Workspace/www/page/configure_radius.html, data/MDS-Workspace/www/page/configure_remote_session.html, data/MDS-Workspace/www/page/configure_smtp.html, data/MDS-Workspace/www/page/configure_ssl.html, data/MDS-Workspace/www/page/configure_sys_audit_log.html, data/MDS-Workspace/www/page/configure_users.html, data/MDS-Workspace/www/page/console_redirection.html, data/MDS-Workspace/www/page/dashboard.html, data/MDS-Workspace/www/page/disable_javascript.html, data/MDS-Workspace/www/page/event_log.html, data/MDS-Workspace/www/page/file_upload.html, data/MDS-Workspace/www/page/fw_update.html, data/MDS-Workspace/www/page/header.html, data/MDS-Workspace/www/page/jviewer_launch.html, data/MDS-Workspace/www/page/login.html, data/MDS-Workspace/www/page/main.html, data/MDS-Workspace/www/page/resetDevice.html, data/MDS-Workspace/www/page/restore_factory.html, data/MDS-Workspace/www/page/sensor_readings.html, data/MDS-Workspace/www/page/server_power_control.html, data/MDS-Workspace/www/page/session_expired.html, data/MDS-Workspace/www/page/system_audit_log.html, data/MDS-Workspace/www/page/widget_page.html, data/MDS-Workspace/www/res, data/MDS-Workspace/www/res/activex.png, data/MDS-Workspace/www/res/amilogo.GIF, data/MDS-Workspace/www/res/background.png, data/MDS-Workspace/www/res/banner_bg.jpg, data/MDS-Workspace/www/res/banner_left.jpg, data/MDS-Workspace/www/res/banner_right.jpg, data/MDS-Workspace/www/res/breadscrumb_bg.png, data/MDS-Workspace/www/res/breadscrumb_end.png, data/MDS-Workspace/www/res/btm_line.gif, data/MDS-Workspace/www/res/btmleft_round.gif, data/MDS-Workspace/www/res/btmright_round.gif, data/MDS-Workspace/www/res/crit.png, data/MDS-Workspace/www/res/detailer_bg.png, data/MDS-Workspace/www/res/help.gif, data/MDS-Workspace/www/res/helpicon.png, data/MDS-Workspace/www/res/img, data/MDS-Workspace/www/res/img/sortdown.gif, data/MDS-Workspace/www/res/img/sortup.gif, data/MDS-Workspace/www/res/java.png, data/MDS-Workspace/www/res/left_line.gif, data/MDS-Workspace/www/res/left_notify_bar.gif, data/MDS-Workspace/www/res/loading.gif, data/MDS-Workspace/www/res/login_bg.png, data/MDS-Workspace/www/res/login_status_left.gif, data/MDS-Workspace/www/res/login_status_right.gif, data/MDS-Workspace/www/res/logout.gif, data/MDS-Workspace/www/res/not_started.png, data/MDS-Workspace/www/res/not_started2.png, data/MDS-Workspace/www/res/notify_bar_bg.gif, data/MDS-Workspace/www/res/ok.png, data/MDS-Workspace/www/res/prg_failure.png, data/MDS-Workspace/www/res/prg_success.png, data/MDS-Workspace/www/res/print.gif, data/MDS-Workspace/www/res/print.png, data/MDS-Workspace/www/res/process.gif, data/MDS-Workspace/www/res/refresh.gif, data/MDS-Workspace/www/res/right.png, data/MDS-Workspace/www/res/right_line.gif, data/MDS-Workspace/www/res/right_notify_bar.gif, data/MDS-Workspace/www/res/shadow.png, data/MDS-Workspace/www/res/status_critical.gif, data/MDS-Workspace/www/res/status_critical.png, data/MDS-Workspace/www/res/status_ok.gif, data/MDS-Workspace/www/res/status_ok.png, data/MDS-Workspace/www/res/status_warning.gif, data/MDS-Workspace/www/res/status_warning.png, data/MDS-Workspace/www/res/top_line.gif, data/MDS-Workspace/www/res/topleft_round.gif, data/MDS-Workspace/www/res/topright_round.gif, data/MDS-Workspace/www/res/u_bg.png, data/MDS-Workspace/www/res/user.gif, data/MDS-Workspace/www/res/view.gif, data/MDS-Workspace/www/res/widget_close.gif, data/MDS-Workspace/www/res/widget_header.png, data/MDS-Workspace/www/res/widget_header_c.png, data/MDS-Workspace/www/res/widget_header_nc.png, data/MDS-Workspace/www/res/widget_header_nc2.png, data/MDS-Workspace/www/res/widget_header_nr.png, data/MDS-Workspace/www/res/widget_help.gif, data/MDS-Workspace/www/res/widget_minimize.gif, data/MDS-Workspace/www/res/widget_off.gif, data/MDS-Workspace/www/res/widget_off.png, data/MDS-Workspace/www/res/widget_on.gif, data/MDS-Workspace/www/res/widget_on.png, data/MDS-Workspace/www/res/widget_restore.gif, data/MDS-Workspace/www/res/widget_save.gif, data/MDS-Workspace/www/res/wrong.png, data/MDS-Workspace/www/rpc, data/MDS-Workspace/www/rpc/WEBSES, data/MDS-Workspace/www/rpc/WEBSES/create.asp, data/MDS-Workspace/www/rpc/WEBSES/forgotpassword.asp, data/MDS-Workspace/www/rpc/WEBSES/logout.asp, data/MDS-Workspace/www/rpc/WEBSES/offline, data/MDS-Workspace/www/rpc/WEBSES/offline/create.asp, data/MDS-Workspace/www/rpc/WEBSES/offline/logout.asp, data/MDS-Workspace/www/rpc/WEBSES/offline/validate.asp, data/MDS-Workspace/www/rpc/WEBSES/validate.asp, data/MDS-Workspace/www/rpc/addmoduser.asp, data/MDS-Workspace/www/rpc/addrolegroup.asp, data/MDS-Workspace/www/rpc/clearsel.asp, data/MDS-Workspace/www/rpc/configurepef.asp, data/MDS-Workspace/www/rpc/delrolegroup.asp, data/MDS-Workspace/www/rpc/deluser.asp, data/MDS-Workspace/www/rpc/flash_browserclosed.asp, data/MDS-Workspace/www/rpc/flashfile_upload_starts.asp, data/MDS-Workspace/www/rpc/flashstatus.asp, data/MDS-Workspace/www/rpc/getactiveconsolestatus.asp, data/MDS-Workspace/www/rpc/getactivedircfg.asp, data/MDS-Workspace/www/rpc/getactivexcfg.asp, data/MDS-Workspace/www/rpc/getadvisercfg.asp, data/MDS-Workspace/www/rpc/getalertlevels.asp, data/MDS-Workspace/www/rpc/getalllancfg.asp, data/MDS-Workspace/www/rpc/getallpefcfg.asp, data/MDS-Workspace/www/rpc/getallrolegroupcfg.asp, data/MDS-Workspace/www/rpc/getallselentries.asp, data/MDS-Workspace/www/rpc/getallsensors.asp, data/MDS-Workspace/www/rpc/getalluserinfo.asp, data/MDS-Workspace/www/rpc/getauditlog.asp, data/MDS-Workspace/www/rpc/getbldtime.asp, data/MDS-Workspace/www/rpc/getdatetime.asp, data/MDS-Workspace/www/rpc/getdeviceid.asp, data/MDS-Workspace/www/rpc/getdnscfg.asp, data/MDS-Workspace/www/rpc/getlanalertdests.asp, data/MDS-Workspace/www/rpc/getlanchannelinfo.asp, data/MDS-Workspace/www/rpc/getldapconfig.asp, data/MDS-Workspace/www/rpc/getlogcfg.asp, data/MDS-Workspace/www/rpc/getmaxselentries.asp, data/MDS-Workspace/www/rpc/getmousemode.asp, data/MDS-Workspace/www/rpc/getntpcfg.asp, data/MDS-Workspace/www/rpc/getnwconfig.asp, data/MDS-Workspace/www/rpc/getradiuscfg.asp, data/MDS-Workspace/www/rpc/getremotesession.asp, data/MDS-Workspace/www/rpc/getreservedusers.asp, data/MDS-Workspace/www/rpc/getrole.asp, data/MDS-Workspace/www/rpc/getromfilesize.asp, data/MDS-Workspace/www/rpc/getselentries.asp, data/MDS-Workspace/www/rpc/getsessiontoken.asp, data/MDS-Workspace/www/rpc/getsmtpcfg.asp, data/MDS-Workspace/www/rpc/getsslcertstatus.asp, data/MDS-Workspace/www/rpc/getsystemlog.asp, data/MDS-Workspace/www/rpc/getvmediacfg.asp, data/MDS-Workspace/www/rpc/hostctl.asp, data/MDS-Workspace/www/rpc/hoststatus.asp, data/MDS-Workspace/www/rpc/modrolegroup.asp, data/MDS-Workspace/www/rpc/postflashreset.asp, data/MDS-Workspace/www/rpc/prepflash.asp, data/MDS-Workspace/www/rpc/rebootcard.asp, data/MDS-Workspace/www/rpc/restartwebserver.asp, data/MDS-Workspace/www/rpc/setactivedircfg.asp, data/MDS-Workspace/www/rpc/setalertentry.asp, data/MDS-Workspace/www/rpc/setdatetime.asp, data/MDS-Workspace/www/rpc/setdnscfg.asp, data/MDS-Workspace/www/rpc/setfactorydefaults.asp, data/MDS-Workspace/www/rpc/setldapconfig.asp, data/MDS-Workspace/www/rpc/setlogcfg.asp, data/MDS-Workspace/www/rpc/setmousemode.asp, data/MDS-Workspace/www/rpc/setntpcfg.asp, data/MDS-Workspace/www/rpc/setnwconfig.asp, data/MDS-Workspace/www/rpc/setradiuscfg.asp, data/MDS-Workspace/www/rpc/setremotesession.asp, data/MDS-Workspace/www/rpc/setsmtpcfg.asp, data/MDS-Workspace/www/rpc/startflash.asp, data/MDS-Workspace/www/rpc/testalert.asp, data/MDS-Workspace/www/rpc/validatesslcert.asp, data/MDS-Workspace/www/rpc/verifyimage.asp, data/MDS-Workspace/www/str, data/MDS-Workspace/www/str/EN, data/MDS-Workspace/www/str/EN/activex_launch_str.js, data/MDS-Workspace/www/str/EN/bios_post_event_str.js, data/MDS-Workspace/www/str/EN/blank_str.js, data/MDS-Workspace/www/str/EN/chassistype_str.js, data/MDS-Workspace/www/str/EN/common_str.js, data/MDS-Workspace/www/str/EN/configure_active_directory_str.js, data/MDS-Workspace/www/str/EN/configure_alerts_str.js, data/MDS-Workspace/www/str/EN/configure_dns_str.js, data/MDS-Workspace/www/str/EN/configure_ldap_str.js, data/MDS-Workspace/www/str/EN/configure_mouse_mode_str.js, data/MDS-Workspace/www/str/EN/configure_network_str.js, data/MDS-Workspace/www/str/EN/configure_ntp_str.js, data/MDS-Workspace/www/str/EN/configure_pef_str.js, data/MDS-Workspace/www/str/EN/configure_radius_str.js, data/MDS-Workspace/www/str/EN/configure_remote_session_str.js, data/MDS-Workspace/www/str/EN/configure_smtp_str.js, data/MDS-Workspace/www/str/EN/configure_ssl_str.js, data/MDS-Workspace/www/str/EN/configure_sys_audit_log_str.js, data/MDS-Workspace/www/str/EN/configure_users_str.js, data/MDS-Workspace/www/str/EN/console_redirection_str.js, data/MDS-Workspace/www/str/EN/dashboard_str.js, data/MDS-Workspace/www/str/EN/disable_javascript_str.js, data/MDS-Workspace/www/str/EN/err_str.js, data/MDS-Workspace/www/str/EN/event_log_str.js, data/MDS-Workspace/www/str/EN/event_str.js, data/MDS-Workspace/www/str/EN/file_upload_str.js, data/MDS-Workspace/www/str/EN/fw_update_str.js, data/MDS-Workspace/www/str/EN/global_str.js, data/MDS-Workspace/www/str/EN/header_str.js, data/MDS-Workspace/www/str/EN/jviewer_launch_str.js, data/MDS-Workspace/www/str/EN/login_str.js, data/MDS-Workspace/www/str/EN/main_str.js, data/MDS-Workspace/www/str/EN/noreading_str.js, data/MDS-Workspace/www/str/EN/resetDevice_str.js, data/MDS-Workspace/www/str/EN/restore_factory_str.js, data/MDS-Workspace/www/str/EN/sensor_readings_str.js, data/MDS-Workspace/www/str/EN/sensor_specific_event_str.js, data/MDS-Workspace/www/str/EN/sensortype_str.js, data/MDS-Workspace/www/str/EN/server_power_control_str.js, data/MDS-Workspace/www/str/EN/session_expired_str.js, data/MDS-Workspace/www/str/EN/system_audit_log_str.js, data/MDS-Workspace/www/str/EN/threshstate_str.js, data/MDS-Workspace/www/str/EN/tz_str.js, data/MDS-Workspace/www/str/EN/unittype_str.js, data/MDS-Workspace/www/str/EN/widget_page_str.js, data/MDS-Workspace/www/str/title_str.js, data/MDS-Workspace/www/style, data/MDS-Workspace/www/style/app_style.css, data/MDS-Workspace/www/style/header_style.css, data/MDS-Workspace/www/style/help_style.css, data/MDS-Workspace/www/style/login_style.css, data/MDS-Workspace/www/style/page_style.css, data/MDS-Workspace/www/style/widget_style.css, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/webui, spx/PACKAGES.D/webui/DATA, spx/PACKAGES.D/webui/SCRIPTS, spx/PACKAGES.D/webui/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 27 Jul 2010 12:00:41 EDT
+

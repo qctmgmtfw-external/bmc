@@ -1,0 +1,9 @@
+--- linux.old/drivers/mtd/nand/Makefile	2006-02-10 02:22:48.000000000 -0500
++++ linux.med/drivers/mtd/nand/Makefile	2008-09-05 16:06:38.259797159 -0400
+@@ -36,5 +36,6 @@
+ obj-$(CONFIG_MTD_NAND_FSL_UPM)		+= fsl_upm.o
+ obj-$(CONFIG_MTD_NAND_SH_FLCTL)		+= sh_flctl.o
+ obj-$(CONFIG_MTD_NAND_MXC)		+= mxc_nand.o
++obj-$(CONFIG_MTD_NAND_MAP_AMI)          += amimap.o
+ 
+ nand-objs := nand_base.o nand_bbt.o

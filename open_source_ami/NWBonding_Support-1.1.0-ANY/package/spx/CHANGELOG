@@ -1,0 +1,18 @@
+Package: NWBonding_Support (1.1.0); urgency = low
+
+Abstract:
+	Corrections in package name.
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 19 Jul 2011 20:24:29 IST
+
+Package: NWBonding_Support (1.0.0); urgency = new
+
+Abstract:
+	This is dummy Package to enable the bonding support.
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 15 Jul 2011 17:58:18 IST
+

@@ -1,0 +1,9 @@
+Package: libipmipdkcmds_2_13_0_1_EnableAMIGetSelEntries (1.0.0); urgency = new
+
+Abstract:
+	Enabling AMIGetSelEntries command for faster SEL accessing in WebUI
+
+Files Added: data, data/00-data_cmdselect.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 15 Sep 2011 23:24:28 IST
+

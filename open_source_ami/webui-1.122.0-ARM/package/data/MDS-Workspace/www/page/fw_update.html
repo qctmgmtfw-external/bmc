@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- 
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2011        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+ -->
+<html>
+<head>
+	<link href="../style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/include.js" type="text/javascript"></script>
+	<script src="../lib/form.js" type="text/javascript"></script>
+	<link href="../lib/listgrid.css" type="text/css" rel="stylesheet" />
+	<script src="../lib/listgrid.js" type="text/javascript"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_btnKeyUpload");
+		elmt.setAttribute("value", eLang.getString("fw_update", "FW_UPDATE_SIGNIMG_KEY"));
+		var elmt = document.getElementById("_btnPrsrvCfg");
+		elmt.setAttribute("value", eLang.getString("fw_update", "FW_UPDATE_PRSRV_CFG"));
+		var elmt = document.getElementById("_btnFWUpdate");
+		elmt.setAttribute("value", eLang.getString("fw_update", "FW_UPDATE_UPDATE"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+
+<body oncontextmenu="return false;">
+	<h3>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_TITLE"));</script>
+</h3>
+	<p>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DESC"));</script>
+</p>
+
+	<div class="subSection">
+		<strong>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_WARNING"));</script>
+</strong>
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DESC1"));</script>
+ <br><br>
+
+		<div id="_divPrsrvAll"><input type="checkbox" id="_chkPrsrvAll">
+		&nbsp;<label for="_chkPrsrvAll">
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_PRSRV_ALL"));</script>
+ </label> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_PRSRV_ALL_DESC"));</script>
+ <label id="_lblPrsrvAllDesc"></label></div>
+
+		<table cellspacing="0" cellpadding="0" border="0" width="97%">
+		<tr><td width="500">
+			<ul id="_wizard" class="wizard">
+			<li id="_clientRequests"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DESC2"));</script>
+</li>
+			<li id="_prepareDevice"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_DESC3"));</script>
+</li>
+			<li id="_uploadImage"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_UPLOAD"));</script>
+</li>
+			<li id="_verifyImage"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_VERIFY"));</script>
+</li>
+			<li id="_flashImage"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_FLASH"));</script>
+ <span id="_percentageFlashed"></span>
+				</li>
+			<li id="_resetDevice"><img src="../res/not_started.png" /> 
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_RESET"));</script>
+</li>
+			</ul>
+		</td>
+		<td id="_section" class="section" valign="top"></td></tr>
+		</table>
+		<iframe name="hiddenFrame" class="hide"></iframe>
+	</div>
+
+	<div id="_divPrsrvCfg">
+<script>document.writeln(eLang.getString("fw_update", "FW_UPDATE_PRSRV_CFG_DESC"));</script>
+ <br><br>
+		<div id="_lgdPrsrvCfg"></div>
+		<br><br>
+	</div>
+
+	<div class="btnTray">
+		<input type="button" id="_btnKeyUpload" />
+		<input type="button" id="_btnPrsrvCfg" />
+		<input type="button" id="_btnFWUpdate" />
+	</div>
+</body>
+</html>

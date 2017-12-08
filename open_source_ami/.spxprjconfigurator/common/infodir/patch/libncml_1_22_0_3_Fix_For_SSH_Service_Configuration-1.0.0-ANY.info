@@ -1,0 +1,20 @@
+Package : libncml_1_22_0_3_Fix_For_SSH_Service_Configuration
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 3 for libncml (1.22.0)
+Depends :  libncml(==1.22.0)
+PatchOrder : 3
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Suresh V (sureshv@amiindia.co.in)
+Urgency : new
+Description : Fix for Saving SSH Service Configurations
+.
+

@@ -1,0 +1,70 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+ 	<title>configure_sys_audit_log help</title>
+  	<link type='text/css' rel='stylesheet' href='../../style/help_style.css'/>
+</head>
+<body>
+	<h2><div class='floatRight'><a href='javascript://' class='closeBtn' onclick='top.closeHelp();'>X</a></div>
+	<div class='helpmainhead'>System & Audit Log Settings</div></h2>
+	<div class='subSection'>
+	This page is used to configure the System and Audit log settings.
+	<br/><br/>
+	<fieldset>
+	<legend>Actions</legend>
+	<h4>System Log</h4>
+	Check the option 'Enable' to enable system logs.
+	<h4>Log Type</h4>
+	Select the Log type for system logs, whether it should be preserved in a local file or on a remote server.
+	Local file resides at /var/log/
+	<h4>File Size</h4>
+	If Local log is selected, specify the size of the file in bytes.
+	<ul><li>- Size ranges from 3 to 65535.</li></ul>
+	<h4>Rotate Count</h4>
+	When logged information exceeds the specified file size, the old log information 
+	automatically gets moved to back up files based on the rotate count value. 
+	If the rotate count is zero, the old log information gets cleared permanently each time.
+	<ul><li>- Value ranges from 0 to 255.</li></ul>
+	<h4>Server Address</h4>
+	Specify the remote server address to log system events.
+	Server address will support the following:
+	<ul>
+		<li>- IPv4 address format.
+		<li>- FQDN (Fully qualified domain name) format.
+	</ul>
+	<h4>Audit Log</h4>
+	Check the option 'Enable' to enable audit log.
+	<h4>Save</h4>
+	Click 'Save' to save the configured settings.
+	<h4>Reset</h4>
+	Click 'Reset' to reset to the previously saved values.
+	</fieldset>
+	</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/dbgout
+	MKDIR_NOCLEAN %SPXINC/dbgout
+	COPY_FILE ./libdbgout.a %SPXLIB/dbgout
+	COPY_FILE ./dbgout.h %SPXINC/dbgout
+	COPY_FILE ./libdbgout.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/dbgout
+	ADD_LIBRARY_LINKS %SPXLIB/dbgout libdbgout.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

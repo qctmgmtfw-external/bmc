@@ -1,0 +1,35 @@
+Source : Kernel_soc_ast2300
+Version : 1.19.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : @Kernel_soc_ast2300
+Build-Depends : @Kernel_cpu_arm926ejs
+Essential : NO
+Owner : AMI
+Maintainer : Alex Yang  (alexyang@ami.com.tw)
+Source-Location : AMI
+Source-Version : 2.6.28.10
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ALL
+Urgency : medium
+Description : AST2300 SOC Fixes to Kernel 2.6.28.10
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : @Kernel_soc_ast2300
+Section : info
+Essential : NO
+Group : BASE
+Package-License : AMI
+Description : This is a dummy package because the SPX package Architecturerequires atleast one binary package to be specified for a source package.
+.
+

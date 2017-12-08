@@ -1,0 +1,8 @@
+config FEATURE_BOND_SUPPORT
+        bool
+        default y if NWBonding_Support
+        help
+             Enable/Disable IPMI command support for Bonding Configurations
+endmenu
+
+

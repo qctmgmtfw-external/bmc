@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_5_Service_Configuration_Pkt_size_change (1.0.0); urgency = new
+
+Abstract:
+	included needed change for Service Configuration Pkt size change in libncml
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_kvmpkts_ConfPkt.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 09 Sep 2011 10:07:30 IST
+

@@ -1,0 +1,18 @@
+Package : libipmiapml
+Non-Editable : YES
+Version : 2.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Suresh  (sureshv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Config-Tag : IPMI APML Support
+Group : IPMI
+Depends : ipmimain
+Package-License : AMI
+Description : This contains the ipmi apml binary.
+.

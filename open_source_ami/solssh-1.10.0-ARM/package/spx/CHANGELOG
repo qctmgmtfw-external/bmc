@@ -1,0 +1,99 @@
+Package: solssh (1.10.0); urgency = medium
+
+Abstract:
+	Removed the local define of UDS Authentication Flag
+
+Files Modified: data/solssh.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Jul 2011 16:29:18 IST
+
+Package: solssh (1.9.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:08:03 IST
+
+Package: solssh (1.8.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:39:04 EDT
+
+Package: solssh (1.7.0); urgency = high
+
+Abstract:
+	add network include path for IPMI file dependencies
+
+Files Modified: data/Makefile
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 15:18:02 EDT
+
+Package: solssh (1.6.0); urgency = medium
+
+Abstract:
+	Added Build-Depends and modified Config-Tag
+
+Files Modified: spx/INFO
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Thu, 05 May 2011 20:52:19 IST
+
+Package: solssh (1.5.0); urgency = medium
+
+Abstract:
+	Modified Build-Depends , Group and added Config-Tag
+
+Files Modified: data/Makefile, data/solssh.c, spx/INFO
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Wed, 04 May 2011 21:10:51 IST
+
+Package: solssh (1.4.0); urgency = medium
+
+Abstract:
+	Removed SMASH_CLP from its build depends
+
+Files Modified: spx/INFO
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Tue, 03 May 2011 00:47:31 IST
+
+Package: solssh (1.3.0); urgency = low
+
+Abstract:
+	Fix the incorrect build dependence
+
+Files Modified: spx/INFO
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Wed, 13 Apr 2011 14:35:19 CST
+
+Package: solssh (1.2.0); urgency = medium
+
+Abstract:
+	Modified solssh for getting the port value from IPMI OEM Commands
+
+Files Modified: data/Makefile, data/solssh.c
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Tue, 12 Apr 2011 17:35:20 IST
+
+Package: solssh (1.1.0); urgency = low
+
+Abstract:
+	Added Depends for SOLSSH package
+
+Files Modified: spx/INFO
+
+--Submitter: Gayathri L (gayathril@amiindia.co.in) Fri, 01 Apr 2011 12:06:17 IST
+
+Package: solssh (1.0.0); urgency = new
+
+Abstract:
+	This package include solssh application
+
+Files Added: data, data/Makefile, data/solssh.c, data/solssh.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/solssh, spx/PACKAGES.D/solssh/DATA, spx/PACKAGES.D/solssh/SCRIPTS, spx/PACKAGES.D/solssh/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Thu, 27 May 2010 17:43:04 EDT
+

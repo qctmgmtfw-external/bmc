@@ -1,0 +1,47 @@
+Source : bt
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : bt, bt_driver_dev
+Build-Depends : crosscc, rules, global_dev, kernel_dev, helper_driver_dev, libdbgout_dev
+Essential : NO
+Config-Tag : BT Device Support
+Group : DEVICE
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ALL
+Urgency : medium
+Description : BT Common Device Driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : bt
+Section : sys
+Essential : NO
+Config-Tag : BT Device Support
+Group : DEVICE
+Depends : kernel, hw_bt
+Required : reset, helper
+Package-License : GPL-V2
+Description : BT common driver
+.
+
+Package : bt_driver_dev
+Section : dev
+Essential : NO
+Package-License : GPL-V2
+Description : BT driver dev package
+.
+

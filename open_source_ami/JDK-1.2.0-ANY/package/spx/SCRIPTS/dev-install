@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+		MKDIR_CLEAN %TOOLDIR/JDK
+		COPY_FILE  jdk-1_5_0_01-linux-i586.bin %TOOLDIR/JDK/
+		CWD %TOOLDIR/JDK/
+		EXECUTE ./jdk-1_5_0_01-linux-i586.bin 
+		SETPATH %$TOOLDIR/JDK/jdk1.5.0_01/bin
+		SET_VALUE JAVA_PATH %TOOLDIR/JDK/jdk1.5.0_01/bin
+		DELETE %TOOLDIR/JDK/jdk-1_5_0_01-linux-i586.bin
+	
+debug-install:

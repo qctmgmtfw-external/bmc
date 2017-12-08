@@ -1,0 +1,563 @@
+Package: ipmipdk_dev (2.41.0); urgency = low
+
+Abstract:
+	Added new hook for Power ON/OFF Auditing
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 17 Aug 2011 11:36:35 IST
+
+Package: ipmipdk_dev (2.40.0); urgency = medium
+
+Abstract:
+	Add PDK_UpdateFaultLEDStatus hook for SSI Compute Blade.
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 09 Aug 2011 11:50:28 CST
+
+Package: ipmipdk_dev (2.39.0); urgency = medium
+
+Abstract:
+	Updating PDK_Hooks enum.
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 03 Aug 2011 14:42:30 IST
+
+Package: ipmipdk_dev (2.38.0); urgency = medium
+
+Abstract:
+	Adding PDKPAR_VERSIONINFOSAVE handle.
+
+Files Modified: data/PDKPARAccess.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 28 Jul 2011 18:13:43 IST
+
+Package: ipmipdk_dev (2.37.0); urgency = medium
+
+Abstract:
+	Added support for IPMI Configuration Version check. The version of IPMI_CONFIG_VERSION will be compared with CDF Version of libipmipar pakcage.This support can be enabled in PRJ using MDS.
+
+Files Modified: data/PDKPARAccess.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 28 Jul 2011 17:07:12 IST
+
+Package: ipmipdk_dev (2.36.0); urgency = medium
+
+Abstract:
+	Add declaration for PDK_PreMonitorIndividualSensor
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: AutumnChen (autumnchen@ami.com.tw) Wed, 27 Jul 2011 13:05:49 CST
+
+Package: ipmipdk_dev (2.35.0); urgency = low
+
+Abstract:
+	Added macros for LUN task in MsgHndlr
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 22 Jul 2011 21:30:22 IST
+
+Package: ipmipdk_dev (2.34.0); urgency = medium
+
+Abstract:
+	Added optional support for changing pdk, pdkcmds library name and its path using PRJ.
+
+Files Modified: data/PDKAccess.h, data/PDKCmdsAccess.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 21 Jul 2011 21:29:31 IST
+
+Package: ipmipdk_dev (2.33.0); urgency = low
+
+Abstract:
+	dl_pdkhandle is declared as extern.
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 14 Jul 2011 18:51:33 IST
+
+Package: ipmipdk_dev (2.32.0); urgency = low
+
+Abstract:
+	Added entries for the IPMB Bridging hook
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 08 Jul 2011 14:07:12 IST
+
+Package: ipmipdk_dev (2.31.0); urgency = low
+
+Abstract:
+	Added new pdk hook to clear SEL.dat file
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Wed, 06 Jul 2011 12:24:35 TLT
+
+Package: ipmipdk_dev (2.30.0); urgency = low
+
+Abstract:
+	Added a New PDK Hooks to register Sensor Hooks
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 05 Jul 2011 18:49:14 IST
+
+Package: ipmipdk_dev (2.29.0); urgency = medium
+
+Abstract:
+	Add Operational State support for SSI Compute Blade.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 05 Jul 2011 20:27:39 CST
+
+Package: ipmipdk_dev (2.28.0); urgency = medium
+
+Abstract:
+	Added couple of hooks for Set/Get PreserveConfiguration status
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Fri, 17 Jun 2011 15:48:15 IST
+
+Package: ipmipdk_dev (2.27.0); urgency = medium
+
+Abstract:
+	Add SSI Commands for SSI Compute Blade support.
+
+Files Modified: data/PDKAccess.h, data/cmdselect.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Sat, 11 Jun 2011 22:00:46 EDT
+
+Package: ipmipdk_dev (2.26.0); urgency = medium
+
+Abstract:
+	Add Circular SEL support.
+
+Files Modified: data/PDKPARAccess.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Fri, 10 Jun 2011 19:34:06 EDT
+
+Package: ipmipdk_dev (2.25.0); urgency = medium
+
+Abstract:
+	Added Before Watchdog Action Hook.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 10 Jun 2011 11:53:12 IST
+
+Package: ipmipdk_dev (2.24.0); urgency = high
+
+Abstract:
+	update for DCMI v2.0
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: Charles Lilly (charlesl@ami.com) Wed, 08 Jun 2011 17:25:28 EDT
+
+Package: ipmipdk_dev (2.23.0); urgency = low
+
+Abstract:
+	Changing the Essential Field to NO
+
+Files Modified: spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Jun 2011 16:02:59 IST
+
+Package: ipmipdk_dev (2.22.0); urgency = medium
+
+Abstract:
+	Extented the #define value for MAX_ID_STR_FILE_NAME to 128.
+
+Files Modified: data/PDKFRU.h
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Thu, 02 Jun 2011 11:34:20 IST
+
+Package: ipmipdk_dev (2.21.0); urgency = medium
+
+Abstract:
+	Add SSI LAN Parameters support for SSI Compute Blade.
+
+Files Modified: data/PDKPARAccess.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Wed, 18 May 2011 16:16:43 EDT
+
+Package: ipmipdk_dev (2.20.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:27:31 EDT
+
+Package: ipmipdk_dev (2.19.0); urgency = medium
+
+Abstract:
+	Passing BMC instances to all the hooks.
+
+Files Modified: data/PDKCmds.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 May 2011 14:56:33 IST
+
+Package: ipmipdk_dev (2.18.0); urgency = high
+
+Abstract:
+	changed the hook name correctly
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Fri, 29 Apr 2011 13:35:26 TLT
+
+Package: ipmipdk_dev (2.17.0); urgency = high
+
+Abstract:
+	Changed the PDK_GetPARLibraryPath hook name to more generic PDK_GetPlatformPath
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Thu, 28 Apr 2011 22:36:37 TLT
+
+Package: ipmipdk_dev (2.16.0); urgency = medium
+
+Abstract:
+	Added Two hooks as follows
+1. After Socket initialization for IPMI.
+2. On Lan state change.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 26 Apr 2011 17:25:49 IST
+
+Package: ipmipdk_dev (2.15.0); urgency = low
+
+Abstract:
+	Removed Multiple declaration of Macro EMAIL_FORMAT_SIZE
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 25 Apr 2011 12:27:02 IST
+
+Package: ipmipdk_dev (2.14.0); urgency = medium
+
+Abstract:
+	adding the getparlibpath() as part of PDKHandle
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 21 Apr 2011 10:54:24 IST
+
+Package: ipmipdk_dev (2.13.0); urgency = medium
+
+Abstract:
+	Adding the necessary structure needed to get FRU Device Address.
+
+Files Modified: data/PDKFRU.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 20 Apr 2011 11:37:57 IST
+
+Package: ipmipdk_dev (2.12.0); urgency = medium
+
+Abstract:
+	Adding PDK_FRUGETDEVADDRESS pdk hook to get FRU Device address.
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 19 Apr 2011 21:21:26 IST
+
+Package: ipmipdk_dev (2.11.0); urgency = medium
+
+Abstract:
+	Added a new hook to overwrite the number of interface support.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 19 Apr 2011 11:55:11 IST
+
+Package: ipmipdk_dev (2.10.0); urgency = medium
+
+Abstract:
+	libipmiPar library path can be got from pdk function or the default one is used
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 18 Apr 2011 15:02:35 IST
+
+Package: ipmipdk_dev (2.9.0); urgency = medium
+
+Abstract:
+	Modified the PDK_SetLanOEMParam and PDK_GetLanOEMParam parameters
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 08 Apr 2011 20:10:58 IST
+
+Package: ipmipdk_dev (2.8.0); urgency = medium
+
+Abstract:
+	PDK_BiosIPSource and  PDK_BMCOtherSourceIP prototypeand macros are added
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 08 Apr 2011 15:11:08 IST
+
+Package: ipmipdk_dev (2.7.0); urgency = low
+
+Abstract:
+	Added login Audit configuration for RMCP and Web
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h, data/PDKPARAccess.h
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 05 Apr 2011 17:45:16 IST
+
+Package: ipmipdk_dev (2.6.0); urgency = medium
+
+Abstract:
+	check acpi power state pdk macro and the prototype is added.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 01 Apr 2011 16:02:13 IST
+
+Package: ipmipdk_dev (2.5.0); urgency = medium
+
+Abstract:
+	Unwanted pdk macros removed
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 31 Mar 2011 14:42:08 IST
+
+Package: ipmipdk_dev (2.4.0); urgency = medium
+
+Abstract:
+	Arguments added for PrimaryIPMBAddr and SecondaryIPMBAddr
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 25 Mar 2011 12:45:43 IST
+
+Package: ipmipdk_dev (2.3.0); urgency = medium
+
+Abstract:
+	Included Trigger event hooks
+
+Files Modified: data/PDKPARAccess.h
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 24 Mar 2011 19:39:58 IST
+
+Package: ipmipdk_dev (2.2.0); urgency = medium
+
+Abstract:
+	Primary ipmb and secondary IPMB hooks functions added.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 24 Mar 2011 12:39:18 IST
+
+Package: ipmipdk_dev (2.1.0); urgency = medium
+
+Abstract:
+	Added PDK hooks to generate Device and System GUID.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 21 Mar 2011 20:00:52 IST
+
+Package: ipmipdk_dev (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Added: data/PDKPARAccess.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:09:49 IST
+
+Package: ipmipdk_dev (1.19.0); urgency = medium
+
+Abstract:
+	Unwanted pdk functions removed
+
+Files Modified: data/PDKAccess.h, data/PDKFRU.h, data/PDKHooks.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 09 Mar 2011 09:21:22 IST
+
+Package: ipmipdk_dev (1.18.0); urgency = medium
+
+Abstract:
+	Added structures needed for Command Enable/Disable functionalities.
+
+Files Added: data/cmdselect.h
+Files Modified: data/PDKCmdsAccess.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 24 Feb 2011 15:38:39 IST
+
+Package: ipmipdk_dev (1.17.0); urgency = low
+
+Abstract:
+	Added PDK UART Serial MUX Swicthing using SetChannelaccess Command
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 29 Jan 2011 00:21:38 IST
+
+Package: ipmipdk_dev (1.16.0); urgency = low
+
+Abstract:
+	DCMI Version 1.1 support
+
+Files Modified: data/PDKAccess.h, data/PDKFRU.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 13 Jan 2011 16:26:48 CST
+
+Package: ipmipdk_dev (1.15.0); urgency = medium
+
+Abstract:
+	Adding the header file needed for loading libipmipdkcmd dynamically.
+
+Files Added: data/PDKCmdsAccess.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 05 Jan 2011 20:36:45 IST
+
+Package: ipmipdk_dev (1.14.0); urgency = medium
+
+Abstract:
+	passing param BMCInst to PDK_AfterCreatingTasks
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Mon, 03 Jan 2011 00:00:26 IST
+
+Package: ipmipdk_dev (1.13.0); urgency = medium
+
+Abstract:
+	Included a hook to get Mfg ID and Product ID.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 17 Dec 2010 18:32:33 IST
+
+Package: ipmipdk_dev (1.12.0); urgency = medium
+
+Abstract:
+	Introduced new PDK hook which will be invoked when there is a change in the LAN param.
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 15 Dec 2010 15:06:47 IST
+
+Package: ipmipdk_dev (1.11.0); urgency = low
+
+Abstract:
+	Added Macro to define RAM FRU size
+
+Files Modified: data/PDKFRU.h
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 15 Dec 2010 14:34:18 IST
+
+Package: ipmipdk_dev (1.10.0); urgency = medium
+
+Abstract:
+	Modified the PDK_POHCounter function parameter to have minutes.
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 08 Dec 2010 22:28:39 GMT-5:30
+
+Package: ipmipdk_dev (1.9.0); urgency = low
+
+Abstract:
+	PDKHooks.h : Added declaration for IPMB Address hook function;
+ PDKAccess.h: Added the IPMB Address hook to PDKHook enum
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 02 Dec 2010 17:45:57 IST
+
+Package: ipmipdk_dev (1.8.0); urgency = low
+
+Abstract:
+	PDKHooks.h : Added declaration for POH counter hook function;
+PDKAccess.h: Added the POH Counter hook to PDKHook table
+
+Files Modified: data/PDKAccess.h, data/PDKHooks.h
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 02 Dec 2010 17:08:30 IST
+
+Package: ipmipdk_dev (1.7.0); urgency = high
+
+Abstract:
+	Added BMCInst to PDK_RegisterAllFRUs
+
+Files Modified: data/PDKFRU.h
+
+--Submitter: Gokul (gokulakannans@amiindia.co.in) Tue, 23 Nov 2010 00:03:30 IST
+
+Package: ipmipdk_dev (1.6.0); urgency = low
+
+Abstract:
+	Added Email formatting support For users, PEF email alert is configured using user ID  instead emailid and Added support to Attach a file to smtp email alert
+
+Files Modified: data/OemDefs.h, data/PDKAccess.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 19 Nov 2010 23:13:29 IST
+
+Package: ipmipdk_dev (1.5.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/PDKFRU.h, data/PDKHooks.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:11:41 EDT
+
+Package: ipmipdk_dev (1.4.0); urgency = medium
+
+Abstract:
+	Set LAN Configuration Parameters Command support option 3 & 4
+
+Files Modified: data/PDKHooks.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 05 Oct 2010 17:36:46 CST
+
+Package: ipmipdk_dev (1.3.0); urgency = medium
+
+Abstract:
+	Adding necessary fields in FRUInfo_T structure for proper accessing of file type FRU.
+
+Files Modified: data/PDKFRU.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 29 Sep 2010 19:16:42 EDT
+
+Package: ipmipdk_dev (1.2.0); urgency = low
+
+Abstract:
+	When minor number of library increases,the version of library links also changes.Using only "library.so" instead of "library.so.1.0",so that there won't be any issues in future.
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 15 Sep 2010 20:26:24 EDT
+
+Package: ipmipdk_dev (1.1.0); urgency = medium
+
+Abstract:
+	Added a PDK hook to verify/change the SDR values after initialization during Run time. This Hook will be invoked after initializing SDR.
+
+Files Modified: data/PDKAccess.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 14 Sep 2010 18:54:47 IST
+
+Package: ipmipdk_dev (1.0.0); urgency = new
+
+Abstract:
+	This Package contains the pdk common header files used by other ipmi packages also.
+
+Files Added: data, data/OemCmdSupport.h, data/OemDefs.h, data/OemSMMCmds.h, data/PDKAccess.h, data/PDKCmds.h, data/PDKDefs.h, data/PDKFRU.h, data/PDKHooks.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/ipmipdk_dev, spx/PACKAGES.D/ipmipdk_dev/DATA, spx/PACKAGES.D/ipmipdk_dev/SCRIPTS, spx/PACKAGES.D/ipmipdk_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 18:07:18 IST
+

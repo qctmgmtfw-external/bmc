@@ -1,0 +1,17 @@
+--- .pristine/libsnmp_hostname_mib-1.6.0-src/spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install Fri Jun 22 14:02:03 2012
++++ source/libsnmp_hostname_mib-1.6.0-src/spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install Fri Jun 22 14:03:41 2012
+@@ -3,6 +3,12 @@
+ build-install:
+                 COPY_DIR                ./ %IMAGE_TREE/usr/local/lib/
+                 ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libsnmp_hostname_mib.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+-                APPEND_TO_FILE  "dlmod libsnmp_hostname_mib /usr/local/lib/libsnmp_hostname_mib.so" %IMAGE_TREE/conf/snmp_users.conf
+-                APPEND_TO_FILE  "dlmod libsnmp_hostname_mib /usr/local/lib/libsnmp_hostname_mib.so" %IMAGE_TREE/etc/defconfig/snmp_users.conf
++				MKDIR_CLEAN conf
++				MKDIR_CLEAN etc
++                COPY_FILE %IMAGE_TREE/conf/snmp_users.conf ./conf/snmp_users.conf
++                COPY_FILE %IMAGE_TREE/etc/defconfig/snmp_users.conf ./etc/snmp_users.conf
++                EXECUTE grep -c libsnmp_hostname_mib ./conf/snmp_users.conf || echo "dlmod libsnmp_hostname_mib /usr/local/lib/libsnmp_hostname_mib.so" >> ./conf/snmp_users.conf
++                EXECUTE grep -c libsnmp_hostname_mib ./etc/snmp_users.conf || echo "dlmod libsnmp_hostname_mib /usr/local/lib/libsnmp_hostname_mib.so" >> ./etc/snmp_users.conf
++                COPY_FILE ./etc/snmp_users.conf %IMAGE_TREE/etc/defconfig/snmp_users.conf
++                COPY_TO_CONF ./conf/snmp_users.conf
+ debug-install:

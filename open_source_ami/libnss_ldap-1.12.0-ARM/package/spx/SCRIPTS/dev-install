@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+	    COPY_FILE libnss_ldap.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %IMAGE_TREE/lib
+  	    #ADD_LIBRARY_LINKS %IMAGE_TREE/lib libnss_ldap.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX  	
+	    CWD %IMAGE_TREE/lib/
+  	    CREATE_SOFT_LINK libnss_ldap.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX libnss_ldap.so.2
+debug-install:

@@ -1,0 +1,17 @@
+libipmi_sw Package:
+	This package is a software package needed for YafuFlash and IPMIApp. 
+	This package is used to create the libipmi library file in software folder.This package will depend on libipmi package.
+	
+NOTE:
+	Since this package is depend on libipmi,user must update the libipmi version in depends field in the INFO file of the package 
+	for successfully building the project.
+	
+How to Build:
+
+	Linux:
+		Linux compilation will support 32-bit and 64-bit version OS. User needs to change the libipmi version number in 
+		PACKAGE_DIR Macro in Make file before proceeding the compliation.
+		
+	Windows:
+		Windows compilation also will support 32-bit and 64-bit version OS. User needs to chagne the libipmi version number in
+		project file before proceeding the compliation.

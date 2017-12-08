@@ -1,0 +1,99 @@
+Package: snoop_hw (1.4.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ast_snoop.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 15:18:17 IST
+
+Package: snoop_hw (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:36:41 EDT
+
+Package: snoop_hw (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/snoop_hw/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 16:29:33 EDT
+
+Package: snoop_hw (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:15:23 EDT
+
+Package: snoop_hw (1.0.6); urgency = medium
+
+Abstract:
+	Because LPC-reset interrupt can not be disabled, LPC-reset hardware module has to be loaded before SNOOP hardware module.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 24 Jun 2010 16:56:09 CST
+
+Package: snoop_hw (1.0.5); urgency = low
+
+Abstract:
+	Disable IRQ when module is removed.
+
+Files Modified: data/ast_snoop.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 26 Apr 2010 16:39:56 CST
+
+Package: snoop_hw (1.0.4); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:41:52 CST
+
+Package: snoop_hw (1.0.3); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:25:17 EDT
+
+Package: snoop_hw (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 18:02:38 EDT
+
+Package: snoop_hw (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:15:03 EST
+
+Package:snoop_hw (1.0.0);urgency=new
+
+Abstract:
+	This package contains the LPC snoop hardware driver for AST2050 SoC.
+
+Files Added: ast_snoop.c, ast_snoop.h, Makefile
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 19 Nov 2009 16:04:13 -0500

@@ -1,0 +1,20 @@
+Package : libsnmp_template_mib_1_3_0_2_FixErrorMsgWhenSnmpLoadTemplateMib
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libsnmp_template_mib (1.3.0)
+Depends :  libsnmp_template_mib(==1.3.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  jcchiu (jcchiu@ami.com.tw)
+Urgency : new
+Description : FixErrorMsgWhenSnmpLoadTemplateMib
+.
+

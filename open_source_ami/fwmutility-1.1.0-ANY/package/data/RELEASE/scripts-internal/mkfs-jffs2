@@ -1,0 +1,6 @@
+#!/bin/sh
+./mkfs.jffs2 --root=$1 --output=$2 --eraseblock=$3 > /dev/null
+if [ $? != 0 ]; then
+        exit 1
+fi
+exit 0

@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_2_69009 (1.0.0); urgency = new
+
+Abstract:
+	Unable to save DNS settings without Alternate DNS server - fixed.
+
+Files Added: data, data/00-data_webifc_XportDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 14 Sep 2011 16:42:17 IST
+

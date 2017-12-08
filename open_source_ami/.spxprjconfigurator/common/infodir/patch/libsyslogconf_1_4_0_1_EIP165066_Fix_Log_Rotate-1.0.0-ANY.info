@@ -1,0 +1,20 @@
+Package : libsyslogconf_1_4_0_1_EIP165066_Fix_Log_Rotate
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libsyslogconf (1.4.0)
+Depends :  libsyslogconf(==1.4.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  nicolaschen (nicolaschen@ami.com.tw)
+Urgency : new
+Description : Fix log rotate
+.
+

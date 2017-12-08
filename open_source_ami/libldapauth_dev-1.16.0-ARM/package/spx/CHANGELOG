@@ -1,0 +1,223 @@
+Package: libldapauth (1.16.0); urgency = medium
+
+Abstract:
+	Linking libldap_r.so needed for LDAP authentication.
+
+Files Modified: data/Makefile
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 23 Jun 2011 18:23:30 IST
+
+Package: libldapauth (1.15.0); urgency = low
+
+Abstract:
+	Fix for build error
+
+Files Modified: data/Ldap_client.c, data/Ldap_util.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 27 May 2011 18:40:09 IST
+
+Package: libldapauth (1.14.0); urgency = low
+
+Abstract:
+	Code cleanup for ldap and AD
+
+Files Deleted: data/GenericLdapAuth.c, data/SSADAuth.c, data/SSADAuth.h
+Files Modified: data/Ldap_client.c, data/Ldap_client.h, data/Ldap_query.c, data/Ldap_util.c, data/Ldap_util.h, data/Makefile, spx/PACKAGES.D/libldapauth_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 26 May 2011 13:49:05 EDT
+
+Package: libldapauth (1.13.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:03:36 EDT
+
+Package: libldapauth (1.12.0); urgency = low
+
+Abstract:
+	Changing the certificate option to have proper CN check
+
+Files Modified: data/Ldap_client.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Sun, 01 May 2011 23:54:22 IST
+
+Package: libldapauth (1.11.0); urgency = medium
+
+Abstract:
+	Removing the Edirectory based configuration and implementation, edirectory is going to use LDAP authentication scheme
+
+Files Deleted: data/EdirAuth.c
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 19 Apr 2011 13:48:55 IST
+
+Package: libldapauth (1.10.0); urgency = low
+
+Abstract:
+	Adding libedirconf_dev, inorder to do build libedirconf with configuration file before ldapauth builds
+
+Files Modified: spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 12 Apr 2011 23:09:43 IST
+
+Package: libldapauth (1.9.0); urgency = medium
+
+Abstract:
+	Adding new authentication mechanism which provides again Novell Edirectory server.
+
+Files Added: data/EdirAuth.c
+Files Modified: data/Makefile
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 12 Apr 2011 20:52:22 IST
+
+Package: libldapauth (1.8.0); urgency = low
+
+Abstract:
+	If Users have privileges with Multiple Groups, then Lesser privilege is applied.
+
+Files Modified: data/GenericLdapAuth.c, data/SSADAuth.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 08 Apr 2011 17:22:39 IST
+
+Package: libldapauth (1.7.0); urgency = medium
+
+Abstract:
+	Adding Active Directory SSL Support, Server based authentication is enabled
+
+Files Modified: data/SSADAuth.c, data/SSADAuth.h
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 17 Mar 2011 21:49:02 IST
+
+Package: libldapauth (1.6.0); urgency = low
+
+Abstract:
+	LDAP Secure Authenticataion is enabled. Server cerfication alone validated for now.
+
+Files Modified: data/GenericLdapAuth.c, data/Ldap_client.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 16 Mar 2011 17:16:42 IST
+
+Package: libldapauth (1.5.0); urgency = low
+
+Abstract:
+	1. Now removed the Hard Coded value for using Secret User with Secret password,
+2. Now binddn and bindpw from ldap.conf are used to bind initialy to search the ldap tree for UserDn.
+3. For now using anonymous bind, the ldap tree search is done, it works well as expected.
+
+Files Modified: data/GenericLdapAuth.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 25 Feb 2011 19:53:05 IST
+
+Package: libldapauth (1.4.0); urgency = medium
+
+Abstract:
+	User Secret Username to bind with LDAP server, will do search for all possible entries and will do bind with that..
+This enables User can present in anywhere in LDAP Tree.
+
+Files Modified: data/GenericLdapAuth.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 16 Feb 2011 12:07:52 IST
+
+Package: libldapauth (1.3.0); urgency = low
+
+Abstract:
+	copying Ldap_errcodes.h to libldapauth_dev.. it will be used pam_ad
+
+Files Modified: spx/PACKAGES.D/libldapauth_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Fri, 24 Dec 2010 00:17:57 IST
+
+Package: libldapauth (1.2.0); urgency = medium
+
+Abstract:
+	Disable print user name and password information on console when login through ldap server.
+
+Files Modified: data/Ldap_client.c
+
+--Submitter: joywu (joywu) Mon, 18 Oct 2010 19:08:22 CST
+
+Package: libldapauth (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:01:23 EDT
+
+Package: libldapauth (1.0.7); urgency = low
+
+Abstract:
+	Synopsis: Add Ldap account Group support.
+
+Change function GetSSADConfig() in order to read the correct ldap group or AD configuration files.
+
+Files Modified: data/GenericLdapAuth.c, data/SSADAuth.c
+
+--Submitter: joywu (joywu) Thu, 12 Aug 2010 17:20:01 CST
+
+Package: libldapauth (1.0.6); urgency = medium
+
+Abstract:
+	Add file: GenericLdapAuth.c and functions supported for Ldap with privilege feature.
+
+Files Added: data/GenericLdapAuth.c
+Files Modified: data/Ldap_client.c, data/Ldap_query.c, data/Ldap_query.h, data/Makefile, spx/INFO
+
+--Submitter: joywu (joywu) Mon, 09 Aug 2010 01:15:22 CST
+
+Package: libldapauth (1.0.5); urgency = medium
+
+Abstract:
+	Fix for AD fails when we give domain ip in domain controller server address 2
+
+Files Modified: data/Ldap_client.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 01 Jun 2010 18:11:06 IST
+
+Package: libldapauth (1.0.4); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:22:27 EDT
+
+Package: libldapauth (1.0.3); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 14 Apr 2010 17:50:33 EDT
+
+Package: libldapauth (1.0.2); urgency = low
+
+Abstract:
+	Bug #12362, Domain name conflict with Domain controller server address - fixed.
+
+Files Modified: data/SSADAuth.c
+
+--Submitter: Arockia Selva Rani (arockiaa@amiindia.co.in) Mon, 08 Mar 2010 19:49:50 IST
+
+Package: libldapauth (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:08:50 EST
+
+Package:libldapauth (1.0.0);urgency=new
+
+Abstract:
+	This package includes the LDAP auth configuration related APIs.
+
+Files Added: Ldap_util.h, Ldap_client.h, Ldap_query.c, SSADAuth.c, Ldap_util.c, Ldap_errcodes.h, Makefile, Ldap_query.h, SSADAuth.h, Ldap_client.c
+
+--Submitter: SP Core Team (spcoreteam@ami.com) Tue, 8 Dec 2009 17:33:16 -0500

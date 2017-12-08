@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/phyconf
+	COPY_FILE ./libphyconf.h %SPXINC/phyconf
+    MKDIR_NOCLEAN %SPXLIB/phyconf
+	COPY_FILE ./libphyconf.a %SPXLIB/phyconf
+	COPY_FILE libphyconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/phyconf
+	ADD_LIBRARY_LINKS %SPXLIB/phyconf libphyconf.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

@@ -1,0 +1,127 @@
+Package: oempdk_dev (2.7.0); urgency = medium
+
+Abstract:
+	Add PDK_UpdateFaultLEDStatus hook for SSI Compute Blade.
+
+Files Modified: data/PDKHW.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 09 Aug 2011 11:51:14 CST
+
+Package: oempdk_dev (2.6.0); urgency = medium
+
+Abstract:
+	Add Operational State support for SSI Compute Blade.
+
+Files Modified: data/PDKHW.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 05 Jul 2011 20:51:01 CST
+
+Package: oempdk_dev (2.5.0); urgency = medium
+
+Abstract:
+	Add SSI Commands for SSI Compute Blade support.
+
+Files Modified: data/PDKHW.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Sat, 11 Jun 2011 22:21:42 EDT
+
+Package: oempdk_dev (2.4.0); urgency = low
+
+Abstract:
+	Changing the Essential Field to NO
+
+Files Modified: spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Jun 2011 16:03:29 IST
+
+Package: oempdk_dev (2.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:21:42 EDT
+
+Package: oempdk_dev (2.2.0); urgency = low
+
+Abstract:
+	Add parameter to pass ForceIdentify value in PDK_CHASSISIDENTIFY handler.
+Let pdk handler can distinguish between ForceIdentify and IdentifyInterval 255.
+
+Files Modified: data/PDKHW.h
+
+--Submitter: cindychen (cindychen@ami.com.tw) Tue, 26 Apr 2011 11:15:05 CST
+
+Package: oempdk_dev (2.1.0); urgency = medium
+
+Abstract:
+	Unwanted pdk prototype removed
+
+Files Modified: data/PDKHW.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 31 Mar 2011 14:47:43 IST
+
+Package: oempdk_dev (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Deleted: data/OEM_NVR.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:10:34 IST
+
+Package: oempdk_dev (1.5.0); urgency = medium
+
+Abstract:
+	Unwanted pdk functions removed
+
+Files Modified: data/PDKHW.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 09 Mar 2011 09:42:44 IST
+
+Package: oempdk_dev (1.4.0); urgency = medium
+
+Abstract:
+	Passing BoardID as an argument to get the board specific SDR file.
+
+Files Modified: data/PDKSDR.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 18 Jan 2011 18:58:50 IST
+
+Package: oempdk_dev (1.3.0); urgency = low
+
+Abstract:
+	Added Email formatting support For users, PEF email alert is configured using user ID  instead emailid and Added support to Attach a file to smtp email alert
+
+Files Modified: data/PDKAlert.h
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 19 Nov 2010 23:18:10 IST
+
+Package: oempdk_dev (1.2.0); urgency = high
+
+Abstract:
+	AST build issue fixed
+
+Files Modified: data/PDKInt.h
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 14 Oct 2010 01:13:35 EDT
+
+Package: oempdk_dev (1.1.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/PDKAlert.h, data/PDKHW.h, data/PDKInt.h
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:11:17 EDT
+
+Package: oempdk_dev (1.0.0); urgency = new
+
+Abstract:
+	This package contains the PDK Oem Header Files.
+
+Files Added: data, data/OEM_NVR.h, data/PDKAlert.h, data/PDKEEPROM.h, data/PDKHW.h, data/PDKInt.h, data/PDKSDR.h, data/PDKSEL.h, data/PDKSensor.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/oempdk_dev, spx/PACKAGES.D/oempdk_dev/DATA, spx/PACKAGES.D/oempdk_dev/SCRIPTS, spx/PACKAGES.D/oempdk_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 18:07:39 IST
+

@@ -1,0 +1,9 @@
+Package: i2c_hw_1_12_0_1_Add_i2c_transfer_byte_timeout_check (1.0.0); urgency = new
+
+Abstract:
+	Add I2C transfer byte timeout check
+
+Files Added: data, data/00-data_i2c-transfer.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: garypaung (garypaung@ami.com.tw) Fri, 26 Oct 2012 21:50:11 CST
+

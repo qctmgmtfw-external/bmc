@@ -1,0 +1,45 @@
+Source : helper
+Version : 1.10.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : helper, helper_driver_dev
+Build-Depends : crosscc, global_dev, kernel_dev, rules, libfmh_dev, platform
+Essential : NO
+Group : DEVICE
+Owner : AMI
+Maintainer : Jothiram Selvam  (jothirams@ami.com)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ALL
+Urgency : medium
+Description : This pacakges includes the helper driver module, required by all the other device drivers.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : helper
+Section : sys
+Essential : NO
+Group : DEVICE
+Depends : platform
+Package-License : GPL-V2
+Description : Helper driver module
+.
+
+Package : helper_driver_dev
+Section : dev
+Essential : NO
+Group : DEVEL
+Package-License : GPL-V2
+Description : This pacakge includes the Helper driver header files used across various other drivers.
+.
+

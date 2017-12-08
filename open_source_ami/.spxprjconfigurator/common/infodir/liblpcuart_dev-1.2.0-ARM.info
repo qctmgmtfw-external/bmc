@@ -1,0 +1,16 @@
+Package : liblpcuart_dev
+Non-Editable : YES
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Alex Yang  (alexyang@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Group : DEVEL
+Package-License : AMI
+Description : LIBLPCUART development header files.
+.

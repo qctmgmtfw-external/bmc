@@ -1,0 +1,8 @@
+./01-MultiEth.patch 2886 3cdb7c64ab88724f424ee7e8f6ca9854
+./02-IrqHandler.patch 647 905085c9f1e7a0b52aacc5a124342cbe
+./03-Relocate.patch 1511 dafaeeeabc45fddf8eb5b55305609947
+./04-AtagEth.patch 2953 3546f4eecf2bafb7e26385caeb0b0e0d
+./05-dis.sh.patch 317 a36667ccb40d52d0d084a8f157476f2e
+./06-Fix_1.1.6 668 b36e6258a1aa6985dbccf1a979503d34
+./07-Dummy_raise 420 3e42b6cdc5dfea98dd00009e9663fc19
+./08-MiscInit.patch 1229 fee7ad3d951f6b96481875f383d4d25f

@@ -1,0 +1,56 @@
+Package: phycfg (1.5.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:14:15 IST
+
+Package: phycfg (1.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:24:01 EDT
+
+Package: phycfg (1.3.0); urgency = low
+
+Abstract:
+	No need to set the network link as AutoNegotiation explicitly, as the interface is already set to Auto-Negotiate, by default.
+
+Files Deleted: spx/P.CONFIG
+Files Modified: data/phycfg.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Mon, 02 May 2011 20:18:31 IST
+
+Package: phycfg (1.2.0); urgency = low
+
+Abstract:
+	Including libphy only when phy app is selected
+
+Files Added: spx/P.CONFIG
+Files Modified: spx/INFO
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 09 Feb 2011 14:54:48 IST
+
+Package: phycfg (1.1.0); urgency = low
+
+Abstract:
+	Moved from Device group to Features group, and set Essential to NO
+
+Files Modified: spx/INFO
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Tue, 25 Jan 2011 21:27:50 IST
+
+Package: phycfg (1.0.0); urgency = new
+
+Abstract:
+	PHY configuration application. Based on the user configuraton, this is used to configure the network interface.
+
+Files Added: data, data/Makefile, data/phycfg.c, data/phycfg.sh, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/phycfg, spx/PACKAGES.D/phycfg/DATA, spx/PACKAGES.D/phycfg/SCRIPTS, spx/PACKAGES.D/phycfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 23 Dec 2010 16:51:20 IST
+

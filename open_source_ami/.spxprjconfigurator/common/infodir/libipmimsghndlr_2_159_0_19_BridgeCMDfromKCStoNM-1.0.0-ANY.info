@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_19_BridgeCMDfromKCStoNM
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 19 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 19
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Owen Chou (owenchou@ami.com.tw)
+Urgency : new
+Description : According to Spec, commands can be bridged to NM only under ADMIN privilege. But some interfaces, including KCS, doesn't need certification. For such interfaces, the privilege-checking should be skipped.
+.
+

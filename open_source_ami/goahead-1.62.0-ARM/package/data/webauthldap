@@ -1,0 +1,3 @@
+#%PAM-1.0
+auth       required	/lib/security/ami_pam_genericldap.so try_first_pass
+account    required	/lib/security/ami_pam_genericldap.so

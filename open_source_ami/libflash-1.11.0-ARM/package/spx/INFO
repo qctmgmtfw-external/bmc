@@ -1,0 +1,16 @@
+Package : libflash
+Non-Editable : YES
+Version : 1.11.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Suresh  (sureshv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Required : libunix, libubenv, libdbgout, libchecksum, libfmh
+Package-License : AMI
+Description : This contains the flash Library Binary.
+.

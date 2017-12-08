@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_21_EIP81224_PEFPostPoneTime_Does_Not_Stop_When_System_Reset
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 21 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 21
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  kenttang (kenttang@ami.com.tw)
+Urgency : new
+Description : PEFPostPoneTimer does not stop when system is reset
+.
+

@@ -1,0 +1,9 @@
+Package: libipmisol_2_8_0_2_78904_SOLLoopTestFail (1.0.0); urgency = new
+
+Abstract:
+	SOL loop test fail
+
+Files Added: data, data/00-data_SOL.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: kenttang (kenttang@ami.com.tw) Wed, 11 Jan 2012 14:17:47 CST
+

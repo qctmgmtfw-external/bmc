@@ -1,0 +1,26 @@
+--- .pristine/sys_ipv6-2.3.0-src/data/dhcp6c-script Fri Feb  3 16:17:31 2012
++++ source/sys_ipv6-2.3.0-src/data/dhcp6c-script Fri Jan 20 17:10:58 2012
+@@ -11,7 +11,7 @@
+ .  /conf/dns.conf
+ 
+ #getdnsvars
+-if [ "$SET_v6DNS" == 'yes' -o "$SET_v6DNS" == 'y' ]; then
++if [ "$SET_DNS" == 'yes' -o "$SET_DNS" == 'y' ]; then
+ 	if [ -n "$new_domain_name_servers" ]; then
+ 		#if [ -n "$new_domain_name" -o -n "$new_domain_name_servers" ]; then
+ 		LOOP=0
+@@ -21,10 +21,13 @@
+ 			#echo "LOOP - $LOOP"
+ 			#AddDNSServerIP $i				#This API is replaced with the new API for DNS address overwriting problems.
+ 			AddDNSServerIP_New $i $LOOP
++			if ! [ "$SET_IPV6_PRIORITY" == 'yes' -o "$SET_IPV6_PRIORITY" == 'y' ];then
++				break
++			fi
+ 		done
+ 	fi
+ else
+-	echo " SET_v6DNS is not true"
++	echo " SET_DNS is not true"
+ fi	
+ 	
+ if [ "$SET_v6DOMAIN" == 'yes' -o "$SET_v6DOMAIN" == 'y' ]; then

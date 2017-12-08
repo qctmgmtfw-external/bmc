@@ -1,0 +1,9 @@
+diff -Naur linux-2.6.28.10/drivers/mtd/spichips/Makefile linux-2.6.28.10-ami/drivers/mtd/spichips/Makefile
+--- linux-2.6.28.10/drivers/mtd/spichips/Makefile	2010-04-26 11:41:20.000000000 +0800
++++ linux-2.6.28.10-ami/drivers/mtd/spichips/Makefile	2010-04-26 11:46:16.000000000 +0800
+@@ -12,3 +12,5 @@
+ 
+ # The default driver  should be the last in the list of suppported devices
+ obj-$(CONFIG_MTD_SPI_DEFAULT)   += default.o
++
++obj-$(CONFIG_MTD_AST_SPI)   += astspi.o

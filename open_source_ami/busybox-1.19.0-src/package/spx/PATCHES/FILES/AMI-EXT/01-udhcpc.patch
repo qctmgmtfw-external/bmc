@@ -1,0 +1,11 @@
+--- busybox-1.13.2.org/networking/ifupdown.c	2008-11-09 12:27:59.000000000 -0500
++++ busybox-1.13.2/networking/ifupdown.c	2009-02-24 16:41:20.000000000 -0500
+@@ -526,7 +526,7 @@
+ 	if (!execute("ifconfig %iface%[[ hw %hwaddress%]] up", ifd, exec))
+ 		return 0;
+ #endif
+-	return execute("udhcpc -R -n -p /var/run/udhcpc.%iface%.pid "
++	return execute("udhcpc -R -b -p /var/run/udhcpc.%iface%.pid "
+ 			"-i %iface%[[ -H %hostname%]][[ -c %clientid%]][[ -s %script%]][[ %udhcpc_opts%]]",
+ 			ifd, exec);
+ }

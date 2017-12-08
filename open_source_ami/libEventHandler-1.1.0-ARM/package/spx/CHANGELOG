@@ -1,0 +1,18 @@
+Package: libEventHandler (1.1.0); urgency = medium
+
+Abstract:
+	Added Channel Number w.r.t Indication Service
+
+Files Modified: data/EventHandler.c, data/EventHandler.h
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Fri, 20 May 2011 04:30:15 EDT
+
+Package: libEventHandler (1.0.0); urgency = new
+
+Abstract:
+	This library is triggered when a event occurs in IPMI.
+
+Files Added: data, data/EventHandler.c, data/EventHandler.h, data/Makefile, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libEventHandler, spx/PACKAGES.D/libEventHandler/DATA, spx/PACKAGES.D/libEventHandler/SCRIPTS, spx/PACKAGES.D/libEventHandler/SCRIPTS/dev-install, spx/PACKAGES.D/libEventHandler_dev, spx/PACKAGES.D/libEventHandler_dev/DATA, spx/PACKAGES.D/libEventHandler_dev/SCRIPTS, spx/PACKAGES.D/libEventHandler_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Wed, 18 May 2011 21:06:28 IST
+

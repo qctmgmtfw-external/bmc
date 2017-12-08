@@ -1,0 +1,16 @@
+Package : libipmihalhw
+Non-Editable : YES
+Version : 2.5.1
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : sakthipriya M  (sakthipriyam@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : lib
+Essential : NO
+Group : IPMI
+Package-License : AMI
+Description : Binary package for IPMI HAL Hardware library
+.

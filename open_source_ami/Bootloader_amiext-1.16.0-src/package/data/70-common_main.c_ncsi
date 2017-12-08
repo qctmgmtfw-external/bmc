@@ -1,0 +1,24 @@
+--- uboot.org/common/main.c	2007-08-02 11:56:13.000000000 -0400
++++ uboot/common/main.c	2007-08-02 16:00:40.000000000 -0400
+@@ -38,6 +38,10 @@
+ #include <hush.h>
+ #endif
+ 
++#if 0  //Change to ifdef CONFIG_NCSI_SUPPORT to Autostart NCSI detection
++#include <net.h>
++#endif
++
+ #include <post.h>
+ 
+ #ifdef CONFIG_SILENT_CONSOLE
+@@ -365,6 +369,10 @@
+ 	install_auto_complete();
+ #endif
+ 
++#if 0  //Change to ifdef CONFIG_NCSI_SUPPORT to Autostart NCSI detection
++	NetLoop(NCSI);
++#endif
++
+ #ifdef CONFIG_PREBOOT
+ 	if ((p = getenv ("preboot")) != NULL) {
+ # ifdef CONFIG_AUTOBOOT_KEYED

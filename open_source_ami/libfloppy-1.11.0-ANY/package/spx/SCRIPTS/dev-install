@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+        MKDIR_CLEAN %SOFTWARE/%PACKAGE
+        MKDIR_CLEAN %SOFTWARE/include/floppy
+        COPY_DIR   . %SOFTWARE/%PACKAGE
+        COPY_DIR ./include %SOFTWARE/include/floppy
+
+debug-install:

@@ -1,0 +1,11 @@
+--- busybox.old/Makefile	2008-12-31 09:02:54.000000000 +0530
++++ busybox.new/Makefile	2011-04-25 21:28:14.100499824 +0530
+@@ -314,7 +314,7 @@
+ 
+ # Use LINUXINCLUDE when you must reference the include/ directory.
+ # Needed to be compatible with the O= option
+-CFLAGS		:= $(CFLAGS)
++CFLAGS		:= $(CFLAGS) -I$(objtree)/../../../../../include/
+ # Added only to final link stage of busybox binary
+ CFLAGS_busybox	:= $(CFLAGS_busybox)
+ CPPFLAGS	:= $(CPPFLAGS)

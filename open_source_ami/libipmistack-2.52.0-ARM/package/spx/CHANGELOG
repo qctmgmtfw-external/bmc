@@ -1,0 +1,1010 @@
+Package: libipmistack (2.52.0); urgency = low
+
+Abstract:
+	Added new hook for Power ON/OFF audit
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 17 Aug 2011 12:15:42 IST
+
+Package: libipmistack (2.51.0); urgency = medium
+
+Abstract:
+	A slight modification for adding PDK_PlatformID function.
+
+Files Modified: data/Platform.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 11 Aug 2011 13:16:05 CST
+
+Package: libipmistack (2.50.0); urgency = medium
+
+Abstract:
+	Add PDK_UpdateFaultLEDStatus hook for SSI Compute Blade.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 09 Aug 2011 11:50:50 CST
+
+Package: libipmistack (2.49.0); urgency = medium
+
+Abstract:
+	Adding necessary handles of libipmipdk package to store OEM related IPMI Configurations to NVRAM.
+
+Files Modified: data/PDKAccess.c, data/PDKPARAccess.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 03 Aug 2011 14:36:41 IST
+
+Package: libipmistack (2.48.0); urgency = medium
+
+Abstract:
+	Added support for IPMI Configuration Version check. The version of IPMI_CONFIG_VERSION will be compared with CDF Version of libipmipar pakcage.This support can be enabled in PRJ using MDS.
+
+Files Modified: data/PDKPARAccess.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 28 Jul 2011 18:11:58 IST
+
+Package: libipmistack (2.47.0); urgency = medium
+
+Abstract:
+	Corrected the NULL check for lib_Smtphandle.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 20 Jul 2011 21:24:46 IST
+
+Package: libipmistack (2.46.0); urgency = medium
+
+Abstract:
+	Added PDK_BeforeWatchdogAction Hook.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 19 Jul 2011 18:58:41 IST
+
+Package: libipmistack (2.45.0); urgency = medium
+
+Abstract:
+	Changes done to make dlopen handle of libipmipdk library as global.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 14 Jul 2011 18:37:58 IST
+
+Package: libipmistack (2.44.0); urgency = medium
+
+Abstract:
+	Added function to get the channel number using IPv6 Address.
+
+Files Modified: data/Ethaddr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 13 Jul 2011 18:08:32 IST
+
+Package: libipmistack (2.43.0); urgency = low
+
+Abstract:
+	code cleanup.
+
+Files Modified: data/Ethaddr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Jul 2011 18:17:49 IST
+
+Package: libipmistack (2.42.0); urgency = low
+
+Abstract:
+	Added entries for the ipmb bridge hook
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 08 Jul 2011 14:08:04 IST
+
+Package: libipmistack (2.41.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:09:12 IST
+
+Package: libipmistack (2.40.0); urgency = low
+
+Abstract:
+	Added new pdk hook to clear SEL.dat file
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Wed, 06 Jul 2011 12:25:10 TLT
+
+Package: libipmistack (2.39.0); urgency = low
+
+Abstract:
+	PDK Hooks Added for Register Sensor Hook
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 05 Jul 2011 18:51:40 IST
+
+Package: libipmistack (2.38.0); urgency = medium
+
+Abstract:
+	Add Operational State support for SSI Compute Blade.
+
+Files Modified: data/PDKAccess.c, data/SSIAccess.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 05 Jul 2011 20:49:10 CST
+
+Package: libipmistack (2.37.0); urgency = medium
+
+Abstract:
+	Fix for Memory leak while activating SOL.
+
+Files Modified: data/Ethaddr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 24 Jun 2011 19:27:12 IST
+
+Package: libipmistack (2.36.0); urgency = low
+
+Abstract:
+	Removing MAX_CIPHER_SUITES_BYTES from Ciphertable.c file.
+
+Files Modified: data/ciphertable.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 21 Jun 2011 14:05:03 IST
+
+Package: libipmistack (2.35.0); urgency = low
+
+Abstract:
+	Added AMI command for Set/Get Preserve Configuration
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Fri, 17 Jun 2011 15:44:15 IST
+
+Package: libipmistack (2.34.0); urgency = medium
+
+Abstract:
+	Add SSI Commands for SSI Compute Blade support.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Sat, 11 Jun 2011 22:21:17 EDT
+
+Package: libipmistack (2.33.0); urgency = medium
+
+Abstract:
+	Add Circular SEL support.
+
+Files Modified: data/PDKPARAccess.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Fri, 10 Jun 2011 19:44:39 EDT
+
+Package: libipmistack (2.32.0); urgency = high
+
+Abstract:
+	update for DCMI v2.0
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Charles Lilly (charlesl@ami.com) Wed, 08 Jun 2011 17:26:14 EDT
+
+Package: libipmistack (2.31.0); urgency = low
+
+Abstract:
+	Added support for timeout completion code
+
+Files Modified: data/Message.c, data/Session.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 06 Jun 2011 22:25:48 IST
+
+Package: libipmistack (2.30.0); urgency = medium
+
+Abstract:
+	Add SSI LAN Parameters support for SSI Compute Blade.
+
+Files Modified: data/PDKPARAccess.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Wed, 18 May 2011 16:17:34 EDT
+
+Package: libipmistack (2.29.0); urgency = medium
+
+Abstract:
+	Add Event Forwarding support for SSI Compute Blade.
+
+Files Added: data/SSIAccess.c
+Files Modified: data/Makefile
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Tue, 17 May 2011 20:07:45 EDT
+
+Package: libipmistack (2.28.0); urgency = high
+
+Abstract:
+	added proper validation for duplicate users
+
+Files Modified: data/Session.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Tue, 17 May 2011 20:01:27 TLT
+
+Package: libipmistack (2.27.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:01:56 EDT
+
+Package: libipmistack (2.26.0); urgency = low
+
+Abstract:
+	Dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 12 May 2011 15:00:11 EDT
+
+Package: libipmistack (2.25.0); urgency = low
+
+Abstract:
+	removed hal layer initialization and moved to halapi package
+
+Files Modified: data/Makefile, data/PDKPARAccess.c
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 17:00:00 IST
+
+Package: libipmistack (2.24.0); urgency = low
+
+Abstract:
+	Corrections in PDKPAR Macro.
+
+Files Modified: data/PDKPARAccess.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 11 May 2011 16:53:49 IST
+
+Package: libipmistack (2.23.0); urgency = high
+
+Abstract:
+	Added Read Lock for read only access NVR files
+
+Files Modified: data/NVRAccess.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Mon, 09 May 2011 21:44:59 TLT
+
+Package: libipmistack (2.22.0); urgency = medium
+
+Abstract:
+	Fix to flush NVRAM IPMI configurations to INI during flashing.
+
+Files Modified: data/NVRAccess.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 05 May 2011 00:49:07 IST
+
+Package: libipmistack (2.21.0); urgency = medium
+
+Abstract:
+	Fix to make flushing of IPMI Configurations to NVRAM faster.
+
+Files Modified: data/NVRAccess.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 18:56:13 IST
+
+Package: libipmistack (2.20.0); urgency = high
+
+Abstract:
+	providing the corresponding path for BMC.conf file in migrated case
+
+Files Modified: data/BMCInfo.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Fri, 29 Apr 2011 20:28:32 TLT
+
+Package: libipmistack (2.19.0); urgency = high
+
+Abstract:
+	changes for NVR file(SDR.dat) accessing modes
+
+Files Modified: data/NVRAccess.c, data/PDKAccess.c, data/PDKPARAccess.c, data/Platform.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Thu, 28 Apr 2011 22:39:13 TLT
+
+Package: libipmistack (2.18.0); urgency = medium
+
+Abstract:
+	Added Two Hooks for the following purposes,
+1. PDK_OnLanStateChange - Invoked when change in the LAN state.
+2. PDK_AfterInitIPMISockets - Invoked after init IPMI sockets.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 26 Apr 2011 17:41:23 IST
+
+Package: libipmistack (2.17.0); urgency = low
+
+Abstract:
+	Add parameter to pass ForceIdentify value in PDK_CHASSISIDENTIFY handler.
+Let pdk handler can be distinguished between ForceIdentify and IdentifyInterval 0xff.
+
+Files Modified: data/Platform.c
+
+--Submitter: cindychen (cindychen@ami.com.tw) Tue, 26 Apr 2011 11:21:22 CST
+
+Package: libipmistack (2.16.0); urgency = medium
+
+Abstract:
+	adding the getparlibpath() as part of PDKHandle
+
+Files Modified: data/PDKAccess.c, data/PDKPARAccess.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Thu, 21 Apr 2011 10:53:16 IST
+
+Package: libipmistack (2.15.0); urgency = low
+
+Abstract:
+	Fix for compilation error.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 20 Apr 2011 11:37:00 IST
+
+Package: libipmistack (2.14.0); urgency = medium
+
+Abstract:
+	Adding PDK_FRUGETDEVADDRESS pdk hook to get FRU Device address.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 19 Apr 2011 21:15:19 IST
+
+Package: libipmistack (2.13.0); urgency = medium
+
+Abstract:
+	Added a new hook to overwrite the number of interface support.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 19 Apr 2011 11:52:08 IST
+
+Package: libipmistack (2.12.0); urgency = medium
+
+Abstract:
+	libipmiPar library path can be got from pdk function or the default one is used
+
+Files Modified: data/PDKPARAccess.c, data/Platform.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 18 Apr 2011 15:00:37 IST
+
+Package: libipmistack (2.11.0); urgency = medium
+
+Abstract:
+	Fix for ACPI. Removing unwanted functions.
+
+Files Modified: data/Platform.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 12 Apr 2011 15:16:07 IST
+
+Package: libipmistack (2.10.0); urgency = medium
+
+Abstract:
+	PDK_BiosIPSource and PDK_BMCOtherSourceIP PDK macros defined
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 08 Apr 2011 15:12:38 IST
+
+Package: libipmistack (2.9.0); urgency = low
+
+Abstract:
+	Added login Audit configuration for RMCP and Web
+
+Files Modified: data/NVRAccess.c, data/PDKAccess.c, data/PDKPARAccess.c, data/Session.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 05 Apr 2011 17:46:26 IST
+
+Package: libipmistack (2.8.0); urgency = medium
+
+Abstract:
+	PDK_CHECKACPIPOWERSTATE macro is added.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 01 Apr 2011 15:59:41 IST
+
+Package: libipmistack (2.7.0); urgency = medium
+
+Abstract:
+	Unwanted pdk macros removed
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 31 Mar 2011 14:45:46 IST
+
+Package: libipmistack (2.6.0); urgency = low
+
+Abstract:
+	Handling the error conditions properly.
+
+Files Modified: data/NVRAccess.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 28 Mar 2011 17:19:42 IST
+
+Package: libipmistack (2.5.0); urgency = medium
+
+Abstract:
+	Added Trigger Event Load file and save file in PDK PAR Hooks and added function for flushing trigger event configuration in ini file
+
+Files Modified: data/NVRAccess.c, data/PDKPARAccess.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 24 Mar 2011 19:53:01 IST
+
+Package: libipmistack (2.4.0); urgency = medium
+
+Abstract:
+	primary, secondary ipmb variable name changes.
+
+Files Modified: data/BMCInfo.c, data/PDKAccess.c, data/Session.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 24 Mar 2011 12:47:50 IST
+
+Package: libipmistack (2.3.0); urgency = low
+
+Abstract:
+	Email Format Type: Checking all library files under email format directory for proper email format type.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 21 Mar 2011 20:50:39 IST
+
+Package: libipmistack (2.2.0); urgency = medium
+
+Abstract:
+	Added PDK hooks to generate Device and System GUID.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 21 Mar 2011 19:59:11 IST
+
+Package: libipmistack (2.1.0); urgency = medium
+
+Abstract:
+	Fix in FlushChannel function
+
+Files Modified: data/NVRAccess.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 21:29:57 IST
+
+Package: libipmistack (2.0.0); urgency = medium
+
+Abstract:
+	hanges done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Added: data/PDKPARAccess.c
+Files Modified: data/Makefile, data/NVRAccess.c, data/PDKAccess.c, data/PDKCmdsAccess.c, data/Platform.c, data/Session.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:00:23 IST
+
+Package: libipmistack (1.36.0); urgency = medium
+
+Abstract:
+	Fix to get platform ID properly from platform.conf when libpdkapp library is not present.
+
+Files Modified: data/Platform.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 10 Mar 2011 16:52:33 IST
+
+Package: libipmistack (1.35.0); urgency = medium
+
+Abstract:
+	Unwanted pdk macros removed
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 09 Mar 2011 09:41:46 IST
+
+Package: libipmistack (1.34.0); urgency = low
+
+Abstract:
+	Added function to get NVRAM handle for SEL and SDR
+
+Files Modified: data/NVRAccess.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Mar 2011 14:09:02 IST
+
+Package: libipmistack (1.33.0); urgency = low
+
+Abstract:
+	BMC Configuration Related Functions are marked up as a seperate file
+
+Files Added: data/BMCInfo.c
+Files Modified: data/Ethaddr.c, data/Makefile
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 01 Mar 2011 20:11:52 IST
+
+Package: libipmistack (1.32.0); urgency = medium
+
+Abstract:
+	Added PDKCMDS_PDKISCOMMANDENABLED pdkcmd Hook
+
+Files Modified: data/PDKCmdsAccess.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 24 Feb 2011 15:36:08 IST
+
+Package: libipmistack (1.31.0); urgency = medium
+
+Abstract:
+	The session time out value is assigned to the session table structure in AddSession.
+
+Files Modified: data/Session.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 23 Feb 2011 18:42:40 IST
+
+Package: libipmistack (1.30.0); urgency = low
+
+Abstract:
+	Closing the handle properly.
+
+Files Modified: data/Platform.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 22 Feb 2011 18:35:32 IST
+
+Package: libipmistack (1.29.0); urgency = high
+
+Abstract:
+	Added GetIfcname and GetChannelByAddr function.
+Changes done to return proper EthIndex and Channel Number in bonding mode also.
+
+Files Modified: data/Ethaddr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Feb 2011 22:35:39 IST
+
+Package: libipmistack (1.28.0); urgency = medium
+
+Abstract:
+	Made changes so that PDK Hooks should be called only when the handle is not equal to NULL
+
+Files Modified: data/Platform.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 04 Feb 2011 19:08:20 IST
+
+Package: libipmistack (1.27.0); urgency = medium
+
+Abstract:
+	Removed eth reference and corrections in Ethindex validation.
+
+Files Modified: data/Ethaddr.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 03 Feb 2011 15:20:26 IST
+
+Package: libipmistack (1.26.0); urgency = low
+
+Abstract:
+	Added PDK UART Serial MUX Swicthing using SetChannelaccess Command
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 29 Jan 2011 00:22:10 IST
+
+Package: libipmistack (1.25.0); urgency = medium
+
+Abstract:
+	The conversion of Jiffies to Milliseconds is done in GetJiffySysCtlvalue function.
+
+Files Modified: data/Util.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 27 Jan 2011 17:13:13 IST
+
+Package: libipmistack (1.24.0); urgency = low
+
+Abstract:
+	Added new entries for cipher suites 15,16 and 17 for SHA2
+
+Files Modified: data/ciphertable.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 25 Jan 2011 17:45:16 IST
+
+Package: libipmistack (1.23.0); urgency = low
+
+Abstract:
+	Removing the unwanted error message.
+
+Files Modified: data/Platform.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 19 Jan 2011 14:21:35 IST
+
+Package: libipmistack (1.22.0); urgency = high
+
+Abstract:
+	modified to return the proper error codes as returned by the lower layers
+
+Files Modified: data/EEPROMAccess.c
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Tue, 18 Jan 2011 18:31:23 EST
+
+Package: libipmistack (1.21.0); urgency = high
+
+Abstract:
+	Added function to get the BoardID.
+
+Files Modified: data/Platform.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 18 Jan 2011 19:05:32 IST
+
+Package: libipmistack (1.20.0); urgency = low
+
+Abstract:
+	DCMI Version 1.1 support
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 13 Jan 2011 16:28:23 CST
+
+Package: libipmistack (1.19.0); urgency = medium
+
+Abstract:
+	Added support to load libipmipdkcmd library to load dynamically.
+
+Files Added: data/PDKCmdsAccess.c
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 05 Jan 2011 20:26:16 IST
+
+Package: libipmistack (1.18.0); urgency = medium
+
+Abstract:
+	duplicate ipmi users not allowed
+
+Files Modified: data/Session.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Fri, 24 Dec 2010 16:11:52 IST
+
+Package: libipmistack (1.17.0); urgency = medium
+
+Abstract:
+	Changing the return value when there is no message in queue.
+
+Files Modified: data/Message.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 17 Dec 2010 20:04:14 EST
+
+Package: libipmistack (1.16.0); urgency = medium
+
+Abstract:
+	Included a hook to get Mfg ID and Product ID.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 17 Dec 2010 18:31:25 IST
+
+Package: libipmistack (1.15.0); urgency = medium
+
+Abstract:
+	Added function to retrieve a value from sysctl.
+
+Files Modified: data/Util.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 16 Dec 2010 21:20:52 EST
+
+Package: libipmistack (1.14.0); urgency = medium
+
+Abstract:
+	Introduced new PDK hook which will be invoked when there is a change in the LAN param.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 15 Dec 2010 15:08:12 IST
+
+Package: libipmistack (1.13.0); urgency = medium
+
+Abstract:
+	Done changes in getting EthIndex and Channel number based on Lan interface changes.
+
+Files Modified: data/Ethaddr.c, data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 10 Dec 2010 19:01:58 EST
+
+Package: libipmistack (1.12.0); urgency = medium
+
+Abstract:
+	Reverted the changes done for LED Glowing
+
+Files Modified: data/Indicators.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 10 Dec 2010 11:08:15 IST
+
+Package: libipmistack (1.11.0); urgency = medium
+
+Abstract:
+	I2C Debug Board Sensor Porting related changes. Changed the return data type of PDK Glow LED Function
+
+Files Modified: data/Indicators.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 09 Dec 2010 18:26:19 IST
+
+Package: libipmistack (1.10.0); urgency = low
+
+Abstract:
+	Added IPMB Addr PDK hook to PDK initialize table
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 02 Dec 2010 18:08:50 IST
+
+Package: libipmistack (1.9.0); urgency = low
+
+Abstract:
+	Added a hook for POH counter to the PDK Handler table
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 02 Dec 2010 17:17:57 IST
+
+Package: libipmistack (1.8.0); urgency = low
+
+Abstract:
+	Fix can't reset "set in progress" parameter when a system reset or transition to powered down state occurs
+
+Files Modified: data/Platform.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 01 Dec 2010 20:17:35 CST
+
+Package: libipmistack (1.7.0); urgency = low
+
+Abstract:
+	Added Email formatting support For users, PEF email alert is configured using user ID  instead emailid and Added support to Attach a file to smtp email alert
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 19 Nov 2010 23:17:40 IST
+
+Package: libipmistack (1.6.0); urgency = medium
+
+Abstract:
+	The GetMsg returns -1 for all types of errors. Changed the return value for Timeout as 1 instead of -1.
+
+Files Modified: data/Message.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 15 Nov 2010 10:34:47 IST
+
+Package: libipmistack (1.5.0); urgency = low
+
+Abstract:
+	Removing ipmimain from depends.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 12 Nov 2010 16:28:48 EST
+
+Package: libipmistack (1.4.0); urgency = high
+
+Abstract:
+	libipmistack should only be picked up when ipmimain is selected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 14 Oct 2010 15:43:34 EDT
+
+Package: libipmistack (1.3.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/Ethaddr.c, data/Indicators.c, data/Platform.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:08:55 EDT
+
+Package: libipmistack (1.2.0); urgency = medium
+
+Abstract:
+	Corrected the SOL functionality. Now able to connect SOL via ipmitool or freeipmi.
+
+Files Modified: data/Session.c
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Thu, 16 Sep 2010 14:57:05 IST
+
+Package: libipmistack (1.1.0); urgency = medium
+
+Abstract:
+	Added a PDK hook to verify/change the SDR values after initialization during Run time. This Hook will be invoked after initializing SDR.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 14 Sep 2010 18:55:55 IST
+
+Package: libipmistack (1.0.21); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency and removed unwanted inclusion of PDK Header Files
+
+Files Modified: data/Indicators.c, data/Makefile, data/Platform.c, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:55:22 IST
+
+Package: libipmistack (1.0.20); urgency = medium
+
+Abstract:
+	Added PDK_PreMonitorIndividualSensor hook to invoke for each sensor and for every monitor interval
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 18 Aug 2010 22:35:21 IST
+
+Package: libipmistack (1.0.19); urgency = high
+
+Abstract:
+	Adding Node Manager support features
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Mon, 16 Aug 2010 09:52:34 CST
+
+Package: libipmistack (1.0.18); urgency = high
+
+Abstract:
+	Implemented the KCS Non Communication Interrupt
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 05 Aug 2010 23:03:45 IST
+
+Package: libipmistack (1.0.17); urgency = medium
+
+Abstract:
+	Modified the Macro from PDK_CHECKFORINT to PDK_GETINTINFO, which is used to get the INIInfo structure by giving interrupt number.
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 05 Aug 2010 23:00:35 IST
+
+Package: libipmistack (1.0.16); urgency = low
+
+Abstract:
+	MBMC Changes for libipmistack
+
+Files Modified: data/EEPROMAccess.c, data/Ethaddr.c, data/GUID.c, data/Indicators.c, data/MD5.c, data/Message.c, data/NVRAccess.c, data/PDKAccess.c, data/Platform.c, data/Session.c, data/Util.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:51:21 IST
+
+Package: libipmistack (1.0.15); urgency = high
+
+Abstract:
+	Bug fix : Rev69536 force SOL session won't expire forever.
+The GetLinkStatus can indicate the ethernet link status, the feature "Link down resilient" should dends on real link status.
+
+Files Modified: data/Session.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Mon, 28 Jun 2010 15:29:43 CST
+
+Package: libipmistack (1.0.14); urgency = medium
+
+Abstract:
+	Bug Fix:
+Session timer task close the SOL session when LinkDownResilient is enabling.
+If this feature is enabling, the SOL session should not expired.
+
+Files Modified: data/Session.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Sat, 26 Jun 2010 09:11:38 CST
+
+Package: libipmistack (1.0.13); urgency = low
+
+Abstract:
+	Fixed binary build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 25 Jun 2010 12:57:43 EDT
+
+Package: libipmistack (1.0.12); urgency = low
+
+Abstract:
+	Removing gpio and i2c from build dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 20:05:04 IST
+
+Package: libipmistack (1.0.11); urgency = medium
+
+Abstract:
+	Adding Link Down resilent support to SPX
+
+Files Modified: data/Ethaddr.c, data/Makefile, data/Session.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 03 Jun 2010 11:17:21 IST
+
+Package: libipmistack (1.0.10); urgency = medium
+
+Abstract:
+	Added PDK_GetLANChannel function.
+
+Files Modified: data/Ethaddr.c, data/PDKAccess.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Thu, 27 May 2010 13:07:12 EDT
+
+Package: libipmistack (1.0.9); urgency = medium
+
+Abstract:
+	Adding  bad password detection support in IPMI for SPX.
+
+Files Modified: data/Util.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 21 May 2010 15:13:46 IST
+
+Package: libipmistack (1.0.8); urgency = medium
+
+Abstract:
+	Added PDK_GetEthIndex function.
+
+Files Modified: data/Ethaddr.c, data/PDKAccess.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Thu, 20 May 2010 18:27:58 EDT
+
+Package: libipmistack (1.0.7); urgency = medium
+
+Abstract:
+	Add PDK to hook SOL configuration, to support OEM parameter
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Sat, 15 May 2010 03:48:03 CST
+
+Package: libipmistack (1.0.6); urgency = medium
+
+Abstract:
+	Add PDK to hook SystemInfo, to support OEM parameter
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 13 May 2010 22:41:21 CST
+
+Package: libipmistack (1.0.5); urgency = medium
+
+Abstract:
+	Return the number of bytes read/write into the files in function ReadWriteNVR().
+
+Files Modified: data/NVRAccess.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 13 May 2010 21:53:08 IST
+
+Package: libipmistack (1.0.4); urgency = medium
+
+Abstract:
+	Add PDK to hook LAN configuration, to support OEM parameter
+
+Files Modified: data/PDKAccess.c
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Wed, 12 May 2010 08:23:53 CST
+
+Package: libipmistack (1.0.3); urgency = low
+
+Abstract:
+	Add the SOL idle timeout function, the sol session will be timeout due to inactivity. 
+If timeout value is 0, which means session doesn't timeout.
+
+Files Modified: data/Session.c
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Tue, 27 Apr 2010 20:35:02 EDT
+
+Package: libipmistack (1.0.2); urgency = low
+
+Abstract:
+	35578: Get Session Challenge should return 0x82 (null user name (User 1) not enabled), when NULL user is disabled
+
+Files Modified: data/Session.c, spx/INFO
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 30 Mar 2010 01:04:34 IST
+
+Package: libipmistack (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:08:29 EST
+
+Package:libipmistack (1.0.0);urgency=new
+
+Abstract:
+	This package contains the ipmi stack lib related files.
+
+Files Added: PDKAccess.c, Ethaddr.c, GUID.c, ciphertable.c, Indicators.c, MD2.c, Session.c, Platform.c, Message.c, Util.c, EEPROMAccess.c, AuthCode.c, Makefile, Debug.c, NVRAccess.c, MD5.c
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Thu, 3 Dec 2009 15:33:34 -0500

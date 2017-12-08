@@ -1,0 +1,5 @@
+#Runlevel : 7 = S52
+#Runlevel : 8 = S52
+#this script should be the last to execute on runlevel7
+#sets an indicator saying init7 is complete
+touch /var/flasher.initcomplete

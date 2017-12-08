@@ -1,0 +1,17 @@
+Package : hw_peci
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Essential : NO
+Group : DEVICE
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : SOC Supports PECI
+SOC will include this package if it support this peripheral.
+Driver Packages can be selected only if this package is included
+.

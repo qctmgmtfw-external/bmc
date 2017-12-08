@@ -1,0 +1,9 @@
+Package: libipmi_2_38_0_9_EIP193007_FixCant_use_similar_account_to_login_Web (1.0.0); urgency = new
+
+Abstract:
+	Fixed can't use the similar account to login WebUI.
+
+Files Added: data, data/00-data_libipmi_session.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 20 Nov 2014 19:07:18 CST
+

@@ -1,0 +1,60 @@
+#!/bin/sh
+# /etc/init.d/procmanager
+#
+# chkconfig: 2345 10 90
+#Runlevel : S = S36
+#Runlevel : 6 = S36
+#Runlevel : 7 = K36
+#Runlevel : 8 = K36
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+PATHFUL_PROCMAN="/usr/local/bin/processmanager"
+
+
+
+test -f /usr/local/bin/processmanager || exit 0
+
+
+# Options for start/restart the daemons
+#
+
+
+#
+
+
+case "$1" in
+  start)
+    echo -n "Starting Process Manager"
+    /usr/local/bin/processmanager &
+#    start-stop-daemon --start --quiet --exec $PATHFUL_PROCMAN
+    echo "."
+    ;;
+  stop)
+    echo -n "Stopping Process Manager"
+    killall processmanager
+#    start-stop-daemon --stop --quiet --exec $PATHFUL_PROCMAN
+    echo "."
+    ;;
+    reload)
+	echo -n "Reloading Process Manager"
+	echo "dont know what to do with reload right now"
+#	start-stop-daemon --stop --quiet --exec $PATHFUL_PROCMAN --signal 1
+	echo "."
+	;;
+    force-reload)
+#	$0 reload
+	;;
+    restart)
+	echo -n "Restarting Process Manager"
+	killall processmanager
+	/usr/local/bin/processmanager &
+#	start-stop-daemon --stop --quiet --oknodo --exec $PATHFUL_PROCMAN
+#	start-stop-daemon --start --quiet --exec $PATHFUL_PROCMAN
+	echo "."
+	;;
+   *)
+    echo "Usage: /etc/init.d/procmanager {start|stop|reload|restart|force-reload}"
+    exit 1
+esac
+
+exit 0

@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %SPXINC/reset
+		COPY_FILE ./reset_ifc.h %SPXINC/reset
+		MKDIR_NOCLEAN %SPXLIB/reset
+		COPY_FILE ./libreset.a %SPXLIB/reset
+		COPY_FILE ./libreset.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/reset
+		ADD_LIBRARY_LINKS %SPXLIB/reset libreset.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		
+debug-install:
+

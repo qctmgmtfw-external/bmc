@@ -1,0 +1,76 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2011-2014        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_nw_bond help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+		<div class="helpmainhead">Network Bonding</div>
+	</h2>
+	<div class="subSection">
+		This page is used to configure the network bonding configuration for 
+		the network interfaces.
+		<br>
+		<strong>NOTE:</strong> Minimum of 2 network interfaces required to 
+		enable Network bonding for the device.
+		<br/><br/>
+		<fieldset>
+			<legend>Actions</legend>
+			<h4>Network Bonding</h4>
+			Check this option to enable network bonding for network interfaces.
+			<br>
+			<strong>NOTE:</strong> If VLAN is enabled for slave interfaces, 
+			then Bonding cannot be enabled. VLAN can be disabled, under 
+			Configuration -> Network -> VLAN.
+			<h4>Default Interfaces</h4>
+			Choose any one of the bonding interfaces for configuring active 
+			slave(s).
+			<h4>Auto Configuration</h4>
+			Enable this option to configure the interfaces in service 
+			configuration automatically.
+			<br>
+			<strong>NOTE:</strong> If Auto configuration is disabled, then 
+			interfaces in services can be configured via IPMI command.
+			<br>
+			If Auto configuration is enabled, then all the services will be 
+			restarted automatically.
+			<h4>Save</h4>
+			Click "Save" to save the current changes.
+			<br>
+			<strong>NOTE:</strong> Disabling bonding will disable the 
+			Bonding-VLAN configuration.
+			<h4>Reset</h4>
+			Click "Reset" to reset the modified changes.
+		</fieldset>
+	</div>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+Package : JViewer_1_10_0_4_EIP92861_UpdateSOCMenuWithCorrectMethod
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 4 for JViewer (1.10.0)
+Depends :  JViewer(==1.10.0)
+PatchOrder : 4
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  joeychen (JoeyChen@ami.com.tw)
+Urgency : new
+Description : Update SOCMenu with correct method
+.
+

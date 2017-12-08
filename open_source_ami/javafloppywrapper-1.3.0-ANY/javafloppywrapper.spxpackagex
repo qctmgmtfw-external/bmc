@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Binary</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/bldhelp.js</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/javafloppywrapper.dsp</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/javafloppywrapper.suo</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/javafloppywrapper.dsw</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/Makefile.x86_64</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/javafloppywrapper.cpp</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/resource.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/java_prototypes.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/Makefile.x86</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/javafloppywrapper.ncb</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/Makefile</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/javafloppywrapper.vcproj</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/build.wsf</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/data/javafloppywrapper.sln</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>javafloppywrapper</package-name>
+<version>1.3.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>software</section>
+<build-depends/>
+<depends>
+<package-name operator="" version="">libfloppy</package-name>
+</depends>
+<required>
+<package-name operator="" version="">libkvm_dev</package-name>
+</required>
+<conflicts/>
+<essential>NO</essential>
+<group>SOFTWARE</group>
+<configtags>javawrapper(floppy)</configtags>
+<installsize/>
+<description>This Package contains the java library files for floppy.</description>
+<architecture>ANY</architecture>
+<owner>AMI</owner>
+<maintainer>muthuchamyk  </maintainer>
+<maintainer-email>muthusamyk@amiindia.co.in</maintainer-email>
+<sourcelocation/>
+<sourceversion/>
+<sourcelicense>AMI</sourcelicense>
+<packagelicense>AMI</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules/>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/spx/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/javafloppywrapper-1.3.0-ANY/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

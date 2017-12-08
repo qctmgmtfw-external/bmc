@@ -1,0 +1,218 @@
+Package: Vmedia_Mac_64 (1.14.0); urgency = medium
+
+Abstract:
+	Included condition to check NTFS,FAT 12,16,32 format to read total sector count from redirected Image file.
+
+Files Modified: data/libjavaharddiskwrapper.jnilib
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 08 Jul 2011 19:14:16 IST
+
+Package: Vmedia_Mac_64 (1.13.0); urgency = medium
+
+Abstract:
+	Added the support for USB key Image redirection for FAT & NTFS
+
+Files Modified: data/libjavaharddiskwrapper.jnilib
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 27 Jun 2011 12:08:48 IST
+
+Package: Vmedia_Mac_64 (1.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:59:49 EDT
+
+Package: Vmedia_Mac_64 (1.11.0); urgency = medium
+
+Abstract:
+	Issue fixed : RHEL5.6 does not re-mount Remote Floppy (Buffer I/O error)
+
+Files Modified: data/libjavafloppywrapper.jnilib
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 23 Mar 2011 13:13:33 IST
+
+Package: Vmedia_Mac_64 (1.10.0); urgency = medium
+
+Abstract:
+	Included condition to avoid reading beyond Max Sector range
+
+Files Modified: data/libjavacdromwrapper.jnilib, data/libjavafloppywrapper.jnilib, data/libjavaharddiskwrapper.jnilib
+
+--Submitter: othiyappank (gopinaths@amiindia.co.in) Wed, 09 Mar 2011 18:00:10 IST
+
+Package: Vmedia_Mac_64 (1.9.0); urgency = medium
+
+Abstract:
+	Issue Fixed : Remote FD access Lamp keeps lighting on RHEL5
+
+Files Modified: data/libjavafloppywrapper.jnilib
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 04 Mar 2011 20:58:24 IST
+
+Package: Vmedia_Mac_64 (1.8.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+        Linux client Fixed harddisk redirection is redirected only read Mode,res
+tricted the write operation for fixed harddisk
+
+Files Modified: data/libjavaharddiskwrapper.jnilib
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 22 Oct 2010 12:17:10 IST
+
+Package: Vmedia_Mac_64 (1.7.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	  While redirecting Cdimage in floppy Drive,proper error message should be thrown..
+
+Files Modified: data/libjavafloppywrapper.jnilib
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 05 Oct 2010 05:18:39 IST
+
+Package: Vmedia_Mac_64 (1.6.0); urgency = medium
+
+Abstract:
+	Fixed Issue :Multiple language encoding support on ISO redirection
+
+Files Modified: data/libjavacdromwrapper.jnilib, data/libjavafloppywrapper.jnilib, data/libjavaharddiskwrapper.jnilib
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 19:49:14 IST
+
+Package: Vmedia_Mac_64 (1.5.0); urgency = medium
+
+Abstract:
+	Bug Fixed:
+        1.Cannot Format Redirected Hard Drive
+        2.Launching Virtual Media Wizard causes JViewer crashed when three or more removable drives are connected
+        3.USB KEY drive allow access locally and remote redirection console at a time.
+        4.Exclusive access of USB key/CD/DVD shall be give to either host server or local client
+        5.In Redirection mode Files are not updated correctly both USB and Hard disk
+        6.The USB key sutck in the formate mode in the java redirection mode
+
+Files Modified: data/libjavaharddiskwrapper.jnilib
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Wed, 29 Sep 2010 12:03:09 IST
+
+Package: Vmedia_Mac_64 (1.4.0); urgency = medium
+
+Abstract:
+	Fix for Java console closed while redirecting CD
+
+Files Modified: data/libjavacdromwrapper.jnilib
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 28 Sep 2010 19:10:33 IST
+
+Package: Vmedia_Mac_64 (1.3.0); urgency = medium
+
+Abstract:
+	Fix for external hard disk path displayed in floppy path
+
+Files Modified: data/libjavafloppywrapper.jnilib
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 28 Sep 2010 09:31:10 IST
+
+Package: Vmedia_Mac_64 (1.2.0); urgency = medium
+
+Abstract:
+	MACH 64 bit library for external drive hard disk write support
+
+Files Modified: data/libjavaharddiskwrapper.jnilib
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 21 Sep 2010 18:28:21 IST
+
+Package: Vmedia_Mac_64 (1.1.0); urgency = medium
+
+Abstract:
+	Mac 64 bit external hard disk redirection library. Only Read is supported.
+
+Files Modified: data/libjavaharddiskwrapper.jnilib
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 14 Sep 2010 16:59:24 IST
+
+Package: Vmedia_Mac_64 (1.0.8); urgency = medium
+
+Abstract:
+	Added the SCSI_READ_20 support in Library
+
+Files Modified: data/libjavacdromwrapper.jnilib, data/libjavafloppywrapper.jnilib, data/libjavaharddiskwrapper.jnilib, spx/INFO
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 18 May 2010 18:07:41 IST
+
+Package: Vmedia_Mac_64 (1.0.7); urgency = medium
+
+Abstract:
+	Added Group and Config Tag for user to select in Configurator
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 12 May 2010 17:51:02 EDT
+
+Package: Vmedia_Mac_64 (1.0.6); urgency = low
+
+Abstract:
+	Modified the package description
+
+Files Modified: spx/INFO
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 29 Apr 2010 20:55:26 IST
+
+Package: Vmedia_Mac_64 (1.0.5); urgency = medium
+
+Abstract:
+	Removed the referenco of Floppy to Harddisk and renaming the Files compiled the library
+
+Files Modified: data/libjavaharddiskwrapper.jnilib
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 19 Apr 2010 15:47:54 IST
+
+Package: Vmedia_Mac_64 (1.0.4); urgency = high
+
+Abstract:
+	./Build.aviator/.workspace/status/Vmedia_Linux_32-1.0.6-src
+
+Files Added: data/.directory
+Files Modified: data/libjavacdromwrapper.jnilib
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 12 Apr 2010 20:30:07 IST
+
+Package: Vmedia_Mac_64 (1.0.3); urgency = critical
+
+Abstract:
+	Added the Supported library in the Vmedia packages
+
+Files Added: data/libjavaharddiskwrapper.jnilib
+Files Modified: spx/RULES.D/createJAR.sh
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sun, 11 Apr 2010 06:11:35 IST
+
+Package: Vmedia_Mac_64 (1.0.2); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:46:07 EDT
+
+Package: Vmedia_Mac_64 (1.0.1); urgency = low
+
+Abstract:
+	Fixed:64 bit MAC client DVD/CD Crashes the JViewer
+
+Files Modified: data/libjavacdromwrapper.jnilib
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 23 Mar 2010 20:19:26 IST
+
+Package:Vmedia_Mac_64 (1.0.0);urgency=new
+
+Abstract:
+	This package contains the Mac64 bit library.
+
+Files Added: libjavacdromwrapper.jnilib, libjavafloppywrapper.jnilib
+
+--Submitter: Othiyappan.k (Othiyappank@amiindia.co.in) Mon, 22 Feb 2010 21:36:32 +0530
+

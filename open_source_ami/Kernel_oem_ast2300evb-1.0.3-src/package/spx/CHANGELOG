@@ -1,0 +1,37 @@
+Package: Kernel_oem_ast2300evb (1.0.3); urgency = medium
+
+Abstract:
+	EIP-216975 support winbond25Q256.
+
+Files Added: data/03-drivers_mtd_spichips_winbond.c, data/04-drivers_mtd_spichips_generic.c, data/05-drivers_mtd_spichips_spimtd.c, data/06-drivers_mtd_spichips_spiflash.h
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Tue, 26 May 2015 16:49:54 CST
+
+Package: Kernel_oem_ast2300evb (1.0.2); urgency = medium
+
+Abstract:
+	EIP189236 Add the command "Read Configuration Register" to support new MX25L25635/MX25L25735 F type.
+
+Files Added: data/02-drivers_mtd_spichips_macronix.c
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Tue, 11 Nov 2014 14:42:15 CST
+
+Package: Kernel_oem_ast2300evb (1.0.1); urgency = high
+
+Abstract:
+	Following ASPEED Application note 11, Fix Host Linux OS might hang when watchdog reset BMC repeatedly.
+
+Files Added: data/01-arch_arm_include_asm_soc-ast2300_system.h
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Fri, 26 Apr 2013 16:49:03 CST
+
+Package: Kernel_oem_ast2300evb (1.0.0); urgency = new
+
+Abstract:
+	AST2300 OEM Patches to Kernel 2.6.28.10
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/@Kernel_oem_ast2300evb, spx/PACKAGES.D/@Kernel_oem_ast2300evb/DATA, spx/PACKAGES.D/@Kernel_oem_ast2300evb/SCRIPTS, spx/PACKAGES.D/@Kernel_oem_ast2300evb/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/ApplyPatch
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Fri, 26 Apr 2013 16:46:47 CST
+

@@ -1,0 +1,62 @@
+Package: libipmiparams (2.5.0); urgency = low
+
+Abstract:
+	Added support for auto timeout response
+
+Files Modified: data/params.c, data/params.h
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 27 Jul 2011 14:38:20 IST
+
+Package: libipmiparams (2.4.0); urgency = medium
+
+Abstract:
+	Add SSI LAN Parameters support for SSI Compute Blade.
+
+Files Modified: data/params.h
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Wed, 18 May 2011 16:12:51 EDT
+
+Package: libipmiparams (2.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:52:49 EDT
+
+Package: libipmiparams (2.2.0); urgency = low
+
+Abstract:
+	Added copyright header
+
+Files Modified: data/params.h
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 03 May 2011 11:21:30 IST
+
+Package: libipmiparams (2.1.0); urgency = low
+
+Abstract:
+	Correcting customization type and Group
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 22 Mar 2011 18:33:39 IST
+
+Package: libipmiparams (2.0.0); urgency = low
+
+Abstract:
+	Incrementing the version to 2.0.0
+
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 21 Mar 2011 19:38:56 IST
+
+Package: libipmiparams (1.0.0); urgency = new
+
+Abstract:
+	This packages contains AMI OEM parameter values and OEM-specific parameter value mappings.
+
+Files Added: data, data/Makefile, data/params.c, data/params.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libipmiparams, spx/PACKAGES.D/libipmiparams/DATA, spx/PACKAGES.D/libipmiparams/SCRIPTS, spx/PACKAGES.D/libipmiparams/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 16 Feb 2011 20:05:27 IST
+

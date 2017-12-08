@@ -1,0 +1,40 @@
+Source : ncsi
+Version : 1.15.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : ncsi
+Build-Depends : kernel_dev, global_dev, rules, crosscc, helper_driver_dev
+Essential : NO
+Config-Tag : NCSI Device Support
+Group : DEVICE
+Owner : AMI
+Maintainer : Samvinesh Christopher  (vineshc@ami.com)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ALL
+Urgency : high
+Description : NCSI 1.0 Device Driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : ncsi
+Section : sys
+Essential : NO
+Config-Tag : NCSI Device Support
+Group : DEVICE
+Depends : kernel
+Required : helper
+Package-License : GPL-V2
+Description : NCSI 1.0 Device Driver.
+.
+

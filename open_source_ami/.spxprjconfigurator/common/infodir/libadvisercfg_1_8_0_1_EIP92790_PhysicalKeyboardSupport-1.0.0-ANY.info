@@ -1,0 +1,20 @@
+Package : libadvisercfg_1_8_0_1_EIP92790_PhysicalKeyboardSupport
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libadvisercfg (1.8.0)
+Depends :  libadvisercfg(==1.8.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Joey Chen (JoeyChen@ami.com.tw)
+Urgency : new
+Description : Add physical keyboard language selection support
+.
+

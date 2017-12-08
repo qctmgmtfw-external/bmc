@@ -1,0 +1,18 @@
+Package: bt (1.1.0); urgency = medium
+
+Abstract:
+	modified as per IPMI BT thread expectation when LPC reset occures
+
+Files Modified: data/btmain.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 28 Jul 2011 16:12:39 EDT
+
+Package: bt (1.0.0); urgency = new
+
+Abstract:
+	BT Common Device Driver.
+
+Files Added: data, data/Makefile, data/bt.h, data/bt_ioctl.h, data/bt_timeout.c, data/bt_timeout.h, data/btifc.h, data/btmain.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/bt, spx/PACKAGES.D/bt/DATA, spx/PACKAGES.D/bt/SCRIPTS, spx/PACKAGES.D/bt/SCRIPTS/dev-install, spx/PACKAGES.D/bt_driver_dev, spx/PACKAGES.D/bt_driver_dev/DATA, spx/PACKAGES.D/bt_driver_dev/SCRIPTS, spx/PACKAGES.D/bt_driver_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 06 Jul 2011 11:49:52 EDT
+

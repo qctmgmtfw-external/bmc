@@ -1,0 +1,170 @@
+Package: libipminmsupport (2.10.1); urgency = low
+
+Abstract:
+	Remove an unnecessary comment.
+
+Files Modified: data/PnmTask.c
+
+--Submitter: owenchou (owenchou@ami.com.tw) Wed, 21 Dec 2011 03:13:38 EST
+
+Package: libipminmsupport (2.10.0); urgency = low
+
+Abstract:
+	Resolve the build error in PC-64 project.
+Remove the unnecessary type-casting in NM_PacketAssembling().
+
+Files Modified: data/PnmTask.c
+
+--Submitter: owenchou (owenchou@ami.com.tw) Mon, 12 Dec 2011 02:44:48 EST
+
+Package: libipminmsupport (2.9.0); urgency = medium
+
+Abstract:
+	Solve the problem @21821 builds fail,
+if the CONFIG_SPX_FEATURE_INTEL_INTELLIGENT_POWER_NODE_MANAGER is undefined.
+
+Implement Intel Intelligent Power Node Manager feature.
+Option is CONFIG_SPX_FEATURE_INTEL_INTELLIGENT_POWER_NODE_MANAGER.
+
+Files Modified: data/PnmTask.c
+
+--Submitter: owenchou (owenchou@ami.com.tw) Thu, 08 Dec 2011 02:28:59 EST
+
+Package: libipminmsupport (2.8.0); urgency = medium
+
+Abstract:
+	Implement Intel Intelligent Power Node Manager feature.
+Option is CONFIG_SPX_FEATURE_INTEL_INTELLIGENT_POWER_NODE_MANAGER.
+
+Files Added: data/PnmTask.c
+Files Modified: data/Makefile, data/PnmMetaInfo.c, spx/P.CONFIG, spx/PACKAGES.D/libipminmsupport/SCRIPTS/dev-install
+
+--Submitter: owenchou (owenchou@ami.com.tw) Wed, 07 Dec 2011 06:40:55 EST
+
+Package: libipminmsupport (2.7.0); urgency = medium
+
+Abstract:
+	Configuration to enable the PNM netfunction when PNM support is enabled
+
+Files Added: spx/P.CONFIG
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 01 Dec 2011 18:13:49 IST
+
+Package: libipminmsupport (2.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:51:39 EDT
+
+Package: libipminmsupport (2.5.0); urgency = low
+
+Abstract:
+	Fixed build dependency.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 May 2011 19:24:25 IST
+
+Package: libipminmsupport (2.4.0); urgency = medium
+
+Abstract:
+	Added Provides field.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 May 2011 15:00:46 IST
+
+Package: libipminmsupport (2.3.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:46:34 IST
+
+Package: libipminmsupport (2.2.0); urgency = medium
+
+Abstract:
+	Removing unwanted #if defs as the enabling of commands can be done in libipmipdkcmds package and not from support.h.
+
+Files Modified: data/PnmCmds.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 14:59:06 IST
+
+Package: libipminmsupport (2.1.0); urgency = medium
+
+Abstract:
+	primary, secondary ipmb variable name changes.
+
+Files Modified: data/PnmMetaInfo.c, spx/INFO
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 24 Mar 2011 12:44:44 IST
+
+Package: libipminmsupport (2.0.0); urgency = medium
+
+Abstract:
+	Minor changes and incrementing the version to 2.0.0
+
+Files Modified: data/PnmMetaInfo.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:16:45 IST
+
+Package: libipminmsupport (1.3.0); urgency = medium
+
+Abstract:
+	Description files cleanup
+-This line, and those below, will be ignored--
+M	spx/INFO
+
+Files Modified: spx/INFO
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 11 Nov 2010 11:26:50 CST
+
+Package: libipminmsupport (1.2.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/PnmCmds.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:09:15 EDT
+
+Package: libipminmsupport (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:57:03 EDT
+
+Package: libipminmsupport (1.0.2); urgency = low
+
+Abstract:
+	Build Error Fixed by including the ipmipdk package as dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 08 Sep 2010 14:48:21 IST
+
+Package: libipminmsupport (1.0.1); urgency = low
+
+Abstract:
+	Assign package group to IPMI
+
+Files Modified: spx/INFO
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Mon, 16 Aug 2010 11:19:19 CST
+
+Package: libipminmsupport (1.0.0); urgency = new
+
+Abstract:
+	This package contains ipmi power node manager related files.
+
+Files Added: data, data/Makefile, data/Pnm.c, data/PnmCmds.c, data/PnmMetaInfo.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libipminmsupport, spx/PACKAGES.D/libipminmsupport/DATA, spx/PACKAGES.D/libipminmsupport/SCRIPTS, spx/PACKAGES.D/libipminmsupport/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Mon, 16 Aug 2010 09:50:37 CST
+

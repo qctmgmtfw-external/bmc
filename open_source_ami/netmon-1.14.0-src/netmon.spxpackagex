@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/netmon-1.14.0-src/package/data/netmon_io.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/netmon-1.14.0-src/package/data/Makefile</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/netmon-1.14.0-src/package/data/netmonitor.c</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>netmon</package-name>
+<version>1.14.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">kernel_dev</package-name>
+<package-name operator="" version="">rules</package-name>
+<package-name operator="" version="">crosscc</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group>DEVICE</group>
+<configtags/>
+<installsize/>
+<description>Network Interface Monitor. It monitors addition/removal of network interface and changes in the Interface status.Applications query the Interface count, name and information. Also applications use ioctl calls to wait for Interface changes</description>
+<architecture>ALL</architecture>
+<owner>AMI</owner>
+<maintainer>Samvinesh Christopher  </maintainer>
+<maintainer-email>vineshc@ami.com</maintainer-email>
+<sourcelocation>AMI</sourcelocation>
+<sourceversion>1.0.0</sourceversion>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="high">high</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/netmon-1.14.0-src/package/spx/RULES</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages>
+<package>
+<name>netmon</name>
+<section>sys</section>
+<essential>NO</essential>
+<configtags>NETMON Device Support</configtags>
+<group>DEVICE</group>
+<license>GPL-V2</license>
+<description>Network Interface Monitor. It monitors addition/removal of network interface and changes in the Interface status.Applications query the Interface count, name and information. Also applications use ioctl calls to wait for Interface changes</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends>
+<package-name operator="" version="">kernel</package-name>
+</depends>
+<required>
+<package-name operator="" version="">helper</package-name>
+</required>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/netmon-1.14.0-src/package/spx/PACKAGES.D/netmon/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+<package>
+<name>netmon_driver_dev</name>
+<section>dev</section>
+<essential>NO</essential>
+<configtags/>
+<group>DEVEL</group>
+<license>GPL-V2</license>
+<description>Network Interface Monitor Development Package. It monitors addition/removal of network interface and changes in the Interface status.Applications query the Interface count, name and information. Also applications use ioctl calls to wait for Interface changesThis package Contains the related header files and libraries.</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends/>
+<required/>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/netmon-1.14.0-src/package/spx/PACKAGES.D/netmon_driver_dev/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/netmon-1.14.0-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

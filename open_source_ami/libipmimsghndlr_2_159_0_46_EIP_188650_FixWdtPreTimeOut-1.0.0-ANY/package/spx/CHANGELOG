@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_46_EIP_188650_FixWdtPreTimeOut (1.0.0); urgency = new
+
+Abstract:
+	Fix watchdog pre-timeout interrupt flag cannot be cleared via Set Watchdog Timer command.
+
+Files Added: data, data/00-data_App_AppDevice_WDT.c, data/01-data_App_AppDevice_AppDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: johnnychen (JohnnyChen@ami.com.tw) Thu, 23 Oct 2014 19:37:54 PDT
+

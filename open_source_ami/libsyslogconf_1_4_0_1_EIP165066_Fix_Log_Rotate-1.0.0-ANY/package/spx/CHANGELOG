@@ -1,0 +1,9 @@
+Package: libsyslogconf_1_4_0_1_EIP165066_Fix_Log_Rotate (1.0.0); urgency = new
+
+Abstract:
+	Fix log rotate
+
+Files Added: data, data/00-data_syslogconf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nicolaschen (nicolaschen@ami.com.tw) Wed, 14 May 2014 16:25:11 CST
+

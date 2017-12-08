@@ -1,0 +1,21 @@
+Package : JViewer_1_10_0_3_92214_AutoVideoCanNotPlay
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 3 for JViewer (1.10.0)
+Depends :  JViewer(==1.10.0)
+PatchOrder : 3
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description : for EIP 92214, the video recorded by auto video recording function is blank
+.
+

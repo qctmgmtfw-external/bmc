@@ -1,0 +1,16 @@
+Package : libipmihalapi_dev
+Non-Editable : YES
+Version : 2.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : sakthipriya M  (sakthipriyam@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Group : IPMI
+Package-License : AMI
+Description : This package contains the HAL API development header files.
+.

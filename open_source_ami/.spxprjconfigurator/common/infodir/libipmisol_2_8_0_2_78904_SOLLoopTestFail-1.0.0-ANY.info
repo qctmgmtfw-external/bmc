@@ -1,0 +1,20 @@
+Package : libipmisol_2_8_0_2_78904_SOLLoopTestFail
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libipmisol (2.8.0)
+Depends :  libipmisol(==2.8.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  kenttang (kenttang@ami.com.tw)
+Urgency : new
+Description : SOL loop test fail
+.
+

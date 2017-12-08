@@ -1,0 +1,10 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/ipmistack
+	COPY_DIR		./ %IMAGE_TREE/usr/local/lib/
+	ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libipmistack.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	COPY_FILE ./libipmistack.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/ipmistack
+	ADD_LIBRARY_LINKS %SPXLIB/ipmistack libipmistack.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

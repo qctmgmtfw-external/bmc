@@ -1,0 +1,18 @@
+Package : HID_HW_support
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Provides : HIDHWSupport
+Section : info
+Required : usb1_hw
+Essential : NO
+Group : DEVICE
+Owner : AMI
+Maintainer : SP Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : This is a dummy package to select the proper USB hardware module for the selected device on a particular SOC.
+.

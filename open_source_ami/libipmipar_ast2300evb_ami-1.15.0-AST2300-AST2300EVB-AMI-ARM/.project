@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>libipmipar_ast2300evb_ami-1.15.0-AST2300-AST2300EVB-AMI-ARM</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>com.ami.megarac.spx.packagecreator.spxnature</nature>
+	</natures>
+	<filteredResources>
+		<filter>
+			<id>1438845626801</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*:*</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
+</projectDescription>

@@ -1,0 +1,11 @@
+--- linux/drivers/net/Makefile	2011-03-18 10:15:36.316141515 -0400
++++ linux.new/drivers/net/Makefile	2011-03-18 14:02:30.166132366 -0400
+@@ -2,6 +2,8 @@
+ # Makefile for the Linux network (ethercard) device drivers.
+ #
+ 
++obj-y +=eth_over.o
++
+ obj-$(CONFIG_E1000) += e1000/
+ obj-$(CONFIG_E1000E) += e1000e/
+ obj-$(CONFIG_IBM_NEW_EMAC) += ibm_newemac/

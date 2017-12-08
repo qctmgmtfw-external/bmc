@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_6_EIP_68315 (1.0.0); urgency = new
+
+Abstract:
+	Web - Expired SSL certificate able to upload - fixed.
+
+Files Added: data, data/00-data_webifc_misc.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Tue, 20 Sep 2011 20:49:48 IST
+

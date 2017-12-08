@@ -1,0 +1,9 @@
+Package: libsnmpusers_1_8_0_2_FixTheSnmpUserAccountInforWillBeLostAfterBMCreset (1.0.0); urgency = new
+
+Abstract:
+	Fix the SNMP user account information will be lost after BMC reset
+
+Files Added: data, data/00-data_HelperFuncs.h, data/01-data_SNMPApi.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 04 May 2012 18:42:44 CST
+

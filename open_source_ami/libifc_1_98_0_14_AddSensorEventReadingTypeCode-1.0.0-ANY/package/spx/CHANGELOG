@@ -1,0 +1,9 @@
+Package: libifc_1_98_0_14_AddSensorEventReadingTypeCode (1.0.0); urgency = new
+
+Abstract:
+	Add the Sensor Event Reading Type code in the return value of the function GetAllSensors
+
+Files Added: data, data/00-data_webifc_SensorDevice.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 08 Oct 2012 15:34:06 CST
+

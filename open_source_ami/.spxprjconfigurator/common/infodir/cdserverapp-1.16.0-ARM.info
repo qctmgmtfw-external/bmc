@@ -1,0 +1,18 @@
+Package : cdserverapp
+Non-Editable : YES
+Version : 1.16.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : low
+Section : app
+Essential : NO
+Config-Tag : CD/DVD ROM Device Support
+Group : MEDIA
+Required : libtoken, libunix, libvmedia, CDDVD_support, vmapp, libncml
+Package-License : AMI
+Description : This package includes built cdserver application.
+.

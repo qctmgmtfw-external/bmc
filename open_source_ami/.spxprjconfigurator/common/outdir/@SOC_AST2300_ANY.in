@@ -1,0 +1,14 @@
+if @SOC_AST2300
+menu "AST2300 Configuration"
+
+config FEATURE_GLOBAL_^AST2300^_MAX_ADC_CHANNELS
+	int "Number of Maximum ADC channels"
+	default 12
+	help
+	     Specify the maximum number of ADC channels to be used
+	     
+endmenu
+endif
+endmenu
+
+

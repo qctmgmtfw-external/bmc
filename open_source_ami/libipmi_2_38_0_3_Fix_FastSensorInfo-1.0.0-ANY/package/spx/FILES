@@ -1,0 +1,7 @@
+./00-data_libipmi_sensor.c 7019 72d8242e9690b9e3260d0b08e5d309e5
+./01-data_sensor_helpers.c 7601 1d22894001f723083041bff8fb4e4361
+./02-data_libipmi_AMIOEM.c 2168 5be6a7d91682a21bfe276f205b20f9ce
+./03-data_sensor_helpers.h 728 f9ff561a479b0291162705d9078d8352
+./04-data_include_libipmi_sensor.h 486 132f636001661bd0a901cb319e4905a5
+./05-data_include_libipmi_errorcodes.h 528 0b9cefae58a082c74254404da413c29a
+./06-data_include_libipmi_AMIOEM.h 938 55f76fcd89c65ba4b3812f546b50464e

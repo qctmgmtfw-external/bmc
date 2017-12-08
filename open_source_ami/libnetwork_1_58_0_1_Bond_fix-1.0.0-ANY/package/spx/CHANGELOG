@@ -1,0 +1,9 @@
+Package: libnetwork_1_58_0_1_Bond_fix (1.0.0); urgency = new
+
+Abstract:
+	Added new method to check the bond interface's slave status and Bond VLAN fix.
+
+Files Added: data, data/00-data_nwcfg.c, data/01-data_nwcfg.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 07 Sep 2011 20:46:13 IST
+

@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+		COPY_FILE ./defaulthost %IMAGE_TREE/usr/local/bin
+		SET_INIT_SCRIPT ./defaulthost.sh
+				
+debug-install:

@@ -1,0 +1,9 @@
+Package: libunix_1_5_0_2_Fix_MsgHndlr_Queue_Crash (1.0.0); urgency = new
+
+Abstract:
+	Fixed for execute command line function causes ipmistack to exit
+
+Files Added: data, data/00-data_proc-invok.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 06 Jan 2012 16:02:57 CST
+

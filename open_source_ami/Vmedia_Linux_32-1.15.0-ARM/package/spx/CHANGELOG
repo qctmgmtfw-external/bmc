@@ -1,0 +1,280 @@
+Package: Vmedia_Linux_32 (1.15.0); urgency = medium
+
+Abstract:
+	#Keyboard language layout value couldn't retrieve in latest version of Linux
+
+Files Modified: data/libjavafloppywrapper.so
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 24 May 2012 14:31:56 IST
+
+Package: Vmedia_Linux_32 (1.14.0); urgency = medium
+
+Abstract:
+	#cd/fd/hd library changes related to 64 bit compilation
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 29 Dec 2011 00:54:30 IST
+
+Package: Vmedia_Linux_32 (1.13.0); urgency = medium
+
+Abstract:
+	Included condition to check NTFS,FAT 12,16,32 format to read total sector count from redirected Image file.
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 08 Jul 2011 19:15:32 IST
+
+Package: Vmedia_Linux_32 (1.12.0); urgency = medium
+
+Abstract:
+	Added the support for USB key Image redirection for FAT & NTFS
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 27 Jun 2011 12:03:05 IST
+
+Package: Vmedia_Linux_32 (1.11.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:59:11 EDT
+
+Package: Vmedia_Linux_32 (1.10.0); urgency = medium
+
+Abstract:
+	Issues Fixed:
+  1.IDE Floppy :LED Lightning
+  2.IDE Floppy :Buffer I/O error
+
+Files Modified: data/libjavafloppywrapper.so
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 31 Mar 2011 18:08:07 IST
+
+Package: Vmedia_Linux_32 (1.9.0); urgency = medium
+
+Abstract:
+	Issue fixed : RHEL5.6 does not re-mount Remote Floppy (Buffer I/O error)
+
+Files Modified: data/libjavafloppywrapper.so
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 23 Mar 2011 13:07:39 IST
+
+Package: Vmedia_Linux_32 (1.8.0); urgency = medium
+
+Abstract:
+	Included condition to avoid reading beyond Max Sector range
+
+Files Modified: data/libjavacdromwrapper.so, data/libjavafloppywrapper.so, data/libjavaharddiskwrapper.so
+
+--Submitter: othiyappank (gopinaths@amiindia.co.in) Wed, 09 Mar 2011 17:58:57 IST
+
+Package: Vmedia_Linux_32 (1.7.0); urgency = medium
+
+Abstract:
+	Issue Fixed : Remote FD access Lamp keeps lighting on RHEL5
+
+Files Modified: data/libjavafloppywrapper.so
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 04 Mar 2011 20:54:39 IST
+
+Package: Vmedia_Linux_32 (1.6.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+        Linux client Fixed harddisk redirection is redirected only read Mode,res
+tricted the write operation for fixed harddisk
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 22 Oct 2010 12:02:48 IST
+
+Package: Vmedia_Linux_32 (1.5.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	  While redirecting Cdimage in floppy Drive,proper error message should be thrown.. 
+
+-oThi  line, and those below, will be ignored--
+M	data/libjavafloppywrapper.so
+
+Files Modified: data/libjavafloppywrapper.so
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 05 Oct 2010 05:09:24 IST
+
+Package: Vmedia_Linux_32 (1.4.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+        1. Harddisk redirection crashes if the fixed device is hdd device
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 04 Oct 2010 23:17:41 IST
+
+Package: Vmedia_Linux_32 (1.3.0); urgency = medium
+
+Abstract:
+	Fixed Issue :Multiple language encoding support on ISO redirection
+
+Files Modified: data/libjavacdromwrapper.so, data/libjavafloppywrapper.so, data/libjavaharddiskwrapper.so
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 19:47:13 IST
+
+Package: Vmedia_Linux_32 (1.2.0); urgency = medium
+
+Abstract:
+	Bug Fixed:
+        1.Cannot Format Redirected Hard Drive
+        2.Launching Virtual Media Wizard causes JViewer crashed when three or more removable drives are connected
+        3.USB KEY drive allow access locally and remote redirection console at a time.
+        4.Exclusive access of USB key/CD/DVD shall be give to either host server or local client
+        5.In Redirection mode Files are not updated correctly both USB and Hard disk
+        6.The USB key sutck in the formate mode in the java redirection mode
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Wed, 29 Sep 2010 12:01:16 IST
+
+Package: Vmedia_Linux_32 (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:17:49 EDT
+
+Package: Vmedia_Linux_32 (1.0.13); urgency = medium
+
+Abstract:
+	Issue Fixed USB floppy display in Harddisk
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 27 Aug 2010 23:11:08 IST
+
+Package: Vmedia_Linux_32 (1.0.12); urgency = medium
+
+Abstract:
+	Compiled for the latest software package
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 02 Aug 2010 22:08:02 IST
+
+Package: Vmedia_Linux_32 (1.0.11); urgency = high
+
+Abstract:
+	Added the feature Redirecting Entire Physical drive to host
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 21 Jun 2010 22:57:15 IST
+
+Package: Vmedia_Linux_32 (1.0.10); urgency = medium
+
+Abstract:
+	Added the SCSI_READ_20 support in Library
+
+Files Modified: data/libjavacdromwrapper.so, data/libjavafloppywrapper.so, data/libjavaharddiskwrapper.so, spx/INFO
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 18 May 2010 18:06:05 IST
+
+Package: Vmedia_Linux_32 (1.0.9); urgency = medium
+
+Abstract:
+	Added Group and Config Tag for user to select in Configurator
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 12 May 2010 17:50:43 EDT
+
+Package: Vmedia_Linux_32 (1.0.8); urgency = medium
+
+Abstract:
+	Removed the referenco of Floppy to Harddisk and renaming the Files compiled the library
+
+Files Modified: data/libjavaharddiskwrapper.so
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 19 Apr 2010 15:46:39 IST
+
+Package: Vmedia_Linux_32 (1.0.7); urgency = high
+
+Abstract:
+	Updated the csript to find the USBHarddisk,floppy and USB
+
+Files Added: data/.directory
+Files Modified: data/libjavafloppywrapper.so, data/libjavaharddiskwrapper.so
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 12 Apr 2010 20:25:00 IST
+
+Package: Vmedia_Linux_32 (1.0.6); urgency = critical
+
+Abstract:
+	Added the Supported library in the Vmedia packages
+
+Files Added: data/libjavaharddiskwrapper.so
+Files Modified: data/libjavafloppywrapper.so, spx/RULES.D/createJAR.sh
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sun, 11 Apr 2010 06:09:56 IST
+
+Package: Vmedia_Linux_32 (1.0.5); urgency = low
+
+Abstract:
+	Bug Fixes for Issue : USB and USB Floppy Drive are not redirected in Ubuntu client
+
+Files Modified: data/libjavafloppywrapper.so
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Fri, 09 Apr 2010 22:09:53 IST
+
+Package: Vmedia_Linux_32 (1.0.4); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:45:48 EDT
+
+Package: Vmedia_Linux_32 (1.0.3); urgency = low
+
+Abstract:
+	* When Num Lock LED is off at JViewer and client, the direction key(2,4,6,8) can not be used Resolution: the keycode of direction key is different in window and linux, so add the keycode of linux  the detail of key code please visit http://java.sun.com/j2se/1.4.2/docs/api/constant-values.html#java.awt.event.KeyEvent.VK_KP_DOWN
+* while getting the floppy drive list from the client,if the floppy is empty no need to display the floppy drive name in the list if the client as Linux
+* Added the Writeprotect support for Linuxhost to display proper error
+* Merged SP2 bug fixes
+
+Files Modified: data/libjavafloppywrapper.so
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 17 Feb 2010 19:23:47 IST
+
+Package: Vmedia_Linux_32 (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:24:30 EST
+
+Package: Vmedia_Linux_32 (1.0.1); urgency = low
+
+Abstract:
+	adding .so files
+
+Files Added: data/libjavafloppywrapper.so, data/libjavacdromwrapper.so
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 04 Feb 2010 11:34:42 EST
+
+Package:Vmedia_Linux_32 (1.0.0);urgency=new
+
+Abstract:
+	This package contains Linux 32 bit Library for Vmedia.
+
+Files Added: libjavacdromwrapper.so, libjavafloppywrapper.so
+
+--Submitter: Othiyappan K (othiyappank@amiinida.co.in) Fri, 27 Nov 2009 17:24:05 +0530
+

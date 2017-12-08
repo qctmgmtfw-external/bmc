@@ -1,0 +1,16 @@
+Package : webPreview_support
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : app
+Essential : NO
+Config-Tag : Web Preview Support
+Group : FEATURES
+Owner : Sengutttuvan
+Maintainer : Senguttuvan  (senguttuvanm@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : high
+Description : This package is used to make web preview feature as configurable
+.

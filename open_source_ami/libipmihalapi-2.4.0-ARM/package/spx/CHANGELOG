@@ -1,0 +1,143 @@
+Package: libipmihalapi (2.4.0); urgency = medium
+
+Abstract:
+	Registering of interrupt using MDS is taken care during sensor initialization.
+
+Files Modified: data/hal_api.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Thu, 14 Jul 2011 18:36:43 IST
+
+Package: libipmihalapi (2.3.0); urgency = low
+
+Abstract:
+	Correcting Group field  and changing Essential field to NO.
+
+Files Modified: spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 31 May 2011 12:12:19 IST
+
+Package: libipmihalapi (2.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:50:31 EDT
+
+Package: libipmihalapi (2.1.0); urgency = low
+
+Abstract:
+	Added hal init and moved halapi header file from ipmidev to local for editing HALConfig structure
+
+Files Added: data/hal_api.h, spx/PACKAGES.D/libipmihalapi_dev, spx/PACKAGES.D/libipmihalapi_dev/DATA, spx/PACKAGES.D/libipmihalapi_dev/SCRIPTS, spx/PACKAGES.D/libipmihalapi_dev/SCRIPTS/dev-install
+Files Modified: data/Makefile, data/hal_api.c, spx/INFO, spx/PACKAGES.D/libipmihalapi/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 17:02:40 IST
+
+Package: libipmihalapi (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/hal_api.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:21:52 IST
+
+Package: libipmihalapi (1.3.0); urgency = medium
+
+Abstract:
+	Corrections in library Path.
+
+Files Modified: data/hal_api.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 18 Jan 2011 19:04:35 IST
+
+Package: libipmihalapi (1.2.0); urgency = low
+
+Abstract:
+	Changed the library name from library.so.1.0 to library.so in hal layer as this was also causing sigsegv fault
+
+Files Modified: data/hal_api.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 22 Sep 2010 17:49:20 IST
+
+Package: libipmihalapi (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:56:27 EDT
+
+Package: libipmihalapi (1.0.7); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:48:28 IST
+
+Package: libipmihalapi (1.0.6); urgency = low
+
+Abstract:
+	MBMC Changes for hal layer
+
+Files Modified: data/hal_api.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:49:44 IST
+
+Package: libipmihalapi (1.0.5); urgency = medium
+
+Abstract:
+	Move HAL initial function to initial table in IPMIMain.
+
+Files Modified: data/hal_api.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 13 Jul 2010 20:24:43 CST
+
+Package: libipmihalapi (1.0.4); urgency = low
+
+Abstract:
+	Fixed binary build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 25 Jun 2010 12:58:31 EDT
+
+Package: libipmihalapi (1.0.3); urgency = low
+
+Abstract:
+	Removing gpio includes from Makefile as gpio dependancy is removed
+
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 11 Jun 2010 14:54:19 IST
+
+Package: libipmihalapi (1.0.2); urgency = low
+
+Abstract:
+	Changes have been done to load device specific libraries dynamically in HAL layer.
+
+Files Modified: data/hal_api.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 17:41:56 IST
+
+Package: libipmihalapi (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:05:29 EST
+
+Package:libipmihalapi (1.0.0);urgency=new
+
+Abstract:
+	Library source package for IPMI HAL API
+
+Files Added: hal_api.c, Makefile
+
+--Submitter: sakthipriya M (sakthipriyam@amiindia.co.in) Wed, 9 Dec 2009 14:57:20 +0800

@@ -1,0 +1,20 @@
+Package : webui_1_122_0_12_EIP92790_PhysicalKeyboardSupport
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 12 for webui (1.122.0)
+Depends :  webui(==1.122.0)
+PatchOrder : 12
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  JoeyChen (JoeyChen@ami.com.tw)
+Urgency : new
+Description : Physical Keyboard support is added in Web
+.
+

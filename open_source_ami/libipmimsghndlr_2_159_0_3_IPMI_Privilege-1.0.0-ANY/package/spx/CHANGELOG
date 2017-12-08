@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_3_IPMI_Privilege (1.0.0); urgency = new
+
+Abstract:
+	Modified the AMI OEM IPMI command privilege and change for setiface command.
+
+Files Added: data, data/00-data_AMI_AMI.c, data/01-data_AMI_AMIConf.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 07 Sep 2011 20:48:55 IST
+

@@ -1,0 +1,16 @@
+Package : yafukcs
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : software
+Essential : NO
+Config-Tag : Yafu Flasher (KCS based)
+Group : SOFTWARE
+Owner : AMI
+Maintainer : royku  (royku@ami.com.tw)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : new
+Description : This package contains source code for Yafu based Flashing Tool(KCS based)Software Module. This package is original derived from Yafukcs 1.12.0
+.

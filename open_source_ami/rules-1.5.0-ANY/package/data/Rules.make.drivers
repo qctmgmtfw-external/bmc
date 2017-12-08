@@ -1,0 +1,71 @@
+#----------------------------------------------------------------------
+# 		Makefile for Linux Modules (2.6) for ractrends boards 
+# 		   Copyright (c) 2006 American Megatrends Inc 
+#----------------------------------------------------------------------
+ifeq ($(DEBUG),y)
+  DEBFLAGS = -O -g -DDEBUG # "-O" is needed to expand inlines
+else
+  DEBFLAGS = -O2
+endif
+EXTRA_CFLAGS += $(DEBFLAGS)
+
+MODULE := $(TARGET).ko
+ifneq ($(KERNELRELEASE),)
+obj-m	:= $(TARGET).o
+$(TARGET)-objs := $(OBJS)
+endif
+
+KERNELDIR  = ${KERNEL_SRC}/linux
+
+# The include files to be taken from kernel
+INCLUDEDIR = ${SPXINC}/linux
+
+# Local include files 
+LOCALINCLUDE= ${SPXINC}/global
+
+#Project definitions file
+EXTRA_CFLAGS += -include ${SPXINC}/projdef.h
+EXTRA_CFLAGS += -I${KERNELDIR}/include -I${KERNELDIR}/arch
+EXTRA_CFLAGS += -Wall -Werror
+EXTRA_CFLAGS += -DPKG_MAJOR=${PKG_MAJOR} -DPKG_MINOR=${PKG_MINOR} -DPKG_AUX=${PKG_AUX}
+
+#Set Flags for passing SOC, ARCH, BASESOC, PLATFORM and OEM information
+EXTRA_CFLAGS += -DSOC_${SOC} -DARCH_${ARCH} -DBASESOC_${BASESOC} -DPLATFORM_${PLATFORM} -DOEM_${OEM}
+
+#Add the helper symbols to all drivers
+KBUILD_EXTRA_SYMBOLS += ${SPXINC}/helper/Module.symvers
+
+#Install directory
+VERSIONFILE = ${SPXINC}/linux/linux/utsrelease.h
+VERSION     = $(shell awk -F\" '/REL/ {print $$2}' $(VERSIONFILE))
+MODULESDIR  = ${IMAGE_TREE}/lib/modules/$(VERSION)/misc
+
+# Driver make files are peculiar. For some reason, $(STRIP) defined in 
+# Rules.global is  not accessible. Luckily CROSS_COMPILE is accesible.
+# So we define DRIVER_STRIP here to strip driver symbols
+DRIVER_STRIP   =$(CROSS_COMPILE)strip --strip-unneeded
+
+# Module (2.6) Creation Rule 
+ifeq ($(KERNELRELEASE),)
+all: $(MODULE)
+ifeq ($(DEBUG),n)
+	@echo "  STRIP   $(MODULE)"
+	@$(DRIVER_STRIP) $(MODULE) 
+endif
+
+.PHONY:  $(MODULE) clean
+
+$(MODULE):
+	@$(MAKE) -C $(KERNELDIR) SUBDIRS=$(PWD) modules
+
+# Clean directory 
+clean:
+	@find $(PWD) \
+		\( -name '*.[oas]' -o -name '*.ko' -o -name '.*.cmd' \
+		-o -name '.*.d' -o -name '.*.tmp' -o -name '*.mod.c' \) \
+		-type f -print | xargs rm -f
+	@rm -rf .tmp_versions
+	@rm -rf Module.symvers
+	@rm -rf modules.order
+endif
+#------------------------- End of Rules.Make ---------------------------

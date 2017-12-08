@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_18_90223_RHELMouseMoveSlowlyAndErrorJumping_2 (1.0.0); urgency = new
+
+Abstract:
+	for EIP 90223, Mouse cursor movement is abnormal that Mouse along the top frame
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerView.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 06 Jul 2012 17:12:07 CST
+

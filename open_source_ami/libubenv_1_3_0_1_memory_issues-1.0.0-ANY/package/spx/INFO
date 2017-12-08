@@ -1,0 +1,20 @@
+Package : libubenv_1_3_0_1_memory_issues
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for libubenv (1.3.0)
+Depends :  libubenv(==1.3.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Zhong Da Jun (zhongj@ami.com)
+Urgency : new
+Description : Memory Issues proeprly closed the handle and free the memory
+.
+

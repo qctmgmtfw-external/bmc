@@ -1,0 +1,17 @@
+Package : libipmitimer
+Non-Editable : YES
+Version : 2.8.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : winston  (winstonv@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Group : IPMI
+Required : libunix
+Package-License : AMI
+Description : IPMI Timer Library Binary
+.

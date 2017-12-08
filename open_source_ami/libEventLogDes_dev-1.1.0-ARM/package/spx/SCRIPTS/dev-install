@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/EventLog
+        COPY_FILE ./libEventLogDes.h %SPXINC/EventLog
+    MKDIR_NOCLEAN %SPXLIB/EventLog
+	COPY_FILE ./libEventLogDes.a %SPXLIB/EventLog
+	COPY_FILE libEventLogDes.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/EventLog
+	ADD_LIBRARY_LINKS %SPXLIB/EventLog libEventLogDes.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

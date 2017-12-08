@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_21_97652_VideoRecordButtonNotRelease (1.0.0); urgency = new
+
+Abstract:
+	for EIP 97652, when click video record button, it will not auto release
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JVToolBar.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Wed, 15 Aug 2012 10:48:44 CST
+

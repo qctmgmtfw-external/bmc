@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/hostname
+	MKDIR_NOCLEAN %SPXINC/hostname
+	COPY_FILE ./libhostname.a %SPXLIB/hostname
+	COPY_FILE ./hostname.h %SPXINC/hostname
+	COPY_FILE ./libhostname.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/hostname
+	ADD_LIBRARY_LINKS %SPXLIB/hostname libhostname.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

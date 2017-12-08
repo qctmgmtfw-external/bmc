@@ -1,0 +1,20 @@
+Package : webui_1_122_0_4_EIP_69619_68351
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 4 for webui (1.122.0)
+Depends :  webui(==1.122.0)
+PatchOrder : 4
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  arockiaa (arockiaa@amiindia.co.in)
+Urgency : new
+Description : 1.Web - There is no help text for Send test alert-fixed. 2.Get an IPMI error message if an Operator tries to view the Triggers Configuration page-fixed.
+.
+

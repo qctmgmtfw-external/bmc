@@ -1,0 +1,1141 @@
+Package: sys_base (2.41.0); urgency = medium
+
+Abstract:
+	Fixed issue that ssh-main fail to start if there is no ssh DSA key.
+
+Files Modified: data/defaults/etc/init.d/ssh, data/defaults/etc/init.d/ssh-main
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 15 Aug 2011 10:07:15 CST
+
+Package: sys_base (2.40.0); urgency = low
+
+Abstract:
+	Changed Error Message when the group file doesn't exist.
+
+Files Modified: data/defaults/etc/init.d/mountall.sh
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Thu, 11 Aug 2011 12:54:30 IST
+
+Package: sys_base (2.39.0); urgency = high
+
+Abstract:
+	Adding support for IPv4 Network interface 3 and 4
+
+Files Added: data/defaults/etc/defconfig/interfaces.0x3, data/defaults/etc/defconfig/interfaces.0x4
+Files Modified: spx/PACKAGES.D/sys_base/SCRIPTS/dev-install
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 05 Aug 2011 18:53:23 EDT
+
+Package: sys_base (2.38.0); urgency = medium
+
+Abstract:
+	Following are the changes done to make work rsyslog.
+1.Added rsyslog init script with some changes to override with default one.
+2.Removed unwanted libraries which are not required. 
+3.Modified the rsyslog.conf configuration file to use the old syslog.conf.
+
+Files Added: data/defaults/etc/init.d/rsyslog
+Files Modified: data/defaults/etc/defconfig/rsyslog.conf, spx/RULES.D/files.lst
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 04 Aug 2011 19:31:51 IST
+
+Package: sys_base (2.37.0); urgency = medium
+
+Abstract:
+	moved /etc/defconfig/group to /etc/default_group.
+
+Files Added: data/defaults/etc/default_group
+Files Deleted: data/defaults/etc/defconfig/group
+Files Modified: data/defaults/etc/init.d/mountall.sh, spx/RULES.D/files.lst
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 03 Aug 2011 15:26:23 IST
+
+Package: sys_base (2.36.0); urgency = medium
+
+Abstract:
+	Copying Group file from conf to /var/tmp. previously it is in check_mount function which is called only when bckup_conf is enabled, now it added as separate fuction.
+
+Files Modified: data/defaults/etc/init.d/mountall.sh
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 02 Aug 2011 20:17:12 IST
+
+Package: sys_base (2.35.0); urgency = low
+
+Abstract:
+	Getting User Previlege using GROUPS instead of gid.
+
+Files Modified: data/defaults/etc/defconfig/group, data/defaults/etc/init.d/mountall.sh, spx/RULES.D/softlink.lst
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Sat, 30 Jul 2011 01:22:02 IST
+
+Package: sys_base (2.34.0); urgency = medium
+
+Abstract:
+	Commented unwanted configurations in rsyslog.conf.
+
+Files Modified: data/defaults/etc/defconfig/rsyslog.conf
+
+--Submitter: akshay (akshayp@amiindia.co.in) Fri, 29 Jul 2011 21:40:19 IST
+
+Package: sys_base (2.33.0); urgency = medium
+
+Abstract:
+	Included rsyslog dependant files.
+
+Files Added: data/defaults/etc/defconfig/rsyslog.conf
+Files Modified: spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 29 Jul 2011 20:33:12 IST
+
+Package: sys_base (2.32.0); urgency = medium
+
+Abstract:
+	error msgs while login via serial console fixed
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Fri, 29 Jul 2011 09:14:34 IST
+
+Package: sys_base (2.31.0); urgency = medium
+
+Abstract:
+	Changing syslog/klog to rsyslog
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 25 Jul 2011 12:36:06 EDT
+
+Package: sys_base (2.30.0); urgency = medium
+
+Abstract:
+	Enabling active-backup mode.
+
+Files Modified: data/defaults/etc/network/if-pre-up.d/25-pre-up-bonding
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 21 Jul 2011 15:03:24 IST
+
+Package: sys_base (2.29.0); urgency = low
+
+Abstract:
+	Changes done in the init script of telnet and ssh to parse the Port Field from Non Editable Data Field
+
+Files Modified: data/defaults/etc/init.d/ssh, data/defaults/etc/init.d/telnetd
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 20 Jul 2011 14:08:47 IST
+
+Package: sys_base (2.28.0); urgency = medium
+
+Abstract:
+	Symbolic links converted from absolute path to relative paths as they refer to host paths - resulting in issues with creating binary package for sys_base.
+Note: conf links are still maintained as absolute path
+
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 12 Jul 2011 12:34:11 EDT
+
+Package: sys_base (2.27.0); urgency = high
+
+Abstract:
+	Removing the size restriction on var to get space for storing auto video recording video files
+
+Files Modified: data/defaults/etc/init.d/init-sp.sh
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 01 Jul 2011 15:31:36 EDT
+
+Package: sys_base (2.26.0); urgency = medium
+
+Abstract:
+	changing the rewuired to  sufficientin pam_withunix file
+
+Files Modified: data/defaults/etc/defconfig/pam_withunix
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 30 Jun 2011 21:22:13 IST
+
+Package: sys_base (2.25.0); urgency = medium
+
+Abstract:
+	Included ENC_IMAGE string in /etc/features if sign image is supported.
+
+Files Modified: spx/PACKAGES.D/sys_base/SCRIPTS/dev-install
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 30 Jun 2011 18:03:20 IST
+
+Package: sys_base (2.24.0); urgency = medium
+
+Abstract:
+	ipmi,ldap,ad is added to session management for logout audit
+
+Files Modified: data/defaults/etc/defconfig/pam_withunix
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Wed, 29 Jun 2011 19:54:30 IST
+
+Package: sys_base (2.23.0); urgency = medium
+
+Abstract:
+	Add check the bond device is up or not in the "25-pre-up-bonding" 
+
+#####################################################################
+##
+## if grep $BOND_DEV /sys/class/net/bonding_masters >/dev/null; then
+##     echo "$BOND_DEV has been found in the bonding_masters."
+##     exit 0
+## fi
+##
+#####################################################################  
+
+If bond device both has inet and inet6 interface, we should not reconfigure it in "25-pre-up-bonding",
+beacuse if we reconfigure it for each time interface up, the previous configuration will be gone.
+
+Files Modified: data/defaults/etc/network/if-pre-up.d/25-pre-up-bonding
+
+--Submitter:  (jonnychang@ami.com.tw) Fri, 24 Jun 2011 11:04:56 CST
+
+Package: sys_base (2.22.0); urgency = high
+
+Abstract:
+	licensing corrected
+
+Files Added: spx/LICENSES/LICENSE.OPENSOURCE
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 23 Jun 2011 16:33:24 EDT
+
+Package: sys_base (2.21.0); urgency = medium
+
+Abstract:
+	assigning the non hex mtd minor nos in hex value
+
+Files Modified: spx/PACKAGES.D/sys_base/DATA/device.lst
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Sat, 11 Jun 2011 05:23:50 IST
+
+Package: sys_base (2.20.0); urgency = low
+
+Abstract:
+	adding ttyC* device entries
+
+Files Modified: spx/PACKAGES.D/sys_base/DATA/device.lst
+
+--Submitter: varadachari sudan ayanam (varadacharia@ami.com) Fri, 27 May 2011 13:29:22 EDT
+
+Package: sys_base (2.19.0); urgency = high
+
+Abstract:
+	removing daemon user entry from /etc/passwd
+
+Files Modified: data/defaults/etc/defconfig/passwd
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Mon, 23 May 2011 06:29:02 EDT
+
+Package: sys_base (2.18.0); urgency = high
+
+Abstract:
+	Added daemon user entry in reservedusers file
+
+Files Modified: data/defaults/etc/defconfig/passwd, data/defaults/etc/reservedusers
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Fri, 20 May 2011 09:22:31 EDT
+
+Package: sys_base (2.17.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:40:34 EDT
+
+Package: sys_base (2.16.0); urgency = medium
+
+Abstract:
+	Creating softlinks to libpam.so and libpam_misc.so
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 10 May 2011 17:45:29 IST
+
+Package: sys_base (2.15.0); urgency = high
+
+Abstract:
+	Removed the entry to copy the stunnel script from target. It will now be copied from the respective stunnel4 binary packages
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 29 Apr 2011 11:42:48 EDT
+
+Package: sys_base (2.14.0); urgency = medium
+
+Abstract:
+	Web console preview feature support
+
+Files Modified: data/defaults/etc/init.d/init-sp.sh, spx/RULES.D/softlink.lst
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 27 Apr 2011 17:02:00 IST
+
+Package: sys_base (2.13.0); urgency = low
+
+Abstract:
+	Remove ldconfig, and find the version of ld.so manually for executing mtd utilities.
+
+Files Modified: data/defaults/etc/init.d/mountall.sh
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 25 Apr 2011 16:33:34 CST
+
+Package: sys_base (2.12.0); urgency = medium
+
+Abstract:
+	Change default_sh into INI format.
+
+Files Modified: spx/PACKAGES.D/sys_base/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 23 Apr 2011 14:20:17 CST
+
+Package: sys_base (2.11.0); urgency = medium
+
+Abstract:
+	Modified hostname.conf into INI format.
+
+Files Modified: data/defaults/etc/defconfig/hostname.conf
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 22 Apr 2011 15:49:28 CST
+
+Package: sys_base (2.10.0); urgency = medium
+
+Abstract:
+	Removing Edirectory based implementation, as it going to use LDAP schemes
+
+Files Modified: data/defaults/etc/defconfig/nsswitch.conf, data/defaults/etc/defconfig/pam_withunix, data/defaults/etc/defconfig/pam_wounix
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Tue, 19 Apr 2011 13:45:51 IST
+
+Package: sys_base (2.9.0); urgency = medium
+
+Abstract:
+	adding /usr/local/platform/ in directory list
+
+Files Modified: spx/RULES.D/directory.lst
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 18 Apr 2011 15:09:04 IST
+
+Package: sys_base (2.8.0); urgency = medium
+
+Abstract:
+	Adding Edirectory support to link files which will be used by application like webgo,sshd...
+
+Files Modified: data/defaults/etc/defconfig/nsswitch.conf, data/defaults/etc/defconfig/pam_withunix, data/defaults/etc/defconfig/pam_wounix
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 13 Apr 2011 01:17:21 IST
+
+Package: sys_base (2.7.0); urgency = medium
+
+Abstract:
+	Use ldconfig instead of hard code way to execute utilities that fail-safe function needs
+
+Files Modified: data/defaults/etc/init.d/mountall.sh
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 01 Apr 2011 18:23:36 CST
+
+Package: sys_base (2.6.0); urgency = low
+
+Abstract:
+	Device nodes are not saved inside binary packages.
+It will be created in ImageTree when the binary package is installed.
+
+Files Added: spx/PACKAGES.D/sys_base/DATA/device.lst
+Files Deleted: spx/RULES.D/device.lst
+Files Modified: spx/PACKAGES.D/sys_base/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 21 Mar 2011 13:56:11 EDT
+
+Package: sys_base (2.5.0); urgency = low
+
+Abstract:
+	changed the scripts to get the linux administrator user name dynamically instead of hotcoded name
+
+Files Modified: data/defaults/etc/defconfig/crontab, data/defaults/etc/init.d/bootmisc.sh, data/defaults/etc/init.d/ssh-main, data/defaults/etc/init.d/sysklogd, data/defaults/etc/logrotate.conf
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Mon, 21 Mar 2011 21:23:03 TLT
+
+Package: sys_base (2.4.0); urgency = medium
+
+Abstract:
+	libcap version is different between targets. So use the link instead of fixed version
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 14 Mar 2011 09:12:00 EDT
+
+Package: sys_base (2.3.0); urgency = medium
+
+Abstract:
+	pam_withunix config file will load pam_unix.so for all sections acc to latest target and pam_unix2.so entry removed from files.lst
+
+Files Modified: data/defaults/etc/defconfig/pam_withunix, spx/RULES.D/files.lst
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 14 Mar 2011 16:54:14 IST
+
+Package: sys_base (2.2.0); urgency = medium
+
+Abstract:
+	Added /bin/false - default shell for user without any permissions
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 11 Mar 2011 12:23:53 EST
+
+Package: sys_base (2.1.0); urgency = medium
+
+Abstract:
+	Added libattr.so.1 which is needed by ntpdate
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Mar 2011 13:04:08 EST
+
+Package: sys_base (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/P.CONFIG, spx/RULES, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:53:07 EST
+
+Package: sys_base (1.32.0); urgency = high
+
+Abstract:
+	Changed Linux root user to sysadmin
+
+Files Added: data/defaults/etc/defconfig/group
+Files Modified: data/defaults/etc/defconfig/crontab, data/defaults/etc/defconfig/passwd, data/defaults/etc/defconfig/shadow, data/defaults/etc/init.d/bootmisc.sh, data/defaults/etc/init.d/ssh-main, data/defaults/etc/init.d/sysklogd, data/defaults/etc/logrotate.conf, data/defaults/etc/reservedusers
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Tue, 01 Mar 2011 09:30:01 TLT
+
+Package: sys_base (1.31.0); urgency = medium
+
+Abstract:
+	Modified the ssh and telnet service to use the configured port in ncml.conf
+
+Files Modified: data/defaults/etc/init.d/ssh, data/defaults/etc/init.d/telnetd
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 23 Feb 2011 19:01:57 IST
+
+Package: sys_base (1.30.0); urgency = high
+
+Abstract:
+	By default MII monitor is using netcarrier_ok to check the link status,this will take some delay to update 
+the link status(as per net driver implementation).So Disable use_carrier option to use MII or Ethtool ioctl to update 
+the link status.
+
+Files Modified: data/defaults/etc/network/if-pre-up.d/25-pre-up-bonding
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 21 Feb 2011 18:28:10 IST
+
+Package: sys_base (1.29.0); urgency = high
+
+Abstract:
+	Added link to /var/video in www
+
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 17 Feb 2011 20:53:47 EST
+
+Package: sys_base (1.28.0); urgency = medium
+
+Abstract:
+	Update Active slave in sys control file. This will avoid communication failure when only one slave is activated.
+
+Files Modified: data/defaults/etc/network/if-pre-up.d/25-pre-up-bonding
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 16 Feb 2011 15:45:35 IST
+
+Package: sys_base (1.27.0); urgency = medium
+
+Abstract:
+	Modified bonding script to update the single slave configuration.
+
+Files Modified: data/defaults/etc/network/if-pre-up.d/25-pre-up-bonding
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 16 Feb 2011 01:43:28 IST
+
+Package: sys_base (1.26.0); urgency = high
+
+Abstract:
+	Added FQDN support
+
+Files Added: data/defaults/etc/defconfig/dhcp.conf
+Files Modified: data/defaults/etc/defconfig/dns.conf
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 20 Jan 2011 00:41:34 IST
+
+Package: sys_base (1.25.0); urgency = medium
+
+Abstract:
+	During NFS also /var is created as volatile filesystem. This matches the actual flash Image. This avoids the difference of behaviour of applications between NFS and Image
+
+Files Modified: data/defaults/etc/init.d/init-sp.sh
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 19 Jan 2011 11:51:40 EST
+
+Package: sys_base (1.24.0); urgency = low
+
+Abstract:
+	Changing the pam modules names, will refered as pam_custom_ldap
+
+Files Modified: data/defaults/etc/defconfig/pam_withunix, data/defaults/etc/defconfig/pam_wounix
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Sat, 08 Jan 2011 16:37:02 IST
+
+Package: sys_base (1.23.0); urgency = high
+
+Abstract:
+	added root user entry in reserved users to eliminate duplicate users
+
+Files Modified: data/defaults/etc/reservedusers
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 03 Jan 2011 19:39:19 IST
+
+Package: sys_base (1.22.0); urgency = high
+
+Abstract:
+	changed reserved users entrys as generic
+
+Files Modified: data/defaults/etc/reservedusers
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 28 Dec 2010 21:09:14 IST
+
+Package: sys_base (1.21.0); urgency = high
+
+Abstract:
+	creating default user_home folder in conf file system
+
+Files Modified: spx/RULES.D/directory.lst
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 27 Dec 2010 15:15:57 IST
+
+Package: sys_base (1.20.0); urgency = high
+
+Abstract:
+	renamed dummyusers file as reservedusers in sys_base
+
+Files Added: data/defaults/etc/reservedusers
+Files Deleted: data/defaults/etc/dummyusers
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Wed, 22 Dec 2010 20:49:43 IST
+
+Package: sys_base (1.19.0); urgency = low
+
+Abstract:
+	Adding support for Active Directory based login thro webgo
+
+Files Modified: data/defaults/etc/defconfig/pam_withunix, data/defaults/etc/defconfig/pam_wounix
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 22 Dec 2010 18:14:39 IST
+
+Package: sys_base (1.18.0); urgency = medium
+
+Abstract:
+	Cleanup - Removed umounfs and added clean version of sendsigs
+
+Files Added: data/defaults/etc/init.d/sendsigs
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 22 Dec 2010 00:45:11 EST
+
+Package: sys_base (1.17.0); urgency = high
+
+Abstract:
+	moved dummyusers to sys_base for common use
+
+Files Added: data/defaults/etc/dummyusers
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 21 Dec 2010 20:00:12 IST
+
+Package: sys_base (1.16.0); urgency = medium
+
+Abstract:
+	Added updated ping6 utility to send proper ICMPv6 Message.
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 15 Dec 2010 15:48:51 IST
+
+Package: sys_base (1.15.0); urgency = medium
+
+Abstract:
+	user creation path modified in sshd_config for ssh passwdless login
+
+Files Modified: data/defaults/etc/ssh/sshd_config
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Wed, 08 Dec 2010 15:52:49 IST
+
+Package: sys_base (1.14.0); urgency = low
+
+Abstract:
+	Added reboot/shudown to properly call shutdown scripts
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 29 Nov 2010 18:20:31 EST
+
+Package: sys_base (1.13.0); urgency = medium
+
+Abstract:
+	Added the support for 48 Timezone.
+
+Files Added: data/defaults/usr, data/defaults/usr/share, data/defaults/usr/share/zoneinfo, data/defaults/usr/share/zoneinfo/Etc, data/defaults/usr/share/zoneinfo/Etc/GMT+0:30, data/defaults/usr/share/zoneinfo/Etc/GMT+10:30, data/defaults/usr/share/zoneinfo/Etc/GMT+11:30, data/defaults/usr/share/zoneinfo/Etc/GMT+1:30, data/defaults/usr/share/zoneinfo/Etc/GMT+2:30, data/defaults/usr/share/zoneinfo/Etc/GMT+3:30, data/defaults/usr/share/zoneinfo/Etc/GMT+4:30, data/defaults/usr/share/zoneinfo/Etc/GMT+5:30, data/defaults/usr/share/zoneinfo/Etc/GMT+6:30, data/defaults/usr/share/zoneinfo/Etc/GMT+7:30, data/defaults/usr/share/zoneinfo/Etc/GMT+8:30, data/defaults/usr/share/zoneinfo/Etc/GMT+9:30, data/defaults/usr/share/zoneinfo/Etc/GMT-0:30, data/defaults/usr/share/zoneinfo/Etc/GMT-10:30, data/defaults/usr/share/zoneinfo/Etc/GMT-11:30, data/defaults/usr/share/zoneinfo/Etc/GMT-1:30, data/defaults/usr/share/zoneinfo/Etc/GMT-2:30, data/defaults/usr/share/zoneinfo/Etc/GMT-3:30, data/defaults/usr/share/zoneinfo/Etc/GMT-4:30, data/defaults/usr/share/zoneinfo/Etc/GMT-5:30, data/defaults/usr/share/zoneinfo/Etc/GMT-6:30, data/defaults/usr/share/zoneinfo/Etc/GMT-7:30, data/defaults/usr/share/zoneinfo/Etc/GMT-8:30, data/defaults/usr/share/zoneinfo/Etc/GMT-9:30
+Files Modified: data/defaults/etc/defconfig/localtime, spx/INFO, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 23 Nov 2010 09:01:01 GMT-5:30
+
+Package: sys_base (1.12.0); urgency = medium
+
+Abstract:
+	PAM changes for webgo- sysbase will have the pam cfg file and it is linked to original file in goahead
+
+Files Added: data/defaults/etc/defconfig/pam_withunix, data/defaults/etc/defconfig/pam_wounix
+Files Deleted: data/defaults/etc/defconfig/pam_auth
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Wed, 17 Nov 2010 16:59:56 IST
+
+Package: sys_base (1.11.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:34:20 EST
+
+Package: sys_base (1.10.0); urgency = medium
+
+Abstract:
+	etc/passwd will have only root user,original pam files for sshd & login,nsswitch will point to files in /conf
+
+Files Added: data/defaults/etc/defconfig/nsswitch.conf, data/defaults/etc/defconfig/pam_auth
+Files Deleted: data/defaults/etc/pam.d/login, data/defaults/etc/pam.d/sshd
+Files Modified: data/defaults/etc/defconfig/passwd, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Tue, 09 Nov 2010 17:51:10 IST
+
+Package: sys_base (1.9.0); urgency = medium
+
+Abstract:
+	Added check to not show General configuation menu in case of SH4
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 03 Nov 2010 14:39:46 EDT
+
+Package: sys_base (1.8.0); urgency = medium
+
+Abstract:
+	Added /lib/modules/generic and subdirectories created
+
+Files Modified: spx/RULES.D/directory.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:35:01 EDT
+
+Package: sys_base (1.7.0); urgency = medium
+
+Abstract:
+	* Removing dependency of stunnel from sys_base
+
+Files Modified: spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 05 Oct 2010 23:08:45 IST
+
+Package: sys_base (1.6.0); urgency = medium
+
+Abstract:
+	* Added stunnel binary package as dependency for sys_base package
+
+Files Modified: spx/INFO, spx/RULES.D/files.lst
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 05 Oct 2010 22:55:27 IST
+
+Package: sys_base (1.5.0); urgency = medium
+
+Abstract:
+	Add fail-safe conf feature - modified mountall script, it will check if fail-safe conf procedure needs to be done.
+
+Files Modified: data/defaults/etc/init.d/mountall.sh
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 30 Sep 2010 21:51:39 CST
+
+Package: sys_base (1.4.0); urgency = medium
+
+Abstract:
+	Corrected Configuration
+Added BaseSystem for provides to support multiple versions of sys_base
+
+Files Modified: spx/INFO, spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 20 Sep 2010 13:04:07 EDT
+
+Package: sys_base (1.3.0); urgency = high
+
+Abstract:
+	support added for two network interfaces at build time
+
+Files Added: data/defaults/etc/defconfig/interfaces.0x1, data/defaults/etc/defconfig/interfaces.0x2
+Files Deleted: data/defaults/etc/defconfig/interfaces
+Files Modified: spx/PACKAGES.D/sys_base/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 17 Sep 2010 14:58:14 EDT
+
+Package: sys_base (1.2.0); urgency = low
+
+Abstract:
+	fail-safe conf feature - modified for only adding bkupconf under conditional flag based on PRJ config
+
+Files Modified: spx/RULES.D/CreateTree
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 16 Sep 2010 18:17:55 CST
+
+Package: sys_base (1.1.0); urgency = medium
+
+Abstract:
+	Add fail-safe conf feature - added a bkupconf directory in file system.
+
+Files Modified: spx/RULES.D/CreateTree, spx/RULES.D/directory.lst
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 15 Sep 2010 11:37:56 CST
+
+Package: sys_base (1.0.44); urgency = low
+
+Abstract:
+	Added ethtool executable for Image
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 08 Sep 2010 16:36:14 EDT
+
+Package: sys_base (1.0.43); urgency = medium
+
+Abstract:
+	moving the sign image configuration option from platform Aviator pkg to sys_base as it is general configuration
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Fri, 03 Sep 2010 11:44:00 IST
+
+Package: sys_base (1.0.42); urgency = low
+
+Abstract:
+	DNS modification - Added DO_DDNS with interface-wise and DEFAULT_DOMAINNAME in configuration.
+
+Files Modified: data/defaults/etc/defconfig/dns.conf, spx/P.CONFIG
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 03 Aug 2010 19:01:13 CST
+
+Package: sys_base (1.0.41); urgency = low
+
+Abstract:
+	QOM is the default CIMON. No need to prompt for QOM Support
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 02 Aug 2010 16:53:51 EDT
+
+Package: sys_base (1.0.40); urgency = high
+
+Abstract:
+	Bug: In VLAN mode changing the IP Address source from dhcp to static or from static to dhcp makes the VLAN IP unreachable.
+Fix: dont do vconfig rem while doing ifdown event for vlan interface.
+
+Files Modified: data/defaults/etc/network/if-post-down.d/25-post-down-vlan
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 13 Jul 2010 15:07:50 IST
+
+Package: sys_base (1.0.39); urgency = medium
+
+Abstract:
+	Reverting the changes done for pam_ipmi login support for ssh
+
+Files Modified: data/defaults/etc/pam.d/sshd
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 01 Jul 2010 21:13:11 IST
+
+Package: sys_base (1.0.38); urgency = low
+
+Abstract:
+	hostname.conf file added in conf to get and set hostname settings like Automatic/Manual.
+
+Files Added: data/defaults/etc/defconfig/hostname.conf
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 01 Jul 2010 18:35:55 IST
+
+Package: sys_base (1.0.37); urgency = low
+
+Abstract:
+	Fixed for the bug - DNS DHCP will get duplicated server IP if two of old DNS server IP are the same.
+
+Files Modified: data/defaults/etc/nwhelperapi.sh
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 30 Jun 2010 18:49:07 CST
+
+Package: sys_base (1.0.36); urgency = low
+
+Abstract:
+	Add pam_ipmi entry in /etc/pam.d/sshd . To support pam_ipmi ssh login.
+
+Files Modified: data/defaults/etc/pam.d/sshd
+
+--Submitter: joywu (joywu@ami.com.tw) Wed, 23 Jun 2010 03:47:05 CST
+
+Package: sys_base (1.0.35); urgency = low
+
+Abstract:
+	Creating ld-linux.so.2 link as this is needed by i686 target
+
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Thu, 24 Jun 2010 10:26:57 EDT
+
+Package: sys_base (1.0.34); urgency = high
+
+Abstract:
+	* udhcpc-script and dns.conf modified for DNS architecture related changes.
+ * In udhcpc-script interface name passed to dns.conf. NTP supported function name corrected.
+ * dns.conf file modified for multiple interfaces.
+
+Files Modified: data/defaults/etc/defconfig/dns.conf, data/defaults/etc/network/udhcpc.script
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 09 Jun 2010 15:14:47 IST
+
+Package: sys_base (1.0.33); urgency = low
+
+Abstract:
+	Save the current IPv4 address at /conf/dhcp.preip_4
+
+The DHCP client support "request IP" parameter that can ask DHCP sever to delivery the same IP if possible, to support this function, we need to store the current IPv4 address.
+
+Files Modified: data/defaults/etc/network/udhcpc.script
+
+--Submitter: Benson Chuang (bensonchuang@ami.com.tw) Thu, 27 May 2010 03:56:21 CST
+
+Package: sys_base (1.0.32); urgency = medium
+
+Abstract:
+	Fixed for the bug - when telnet script is called to stop, it also stop other services.
+
+Files Modified: data/defaults/etc/init.d/telnetd
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Tue, 25 May 2010 17:34:22 EDT
+
+Package: sys_base (1.0.31); urgency = medium
+
+Abstract:
+	Added telnetd startup script with execute permission
+
+Files Added: data/defaults/etc/init.d/telnetd
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 25 May 2010 10:48:15 EDT
+
+Package: sys_base (1.0.30); urgency = medium
+
+Abstract:
+	Since spxami does not handle change in permisisons, deleting telnetd (whch does not have execute permission) and will be added in next version
+
+Files Deleted: data/defaults/etc/init.d/telnetd
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 25 May 2010 10:46:10 EDT
+
+Package: sys_base (1.0.29); urgency = medium
+
+Abstract:
+	Set Execute permission for telnetd
+
+Files Modified: data/defaults/etc/init.d/telnetd
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 25 May 2010 10:43:15 EDT
+
+Package: sys_base (1.0.28); urgency = medium
+
+Abstract:
+	Moved Platform specific config to @PLATFORM packages
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 24 May 2010 19:38:03 EDT
+
+Package: sys_base (1.0.27); urgency = medium
+
+Abstract:
+	1. Added enable checking function into service script before starting telnet/ssh service. This function will check if service is enabled in NCML configuration file.
+2. Added telenetd script file.
+
+Files Added: data/defaults/etc/init.d/telnetd
+Files Modified: data/defaults/etc/init.d/ssh, spx/RULES.D/softlink.lst
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Fri, 21 May 2010 10:41:01 EDT
+
+Package: sys_base (1.0.26); urgency = medium
+
+Abstract:
+	Moved Endian configuration to ARCH
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 14 May 2010 13:56:24 EDT
+
+Package: sys_base (1.0.25); urgency = medium
+
+Abstract:
+	Duplicate entry in inittab removed
+
+Files Modified: data/defaults/etc/inittab
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:31:24 EDT
+
+Package: sys_base (1.0.24); urgency = low
+
+Abstract:
+	Added Runlevel 8 entries
+
+Files Modified: data/defaults/etc/inittab, spx/RULES.D/directory.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:12:08 EDT
+
+Package: sys_base (1.0.23); urgency = medium
+
+Abstract:
+	Default shell set to wrapper shell "defshell"
+Added config option to get the default shell program
+Modifed rules to copy the above configuration to file to be used by defshell
+
+Files Modified: data/defaults/etc/defconfig/passwd, spx/P.CONFIG, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 10 May 2010 21:42:38 EDT
+
+Package: sys_base (1.0.22); urgency = low
+
+Abstract:
+	Moved Endian selection from sys_base to ARCH Package
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 04 May 2010 14:08:01 EDT
+
+Package: sys_base (1.0.21); urgency = medium
+
+Abstract:
+	Make dns configs global in dns.conf. And modify udhcpc.script to support separated flags in dns.conf.
+
+Files Modified: data/defaults/etc/defconfig/dns.conf, data/defaults/etc/network/udhcpc.script
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Sat, 01 May 2010 21:07:05 EDT
+
+Package: sys_base (1.0.20); urgency = high
+
+Abstract:
+	QoM support define added for NOW. This needs to be reverted back as soon as we have QoM and SFCB support in the stack
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 30 Apr 2010 11:53:54 EDT
+
+Package: sys_base (1.0.19); urgency = low
+
+Abstract:
+	Added extra i2c devices (total 10)
+Added extra mtd devices for partitions ( total 8 partitions + 1 whole device)
+Removed gpio device entry
+
+Files Modified: spx/RULES.D/device.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 28 Apr 2010 10:02:59 EDT
+
+Package: sys_base (1.0.18); urgency = critical
+
+Abstract:
+	Bug: system() crashes during flash mode 
+Fix: Init 7 does not exit to shell 
+
+Bug: NTP Script startup failure
+Fix: Required getnet - added
+
+Bug: syslog does not stop during flash mode
+Fix: Wrong symlinks corrected
+
+Files Modified: data/defaults/etc/inittab, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Apr 2010 15:01:30 EDT
+
+Package: sys_base (1.0.17); urgency = medium
+
+Abstract:
+	Bug - DNS server addresses are not written correctly after changing source from static-dhcp. Fix - New API is added to replace/append DNS server entries when source is dhcp. so there will not be any unwanted old entries in resolv.conf.
+
+Files Modified: data/defaults/etc/network/udhcpc.script, data/defaults/etc/nwhelperapi.sh
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 20 Apr 2010 16:34:17 IST
+
+Package: sys_base (1.0.16); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 14 Apr 2010 17:57:00 EDT
+
+Package: sys_base (1.0.15); urgency = high
+
+Abstract:
+	SSH key issue fixed. The key is now uploaded for the logged-in user in a user-specific directory inside conf
+
+Files Added: data/defaults/etc/ssh, data/defaults/etc/ssh/sshd_config
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 08 Apr 2010 12:54:46 EDT
+
+Package: sys_base (1.0.14); urgency = low
+
+Abstract:
+	Default ntp State file and ntpd client added
+
+Files Added: data/defaults/etc/defconfig/ntp.stat
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 07 Apr 2010 14:09:18 EDT
+
+Package: sys_base (1.0.13); urgency = medium
+
+Abstract:
+	NTP support added
+
+Files Modified: data/defaults/etc/network/udhcpc.script, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 07 Apr 2010 12:29:36 EDT
+
+Package: sys_base (1.0.12); urgency = low
+
+Abstract:
+	Disable dual LAN interfaces for pilot-ii
+
+Files Modified: data/defaults/etc/defconfig/interfaces
+
+--Submitter: George Hsin (georgehsin@ami.com.tw) Wed, 07 Apr 2010 16:41:39 CST
+
+Package: sys_base (1.0.11); urgency = low
+
+Abstract:
+	Enable dual channel interface for QA test case
+
+Files Modified: data/defaults/etc/defconfig/interfaces
+
+--Submitter: George Hsin (georgehsin@ami.com.tw) Wed, 07 Apr 2010 14:04:09 CST
+
+Package: sys_base (1.0.10); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:27:03 EDT
+
+Package: sys_base (1.0.9); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:46:28 EDT
+
+Package: sys_base (1.0.8); urgency = high
+
+Abstract:
+	NTP support added in udhcpc, so that client can get NTP server address from dhcp server and store it in ntp.conf file.
+
+Files Modified: data/defaults/etc/nwhelperapi.sh, data/defaults/etc/network/udhcpc.script
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 30 Mar 2010 19:52:20 IST
+
+Package: sys_base (1.0.7); urgency = low
+
+Abstract:
+	inet6 entry in interfaces file removed. This entry should not be from sys_base package. Entry will be added from sys_ipv6 package
+
+Files Modified: data/defaults/etc/defconfig/interfaces
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 11 Mar 2010 21:00:48 IST
+
+Package: sys_base (1.0.6); urgency = low
+
+Abstract:
+	Adding nwhelperapi.sh to sys_base. This script file can be used by both udhcpc.script and dhcp6c-script files to append resolv.conf configurations
+
+Files Added: data/defaults/etc/nwhelperapi.sh
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 10 Mar 2010 01:46:23 IST
+
+Package: sys_base (1.0.5); urgency = low
+
+Abstract:
+	Added dns.conf file in /conf folder. replaced the referrences of nsupdate.conf to dns.conf in udhcpc.script file.
+
+Files Added: data/defaults/etc/defconfig/dns.conf
+Files Modified: data/defaults/etc/network/udhcpc.script
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 09 Mar 2010 23:48:40 IST
+
+Package: sys_base (1.0.4); urgency = low
+
+Abstract:
+	inet6 entry added in etc/network/interfaces file so that IPv6 support enabled in card by initial stage of device booting
+
+Files Modified: data/defaults/etc/defconfig/interfaces
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 04 Mar 2010 12:21:41 IST
+
+Package: sys_base (1.0.3); urgency = low
+
+Abstract:
+	sys_base package modified for DNS
+
+Files Modified: data/defaults/etc/defconfig/resolv.conf, data/defaults/etc/network/udhcpc.script
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Mon, 22 Feb 2010 23:50:46 IST
+
+Package: sys_base (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:15:48 EST
+
+Package: sys_base (1.0.1); urgency = low
+
+Abstract:
+	Adding processmanager support and slp support in SPX.
+
+Files Modified: data/defaults/etc/init.d/init-sp.sh, spx/INFO
+
+--Submitter: Winston Thangapandian (winstont@amiindia.co.in) Wed, 10 Feb 2010 14:14:28 IST
+
+Package:sys_base (1.0.0);urgency=low
+
+Abstract:
+	Change log description.
+
+Files Modified: defaults/etc/network/udhcpc.script
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 3 Feb 2010 00:39:20 +0530
+
+Package:sys_base (1.0.0);urgency=new
+
+Abstract:
+	Base System Package which creates a minimal working linux root filesystem (with sshd support).It build the root tree using using the files from this package and target package
+
+Files Added: defaults
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 14 Dec 2009 12:38:00 -0500

@@ -1,0 +1,16 @@
+Package : libunix
+Non-Editable : YES
+Version : 1.5.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : SPX Core Team  (spcoreteam@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Required : libdbgout
+Package-License : AMI
+Description : This Package includes Basic Unix functions
+.

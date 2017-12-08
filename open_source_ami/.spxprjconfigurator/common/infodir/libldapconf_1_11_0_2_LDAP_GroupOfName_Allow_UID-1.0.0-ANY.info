@@ -1,0 +1,20 @@
+Package : libldapconf_1_11_0_2_LDAP_GroupOfName_Allow_UID
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for libldapconf (1.11.0)
+Depends :  libldapconf(==1.11.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  royku (royku@ami.com.tw)
+Urgency : new
+Description : ldap objectclaas GroupOfName allow UID as dn
+.
+

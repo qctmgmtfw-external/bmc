@@ -1,0 +1,9 @@
+Package: libipmi_2_38_0_5_Sensor_Scanning_bit (1.0.0); urgency = new
+
+Abstract:
+	Checking the Sensor Scanning bit and Sensor Accessing error to update the Sensor reading.
+
+Files Added: data, data/00-data_libipmi_sensor.c, data/01-data_include_libipmi_sensor.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 21 Sep 2011 00:01:27 IST
+

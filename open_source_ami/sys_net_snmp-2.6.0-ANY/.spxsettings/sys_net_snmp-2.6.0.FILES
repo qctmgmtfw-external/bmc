@@ -1,0 +1,11 @@
+./conf/snmp_users.conf 60 cf53bbf4f7522b3ec182c2849bb73d04
+./conf/snmpcfg.conf 64 d17d9e69fd77ffab765e1588df4140ff
+./etc/init.d/netsnmp 1549 adc7d0b04d03206893a20426816bf9de
+./lib/libsysfs.so.2.0.1 29168 0b6d16ad580d4f3fc82a8c67e4590d1f
+./usr/lib/libnetsnmp.so.15.1.2 570088 ae8612011a90102ea2f257a9235be5e0
+./usr/lib/libnetsnmpagent.so.15.1.2 263908 ecfba7083d0320359d6120a370860616
+./usr/lib/libnetsnmphelpers.so.15.1.2 125712 0ce9f0d2840349b56966364cf19c715b
+./usr/lib/libnetsnmpmibs.so.15.1.2 1090676 64d5ecaa2ebfcf3d7ecedf55ec847361
+./usr/lib/libperl.so.5.10.1 1252072 a297b6bc169b8a317efa44899ef6532c
+./usr/lib/libsensors.so.4.2.1 55940 3e13ef7e6bb3da98492ebc17c72daee6
+./usr/sbin/snmpd 24400 3dd16ed35e9d163c467591e99bc0d9b5

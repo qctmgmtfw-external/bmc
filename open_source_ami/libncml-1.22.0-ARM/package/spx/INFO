@@ -1,0 +1,18 @@
+Package : libncml
+Non-Editable : YES
+Version : 1.22.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Joey Chen  (JoeyChen@ami.com.tw)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : NCML Library Support
+Group : LIBRARY
+Required : netmon, ncml_configuration, libtoken, libiniparser, libunix
+Package-License : AMI
+Description : NCML(Network Connection Management Library) layer provides a common entity with configurations for various network services.
+.

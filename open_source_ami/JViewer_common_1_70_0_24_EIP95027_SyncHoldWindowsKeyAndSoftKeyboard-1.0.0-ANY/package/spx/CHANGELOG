@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_24_EIP95027_SyncHoldWindowsKeyAndSoftKeyboard (1.0.0); urgency = new
+
+Abstract:
+	Synchronize hold windows key and SoftKeyboard pad
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, data/01-data_src_com_ami_kvm_jviewer_gui_SoftKeyboard.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 24 Aug 2012 12:46:42 CST
+

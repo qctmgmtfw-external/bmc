@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/peci
+	COPY_FILE ./libpeci.a %SPXLIB/peci
+	COPY_FILE libpeci.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/peci
+	ADD_LIBRARY_LINKS %SPXLIB/peci libpeci.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

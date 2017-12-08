@@ -1,0 +1,27 @@
+menu "Discovery tools Configuration"
+
+config upnp_dsc (1.3.0)
+	bool 
+	default y
+	depends on upnp
+	depends on @ARCH_ARM
+	depends on @SOC_AST2300
+	depends on @PLATFORM_AST2300EVB
+	help
+		UPNP Core package provides the default generic UPNP device description.
+
+#--------------------------------------
+config upnp (1.3.0)
+	bool "Upnp Discovery Support"
+	default n
+	select libdbgout
+	select  libunix
+	depends on @ARCH_ARM
+	help
+		Provides UPNP Procotol discovery mechanism.
+
+#--------------------------------------
+
+endmenu
+
+

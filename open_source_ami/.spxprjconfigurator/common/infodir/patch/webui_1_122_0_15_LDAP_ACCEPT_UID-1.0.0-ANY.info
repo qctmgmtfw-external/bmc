@@ -1,0 +1,20 @@
+Package : webui_1_122_0_15_LDAP_ACCEPT_UID
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 15 for webui (1.122.0)
+Depends :  webui(==1.122.0)
+PatchOrder : 15
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  royku (royku@ami.com.tw)
+Urgency : new
+Description : LDAP accept uid as bindn and dn
+.
+

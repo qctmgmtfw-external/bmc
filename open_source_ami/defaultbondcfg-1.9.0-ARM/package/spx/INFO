@@ -1,0 +1,18 @@
+Package : defaultbondcfg
+Non-Editable : YES
+Version : 1.9.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : muthuchamy.k  (muthusamyk@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : info
+Essential : YES
+Config-Tag : Bonding Configuration
+Group : FEATURES
+Depends : NWBonding_Support
+Package-License : AMI
+Description : This Package will configure the default bonding configurations.
+.

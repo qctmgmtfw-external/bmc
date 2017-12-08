@@ -1,0 +1,17 @@
+Package : sys_failsafeconf
+Non-Editable : YES
+Version : 2.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Joey Chen  (JoeyChen@ami.com.tw)
+Source-License : AMI
+Architecture : ANY
+Urgency : medium
+Section : sys
+Essential : NO
+Config-Tag : Fail-safe conf support
+Group : FEATURES
+Package-License : GPL-V2
+Description : fail-safe conf system package which contains required files for fail-safe conf functionalities
+.

@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/fmh
+	MKDIR_NOCLEAN %SPXINC/fmh
+	COPY_FILE ./fmh.h %SPXINC/fmh
+	COPY_FILE ./fmhinfo.h %SPXINC/fmh
+	COPY_FILE ./libfmh.a %SPXLIB/fmh
+	COPY_FILE ./libfmh.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/fmh
+	ADD_LIBRARY_LINKS %SPXLIB/fmh  libfmh.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

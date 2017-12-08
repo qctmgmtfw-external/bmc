@@ -1,0 +1,9 @@
+Package: JViewer_common_1_70_0_30_107486_SoftKeyboardError (1.0.0); urgency = new
+
+Abstract:
+	for EIP 107486, when select physical and then select softkeyboard will make some error
+
+Files Added: data, data/00-data_src_com_ami_kvm_jviewer_gui_AutoKeyboardLayout.java, data/01-data_src_com_ami_kvm_jviewer_gui_JVMenu.java, data/02-data_src_com_ami_kvm_jviewer_gui_JViewerApp.java, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: nealchen (nealchen@ami.com.tw) Mon, 04 Feb 2013 13:59:31 CST
+

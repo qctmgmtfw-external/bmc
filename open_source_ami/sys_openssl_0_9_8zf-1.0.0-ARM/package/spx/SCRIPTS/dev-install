@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+        COPY_FILE ./libcrypto.so.0.9.8 %TARGETDIR/usr/lib/libcrypto.so.0.9.8
+        COPY_FILE ./libssl.so.0.9.8 %TARGETDIR/usr/lib/libssl.so.0.9.8
+        DELETE_ALL %TARGETDIR/usr/include/ openssl
+        COPY_DIR openssl %TARGETDIR/usr/include/openssl
+
+debug-install:

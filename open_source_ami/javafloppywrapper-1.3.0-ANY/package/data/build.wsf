@@ -1,0 +1,67 @@
+	<job>
+<?job error=true?>
+<script language="JScript" src="bldhelp.js"></script>
+
+<script language="JScript">
+
+
+/*****************Project Entities declaration*******************/
+var ProjectDSWName = new Array();
+var ProjectName = new Array();
+var ProjectDescription = new Array();
+
+
+ProjectDSWName["G4"]="javafloppywrapper.dsw";
+ProjectName["G4"]="javafloppywrapper - Win32 Release";
+ProjectDescription["G4"]="javafloppywrapper";
+
+var PD = new Array();
+PD["G4"] = new Array();
+
+PD["G4"][0] = new Array();
+PD["G4"][0].VSSLocation = "Release/";
+PD["G4"][0].DiskLocation = "Release";
+PD["G4"][0].Filename = "javafloppywrapper.dll";
+
+/*****************Project Entities declaration*******************/
+
+
+
+
+
+/*****************************There is probably no need to change anything below this line**************************/
+var gShell; 
+var PRODUCT;
+var BUILDCTRL;
+var THISVSSPROJ;
+var COMMENT;
+
+
+function main()
+{
+	
+	Helper_Init();
+
+	WScript.Echo("Product is .." + PRODUCT);
+
+	if(BUILDCTRL == "BUILD")
+	{	
+		WScript.Echo("Building "+ProjectDescription);
+		Helper_BuildProject();
+	}
+	else if(BUILDCTRL == "CHECKIN")
+	{
+	
+		THISVSSPROJ = Helper_ExtractThisVSSProj();
+		WScript.Echo("this vss project is " + THISVSSPROJ);
+		chkinretval = Helper_CheckInDeliverables(THISVSSPROJ,COMMENT);
+	}
+}
+
+
+
+main();
+
+
+</script>
+</job>

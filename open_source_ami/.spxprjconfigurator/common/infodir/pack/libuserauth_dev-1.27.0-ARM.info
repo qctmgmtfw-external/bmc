@@ -1,0 +1,16 @@
+Package : libuserauth_dev
+Non-Editable : YES
+Version : 1.27.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : siva Prakash R  (sivaprakashr@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Group : AUTHENTICATION
+Package-License : AMI
+Description : Package Contains Helper macros which shall be used by NSS and PAM modules.
+.

@@ -1,0 +1,9 @@
+Package: webui_1_122_0_3_EIP_69120_68315_63780 (1.0.0); urgency = new
+
+Abstract:
+	Following are the bugs fixed, 1.AD - wrong help texty for Active directory. 2.Web - Expired SSL certificate able to upload. 3.Modifying an AD role group via UI: the confirmation message needs minor correction.
+
+Files Added: data, data/00-data_MDS-Workspace_www_help_EN_configure_ssl_hlp.html, data/01-data_MDS-Workspace_www_help_EN_configure_active_directory_hlp.html, data/02-data_MDS-Workspace_www_impl_configure_active_directory_imp.js, data/03-data_MDS-Workspace_www_impl_configure_ssl_imp.js, data/04-data_MDS-Workspace_www_str_EN_common_str.js, data/05-data_MDS-Workspace_www_lib_eVal.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Tue, 20 Sep 2011 20:50:58 IST
+

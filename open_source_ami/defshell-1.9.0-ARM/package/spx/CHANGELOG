@@ -1,0 +1,95 @@
+Package: defshell (1.9.0); urgency = medium
+
+Abstract:
+	Cleaning up the defshell
+
+Files Modified: data/defshell.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 18 May 2011 16:54:58 EDT
+
+Package: defshell (1.8.0); urgency = medium
+
+Abstract:
+	making the default shell transparent in the login process, as suggested by SGI
+
+Files Modified: data/defshell.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 18 May 2011 16:43:08 EDT
+
+Package: defshell (1.7.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:11:57 EDT
+
+Package: defshell (1.6.0); urgency = high
+
+Abstract:
+	Updating the default serial console normal shell to login shell
+
+Files Modified: data/defshell.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 11 May 2011 11:11:59 EDT
+
+Package: defshell (1.5.0); urgency = medium
+
+Abstract:
+	Change default_sh into INI format.
+
+Files Modified: data/Makefile, data/defshell.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 23 Apr 2011 14:21:27 CST
+
+Package: defshell (1.4.0); urgency = low
+
+Abstract:
+	Reverted back the privilege verification changes
+
+Files Deleted: data/authshell.c, data/authshell.h, spx/P.CONFIG
+Files Modified: data/Makefile, data/defshell.c, spx/INFO
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Thu, 21 Apr 2011 20:28:01 IST
+
+Package: defshell (1.3.0); urgency = medium
+
+Abstract:
+	Added privilege verification APIs
+
+Files Added: data/authshell.c, data/authshell.h, spx/P.CONFIG
+Files Modified: data/Makefile, data/defshell.c, spx/INFO
+
+--Submitter: Veera Jothi R (veerajothir@amiindia.co.in) Thu, 21 Apr 2011 18:53:04 IST
+
+Package: defshell (1.2.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:26:12 EST
+
+Package: defshell (1.1.0); urgency = critical
+
+Abstract:
+	Changed safe_system() call to system() as 
+safe_system clean out the environment and 
+shell/applications launched from defshell 
+needs the environment variables
+
+Files Modified: data/defshell.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 03 Nov 2010 13:52:11 EDT
+
+Package: defshell (1.0.0); urgency = new
+
+Abstract:
+	This package includes default shell application all user logins
+
+Files Added: data, data/Makefile, data/defshell.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/defshell, spx/PACKAGES.D/defshell/DATA, spx/PACKAGES.D/defshell/SCRIPTS, spx/PACKAGES.D/defshell/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 10 May 2010 21:38:39 EDT
+

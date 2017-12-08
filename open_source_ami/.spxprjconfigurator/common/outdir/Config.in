@@ -1,0 +1,17 @@
+mainmenu "SPX Package Configurator " 
+source BASE.in
+source FEATURES.in
+source IPMI.in
+source PLATFORM.in
+source KVM.in
+source MEDIA.in
+source DEVICE.in
+source WSMAN.in
+source DISCOVERY.in
+source TESTTOOL.in
+source LIBRARY.in
+source DEVEL.in
+source SOFTWARE.in
+source AUTHENTICATION.in
+source PATCH.in
+source MISC.in

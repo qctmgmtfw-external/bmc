@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+#copy header file
+        MKDIR_NOCLEAN %SPXINC/wsman
+        COPY_DIR ./ %SPXINC/wsman
+
+debug-install:

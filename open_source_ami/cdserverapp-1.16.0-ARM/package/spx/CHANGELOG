@@ -1,0 +1,314 @@
+Package: cdserverapp (1.16.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/cdserver.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:30:40 IST
+
+Package: cdserverapp (1.15.0); urgency = medium
+
+Abstract:
+	Services configuration redesigned to have support of Non-Editable and Not-Applicable for the individual fields.
+
+Files Modified: data/cdserver.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 20 Jul 2011 13:09:35 IST
+
+Package: cdserverapp (1.14.0); urgency = medium
+
+Abstract:
+	Service name modified from media to cd-media
+
+Files Modified: data/cdserver
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 18:56:22 IST
+
+Package: cdserverapp (1.13.0); urgency = high
+
+Abstract:
+	Removed the cd, fd and hd port macros to identify the respective ports
+
+Files Modified: data/cdserver.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 06 Jun 2011 13:02:47 EDT
+
+Package: cdserverapp (1.12.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/cdserver.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:24:45 EDT
+
+Package: cdserverapp (1.11.0); urgency = medium
+
+Abstract:
+	Fix for local media auto attach issue.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 16 May 2011 09:26:25 EDT
+
+Package: cdserverapp (1.10.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:06:43 EDT
+
+Package: cdserverapp (1.9.0); urgency = high
+
+Abstract:
+	Removing libipmi dependency and using ncml calls
+
+Files Modified: data/cdserver.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 08:09:28 EDT
+
+Package: cdserverapp (1.8.0); urgency = high
+
+Abstract:
+	Getting the port number from NCML config
+
+Files Modified: data/Makefile, data/cdserver.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 02:02:14 EDT
+
+Package: cdserverapp (1.7.0); urgency = low
+
+Abstract:
+	Removing signal handling functions of SIGKILL and SIGSTOP as they are untrappable.
+
+Files Modified: data/share.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 01 Mar 2011 13:48:32 IST
+
+Package: cdserverapp (1.6.0); urgency = low
+
+Abstract:
+	Fix for compilation error when DEBUG is enabled.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 16 Feb 2011 18:13:55 IST
+
+Package: cdserverapp (1.5.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/cdserver, data/cdserver.c, data/share.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:51:40 EST
+
+Package: cdserverapp (1.4.0); urgency = medium
+
+Abstract:
+	kernel version check removed in reading the peer address.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 10 Dec 2010 12:38:27 EST
+
+Package: cdserverapp (1.3.0); urgency = medium
+
+Abstract:
+	changes to read client IP address correctly with 2.6.30 kernel.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 08 Dec 2010 10:52:13 EST
+
+Package: cdserverapp (1.2.0); urgency = medium
+
+Abstract:
+	vmapp is needed by cdserver.
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 18 Oct 2010 11:15:48 EDT
+
+Package: cdserverapp (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:41:21 EDT
+
+Package: cdserverapp (1.0.18); urgency = low
+
+Abstract:
+	warning message corrected.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 26 Aug 2010 10:36:16 EDT
+
+Package: cdserverapp (1.0.17); urgency = medium
+
+Abstract:
+	Respond with CONNECTION_IN_USE to client when 2nd client try to use CD instance that is already used by 1st client.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 23 Aug 2010 14:48:13 EDT
+
+Package: cdserverapp (1.0.16); urgency = medium
+
+Abstract:
+	In the auto attch mode, do not disconnect if local CD redirection is in progress.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 23 Aug 2010 09:38:47 EDT
+
+Package: cdserverapp (1.0.15); urgency = medium
+
+Abstract:
+	changes as per libvmedia changes to remove num_vf_cd/fd/hd fields of vmedia.conf
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 19 Aug 2010 10:56:53 EDT
+
+Package: cdserverapp (1.0.14); urgency = low
+
+Abstract:
+	This code is no longer needed. This task is carried out by vmapp before starting the cdserver.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 18 Aug 2010 15:43:04 EDT
+
+Package: cdserverapp (1.0.13); urgency = medium
+
+Abstract:
+	select call logic bug fixed.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 18 Aug 2010 10:12:31 EDT
+
+Package: cdserverapp (1.0.12); urgency = medium
+
+Abstract:
+	multiple instance support added for CD server
+
+Files Modified: data/cdserver.c, data/share.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 17 Aug 2010 10:58:39 EDT
+
+Package: cdserverapp (1.0.11); urgency = medium
+
+Abstract:
+	Added enable checking function into service script before starting service.
+This function will check if service is enabled in NCML configuration file.
+
+Files Modified: data/cdserver
+
+--Submitter: Joey Chen (JoeyChen@ami.com.tw) Fri, 21 May 2010 10:19:32 EDT
+
+Package: cdserverapp (1.0.10); urgency = low
+
+Abstract:
+	Added Runlevel 8 entries
+
+Files Modified: data/cdserver
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:10:17 EDT
+
+Package: cdserverapp (1.0.9); urgency = low
+
+Abstract:
+	commenting SIGCHLD warning message as this message is informational.
+
+Files Modified: data/share.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 27 Apr 2010 09:53:45 EDT
+
+Package: cdserverapp (1.0.8); urgency = medium
+
+Abstract:
+	USB media dependencies resolved for MDS
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 21 Apr 2010 13:38:59 EDT
+
+Package: cdserverapp (1.0.7); urgency = low
+
+Abstract:
+	currently, when cdserver loads, it will disconnect and connect corresponding USB hardware device. This is modified to read the current connect state of hardware device and attach_cd field of vmedia_conf and then connect/disconnect/noaction is taken,
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 20 Apr 2010 15:11:03 EDT
+
+Package: cdserverapp (1.0.6); urgency = medium
+
+Abstract:
+	Bug : The IP address shown on multiple CDROM Redirecton dialogue is not correct. Fixed
+
+Files Modified: data/cdserver.c
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Fri, 16 Apr 2010 15:17:20 IST
+
+Package: cdserverapp (1.0.5); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:41:32 EDT
+
+Package: cdserverapp (1.0.4); urgency = high
+
+Abstract:
+	Removed unwanted code which created problems on SSL Connections
+
+Files Modified: data/cdserver.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 24 Feb 2010 16:44:57 EST
+
+Package: cdserverapp (1.0.3); urgency = medium
+
+Abstract:
+	changes to handle to cd and fd seperate usb devices. this case exists with AST.
+
+Files Modified: data/cdserver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 19 Feb 2010 10:13:29 EST
+
+Package: cdserverapp (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:55:12 EST
+
+Package: cdserverapp (1.0.1); urgency = medium
+
+Abstract:
+	cdserver binay package group field is set to KVM.
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 08 Feb 2010 14:26:52 EST
+
+Package:cdserverapp (1.0.0);urgency=new
+
+Abstract:
+	This package includes cdserver application.
+
+Files Added: Makefile, cdserver.c, cdserver, share.c
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Mon, 1 Feb 2010 17:30:30 -0500

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/data/nsupdate.conf</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/data/nsupdate.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/data/Makefile</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/data/config.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/data/scripts</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/data/nsupdate.sh</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>nsupdate</package-name>
+<version>1.10.0</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">target</package-name>
+<package-name operator="" version="">crosscc</package-name>
+<package-name operator="" version="">rules</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group/>
+<configtags>Dynamic DNS update Support</configtags>
+<installsize/>
+<description>Dynamic DNS Updates - Registers Name to DNS Server for Name resolution</description>
+<architecture>ALL</architecture>
+<owner>AMI</owner>
+<maintainer>Samvinesh Christopher  </maintainer>
+<maintainer-email>vineshc@ami.com</maintainer-email>
+<sourcelocation>Internet Systems Consortium, Inc. ("ISC")</sourcelocation>
+<sourceversion>Debian 6.0 (bind9-9.7.2.dfsg.P3)</sourceversion>
+<sourcelicense>BSD</sourcelicense>
+<packagelicense>BSD</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="low">low</urgency>
+<customization-type/>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/spx/RULES</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/spx/P.CONFIG</pconfig>
+<buildconfig/>
+<packages>
+<package>
+<name>nsupdate</name>
+<section>app</section>
+<essential>NO</essential>
+<configtags>Dynamic DNS Support</configtags>
+<group>FEATURES</group>
+<license>BSD</license>
+<description>Dynamic DNS Updates - Registers Name to DNS Server for Name resolution</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends>
+<package-name operator="" version="">sys_base</package-name>
+</depends>
+<required/>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/spx/PACKAGES.D/nsupdate/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/nsupdate-1.10.0-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

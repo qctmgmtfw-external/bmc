@@ -1,0 +1,202 @@
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_pef help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame.document.getElementsByTagName("FORM");
+	var titleContent = "", bodyContent = "", buttonContent = "";
+	var helpContent;
+	if (frameName.length) {
+		if (frameName[0].getAttribute("id").indexOf("AlertPolicyForm") != -1) {
+			bodyContent = "<br><br>" +
+				"<fieldset>" +
+				"<legend>Actions</legend>" +
+				"<h4>Policy Entry #</h4>" +
+				"This field displays Policy entry number of the selected slot" +
+				"(readonly)." +
+				"<h4>Policy Number</h4>" +
+				"Choose the policy number that was configured in Event " +
+				"filter table." +
+				"<h4>Policy Configuration</h4>" +
+				"Check the option 'Enable' to enable the policy settings." +
+				"<h4>Policy Set</h4>" +
+				"Choose any one of the Policy set values from the list.<br>" +
+				"0 - Always send alert to this destination.<br>" +
+				"1 - If alert to previous destination was successful, do " + 
+				"not send alert to this destination. Proceed to next entry " +
+				"in this policy set.<br>" +
+				"2 - If alert to previous destination was successful, do " +
+				"not send alert to this destination. Do not process any " +
+				"more entries in this policy set.<br>" +
+				"3 - If alert to previous destination was successful, do " + 
+				"not send alert to this destination. Proceed to next entry " +
+				"in this policy set that is to a different channel.<br>" +
+				"4 - If alert to previous destination was successful, do " +
+				"not send alert to this destination. Proceed to next entry in" +
+				" this policy set that is to a different destination type.<br>" +
+				"<h4>Channel Number</h4>" +
+				"Choose a particular channel from the available channel list." +
+				"<h4>Destination Selector</h4>" +
+				"Choose a particular destination from the configured " +
+				"destination list." +
+				"<br><strong>NOTE:</strong> " +
+				"LAN Destination have to be configured - under " +
+				"Configuration->PEF->LAN Destination." +
+				"<h4>Alert String</h4>" +
+				"Check the box to look up the Alert String is event specific." +
+				"<h4>Alert String Key</h4>" +
+				"Choose any one value that is used to look up the Alert " +
+				"String to send for this Alert Policy entry.";
+
+			if ("addAlertPolicyForm" == frameName[0].getAttribute("id")) {
+				titleContent = "<div class='helpmainhead'>Add Alert Policy" +
+					"</div></h2><div class='subSection'>" +
+					"This form is used to add a new Alert Policy entry. ";
+				buttonContent = "<h4>Add</h4>" +
+					"Click 'Add' to save the new alert policy and return to " +
+					"Alert Policy list. ";
+			} else if ("modifyAlertPolicyForm" == frameName[0].getAttribute("id")) {
+				titleContent = "<div class='helpmainhead'>Modify Alert Policy "+
+					"</div></h2><div class='subSection'>" +
+					"This form is used to modify the existing Alert Policy entry. ";
+				buttonContent = "<h4>Modify</h4>" +
+					"Click 'Modify' to accept the modification and return to " +
+					"Alert Policy list. ";
+			}
+			helpContent = titleContent + bodyContent + buttonContent;
+			helpContent += "<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification and return to Alert " +
+			"Policy list. </fieldset></div>";
+		} else if (frameName[0].getAttribute("id").indexOf("LANDestForm") != -1) {
+			bodyContent = "<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>LAN Destination</h4>" +
+			"Displays Destination number of the selected slot(readonly)." +
+			"<h4>Destination Type</h4>" +
+			"The destination type can be either an SNMP Trap or an Email " +
+			"alert. For SNMP Trap, destination IP address has to be filled. " +
+			"For Email alert, 3 fields Username, subject and " +
+			"body of the message have to be filled. " +
+			"The SMTP server information also has to be added under " +
+			"Configuration->SMTP. " +
+			"<h4>Destination Address</h4>" +
+			"If Destination type is SNMP Trap, then give the IP address of " +
+			"the system that will receive the alert. " +
+			"Destination address will support the following:" +
+			"<ul><li>- IPv4 address format." +
+			"<li>- IPv6 address format.</ul>" +
+			"<h4>Username</h4>" +
+			"If Destination type is Email Alert, then choose the user to " +
+			"whom the email alert has to be sent." +
+			"<br><strong>NOTE:</strong> " +
+			"Email address for the user has to be configured under " +
+			"Configuration->Users." +
+			"<h4>Subject &amp; Message</h4>" +
+			"These fields must be configured if email alert is chosen as " +
+			"destination type. An email will be sent to the configured email " +
+			"address of the user in case of any severity events with a " +
+			"subject specified in subject field and will contain the message" +
+			" field's content as the email body. ";
+			if ("addLANDestForm" == frameName[0].getAttribute("id")) {
+				titleContent = "<div class='helpmainhead'>Add LAN Destination" +
+					"</div></h2><div class='subSection'>" +
+					"Use this form to add a new LAN destination entry. ";
+				buttonContent = "<h4>Add</h4>" +
+					"Click on 'Add' to save the new LAN destination and " +
+					"return to LAN destination list. ";
+			}
+			else if ("modifyLANDestForm" == frameName[0].getAttribute("id"))
+			{
+				titleContent = "<div class='helpmainhead'>Modify LAN Destination" +
+					"</div></h2><div class='subSection'>" +
+					"This form is used to modify the existing LAN " +
+					"destination entry. ";
+				buttonContent = "<h4>Modify</h4>" +
+					"Click 'Modify' to accept the modification and return " +
+					"to LAN destination list. ";
+			}
+			helpContent = titleContent + bodyContent + buttonContent;
+			helpContent += "<h4>Cancel</h4>" +
+				"Click 'Cancel' to cancel the modification and return to " +
+				"LAN destination list. " +
+				"</fieldset></div>";
+		}
+	}
+	else
+	{
+		helpContent = "<div class='helpmainhead'>PEF</div></h2>" +
+		"<div class='subSection'>" +
+		"This page is used to configure Event Filter, Alert Policy and LAN " +
+		"Destination. To view the page, user must at least be an Operator.<br>" +
+		"To modify or add a PEF, user must be an Administrator. " +
+		"<br><strong>NOTE:</strong> Free slots are denoted by '~' in all " +
+		"columns for the slot. " +
+		"<br><br><fieldset>" +
+		"<legend>Actions</legend>" +
+		"<h4>Event Filter</h4>" +
+		"Click the Event Filter tab to show any configured Event filters " +
+		"and available slots. " +
+		"You can modify or add new event filter entry from here.<br>" +
+		"A maximum of 40 slots are available and include the default of 15 " +
+		"event filter configuration. " +
+		"<h4>Alert Policy</h4>" +
+		"Click the Alert policy tab to show any configured Alert policies " +
+		"and available slots. " +
+		"You can modify or add new alert policy entry from here.<br>" +
+		"A maximum of 60 slots are available. " +
+		"<h4>LAN Destination</h4>" +
+		"Click the LAN Destination tab to show any configured LAN " +
+		"destinations and available slots. " +
+		"You can modify or add new LAN destination entry from here.<br>" +
+		"A maximum of 15 slots are available." +
+		"<h4>Send Test Alert</h4>" +
+		"Select a configured slot in LAN Destination tab and click 'Send " +
+		"Test Alert' to send sample alert to configured destination." +
+		"<h4>Add</h4>" +
+		"Select a free slot and click 'Add' to add a new entry to the device. " +
+		"Alternatively, double click on a free slot. " +
+		"<h4>Modify</h4>" +
+		"Select a configured slot and click 'Modify' to modify that entry. " +
+		"Alternatively, double click on the configured slot." +
+		"<h4>Delete</h4>" +
+		"Select the desired configured slot to be deleted and click 'Delete'. " +
+		"</fieldset>" +
+		"</div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

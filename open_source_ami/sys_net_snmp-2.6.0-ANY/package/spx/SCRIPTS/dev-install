@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+    COPY_TO_CONF ./conf/snmp_users.conf
+    COPY_TO_CONF ./conf/snmpcfg.conf
+    SET_INIT_SCRIPT ./etc/init.d/netsnmp
+    COPY_DIR .  %IMAGE_TREE
+    APPEND_TO_FILE SNMP %IMAGE_TREE/etc/features
+    
+debug-install:
+

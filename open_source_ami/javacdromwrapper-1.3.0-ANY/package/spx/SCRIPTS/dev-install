@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_CLEAN %SOFTWARE/%PACKAGE
+        COPY_DIR   . %SOFTWARE/%PACKAGE
+
+debug-install:

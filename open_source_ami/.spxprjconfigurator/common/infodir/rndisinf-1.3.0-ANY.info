@@ -1,0 +1,15 @@
+Package : rndisinf
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : tool
+Essential : YES
+Owner : AMI
+Group : BASE
+Maintainer : Rama Rao Bisa (RamaB@ami.com)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This package provides INF file for RNDIS/CDC Support
+.

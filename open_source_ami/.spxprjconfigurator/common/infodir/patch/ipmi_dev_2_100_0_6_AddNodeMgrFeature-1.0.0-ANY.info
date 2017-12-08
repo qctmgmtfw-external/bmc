@@ -1,0 +1,20 @@
+Package : ipmi_dev_2_100_0_6_AddNodeMgrFeature
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 6 for ipmi_dev (2.100.0)
+Depends :  ipmi_dev(==2.100.0)
+PatchOrder : 6
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  OwenChou (OwenChou@ami.com.tw)
+Urgency : new
+Description : Implement Intel Node Manage Featur
+.
+

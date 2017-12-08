@@ -1,0 +1,26 @@
+Package: Kernel_Pristine (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:37:05 EDT
+
+Package: Kernel_Pristine (1.1.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:31:27 EST
+
+Package:Kernel_Pristine (1.0.0);urgency=new
+
+Abstract:
+	Pristine Linux Kernel 2.6.28.10 for www.kernel.org
+
+Files Added: linux-2.6.28.10.tar.bz2
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 23 Sep 2009 16:04:14 -0400

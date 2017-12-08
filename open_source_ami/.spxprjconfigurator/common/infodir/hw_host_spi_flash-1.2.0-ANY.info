@@ -1,0 +1,15 @@
+Package : hw_host_spi_flash
+Version : 1.2.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Essential : NO
+Group : DEVICE
+Owner : AMI
+Maintainer : David Chang  (DavidChang@ami.com.tw)
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ANY
+Urgency : high
+Description : SoC supports host SPI flash.
+.

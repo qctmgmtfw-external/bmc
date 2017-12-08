@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %SPXINC/activedircfg
+		MKDIR_NOCLEAN %SPXLIB/activedircfg
+		COPY_FILE ./activedir_cfg.h %SPXINC/activedircfg
+		COPY_FILE ./libactivedircfg.a %SPXLIB/activedircfg
+		COPY_FILE ./libactivedircfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/activedircfg
+		ADD_LIBRARY_LINKS %SPXLIB/activedircfg libactivedircfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		
+debug-install:
+

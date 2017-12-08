@@ -1,0 +1,43 @@
+Package: libsession (1.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:10:26 EDT
+
+Package: libsession (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:04:06 EDT
+
+Package: libsession (1.0.2); urgency = low
+
+Abstract:
+	Added package description
+
+Files Modified: spx/INFO
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Fri, 16 Jul 2010 14:53:40 IST
+
+Package: libsession (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:10:19 EST
+
+Package:libsession (1.0.0);urgency=new
+
+Abstract:
+	Installs libsession library
+
+Files Added: Makefile, session.c, session.h
+
+--Submitter: Padma (padmad@amiindia.co.in) Thu, 28 Jan 2010 16:05:08 +0530

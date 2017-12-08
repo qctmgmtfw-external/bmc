@@ -1,0 +1,115 @@
+Package: libipmiapml (2.4.0); urgency = low
+
+Abstract:
+	Add the APML version 103
+
+Files Modified: data/Apml.c, data/ApmlCmds.c, data/Apml_fdk.c, data/User_platform.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Fri, 22 Jul 2011 13:43:32 CST
+
+Package: libipmiapml (2.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:49:56 EDT
+
+Package: libipmiapml (2.2.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:44:17 IST
+
+Package: libipmiapml (2.1.0); urgency = medium
+
+Abstract:
+	Removing unwanted #if defs as the enabling of commands can be done in libipmipdkcmds package and not from support.h.
+
+Files Modified: data/ApmlCmds.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 15 Apr 2011 14:58:15 IST
+
+Package: libipmiapml (2.0.0); urgency = medium
+
+Abstract:
+	Minor changes and incrementing the version to 2.0.0
+
+Files Modified: data/ApmlMetaInfo.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:15:50 IST
+
+Package: libipmiapml (1.2.0); urgency = medium
+
+Abstract:
+	Changes done to get APML Bus number from IPMI Configurations.
+
+Files Modified: data/ApmlCmds.c, data/Apml_fdk.c, data/User_platform.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 01 Feb 2011 17:24:43 IST
+
+Package: libipmiapml (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:56:01 EDT
+
+Package: libipmiapml (1.0.5); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:47:27 IST
+
+Package: libipmiapml (1.0.4); urgency = low
+
+Abstract:
+	MBMC Changes for Apml
+
+Files Modified: data/ApmlCmds.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:47:01 IST
+
+Package: libipmiapml (1.0.3); urgency = low
+
+Abstract:
+	Replacing libi2c calls with function pointers
+
+Files Modified: data/User_platform.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 15 Jun 2010 21:15:32 IST
+
+Package: libipmiapml (1.0.2); urgency = medium
+
+Abstract:
+	ln -s repalced with CREATE_SOFT_LINK
+
+Files Modified: spx/PACKAGES.D/libipmiapml/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 05 Mar 2010 10:08:52 EST
+
+Package: libipmiapml (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:05:10 EST
+
+Package:libipmiapml (1.0.0);urgency=new
+
+Abstract:
+	This package contains ipmi apml related files.
+
+Files Added: ApmlMetaInfo.c, Apml_fdk.c, Makefile, User_platform.c, ApmlCmds.c, Apml.c
+
+--Submitter: Suresh (sureshv@amiindia.co.in) Tue, 8 Dec 2009 17:32:36 -0500

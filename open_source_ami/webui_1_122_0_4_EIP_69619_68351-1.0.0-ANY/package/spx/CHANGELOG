@@ -1,0 +1,9 @@
+Package: webui_1_122_0_4_EIP_69619_68351 (1.0.0); urgency = new
+
+Abstract:
+	1.Web - There is no help text for Send test alert-fixed. 2.Get an IPMI error message if an Operator tries to view the Triggers Configuration page-fixed.
+
+Files Added: data, data/00-data_MDS-Workspace_www_help_EN_configure_pef_hlp.html, data/01-data_MDS-Workspace_www_impl_configure_triggers_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Tue, 20 Sep 2011 22:38:56 IST
+

@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_26_EIP93209_To_Fix_PEFPostponeTimer_Ineffective_Issue
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 26 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 26
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  Prakash (prakashs@amiindia.co.in)
+Urgency : new
+Description : Fix the PEF Postpone Timer ineffective issue
+.
+

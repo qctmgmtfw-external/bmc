@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_23_ToFixReadEvtMsgBufferFunctionReturnValueWhenMessageQueueIsEmpty
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 23 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 23
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  jackyang (jackyang@ami.com.tw)
+Urgency : new
+Description : To fix ReadEvtMsgBuffer function return value when message queue is empty.
+.
+

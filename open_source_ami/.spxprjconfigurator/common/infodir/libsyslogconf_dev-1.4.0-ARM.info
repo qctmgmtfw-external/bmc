@@ -1,0 +1,15 @@
+Package : libsyslogconf_dev
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Gokulakannan Sampath  (gokulakannans@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : dev
+Essential : NO
+Package-License : AMI
+Description : Syslog Configuration header files.
+.

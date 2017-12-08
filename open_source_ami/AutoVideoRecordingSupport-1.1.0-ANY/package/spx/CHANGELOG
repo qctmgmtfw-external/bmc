@@ -1,0 +1,18 @@
+Package: AutoVideoRecordingSupport (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 13:57:32 EDT
+
+Package: AutoVideoRecordingSupport (1.0.0); urgency = new
+
+Abstract:
+	This Dummy Package is used to select/deselect the Auto Video Recording Support
+
+Files Added: data, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 10:58:05 EDT
+

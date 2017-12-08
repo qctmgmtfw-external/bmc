@@ -1,0 +1,227 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+;*****************************************************************;
+;*****************************************************************;
+;**                                                             **;
+;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+;**                     ALL RIGHTS RESERVED                     **;
+;**                                                             **;
+;**  This computer software, including display screens and      **;
+;**  all related materials, are confidential and the            **;
+;**  exclusive property of American Megatrends, Inc.  They      **;
+;**  are available for limited use, but only pursuant to        **;
+;**  a written license agreement distributed with this          **;
+;**  computer software.  This computer software, including      **;
+;**  display screens and all related materials, shall not be    **;
+;**  copied, reproduced, published or distributed, in whole     **;
+;**  or in part, in any medium, by any means, for any           **;
+;**  purpose without the express written consent of American    **;
+;**  Megatrends, Inc.                                           **;
+;**                                                             **;
+;**                                                             **;
+;**                American Megatrends, Inc.                    **;
+;**           5555 Oakbook Parkway, Building 200                **;
+;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+;**                                                             **;
+;*****************************************************************;
+;*****************************************************************;
+-->
+<html>
+<head>
+	<link href="../www/style/page_style.css" type="text/css" rel="stylesheet" />
+	<script src="../www/lib/include.js" type="text/javascript"></script>
+</head>
+<body oncontextmenu="return false;">
+<h3>SSL Certificate Configuration</h3>
+<p>This page is used to configure SSL certificate into the BMC.
+Using this, the device can be accessed in a secured mode. Upload SSL option is 
+used to upload the certificate and private key file into the BMC. Generate SSL 
+option is used to generate the SSL certificate based on configuration details.
+View SSL option is used to view the uploaded SSL certificate in readable format.
+</p>
+<table cellspacing="0" cellpadding="0" border="0"><tbody>
+<tr>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top" ></td>
+	<td class="roundedtable_topright"></td>
+	<td class="roundedtable_topleft"></td>
+	<td class="roundedtable_top"></td>
+	<td class="roundedtable_topright"></td>
+</tr>
+<tr>
+	<td class="roundedtable_left"></td>
+	<td id="_tabUploadSSL" class="classicTab">Upload SSL</td>
+	<td class="roundedtable_right"></td>
+	<td class="roundedtable_left"></td>
+	<td id="_tabGenerateSSL" class="classicTab">Generate SSL</td>
+	<td class="roundedtable_right"></td>
+	<td class="roundedtable_left"></td>
+	<td id="_tabViewSSL" class="classicTab">View SSL</td>
+	<td class="roundedtable_right"></td>
+</tr>
+</tbody></table>
+
+<table cellspacing="0" cellpadding="10" border="1" width="100%" height="75%">
+	<tr class="visibleRow" id="_rowUploadSSL"><td valign="top">
+		<iframe name="hiddenFrame" class="hide"></iframe>
+		<div class="subSection">
+		<table cellspacing="0" cellpadding="6" border="0" width="600">
+			<tr><td width="35%"><strong>Current Certificate</strong></td>
+			<td><input type="text" id="_txtCertInfo" class="bigclassicTxtBox" 
+			readonly /></td></tr>
+
+			<tr><td><strong>New Certificate</strong></td>
+			<td><form method="POST" enctype="multipart/form-data" name="frmCert"
+			target="hiddenFrame" action="file_upload.html">
+			<input type="file" id="_fleCertBrowse" size="35"></form>
+			</td></tr>
+
+			<tr><td><strong>Current Privacy Key</strong></td>
+			<td><input type="text" id="_txtKeyInfo" class="bigclassicTxtBox" 
+			readonly /></td></tr>
+
+			<tr><td><strong>New Privacy Key</strong></td>
+			<td><form method="POST"  enctype="multipart/form-data" 
+			name="frmPrivKey" target="hiddenFrame" action="file_upload.html">
+			<input type="file" id="_fleKeyBrowse" size="35"></form>
+			</td></tr>
+		</table></div>
+		</form>
+
+		<div class="btnTray">
+			<input type="button" id="_btnUpload" value="Upload"/>
+		</div>
+	</td></tr>
+
+	<tr class="hiddenRow" id="_rowGenerateSSL"><td valign="top">
+		<div class="subSection">
+		<table cellspacing="0" cellpadding="6" border="0" width="600">
+			<tr><td width="35%"><strong>Common Name(CN)</strong></td>
+			<td><input type="text" id="_txtCommonName" class="bigclassicTxtBox" 
+			maxlength="64"/></td></tr>
+
+			<tr><td><strong>Organization(O)</strong></td>
+			<td><input type="text" id="_txtOrganization" 
+			class="bigclassicTxtBox" maxlength="64" /></td></tr>
+
+			<tr><td><strong>Organization Unit(OU)</strong></td>
+			<td><input type="text" id="_txtOrgUnit" class="bigclassicTxtBox" 
+			maxlength="64" /></td></tr>
+
+			<tr><td><strong>City or Locality(L)</strong></td>
+			<td><input type="text" id="_txtCity" class="bigclassicTxtBox" 
+			maxlength="64" /></td></tr>
+
+			<tr><td><strong>State or Province(ST)</strong></td>
+			<td><input type="text" id="_txtState" class="bigclassicTxtBox" 
+			maxlength="64" /></td></tr>
+
+			<tr><td><strong>Country(C)</strong></td>
+			<td><input type="text" id="_txtCountry" class="smallclassicTxtBox" 
+			maxlength="2" /></td></tr>
+
+			<tr><td><strong>Email Address</strong></td>
+			<td><input type="text" id="_txtEmailID" class="bigclassicTxtBox" 
+			maxlength="64" /></td></tr>
+
+			<tr><td><strong>Valid for</strong></td>
+			<td><input type="text" id="_txtValid" class="smallclassicTxtBox" 
+			maxlength="5"/> days</td></tr>
+
+			<tr><td><strong>Key Length</strong></td>
+			<td><select id="_lstKeyLength" class="smallclassicTxtBox"></select>
+			&nbsp;bits</td></tr>
+		</table></div>
+
+		<div class="btnTray">
+			<input type="button" id="_btnGenerate" value="Generate"  />
+		</div>
+	</td></tr>
+
+	<tr class="hiddenRow" id="_rowViewSSL"><td valign="top">
+		<h4>Basic Information</h4>
+		<div class="subSection">
+			<table cellspacing="0" cellpadding="6" border="0" width="100%">
+				<tr><td width="20%"><strong>Version</strong></td>
+				<td><label id="_lblVersion" /></td></tr>
+
+				<tr><td><strong>Serial Number</strong></td>
+				<td><label id="_lblSerialNo" /></td></tr>
+
+				<tr><td><strong>Signature Algorithm</strong></td>
+				<td><label id="_lblSignAlg" /></td></tr>
+
+				<tr><td><strong>Public Key</strong></td>
+				<td><label id="_lblPublicKey" /></td></tr>
+			</table>
+		</div>
+
+		<h4>Issued From</h4>
+		<div class="subSection">
+			<table cellspacing="0" cellpadding="6" border="0" width="100%">
+				<tr><td width="20%"><strong>Common Name(CN)</strong></td>
+				<td><label id="_lblFromCommonName" /></td></tr>
+
+				<tr><td><strong>Organization(O)</strong></td>
+				<td><label id="_lblFromOrganization" /></td></tr>
+
+				<tr><td><strong>Organization Unit(OU)</strong></td>
+				<td><label id="_lblFromOrgUnit" /></td></tr>
+
+				<tr><td><strong>City or Locality(L)</strong></td>
+				<td><label id="_lblFromCity" /></td></tr>
+
+				<tr><td><strong>State or Province(ST)</strong></td>
+				<td><label id="_lblFromState" /></td></tr>
+
+				<tr><td><strong>Country(C)</strong></td>
+				<td><label id="_lblFromCountry" /></td></tr>
+
+				<tr><td><strong>Email Address</strong></td>
+				<td><label id="_lblFromEmailID" /></td></tr>
+			</table>
+		</div>
+
+		<h4>Validity Information</h4>
+		<div class="subSection">
+			<table cellspacing="0" cellpadding="6" border="0" width="100%">
+				<tr><td width="20%"><strong>Valid From</strong></td>
+				<td><label id="_lblValidFrom" /></td></tr>
+
+				<tr><td><strong>Valid To</strong></td>
+				<td><label id="_lblValidTo" /></td></tr>
+			</table>
+		</div>
+
+		<h4>Issued To</h4>
+		<div class="subSection">
+			<table cellspacing="0" cellpadding="6" border="0" width="100%">
+				<tr><td width="20%"><strong>Common Name(CN)</strong></td>
+				<td><label id="_lblToCommonName" /></td></tr>
+
+				<tr><td><strong>Organization(O)</strong></td>
+				<td><label id="_lblToOrganization" /></td></tr>
+
+				<tr><td><strong>Organization Unit(OU)</strong></td>
+				<td><label id="_lblToOrgUnit" /></td></tr>
+
+				<tr><td><strong>City or Locality(L)</strong></td>
+				<td><label id="_lblToCity" /></td></tr>
+
+				<tr><td><strong>State or Province(ST)</strong></td>
+				<td><label id="_lblToState" /></td></tr>
+
+				<tr><td><strong>Country(C)</strong></td>
+				<td><label id="_lblToCountry" /></td></tr>
+
+				<tr><td><strong>Email Address</strong></td>
+				<td><label id="_lblToEmailID" /></td></tr>
+			</table>
+		</div>
+	</td></tr>
+</table>
+</body>
+</html>

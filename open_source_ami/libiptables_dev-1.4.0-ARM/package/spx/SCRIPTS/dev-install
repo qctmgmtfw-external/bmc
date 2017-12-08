@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+    COPY_FILE ./libiptables.a %SPXLIB
+	COPY_FILE libiptables.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB
+	ADD_LIBRARY_LINKS %SPXLIB libiptables.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+
+debug-install:

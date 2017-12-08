@@ -1,0 +1,9 @@
+Package: libsnmp_hostname_mib_1_6_0_1_FixDuplicateRegistrationMibModule (1.0.0); urgency = new
+
+Abstract:
+	FixDuplicateRegistrationMibModule
+
+Files Added: data, data/00-spx_PACKAGES.D_libsnmp_hostname_mib_SCRIPTS_dev-install, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 22 Jun 2012 15:38:06 CST
+

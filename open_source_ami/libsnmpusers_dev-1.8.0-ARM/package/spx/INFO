@@ -1,0 +1,16 @@
+Package : libsnmpusers_dev
+Non-Editable : YES
+Version : 1.8.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Michael Wozniak  (michaelw@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : dev
+Essential : NO
+Required : libiniparser
+Package-License : AMI
+Description : SNMP Users Dev package
+.

@@ -1,0 +1,63 @@
+Package: libsnmp_hostname_mib (1.6.0); urgency = high
+
+Abstract:
+	update config file for /conf and /etc/defconfig
+
+Files Modified: data/Makefile, spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 08 Jul 2011 10:55:27 EDT
+
+Package: libsnmp_hostname_mib (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:11:59 EDT
+
+Package: libsnmp_hostname_mib (1.4.0); urgency = high
+
+Abstract:
+	Change include path to get libraries from target include dir
+
+Files Modified: data/Makefile
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 15:16:51 EDT
+
+Package: libsnmp_hostname_mib (1.3.0); urgency = high
+
+Abstract:
+	Makefile update for dynamic library, require libhostname added, using libhostname properly now
+
+Files Modified: data/Makefile, data/amiMibModule.c, data/amiMibModule.h, spx/INFO
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 29 Apr 2011 12:57:51 EDT
+
+Package: libsnmp_hostname_mib (1.2.0); urgency = high
+
+Abstract:
+	correxted error in append line and updated makefile
+
+Files Modified: data/Makefile, spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Wed, 27 Apr 2011 11:08:18 EDT
+
+Package: libsnmp_hostname_mib (1.1.0); urgency = high
+
+Abstract:
+	corrected error in header file
+
+Files Modified: data/amiMibModule.h
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 22 Apr 2011 17:00:24 EDT
+
+Package: libsnmp_hostname_mib (1.0.0); urgency = new
+
+Abstract:
+	SNMP Hostname Extension
+
+Files Added: data, data/Makefile, data/amiMibModule.c, data/amiMibModule.h, spx, spx/CHANGELOG, spx/DEFCONFIG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/libsnmp_hostname_mib, spx/PACKAGES.D/libsnmp_hostname_mib/DATA, spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS, spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 22 Apr 2011 16:35:01 EDT
+

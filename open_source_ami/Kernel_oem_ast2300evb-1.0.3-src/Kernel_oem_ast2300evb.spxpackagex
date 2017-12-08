@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?spx-package-creator version="1.0"?><spx-package Deprecated="false" Non-Editable="false" readonly="false" update="false" updateArch="false" updateversion="false">
+<package-type>Source</package-type>
+<destinationpath>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/packges/</destinationpath>
+<data>
+<files>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/data/06-drivers_mtd_spichips_spiflash.h</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/data/05-drivers_mtd_spichips_spimtd.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/data/02-drivers_mtd_spichips_macronix.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/data/04-drivers_mtd_spichips_generic.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/data/03-drivers_mtd_spichips_winbond.c</file>
+<file>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/data/01-arch_arm_include_asm_soc-ast2300_system.h</file>
+</files>
+<addedFiles/>
+<removedFiles/>
+</data>
+<control>
+<info>
+<package-name>Kernel_oem_ast2300evb</package-name>
+<version>1.0.3</version>
+<new-version autoincrement="true"/>
+<spx-version>4.0</spx-version>
+<spx-format>1.0</spx-format>
+<provides/>
+<enableprovides/>
+<section>app</section>
+<build-depends>
+<package-name operator="" version="">@Kernel_platform_ast2300evb</package-name>
+</build-depends>
+<depends/>
+<required/>
+<conflicts/>
+<essential>NO</essential>
+<group/>
+<configtags/>
+<installsize/>
+<description>AST2300 OEM Patches to Kernel 2.6.28.10</description>
+<architecture>ANY</architecture>
+<owner>AMI</owner>
+<maintainer>Viswanathan S  </maintainer>
+<maintainer-email>viswanathans@ami.com</maintainer-email>
+<sourcelocation>AMI</sourcelocation>
+<sourceversion>2.6.28.10</sourceversion>
+<sourcelicense>GPL-V2</sourcelicense>
+<packagelicense>GPL-V2</packagelicense>
+<soc/>
+<build-order/>
+<build-precedence/>
+<platform/>
+<oem/>
+<feature-required/>
+<urgency base-urgency="medium">medium</urgency>
+<customization-type>OEMEXTN</customization-type>
+<status/>
+</info>
+<rules>
+<rule global="true">/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/spx/RULES</rule>
+<rule>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/spx/RULES.D/ApplyPatch</rule>
+</rules>
+<patches>
+<files/>
+<series/>
+</patches>
+<deconfig/>
+<pconfig/>
+<buildconfig/>
+<packages>
+<package>
+<name>@Kernel_oem_ast2300evb</name>
+<section>info</section>
+<essential>NO</essential>
+<configtags/>
+<group>BASE</group>
+<license>AMI</license>
+<description>AST2300 OEM Patches to Kernel 2.6.28.10
+This is a empty dummy binary package because according to SPX a source package has to generate a binary package</description>
+<provides/>
+<enableprovides/>
+<feature-required/>
+<build-precedence/>
+<depends/>
+<required/>
+<conflicts/>
+<data/>
+<scripts>
+<devinstall>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/spx/PACKAGES.D/@Kernel_oem_ast2300evb/SCRIPTS/dev-install</devinstall>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<bugs/>
+<pconfig/>
+</package>
+</packages>
+<scripts>
+<devinstall/>
+<preinst/>
+<install/>
+<postinst/>
+<prerm/>
+<remove/>
+<postrm/>
+</scripts>
+<data/>
+<bugs-src/>
+<bugs-bin/>
+<docs/>
+<changelog>/home/kevenchen/download_ami/0803_AMI2300_2011Q3/AMI_AST2300_2011Q3/open_source/Kernel_oem_ast2300evb-1.0.3-src/package/spx/CHANGELOG<changelog-description/>
+</changelog>
+<readme/>
+<todo/>
+<faq/>
+</control>
+</spx-package>

@@ -1,0 +1,9 @@
+Package: libipmimsghndlr_2_159_0_16_FixSELSensorReadingError_EIP75841 (1.0.0); urgency = new
+
+Abstract:
+	Fix the sensor reading error of SEL sensor (internal sensor).
+
+Files Added: data, data/00-data_SensorEvent_SensorDevice_internal_sensor.c, data/01-data_SensorEvent_SensorDevice_SensorMonitor.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: owenchou (owenchou@ami.com.tw) Wed, 04 Jan 2012 17:10:06 CST
+

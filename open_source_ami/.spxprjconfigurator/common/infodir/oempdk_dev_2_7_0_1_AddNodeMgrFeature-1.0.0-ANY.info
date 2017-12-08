@@ -1,0 +1,20 @@
+Package : oempdk_dev_2_7_0_1_AddNodeMgrFeature
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for oempdk_dev (2.7.0)
+Depends :  oempdk_dev(==2.7.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  OwenChou (OwenChou@ami.com.tw)
+Urgency : new
+Description : Implement Intel Node Manage Feature
+.
+

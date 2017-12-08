@@ -1,0 +1,15 @@
+Package : libntpconf
+Non-Editable : YES
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Arockia Selva Rani A  (arockiaa@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Package-License : AMI
+Description : NTPCONF Library Binary
+.

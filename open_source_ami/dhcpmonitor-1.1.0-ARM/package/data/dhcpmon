@@ -1,0 +1,42 @@
+#!/bin/sh
+# /etc/init.d/dhcpmon
+#
+# chkconfig: 2345 10 90
+#Runlevel : 3 = S11
+#Runlevel : 6 = K11
+#Runlevel : 7 = K11
+#Runlevel : 8 = K11
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+
+test -f /usr/local/bin/dhcpmonitor || exit 0
+
+case "$1" in
+	start)
+		echo -n "Starting DHCP monitor"
+		/usr/local/bin/dhcpmonitor &
+		echo "."
+		;;
+	stop)
+		echo -n "Stopping DHCP monitor ..."
+		killall dhcpmonitor
+		echo "."
+		;;
+	reload)
+		$0 restart
+		;;
+	force-reload)
+		$0 restart
+		;;
+	restart)
+		echo -n "Restarting DHCP monitor ..."
+		killall dhcpmonitor
+		/usr/local/bin/dhcpmonitor &
+		echo "."
+		;;
+	*)
+		echo "Usage: /etc/init.d/dhcpmon {start|stop|reload|restart|force-reload}"
+		exit 1
+esac
+
+exit 0

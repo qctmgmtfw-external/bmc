@@ -1,0 +1,18 @@
+Package : libvmedia
+Non-Editable : YES
+Version : 1.13.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : lib
+Essential : NO
+Config-Tag : Virtual Media Library Support
+Group : LIBRARY
+Required : libiniparser, libncml
+Package-License : AMI
+Description : This Package includes build vmedia library module.
+.

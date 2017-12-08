@@ -1,0 +1,27 @@
+--- u-boot-1.1.6/Makefile	2008-08-29 14:50:28.723981975 -0400
++++ u-boot-1.1.6-new/Makefile	2008-08-29 14:54:37.709731256 -0400
+@@ -203,6 +203,7 @@
+ LIBS += disk/libdisk.a
+ LIBS += rtc/librtc.a
+ LIBS += dtt/libdtt.a
++LIBS += drivers/spiflash/libspiflash.a
+ LIBS += drivers/libdrivers.a
+ LIBS += drivers/nand/libnand.a
+ LIBS += drivers/nand_legacy/libnand_legacy.a
+@@ -304,14 +305,14 @@
+ 		ctags -w -o $(OBJTREE)/ctags `find $(SUBDIRS) include \
+ 				lib_generic board/$(BOARDDIR) cpu/$(CPU) lib_$(ARCH) \
+ 				fs/cramfs fs/fat fs/fdos fs/jffs2 \
+-				net disk rtc dtt drivers drivers/sk98lin common \
++				net disk rtc dtt drivers drivers/sk98lin drivers/spiflash common \
+ 			\( -name CVS -prune \) -o \( -name '*.[ch]' -print \)`
+ 
+ etags:
+ 		etags -a -o $(OBJTREE)/etags `find $(SUBDIRS) include \
+ 				lib_generic board/$(BOARDDIR) cpu/$(CPU) lib_$(ARCH) \
+ 				fs/cramfs fs/fat fs/fdos fs/jffs2 \
+-				net disk rtc dtt drivers drivers/sk98lin common \
++				net disk rtc dtt drivers drivers/sk98lin drivers/spiflash common \
+ 			\( -name CVS -prune \) -o \( -name '*.[ch]' -print \)`
+ 
+ $(obj)System.map:	$(obj)u-boot

@@ -1,0 +1,20 @@
+Package : JViewer_common_1_70_0_2_EIP_69137_Server_Powercontrol_icon_functioning_in_client2_during_requesting_permission_from_1st_client
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for JViewer_common (1.70.0)
+Depends :  JViewer_common(==1.70.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  gopinaths (gopinaths@amiindia.co.in)
+Urgency : new
+Description : Server Power control icon is functioning the in client2 during 2nd client requesting permission from 1st client
+.
+

@@ -1,0 +1,9 @@
+Package: webui_1_122_0_9_85463_NetworkInfo_is_Incorrect_If_Use_Eth1 (1.0.0); urgency = new
+
+Abstract:
+	Open Web through eth1, the Network Information is not eth1 info.
+
+Files Added: data, data/00-data_MDS-Workspace_www_impl_dashboard_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Mon, 26 Mar 2012 11:37:44 CST
+

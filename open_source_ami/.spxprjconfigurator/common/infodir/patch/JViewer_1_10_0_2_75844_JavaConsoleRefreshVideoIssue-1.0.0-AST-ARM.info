@@ -1,0 +1,21 @@
+Package : JViewer_1_10_0_2_75844_JavaConsoleRefreshVideoIssue
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 2 for JViewer (1.10.0)
+Depends :  JViewer(==1.10.0)
+PatchOrder : 2
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ARM
+SOC : AST
+Maintainer :  nealchen (nealchen@ami.com.tw)
+Urgency : new
+Description : for 75844, Java Console Refresh Video Issue
+.
+

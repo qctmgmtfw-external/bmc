@@ -1,0 +1,20 @@
+Package : webui_1_122_0_3_EIP_69120_68315_63780
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 3 for webui (1.122.0)
+Depends :  webui(==1.122.0)
+PatchOrder : 3
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  arockiaa (arockiaa@amiindia.co.in)
+Urgency : new
+Description : Following are the bugs fixed, 1.AD - wrong help texty for Active directory. 2.Web - Expired SSL certificate able to upload. 3.Modifying an AD role group via UI: the confirmation message needs minor correction.
+.
+

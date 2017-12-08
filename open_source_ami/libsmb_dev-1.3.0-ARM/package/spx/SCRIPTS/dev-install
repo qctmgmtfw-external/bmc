@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/smb
+        COPY_FILE ./libi2c.h %SPXINC/smb
+        COPY_FILE ./libsmb.h %SPXINC/smb
+    MKDIR_NOCLEAN %SPXLIB/smb
+	COPY_FILE ./libsmb.a %SPXLIB/smb
+	COPY_FILE libsmb.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/smb
+	ADD_LIBRARY_LINKS %SPXLIB/smb libsmb.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

@@ -1,0 +1,119 @@
+--- org/tftp.c	2010-05-07 06:02:18.220958279 +0800
++++ mod/networking/tftp.c	2010-05-07 05:58:46.910970170 +0800
+@@ -156,6 +156,43 @@
+ 
+ #endif
+ 
++#define FLSH_CMD_GET_STATUS_TFTP		((unsigned char)0x0c)
++
++#define TFTP_PIPE           "/var/pipe/status_cmd"
++
++#define FW_UPDATE_OK                           0x00
++#define FW_UPDATE_GENERAL_ERROR				0x80
++#define FW_UPDATE_CANNOT_ESTABLISH_CONNECTION 0x81
++#define FW_UPDATE_PATH_NOT_FOUND              0x82
++#define FW_UPDATE_TRANSFER_ABORT              0x83
++#define FW_UPDATE_COMPLETED                   0x0F
++
++extern int cmdpipe;
++typedef struct StructFlasherCmd {
++	unsigned char Command;
++	unsigned char Options;
++} FlasherCmd;
++
++static void open_tftp_pipe(void)
++{
++	cmdpipe = open(TFTP_PIPE, O_WRONLY);
++}
++
++static void close_tftp_pipe(void)
++{
++	close(cmdpipe);
++}
++
++static void set_tftp_status(unsigned char status)
++{
++	FlasherCmd Cmd;
++	Cmd.Command = FLSH_CMD_GET_STATUS_TFTP;
++	Cmd.Options = status;
++	write (cmdpipe, &Cmd, sizeof (FlasherCmd));
++}
++
++
++
+ static int tftp_protocol(
+ 		len_and_sockaddr *our_lsa,
+ 		len_and_sockaddr *peer_lsa,
+@@ -377,8 +414,10 @@
+ #endif
+ 		xsendto(socket_fd, xbuf, send_len, &peer_lsa->u.sa, peer_lsa->len);
+ 		/* Was it final ACK? then exit */
+-		if (finished && (opcode == TFTP_ACK))
++		if (finished && (opcode == TFTP_ACK)){
++            set_tftp_status(FW_UPDATE_COMPLETED);
+ 			goto ret;
++        }
+ 
+  recv_again:
+ 		/* Receive packet */
+@@ -392,6 +431,7 @@
+ 			retries--;
+ 			if (retries == 0) {
+ 				bb_error_msg("timeout");
++				set_tftp_status(FW_UPDATE_CANNOT_ESTABLISH_CONNECTION);
+ 				goto ret; /* no err packet sent */
+ 			}
+ 
+@@ -455,6 +495,7 @@
+ 				msg = nth_string(errcode_str, recv_blk);
+ 			}
+ 			bb_error_msg("server error: (%u) %s", recv_blk, msg);
++			set_tftp_status(FW_UPDATE_CANNOT_ESTABLISH_CONNECTION);
+ 			goto ret;
+ 		}
+ 
+@@ -496,6 +537,7 @@
+ 				if (sz != len - 4) {
+ 					strcpy((char*)error_pkt_str, bb_msg_write_error);
+ 					error_pkt_reason = ERR_WRITE;
++                    set_tftp_status(FW_UPDATE_GENERAL_ERROR);
+ 					goto send_err_pkt;
+ 				}
+ 				if (sz != blksize) {
+@@ -513,8 +555,10 @@
+ 		if (CMD_PUT(option_mask32) && (opcode == TFTP_ACK)) {
+ 			/* did peer ACK our last DATA pkt? */
+ 			if (recv_blk == (uint16_t) (block_nr - 1)) {
+-				if (finished)
++				if (finished){
++					set_tftp_status(FW_UPDATE_COMPLETED);
+ 					goto ret;
++					}
+ 				continue; /* send next block */
+ 			}
+ 		}
+@@ -537,6 +581,7 @@
+ 		free(xbuf);
+ 		free(rbuf);
+ 	}
++	
+ 	return finished == 0; /* returns 1 on failure */
+ 
+  send_read_err_pkt:
+@@ -607,13 +652,15 @@
+ 			xmalloc_sockaddr2dotted(&peer_lsa->u.sa),
+ 			remote_file, local_file);
+ #endif
+-
++	
++	open_tftp_pipe();
+ 	result = tftp_protocol(
+ 		NULL /*our_lsa*/, peer_lsa,
+ 		local_file, remote_file
+ 		USE_FEATURE_TFTP_BLOCKSIZE(USE_TFTPD(, NULL /*tsize*/))
+ 		USE_FEATURE_TFTP_BLOCKSIZE(, blksize)
+ 	);
++	close_tftp_pipe();
+ 
+ 	if (result != EXIT_SUCCESS && NOT_LONE_DASH(local_file) && CMD_GET(opt)) {
+ 		unlink(local_file);

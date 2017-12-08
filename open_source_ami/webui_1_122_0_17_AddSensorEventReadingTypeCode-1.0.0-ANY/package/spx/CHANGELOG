@@ -1,0 +1,9 @@
+Package: webui_1_122_0_17_AddSensorEventReadingTypeCode (1.0.0); urgency = new
+
+Abstract:
+	Add the Sensor Event Reading Type Code in the sensor event filter
+
+Files Added: data, data/00-data_MDS-Workspace_www_impl_add_mod_pef_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 08 Oct 2012 15:35:55 CST
+

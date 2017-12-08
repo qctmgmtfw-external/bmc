@@ -1,0 +1,9 @@
+Package: libunix_1_5_0_1_Memory_issue (1.0.0); urgency = new
+
+Abstract:
+	Modified the sizeof to strlen for string lenth check
+
+Files Added: data, data/00-data_proc-invok.c, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 20 Sep 2011 13:00:37 IST
+

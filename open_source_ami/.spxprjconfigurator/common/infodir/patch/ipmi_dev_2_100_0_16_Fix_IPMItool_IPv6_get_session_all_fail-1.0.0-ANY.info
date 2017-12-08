@@ -1,0 +1,20 @@
+Package : ipmi_dev_2_100_0_16_Fix_IPMItool_IPv6_get_session_all_fail
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 16 for ipmi_dev (2.100.0)
+Depends :  ipmi_dev(==2.100.0)
+PatchOrder : 16
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  KennyWu (KennyWu@ami.com.tw)
+Urgency : new
+Description : Fix IPMItool IPv6 get session all cause buffer overflow.
+.
+

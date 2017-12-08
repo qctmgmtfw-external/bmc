@@ -1,0 +1,9 @@
+Package: ipmi_dev_2_100_0_3_Fix_For_SSH_Service_Configuration (1.0.0); urgency = new
+
+Abstract:
+	Fix for SSH Service Configuration
+
+Files Added: data, data/00-data_IPMI_AMIConf.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 19 Sep 2011 17:34:10 IST
+

@@ -1,0 +1,9 @@
+Package: webui_1_122_0_15_LDAP_ACCEPT_UID (1.0.0); urgency = new
+
+Abstract:
+	LDAP accept uid as bindn and dn
+
+Files Added: data, data/00-data_MDS-Workspace_www_str_EN_common_str.js, data/01-data_MDS-Workspace_www_lib_eVal.js, data/02-data_MDS-Workspace_www_help_EN_configure_ldap_hlp.html, data/03-data_MDS-Workspace_www_impl_configure_ldap_imp.js, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: royku (royku@ami.com.tw) Fri, 07 Sep 2012 17:12:00 CST
+

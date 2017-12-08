@@ -1,0 +1,10 @@
+--- .pristine/sys_net_snmp-2.6.0-src/data/netsnmp Fri May  4 17:20:54 2012
++++ source/sys_net_snmp-2.6.0-src/data/netsnmp Fri May  4 18:23:08 2012
+@@ -22,6 +22,7 @@
+ MIBDIRS=/usr/share/snmp/mibs
+ #export MIBDIRS=/conf/
+ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/:/usr/local/lib/
++export SNMP_PERSISTENT_DIR=/conf/snmp
+ 
+ # Options for start/restart the daemons
+ case "$1" in

@@ -1,0 +1,40 @@
+Source : bt_hw
+Version : 1.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Builds : bt_hw
+Build-Depends : crosscc, helper_driver_dev, kernel_dev, bt_driver_dev, rules, reset_hw
+Essential : YES
+Group : DEVICE
+Owner : AMI
+Maintainer : Rama Rao Bisa  (RamaB@ami.com)
+Source-Location : AMI
+Source-Version : 1.0.0
+Source-License : GPL-V2
+Package-License : GPL-V2
+Architecture : ARM
+SOC : AST2300
+Urgency : medium
+Description : This package contains BT hardware driver for AST2300 SoC.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Install-Size (Optional) can be automatically calculated
+# Provides,Depends,Required,Conflicts ?
+# ---------------------------------------------------------------------------
+
+Package : bt_hw
+Section : sys
+Essential : YES
+Group : DEVICE
+Provides : btDriver
+Depends : kernel, bt
+Required : helper
+Package-License : GPL-V2
+Description : This package contains built BT hardware driver for AST2300 SoC.
+.
+

@@ -1,0 +1,194 @@
+Package: libharddisk (1.12.0); urgency = medium
+
+Abstract:
+	Included condition to check NTFS,FAT 12,16,32 format to read total sector count from redirected Image file.
+
+Files Modified: data/Common/harddiskimagereader.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 08 Jul 2011 18:54:30 IST
+
+Package: libharddisk (1.11.0); urgency = medium
+
+Abstract:
+	Added the support for USB key Image redirection for FAT & NTFS
+
+Files Modified: data/Common/HarddiskImgFileReader.cpp, data/Common/harddiskimagereader.c, data/include/HarddiskImgFileReader.h, data/include/harddiskimagereader.h, data/include/libharddisk.h
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 27 Jun 2011 12:01:30 IST
+
+Package: libharddisk (1.10.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:48:03 EDT
+
+Package: libharddisk (1.9.0); urgency = medium
+
+Abstract:
+	Included condition to avoid reading beyond Max Sector range
+
+ --This line, and those below, will be ignored--
+M	data/Common/harddiskimagereader.c
+
+Files Modified: data/Common/harddiskimagereader.c
+
+--Submitter: othiyappank (gopinaths@amiindia.co.in) Wed, 09 Mar 2011 17:56:01 IST
+
+Package: libharddisk (1.8.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+        Linux client Fixed harddisk redirection is redirected only read Mode,res
+tricted the write operation for fixed harddisk
+
+Files Modified: data/Common/HarddiskImgFileReader.cpp, data/Common/harddiskimagereader.c, data/include/HarddiskImgFileReader.h
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 22 Oct 2010 11:59:59 IST
+
+Package: libharddisk (1.7.0); urgency = medium
+
+Abstract:
+	While stoping the harddisk redirection drivelayout is changed in host,once disconnected it automitacally Update the disk layout  properties  using the DeviceIOControl
+
+Files Modified: data/Win/WinNTHarddiskReader.cpp
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 05 Oct 2010 20:03:55 IST
+
+Package: libharddisk (1.6.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	1. Harddisk redirection crashes if the fixed device is hdd device
+
+Files Modified: data/Linux/LinuxHarddiskReader.cpp
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 04 Oct 2010 23:16:31 IST
+
+Package: libharddisk (1.5.0); urgency = medium
+
+Abstract:
+	Fixed Issue :Multiple language encoding support on ISO redirection
+
+Files Modified: data/Common/harddiskimagereader.c
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 19:46:19 IST
+
+Package: libharddisk (1.4.0); urgency = medium
+
+Abstract:
+	Bug Fixed:
+	1.Cannot Format Redirected Hard Drive 
+	2.Launching Virtual Media Wizard causes JViewer crashed when three or more removable drives are connected
+	3.USB KEY drive allow access locally and remote redirection console at a time. 
+	4.Exclusive access of USB key/CD/DVD shall be give to either host server or local client 
+	5.In Redirection mode Files are not updated correctly both USB and Hard disk 
+	6.The USB key sutck in the formate mode in the java redirection mode
+
+Files Modified: data/Linux/LinuxHarddiskReader.cpp, data/Mac/MacHarddiskReader.cpp, data/Win/USBDisk.cpp, data/Win/WinNTHarddiskReader.cpp, data/include/winntharddiskreader.h
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Wed, 29 Sep 2010 11:57:42 IST
+
+Package: libharddisk (1.3.0); urgency = medium
+
+Abstract:
+	Removing Object files in Hardisk redirection MAC folder.
+
+Files Deleted: data/Mac/Mac_x86_32/HarddiskImgFileReader.o, data/Mac/Mac_x86_32/HarddiskMediaReader.o, data/Mac/Mac_x86_32/MacHarddiskReader.o, data/Mac/Mac_x86_32/dbgout.o, data/Mac/Mac_x86_32/harddiskimagereader.o, data/Mac/Mac_x86_64/HarddiskImgFileReader.o, data/Mac/Mac_x86_64/HarddiskMediaReader.o, data/Mac/Mac_x86_64/MacHarddiskReader.o, data/Mac/Mac_x86_64/dbgout.o, data/Mac/Mac_x86_64/harddiskimagereader.o
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 28 Sep 2010 09:27:31 IST
+
+Package: libharddisk (1.2.0); urgency = medium
+
+Abstract:
+	Source for MACH 32/64 bit external hard disk write support
+
+Files Added: data/Mac/Mac_x86_32/HarddiskImgFileReader.o, data/Mac/Mac_x86_32/HarddiskMediaReader.o, data/Mac/Mac_x86_32/MacHarddiskReader.o, data/Mac/Mac_x86_32/dbgout.o, data/Mac/Mac_x86_32/harddiskimagereader.o, data/Mac/Mac_x86_64/HarddiskImgFileReader.o, data/Mac/Mac_x86_64/HarddiskMediaReader.o, data/Mac/Mac_x86_64/MacHarddiskReader.o, data/Mac/Mac_x86_64/dbgout.o, data/Mac/Mac_x86_64/harddiskimagereader.o
+Files Modified: data/Common/harddiskimagereader.c, data/Mac/MacHarddiskReader.cpp
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 21 Sep 2010 18:23:38 IST
+
+Package: libharddisk (1.1.0); urgency = medium
+
+Abstract:
+	Source code for Mac 32 and 64 bit External hard disk redirection. Only Read is supported.
+
+Files Modified: data/Common/harddiskimagereader.c, data/Mac/MacHarddiskReader.cpp, data/Mac/Mac_x86_64/Makefile
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 14 Sep 2010 16:55:20 IST
+
+Package: libharddisk (1.0.7); urgency = medium
+
+Abstract:
+	Source for the Commit:72559
+
+Files Modified: data/Linux/LinuxHarddiskReader.cpp, spx/INFO
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 27 Aug 2010 23:14:28 IST
+
+Package: libharddisk (1.0.6); urgency = medium
+
+Abstract:
+	Issue Fixed in display the Floppy,CD,HD device
+
+Files Modified: data/Win/USBDisk.cpp, data/Win/WinNTHarddiskReader.cpp
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Tue, 24 Aug 2010 18:37:37 IST
+
+Package: libharddisk (1.0.5); urgency = low
+
+Abstract:
+	Added dependency with libkvm.Made changes in projectfiles and make files with respect to libkvm.
+
+Files Modified: data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64/Makefile, data/Mac/Mac_x86_32/Makefile, data/Mac/Mac_x86_64/Makefile, data/Win/harddiskLibWin.vcproj, data/include/HarddiskReader.h, data/include/harddiskimagereader.h, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 07 Aug 2010 17:36:34 IST
+
+Package: libharddisk (1.0.4); urgency = medium
+
+Abstract:
+	Removed dependency with libcdrom
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 05 Aug 2010 11:30:36 EDT
+
+Package: libharddisk (1.0.3); urgency = low
+
+Abstract:
+	Corrections in requried/Depends fields to enable proper packages.
+updated section field as software.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 05 Aug 2010 19:21:49 IST
+
+Package: libharddisk (1.0.2); urgency = low
+
+Abstract:
+	Updated Group field for software library package.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 03 Aug 2010 13:14:17 IST
+
+Package: libharddisk (1.0.1); urgency = medium
+
+Abstract:
+	Issue Fixed:Unknown partition in the Physicaldrive entry create the Null in the buffer,so string terminates.
+
+Files Modified: data/Common/harddiskimagereader.c, data/Linux/LinuxHarddiskReader.cpp, data/Win/USBDisk.cpp, data/Win/Usbdisk.h, data/Win/Win9xHarddiskReader.cpp, data/Win/WinNTHarddiskReader.cpp, data/Win/harddiskLibWin.ncb, data/Win/harddiskLibWin.suo, data/Win/harddiskLibWin.vcproj, data/include/HarddiskMediaReader.h, data/include/harddiskimagereader.h
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Mon, 02 Aug 2010 22:22:22 IST
+
+Package: libharddisk (1.0.0); urgency = new
+
+Abstract:
+	This Package contains the harddisk related library files.
+
+Files Added: data, data/Common, data/Common/HarddiskImgFileReader.cpp, data/Common/HarddiskMediaReader.cpp, data/Common/dbgout.c, data/Common/harddiskimagereader.c, data/Doxyfile, data/Linux, data/Linux/LinuxHarddiskReader.cpp, data/Linux/Linux_x86_32, data/Linux/Linux_x86_32/Makefile, data/Linux/Linux_x86_64, data/Linux/Linux_x86_64/Makefile, data/Linux/Makefile, data/Mac, data/Mac/MacHarddiskReader.cpp, data/Mac/Mac_x86_32, data/Mac/Mac_x86_32/Makefile, data/Mac/Mac_x86_64, data/Mac/Mac_x86_64/Makefile, data/Mac/Makefile, data/Mac/README.txt, data/Win, data/Win/StdAfx.h, data/Win/USBDisk.cpp, data/Win/Usbdisk.h, data/Win/Win9xHarddiskReader.cpp, data/Win/WinNTHarddiskReader.cpp, data/Win/harddiskLibWin.ncb, data/Win/harddiskLibWin.sln, data/Win/harddiskLibWin.suo, data/Win/harddiskLibWin.vcproj, data/bldhelp.js, data/build.wsf, data/include, data/include/HarddiskImgFileReader.h, data/include/HarddiskMediaReader.h, data/include/HarddiskReader.h, data/include/LinuxHarddiskReader.h, data/include/MacHarddiskReader.h, data/include/Win9xHarddiskReader.h, data/include/harddiskerrors.h, data/include/harddiskimagereader.h, data/include/libharddisk.h, data/include/winntharddiskreader.h, spx, spx/CHANGELOG, spx/DATA, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/SCRIPTS, spx/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 28 Jul 2010 12:50:23 IST
+

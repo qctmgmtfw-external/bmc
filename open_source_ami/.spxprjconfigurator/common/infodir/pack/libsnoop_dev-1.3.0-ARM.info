@@ -1,0 +1,16 @@
+Package : libsnoop_dev
+Non-Editable : YES
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : Gokulakannan Sampath  (gokulakannans@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : high
+Section : dev
+Essential : NO
+Group : DEVEL
+Package-License : AMI
+Description : Snoop library development header files.
+.

@@ -1,0 +1,20 @@
+Package : libipmimsghndlr_2_159_0_9_lighttpdrestartfix
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 9 for libipmimsghndlr (2.159.0)
+Depends :  libipmimsghndlr(==2.159.0)
+PatchOrder : 9
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  winston (winstonv@amiindia.co.in)
+Urgency : new
+Description : Changes made to restart lighttpd properly during web service restarting.
+.
+

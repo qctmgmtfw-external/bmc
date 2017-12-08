@@ -1,0 +1,368 @@
+Package: libvmedia (1.13.0); urgency = medium
+
+Abstract:
+	Services configuration redesigned to have support of Non-Editable and Not-Applicable for the individual fields.
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 20 Jul 2011 13:10:51 IST
+
+Package: libvmedia (1.12.0); urgency = medium
+
+Abstract:
+	Adviserd resatrt handled
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 19:03:05 IST
+
+Package: libvmedia (1.11.0); urgency = medium
+
+Abstract:
+	#IPV6 socket releated fix
+
+Files Modified: data/comm.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 29 Jun 2011 10:48:59 IST
+
+Package: libvmedia (1.10.0); urgency = medium
+
+Abstract:
+	Adviser restart for kvm and medira encrytion
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sat, 11 Jun 2011 19:49:44 IST
+
+Package: libvmedia (1.9.0); urgency = medium
+
+Abstract:
+	: Added the support to send the Mousem mode,Cd,FD,HD count if user updated in the web sending the data to the opened active JViewer CLients.
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 09 Jun 2011 02:45:37 IST
+
+Package: libvmedia (1.8.0); urgency = high
+
+Abstract:
+	Local Media : Uploaded files are not getting deleted in /usr/local/lmedia/ when it is deleted from GUI
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 07 Jun 2011 14:24:55 IST
+
+Package: libvmedia (1.7.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:26:50 EDT
+
+Package: libvmedia (1.6.0); urgency = medium
+
+Abstract:
+	Fix for local media auto attach issue.
+
+Files Modified: data/vmedia_instance.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 16 May 2011 09:23:16 EDT
+
+Package: libvmedia (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:16:12 EDT
+
+Package: libvmedia (1.4.0); urgency = high
+
+Abstract:
+	Removing libipmi dependency and using ncml calls
+
+Files Modified: data/vmedia_cfg.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 07:50:17 EDT
+
+Package: libvmedia (1.3.0); urgency = high
+
+Abstract:
+	Removed unnecessary fields from vmedia conf and handled it through ncml
+
+Files Modified: data/Makefile, data/comm.c, data/vmedia.conf, data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 02:00:36 EDT
+
+Package: libvmedia (1.2.0); urgency = high
+
+Abstract:
+	Updating the user status message properly according to scenario.
+
+Files Modified: data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 24 Sep 2010 12:44:12 EDT
+
+Package: libvmedia (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:05:55 EDT
+
+Package: libvmedia (1.0.27); urgency = medium
+
+Abstract:
+	Deleteing lmedia images when delete fucntion is called
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 20 Aug 2010 12:18:31 EDT
+
+Package: libvmedia (1.0.26); urgency = medium
+
+Abstract:
+	Added section element in SetLMediaCfg function.
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 20 Aug 2010 20:05:01 IST
+
+Package: libvmedia (1.0.25); urgency = medium
+
+Abstract:
+	LMedia app restarted when virtual media config changes and lmedia script file name corrected.
+
+Files Modified: data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 19 Aug 2010 15:06:28 EDT
+
+Package: libvmedia (1.0.24); urgency = medium
+
+Abstract:
+	num_vf_cd/fd/hd fields removed from vmedia.conf. if lmedia_enable is 1 then cd/fd/hd devices will be increased by 1
+
+Files Modified: data/vmedia.conf, data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 19 Aug 2010 10:54:41 EDT
+
+Package: libvmedia (1.0.23); urgency = medium
+
+Abstract:
+	Added Lmedia configuration
+
+Files Modified: data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 18 Aug 2010 17:15:25 EDT
+
+Package: libvmedia (1.0.22); urgency = low
+
+Abstract:
+	vmedia.conf vflash_enabile field changed to lmedia_enable
+
+Files Modified: data/vmedia.conf
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 18 Aug 2010 11:10:05 EDT
+
+Package: libvmedia (1.0.21); urgency = medium
+
+Abstract:
+	vflash_enable field of vmedia.conf has been changed to lmedia_enable.
+
+Files Modified: data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 17 Aug 2010 10:10:31 EDT
+
+Package: libvmedia (1.0.20); urgency = low
+
+Abstract:
+	Local media Auth Bypass Opcode added
+
+Files Modified: data/redirimage.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 16 Aug 2010 16:56:23 EDT
+
+Package: libvmedia (1.0.19); urgency = medium
+
+Abstract:
+	until vmapp added to stack, let us restart cd/fd/hd servers when vmedia configuration updated.
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 12 Aug 2010 17:17:49 EDT
+
+Package: libvmedia (1.0.18); urgency = medium
+
+Abstract:
+	libvmedia has been modified as per new Dynamic virtual media device design document.
+
+Files Modified: data/vmedia.conf, data/vmedia_cfg.c, data/vmedia_cfg.h, data/vmedia_ifc.c, data/vmedia_instance.c, data/vmedia_instance.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 12 Aug 2010 16:01:50 EDT
+
+Package: libvmedia (1.0.17); urgency = medium
+
+Abstract:
+	multiple cd,fd,hd and vf support added to libvmedia library which will be needed to implement multiple cd/fd/hd/vf support.
+
+Files Modified: data/vmedia.conf, data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 19 Jul 2010 14:21:47 EDT
+
+Package: libvmedia (1.0.16); urgency = medium
+
+Abstract:
+	virtual flash server port info. is written into stunnel_vmedia.conf file.
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 15 Jul 2010 17:00:46 EDT
+
+Package: libvmedia (1.0.15); urgency = medium
+
+Abstract:
+	virtual flash support added to libvmedia library.
+
+Files Modified: data/apphead.h, data/vmedia.conf, data/vmedia_cfg.c, data/vmedia_cfg.h, data/vmedia_instance.c, data/vmedia_instance.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 15 Jul 2010 15:54:01 EDT
+
+Package: libvmedia (1.0.14); urgency = medium
+
+Abstract:
+	this change because of IUSB_HEADER field name change.
+
+Files Modified: data/vmedia_ifc.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 15 Jul 2010 10:25:17 EDT
+
+Package: libvmedia (1.0.13); urgency = medium
+
+Abstract:
+	floppy_emulation is removed from vmedia.conf
+
+Files Modified: data/vmedia.conf
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 08 Jul 2010 14:54:34 EDT
+
+Package: libvmedia (1.0.12); urgency = medium
+
+Abstract:
+	floppy_emulation member has been removed from VmediaCfg_T and all the references to floppy emulation removed.
+
+Files Modified: data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 08 Jul 2010 14:33:37 EDT
+
+Package: libvmedia (1.0.11); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	Media encryption-enabled by one client but the other client dont know when the console is opened - If the session is launched changing the media encyption sending packet live session(Restart the adviserd) because media encyption port is changed.
+
+Files Modified: data/vmedia_cfg.c, data/vmedia_cfg.h
+
+--Submitter: Othiyappan k (othiyappank@amiindia.co.in) Wed, 07 Jul 2010 20:01:35 IST
+
+Package: libvmedia (1.0.10); urgency = medium
+
+Abstract:
+	Modified the Set_harddisk command no and keep alive no
+
+Files Modified: data/apphead.h
+
+--Submitter: Othiyappan k (othiyappank@amiindia.co.in) Mon, 05 Jul 2010 19:18:00 IST
+
+Package: libvmedia (1.0.9); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:27:38 EDT
+
+Package: libvmedia (1.0.8); urgency = low
+
+Abstract:
+	new OEM SCSI command added to exchange the hard disk type info between hdserver and client.
+
+Files Modified: data/apphead.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 28 May 2010 14:18:57 EDT
+
+Package: libvmedia (1.0.7); urgency = low
+
+Abstract:
+	Issue : The USB key does not redirect after enabled the Media Encryption with Java console mode - Fixed
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Fri, 28 May 2010 16:35:24 IST
+
+Package: libvmedia (1.0.6); urgency = low
+
+Abstract:
+	added hdserver restart at couple of missing places.
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 26 May 2010 10:19:45 EDT
+
+Package: libvmedia (1.0.5); urgency = high
+
+Abstract:
+	changes to support hard disk as part of luncombo device added.
+
+Files Modified: data/vmedia_cfg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 20 Apr 2010 15:04:30 EDT
+
+Package: libvmedia (1.0.4); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:58:21 EDT
+
+Package: libvmedia (1.0.3); urgency = low
+
+Abstract:
+	Added usbe_driver_dev build dependency
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Thu, 11 Mar 2010 17:42:33 EST
+
+Package: libvmedia (1.0.2); urgency = medium
+
+Abstract:
+	inet_ntop buffer length is wrong. Will return wrong values
+
+Files Modified: data/comm.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 24 Feb 2010 16:11:03 EST
+
+Package: libvmedia (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:11:27 EST
+
+Package:libvmedia (1.0.0);urgency=new
+
+Abstract:
+	This package include virtual media library to be used by fdserver, cdserver and hdserver
+
+Files Added: apphead.h, vmedia_instance.h, vmedia_ifc.c, vmedia_instance.c, vmedia_cfg.c, comm.c, vmedia_ifc.h, vmedia_cfg.h, redirimage.h, vmedia.conf, comm.h, Makefile
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Wed, 23 Dec 2009 14:30:56 -0500

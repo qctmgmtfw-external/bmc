@@ -1,0 +1,135 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>configure_lmedia help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	</head>
+	<body oncontextmenu="return false;">
+	<h2><div class="floatRight">
+		<a href="javascript://" class="closeBtn" onclick="top.closeHelp();">
+		X</a></div>
+	<script type="text/javascript">
+	var frameName = top.frames["mainFrame"].pageFrame;
+	frameName = frameName.document.getElementsByTagName("FORM");
+	var helpContent;
+	if (frameName.length) {
+		if ("addImageForm" == frameName[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'>Add Image</div></h2>" +
+			"<div class='subSection'>" +
+			"This form is used to add a new image to the Local Media Area. " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Image Type</h4>" +
+			"It displays the type of the image to be uploaded (readonly). " +
+			"<h4>Image File</h4>" +
+			"Use Browse button to navigate to the Image file." +
+			"<ul><li>- Floppy/Harddisk Image file should be of img type.</li>" +
+			"<li>- CD/DVD Image file should be of iso type.</li></ul>" +
+			"<h4>Add</h4>" +
+			"Click 'Add' to save the new image and return to Image list. " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification and return to Image " +
+			"list. " +
+			"</fieldset>" +
+			"</div>";
+		} else if ("replaceImageForm" == frameName[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'>Replace Image</div></h2>" +
+			"<div class='subSection'>" +
+			"This form is used to replace the existing image with a new " +
+			"image to Local Media Area. " +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Image Type</h4>" +
+			"It displays the type of the image to be uploaded (readonly). " +
+			"<h4>Image Information</h4>" +
+			"It displays the uploaded file information (readonly)." +
+			"<h4>Image File</h4>" +
+			"Use Browse button to navigate to the Image file." +
+			"<ul><li>- Floppy/Harddisk Image file should be of img type.</li>" +
+			"<li>- CD/DVD Image file should be of iso type.</li></ul>" +
+			"<h4>Replace</h4>" +
+			"Click 'Replace' to overwrite the existing image with the new " +
+			"uploaded image and return to Image list. " +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modification and return to Image " +
+			"list. " +
+			"</fieldset>" +
+			"</div>";
+		} else if ("advancedLMediaFrm" == frameName[0].getAttribute("id")) {
+			helpContent = "<div class='helpmainhead'>Advanced Local Media " +
+			"Settings</div></h2>" +
+			"<div class='subSection'>" +
+			"This form is used to configure the Local Media Advanced Settings." +
+			"<br><br>" +
+			"<fieldset>" +
+			"<legend>Actions</legend>" +
+			"<h4>Local Media Support</h4>" +
+			"To enable or disable Local Media support, check or uncheck the " +
+			"'Enable' checkbox respectively." +
+			"<h4>Save</h4>" +
+			"Click 'Save' to save the settings." +
+			"<h4>Cancel</h4>" +
+			"Click 'Cancel' to cancel the modifications and return to Image " +
+			"list. " +
+			"</fieldset>" +
+			"</div>";
+		}
+	} else {
+		helpContent = "<div class='helpmainhead'>Local Media</div></h2>" +
+		"<div class='subSection'>" +
+		"The displayed table shows any available images uploaded on BMC. " +
+		"You can replace or add new images from here.<br>" +
+		"Only one image can be uploaded for each image type.<br>" +
+		"To configure the image, You need to enable Local Media support " +
+		"using 'Advanced Settings'.<br>" +
+		"To replace or add an image, you must have Administrator Privileges. " +
+		"<br>" +
+		"<strong>NOTE: </strong>Free slots are denoted by \"~\". " +"<br>"+
+		"<br><br>" +
+		"<fieldset>" +
+		"<legend>Actions</legend>" +
+		"<h4>Add Image</h4>" +
+		"Select a free slot and click 'Add Image' to upload a new image to " +
+		"the device. " +
+		"Alternatively, double click on a free slot to add an image. " +
+		"<h4>Replace Image</h4>" +
+		"Select a configured slot and click 'Replace Image' to replace the " +
+		"existing image. " +
+		"Alternatively, double click on the configured slot. " +
+		"<h4>Delete Image</h4>" +
+		"Select the desired image to be deleted and click 'Delete Image'. " +
+		"</fieldset>" +
+		"</div>";
+	}
+	document.write(helpContent);
+	</script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+Package : PreserveSDR_Support
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : info
+Essential : NO
+Config-Tag : File Override support during firmware upgrade
+Group : FEATURES
+Owner : AMI
+Maintainer : Gayathri L  (gayathril@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This is a dummy binary package for PreserverSDR
+.

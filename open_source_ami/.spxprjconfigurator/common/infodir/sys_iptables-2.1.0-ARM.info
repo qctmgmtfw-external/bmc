@@ -1,0 +1,17 @@
+Package : sys_iptables
+Non-Editable : YES
+Version : 2.1.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Owner : AMI
+Maintainer : santhoshkumarr  (santhoshkumarr@amiindia.co.in)
+Source-License : AMI
+Architecture : ARM
+Urgency : medium
+Section : sys
+Essential : YES
+Depends : libiptables
+Group : BASE
+Package-License : GPL-V2
+Description : Packages contains library files and configurations for iptables.
+.

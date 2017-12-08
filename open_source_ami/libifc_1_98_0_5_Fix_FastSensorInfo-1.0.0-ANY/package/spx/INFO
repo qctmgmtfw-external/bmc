@@ -1,0 +1,20 @@
+Package : libifc_1_98_0_5_Fix_FastSensorInfo
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 5 for libifc (1.98.0)
+Depends :  libifc(==1.98.0)
+PatchOrder : 5
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  muthuchamyk (muthusamyk@amiindia.co.in)
+Urgency : new
+Description : Made changes to call the new API to get the sensor Info for faster web access.
+.
+

@@ -1,0 +1,20 @@
+Package : goahead_1_62_0_1_BindSocketWithSpecifiedIfcName
+Non-Editable : YES
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : patch
+Config-Tag : Patch 1 for goahead (1.62.0)
+Depends :  goahead(==1.62.0)
+PatchOrder : 1
+Essential : NO
+Group : PATCH
+Owner : AMI
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Maintainer :  graychen (graychen@ami.com.tw)
+Urgency : new
+Description : Listen the Socket only for specified interface that is configured in ncml.conf file.
+.
+

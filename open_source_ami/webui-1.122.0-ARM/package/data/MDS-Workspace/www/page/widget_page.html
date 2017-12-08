@@ -1,0 +1,67 @@
+<!-- 
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+ -->
+<html>
+<head>
+<link rel="stylesheet" href="../style/widget_style.css" type="text/css" />
+<script language="javascript" src="../lib/include.js"></script>
+<script language="javascript" src="../lib/excanvas.js"></script>
+<script language="javascript" src="../lib/graph.js"></script>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script>
+	onload = function() {
+		if (top.gLangSettingSet == true) {
+		var elmt = document.getElementById("_wClose");
+		elmt.setAttribute("title", eLang.getString("widget_page", "WIDGET_PAGE_CLOSE"));
+		var elmt = document.getElementById("_wRestore");
+		elmt.setAttribute("title", eLang.getString("widget_page", "WIDGET_PAGE_MINIMIZE"));
+		var elmt = document.getElementById("_wSave");
+		elmt.setAttribute("title", eLang.getString("widget_page", "WIDGET_PAGE_SAVE"));
+		var elmt = document.getElementById("_wHelp");
+		elmt.setAttribute("title", eLang.getString("widget_page", "WIDGET_PAGE_HELP"));
+			doInit();
+		}
+	}
+	</script>
+</head>
+<body oncontextmenu="return false;">
+<div class="windowOptions" id="_windowOptions">
+	<a href="javascript://" id="_wClose"><img src="../res/widget_close.gif" border="0" /></a>
+	<a href="javascript://" id="_wRestore"><img src="../res/widget_minimize.gif" border="0" /></a>
+	<a href="javascript://" id="_wSave" style="display:none"><img src="../res/widget_save.gif" border="0" /></a>
+	<a href="javascript://" id="_wHelp"><img src="../res/widget_help.gif" border="0" /></a>
+	<h4 id="_wTitle"></h4>
+</div>
+<div class="widgetHolder">
+<strong>
+<script>document.writeln(eLang.getString("widget_page", "WIDGET_PAGE_LIVEREAD"));</script>
+</strong>&nbsp;&nbsp;<label id="_wReading"></label><br/>
+<canvas id="_graphCanvas" width="219" height="155"></canvas>
+</div>
+</body>
+</html>

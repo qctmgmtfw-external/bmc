@@ -1,0 +1,46 @@
+Package: libfixedsub_emailformat (1.4.0); urgency = medium
+
+Abstract:
+	Removing the Development package from fixedsubject email format
+
+Files Deleted: spx/PACKAGES.D/libfixedsub_emailformat_dev, spx/PACKAGES.D/libfixedsub_emailformat_dev/DATA, spx/PACKAGES.D/libfixedsub_emailformat_dev/SCRIPTS, spx/PACKAGES.D/libfixedsub_emailformat_dev/SCRIPTS/dev-install
+Files Modified: spx/INFO, spx/RULES
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 23 May 2011 10:34:30 EDT
+
+Package: libfixedsub_emailformat (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:46:49 EDT
+
+Package: libfixedsub_emailformat (1.2.0); urgency = low
+
+Abstract:
+	Removed Multiple declaration of Macro EMAIL_FORMAT_SIZE
+
+Files Modified: data/Makefile, data/libfixedsubformat.h
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 25 Apr 2011 12:27:27 IST
+
+Package: libfixedsub_emailformat (1.1.0); urgency = low
+
+Abstract:
+	Fixed Subject Email Format
+
+Files Modified: spx/PACKAGES.D/libfixedsub_emailformat/SCRIPTS/dev-install
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Wed, 24 Nov 2010 20:52:33 IST
+
+Package: libfixedsub_emailformat (1.0.0); urgency = new
+
+Abstract:
+	Fixed subject Email Format
+
+Files Added: data, data/Makefile, data/libfixedsubformat.c, data/libfixedsubformat.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/libfixedsub_emailformat, spx/PACKAGES.D/libfixedsub_emailformat/DATA, spx/PACKAGES.D/libfixedsub_emailformat/SCRIPTS, spx/PACKAGES.D/libfixedsub_emailformat/SCRIPTS/dev-install, spx/PACKAGES.D/libfixedsub_emailformat_dev, spx/PACKAGES.D/libfixedsub_emailformat_dev/DATA, spx/PACKAGES.D/libfixedsub_emailformat_dev/SCRIPTS, spx/PACKAGES.D/libfixedsub_emailformat_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Wed, 24 Nov 2010 09:16:24 IST
+

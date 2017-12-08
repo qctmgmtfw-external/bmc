@@ -1,0 +1,18 @@
+Package : javafloppywrapper
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 1.0
+Section : software
+Depends : libfloppy
+Required : libkvm_dev
+Essential : NO
+Config-Tag : javawrapper(floppy)
+Group : SOFTWARE
+Owner : AMI
+Maintainer : muthuchamyk  (muthusamyk@amiindia.co.in)
+Source-License : AMI
+Package-License : AMI
+Architecture : ANY
+Urgency : medium
+Description : This Package contains the java library files for floppy.
+.

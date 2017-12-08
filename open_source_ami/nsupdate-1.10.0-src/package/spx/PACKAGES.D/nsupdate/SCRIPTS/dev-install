@@ -1,0 +1,14 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %IMAGE_TREE/usr/local/bin
+		COPY_FILE ./nsupdate %IMAGE_TREE/usr/local/bin/
+		COPY_FILE ./nsupdate.sh %IMAGE_TREE/usr/local/bin/
+		MKDIR_NOCLEAN %IMAGE_TREE/etc/network/if-up.d
+		MKDIR_NOCLEAN %IMAGE_TREE/etc/network/if-down.d
+		COPY_FILE ./05-down-nsupdate %IMAGE_TREE/etc/network/if-down.d
+		COPY_FILE ./95-up-nsupdate %IMAGE_TREE/etc/network/if-up.d
+		COPY_TO_CONF ./nsupdate.conf
+
+debug-install:
+

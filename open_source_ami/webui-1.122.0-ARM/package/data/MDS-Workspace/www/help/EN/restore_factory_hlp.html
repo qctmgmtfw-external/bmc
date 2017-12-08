@@ -1,0 +1,64 @@
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+	<head>
+	<title>restore_factory help</title>
+	<link type="text/css" rel="stylesheet" href="../../style/help_style.css"/>
+	<script language="javascript" src="../../lib/common_fn.js"></script>
+	<script language="javascript" src="../../lib/ui.js"></script>
+	</head>
+	<body>
+	<h2><div class="floatRight"><a href="javascript://" class="closeBtn" 
+		onclick="top.closeHelp();">X</a></div>
+	<div class='helpmainhead'>Restore Factory Defaults</div></h2>
+	<div class='subSection'>
+		This page helps to restore the factory defaults of the device.
+		<br>
+		Please note that after entering restore factory widgets, other
+		web pages and services will not work. All open widgets will be
+		closed automatically. The device will reset and reboot within few 
+		minutes.
+		<br/><br/>
+		<fieldset>
+		<legend>Actions</legend>
+		<script type="text/javascript">
+		if (checkProjectCfg("PRESERVECONF")) {
+			var prsrvcfg_help = "<h4>Preserve Configuration</h4>";
+			prsrvcfg_help += "Click this to redirect to Preserve " +
+				"configuration page, which is used to preserve the " +
+				"particular configuration not to be overwritten by the " +
+				"default configuration.";
+			document.write(prsrvcfg_help);
+		}
+		</script>
+		<h4>Restore Factory Defaults</h4>
+		Click this to restore the firmware with default configuration.
+		</fieldset>
+	</div>
+	</body>
+</html>

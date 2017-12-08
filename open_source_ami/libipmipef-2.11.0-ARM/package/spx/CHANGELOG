@@ -1,0 +1,363 @@
+Package: libipmipef (2.11.0); urgency = low
+
+Abstract:
+	1. PEF Startup Delay time function works abnormally.
+   Sec 17.4 .The PEF Startup Delay causes Platform Event Filtering triggered power-down, reset, and power-cycle actions to be postponed when the system is
+   either powered up or is reset locally via a pushbutton or other local front-panel user interface. the time is to delay PEF after a system powerup, from
+   S4 or S5 and resets.
+
+2. PEF Alert startup delay works abnormally.
+   table 30-6 field 4, the alert startup delay time is to delay Alerts after system powerups, from S4 or S5 and resets.
+
+3. The first Priority of PEF Action is wrong.
+   If a event trigger a lot of filter, we should choose a power action onlt, if do power action every filter, it isn't reasonable.
+
+for fiter rules 
+
+1. Find matching filters by comparing event data bytes and pass that to PerformActionAlert
+2. PerformActionAlert() performs 1 Power Action, the first one it finds in a matching filter, and then performs all the Alert orOEM actions for all the 
+   matching filters.
+   This behavior needs to be modified:
+     a. For PowerAction, we need to prioritize based on Table 17-1, PEF Action Priorities. 
+     b. For Alert/OEM, we need to do the following:
+           Find the matching filter with the Lowest Alert Policy Number (section 17.11 Alert Policy Table)
+           If more than 1 filters have the lower alert policy number, use the first matching one (section 17.13 Alert Processing)
+           For Event Severity, use the highest severity from the matching filters bearing the lowest alert policy number, Table 17-2, Event Filter Table Entry, 
+           Field field 4.
+
+3. Add the variable ResetFlag in the PEFTmrMgr_T, it will be set to 1 when host reset,ipmimain-src, HostReset.c.
+
+Files Modified: data/PEF.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Mon, 08 Aug 2011 11:05:19 CST
+
+Package: libipmipef (2.10.0); urgency = medium
+
+Abstract:
+	Added Missing header file to fix build error.
+
+Files Modified: data/PEF.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 03 Aug 2011 22:59:44 IST
+
+Package: libipmipef (2.9.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/PEF.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:27:54 IST
+
+Package: libipmipef (2.8.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:08:33 IST
+
+Package: libipmipef (2.7.0); urgency = low
+
+Abstract:
+	Fix the syntax error.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Wed, 06 Jul 2011 11:55:19 CST
+
+Package: libipmipef (2.6.0); urgency = low
+
+Abstract:
+	The definition of time-stamp is "time elapsed between the last (re)initialization of the network 
+entity and the generation of the trap" in the SNMP spec, modify LANAlert.c to fit it.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Tue, 05 Jul 2011 18:09:20 CST
+
+Package: libipmipef (2.5.0); urgency = medium
+
+Abstract:
+	Returning properly when pef match fails.
+
+Files Modified: data/PEF.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 17 May 2011 22:16:47 IST
+
+Package: libipmipef (2.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:01:11 EDT
+
+Package: libipmipef (2.3.0); urgency = low
+
+Abstract:
+	Included halapi directory in the Makefile
+
+Files Modified: data/Makefile
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 11 May 2011 16:47:08 IST
+
+Package: libipmipef (2.2.0); urgency = medium
+
+Abstract:
+	Fix to make flushing of IPMI Configurations to NVRAM faster.
+
+Files Modified: data/PEF.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 04 May 2011 18:59:32 IST
+
+Package: libipmipef (2.1.0); urgency = medium
+
+Abstract:
+	Added Check to ignore sending SNMP traps on invalid Destination address.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 18 Apr 2011 15:59:34 IST
+
+Package: libipmipef (2.0.0); urgency = medium
+
+Abstract:
+	Changes done to store all the non-volatile IPMI Configurations in INI files.
+
+Files Modified: data/LANAlert.c, data/PEF.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Sat, 19 Mar 2011 17:01:24 IST
+
+Package: libipmipef (1.8.0); urgency = medium
+
+Abstract:
+	BMC will check both the data of sequence number and local timestamp about the PET acknowledge command. 
+If one of the data is wrong, BMC won't stop retrying snmp trap.
+
+Files Modified: data/PEF.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 16 Feb 2011 14:33:47 IST
+
+Package: libipmipef (1.7.0); urgency = medium
+
+Abstract:
+	Made changes to send the SNMP Trap with binded channel.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 14 Feb 2011 21:22:58 IST
+
+Package: libipmipef (1.6.0); urgency = high
+
+Abstract:
+	Changes done to pass correct EthIndex in bonding Mode also.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Feb 2011 22:33:24 IST
+
+Package: libipmipef (1.5.0); urgency = high
+
+Abstract:
+	Replaced with common Network Configuration function call.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 25 Jan 2011 19:29:00 IST
+
+Package: libipmipef (1.4.0); urgency = low
+
+Abstract:
+	Added Email formatting support For users, PEF email alert is configured using user ID  instead emailid and Added support to Attach a file to smtp email alert
+
+Files Modified: data/PEF.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 19 Nov 2010 23:17:26 IST
+
+Package: libipmipef (1.3.0); urgency = medium
+
+Abstract:
+	Changes done to pass BMCInst to all PDK Hooks.
+
+Files Modified: data/LANAlert.c, data/PEF.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 11 Oct 2010 21:06:00 EDT
+
+Package: libipmipef (1.2.0); urgency = low
+
+Abstract:
+	Changing printf to TDBG
+
+Files Modified: data/PEF.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 23 Sep 2010 13:04:34 EDT
+
+Package: libipmipef (1.1.0); urgency = medium
+
+Abstract:
+	Fix for mutex handling for pef
+
+Files Modified: data/PEF.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 17 Sep 2010 14:40:35 EDT
+
+Package: libipmipef (1.0.16); urgency = low
+
+Abstract:
+	Added ipmipdk package as dependency and removed unwanted inclusion of PDK Header Files
+
+Files Modified: data/LANAlert.c, data/Makefile, data/PEF.c, spx/INFO
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 02 Sep 2010 17:52:30 IST
+
+Package: libipmipef (1.0.15); urgency = medium
+
+Abstract:
+	Corrections in ActionMaskIndex value check to allow power down action.
+
+Files Modified: data/PEF.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 03 Aug 2010 18:23:18 IST
+
+Package: libipmipef (1.0.14); urgency = low
+
+Abstract:
+	MBMC Changes for PEF in IPMI
+
+Files Modified: data/LANAlert.c, data/PEF.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:50:37 IST
+
+Package: libipmipef (1.0.13); urgency = medium
+
+Abstract:
+	Made changes to avoid duplicate alerts in PEF.
+
+Files Modified: data/PEF.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 29 Jun 2010 19:11:11 IST
+
+Package: libipmipef (1.0.12); urgency = low
+
+Abstract:
+	Fixed binary build dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 25 Jun 2010 13:01:10 EDT
+
+Package: libipmipef (1.0.11); urgency = low
+
+Abstract:
+	Changes made to Match Alert policy based on events severity.
+
+Files Modified: data/PEF.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 23 Jun 2010 14:21:13 IST
+
+Package: libipmipef (1.0.10); urgency = low
+
+Abstract:
+	Fix in PEF Handler.
+
+Files Modified: data/PEF.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 21 Jun 2010 19:01:01 IST
+
+Package: libipmipef (1.0.9); urgency = low
+
+Abstract:
+	Removing gpio from includes in Makefile as gpio dependancy is removed
+
+Files Modified: data/Makefile
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 11 Jun 2010 14:58:26 IST
+
+Package: libipmipef (1.0.8); urgency = low
+
+Abstract:
+	Removing libi2c_dev from build dependency
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 09 Jun 2010 18:46:02 IST
+
+Package: libipmipef (1.0.7); urgency = medium
+
+Abstract:
+	Fix for pef. Pef action will be also be taken care when events generated during sensor monitoring.
+
+Files Modified: data/PEF.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 01 Jun 2010 22:17:26 IST
+
+Package: libipmipef (1.0.6); urgency = medium
+
+Abstract:
+	Added condition to check the status of commands executed in Pend Task.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 12 May 2010 18:38:44 IST
+
+Package: libipmipef (1.0.5); urgency = low
+
+Abstract:
+	Addressed following issues:
+1. Current MegaRAC firmware doesn't check whether the alert was successfully delivered or not. MegaRAC firmware should retry the alert according to LAN configuration parameter #18 if the alert was not delivered.
+2. Current MegaRAC firmware has five tables for alert event to wait receiving PET Acknowledge command, but it may overflow. MegaRAC firmware should check whether the alert was successfully delivered or not even if many events occur at the same time.
+3. On IPMI Spec of "Alert Policy Table", whether a given destination will be used or not can be configured to be dependent on whether the alert to the previous destination was successful or not.
+4. Follow 17.13 Alert Processing in IPMI2.0 spec.
+5. Follow 17.13.1 Alert Processing after Power Loss in IPMI2.0 spec.
+
+Files Modified: data/LANAlert.c, data/PEF.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 31 Mar 2010 20:18:15 IST
+
+Package: libipmipef (1.0.4); urgency = low
+
+Abstract:
+	inet_ntop() length parameter modified to INET6_ADDRSTRLEN
+
+Files Modified: data/LANAlert.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 26 Feb 2010 15:32:03 IST
+
+Package: libipmipef (1.0.3); urgency = low
+
+Abstract:
+	* IPv6 support Added in SNMP and SMTP.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 19 Feb 2010 23:02:37 IST
+
+Package: libipmipef (1.0.2); urgency = low
+
+Abstract:
+	Modified so that SNMP trap will be sent based on status of interface  i.e SNMP Trap will be sent via eth0 only if eth0 is up and running.
+
+Files Modified: data/LANAlert.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 17 Feb 2010 20:17:34 IST
+
+Package: libipmipef (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:08:00 EST
+
+Package:libipmipef (1.0.0);urgency=new
+
+Abstract:
+	This library package contains IPMI PEF stuffs
+
+Files Added: PEF.c, Makefile, LANAlert.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 9 Dec 2009 14:17:08 +0800

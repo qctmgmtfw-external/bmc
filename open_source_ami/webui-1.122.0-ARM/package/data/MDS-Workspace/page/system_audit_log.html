@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--
+//;*****************************************************************;
+//;*****************************************************************;
+//;**                                                             **;
+//;**     (C) COPYRIGHT American Megatrends Inc. 2008-2009        **;
+//;**                     ALL RIGHTS RESERVED                     **;
+//;**                                                             **;
+//;**  This computer software, including display screens and      **;
+//;**  all related materials, are confidential and the            **;
+//;**  exclusive property of American Megatrends, Inc.  They      **;
+//;**  are available for limited use, but only pursuant to        **;
+//;**  a written license agreement distributed with this          **;
+//;**  computer software.  This computer software, including      **;
+//;**  display screens and all related materials, shall not be    **;
+//;**  copied, reproduced, published or distributed, in whole     **;
+//;**  or in part, in any medium, by any means, for any           **;
+//;**  purpose without the express written consent of American    **;
+//;**  Megatrends, Inc.                                           **;
+//;**                                                             **;
+//;**                                                             **;
+//;**                American Megatrends, Inc.                    **;
+//;**           5555 Oakbook Parkway, Building 200                **;
+//;**     Norcross,  Georgia - 30071, USA. Phone-(770)-246-8600.  **;
+//;**                                                             **;
+//;*****************************************************************;
+//;*****************************************************************;
+-->
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<link rel='stylesheet' href='../www/lib/listgrid.css' type='text/css'/>
+<link rel='stylesheet' href='../www/style/page_style.css' type='text/css'/>
+<script language='javascript' src='../www/lib/include.js'></script>
+<script language='javascript' src='../www/lib/listgrid.js'></script>
+<script>
+document.writeln("<script language='javascript' src='../str/"+top.gLangSetting+"/global_str.js'><\/script>");
+</script>
+</head>
+<body oncontextmenu='return false;'>
+<h3>System & Audit Logs</h3>
+<p>This page displays logs of system and audit events for this device (if the options have been configured).</p>
+<table cellspacing='0' cellpadding='0' border='0' width='100%'>
+<tbody>
+<tr>
+<td class='roundedtable_topleft'></td>
+<td class='roundedtable_top'></td>
+<td class='roundedtable_topright'></td>
+<td class='roundedtable_topleft'></td>
+<td class='roundedtable_top'></td>
+<td class='roundedtable_topright'></td>
+</tr>
+<tr>
+<td class='roundedtable_left'></td>
+<td id='_systemLog' class='classicTab'>System Log</td>
+<td class='roundedtable_right'></td>
+<td class='roundedtable_left'></td>
+<td id='_auditLog' class='classicTab'>Audit Log</td>
+<td class='roundedtable_right'></td>
+<td rowspan='2'><label class='alignRight' id='_utcOffset'></label></td>
+</tr>
+</tbody>
+</table>
+
+<table cellspacing='0' cellpadding='10' border='1' width='100%'>
+<tr><td>
+	<label class='alignRight' id='_lblHeader'></label>
+	<label id='_filterBy'>Filter by:&nbsp;</label>
+	<select id='_logLevel' class="classicTxtBox"></select>
+	<br/><br/>
+	<script>if(window.ActiveXObject) document.write("<br>");</script>
+	<div id="_logHolder"></div>
+</td></tr>
+</table>
+</body>
+</html>
