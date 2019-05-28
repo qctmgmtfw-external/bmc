@@ -1,0 +1,31 @@
+Source : Kernel_amiext_ex
+Version : 2.5.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Samvinesh Christopher (vineshc@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : Kernel_amiext_ex
+Build-Depends : Kernel_initramfs_ex
+Architecture : ANY
+Urgency : medium
+Description : AMI Extensions to Kernel 3.14.17
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Kernel_amiext_ex
+Section : info
+Group : BASE
+Essential : NO
+Description : AMI Extensions to Kernel 3.14.17
+.
+

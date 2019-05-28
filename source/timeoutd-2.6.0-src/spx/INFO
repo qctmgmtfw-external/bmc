@@ -1,0 +1,32 @@
+Source : timeoutd
+Version : 2.6.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Gokulakannan Sampath (gokulakannans@amiindia.co.in)
+License : GPL-V2
+Source-Location : http://packages.debian.org/source/squeeze/timeoutd
+Source-Version : 1.5
+Builds : timeoutd
+Build-Depends : Crosscc, kernel, BaseSystem
+Architecture : ALL
+Urgency : medium
+Description : Timeout daemon package.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : timeoutd
+Config-Tag : Timeout Daemon Support
+Section : app
+Group : FEATURES
+Essential : NO
+Description : Timeoutd application package.
+.
+

@@ -1,0 +1,42 @@
+Source : uartroute
+Version : 2.1.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Cheng-Chia,Yang (ChiaYang@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : uartroute, uartroute_dev
+Build-Depends : Crosscc, kernel_dev, rules, global_dev, helper_driver_dev, DevNodes
+Architecture : ARM
+SOC : AST
+Urgency : low
+Description : This package contains driver to control routing between io com ports and uarts
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : uartroute
+Config-Tag : UART Route Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_uartroute
+Required : helper, libuartroute, DevNodes
+Description : This package contains lpcuart driver for AST2400 to control routing between io com ports and uarts
+.
+
+Package : uartroute_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package contains lpcuart driver development header files.
+.
+

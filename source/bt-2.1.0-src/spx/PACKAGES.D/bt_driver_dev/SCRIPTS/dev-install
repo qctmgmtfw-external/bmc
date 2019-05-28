@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+	MKDIR_CLEAN %SPXINC/bt
+	COPY_DIR ./ %SPXINC/bt
+
+debug-install:

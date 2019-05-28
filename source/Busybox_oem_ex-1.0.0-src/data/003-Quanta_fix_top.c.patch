@@ -1,0 +1,45 @@
+--- busybox_ORIG/procps/top.c	2014-12-24 12:16:11.506432036 +0530
++++ busybox/procps/top.c	2015-12-15 09:55:44.893666699 +0800
+@@ -504,8 +504,8 @@
+ 	FILE *fp;
+ 	char buf[80];
+ 	char scrbuf[80];
+-	unsigned long total, used, mfree, shared, buffers, cached;
+-
++	unsigned long total, used, mfree, shared, buffers, cached, available;
++	unsigned char method = 0;
+ 	/* read memory info */
+ 	fp = xfopen_for_read("meminfo");
+ 
+@@ -537,14 +537,15 @@
+ 		 * sizes in kilobytes. This should be safe for both 2.4 and
+ 		 * 2.6.
+ 		 */
++		method = 1;
+ 		fscanf(fp, "MemFree: %lu %s\n", &mfree, buf);
+ 
+ 		/*
+ 		 * MemShared: is no longer present in 2.6. Report this as 0,
+ 		 * to maintain consistent behavior with normal procps.
+ 		 */
+-		if (fscanf(fp, "MemShared: %lu %s\n", &shared, buf) != 2)
+-			shared = 0;
++		if (fscanf(fp, "MemAvailable: %lu %s\n", &available, buf) != 2)
++			available = 0;
+ 
+ 		fscanf(fp, "Buffers: %lu %s\n", &buffers, buf);
+ 		fscanf(fp, "Cached: %lu %s\n", &cached, buf);
+@@ -556,7 +557,12 @@
+ 	/* output memory info */
+ 	if (scr_width > (int)sizeof(scrbuf))
+ 		scr_width = sizeof(scrbuf);
+-	snprintf(scrbuf, scr_width,
++	if (method == 1)
++		snprintf(scrbuf, scr_width,
++		"Mem: %luK used, %luK free, %luK available, %luK buff, %luK cached",
++		used, mfree, available, buffers, cached);		
++	else
++		snprintf(scrbuf, scr_width,
+ 		"Mem: %luK used, %luK free, %luK shrd, %luK buff, %luK cached",
+ 		used, mfree, shared, buffers, cached);
+ 	/* go to top & clear to the end of screen */

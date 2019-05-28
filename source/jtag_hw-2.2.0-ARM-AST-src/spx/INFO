@@ -1,0 +1,41 @@
+Source : jtag_hw
+Version : 2.2.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Robin Chiu (RobinChiu@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : jtag_hw, jtag_hw_dev
+Build-Depends : Crosscc, helper_driver_dev, kernel_dev, rules, jtag_driver_dev, reset_hw
+Architecture : ARM
+SOC : AST
+Urgency : high
+Description : This package includes the jtag hardware driver for AST SoC.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : jtag_hw
+Section : sys
+Group : DEVICE
+Essential : YES
+Depends : kernel, jtag
+Required : helper
+Description : This package includes the jtag hardware driver for AST SoC.
+.
+
+Package : jtag_hw_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package includes the jtag hardware driver development files.
+.
+

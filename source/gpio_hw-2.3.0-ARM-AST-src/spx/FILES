@@ -1,0 +1,4 @@
+./Makefile 258 a640ee4f707ecb2e76bfaf865a7eda15
+./gpio_hw.h 11189 cbc07fe5d114bd7da2f40276d25ba8c3
+./gpio_pins.h 1344 3be374a61f89a21cfb6af8ba0eb70149
+./gpiomain_hw.c 67309 ae9f7f197fce835095b1250d955bbbfd

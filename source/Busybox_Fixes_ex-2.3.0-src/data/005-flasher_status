@@ -1,0 +1,371 @@
+diff -Naur busybox.org/libbb/xconnect.c busybox/libbb/xconnect.c
+--- busybox.org/libbb/xconnect.c	2014-08-07 11:36:15.005547304 -0400
++++ busybox/libbb/xconnect.c	2014-08-07 13:37:32.000000000 -0400
+@@ -13,6 +13,14 @@
+ #include <net/if.h>
+ #include <sys/un.h>
+ #include "libbb.h"
++int cmdpipe = -1;
++
++#define FW_UPDATE_CANNOT_ESTABLISH_CONNECTION 0x81
++
++typedef struct StructFlasherCmd {
++    unsigned char Command;
++    unsigned char Options;
++} FlasherCmd;
+ 
+ void FAST_FUNC setsockopt_reuseaddr(int fd)
+ {
+@@ -79,13 +87,21 @@
+ 
+ void FAST_FUNC xconnect(int s, const struct sockaddr *s_addr, socklen_t addrlen)
+ {
++    FlasherCmd Cmd;
++
+ 	if (connect(s, s_addr, addrlen) < 0) {
+ 		if (ENABLE_FEATURE_CLEAN_UP)
+ 			close(s);
+-		if (s_addr->sa_family == AF_INET)
++		if (s_addr->sa_family == AF_INET){
++            Cmd.Options = FW_UPDATE_CANNOT_ESTABLISH_CONNECTION;
++            write (cmdpipe, &Cmd, sizeof (FlasherCmd));
+ 			bb_perror_msg_and_die("%s (%s)",
+ 				"can't connect to remote host",
+ 				inet_ntoa(((struct sockaddr_in *)s_addr)->sin_addr));
++        }
++        Cmd.Options = FW_UPDATE_CANNOT_ESTABLISH_CONNECTION;
++        write (cmdpipe, &Cmd, sizeof (FlasherCmd));
++        close(cmdpipe);
+ 		bb_perror_msg_and_die("can't connect to remote host");
+ 	}
+ }
+diff -Naur busybox.org/networking/tftp.c busybox/networking/tftp.c
+--- busybox.org/networking/tftp.c	2014-08-07 11:36:15.101547306 -0400
++++ busybox/networking/tftp.c	2014-08-07 11:55:23.000000000 -0400
+@@ -216,6 +216,43 @@
+ 
+ #endif
+ 
++#define FLSH_CMD_GET_STATUS_TFTP		((unsigned char)0x0c)
++
++#define TFTP_PIPE           "/var/pipe/status_cmd"
++
++#define FW_UPDATE_OK                           0x00
++#define FW_UPDATE_GENERAL_ERROR				0x80
++#define FW_UPDATE_CANNOT_ESTABLISH_CONNECTION 0x81
++#define FW_UPDATE_PATH_NOT_FOUND              0x82
++#define FW_UPDATE_TRANSFER_ABORT              0x83
++#define FW_UPDATE_COMPLETED                   0x0F
++
++extern int cmdpipe;
++typedef struct StructFlasherCmd {
++	unsigned char Command;
++	unsigned char Options;
++} FlasherCmd;
++
++static void open_tftp_pipe(void)
++{
++	cmdpipe = open(TFTP_PIPE, O_WRONLY);
++}
++
++static void close_tftp_pipe(void)
++{
++	close(cmdpipe);
++}
++
++static void set_tftp_status(unsigned char status)
++{
++	FlasherCmd Cmd;
++	Cmd.Command = FLSH_CMD_GET_STATUS_TFTP;
++	Cmd.Options = status;
++	write (cmdpipe, &Cmd, sizeof (FlasherCmd));
++}
++
++
++
+ static int tftp_protocol(
+ 		/* NULL if tftp, !NULL if tftpd: */
+ 		len_and_sockaddr *our_lsa,
+@@ -478,8 +515,10 @@
+ 			tftp_progress_update();
+ #endif
+ 		/* Was it final ACK? then exit */
+-		if (finished && (opcode == TFTP_ACK))
++		if (finished && (opcode == TFTP_ACK)){
++            set_tftp_status(FW_UPDATE_COMPLETED);
+ 			goto ret;
++       }
+ 
+  recv_again:
+ 		/* Receive packet */
+@@ -494,6 +533,7 @@
+ 			if (retries == 0) {
+ 				tftp_progress_done();
+ 				bb_error_msg("timeout");
++				set_tftp_status(FW_UPDATE_CANNOT_ESTABLISH_CONNECTION);
+ 				goto ret; /* no err packet sent */
+ 			}
+ 
+@@ -557,6 +597,7 @@
+ 				msg = nth_string(errcode_str, recv_blk);
+ 			}
+ 			bb_error_msg("server error: (%u) %s", recv_blk, msg);
++			set_tftp_status(FW_UPDATE_CANNOT_ESTABLISH_CONNECTION);
+ 			goto ret;
+ 		}
+ 
+@@ -612,6 +653,7 @@
+ 				if (sz != len - 4) {
+ 					strcpy(G_error_pkt_str, bb_msg_write_error);
+ 					G_error_pkt_reason = ERR_WRITE;
++     				set_tftp_status(FW_UPDATE_GENERAL_ERROR);
+ 					goto send_err_pkt;
+ 				}
+ 				if (sz != blksize) {
+@@ -633,8 +675,10 @@
+ 		if (CMD_PUT(option_mask32) && (opcode == TFTP_ACK)) {
+ 			/* did peer ACK our last DATA pkt? */
+ 			if (recv_blk == (uint16_t) (block_nr - 1)) {
+-				if (finished)
++				if (finished){
++					set_tftp_status(FW_UPDATE_COMPLETED);
+ 					goto ret;
++					}
+ 				continue; /* send next block */
+ 			}
+ 		}
+@@ -732,6 +776,8 @@
+ 			remote_file, local_file);
+ # endif
+ 
++	open_tftp_pipe();
++	
+ # if ENABLE_FEATURE_TFTP_PROGRESS_BAR
+ 	G.file = remote_file;
+ # endif
+@@ -742,6 +788,8 @@
+ 		IF_FEATURE_TFTP_BLOCKSIZE(, blksize)
+ 	);
+ 	tftp_progress_done();
++	
++	close_tftp_pipe();
+ 
+ 	if (result != EXIT_SUCCESS && NOT_LONE_DASH(local_file) && CMD_GET(opt)) {
+ 		unlink(local_file);
+diff -Naur busybox.org/networking/wget.c busybox/networking/wget.c
+--- busybox.org/networking/wget.c	2014-08-07 11:36:15.097547306 -0400
++++ busybox/networking/wget.c	2014-08-07 13:57:46.000000000 -0400
+@@ -43,6 +43,54 @@
+ #endif
+ 
+ 
++
++#define STATUS_PIPE           "/var/pipe/status_cmd"
++#define FLSH_CMD_GET_STATUS_FTP				((unsigned char)0x0d)
++#define FLSH_CMD_GET_STATUS_HTTP			((unsigned char)0x0e)
++
++#define FW_UPDATE_OK                   0x00
++#define FW_UPDATE_GENERAL_ERROR        0x80
++#define FW_UPDATE_CANNOT_ESTABLISH_CONNECTION 0x81
++#define FW_UPDATE_PATH_NOT_FOUND       0x82
++#define FW_UPDATE_TRANSFER_ABORT       0x83
++#define FW_UPDATE_COMPLETED            0x0F
++
++extern int cmdpipe;
++typedef struct StructFlasherCmd {
++	unsigned char Command;
++	unsigned char Options;
++} FlasherCmd;
++
++static FlasherCmd Cmd;
++
++static void open_status_pipe(void)
++{
++	cmdpipe = open(STATUS_PIPE, O_WRONLY);
++	Cmd.Command = 0xff;
++}
++
++static void close_status_pipe(void)
++{
++	close(cmdpipe);
++}
++
++static void set_status_type(unsigned char type)
++{
++	Cmd.Command = type;
++}
++
++static void set_status(unsigned char status)
++{
++	Cmd.Options = status;
++	if( Cmd.Command == 0xff){
++		printf("WGET : the method of transfer cannot be decided\n");
++		Cmd.Command = FLSH_CMD_GET_STATUS_FTP;
++		write (cmdpipe, &Cmd, sizeof (FlasherCmd));
++		Cmd.Command = FLSH_CMD_GET_STATUS_HTTP;
++		write (cmdpipe, &Cmd, sizeof (FlasherCmd));
++	}else
++		write (cmdpipe, &Cmd, sizeof (FlasherCmd));
++}
+ struct host_info {
+ 	char *allocated;
+ 	const char *path;
+@@ -214,9 +262,11 @@
+ 	char c;
+ 	char *buf_ptr;
+ 
+-	if (fgets(G.wget_buf, sizeof(G.wget_buf) - 1, fp) == NULL)
++	if (fgets(G.wget_buf, sizeof(G.wget_buf) - 1, fp) == NULL) {
++		set_status_type(FW_UPDATE_CANNOT_ESTABLISH_CONNECTION); 
+ 		bb_perror_msg_and_die("error getting response");
+-
++	}
++	
+ 	buf_ptr = strchrnul(G.wget_buf, '\n');
+ 	c = *buf_ptr;
+ 	*buf_ptr = '\0';
+@@ -260,12 +310,16 @@
+ 		h->port = bb_lookup_port("http", "tcp", 80);
+ 		h->host = url + 7;
+ 		h->is_ftp = 0;
++		set_status_type(FLSH_CMD_GET_STATUS_HTTP);
+ 	} else if (strncmp(url, "ftp://", 6) == 0) {
+ 		h->port = bb_lookup_port("ftp", "tcp", 21);
+ 		h->host = url + 6;
+ 		h->is_ftp = 1;
+-	} else
++		set_status_type(FLSH_CMD_GET_STATUS_FTP);
++	} else {
++		set_status(FW_UPDATE_PATH_NOT_FOUND);
+ 		bb_error_msg_and_die("not an http or ftp url: %s", sanitize_string(url));
++	}
+ 
+ 	// FYI:
+ 	// "Real" wget 'http://busybox.net?var=a/b' sends this request:
+@@ -334,9 +388,10 @@
+ 	}
+ 
+ 	/* verify we are at the end of the header name */
+-	if (*s != ':')
++	if (*s != ':') {
++		set_status(FW_UPDATE_GENERAL_ERROR);
+ 		bb_error_msg_and_die("bad header line: %s", sanitize_string(G.wget_buf));
+-
++	}
+ 	/* locate the start of the header value */
+ 	*s++ = '\0';
+ 	hdrval = skip_whitespace(s);
+@@ -369,8 +424,10 @@
+ 		target->user = xstrdup("anonymous:busybox@");
+ 
+ 	sfp = open_socket(lsa);
+-	if (ftpcmd(NULL, NULL, sfp) != 220)
++	if (ftpcmd(NULL, NULL, sfp) != 220) {
++		set_status(FW_UPDATE_GENERAL_ERROR);
+ 		bb_error_msg_and_die("%s", sanitize_string(G.wget_buf + 4));
++    }
+ 
+ 	/*
+ 	 * Splitting username:password pair,
+@@ -387,6 +444,7 @@
+ 			break;
+ 		/* fall through (failed login) */
+ 	default:
++		set_status(FW_UPDATE_GENERAL_ERROR);
+ 		bb_error_msg_and_die("ftp login: %s", sanitize_string(G.wget_buf + 4));
+ 	}
+ 
+@@ -398,6 +456,7 @@
+ 	if (ftpcmd("SIZE ", target->path, sfp) == 213) {
+ 		G.content_len = BB_STRTOOFF(G.wget_buf + 4, NULL, 10);
+ 		if (G.content_len < 0 || errno) {
++			set_status(FW_UPDATE_PATH_NOT_FOUND);
+ 			bb_error_msg_and_die("SIZE value is garbage");
+ 		}
+ 		G.got_clen = 1;
+@@ -408,6 +467,7 @@
+ 	 */
+ 	if (ftpcmd("PASV", NULL, sfp) != 227) {
+  pasv_error:
++		set_status(FW_UPDATE_PATH_NOT_FOUND);
+ 		bb_error_msg_and_die("bad response to %s: %s", "PASV", sanitize_string(G.wget_buf));
+ 	}
+ 	// Response is "227 garbageN1,N2,N3,N4,P1,P2[)garbage]
+@@ -434,9 +494,10 @@
+ 			reset_beg_range_to_zero();
+ 	}
+ 
+-	if (ftpcmd("RETR ", target->path, sfp) > 150)
++	if (ftpcmd("RETR ", target->path, sfp) > 150) {
++		set_status(FW_UPDATE_GENERAL_ERROR);
+ 		bb_error_msg_and_die("bad response to %s: %s", "RETR", sanitize_string(G.wget_buf));
+-
++	}
+ 	return sfp;
+ }
+ 
+@@ -800,6 +861,7 @@
+ 			/* Partial Content even though we did not ask for it??? */
+ 			/* fall through */
+ 		default:
++			set_status(FW_UPDATE_GENERAL_ERROR);
+ 			bb_error_msg_and_die("server returned error: %s", sanitize_string(G.wget_buf));
+ 		}
+ 
+@@ -826,19 +888,24 @@
+ 			if (key == KEY_content_length) {
+ 				G.content_len = BB_STRTOOFF(str, NULL, 10);
+ 				if (G.content_len < 0 || errno) {
++					set_status(FW_UPDATE_PATH_NOT_FOUND);
+ 					bb_error_msg_and_die("content-length %s is garbage", sanitize_string(str));
+ 				}
+ 				G.got_clen = 1;
+ 				continue;
+ 			}
+ 			if (key == KEY_transfer_encoding) {
+-				if (strcmp(str_tolower(str), "chunked") != 0)
++				if (strcmp(str_tolower(str), "chunked") != 0){
++					set_status(FW_UPDATE_GENERAL_ERROR);
+ 					bb_error_msg_and_die("transfer encoding '%s' is not supported", sanitize_string(str));
++				}
+ 				G.chunked = 1;
+ 			}
+ 			if (key == KEY_location && status >= 300) {
+-				if (--redir_limit == 0)
++				if (--redir_limit == 0) {
++					set_status(FW_UPDATE_GENERAL_ERROR);
+ 					bb_error_msg_and_die("too many redirections");
++				}
+ 				fclose(sfp);
+ 				if (str[0] == '/') {
+ 					free(redirected_path);
+@@ -888,9 +955,11 @@
+ 	if (dfp != sfp) {
+ 		/* It's ftp. Close data connection properly */
+ 		fclose(dfp);
+-		if (ftpcmd(NULL, NULL, sfp) != 226)
++		if (ftpcmd(NULL, NULL, sfp) != 226) {
++			set_status(FW_UPDATE_GENERAL_ERROR);
+ 			bb_error_msg_and_die("ftp error: %s", sanitize_string(G.wget_buf + 4));
+ 		/* ftpcmd("QUIT", NULL, sfp); - why bother? */
++		}
+ 	}
+ 	fclose(sfp);
+ 
+@@ -980,12 +1049,15 @@
+ 		/* compat with wget: -O FILE can overwrite */
+ 		G.o_flags = O_WRONLY | O_CREAT | O_TRUNC;
+ 	}
+-
++	open_status_pipe();
++	
+ 	while (*argv)
+ 		download_one_url(*argv++);
+ 
+ 	if (G.output_fd >= 0)
+ 		xclose(G.output_fd);
++	set_status(FW_UPDATE_COMPLETED);
++	close_status_pipe();
+ 
+ 	return EXIT_SUCCESS;
+ }

@@ -1,0 +1,5 @@
+auth       required     /lib/security/pam_nologin.so
+auth       sufficient   /lib/security/pam_ipmi.so
+account    sufficient   /lib/security/pam_ipmi.so
+password   sufficient   /lib/security/pam_ipmi.so
+session    required     /lib/security/pam_ipmi.so

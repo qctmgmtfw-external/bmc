@@ -1,0 +1,25 @@
+Source                   	:	hdisk
+Version : 2.0.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Rama Rao Bisa  (RamaB@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	hdisk
+Build-Depends            	:	Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, iUSB_driver_dev, usbe_driver_dev, HDisk_HW_support, DevNodes
+Architecture             	:	ALL
+Urgency : high
+Description              	:	This package includes the hard disk device driver module.
+.
+
+Package                  	:	hdisk
+Section                  	:	sys
+Group                    	:	DEVICE
+Essential                	:	NO
+Depends                  	:	kernel, hw_usb
+Required                 	:	helper, iUSB, usbe, HDisk_HW_support, DevNodes
+Description              	:	This pacakge includes built hard disk driver module.
+.
+

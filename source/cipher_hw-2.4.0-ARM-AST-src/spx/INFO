@@ -1,0 +1,35 @@
+Source : cipher_hw
+Version : 2.4.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Joey Chen (JoeyChen@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : cipher_hw
+Build-Depends : Crosscc, cipher_driver_dev, helper_driver_dev, kernel_dev, rules, DevNodes
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : This package contains cipher hardware level driver for AST SOC
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : cipher_hw
+Section : sys
+Group : DEVICE
+Essential : YES
+Depends : kernel, cipher
+Required : helper, DevNodes
+Provides : cipherDriver
+Description : This package contains built cipher hardware driver for AST SoC.
+.
+

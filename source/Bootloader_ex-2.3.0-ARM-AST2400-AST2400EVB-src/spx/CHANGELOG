@@ -1,0 +1,63 @@
+Package: Bootloader_ex (2.3.0); urgency = medium
+
+Abstract:
+	Update INFO file.
+
+Files Modified: spx/INFO
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 30 Apr 2015 18:11:49 CST
+
+Package: Bootloader_ex (2.2.0); urgency = medium
+
+Abstract:
+	Exported the CROSS_COMPILE variable in clean_source section.
+
+Files Modified: spx/RULES.py
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Thu, 12 Feb 2015 14:36:07 HMT
+
+Package: Bootloader_ex (2.1.0); urgency = low
+
+Abstract:
+	fix for firmware recovery fails in case AST kernel version 3.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Mon, 09 Feb 2015 15:40:18 HMT
+
+Package: Bootloader_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:01:44 GMT
+
+Package: Bootloader_ex (1.2.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:47:07 GMT
+
+Package: Bootloader_ex (1.1.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 02:56:40 GMT
+
+Package: Bootloader_ex (1.0.0); urgency = new
+
+Abstract:
+	This package contains bootloader for AST2400EVB (U-boot)
+
+Files Added: data, spx, spx/CHANGELOG, spx/DEFCONFIG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_ex, spx/PACKAGES.D/Bootloader_ex/DATA, spx/PACKAGES.D/Bootloader_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 16:45:24 EDT
+

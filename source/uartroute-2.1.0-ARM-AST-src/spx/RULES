@@ -1,0 +1,29 @@
+#Extract Source in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+	CWD %BUILD/%PACKAGE/data
+	INVOKE_MAKE
+		
+#Clean Source
+clean_source:
+	CWD %BUILD/%PACKAGE/data
+	INVOKE_MAKE clean
+
+#-----------------Mandatory Rules for every binary Package ----------------------------
+#Rules to create lpcuart package
+build_package-uartroute:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/uartroute.ko %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/uartroute_BMC.conf %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/uartroute_SOL.conf %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/uartroute_SYS.conf %TEMPDIR/%PACKAGE/tmp
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+
+# Rules to create lpcuart_driver_dev package
+build_package-uartroute_dev:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/uartroute.h %TEMPDIR/%PACKAGE/tmp
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+	

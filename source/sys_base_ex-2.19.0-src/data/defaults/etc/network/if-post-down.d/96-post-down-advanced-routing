@@ -1,0 +1,26 @@
+#!/bin/sh
+# A script for removing the entries related to Advanced routing.
+
+if [ -f "/etc/core_features" ]
+then
+	feature=`cat /etc/core_features | grep -v "^#" | grep " *CONFIG_SPX_FEATURE_ADVANCED_IP_ROUTING_SUPPORT *$"` 
+    if [ -z $feature ] 
+    then 
+            ADVANCED_ROUTING_SUPPORT='NO' 
+            #echo "Advanced Routing Disabled..." 
+        else 
+            ADVANCED_ROUTING_SUPPORT='YES' 
+            #echo "Advanced Routing Enabled..." 
+        fi 
+fi
+
+if [ "$ADVANCED_ROUTING_SUPPORT" != "YES" ]
+then
+			return 0
+fi
+
+if [ "$IFACE" = "lo" -o "$MODE" != "stop" ]; then
+        exit 0
+fi
+ip rule del table $IFACE
+ip route flush table $IFACE 

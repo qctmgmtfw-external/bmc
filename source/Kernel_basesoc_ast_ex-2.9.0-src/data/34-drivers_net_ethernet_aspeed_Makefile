@@ -1,0 +1,11 @@
+--- linux.org/drivers/net/ethernet/aspeed/Makefile	1969-12-31 19:00:00.000000000 -0500
++++ linux.new/drivers/net/ethernet/aspeed/Makefile	2014-02-21 12:04:39.597195051 -0500
+@@ -0,0 +1,8 @@
++#
++# Makefile for the Aspeed network device driver.
++#
++
++#obj-$(CONFIG_ASTMAC100)     += ftgmac100.o
++obj-$(CONFIG_ASTMAC100)     += ast_gmac.o
++obj-$(CONFIG_ASTMAC100)     += dev-eth.o
++obj-$(CONFIG_LEGENCY_ASTMAC100)     += ast_ether.o

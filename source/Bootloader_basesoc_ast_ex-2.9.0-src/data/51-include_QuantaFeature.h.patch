@@ -1,0 +1,108 @@
+--- uboot/include/QuantaFeature.h	2015-08-04 21:54:12.605064883 +0800
++++ uboot_rr9/include/QuantaFeature.h	2015-08-04 21:24:29.961116311 +0800
+@@ -0,0 +1,105 @@
++#ifndef _QUANTAFEATURE_H_
++#define _QUANTAFEATURE_H_
++
++#define GUID_SIZE					16
++#define MAC_SIZE					6
++
++#define FRU_EEPROM_OFFSET			0x0
++#define SYSCFG_EEPROM_OFFSET		(5 * 1024)
++#define SYS_GUID_EEPROM_OFFSET		((6 * 1024) - GUID_SIZE)
++#define DEV_GUID_EEPROM_OFFSET		SYS_GUID_EEPROM_OFFSET+GUID_SIZE//6144
++#define EEPROM_MAC1_OFFSET			DEV_GUID_EEPROM_OFFSET+GUID_SIZE//6160
++#define EEPROM_MAC2_OFFSET			EEPROM_MAC1_OFFSET+MAC_SIZE//6166
++#define CHIPSET_TYPE_OFFSET			EEPROM_MAC2_OFFSET+MAC_SIZE//6172 not use now change to Silicon Revision ID and feature mask
++#define CHASSIS_TYPE_OFFSET			CHIPSET_TYPE_OFFSET+1//6173
++#define FEATURE_MASK_OFFSET			CHASSIS_TYPE_OFFSET+1//6174
++#define UBOOT_PWR_POLICY_STS_OFFSET	(FEATURE_MASK_OFFSET+1) //6175
++#define DEV_POWER_PROTECT_OFFSET	(7 * 1024)
++
++#define SYS_BOARD_CPU_NUM		2
++#define SYS_BOARD_DIMM_NUM		16
++#define LEN_BIOS_VER          16
++#define LEN_BMC_VER          16
++#define LEN_AC_LOST   5
++#define SYS_BOARD_HOSTMAC_NUM	16	//raincer+ LAN port index max 16
++#define SMI_COMMAND_MAX_DATA_LENGTH					50
++
++/* AC Lost flag */
++#define AC_HEALTH     0x00
++#define AC_UN_HEALTH  0x01
++
++#define PWR_ALWAYS_OFF             0x00
++#define PWR_RESTORED               0x01
++#define PWR_ALWAYS_ON              0x02
++#define PWR_NO_CHANGE              0x03
++
++#define SYS_CFG_OFFSET(x, y)  ((INT32U)&(((x *) 0)->y))
++
++#define PACKED __attribute__ ((packed)) 
++typedef unsigned char INT8U;
++typedef unsigned short INT16U;
++typedef unsigned long INT32U;
++
++
++typedef struct _BIOS_OS_WD_STRUCT
++{
++    INT8U   wd_retry_time;
++    INT8U   bios_wd_enable;
++    INT16U  bios_wd_timeout;
++    INT8U   bios_wd_action;
++    INT8U   osload_wd_enable;
++    INT16U  osload_wd_timeout;
++    INT8U   osload_wd_action;
++} BIOS_OS_WD;
++
++typedef struct _HOSTMAC_INFO_STRUCT {
++	INT8U  lan_card_slot_id;//raincer+
++	INT8U  mac_id;//raincer+ Bits[7:4]:lan port index, Bits[3:0]:lan card type
++	INT8U  mac_addr[6];
++
++} HOSTMAC_INFO;
++
++typedef struct {
++	INT8U CommandCode;
++	INT8U DataLength;
++	INT8U Data[SMI_COMMAND_MAX_DATA_LENGTH];
++}PACKED SMICommandData_T;
++
++typedef struct{
++	INT8U SMICommandCode;
++	INT8U SMIActionResult;
++}PACKED SMIActionResult_T;
++
++typedef struct _CPU_INFO_STRUCT {
++	INT8U   type;
++	INT16U  freq;
++
++} CPU_INFO;
++
++#define DIMM_VOLTAGE_TYPE_BIT  0x80
++typedef struct _DIMM_INFO_STRUCT {
++	// [7] 1b : Low Voltage 0b: Normal Voltage
++	// [6:4]  : Reserved
++	// [3:0]  : DIMM Type
++	INT8U   type;
++	INT16U  freq;
++	INT16U  size;
++
++} DIMM_INFO;
++
++typedef struct _SYS_CFG_STRUCT {
++	CPU_INFO    cpu_info[SYS_BOARD_CPU_NUM];
++	DIMM_INFO   dimm_info[SYS_BOARD_DIMM_NUM];
++	BIOS_OS_WD	wdInfo;
++	SMICommandData_T smiCommabndData;
++	SMIActionResult_T smiActionResult;
++	INT8U       bios_ver[LEN_BIOS_VER];
++	INT8U		post_state;
++	INT8U       ac_lost[LEN_AC_LOST];
++	INT8U	    t_control;
++	HOSTMAC_INFO hostmac_info[SYS_BOARD_HOSTMAC_NUM];
++	INT8U	    ncsi_channel;
++	INT8U     bmc_version[LEN_BMC_VER];
++} PACKED SYS_CFG;
++
++#endif

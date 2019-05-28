@@ -1,0 +1,35 @@
+Source : cpld_hw
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Robin Chiu (RobinChiu@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : cpld_hw
+Build-Depends : Crosscc, kernel_dev, rules, reset_driver_dev, jtag_driver_dev, jtag_hw_dev
+Architecture : ARM
+SOC : AST
+Urgency : high
+Description : This package contains cpld device related sources.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : cpld_hw
+Config-Tag : CPLD Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, jtag, jtag_hw
+Required : reset
+Description : This package contains cpld device related sources.
+.
+

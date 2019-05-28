@@ -1,0 +1,243 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:		sshd
+# Required-Start:	$remote_fs $syslog
+# Required-Stop:	$remote_fs $syslog
+# Default-Start:	2 3 4 5
+# Default-Stop:		1
+# Short-Description:	OpenBSD Secure Shell server
+### END INIT INFO
+
+PORT_VAL_BYTE=2147483647
+set -e
+
+# /etc/init.d/ssh: start and stop the OpenBSD "secure shell(tm)" daemon
+
+test -x /usr/sbin/sshd || exit 0
+( /usr/sbin/sshd -\? 2>&1 | grep -q OpenSSH ) 2>/dev/null || exit 0
+
+export SSHD_OOM_ADJUST=-17
+if test -f /etc/default/ssh; then
+    . /etc/default/ssh
+fi
+
+. /lib/lsb/init-functions
+
+if [ -n "$2" ]; then
+    SSHD_OPTS="$SSHD_OPTS $2"
+fi
+
+# Are we running from init?
+run_by_init() {
+    ([ "$previous" ] && [ "$runlevel" ]) || [ "$runlevel" = S ]
+}
+
+#check service state with ncml conf
+SERVICE_NAME="[ssh]"
+SERVICE_CONF="/conf/ncml.conf"
+
+#test -f $SERVICE_CONF || exit 0
+
+#check service state if enabled
+check_service_enabled()
+{
+	if [ -f $SERVICE_CONF ];
+	then
+	
+		SERVICE_STATE=`cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+								   awk 'BEGIN {FS="="} /current_state/ {print $2 }'       | 
+								   awk 'NR==1 {print $0}'`
+
+		if [ $SERVICE_STATE == 0 ];
+		then
+			echo $SERVICE_NAME is disabled
+			exit 1
+#		else
+#			echo $SERVICE_NAME is enabled   
+		fi
+		
+#	else
+#		echo "$SERVICE_CONF doesn't exist"
+    fi			
+}
+
+check_for_no_start() {
+    check_service_enabled
+    
+    # forget it if we're trying to start, and /etc/ssh/sshd_not_to_be_run exists
+    if [ -e /etc/ssh/sshd_not_to_be_run ]; then 
+	if [ "$1" = log_end_msg ]; then
+	    log_end_msg 0
+	fi
+	if ! run_by_init; then
+	    log_action_msg "OpenBSD Secure Shell server not in use (/etc/ssh/sshd_not_to_be_run)"
+	fi
+	exit 0
+    fi
+}
+
+check_dev_null() {
+    if [ ! -c /dev/null ]; then
+	if [ "$1" = log_end_msg ]; then
+	    log_end_msg 1 || true
+	fi
+	if ! run_by_init; then
+	    log_action_msg "/dev/null is not a character device!"
+	fi
+	exit 1
+    fi
+}
+
+check_privsep_dir() {
+    # Create the PrivSep empty dir if necessary
+    if [ ! -d /var/run/sshd ]; then
+	mkdir /var/run/sshd
+	chmod 0755 /var/run/sshd
+    fi
+}
+
+check_config() {
+    if [ ! -e /etc/ssh/sshd_not_to_be_run ]; then
+	/usr/sbin/sshd -t || exit 1
+    fi
+}
+
+#
+# Ractrends SP 4.0 : Create the ssh keys if not exist (Normally first time)
+#
+check_keys() {
+	if [ ! -f "/etc/ssh/ssh_host_rsa_key" ]
+	then 
+		/usr/bin/ssh-keygen -q -t rsa -f /etc/ssh/ssh_host_rsa_key -N ""
+	fi
+	if [ ! -f "/etc/ssh/ssh_host_dsa_key" ]
+	then
+		/usr/bin/ssh-keygen -q -t dsa -f /etc/ssh/ssh_host_dsa_key -N ""
+	fi
+}
+
+get_service_port()
+{
+    if [ -f $SERVICE_CONF ];
+    then
+        PORT=$((PORT_VAL_BYTE & `cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+                           awk 'BEGIN {FS="="} /secure_port/ {print $2 }'       | 
+                          awk 'NR==1 {print $0}'`))
+        if [[ $PORT -le 0 || $PORT -eq $PORT_VAL_BYTE ]];
+        then
+         	PORT=$((PORT_VAL_BYTE & `cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+                            awk 'BEGIN {FS="="} /nonscecure_port/ {print $2 }'       | 
+                            awk 'NR==1 {print $0}'`))
+        	echo "Secure port is disabled for $SERVICE_NAME"
+            if [[ $PORT -le 0 || $PORT -eq $PORT_VAL_BYTE ]];
+            then
+                echo "Non-Secure Port is also disabled for $SERVICE_NAME"
+                exit 1
+            else
+                echo "Non-Secure Port is enabled for $SERVICE_NAME with $PORT"
+            fi
+        
+#        else
+#            echo "Secure Port is enabled for $SERVICE_NAME with $PORT"
+        fi
+#    else
+#        echo "$SERVICE_CONF doesn't exist"
+    fi
+}
+
+export PATH="${PATH:+$PATH:}/usr/sbin:/sbin"
+
+case "$1" in
+  start)
+    	PORT=22
+	check_privsep_dir
+	check_for_no_start
+	check_dev_null
+	# Ractrends SP 4.0 : Check for key and create if not exist 
+	check_keys
+    	get_service_port
+	log_daemon_msg "Starting OpenBSD Secure Shell server" "sshd"
+	if start-stop-daemon --start --quiet --oknodo --pidfile /var/run/sshd.pid --exec /usr/sbin/sshd -- -p $PORT -f /etc/ssh/sshd_config $SSHD_OPTS; then
+	    log_end_msg 0
+	else
+	    log_end_msg 1
+	fi
+	;;
+  stop)
+	log_daemon_msg "Stopping OpenBSD Secure Shell server" "sshd"
+	if start-stop-daemon --stop --quiet --oknodo --pidfile /var/run/sshd.pid; then
+	    #killall -9 sshd
+	    log_end_msg 0
+	else
+	    log_end_msg 1
+	fi
+	;;
+
+  reload|force-reload)
+	check_for_no_start
+	check_config
+	log_daemon_msg "Reloading OpenBSD Secure Shell server's configuration" "sshd"
+	if start-stop-daemon --stop --signal 1 --quiet --oknodo --pidfile /var/run/sshd.pid --exec /usr/sbin/sshd -f /etc/ssh/sshd_config; then
+	    log_end_msg 0
+	else
+	    log_end_msg 1
+	fi
+	;;
+
+  restart)
+    PORT=0
+	check_privsep_dir
+	check_config
+	log_daemon_msg "Restarting OpenBSD Secure Shell server" "sshd."
+	start-stop-daemon --stop --quiet --oknodo --retry 30 --pidfile /var/run/sshd.pid
+	check_for_no_start log_end_msg
+	check_dev_null log_end_msg
+    get_service_port
+	start-stop-daemon --start --quiet --oknodo --pidfile /var/run/sshd.pid --exec /usr/sbin/sshd -- -p $PORT -f /etc/ssh/sshd_config $SSHD_OPTS
+	;;
+
+  try-restart)
+	check_privsep_dir
+	check_config
+	log_daemon_msg "Restarting OpenBSD Secure Shell server" "sshd"
+	set +e
+	start-stop-daemon --stop --quiet --retry 30 --pidfile /var/run/sshd.pid
+	RET="$?"
+	set -e
+	case $RET in
+	    0)
+		# old daemon stopped
+		PORT=0
+		check_for_no_start log_end_msg
+		check_dev_null log_end_msg
+		get_service_port
+		if start-stop-daemon --start --quiet --oknodo --pidfile /var/run/sshd.pid --exec /usr/sbin/sshd -- -p $PORT -f /etc/ssh/sshd_config $SSHD_OPTS; then
+		    log_end_msg 0
+		else
+		    log_end_msg 1
+		fi
+		;;
+	    1)
+		# daemon not running
+		log_progress_msg "(not running)"
+		log_end_msg 0
+		;;
+	    *)
+		# failed to stop
+		log_progress_msg "(failed to stop)"
+		log_end_msg 1
+		;;
+	esac
+	;;
+
+  status)
+	status_of_proc -p /var/run/sshd.pid /usr/sbin/sshd sshd && exit 0 || exit $?
+	;;
+
+  *)
+	log_action_msg "Usage: /etc/init.d/ssh {start|stop|reload|force-reload|restart|try-restart|status}"
+	exit 1
+esac
+
+exit 0

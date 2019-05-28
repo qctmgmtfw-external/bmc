@@ -1,0 +1,12 @@
+#!bin/sh
+
+# param 1 : timeout
+# param 2 : File with path to create 
+
+# Create timeoutd conf file
+let timeout=`printf %d $1`
+# echo timeout : $timeout
+# echo path : $2
+echo Al:*:*:*:$timeout:0:0:0 > $2
+
+exit 0

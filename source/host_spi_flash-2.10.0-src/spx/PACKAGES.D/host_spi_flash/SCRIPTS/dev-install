@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+    	MAKE_CHAR_NODE host_spi_flash0 153 0
+	ADD_MODULES host_spi_flash
+
+debug-install:

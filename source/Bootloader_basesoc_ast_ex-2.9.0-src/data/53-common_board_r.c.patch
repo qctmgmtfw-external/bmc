@@ -1,0 +1,67 @@
+--- uboot_org/common/board_r.c	2016-01-07 20:47:14.023984527 +0800
++++ uboot/common/board_r.c	2016-01-07 20:42:25.883983134 +0800
+@@ -72,6 +72,7 @@
+ #if defined(CONFIG_POWER_RESTORE_POLICY)
+ #include "ast_hw.h"
+ #include "QuantaFeature.h"
++#include <i2c.h>
+ #endif
+ 
+ DECLARE_GLOBAL_DATA_PTR;
+@@ -709,6 +710,48 @@
+ extern void eeprom_init  (void);
+ extern void i2c_recovery(void);
+ 
++static int initr_fan_duty(void)
++{
++    unsigned int ast_reg = 0;
++    uchar buffer[1];
++
++    printf ("[%s, %s, %d] \n", __FILE__, __FUNCTION__, __LINE__);
++
++    ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x20);	// F06 power good is GPIO_E2
++    if ( (ast_reg & 0x00000004) )
++    {
++        printf("Sytem is power on\n");
++
++        i2c_set_bus_num(8);
++        buffer[0] = 0x08;
++        //Enable ch3 of I2C switch (0x74[7bits], 0xE8[8bits])
++        i2c_write(0x74, 0x00, 0x00, buffer, 0x01);
++        //Setting W83795 to bank 2
++        buffer[0] = 0x02;
++        i2c_write(0x2f, 0x00, 0x01, buffer, 0x01);
++        //Setting the F1OV~F8OV of W83795 to 0xff
++        buffer[0] = 0xff;
++        i2c_write(0x2f, 0x10, 0x01, buffer, 0x01);
++        buffer[0] = 0xff;
++        i2c_write(0x2f, 0x11, 0x01, buffer, 0x01);
++        buffer[0] = 0xff;
++        i2c_write(0x2f, 0x12, 0x01, buffer, 0x01);
++        buffer[0] = 0xff;
++        i2c_write(0x2f, 0x13, 0x01, buffer, 0x01);
++        buffer[0] = 0xff;
++        i2c_write(0x2f, 0x14, 0x01, buffer, 0x01);
++        buffer[0] = 0xff;
++        i2c_write(0x2f, 0x15, 0x01, buffer, 0x01);
++        buffer[0] = 0xff;
++        i2c_write(0x2f, 0x16, 0x01, buffer, 0x01);
++        buffer[0] = 0xff;
++        i2c_write(0x2f, 0x17, 0x01, buffer, 0x01);
++    }
++    
++
++	return 0;
++}
++
+ static int initr_pwr_policy(void)
+ {
+ 
+@@ -1164,6 +1207,7 @@
+ #endif
+ #if defined(CONFIG_POWER_RESTORE_POLICY)
+ 	initr_pwr_policy,
++	initr_fan_duty,
+ #endif
+ 	run_main_loop,
+ };

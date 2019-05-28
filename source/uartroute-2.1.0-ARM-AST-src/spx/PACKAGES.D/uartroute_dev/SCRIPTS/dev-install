@@ -1,0 +1,6 @@
+# Install Script
+build-install:
+	MKDIR_NOCLEAN %SPXINC/uartroute
+	COPY_DIR ./ %SPXINC/uartroute
+
+debug-install:

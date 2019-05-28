@@ -1,0 +1,14 @@
+--- linux/net/ipv6/addrconf.c	2015-12-02 15:29:37.423898354 +0800
++++ linux_new/net/ipv6/addrconf.c	2015-12-02 15:30:57.879898743 +0800
+@@ -205,9 +205,9 @@
+ 	.forwarding		= 0,
+ 	.hop_limit		= IPV6_DEFAULT_HOPLIMIT,
+ 	.mtu6			= IPV6_MIN_MTU,
+-	.accept_ra		= 1,
++	.accept_ra		= 0,
+ 	.accept_redirects	= 1,
+-	.autoconf		= 1,
++	.autoconf		= 0,
+ 	.force_mld_version	= 0,
+ 	.mldv1_unsolicited_report_interval = 10 * HZ,
+ 	.mldv2_unsolicited_report_interval = HZ,

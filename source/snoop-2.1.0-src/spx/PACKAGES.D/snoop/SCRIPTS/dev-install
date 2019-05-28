@@ -1,0 +1,15 @@
+# Install Script
+
+build-install:
+			COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+			ADD_MODULES snoop
+			MAKE_CHAR_NODE snoop0 44 0
+			MAKE_CHAR_NODE snoop1 44 1
+			MAKE_CHAR_NODE snoop2 44 2
+			MAKE_CHAR_NODE snoop3 44 3
+			MAKE_CHAR_NODE snoop4 44 4
+			MAKE_CHAR_NODE snoop5 44 5
+			MAKE_CHAR_NODE snoop6 44 6
+			MAKE_CHAR_NODE snoop7 44 7
+
+debug-install:

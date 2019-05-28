@@ -1,0 +1,11 @@
+--- linux.pristine/drivers/mtd/Kconfig	2013-12-12 01:34:28.000000000 -0500
++++ linux-amiext/drivers/mtd/Kconfig	2014-02-03 15:10:59.923029098 -0500
+@@ -311,6 +311,8 @@
+ 
+ source "drivers/mtd/chips/Kconfig"
+ 
++source "drivers/mtd/spichips/Kconfig"
++
+ source "drivers/mtd/maps/Kconfig"
+ 
+ source "drivers/mtd/devices/Kconfig"

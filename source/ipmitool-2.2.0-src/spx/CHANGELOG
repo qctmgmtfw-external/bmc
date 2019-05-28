@@ -1,0 +1,257 @@
+Package: ipmitool (2.2.0); urgency = medium
+
+Abstract:
+	Fixed memory leak in ipmitool
+
+Files Modified: data/lib/ipmi_user.c
+
+--Submitter: Tamil Kumaran S (tamilkumarans@amiindia.co.in) Mon, 29 Dec 2014 13:33:11 HMT
+
+Package: ipmitool (2.1.0); urgency = medium
+
+Abstract:
+	Fixed Memory Leakin ipmitool
+
+Files Modified: data/lib/ipmi_fru.c, data/lib/ipmi_main.c, data/lib/ipmi_sdr.c, data/src/plugins/lan/lan.c, data/src/plugins/lanplus/lanplus.c, data/src/plugins/lanplus/lanplus_crypt.c
+
+--Submitter: Tamil Kumaran S (tamilkumarans@amiindia.co.in) Mon, 17 Nov 2014 17:24:41 HMT
+
+Package: ipmitool (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:00:36 GMT
+
+Package: ipmitool (1.24.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:44:11 GMT
+
+Package: ipmitool (1.23.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:53:55 GMT
+
+Package: ipmitool (1.22.0); urgency = medium
+
+Abstract:
+	Adding ipmimain to Depends.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Mon, 13 Jan 2014 15:43:42 EST
+
+Package: ipmitool (1.21.0); urgency = medium
+
+Abstract:
+	Added UDS bridging support in ipmitool
+
+Files Modified: data/src/plugins/lan/lan.c, data/src/plugins/lanplus/lanplus.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 29 Nov 2013 11:29:34 CST
+
+Package: ipmitool (1.20.0); urgency = medium
+
+Abstract:
+	Passing the correct Authentication flag.
+Fixed Unable to Send RAW Command error if the reponse data is none.
+
+Files Modified: data/lib/ipmi_main.c, data/src/plugins/lan/lan.c, data/src/plugins/lanplus/lanplus.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 27 Nov 2013 17:52:50 CST
+
+Package: ipmitool (1.19.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: data/Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:29:21 EDT
+
+Package: ipmitool (1.18.0); urgency = medium
+
+Abstract:
+	Replaced MD5 Init,Update and Final API's with openssl higher level EVP API's to avoid licensing issue
+
+Files Modified: data/Makefile, data/src/plugins/lan/auth.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 29 Jul 2013 16:40:59 CST
+
+Package: ipmitool (1.17.0); urgency = medium
+
+Abstract:
+	Disabling MD2 as openssl version 1.0.1e does not support due to security reasons.
+
+Files Modified: data/config.h
+
+--Submitter: Winston (winstont@ami.com) Tue, 21 May 2013 20:18:04 EDT
+
+Package: ipmitool (1.16.0); urgency = medium
+
+Abstract:
+	Resolved the Binary package dependency of ipmitool on libencryption
+
+Files Modified: spx/INFO
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Thu, 21 Jun 2012 16:20:47 IST
+
+Package: ipmitool (1.15.0); urgency = medium
+
+Abstract:
+	License contamination for libipmi
+
+Files Modified: data/Makefile
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Tue, 19 Jun 2012 10:43:27 IST
+
+Package: ipmitool (1.14.0); urgency = low
+
+Abstract:
+	Fix the bug that ipmitool shows "Unrecognized option" for mc command even user type the corrent argument.
+
+Files Modified: data/lib/ipmi_mc.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 08 Jun 2012 10:27:58 CST
+
+Package: ipmitool (1.13.0); urgency = medium
+
+Abstract:
+	Linking ImageTree directory for libraries instead of target directory.
+
+Files Modified: data/Makefile
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 02 May 2012 16:01:58 IST
+
+Package: ipmitool (1.12.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/lib/helper.c, data/lib/ipmi_channel.c, data/lib/ipmi_ekanalyzer.c, data/lib/ipmi_firewall.c, data/lib/ipmi_fru.c, data/lib/ipmi_hpmfwupg.c, data/lib/ipmi_mc.c, data/lib/ipmi_pef.c, data/lib/ipmi_sdr.c, data/lib/ipmi_sel.c, data/lib/ipmi_sensor.c, data/lib/ipmi_sol.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 22:50:41 EDT
+
+Package: ipmitool (1.11.0); urgency = medium
+
+Abstract:
+	Passing Server IP Address as Null
+
+Files Modified: data/lib/ipmi_main.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 23 Jan 2012 17:37:51 IST
+
+Package: ipmitool (1.10.0); urgency = medium
+
+Abstract:
+	BUild error fixed for BIN,PDKBIN.GPLBIN,PDKGPLBIN Build
+
+Files Modified: spx/INFO
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 07 Dec 2011 15:22:09 IST
+
+Package: ipmitool (1.9.0); urgency = medium
+
+Abstract:
+	Fixes for 64 Bit
+
+Files Modified: data/lib/ipmi_fru.c, data/lib/ipmi_fwum.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Sep 2011 10:33:56 EDT
+
+Package: ipmitool (1.8.0); urgency = high
+
+Abstract:
+	Updating the SourceLicense, PackageLicense & Binary License to GPL-v2
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 15:49:46 EDT
+
+Package: ipmitool (1.7.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:27:45 EDT
+
+Package: ipmitool (1.6.0); urgency = high
+
+Abstract:
+	Modified the IPMItool license from AMI to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 13 Apr 2011 14:22:22 EDT
+
+Package: ipmitool (1.5.0); urgency = high
+
+Abstract:
+	Optimized the ipmitool uds sesssion creation
+
+Files Modified: data/lib/ipmi_main.c, data/src/plugins/lan/lan.c, data/src/plugins/lanplus/lanplus.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Mar 2011 20:11:41 EDT
+
+Package: ipmitool (1.4.0); urgency = high
+
+Abstract:
+	Updated authentication in ipmitool
+
+Files Modified: data/src/plugins/lan/lan.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Mar 2011 15:39:35 EDT
+
+Package: ipmitool (1.3.0); urgency = high
+
+Abstract:
+	handled the warnings & errors with the new compiler
+
+Files Modified: data/include/ipmitool/ipmi_fru.h, data/include/ipmitool/ipmi_hpmfwupg.h, data/include/ipmitool/ipmi_raw.h, data/include/ipmitool/ipmi_sdr.h, data/lib/ipmi_chassis.c, data/lib/ipmi_ekanalyzer.c, data/lib/ipmi_fru.c, data/lib/ipmi_fwum.c, data/lib/ipmi_gendev.c, data/lib/ipmi_hpmfwupg.c, data/lib/ipmi_isol.c, data/lib/ipmi_main.c, data/lib/ipmi_picmg.c, data/lib/ipmi_sdr.c, data/lib/ipmi_sdradd.c, data/lib/ipmi_sel.c, data/src/plugins/lan/lan.c, data/src/plugins/lanplus/lanplus.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Mar 2011 12:18:29 EDT
+
+Package: ipmitool (1.2.0); urgency = high
+
+Abstract:
+	Updated the Rules to install properly.
+
+Files Modified: spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 15 Mar 2011 19:03:22 EDT
+
+Package: ipmitool (1.1.0); urgency = high
+
+Abstract:
+	Updated the build depends
+
+Files Added: spx/PACKAGES.D/ipmitool, spx/PACKAGES.D/ipmitool/DATA, spx/PACKAGES.D/ipmitool/SCRIPTS, spx/PACKAGES.D/ipmitool/SCRIPTS/dev-install
+Files Deleted: spx/PACKAGES.D/IPMITool, spx/PACKAGES.D/IPMITool/DATA, spx/PACKAGES.D/IPMITool/SCRIPTS, spx/PACKAGES.D/IPMITool/SCRIPTS/dev-install
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 15 Mar 2011 18:53:25 EDT
+
+Package: ipmitool (1.0.0); urgency = new
+
+Abstract:
+	Contains the IPMITool modified to run with AMI SP-X Stack
+
+Files Added: data, data/Makefile, data/config.h, data/include, data/include/ipmitool, data/include/ipmitool/bswap.h, data/include/ipmitool/helper.h, data/include/ipmitool/ipmi.h, data/include/ipmitool/ipmi_cc.h, data/include/ipmitool/ipmi_channel.h, data/include/ipmitool/ipmi_chassis.h, data/include/ipmitool/ipmi_constants.h, data/include/ipmitool/ipmi_ekanalyzer.h, data/include/ipmitool/ipmi_entity.h, data/include/ipmitool/ipmi_event.h, data/include/ipmitool/ipmi_firewall.h, data/include/ipmitool/ipmi_fru.h, data/include/ipmitool/ipmi_fwum.h, data/include/ipmitool/ipmi_gendev.h, data/include/ipmitool/ipmi_hpmfwupg.h, data/include/ipmitool/ipmi_intf.h, data/include/ipmitool/ipmi_isol.h, data/include/ipmitool/ipmi_kontronoem.h, data/include/ipmitool/ipmi_lanp.h, data/include/ipmitool/ipmi_main.h, data/include/ipmitool/ipmi_mc.h, data/include/ipmitool/ipmi_oem.h, data/include/ipmitool/ipmi_pef.h, data/include/ipmitool/ipmi_picmg.h, data/include/ipmitool/ipmi_raw.h, data/include/ipmitool/ipmi_sdr.h, data/include/ipmitool/ipmi_sel.h, data/include/ipmitool/ipmi_sensor.h, data/include/ipmitool/ipmi_session.h, data/include/ipmitool/ipmi_sol.h, data/include/ipmitool/ipmi_strings.h, data/include/ipmitool/ipmi_sunoem.h, data/include/ipmitool/ipmi_tsol.h, data/include/ipmitool/ipmi_user.h, data/include/ipmitool/log.h, data/lib, data/lib/dimm_spd.c, data/lib/helper.c, data/lib/ipmi_channel.c, data/lib/ipmi_chassis.c, data/lib/ipmi_ekanalyzer.c, data/lib/ipmi_event.c, data/lib/ipmi_firewall.c, data/lib/ipmi_fru.c, data/lib/ipmi_fwum.c, data/lib/ipmi_gendev.c, data/lib/ipmi_hpmfwupg.c, data/lib/ipmi_isol.c, data/lib/ipmi_kontronoem.c, data/lib/ipmi_lanp.c, data/lib/ipmi_main.c, data/lib/ipmi_mc.c, data/lib/ipmi_oem.c, data/lib/ipmi_pef.c, data/lib/ipmi_picmg.c, data/lib/ipmi_raw.c, data/lib/ipmi_sdr.c, data/lib/ipmi_sdradd.c, data/lib/ipmi_sel.c, data/lib/ipmi_sensor.c, data/lib/ipmi_session.c, data/lib/ipmi_sol.c, data/lib/ipmi_strings.c, data/lib/ipmi_sunoem.c, data/lib/ipmi_tsol.c, data/lib/ipmi_user.c, data/lib/log.c, data/src, data/src/ipmishell.c, data/src/ipmitool.c, data/src/plugins, data/src/plugins/ipmi_intf.c, data/src/plugins/lan, data/src/plugins/lan/asf.h, data/src/plugins/lan/auth.c, data/src/plugins/lan/auth.h, data/src/plugins/lan/lan.c, data/src/plugins/lan/lan.h, data/src/plugins/lan/md5.c, data/src/plugins/lan/md5.h, data/src/plugins/lan/rmcp.h, data/src/plugins/lanplus, data/src/plugins/lanplus/asf.h, data/src/plugins/lanplus/lanplus.c, data/src/plugins/lanplus/lanplus.h, data/src/plugins/lanplus/lanplus_crypt.c, data/src/plugins/lanplus/lanplus_crypt.h, data/src/plugins/lanplus/lanplus_crypt_impl.c, data/src/plugins/lanplus/lanplus_crypt_impl.h, data/src/plugins/lanplus/lanplus_dump.c, data/src/plugins/lanplus/lanplus_dump.h, data/src/plugins/lanplus/lanplus_strings.c, data/src/plugins/lanplus/rmcp.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/IPMITool, spx/PACKAGES.D/IPMITool/DATA, spx/PACKAGES.D/IPMITool/SCRIPTS, spx/PACKAGES.D/IPMITool/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 15 Mar 2011 18:46:24 EDT
+

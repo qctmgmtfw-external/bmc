@@ -1,0 +1,24 @@
+Source                   	:	opensslapp_common
+Version : 2.1.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Winston  (winstont@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	UNKNOWN
+Source-Version           	:	1.0.0
+Builds                   	:	opensslapp_common
+Build-Depends            	:	libunix_dev
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	openssl app to generate and view the SSL certificates for openssl version 1.0.1e.
+.
+
+Package                  	:	opensslapp_common
+Section                  	:	app
+Group                    	:	TESTTOOL
+Essential                	:	NO
+Required                 	:	libunix
+Description              	:	openssl app to generate and view the SSL certificates for openssl of version 1.0.1e.
+.
+

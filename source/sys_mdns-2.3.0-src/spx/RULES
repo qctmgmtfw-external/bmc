@@ -1,0 +1,19 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+	CREATE_SYS_TREE %BUILD/%PACKAGE/spx/RULES.D %BUILD/%PACKAGE/data/tree %BUILD/%PACKAGE/data/defaults
+
+
+#Clean Source
+clean_source:
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+
+# Rules to create sys_mdns package
+build_package-sys_mdns:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+	PACK_SPX  ./   %BUILD/%PACKAGE/data/tree
+	

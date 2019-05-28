@@ -1,0 +1,377 @@
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------AST2400EVB Configuration -------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+#ifndef __AST2400EVB_H__
+#define __AST2400EVB_H__
+
+#include <configs/board.cfg>
+#include <configs/ast.cfg>
+#include <configs/common.cfg>
+
+/* File Systems to be suported */
+#define CONFIG_FS_FAT		1
+#define CONFIG_CMD_FAT		1
+#define CONFIG_CMD_EXT2		1
+#define CONFIG_CMD_EXT4		1
+#define CONFIG_FS_EXT2		1
+#define CONFIG_FS_EXT4		1
+#define CONFIG_FS_GENERIC	1
+
+/* Overerride defaults */
+#undef DEBUG
+#undef CONFIG_SYS_ALT_MEMTEST
+
+/* Override ethernet address (if needed)*/
+//#define	CONFIG_ETHADDR					00:00:00:00:00:00	/* Ethernet MAC0 Address 		*/
+//#define	CONFIG_ETH1ADDR					00:00:00:00:00:00	/* Ethernet MAC1 Address 		*/
+
+/* Fixed values for board */
+#define	CONFIG_BOARD_NAME				"AST2400EVB"
+#define	CONFIG_CONS_INDEX				5 		
+#define	CONFIG_AST2400					1				
+#define CONFIG_AST2400EVB				1
+
+#define CONFIG_BOOTFILE					rom.ima
+#define CONFIG_SERVERIP					10.10.217.218
+#define CONFIG_IPADDR					10.10.217.211
+#define CONFIG_GATEWAYIP				10.10.10.204
+#define CONFIG_NETMASK					255.255.0.0
+
+#define CONFIG_BOARDID					FF
+        
+#define CONFIG_FWU_ALL					tftp 42000000; protect off all; erase all; cp.b 42000000 20000000 2000000
+#define CONFIG_FWU_BOOT					tftp 42000000; protect off all; erase 14000000 1403ffff; cp.b 42000000 20000000 40000
+#define CONFIG_FWU_OS					tftp 42000000; protect off all; erase 14140000 1533ffff; cp.b 42140000 20140000 1200000
+
+/*---------------------------------------------------------------
+ * EEPROM (AT24C128) configuration
+ *---------------------------------------------------------------
+ */
+#define CONFIG_CMD_EEPROM		1 	/* EEPROM Support 				*/
+#ifdef CONFIG_CMD_EEPROM
+#define CONFIG_SYS_I2C_BUS					CONFIG_SPX_FEATURE_GLOBAL_UBOOT_ENABLE_I2C_BUS
+#define CONFIG_SYS_EEPROM_ADDR				0x54
+#define	CONFIG_SYS_I2C_EEPROM_ADDR_LEN		2
+#define CONFIG_EEPROM_PAGE_WRITE_BITS		6		/* 64-byte pages		*/
+#define CONFIG_EEPROM_PAGE_WRITE_ENABLE
+#define CONFIG_EEPROM_PAGE_WRITE_DELAY_MS	10		/* 10 mS */
+#endif
+
+/*---------------------------------------------------------------
+ * 				Network Configuration
+ *--------------------------------------------------------------*/
+#define CONFIG_MACADDR_IN_EEPROM
+#define CONFIG_EEPROM_MACADDR_OFFSET	6160 /* GUID_EEPROM_OFFSET (6k+16) */
+#define CONFIG_EEPROM_MAC1ADDR_OFFSET	6166 /* CFG_EEPROM_MACADDR_OFFSET + 6 */
+
+
+/* BigPhys Area*/
+#ifdef CONFIG_SPX_FEATURE_GLOBAL_FRAME_BUFFER_SUPPORT
+#define	CONFIG_BIGPHYSAREA			"8192"
+#else
+#define	CONFIG_BIGPHYSAREA			"6144"
+#endif
+
+/* Yafu Image downloading locations */
+#define YAFU_IMAGE_UPLOAD_LOCATION	(0x42000000)  
+#define YAFU_TEMP_SECTOR_BUFFER     (0x44000000)
+
+/* Defaut Memory Test Range	*/
+#define CONFIG_SYS_MEMTEST_START  	0x41000000 	
+#define CONFIG_SYS_MEMTEST_END    	0x45000000 
+
+
+/*----------------------------------------------------------
+ * Board ID
+ *----------------------------------------------------------
+ */
+#define CONFIG_BOARDID_IN_EEPROM
+#define CFG_EEPROM_FRU_OFFSET  0
+
+/*----------------------------------------------------------
+ * QUANTA_OEM_INIT
+ *----------------------------------------------------------
+ */
+
+/*
+ * This macro will be called by board_init()
+ * We can config multi-function pin and GPIO pin here.
+ *
+ */
+
+#define QUANTA_OEM_INIT \
+	do {																									\
+		unsigned long  reg32;																				\
+																											\
+		/* config Hardware Trapping reg SCU70 */															\
+		reg32 = *((volatile u_long *) 0x1e6e2070);															\
+		reg32 = reg32 & ~(1<<22);  /* Enable GPIOE pass-through mode */										\
+		*((volatile u_long *) 0x1e6e2070) = reg32;															\
+																											\
+		/* SCU80 Multi-function Pin Control #1 = 0x00000000 => 0x00000000 */								\
+		reg32 = *((volatile u_long *) 0x1e6e2080);															\
+		reg32 = reg32 & ~(1<<31);  /* Enable UART4 RXD4                */									\
+		reg32 = reg32 & ~(1<<30);  /* Enable UART4 TXD4                */									\
+		reg32 = reg32 & ~(1<<29);  /* Enable UART4 NRTS4               */									\
+		reg32 = reg32 & ~(1<<28);  /* Enable UART4 NDTR4               */									\
+		reg32 = reg32 & ~(1<<27);  /* Enable UART4 NRI4                */									\
+		reg32 = reg32 & ~(1<<26);  /* Enable UART4 NDSR4               */									\
+		reg32 = reg32 & ~(1<<25);  /* Enable UART4 NDCD4               */									\
+		reg32 = reg32 & ~(1<<24);  /* Enable UART4 NCTS4               */									\
+		reg32 = reg32 & ~(1<<23);  /* Enable UART3 RXD3                */									\
+		reg32 = reg32 & ~(1<<22);  /* Enable UART3 TXD3                */									\
+		reg32 = reg32 & ~(1<<21);  /* Enable UART3 NRTS3               */									\
+		reg32 = reg32 & ~(1<<20);  /* Enable UART3 NDTR3               */									\
+		reg32 = reg32 & ~(1<<19);  /* Enable UART3 NRI3                */									\
+		reg32 = reg32 & ~(1<<18);  /* Enable UART3 NDSR3               */									\
+		reg32 = reg32 & ~(1<<17);  /* Enable UART3 NDCD3               */									\
+		reg32 = reg32 & ~(1<<16);  /* Enable UART3 NCTS3               */									\
+		reg32 = reg32 & ~(1<<15);  /* Reserved, must keep at value '0' */									\
+		reg32 = reg32 & ~(1<<14);  /* Enable LPC LPCPME#               */									\
+		reg32 = reg32 & ~(1<<13);  /* Enable LPC LPCPD#/LPCSMI#        */									\
+		reg32 = reg32 & ~(1<<12);  /* Enable LPC LPCRST#               */									\
+		reg32 = reg32 & ~(1<<11);  /* Enable SALT4                     */									\
+		reg32 = reg32 & ~(1<<10);  /* Enable SALT3                     */									\
+		reg32 = reg32 & ~(1<<9);   /* Enable SALT2                     */									\
+		reg32 = reg32 & ~(1<<8);   /* Enable SALT1                     */									\
+		reg32 = reg32 & ~(1<<7);   /* Enable Timer8 Pulse output       */									\
+		reg32 = reg32 & ~(1<<6);   /* Enable Timer7 Pulse output       */									\
+		reg32 = reg32 & ~(1<<5);   /* Enable Timer6 Pulse output       */									\
+		reg32 = reg32 & ~(1<<4);   /* Enable Timer5 Pulse output       */									\
+		reg32 = reg32 & ~(1<<3);   /* Enable Timer4 Pulse output       */									\
+		reg32 = reg32 & ~(1<<2);   /* Enable Timer3 Pulse output       */									\
+		reg32 = reg32 & ~(1<<1);   /* Enable MAC2LINK input            */									\
+		reg32 = reg32 & ~(1<<0);   /* Enable MAC1LINK input            */									\
+		*((volatile u_long *) 0x1e6e2080) = reg32;															\
+																											\
+		/* SCU84 Multi-function Pin Control #2 = 0x0000F000 => 0xFFFFFB00 */								\
+		reg32 = *((volatile u_long *) 0x1e6e2084);															\
+		reg32 = reg32 | (1<<31);   /* Enable UART2 RXD1 or VPB9         */									\
+		reg32 = reg32 | (1<<30);   /* Enable UART2 TXD1 or VPB8         */									\
+		reg32 = reg32 & ~(1<<29);   /* Enable UART2 NRTS1 or VPB7        */									\
+		reg32 = reg32 | (1<<28);   /* Enable UART2 NDTR1 or VPB6        */									\
+		reg32 = reg32 | (1<<27);   /* Enable UART2 NRI1 or VPB5         */									\
+		reg32 = reg32 | (1<<26);   /* Enable UART2 NDSR1 or VPB4        */									\
+		reg32 = reg32 | (1<<25);   /* Enable UART2 NDCD1 or VPB3        */									\
+		reg32 = reg32 & ~(1<<24);   /* Enable UART2 NCTS1 or VPB2        */									\
+		reg32 = reg32 | (1<<23);   /* Enable UART1 RXD1 or VPB1         */									\
+		reg32 = reg32 | (1<<22);   /* Enable UART1 TXD1 or VPB0         */									\
+		reg32 = reg32 & ~(1<<21);   /* Enable UART1 NRTS1 or VPCLK       */									\
+		reg32 = reg32 | (1<<20);   /* Enable UART1 NDTR1 or VPVS        */									\
+		reg32 = reg32 | (1<<19);   /* Enable UART1 NRI1 or VPHS         */									\
+		reg32 = reg32 | (1<<18);   /* Enable UART1 NDSR1 or VPODD       */									\
+		reg32 = reg32 | (1<<17);   /* Enable UART1 NDCD1 or VPDE        */									\
+		reg32 = reg32 & ~(1<<16);   /* Enable UART1 NCTS1                */									\
+		reg32 = reg32 | (1<<15);   /* Enable VGA/CRT DDCDAT output      */									\
+		reg32 = reg32 | (1<<14);   /* Enable VGA/CRT DDCCLK output      */									\
+		reg32 = reg32 | (1<<13);   /* Enable VGA/CRT VGAVS output       */									\
+		reg32 = reg32 | (1<<12);   /* Enable VGA/CRT VGAHS output       */									\
+		reg32 = reg32 | (1<<11);   /* Enable Master SGPIO SGPMI input   */									\
+		reg32 = reg32 & ~(1<<10);  /* Enable Master SGPIO SGPMO output  */									\
+		reg32 = reg32 | (1<<9);    /* Enable Master SGPIO SGPMLD output */									\
+		reg32 = reg32 | (1<<8);    /* Enable Master SGPIO SGPMCK output */									\
+		reg32 = reg32 & ~(1<<7);   /* Enable NAND flash FLWP# output    */									\
+		reg32 = reg32 & ~(1<<6);   /* Enable NAND flash FLBUSY# input   */									\
+		reg32 = reg32 & ~(1<<5);   /* Enable Watchdog #2 WDTRST2 output */									\
+		reg32 = reg32 & ~(1<<4);   /* Enable Watchdog #1 WDTRST1 output */									\
+		reg32 = reg32 & ~(1<<3);   /* Enable Slave SGPIO SGPSI1 input   */									\
+		reg32 = reg32 & ~(1<<2);   /* Enable Slave SGPIO SGPSI0 input   */									\
+		reg32 = reg32 & ~(1<<1);   /* Enable Slave SGPIO SGPSLD input   */									\
+		reg32 = reg32 & ~(1<<0);   /* Enable Slave SGPIO SGPSCK input   */									\
+		*((volatile u_long *) 0x1e6e2084) = reg32;															\
+																											\
+		/* SCU88 Multi-function Pin Control #3 = 0x01000000 => 0x00000000 */								\
+		reg32 = *((volatile u_long *) 0x1e6e2088);															\
+		reg32 = reg32 & ~(1<<31);  /* Enable MAC#1 MDIO1                                         */			\
+		reg32 = reg32 & ~(1<<30);  /* Enable MAC#1 MDC1                                          */			\
+		reg32 = reg32 & ~(1<<29);  /* Enable NOR flash ROMA25                                    */			\
+		reg32 = reg32 & ~(1<<28);  /* Enable NOR flash ROMA24                                    */			\
+		reg32 = reg32 & ~(1<<27);  /* Enable flash ROMCS4#                                       */			\
+		reg32 = reg32 & ~(1<<26);  /* Enable flash ROMCS3#                                       */			\
+		reg32 = reg32 & ~(1<<25);  /* Enable flash ROMCS2#                                       */			\
+		reg32 = reg32 & ~(1<<24);  /* Enable flash ROMCS1#                                       */			\
+		reg32 = reg32 & ~(1<<23);  /* Enable NOR flash ACK control input pin                     */			\
+		reg32 = reg32 & ~(1<<22);  /* Enable BMC IRQ#                                            */			\
+		reg32 = reg32 & ~(1<<21);  /* Define BMC IRQ# polarity                                   */			\
+		reg32 = reg32 & ~(1<<20);  /* Disable I2C2 bus and enable 24MHz clock output at SCL2 pin */			\
+		reg32 = reg32 & ~(1<<19);  /* Enable VPR9                                                */			\
+		reg32 = reg32 & ~(1<<18);  /* Enable VPR8                                                */			\
+		reg32 = reg32 & ~(1<<17);  /* Enable VPR7                                                */			\
+		reg32 = reg32 & ~(1<<16);  /* Enable VPR6                                                */			\
+		reg32 = reg32 & ~(1<<15);  /* Enable VPR5                                                */			\
+		reg32 = reg32 & ~(1<<14);  /* Enable VPR4                                                */			\
+		reg32 = reg32 & ~(1<<13);  /* Enable VPR3                                                */			\
+		reg32 = reg32 & ~(1<<12);  /* Enable VPR2                                                */			\
+		reg32 = reg32 & ~(1<<11);  /* Enable VPR1                                                */			\
+		reg32 = reg32 & ~(1<<10);  /* Enable VPR0                                                */			\
+		reg32 = reg32 & ~(1<<9);   /* Enable VPG9                                                */			\
+		reg32 = reg32 & ~(1<<8);   /* Enable VPG8                                                */			\
+		reg32 = reg32 & ~(1<<7);   /* Enable PWM7 or VPG7                                        */			\
+		reg32 = reg32 & ~(1<<6);   /* Enable PWM6 or VPG6                                        */			\
+		reg32 = reg32 | (1<<5);    /* Enable PWM5 or VPG5                                        */			\
+		reg32 = reg32 | (1<<4);    /* Enable PWM4 or VPG4                                        */			\
+		reg32 = reg32 | (1<<3);    /* Enable PWM3 or VPG3                                        */			\
+		reg32 = reg32 | (1<<2);    /* Enable PWM2 or VPG2                                        */			\
+		reg32 = reg32 | (1<<1);    /* Enable PWM1 or VPG1                                        */			\
+		reg32 = reg32 | (1<<0);    /* Enable PWM0 or VPG0                                        */			\
+		*((volatile u_long *) 0x1e6e2088) = reg32;															\
+																											\
+		/* SCU8C Multi-function Pin Control #4 = 0x000000FF => 0x00000200 */								\
+		reg32 = *((volatile u_long *) 0x1e6e208c);															\
+		reg32 = reg32 & ~(1<<31);  /* Disable GPIOR internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<30);  /* Disable GPIOP internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<29);  /* Disable GPIOO internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<28);  /* Disable GPION internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<27);  /* Disable GPIOM internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<26);  /* Disable GPIOL internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<25);  /* Disable GPIOJ internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<24);  /* Disable GPIOI internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<23);  /* Disable GPIOH internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<22);  /* Disable GPIOG internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<21);  /* Disable GPIOF internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<20);  /* Disable GPIOE internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<19);  /* Disable GPIOD internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<18);  /* Reserved                                      */						\
+		reg32 = reg32 & ~(1<<17);  /* Disable GPIOB internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<16);  /* Disable GPIOA internal pull down resistor     */						\
+		reg32 = reg32 & ~(1<<15);  /* Enable GPIOE6 pass-through to GPIOE7 function */						\
+		reg32 = reg32 & ~(1<<14);  /* Enable GPIOE4 pass-through to GPIOE5 function */						\
+		reg32 = reg32 & ~(1<<13);  /* Enable GPIOE2 pass-through to GPIOE3 function */						\
+		reg32 = reg32 & ~(1<<12);  /* Enable GPIOE0 pass-through to GPIOE1 function */						\
+		reg32 = reg32 & ~(1<<11);  /* Enable GPIOD6 pass-through to GPIOD7 function */						\
+		reg32 = reg32 & ~(1<<10);  /* Enable GPIOD4 pass-through to GPIOD5 function */						\
+		reg32 = reg32 & ~(1<<9);   /* Enable GPIOD2 pass-through to GPIOD3 function */						\
+		reg32 = reg32 & ~(1<<8);   /* Enable GPIOD0 pass-through to GPIOD1 function */						\
+		reg32 = reg32 & ~(1<<7);   /* Enable flash ROMA23                           */						\
+		reg32 = reg32 & ~(1<<6);   /* Enable flash ROMA22                           */						\
+		reg32 = reg32 & ~(1<<5);   /* Enable flash ROMWE#                           */						\
+		reg32 = reg32 & ~(1<<4);   /* Enable flash ROMOE#                           */						\
+		reg32 = reg32 & ~(1<<3);   /* Enable flash ROMD7                            */						\
+		reg32 = reg32 & ~(1<<2);   /* Enable flash ROMD6                            */						\
+		reg32 = reg32 & ~(1<<1);   /* Enable flash ROMD5                            */						\
+		reg32 = reg32 & ~(1<<0);   /* Enable flash ROMD4                            */						\
+		*((volatile u_long *) 0x1e6e208c) = reg32;															\
+																											\
+		/* SCU90 Multi-function Pin Control #5 = 0x00000000 => 0x007F0004 */								\
+		reg32 = *((volatile u_long *) 0x1e6e2090);															\
+		reg32 = reg32 & ~(1<<31);  /* Reserved                              */								\
+		reg32 = reg32 & ~(1<<30);  /* Reserved                              */								\
+		reg32 = reg32 & ~(1<<29);  /* Reserved                              */								\
+		reg32 = reg32 & ~(1<<28);  /* Reserved                              */								\
+		reg32 = reg32 & ~(1<<27);  /* Reserved                              */								\
+		reg32 = reg32 & ~(1<<26);  /* Reserved                              */								\
+		reg32 = reg32 & ~(1<<25);  /* Reserved                              */								\
+		reg32 = reg32 & ~(1<<24);  /* Reserved                              */								\
+		reg32 = reg32 & ~(1<<23);  /* Reserved                              */								\
+		reg32 = reg32 | (1<<22);   /* Enable I2C9 function pins             */								\
+		reg32 = reg32 | (1<<21);   /* Enable I2C8 function pins             */								\
+		reg32 = reg32 | (1<<20);   /* Enable I2C7 function pins             */								\
+		reg32 = reg32 | (1<<19);   /* Enable I2C6 function pins             */								\
+		reg32 = reg32 | (1<<18);   /* Enable I2C5 function pins             */								\
+		reg32 = reg32 | (1<<17);   /* Enable I2C4 function pins             */								\
+		reg32 = reg32 | (1<<16);   /* Enable I2C3 function pins             */								\
+		reg32 = reg32 & ~(1<<15);  /* Reserved, must keep at value '0'      */								\
+		reg32 = reg32 & ~(1<<14);  /* Reserved, must keep at value '0'      */								\
+		reg32 = reg32 & ~(1<<13);  /* Reserved, must keep at value '0'      */								\
+		reg32 = reg32 & ~(1<<12);  /* Reserved, must keep at value '0'      */								\
+																											\
+		/*																									\
+		* RMII IO driving strength																			\
+		* 00: 20pF loading																					\
+		* 01: 40pF loading																					\
+		* 10: 60pF loading																					\
+		* 11: 75pF loading																					\
+		*/																									\
+		reg32 = reg32 & ~(1<<11);  /* RMII2 IO driving strength */											\
+		reg32 = reg32 & ~(1<<10);  /* RMII2 IO driving strength */											\
+		reg32 = reg32 | (1<<9);    /* RMII1 IO driving strength */											\
+		reg32 = reg32 | (1<<8);    /* RMII1 IO driving strength */											\
+																											\
+		reg32 = reg32 & ~(1<<7);   /* Enable UART6 function pins            */								\
+		reg32 = reg32 & ~(1<<6);   /* Enable ROMD8 ~ ROMD15 for 16-bit mode */								\
+																											\
+		/*																									\
+		* Enable digital video function pins																\
+		* 00: disable																						\
+		* 01: 24 bits (R8/G8/B8) dual edge video mode														\
+		* 10: 24 bits (R8/G8/B8) video mode																	\
+		* 11: 30 bits (R10/G10/B10) video mode																\
+		*/																									\
+		reg32 = reg32 & ~(1<<5);  /* Enable digital video function pins */									\
+		reg32 = reg32 & ~(1<<4);  /* Enable digital video function pins */									\
+																											\
+		reg32 = reg32 & ~(1<<3);  /* Enable USB1.1 Host port 2 function     */								\
+		reg32 = reg32 | (1<<2);   /* Enable MAC#2 MDC2/MDIO2 function pins  */								\
+		reg32 = reg32 & ~(1<<1);  /* Enable SD2 function pins               */								\
+		reg32 = reg32 & ~(1<<0);  /* Enable SD1 function pins               */								\
+		*((volatile u_long *) 0x1e6e2090) = reg32;															\
+																											\
+		/* clear PWM reset in reg SCU04 */																	\
+		reg32 = *((volatile u_long *) 0x1e6e2004);															\
+		reg32 = reg32 & ~(0x200);																			\
+		*((volatile u_long *) 0x1e6e2004) = reg32;															\
+																											\
+		/* config GPIO data and direction */																\
+		*(volatile ulong *) (0x1e780000 + 0x00) = 0x28000E00;  /* Data: GPIOD, GPIOC, GPIOB, GPIOA */		\
+		*(volatile ulong *) (0x1e780000 + 0x04) = 0x28000F00;  /* Dir : GPIOD, GPIOC, GPIOB, GPIOA */		\
+																											\
+		/* config extend GPIO data and direction */															\
+		*(volatile ulong *) (0x1e780000 + 0x20 + 0x00) = 0xFF000030;  /* Data: GPIOH, GPIOG, GPIOF, GPIOE */\
+		*(volatile ulong *) (0x1e780000 + 0x20 + 0x04) = 0xFF100030;  /* Dir : GPIOH, GPIOG, GPIOF, GPIOE */\
+																											\
+		/* config simple GPIO 0 data and direction */														\
+		*(volatile ulong *) (0x1e780000 + 0x70 + 0x00) = 0x00000000;  /* Data: GPIOL, GPIOK, GPIOJ, GPIOI */\
+		*(volatile ulong *) (0x1e780000 + 0x70 + 0x04) = 0x00000000;  /* Dir : GPIOL, GPIOK, GPIOJ, GPIOI */\
+																											\
+		/* config simple GPIO 1 data and direction */														\
+		*(volatile ulong *) (0x1e780000 + 0x78 + 0x00) = 0x00000000;  /* Data: GPIOP, GPIOO, GPION, GPIOM */\
+		*(volatile ulong *) (0x1e780000 + 0x78 + 0x04) = 0x00000000;  /* Dir : GPIOP, GPIOO, GPION, GPIOM */\
+																											\
+		/* config simple GPIO 2 data and direction */														\
+		*(volatile ulong *) (0x1e780000 + 0x80 + 0x00) = 0x00000010;  /* Data:        GPIOS, GPIOR, GPIOQ */\
+		*(volatile ulong *) (0x1e780000 + 0x80 + 0x04) = 0x00000010;  /* Dir :        GPIOS, GPIOR, GPIOQ */\
+																											\
+		/* set command source of GPIOH to LPC */															\
+		reg32 = *((volatile u_long *) 0x1e780068);															\
+		*((volatile u_long *) 0x1e780068) = reg32 | 0x01000000;												\
+		reg32 = *((volatile u_long *) 0x1e78006C);															\
+		*((volatile u_long *) 0x1e78006C) = reg32 & 0xFEFFFFFF;												\
+																											\
+		/* set snooping address#0 as 80h, and enable snooping address#0 */									\
+		reg32 = *((volatile u_long *) 0x1e789090);															\
+		*((volatile u_long *) 0x1e789090) = (reg32 & 0xFFFF0000) | 0x00000080;								\
+		reg32 = *((volatile u_long *) 0x1e789080);															\
+		*((volatile u_long *) 0x1e789080) = reg32 | 0x00000001;												\
+																											\
+		/* prevent UART1 <-> UART_IO 1, prevent UART2 <-> UART_IO 2 */                                      \
+		/* i.e. UART4 -> UART1, UART4 -> UART2, UART4 -> UART_IO1, UART4 -> UART_IO2 */                     \
+		*((volatile u_long *) 0x1e78909C) = 0x002D0013;                                                     \
+																											\
+		/* set clock division and period of type M/N */														\
+		*((volatile ulong *) 0x1e786004) = 0xFF11FF11;														\
+																											\
+		if ( ((*((volatile u_long *) 0x1e780080) >> 8) & 0xF) == 0x1 ) {	/* BOARD ID 0001b; S4P */		\
+			/* set PWM duty cycle to 100% */																\
+			*((volatile ulong *) 0x1e786008) = 0xFF00FF00;  /* PWM B, PWM A */								\
+			*((volatile ulong *) 0x1e78600C) = 0xFF00FF00;  /* PWM D, PWM C */								\
+			*((volatile ulong *) 0x1e786000) = 0x03FF0F01;  /* enable PWM, and set to type M, fan tach #0~9 */ \
+																											\
+			/* S4P ONLY: MCR6C: DDR IO Driving Fine-tune Setting */											\
+			reg32 = *((volatile u_long *) 0x1e6e006c);														\
+			reg32 = (reg32 & 0xFFFFFFF0) | 0x1;  /* Control Signals P-MOSFET Driving Setting: change from 2 to 1 */	\
+			*((volatile u_long *) 0x1e6e006c) = reg32;														\
+		} else { /* 1100b and else; S2V */																	\
+			/* set PWM duty cycle to 65% */																	\
+			*((volatile ulong *) 0x1e786008) = 0xA500A500;  /* PWM B, PWM A */								\
+			*((volatile ulong *) 0x1e78600C) = 0xA500A500;  /* PWM D, PWM C */								\
+			*((volatile ulong *) 0x1e786000) = 0x00000F01;  /* enable PWM, and set to type M */				\
+		}																									\
+	} while(0)
+
+
+// Quanta++, pull in the power restore policy deployment to bootcode
+#define		CONFIG_POWER_RESTORE_POLICY		1	/* PWR_ALWAYS_OFF 0x00; PWR_RESTORED 0x01; PWR_ALWAYS_ON 0x02 */
+// Quanta--
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+#endif 

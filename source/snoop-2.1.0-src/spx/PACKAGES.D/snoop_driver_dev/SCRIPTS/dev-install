@@ -1,0 +1,6 @@
+# Install Script
+
+build-install:
+			MKDIR_NOCLEAN %SPXINC/snoop
+			COPY_DIR ./ %SPXINC/snoop
+debug-install:

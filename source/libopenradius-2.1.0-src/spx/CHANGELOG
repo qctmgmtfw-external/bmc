@@ -1,0 +1,137 @@
+Package: libopenradius (2.1.0); urgency = medium
+
+Abstract:
+	"Fixed buffer out of bound errors and free allocated memory"
+
+Files Modified: data/pam_radius_auth.c, spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 29 Dec 2014 21:06:50 IST
+
+Package: libopenradius (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 05:22:19 GMT
+
+Package: libopenradius (1.12.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 11:03:10 HMT
+
+Package: libopenradius (1.11.0); urgency = medium
+
+Abstract:
+	Updated the Field GROUP in INFO file
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Wed, 15 Oct 2014 17:24:23 HMT
+
+Package: libopenradius (1.10.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 06:58:16 GMT
+
+Package: libopenradius (1.9.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:10:20 GMT
+
+Package: libopenradius (1.8.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:20:26 EDT
+
+Package: libopenradius (1.7.0); urgency = medium
+
+Abstract:
+	Correct the License Info.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.OPENSOURCE
+Files Modified: spx/INFO
+
+--Submitter: BordonKuo (BordonKuo.ami.com) Wed, 26 Jun 2013 12:26:15 CST
+
+Package: libopenradius (1.6.0); urgency = high
+
+Abstract:
+	Change implementation of Radius User Authorization using vendor specific string received from radius server
+
+Files Modified: data/pam_radius_auth.c, data/pam_radius_auth.h, data/radius.h
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Mon, 18 Feb 2013 06:42:20 EST
+
+Package: libopenradius (1.5.0); urgency = low
+
+Abstract:
+	Addedd Debug statement.
+
+Files Modified: data/pam_radius_auth.c
+
+--Submitter: maheswaria (maheswaria@amiindia.co.in) Thu, 10 Jan 2013 20:03:04 HMT
+
+Package: libopenradius (1.4.0); urgency = low
+
+Abstract:
+	Added Radius authorization support
+
+Files Modified: data/pam_radius_auth.c, data/pam_radius_auth.h
+
+--Submitter: maheswaria (maheswaria@amiindia.co.in) Thu, 13 Dec 2012 20:38:43 HMT
+
+Package: libopenradius (1.3.0); urgency = medium
+
+Abstract:
+	Fixed an endless loop issue about radius DNS name resolving
+
+Files Modified: data/pam_radius_auth.c
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Fri, 30 Nov 2012 05:08:44 EST
+
+Package: libopenradius (1.2.0); urgency = medium
+
+Abstract:
+	Provided IPV6 and DNS suppport
+
+Files Modified: data/pam_radius_auth.c, data/pam_radius_auth.h
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Tue, 06 Nov 2012 01:15:22 EST
+
+Package: libopenradius (1.1.0); urgency = medium
+
+Abstract:
+	Corrected the pam radius conf file path in libopenradius
+
+Files Modified: data/pam_radius_auth.h
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Thu, 28 Jun 2012 12:55:57 IST
+
+Package: libopenradius (1.0.0); urgency = new
+
+Abstract:
+	This is the PAM to RADIUS authentication module. It allows any PAM-capable machine to become a RADIUS client for authentication and accounting requests.
+
+Files Added: data, data/Makefile, data/md5.c, data/md5.h, data/pam_radius_auth.c, data/pam_radius_auth.h, data/radius.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.OPENSOURCE, spx/PACKAGES.D, spx/PACKAGES.D/libopenradius, spx/PACKAGES.D/libopenradius/DATA, spx/PACKAGES.D/libopenradius/SCRIPTS, spx/PACKAGES.D/libopenradius/SCRIPTS/dev-install, spx/PACKAGES.D/libopenradius_dev, spx/PACKAGES.D/libopenradius_dev/DATA, spx/PACKAGES.D/libopenradius_dev/SCRIPTS, spx/PACKAGES.D/libopenradius_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Wed, 27 Jun 2012 18:52:57 IST
+

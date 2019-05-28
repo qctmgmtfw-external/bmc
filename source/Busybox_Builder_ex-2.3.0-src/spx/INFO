@@ -1,0 +1,26 @@
+Source                   	:	Busybox_Builder_ex
+Version : 2.3.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher  (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	0.0.0
+Builds                   	:	Busybox_ex
+Build-Depends            	:	Crosscc, Busybox_oem_ex, BaseSystem
+Architecture             	:	ALL
+Build-Order              	:	LAST
+Urgency : medium
+Description              	:	Busybox builder. Combines all configurattions and builds the busybox
+.
+
+Package                  	:	Busybox_ex
+Section                  	:	app
+Group                    	:	BASE
+Essential                	:	YES
+Feature-Required         	:	CONFIG_SPX_FEATURE_GLOBAL_BUSYBOX_EX
+Depends : sys_base_ex
+Description              	:	Busybox builder. Combines all configurattions and builds the busybox
+.
+

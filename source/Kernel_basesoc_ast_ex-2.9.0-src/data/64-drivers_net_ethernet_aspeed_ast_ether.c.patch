@@ -1,0 +1,55 @@
+--- linux/drivers/net/ethernet/aspeed/ast_ether.c	2015-09-14 13:50:29.650994689 +0800
++++ linux/drivers/net/ethernet/aspeed/ast_ether.c.new	2015-09-14 13:50:13.343995593 +0800
+@@ -169,8 +169,12 @@
+ static u16 ast_ether_phy_read_register(struct net_device *dev, u8 phyaddr, u8 phyreg)
+ {
+ 	unsigned int ioaddr = dev->base_addr;
++	struct ast_ether_priv *priv = netdev_priv(dev);
++	unsigned long flags;
+ 	u32 reg_val;
++	u16 temp = 0;
+ 	
++	spin_lock_irqsave(&priv->phy_lock, flags);
+ 	reg_val = inl(ioaddr + AST_ETHER_PHYCR);
+ 
+ 	reg_val &= ~(PHYCR_WRITE | PHYCR_READ | PHYCR_REGAD_MASK | PHYCR_PHYAD_MASK); /* clear PHYAD, REGAD, MIIRD, MIIWR */
+@@ -182,15 +186,22 @@
+ 	
+ 	ast_ether_phy_rw_waiting(ioaddr);
+ 
+-	return ((inl(ioaddr + AST_ETHER_PHYDATA) >> 16));
++	//return ((inl(ioaddr + AST_ETHER_PHYDATA) >> 16));
++	temp = ((inl(ioaddr + AST_ETHER_PHYDATA) >> 16));
++
++	spin_unlock_irqrestore(&priv->phy_lock, flags);
++	return temp;
+ }
+ 
+ /* Writes a register to the MII Management serial interface */
+ static void ast_ether_phy_write_register(struct net_device *dev, u8 phyaddr, u8 phyreg, u16 phydata)
+ {
+ 	unsigned int ioaddr = dev->base_addr;
++	struct ast_ether_priv *priv = netdev_priv(dev);
++	unsigned long flags;
+ 	u32 reg_val;
+ 
++	spin_lock_irqsave(&priv->phy_lock, flags);
+ 	reg_val = inl(ioaddr + AST_ETHER_PHYCR);
+ 
+ 	reg_val &= ~(PHYCR_WRITE | PHYCR_READ | PHYCR_REGAD_MASK | PHYCR_PHYAD_MASK); /* clear PHYAD, REGAD, MIIRD, MIIWR */
+@@ -202,6 +213,7 @@
+ 	outl(reg_val, ioaddr + AST_ETHER_PHYCR);
+ 
+ 	ast_ether_phy_rw_waiting(ioaddr);
++	spin_unlock_irqrestore(&priv->phy_lock, flags);
+ }
+ 
+ /* read OUI and Model of PHY */
+@@ -1641,6 +1653,7 @@
+ 	priv = netdev_priv(dev);
+ 	//priv->dev = dev;
+ 	spin_lock_init(&priv->lock);
++	spin_lock_init(&priv->phy_lock);
+ 
+ 	priv->maccr = MACCR_CRC_APD | MACCR_RXMAC_EN | MACCR_TXMAC_EN | MACCR_RXDMA_EN | MACCR_TXDMA_EN | MACCR_RX_BROADPKT_EN | MACCR_RX_MULTIPKT_EN;
+ 

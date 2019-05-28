@@ -1,0 +1,41 @@
+Source : host_spi_flash
+Version : 2.10.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : David Chang (DavidChang@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : host_spi_flash, host_spi_flash_dev
+Build-Depends : Crosscc, kernel_dev, rules, helper, DevNodes
+Architecture : ALL
+Urgency : low
+Description : This package contains the common module of hot SPI flash driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : host_spi_flash
+Config-Tag : Host SPI Flash Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : hw_host_spi_flash, kernel
+Required : helper, DevNodes
+Description : This package contains the built common module of host SPI flash driver
+.
+
+Package : host_spi_flash_dev
+Section : dev
+Group : MISC
+Essential : NO
+Description : This package contains the development files for host spi flash.
+.
+

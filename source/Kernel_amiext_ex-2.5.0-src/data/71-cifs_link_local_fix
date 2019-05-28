@@ -1,0 +1,70 @@
+diff -Naur linux-3.14.17/fs/cifs/connect.c linux-3.14.17_cifs/fs/cifs/connect.c
+--- linux-3.14.17/fs/cifs/connect.c	2014-08-14 01:38:34.000000000 +0000
++++ linux-3.14.17_cifs/fs/cifs/connect.c	2014-10-06 11:39:41.736637240 +0000
+@@ -55,6 +55,7 @@
+ 
+ #define CIFS_PORT 445
+ #define RFC1001_PORT 139
++unsigned long scope = 0;
+ 
+ extern mempool_t *cifs_req_poolp;
+ 
+@@ -92,6 +93,7 @@
+ 	Opt_cruid, Opt_gid, Opt_file_mode,
+ 	Opt_dirmode, Opt_port,
+ 	Opt_rsize, Opt_wsize, Opt_actimeo,
++	Opt_v6scope,
+ 
+ 	/* Mount options which take string value */
+ 	Opt_user, Opt_pass, Opt_ip,
+@@ -188,6 +190,7 @@
+ 	{ Opt_blank_pass, "password=" },
+ 	{ Opt_pass, "pass=%s" },
+ 	{ Opt_pass, "password=%s" },
++	{ Opt_v6scope, "v6scope=%s" },
+ 	{ Opt_blank_ip, "ip=" },
+ 	{ Opt_blank_ip, "addr=" },
+ 	{ Opt_ip, "ip=%s" },
+@@ -1202,6 +1205,7 @@
+ 	char *nodename = utsname()->nodename;
+ 	char *string = NULL;
+ 	char *tmp_end, *value;
++	char *tmp = NULL;
+ 	char delim;
+ 	bool got_ip = false;
+ 	unsigned short port = 0;
+@@ -1672,6 +1676,13 @@
+ 			}
+ 			got_ip = true;
+ 			break;
++		case Opt_v6scope:
++			string = match_strdup(args);
++                        if (string == NULL)
++                                goto out_nomem;
++			scope = simple_strtoul(string, &tmp, 0);	
++			printk(KERN_INFO "scope = %lu\n", scope);
++			break;
+ 		case Opt_domain:
+ 			string = match_strdup(args);
+ 			if (string == NULL)
+@@ -3038,11 +3049,17 @@
+ 	struct sockaddr_in6 *addr6 = (struct sockaddr_in6 *)&server->dstaddr;
+ 	struct sockaddr_in *addr = (struct sockaddr_in *)&server->dstaddr;
+ 
+-	if (server->dstaddr.ss_family == AF_INET6)
++	if (server->dstaddr.ss_family == AF_INET6) {
+ 		sport = &addr6->sin6_port;
+-	else
++		if(scope != 0){
++			addr6->sin6_scope_id = scope;
++			printk(KERN_INFO "scope is %lu\n",scope);
++			printk(KERN_INFO "sin6_scope_id is %zu\n", addr6->sin6_scope_id);
++		}
++	}
++	else {
+ 		sport = &addr->sin_port;
+-
++	}
+ 	if (*sport == 0) {
+ 		int rc;
+ 

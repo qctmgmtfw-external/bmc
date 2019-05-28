@@ -1,0 +1,118 @@
+Package: bt_hw (2.2.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/bt_hw.h, data/bthw_mod.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:24:50 HMT
+
+Package: bt_hw (2.1.0); urgency = high
+
+Abstract:
+	Updating the bt_hw driver to inform that lpcreset driver has already taken care of error interrupt
+
+Files Modified: data/bt_hw.h, data/bthw_mod.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 08 Dec 2014 15:06:42 EST
+
+Package: bt_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:12:06 GMT
+
+Package: bt_hw (1.9.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:23:45 HMT
+
+Package: bt_hw (1.8.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:57:18 GMT
+
+Package: bt_hw (1.7.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:05:51 GMT
+
+Package: bt_hw (1.6.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/bthw_mod.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:08:36 EDT
+
+Package: bt_hw (1.5.0); urgency = high
+
+Abstract:
+	Made the BT port address as configurable via PRJ so that each OEM can define their own BT port address as per requirement if required. Default is 0x00E4
+
+Files Added: spx/P.CONFIG
+Files Modified: data/bthw_mod.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 06 Aug 2014 18:47:29 EDT
+
+Package: bt_hw (1.4.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/bt_hw/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:57:04 GMT
+
+Package: bt_hw (1.3.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/bt_hw/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:42:35 HMT
+
+Package: bt_hw (1.2.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:35:24 EDT
+
+Package: bt_hw (1.1.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sat, 21 Sep 2013 23:55:55 EDT
+
+Package: bt_hw (1.0.0); urgency = new
+
+Abstract:
+	This package contains BT hardware driver for  AST series SOC
+
+Files Added: data, data/Makefile, data/bt_hw.h, data/bthw_mod.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/bt_hw, spx/PACKAGES.D/bt_hw/DATA, spx/PACKAGES.D/bt_hw/SCRIPTS, spx/PACKAGES.D/bt_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 28 Jun 2013 18:44:45 CST
+

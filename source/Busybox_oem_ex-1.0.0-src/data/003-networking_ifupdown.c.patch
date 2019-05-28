@@ -1,0 +1,29 @@
+--- busybox/networking/ifupdown.c	2015-12-01 10:01:21.655385573 +0800
++++ busybox_new/networking/ifupdown.c	2015-12-02 14:42:03.123884558 +0800
+@@ -594,6 +594,18 @@
+ }
+ # endif
+ 
++static int slaac_up6(struct interface_defn_t *ifd, execfn *exec)
++{
++	printf("ipv6 slaac %s up\n", ifd->iface);
++	return 1;
++}
++
++static int slaac_down6(struct interface_defn_t *ifd, execfn *exec)
++{
++	printf("ipv6 slaac %s down\n", ifd->iface);
++	return 1;
++}
++
+ static const struct method_t methods6[] = {
+ # if ENABLE_FEATURE_IFUPDOWN_IP
+ 	{ "v4tunnel" , v4tunnel_up     , v4tunnel_down   , },
+@@ -603,6 +615,7 @@
+ 	{ "loopback" , loopback_up6    , loopback_down6  , },
+ 	{ "auto"	 , dhcp_up6		   , dhcp_down6		 , },
+ 	{ "autoconf" , dhcp_up6		   , dhcp_down6		 , },
++	{ "autoconf_slaac", slaac_up6, slaac_down6, },
+ };
+ 
+ static const struct address_family_t addr_inet6 = {

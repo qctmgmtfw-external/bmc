@@ -1,0 +1,4 @@
+./01-arch_arm_configs_ast2400evb_defconfig 57447 7990cb5dfef369ad9a462fc626544297
+./02-arch_arm_Kconfig 1720 0fe76af69b77d66be0b613017c427065
+./03-arch_arm_Makefile 470 d0f18a1d578245f2e3d231c90a37f7db
+./04-arch_arm_tools_mach-types 741 dcc17d8c716e73540ff3368ecd570b54

@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+			EXECUTE if [ "%CONFIG_SPX_FEATURE_LATTICE_LCMXO_SUPPORT" == "YES" ] || [ "%CONFIG_SPX_FEATURE_LATTICE_LCMXO2_SUPPORT" == "YES" ]; then echo "CONFIG_SPX_FEATURE_CPLD_SUPPORT" >> %IMAGE_TREE/etc/core_features; fi
+			COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+			ADD_MODULES cpld_hw
+debug-install:

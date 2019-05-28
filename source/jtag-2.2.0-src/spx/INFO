@@ -1,0 +1,41 @@
+Source : jtag
+Version : 2.2.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Robin Chiu (RobinChiu@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : jtag_driver_dev, jtag
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, reset_driver_dev
+Architecture : ALL
+Urgency : high
+Description : This package includes the JTAG common driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : jtag_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package includes the JTAG driver development files.
+.
+
+Package : jtag
+Config-Tag : JTAG Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_jtag
+Required : reset, helper
+Description : This package includes the JTAG common driver.
+.
+

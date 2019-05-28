@@ -1,0 +1,81 @@
+Package: Kernel_platform_ast2500evb_ex (2.1.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:14:23 GMT
+
+Package: Kernel_platform_ast2500evb_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:19:22 GMT
+
+Package: Kernel_platform_ast2500evb_ex (1.6.0); urgency = medium
+
+Abstract:
+	Add flash operation mode mask configuration for flash IO mode.
+
+Files Modified: data/02-arch_arm_Kconfig
+
+--Submitter: robinchiu (RobinChiu) Tue, 30 Sep 2014 13:23:57 CST
+
+Package: Kernel_platform_ast2500evb_ex (1.5.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 06:01:14 GMT
+
+Package: Kernel_platform_ast2500evb_ex (1.4.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:11:07 GMT
+
+Package: Kernel_platform_ast2500evb_ex (1.3.0); urgency = medium
+
+Abstract:
+	Legacy LAN driver to support new kernel.
+
+Files Modified: data/02-arch_arm_Kconfig
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 10 Sep 2014 14:17:13 CST
+
+Package: Kernel_platform_ast2500evb_ex (1.2.0); urgency = medium
+
+Abstract:
+	Upgraded to kernel 3.14.17.
+
+Files Modified: data/01-arch_arm_configs_ast2500evb_defconfig, data/02-arch_arm_Kconfig, data/03-arch_arm_Makefile, data/04-arch_arm_tools_mach-types
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 03 Sep 2014 11:26:58 CST
+
+Package: Kernel_platform_ast2500evb_ex (1.1.0); urgency = medium
+
+Abstract:
+	Changed CPU depend.
+
+Files Modified: data/02-arch_arm_Kconfig
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Tue, 26 Aug 2014 19:33:41 CST
+
+Package: Kernel_platform_ast2500evb_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2500EVB Fixes to Kernel 3.4.74
+
+Files Added: data, data/01-arch_arm_configs_ast2500evb_defconfig, data/02-arch_arm_Kconfig, data/03-arch_arm_Makefile, data/04-arch_arm_tools_mach-types, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Kernel_platform_ast2500evb_ex, spx/PACKAGES.D/Kernel_platform_ast2500evb_ex/DATA, spx/PACKAGES.D/Kernel_platform_ast2500evb_ex/SCRIPTS, spx/PACKAGES.D/Kernel_platform_ast2500evb_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 25 Aug 2014 11:32:03 CST
+

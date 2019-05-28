@@ -1,0 +1,12 @@
+--- uboot/include/env_default.h	2015-08-04 21:14:55.677132879 +0800
++++ uboot_rr9/include/env_default.h	2015-08-04 21:58:28.441057503 +0800
+@@ -165,6 +165,9 @@
+ #ifdef	CONFIG_EXTRA_ENV_SETTINGS
+ 	CONFIG_EXTRA_ENV_SETTINGS
+ #endif
++#if defined(CONFIG_POWER_RESTORE_POLICY)
++	"power_restore_policy="	__stringify(CONFIG_POWER_RESTORE_POLICY)	"\0"
++#endif
+ 	"\0"
+ #ifdef DEFAULT_ENV_INSTANCE_EMBEDDED
+ 	}

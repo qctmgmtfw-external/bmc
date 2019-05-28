@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+	ADD_MODULES_ONLY hdisk
+	ADD_UNLOAD_MODULE hdisk 8
+
+debug-install:

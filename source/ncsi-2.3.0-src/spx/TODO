@@ -1,0 +1,9 @@
+VLAN Support:
+
+During driver bring up, if VLAN is enabled, 
+VLAN filter has to be enabled. For this we need to get the VLAN ID from ?
+(Read for ethX.VLANID) or Send by the ncsiapp?
+
+
+
+ 

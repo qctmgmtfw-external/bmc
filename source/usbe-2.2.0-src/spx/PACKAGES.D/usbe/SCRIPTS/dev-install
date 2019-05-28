@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc
+	ADD_MODULES_ONLY usbe
+	ADD_UNLOAD_MODULE usbe 8
+	MAKE_CHAR_NODE usb 100 0
+	MAKE_BLOCK_NODE uba 180 0
+	MAKE_BLOCK_NODE uba1 180 1
+	
+debug-install:

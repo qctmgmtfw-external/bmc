@@ -1,0 +1,40 @@
+Source : iUSB
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Rama Rao Bisa (RamaB@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : iUSB, iUSB_driver_dev
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, usbe_driver_dev, libdbgout_dev, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package provides the common (hardware independent) iUSB driver module.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : iUSB
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel
+Required : helper, usbe, DevNodes
+Description : iUSB common driver module
+.
+
+Package : iUSB_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package includes iUSB driver Development header files.
+.
+

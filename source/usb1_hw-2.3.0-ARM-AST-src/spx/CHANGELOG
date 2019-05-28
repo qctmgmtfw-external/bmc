@@ -1,0 +1,427 @@
+Package: usb1_hw (2.3.0); urgency = medium
+
+Abstract:
+	init and enable usb devices only once if usb device was disconnected
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 25 Feb 2015 10:18:24 GMT
+
+Package: usb1_hw (2.2.0); urgency = medium
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 24 Dec 2014 16:02:42 IST
+
+Package: usb1_hw (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/ast_usbhub.c, data/ast_usbhub.h, data/hub.h, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:38:31 HMT
+
+Package: usb1_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 07:14:06 GMT
+
+Package: usb1_hw (1.23.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:56:53 HMT
+
+Package: usb1_hw (1.22.0); urgency = medium
+
+Abstract:
+	fixed device emulation when pwr consumption is enabled on BMC boot issue
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 01 Oct 2014 11:40:12 CST
+
+Package: usb1_hw (1.21.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:42:18 GMT
+
+Package: usb1_hw (1.20.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:54:58 GMT
+
+Package: usb1_hw (1.19.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:06:45 GMT
+
+Package: usb1_hw (1.18.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:44:24 GMT
+
+Package: usb1_hw (1.17.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:32:35 HMT
+
+Package: usb1_hw (1.16.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/usb1_hw/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:05:58 GMT
+
+Package: usb1_hw (1.15.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/usb1_hw/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 21:17:44 HMT
+
+Package: usb1_hw (1.14.0); urgency = medium
+
+Abstract:
+	enabling USB mode was invoking ast_usbhub_init_and_connect 4 times while disabling it was doing disconnect only once due to global varibale usage. Corrected global varibale usage to disconnect whenever connected & connection,disconnection is done only once for 4 devices as the buffer to which memory allocated is same for all devices
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: pavithras (pavithras@ami.com) Mon, 14 Apr 2014 16:20:30 EDT
+
+Package: usb1_hw (1.13.0); urgency = medium
+
+Abstract:
+	Deleting dummy P.CONFIG file.
+
+Files Deleted: spx/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Mon, 07 Oct 2013 14:25:42 EDT
+
+Package: usb1_hw (1.12.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:39:48 EDT
+
+Package: usb1_hw (1.11.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:51:27 EDT
+
+Package: usb1_hw (1.10.0); urgency = medium
+
+Abstract:
+	Merged the null pointer condition check into core
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: arunadevi (arunadevid@amiindia.co.in) Wed, 03 Apr 2013 12:19:51 HMT
+
+Package: usb1_hw (1.9.0); urgency = medium
+
+Abstract:
+	Let low speed device use USB1.1, if usb0 hw present.
+
+Files Added: spx/P.CONFIG
+Files Modified: data/ast_usbhub.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 24 Jan 2013 20:31:43 CST
+
+Package: usb1_hw (1.8.0); urgency = high
+
+Abstract:
+	Power saving of using USB Selective Suspend Support
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sat, 22 Dec 2012 11:23:40 CST
+
+Package: usb1_hw (1.7.0); urgency = high
+
+Abstract:
+	- Supported for AST2400 SoC.
+
+Files Modified: data/ast_usbhub.c, data/ast_usbhub.h
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Mon, 29 Oct 2012 15:55:30 CST
+
+Package: usb1_hw (1.6.0); urgency = medium
+
+Abstract:
+	Licence change from AMI to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ast_usbhub.c, spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 16:05:34 EDT
+
+Package: usb1_hw (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:56:15 EDT
+
+Package: usb1_hw (1.4.0); urgency = medium
+
+Abstract:
+	The essential field is set to NO. This module will be picked up by the dummy hardware package.
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 03 May 2011 12:16:55 EDT
+
+Package: usb1_hw (1.3.0); urgency = medium
+
+Abstract:
+	Change range to avoid overlay with USB host controller.
+
+Files Modified: data/ast_usbhub.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 17 Mar 2011 13:42:00 CST
+
+Package: usb1_hw (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/usb1_hw/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 16:30:42 EDT
+
+Package: usb1_hw (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:53:50 EDT
+
+Package: usb1_hw (1.0.19); urgency = high
+
+Abstract:
+	SPLIT IN transcation is still needed in AST2300 unless we change the SET ADDRESS procedure to new method.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 02 Jul 2010 17:05:09 CST
+
+Package: usb1_hw (1.0.18); urgency = medium
+
+Abstract:
+	Enable downstream port after the port is reset.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 21 Jun 2010 16:17:51 CST
+
+Package: usb1_hw (1.0.17); urgency = high
+
+Abstract:
+	Fix hub setup state machine disorder problem.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 09 Jun 2010 14:25:54 CST
+
+Package: usb1_hw (1.0.16); urgency = medium
+
+Abstract:
+	Fix the build failed for AST2300.
+
+Files Modified: data/ast_usbhub.c, data/ast_usbhub.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 27 May 2010 16:32:35 CST
+
+Package: usb1_hw (1.0.15); urgency = medium
+
+Abstract:
+	Add support for AST2300.
+
+Files Modified: data/ast_usbhub.c, data/ast_usbhub.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 27 May 2010 13:38:40 CST
+
+Package: usb1_hw (1.0.14); urgency = medium
+
+Abstract:
+	Modified Rules to not to unload module when Firmware upgrade usb being used.
+
+Files Modified: spx/PACKAGES.D/usb1_hw/SCRIPTS/dev-install
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 13 May 2010 11:15:02 CST
+
+Package: usb1_hw (1.0.13); urgency = high
+
+Abstract:
+	Changes result of Support added to use both IN and OUT endpoints of same endpoint number.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 07 May 2010 10:06:45 EDT
+
+Package: usb1_hw (1.0.12); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:49:40 CST
+
+Package: usb1_hw (1.0.11); urgency = medium
+
+Abstract:
+	Disable device when device is disconnected.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 14 Apr 2010 16:25:21 CST
+
+Package: usb1_hw (1.0.10); urgency = low
+
+Abstract:
+	Port status of hub should depends on device speed before port reset since the run speed is determined after port reset.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 13 Apr 2010 17:15:59 CST
+
+Package: usb1_hw (1.0.9); urgency = medium
+
+Abstract:
+	Response IN/OUT token after receive NAK IRQs.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 12 Apr 2010 15:47:16 CST
+
+Package: usb1_hw (1.0.8); urgency = low
+
+Abstract:
+	Re-initialize data for hub and devices when bus reset.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 08 Apr 2010 16:02:15 CST
+
+Package: usb1_hw (1.0.7); urgency = critical
+
+Abstract:
+	Device port should not be enabled before hub is in addressed state.
+
+Files Modified: data/ast_usbhub.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 06 Apr 2010 17:23:59 CST
+
+Package: usb1_hw (1.0.6); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:26:30 EDT
+
+Package: usb1_hw (1.0.5); urgency = medium
+
+Abstract:
+	1. Change device port selection method in init function.
+2. Fix wrong speed mode when upstream is full speed.
+
+Files Modified: data/ast_usbhub.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 26 Mar 2010 16:42:25 CST
+
+Package: usb1_hw (1.0.4); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 18:12:38 EDT
+
+Package: usb1_hw (1.0.3); urgency = low
+
+Abstract:
+	1. Fix power related settings.
+2. Endpoint 0 IN/OUT ACK IRQs are shared with STALL IRQs, do not call USB core on STALL IRQs.
+
+Files Modified: data/ast_usbhub.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 03 Mar 2010 18:38:12 CST
+
+Package: usb1_hw (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:23:49 EST
+
+Package: usb1_hw (1.0.1); urgency = low
+
+Abstract:
+	Change dependency operator.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 10 Feb 2010 14:39:23 CST
+
+Package:usb1_hw (1.0.0);urgency=new
+
+Abstract:
+	This package contains the USB virtual hub controller driver for AST2050 SoC.
+
+Files Added: ast_usbhub.c, ast_usbhub.h, hub.h, Makefile
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 26 Jan 2010 15:26:19 +0800
+

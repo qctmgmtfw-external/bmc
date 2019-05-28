@@ -1,0 +1,11 @@
+--- linux/drivers/net/ethernet/aspeed/ast_ether.c	2015-10-07 22:29:52.674383614 +0800
++++ linux/drivers/net/ethernet/aspeed/ast_ether.c.new	2015-10-08 07:23:40.063384032 +0800
+@@ -1611,7 +1611,7 @@
+ 	//priv->dev = dev;
+ 	spin_lock_init(&priv->lock);
+ 
+-	priv->maccr = MACCR_CRC_APD | MACCR_RXMAC_EN | MACCR_TXMAC_EN | MACCR_RXDMA_EN | MACCR_TXDMA_EN | MACCR_RX_BROADPKT_EN | MACCR_RX_MULTIPKT_EN | MACCR_RX_RUNT;
++	priv->maccr = MACCR_CRC_APD | MACCR_RXMAC_EN | MACCR_TXMAC_EN | MACCR_RXDMA_EN | MACCR_TXDMA_EN | MACCR_RX_BROADPKT_EN | MACCR_RX_MULTIPKT_EN;
+ 
+ 	ast_ether_alloc_descriptor(dev);
+ 	priv->link_state = -1;

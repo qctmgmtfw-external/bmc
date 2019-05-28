@@ -1,0 +1,16 @@
+--- linux-3.14.17/Makefile	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/Makefile	2014-08-21 14:16:00.033736940 -0400
+@@ -195,8 +195,11 @@
+ # "make" in the configured kernel build directory always uses that.
+ # Default value for CROSS_COMPILE is not to prefix executables
+ # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
+-ARCH		?= $(SUBARCH)
+-CROSS_COMPILE	?= $(CONFIG_CROSS_COMPILE:"%"=%)
++#ARCH		?= $(SUBARCH)
++#CROSS_COMPILE	?= $(CONFIG_CROSS_COMPILE:"%"=%)
++ARCH := arm
++CROSS_COMPILE := $(CROSS_COMPILE)
++
+ 
+ # Architecture as present in compile.h
+ UTS_MACHINE 	:= $(ARCH)

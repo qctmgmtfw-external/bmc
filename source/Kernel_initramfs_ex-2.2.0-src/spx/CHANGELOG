@@ -1,0 +1,85 @@
+Package: Kernel_initramfs_ex (2.2.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:09:56 GMT
+
+Package: Kernel_initramfs_ex (2.1.0); urgency = high
+
+Abstract:
+	Fixed accepting cmdline with root=UUID=<uuid> format
+
+Files Modified: data/init.sh
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 01 Dec 2014 17:37:57 EST
+
+Package: Kernel_initramfs_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:15:21 GMT
+
+Package: Kernel_initramfs_ex (1.5.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:57:38 GMT
+
+Package: Kernel_initramfs_ex (1.4.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:07:25 GMT
+
+Package: Kernel_initramfs_ex (1.3.0); urgency = high
+
+Abstract:
+	Added 
+1. rootdelay option from kernel commandline (needed for USB detection delay)
+2. Both rw/ro options
+3. mdev to support hotplug devices (needed to boot from USB devices)
+
+Files Modified: data/init.sh, spx/DEFCONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 08 Sep 2014 14:31:00 EDT
+
+Package: Kernel_initramfs_ex (1.2.0); urgency = medium
+
+Abstract:
+	Added support for read-only mount option in kernel commandline
+
+Files Modified: data/init.sh
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Fri, 05 Sep 2014 12:57:12 HMT
+
+Package: Kernel_initramfs_ex (1.1.0); urgency = medium
+
+Abstract:
+	Initramfs changes needed for X86 architecture
+
+Files Added: data/PATCHES, data/PATCHES/001-Makefile
+Files Modified: spx/RULES.py
+
+--Submitter: Winston (winstont@ami.com) Thu, 14 Aug 2014 15:33:39 GMT
+
+Package: Kernel_initramfs_ex (1.0.0); urgency = new
+
+Abstract:
+	Kernel Initramfs support
+
+Files Added: data, data/busybox-1.22.1.tar.bz2, data/init.sh, data/initramfs.lst, spx, spx/CHANGELOG, spx/DEFCONFIG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Kernel_initramfs_ex, spx/PACKAGES.D/Kernel_initramfs_ex/DATA, spx/PACKAGES.D/Kernel_initramfs_ex/SCRIPTS, spx/PACKAGES.D/Kernel_initramfs_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 17:00:20 EDT
+

@@ -1,0 +1,11 @@
+--- linux.old/drivers/mmc/host/sdhci-ast.c		2015-07-02 20:56:50.232163575 +0800
++++ linux-3.14.17-ami/drivers/mmc/host/sdhci-ast.c	2015-07-02 20:59:01.952164988 +0800
+@@ -293,7 +293,7 @@
+ static int __init ast_sd_init(void)
+ {
+ 	uint32_t reg;
+-	
++	return 0; //Quanta 
+ 	/* Unlock SCU */
+ 	iowrite32(SCU_UNLOCK_MAGIC, (void __iomem*)SCU_KEY_CONTROL_REG);
+ 

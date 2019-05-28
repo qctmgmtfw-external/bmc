@@ -1,0 +1,38 @@
+Source : libopenradius
+Version : 2.1.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Santhosh Kumar R (santhoshkumarr@amiindia.co.in)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : libopenradius, libopenradius_dev
+Build-Depends : Crosscc, global_dev, rules
+Architecture : ALL
+Urgency : medium
+Description : This is the PAM to RADIUS authentication module. It allows any PAM-capable machine to become a RADIUS client for authentication and accounting requests.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libopenradius
+Section : lib
+Group : SOFTWARE
+Essential : NO
+Description : This packages contains the Authentication process for RADIUS using PAM.
+.
+
+Package : libopenradius_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : Contains the headers for libopenradius.
+.
+

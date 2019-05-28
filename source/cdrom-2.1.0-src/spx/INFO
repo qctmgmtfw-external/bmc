@@ -1,0 +1,33 @@
+Source : cdrom
+Version : 2.1.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Rama Rao Bisa (RamaB@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : cdrom
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, usbe_driver_dev, iUSB_driver_dev, rules, libdbgout_dev, CDDVD_HW_support, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package includes CDROM Device driver Module.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : cdrom
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_usb
+Required : helper, iUSB, usbe, CDDVD_HW_support, DevNodes
+Description : This pacakge includes built cdrom driver module.
+.
+

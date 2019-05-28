@@ -1,0 +1,237 @@
+Package: peci_hw (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/ast_peci.c, data/ast_peci.h, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:30:33 HMT
+
+Package: peci_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:00:42 GMT
+
+Package: peci_hw (1.15.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 15:54:37 HMT
+
+Package: peci_hw (1.14.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:30:57 GMT
+
+Package: peci_hw (1.13.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:43:06 GMT
+
+Package: peci_hw (1.12.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/ast_peci.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:05:55 EDT
+
+Package: peci_hw (1.11.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/ast_peci.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:42:36 GMT
+
+Package: peci_hw (1.10.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/peci_hw/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:02:03 GMT
+
+Package: peci_hw (1.9.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/peci_hw/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:58:20 HMT
+
+Package: peci_hw (1.8.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:25:47 EDT
+
+Package: peci_hw (1.7.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:46:10 EDT
+
+Package: peci_hw (1.6.1); urgency = medium
+
+Abstract:
+	Fix PECI hangup issue. 
+Re-initial PECI when send peci command timeout.
+
+Files Modified: data/ast_peci.c
+
+--Submitter: garypaung (garypaung@ami.com.tw) Thu, 20 Jun 2013 22:59:17 CST
+
+Package: peci_hw (1.6.0); urgency = high
+
+Abstract:
+	Reducing the PECI timeout from 3 Secs to 1 Secs. This will avoid temporary hangup in the calling process because if CPU is off, and if any PECI command is issued to read cpu temp etc, it will hang the process for 3 seconds.
+
+Files Modified: data/ast_peci.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 19 Oct 2012 11:47:23 EDT
+
+Package: peci_hw (1.5.0); urgency = high
+
+Abstract:
+	suppressing unnecessary prints using DEBUG macro, otherwise it floods the console
+
+Files Modified: data/ast_peci.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 07 Sep 2011 17:32:48 EDT
+
+Package: peci_hw (1.4.0); urgency = high
+
+Abstract:
+	Updating SourceLicense, PackageLicense, BinaryLicense and Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ast_peci.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 16:39:10 EDT
+
+Package: peci_hw (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:23:27 EDT
+
+Package: peci_hw (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/peci_hw/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 16:27:33 EDT
+
+Package: peci_hw (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:08:26 EDT
+
+Package: peci_hw (1.0.7); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:45:02 CST
+
+Package: peci_hw (1.0.6); urgency = medium
+
+Abstract:
+	1. Change timeout value to 3 seconds.
+2. Restore fire register to low before read IRQ status register.
+
+Files Modified: data/ast_peci.c, data/ast_peci.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 12 Apr 2010 15:33:28 CST
+
+Package: peci_hw (1.0.5); urgency = medium
+
+Abstract:
+	1. Fix the wrong regiseter of PECI enable.
+2. Fix the clock reset is not stopped problem.
+
+Files Modified: data/ast_peci.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 12 Apr 2010 14:16:37 CST
+
+Package: peci_hw (1.0.4); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:24:20 EDT
+
+Package: peci_hw (1.0.3); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:59:34 EDT
+
+Package: peci_hw (1.0.2); urgency = low
+
+Abstract:
+	Fix remainder padding formula.
+
+Files Modified: data/ast_peci.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 12 Mar 2010 17:58:30 CST
+
+Package: peci_hw (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:12:44 EST
+
+Package:peci_hw (1.0.0);urgency=new
+
+Abstract:
+	This package contains the PECI hardware driver for AST2050 SoC.
+
+Files Added: ast_peci.c, ast_peci.h, Makefile
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Sat, 28 Nov 2009 11:33:59 -0500

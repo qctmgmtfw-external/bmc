@@ -1,0 +1,49 @@
+#! /bin/sh
+# /etc/init.d/procps: Set kernel variables from /etc/sysctl.conf
+#
+# written by Elrond <Elrond@Wunder-Nett.org>
+
+### BEGIN INIT INFO
+# Provides:          procps
+# Required-Start:    mountkernfs
+# Required-Stop:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Configure kernel parameters at boottime
+# Description:  Loads kernel parameters that are specified in /etc/sysctl.conf
+### END INIT INFO
+
+
+# Check for existance of the default file and exit if not there,
+# Closes #52839 for the boot-floppy people
+[ -r /etc/default/rcS ] || exit 0
+. /etc/default/rcS
+. /lib/lsb/init-functions
+
+PATH=/sbin:$PATH
+which sysctl > /dev/null || exit 0
+
+
+case "$1" in
+       start|restart|force-reload)
+#Ractrends SP 4.0 busybox version of sysctl does not support -q option
+#	           quiet="-q"
+			   if [ "$VERBOSE" = "yes" ]; then
+				       quiet=""
+               fi
+	           for file in /etc/sysctl.conf /etc/sysctl.d/*.conf ; do
+				 if [ -r "$file" ] ; then
+				   log_action_begin_msg "Setting kernel variables ($file)"
+				   sysctl $quiet -p "$file"
+				   log_action_end_msg $?
+				 fi
+			   done
+               ;;
+       stop)
+               ;;
+       *)
+               echo "Usage: /etc/init.d/procps {start|stop|restart|force-reload}" >&2
+               exit 3
+               ;;
+esac
+exit 0

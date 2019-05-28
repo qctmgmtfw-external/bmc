@@ -1,0 +1,138 @@
+Package: jtag (2.2.0); urgency = high
+
+Abstract:
+	Modify license of package to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: robinchiu (RobinChiu) Tue, 18 Nov 2014 14:24:32 CST
+
+Package: jtag (2.1.0); urgency = high
+
+Abstract:
+	Remove unnecessary memory allocation.
+
+Files Modified: data/jtagmain.c
+
+--Submitter: robinchiu (RobinChiu) Mon, 10 Nov 2014 16:31:09 CST
+
+Package: jtag (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:02:47 GMT
+
+Package: jtag (1.11.0); urgency = medium
+
+Abstract:
+	Fix rmmod cpld_hw cause kernel panic issue.
+
+Files Modified: data/jtagmain.c
+
+--Submitter: garypaung (garypaung@ami.com.tw) Fri, 03 Oct 2014 00:17:59 CST
+
+Package: jtag (1.10.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:46:22 GMT
+
+Package: jtag (1.9.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:55:59 GMT
+
+Package: jtag (1.8.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/jtagmain.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:07:22 EDT
+
+Package: jtag (1.7.0); urgency = medium
+
+Abstract:
+	Changed major number of jtag as it is conflicting with kernel drivers in SPX Core 2.0
+
+Files Modified: data/jtagmain.c, spx/PACKAGES.D/jtag/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Tue, 08 Jul 2014 16:14:46 HMT
+
+Package: jtag (1.6.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/jtagmain.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Tue, 08 Jul 2014 15:28:08 HMT
+
+Package: jtag (1.5.0); urgency = medium
+
+Abstract:
+	Modify JTAG driver to software mode
+
+Files Modified: data/jtag.h, data/jtagmain.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 27 Feb 2014 17:07:23 CST
+
+Package: jtag (1.4.0); urgency = medium
+
+Abstract:
+	Change Package name  crosscc to  Provider name Crosscc  to support multiple compilers
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 26 Feb 2014 12:34:43 EST
+
+Package: jtag (1.3.0); urgency = medium
+
+Abstract:
+	Modify the ioctl of device checksum
+
+Files Modified: data/jtagmain.c
+
+--Submitter: robinchiu (RobinChiu) Wed, 08 Jan 2014 16:59:41 CST
+
+Package: jtag (1.2.0); urgency = medium
+
+Abstract:
+	Implement registration function for JTAG hw device and remove CPLD related code
+
+Files Deleted: spx/P.CONFIG, spx/PACKAGES.D/jtag/P.CONFIG
+Files Modified: data/jtag.h, data/jtag_ioctl.h, data/jtagmain.c
+
+--Submitter: robinchiu (RobinChiu) Mon, 30 Dec 2013 16:30:37 CST
+
+Package: jtag (1.1.0); urgency = medium
+
+Abstract:
+	Modified JTAG Configuration and changed get_jtag_idcode from hardware to common driver
+
+Files Modified: data/jtagmain.c, spx/P.CONFIG, spx/PACKAGES.D/jtag/P.CONFIG
+
+--Submitter: robinchiu (RobinChiu) Mon, 23 Dec 2013 18:58:50 CST
+
+Package: jtag (1.0.0); urgency = new
+
+Abstract:
+	This package includes the JTAG common driver.
+
+Files Added: data, data/Makefile, data/jtag.h, data/jtag_ioctl.h, data/jtagmain.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/jtag, spx/PACKAGES.D/jtag/DATA, spx/PACKAGES.D/jtag/P.CONFIG, spx/PACKAGES.D/jtag/SCRIPTS, spx/PACKAGES.D/jtag/SCRIPTS/dev-install, spx/PACKAGES.D/jtag_driver_dev, spx/PACKAGES.D/jtag_driver_dev/DATA, spx/PACKAGES.D/jtag_driver_dev/SCRIPTS, spx/PACKAGES.D/jtag_driver_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: robinchiu (RobinChiu) Fri, 20 Dec 2013 12:16:30 CST
+

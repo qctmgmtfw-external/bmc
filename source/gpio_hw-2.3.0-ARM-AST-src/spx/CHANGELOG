@@ -1,0 +1,448 @@
+Package: gpio_hw (2.3.0); urgency = low
+
+Abstract:
+	Support AST2530EVB
+
+Files Modified: data/gpio_hw.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 05 Feb 2015 00:13:43 JWST
+
+Package: gpio_hw (2.2.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/gpio_hw.h, data/gpio_pins.h, data/gpiomain_hw.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:26:05 HMT
+
+Package: gpio_hw (2.1.0); urgency = low
+
+Abstract:
+	Support AST2500 GPIO Hardware driver
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c, spx/INFO
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 26 Nov 2014 20:20:20 JWST
+
+Package: gpio_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:43:33 GMT
+
+Package: gpio_hw (1.40.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:29:36 HMT
+
+Package: gpio_hw (1.39.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:29:01 GMT
+
+Package: gpio_hw (1.38.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:36:54 GMT
+
+Package: gpio_hw (1.37.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/gpiomain_hw.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:07:36 EDT
+
+Package: gpio_hw (1.36.0); urgency = high
+
+Abstract:
+	Update the IRQ_SGPIO_MASTER using dev_id.
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Wed, 03 Sep 2014 17:13:14 CST
+
+Package: gpio_hw (1.35.0); urgency = high
+
+Abstract:
+	Support AST2400 GPIO driver use SGPIO 10 bytes mode and fix pin shift.
+Keep 8 empty pins for Y and AB bank, those banks have 4 bits only.
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Wed, 03 Sep 2014 10:55:18 CST
+
+Package: gpio_hw (1.34.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:36:50 GMT
+
+Package: gpio_hw (1.33.0); urgency = medium
+
+Abstract:
+	Remove sideband recever function.
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: benchen (benchen) Fri, 23 May 2014 11:39:45 CST
+
+Package: gpio_hw (1.32.0); urgency = low
+
+Abstract:
+	modification to suppoert multi sideband lan gpio intrrupt mode.
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 09 May 2014 08:18:41 CST
+
+Package: gpio_hw (1.31.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/gpio_hw/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:58:59 GMT
+
+Package: gpio_hw (1.30.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/gpio_hw/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:46:17 HMT
+
+Package: gpio_hw (1.29.0); urgency = low
+
+Abstract:
+	SOC AST1250_1070 removed and AST1250 SOC support ast1070evb platform
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 26 Mar 2014 10:32:51 CST
+
+Package: gpio_hw (1.28.0); urgency = low
+
+Abstract:
+	GPIO Support 1050_1070
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Sat, 01 Mar 2014 12:48:46 CST
+
+Package: gpio_hw (1.27.0); urgency = medium
+
+Abstract:
+	Change define from sideband to interrupt option.
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: kennywu (kennywu) Fri, 21 Feb 2014 15:27:32 CST
+
+Package: gpio_hw (1.26.0); urgency = medium
+
+Abstract:
+	Update sideband driver
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: kennywu (kennywu) Tue, 31 Dec 2013 18:54:23 CST
+
+Package: gpio_hw (1.25.0); urgency = low
+
+Abstract:
+	Support AST1250_1070EVB
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Sat, 28 Dec 2013 15:13:00 CST
+
+Package: gpio_hw (1.24.0); urgency = low
+
+Abstract:
+	Added support to set and get debounce clock regiaters.
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Fri, 20 Dec 2013 19:03:11 HMT
+
+Package: gpio_hw (1.23.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:32:37 EDT
+
+Package: gpio_hw (1.22.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:18:41 EDT
+
+Package: gpio_hw (1.21.0); urgency = medium
+
+Abstract:
+	GPIO changes includes
+1. Toggling GPIO for blinking LEDs.
+2. Set and Get GPIO properties.
+3. Set and Get the value of register during gpio interrupts.
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 18 Sep 2013 10:20:03 HMT
+
+Package: gpio_hw (1.20.0); urgency = low
+
+Abstract:
+	Support for AST3100 SOC added
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: Yugender P Subramanian (yugenderps@ami.com) Sun, 03 Feb 2013 21:55:29 EST
+
+Package: gpio_hw (1.19.0); urgency = high
+
+Abstract:
+	adding support in driver layer to set multiple gpios with a single call. simiarly to get multiple gpios with a single call.
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 03 Jan 2013 12:48:16 EST
+
+Package: gpio_hw (1.18.0); urgency = high
+
+Abstract:
+	Adding support to read/write multiple gpios using a single call
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 13 Nov 2012 15:45:48 EST
+
+Package: gpio_hw (1.17.0); urgency = high
+
+Abstract:
+	- Supported for AST2400 SoC.
+- Revise the definition to match the description of datasheet.
+- Free GPIO & SGPIO IRQ when remove the module.
+
+Files Modified: data/gpio_hw.h, data/gpio_pins.h, data/gpiomain_hw.c
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Mon, 29 Oct 2012 15:57:45 CST
+
+Package: gpio_hw (1.16.0); urgency = low
+
+Abstract:
+	Fix Kernel panic when doing BIOS updating and GPIO interrupt triggered
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Mon, 09 Apr 2012 10:07:03 CST
+
+Package: gpio_hw (1.15.0); urgency = medium
+
+Abstract:
+	Modified interrupt handler based on the change in core
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: Connie Yin (conniey@ami.com) Thu, 08 Sep 2011 11:04:11 EDT
+
+Package: gpio_hw (1.14.0); urgency = high
+
+Abstract:
+	Updating SourceLicense, PackageLicense, BinaryLicense & Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/gpiomain_hw.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 16:18:20 EDT
+
+Package: gpio_hw (1.13.0); urgency = medium
+
+Abstract:
+	Fix SGPIO read function failed in ast2300
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Tue, 31 May 2011 15:14:50 CST
+
+Package: gpio_hw (1.12.0); urgency = medium
+
+Abstract:
+	Added support for set/get pull-up/pull-down control bits for gpio.
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 20 May 2011 01:57:53 EDT
+
+Package: gpio_hw (1.11.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:16:28 EDT
+
+Package: gpio_hw (1.10.0); urgency = medium
+
+Abstract:
+	Added support for set/get polarity of GPIO
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 13 May 2011 17:30:35 IST
+
+Package: gpio_hw (1.9.0); urgency = high
+
+Abstract:
+	1. Modify the pin number of GPIO portQ~portS when GPIO be triggered. (portQ,R,S only 24 pins)
+2. Add protect method in interrupt handler, check interrupt status when interrupt be enabled.
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Wed, 04 May 2011 16:19:36 CST
+
+Package: gpio_hw (1.8.0); urgency = high
+
+Abstract:
+	Bugfix, correct the bank range of register sensor and chassis interrupt.
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Fri, 29 Apr 2011 15:34:03 CST
+
+Package: gpio_hw (1.7.0); urgency = high
+
+Abstract:
+	fix SGPIO_CON_OFFSET define in ast2050
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Mon, 10 Jan 2011 18:08:51 CST
+
+Package: gpio_hw (1.6.0); urgency = high
+
+Abstract:
+	add support to SGPIO in ast2300
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Fri, 07 Jan 2011 15:05:28 CST
+
+Package: gpio_hw (1.5.0); urgency = high
+
+Abstract:
+	add SOC_AST2300 iddef to ast2050_check_serial_gpio
+
+Files Modified: data/gpiomain_hw.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Tue, 04 Jan 2011 17:47:51 CST
+
+Package: gpio_hw (1.4.0); urgency = high
+
+Abstract:
+	add interrupt support to gpio pins 65~152
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Tue, 04 Jan 2011 16:31:14 CST
+
+Package: gpio_hw (1.3.0); urgency = high
+
+Abstract:
+	add support to parallel GPIO 65~152(only output and input mode)
+
+Files Modified: data/gpio_hw.h, data/gpiomain_hw.c, spx/INFO
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Tue, 28 Dec 2010 18:54:35 CST
+
+Package: gpio_hw (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/gpio_hw/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 16:25:51 EDT
+
+Package: gpio_hw (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:44:53 EDT
+
+Package: gpio_hw (1.0.4); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:46:08 CST
+
+Package: gpio_hw (1.0.3); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:22:11 EDT
+
+Package: gpio_hw (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:44:45 EDT
+
+Package: gpio_hw (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:57:33 EST
+
+Package:gpio_hw (1.0.0);urgency=new
+
+Abstract:
+	This package contains GPIO hardware level driver for AST2050 SoC.
+
+Files Added: gpio_hw.h, gpiomain_hw.c, gpio_pins.h, Makefile
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Wed, 18 Nov 2009 16:06:00 -0500

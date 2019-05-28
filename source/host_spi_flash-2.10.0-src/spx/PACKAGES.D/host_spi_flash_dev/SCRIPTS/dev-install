@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+	MKDIR_CLEAN %SPXINC/host_spi_flash
+	COPY_DIR ./ %SPXINC/host_spi_flash
+
+debug-install:

@@ -1,0 +1,317 @@
+Package: cipher_hw (2.4.0); urgency = medium
+
+Abstract:
+	SCAC Fix for Build Error
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 24 Dec 2014 14:57:31 IST
+
+Package: cipher_hw (2.3.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h, data/rc4.c, data/rc4.h, data/rsa.c, data/rsa.h
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Thu, 18 Dec 2014 20:49:32 HMT
+
+Package: cipher_hw (2.2.0); urgency = medium
+
+Abstract:
+	SCAL Fix for fortify issues
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Thu, 18 Dec 2014 14:06:14 IST
+
+Package: cipher_hw (2.1.0); urgency = medium
+
+Abstract:
+	Ponsaravanan: free allocated memory on return
+
+Files Modified: data/rsa.c, spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Tue, 18 Nov 2014 14:34:16 HMT
+
+Package: cipher_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:19:48 GMT
+
+Package: cipher_hw (1.28.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:27:35 HMT
+
+Package: cipher_hw (1.27.0); urgency = medium
+
+Abstract:
+	EIP184118 - Add AST2500 definition for cipher_hw driver
+
+Files Modified: data/ast_cipher.h, data/rsa.h
+
+--Submitter: yishanchen (yishanchen@ami.com.tw) Tue, 30 Sep 2014 00:55:12 PDT
+
+Package: cipher_hw (1.26.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:04:20 GMT
+
+Package: cipher_hw (1.25.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:12:50 GMT
+
+Package: cipher_hw (1.24.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/ast_cipher.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:08:20 EDT
+
+Package: cipher_hw (1.23.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:36:37 GMT
+
+Package: cipher_hw (1.22.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/ast_cipher.c, data/rsa.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:34:52 HMT
+
+Package: cipher_hw (1.21.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/cipher_hw/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:57:55 GMT
+
+Package: cipher_hw (1.20.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/cipher_hw/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:44:13 HMT
+
+Package: cipher_hw (1.19.0); urgency = low
+
+Abstract:
+	SOC AST1250_1070 removed and AST1250 SOC support ast1070evb platform
+
+Files Modified: data/ast_cipher.h, data/rsa.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 26 Mar 2014 10:32:30 CST
+
+Package: cipher_hw (1.18.0); urgency = medium
+
+Abstract:
+	Changed the driver from polling to Interrupt based
+
+Files Modified: data/aes_core.c, data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: Winston (winstont@ami.com) Mon, 17 Mar 2014 07:59:22 HMT
+
+Package: cipher_hw (1.17.0); urgency = medium
+
+Abstract:
+	Adding support AST1250 SoC.
+
+Files Modified: data/rsa.h
+
+--Submitter: Winston (winstont@ami.com) Tue, 25 Feb 2014 19:06:18 EST
+
+Package: cipher_hw (1.16.0); urgency = low
+
+Abstract:
+	create AST1050_1070EVB project
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h, data/rsa.h
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 20 Feb 2014 22:14:48 CST
+
+Package: cipher_hw (1.15.0); urgency = medium
+
+Abstract:
+	Add to support RSA HW cipher driver
+
+Files Added: data/rsa.c, data/rsa.h
+Files Modified: data/Makefile, data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: yishanchen (yishanchen@ami.com.tw) Thu, 09 Jan 2014 11:37:03 CST
+
+Package: cipher_hw (1.14.0); urgency = low
+
+Abstract:
+	Support AST1250_1070EVB
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Sat, 28 Dec 2013 15:02:48 CST
+
+Package: cipher_hw (1.13.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:34:24 EDT
+
+Package: cipher_hw (1.12.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:00:12 EDT
+
+Package: cipher_hw (1.11.0); urgency = high
+
+Abstract:
+	- Supported for AST2400 SoC.
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Mon, 29 Oct 2012 15:52:34 CST
+
+Package: cipher_hw (1.10.0); urgency = medium
+
+Abstract:
+	Added lock SCU command.
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 08 Dec 2011 21:21:32 CST
+
+Package: cipher_hw (1.9.0); urgency = medium
+
+Abstract:
+	Adjust delay time.
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Thu, 08 Dec 2011 21:15:23 CST
+
+Package: cipher_hw (1.8.0); urgency = medium
+
+Abstract:
+	Adjust initial sequence for the default clock stopped HAC engines in ast cipher hw driver
+
+Files Modified: data/ast_cipher.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 08 Dec 2011 17:19:00 CST
+
+Package: cipher_hw (1.7.0); urgency = medium
+
+Abstract:
+	Added DES/3DES support for ast2300 cipher driver
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 08 Aug 2011 13:02:16 CST
+
+Package: cipher_hw (1.6.0); urgency = high
+
+Abstract:
+	Updating SourceLicense?, PackageLicense?, BinaryLicense? & Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ast_cipher.c, spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 24 Jun 2011 14:45:01 CST
+
+Package: cipher_hw (1.5.0); urgency = medium
+
+Abstract:
+	1. Added sha224, sha256, md5, hmac-sha224, hmac-sha256, and hmac-md5 support.
+2. Use flush cache function instead of delay fuction.
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 21 Jun 2011 11:00:44 CST
+
+Package: cipher_hw (1.4.0); urgency = medium
+
+Abstract:
+	1. Restructure some segment.
+2. Added data buffer for AES, and adjust the returned max data length.
+3. Solved aes bug via delay function.
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 18 May 2011 14:42:07 CST
+
+Package: cipher_hw (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:07:29 EDT
+
+Package: cipher_hw (1.2.0); urgency = low
+
+Abstract:
+	1. Remove GPL licenced code, and change licence to AMI.
+2. Added get_info, data_padding, and remove_data_padding functions.
+
+Files Added: data/aes_core.c
+Files Deleted: data/aes.c, spx/LICENSES/LICENSE.GPL-V2
+Files Modified: data/Makefile, data/aes.h, data/ast_cipher.c, data/ast_cipher.h, data/rc4.c, data/rc4.h, spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 04 May 2011 19:30:26 CST
+
+Package: cipher_hw (1.1.0); urgency = medium
+
+Abstract:
+	1. Added get_max_datalen function support.
+2. The enum name of AES changes
+3. Reduce rc4 key states by changing its type.
+
+Files Modified: data/ast_cipher.c, data/ast_cipher.h, data/rc4.c, data/rc4.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 11 Mar 2011 19:19:11 CST
+
+Package: cipher_hw (1.0.0); urgency = new
+
+Abstract:
+	This package contains cipher hardware level driver for AST SOC
+
+Files Added: data, data/Makefile, data/aes.c, data/aes.h, data/ast_cipher.c, data/ast_cipher.h, data/rc4.c, data/rc4.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/cipher_hw, spx/PACKAGES.D/cipher_hw/DATA, spx/PACKAGES.D/cipher_hw/SCRIPTS, spx/PACKAGES.D/cipher_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 29 Jan 2011 20:50:44 CST
+

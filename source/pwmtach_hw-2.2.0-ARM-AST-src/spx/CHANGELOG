@@ -1,0 +1,288 @@
+Package: pwmtach_hw (2.2.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/ast_pwmtach.c, data/ast_pwmtach.h, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:32:29 HMT
+
+Package: pwmtach_hw (2.1.0); urgency = high
+
+Abstract:
+	Add supports for AST2500.
+
+Files Modified: data/ast_pwmtach.c, data/ast_pwmtach.h
+
+--Submitter: robinchiu (RobinChiu) Tue, 02 Dec 2014 19:31:59 CST
+
+Package: pwmtach_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:13:52 GMT
+
+Package: pwmtach_hw (1.21.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:50:58 HMT
+
+Package: pwmtach_hw (1.20.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:42:18 GMT
+
+Package: pwmtach_hw (1.19.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:54:39 GMT
+
+Package: pwmtach_hw (1.18.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/ast_pwmtach.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:05:28 EDT
+
+Package: pwmtach_hw (1.17.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/ast_pwmtach.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:43:03 GMT
+
+Package: pwmtach_hw (1.16.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/pwmtach_hw/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:03:09 GMT
+
+Package: pwmtach_hw (1.15.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/pwmtach_hw/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 21:01:58 HMT
+
+Package: pwmtach_hw (1.14.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:44:13 EDT
+
+Package: pwmtach_hw (1.13.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:56:03 EDT
+
+Package: pwmtach_hw (1.12.0); urgency = high
+
+Abstract:
+	Add new condition when FAN no value.
+
+Files Modified: data/ast_pwmtach.c, data/ast_pwmtach.h
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Tue, 23 Apr 2013 11:24:08 CST
+
+Package: pwmtach_hw (1.11.0); urgency = high
+
+Abstract:
+	- Supported for AST2400 SoC.
+
+Files Modified: data/ast_pwmtach.c, data/ast_pwmtach.h
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Mon, 29 Oct 2012 15:54:26 CST
+
+Package: pwmtach_hw (1.10.0); urgency = medium
+
+Abstract:
+	Fixed build error, Changed function declarations.
+
+Files Modified: data/ast_pwmtach.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 06 Sep 2011 17:54:16 IST
+
+Package: pwmtach_hw (1.9.0); urgency = medium
+
+Abstract:
+	Added Get status IOCTL for tach and pwm, Added 4 generic IOCTL command to set appropriate properties of PWM and TACH.
+
+Files Modified: data/ast_pwmtach.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 05 Sep 2011 15:20:10 IST
+
+Package: pwmtach_hw (1.8.1); urgency = medium
+
+Abstract:
+	Fix issue "add more than 4 tach sensors will web firmware update fail".
+
+Files Modified: data/ast_pwmtach.c
+
+--Submitter: garypaung (garypaung@ami.com.tw) Thu, 25 Aug 2011 20:24:20 CST
+
+Package: pwmtach_hw (1.8.0); urgency = medium
+
+Abstract:
+	Get the wrong value when proceed duty cycle.
+
+Files Modified: data/ast_pwmtach.c
+
+--Submitter: benchen (benchen@ami.com.tw) Tue, 12 Jul 2011 17:47:47 CST
+
+Package: pwmtach_hw (1.7.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ast_pwmtach.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 17:35:20 IST
+
+Package: pwmtach_hw (1.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:30:54 EDT
+
+Package: pwmtach_hw (1.5.0); urgency = medium
+
+Abstract:
+	fix issue for get fan speed if there is no fan connected.
+
+Files Modified: data/ast_pwmtach.c
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Wed, 16 Mar 2011 16:54:05 CST
+
+Package: pwmtach_hw (1.4.0); urgency = high
+
+Abstract:
+	add support to pwm 5~8 in AST2300
+
+Files Modified: data/ast_pwmtach.c, data/ast_pwmtach.h
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Wed, 12 Jan 2011 18:10:43 CST
+
+Package: pwmtach_hw (1.3.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/pwmtach_hw/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 16:28:14 EDT
+
+Package: pwmtach_hw (1.2.0); urgency = low
+
+Abstract:
+	Added get_pwm_dutycycle functionality.   Also added alternate initialization register values for either max or min fan speeds
+
+Files Modified: data/ast_pwmtach.c, spx/INFO
+
+--Submitter: David Wise (davidw@ami.com) Wed, 27 Oct 2010 12:19:54 EDT
+
+Package: pwmtach_hw (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:12:09 EDT
+
+Package: pwmtach_hw (1.0.6); urgency = medium
+
+Abstract:
+	Combine formula to increase precision.
+
+Files Modified: data/ast_pwmtach.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 21 May 2010 14:01:06 CST
+
+Package: pwmtach_hw (1.0.5); urgency = medium
+
+Abstract:
+	Fix tachometer number check.
+
+Files Modified: data/ast_pwmtach.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 12 May 2010 16:51:31 CST
+
+Package: pwmtach_hw (1.0.4); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:45:37 CST
+
+Package: pwmtach_hw (1.0.3); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:24:33 EDT
+
+Package: pwmtach_hw (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 18:01:26 EDT
+
+Package: pwmtach_hw (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:13:49 EST
+
+Package:pwmtach_hw (1.0.0);urgency=new
+
+Abstract:
+	This package contains the PWMTACH hardware driver for AST2050 SoC.
+
+Files Added: ast_pwmtach.c, ast_pwmtach.h, Makefile
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 19 Nov 2009 16:04:42 -0500

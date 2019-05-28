@@ -1,0 +1,9 @@
+Package: Busybox_oem_ex (1.0.0); urgency = new
+
+Abstract:
+	Package for OEM Customization.
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Busybox_oem_ex, spx/PACKAGES.D/Busybox_oem_ex/DATA, spx/PACKAGES.D/Busybox_oem_ex/SCRIPTS, spx/PACKAGES.D/Busybox_oem_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 30 Apr 2015 18:54:08 CST
+

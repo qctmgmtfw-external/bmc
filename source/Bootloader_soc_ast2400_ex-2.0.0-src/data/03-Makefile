@@ -1,0 +1,13 @@
+--- u-boot-2013.07/Makefile	2013-12-13 13:49:25.828958498 -0500
++++ uboot.new/Makefile	2013-12-13 12:18:50.644959146 -0500
+@@ -364,6 +364,10 @@
+ LIBS-y += $(CPUDIR)/tegra-common/libtegra-common.o
+ endif
+ 
++ifeq ($(SOC),ast2400)
++LIBS-y += arch/$(ARCH)/cpu/astcommon/libastcommon.o
++endif
++
+ LIBS := $(addprefix $(obj),$(sort $(LIBS-y)))
+ .PHONY : $(LIBS)
+ 

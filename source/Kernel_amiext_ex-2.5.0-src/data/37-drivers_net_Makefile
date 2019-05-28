@@ -1,0 +1,8 @@
+--- linux-3.14.17/drivers/net/Makefile	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/drivers/net/Makefile	2014-08-21 11:23:59.909543194 -0400
+@@ -73,3 +73,5 @@
+ 
+ obj-$(CONFIG_HYPERV_NET) += hyperv/
+ obj-$(CONFIG_NTB_NETDEV) += ntb_netdev.o
++
++obj-y += eth_over.o

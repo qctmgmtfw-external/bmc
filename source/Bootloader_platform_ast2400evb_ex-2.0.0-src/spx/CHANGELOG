@@ -1,0 +1,81 @@
+Package: Bootloader_platform_ast2400evb_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:05:58 GMT
+
+Package: Bootloader_platform_ast2400evb_ex (1.7.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:50:54 GMT
+
+Package: Bootloader_platform_ast2400evb_ex (1.6.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:00:19 GMT
+
+Package: Bootloader_platform_ast2400evb_ex (1.5.0); urgency = high
+
+Abstract:
+	Fixed patch issue
+
+Files Modified: data/01-board_ast2400evb_ast2400evb.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 29 Aug 2014 16:25:11 EDT
+
+Package: Bootloader_platform_ast2400evb_ex (1.4.0); urgency = medium
+
+Abstract:
+	Set proper values of memory size and merge  common code between AST
+
+Files Modified: data/01-board_ast2400evb_ast2400evb.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 29 Aug 2014 15:21:07 EDT
+
+Package: Bootloader_platform_ast2400evb_ex (1.3.0); urgency = medium
+
+Abstract:
+	Set proper memory size based on ECC enabled/disabled
+
+Files Modified: data/01-board_ast2400evb_ast2400evb.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 29 Aug 2014 14:33:38 EDT
+
+Package: Bootloader_platform_ast2400evb_ex (1.2.0); urgency = medium
+
+Abstract:
+	Reverting the changes
+
+Files Modified: data/01-board_ast2400evb_ast2400evb.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 19 Aug 2014 11:59:04 GMT
+
+Package: Bootloader_platform_ast2400evb_ex (1.1.0); urgency = medium
+
+Abstract:
+	Move SCU setting to platform.
+
+Files Modified: data/01-board_ast2400evb_ast2400evb.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 18 Aug 2014 14:37:30 CST
+
+Package: Bootloader_platform_ast2400evb_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2400EVB related patches to Bootloader Uboot-2013.07
+
+Files Added: data, data/01-board_ast2400evb_ast2400evb.c, data/02-board_ast2400evb_config.mk, data/03-board_ast2400evb_Makefile, data/04-board_ast2400evb_u-boot.lds, data/05-boards.cfg, data/06-include_configs_ast2400evb.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_platform_ast2400evb_ex, spx/PACKAGES.D/Bootloader_platform_ast2400evb_ex/DATA, spx/PACKAGES.D/Bootloader_platform_ast2400evb_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_platform_ast2400evb_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 16:50:23 EDT
+

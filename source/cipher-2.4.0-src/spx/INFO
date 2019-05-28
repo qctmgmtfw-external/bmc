@@ -1,0 +1,41 @@
+Source : cipher
+Version : 2.4.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Joey Chen (JoeyChen@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : cipher, cipher_driver_dev
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, libdbgout_dev, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package provides the common (hardware independent) cipher driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : cipher
+Config-Tag : Cipher Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_cipher
+Required : helper, DevNodes
+Description : Cipher Device Support
+.
+
+Package : cipher_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package contains cipher driver development header files.
+.
+

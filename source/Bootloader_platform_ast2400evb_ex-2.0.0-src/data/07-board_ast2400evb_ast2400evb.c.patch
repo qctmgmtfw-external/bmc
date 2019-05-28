@@ -1,0 +1,144 @@
+--- uboot/board/ast2400evb/ast2400evb.c		2015-07-01 20:54:17.751235253 +0800
++++ uboot.new/board/ast2400evb/ast2400evb.c	2015-07-01 20:54:53.823235640 +0800
+@@ -176,9 +176,105 @@
+ 
+ 	return 0;
+ }
++#ifdef CONFIG_BOARDID_IN_EEPROM
++void boardid_init (void)
++{
++	int    i, offs, retry, ret = 0;
++	uchar  fru_buf[256], chksum;
++	char   *tmp = NULL, boardid_env[8], boardid_tmp[8];
++
++	eeprom_init();
++
++	sprintf(boardid_env, "%02X", 0xFF);
++	do {
++		// read Common Header
++		retry = 0;
++		while (++retry <= 6) {
++			if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, CFG_EEPROM_FRU_OFFSET, fru_buf, 8)) == 0)
++				break;
++		}
++		if (ret != 0)
++			break;
++
++		chksum = 0;
++		for (i = 0; i < 8; i++) {
++			chksum += fru_buf[i];
++		}
++		if (chksum != 0)
++			break;
++
++		offs = fru_buf[3] * 8;
++		if ((fru_buf[3] == 0) || (offs >= sizeof(fru_buf)))
++			break;
++
++		// read Board Info Area
++		retry = 0;
++		while (++retry <= 6) {
++			if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, CFG_EEPROM_FRU_OFFSET+offs, fru_buf, 8)) == 0)
++				break;
++		}
++		if (ret != 0)
++			break;
++
++		if ((offs + fru_buf[1]*8) >= sizeof(fru_buf))
++			break;
++
++		offs += CFG_EEPROM_FRU_OFFSET;
++		for (i = 1; i < fru_buf[1]; i++) {
++			retry = 0;
++			while (++retry <= 6) {
++				if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, offs+i*8, fru_buf+i*8, 8)) == 0)
++					break;
++			}
++			if (ret != 0)
++				break;
++		}
++		if (i != fru_buf[1])
++			break;
++
++		offs = fru_buf[1] * 8;
++		chksum = 0;
++		for (i = 0; i < offs; i++) {
++			chksum += fru_buf[i];
++		}
++		if (chksum != 0)
++			break;
++
++		offs = 7 + (fru_buf[6] & 0x3F);  // Board Product Name
++		for (i = 0; i < 4; i++) {
++			offs += 1 + (fru_buf[offs] & 0x3F);
++		}
++
++		// Custom Field 1
++		if (fru_buf[offs] == 0xC1)
++			break;
++		offs += 1 + (fru_buf[offs] & 0x3F);
++
++		// Custom Field 2
++		if (fru_buf[offs] == 0xC1)
++			break;
++		offs += 1 + (fru_buf[offs] & 0x3F);
++
++		// Custom Field 3
++		if ((fru_buf[offs] == 0xC1) || ((fru_buf[offs] & 0x3F) != 2))
++			break;
++		offs += 1;
++		memcpy(boardid_env, &fru_buf[offs], 2);
++	} while (0);
++
++	if ((tmp = getenv("boardid")))
++		memcpy(boardid_tmp, tmp, 2);
++	setenv("boardid", boardid_env);
++
++	if ((tmp != NULL) && (memcmp(boardid_env, boardid_tmp, 2) != 0))
++		saveenv();
++}
++#endif
++// --- Quanta
+ 
+ int board_init (void)
+ {
++	unsigned long reg;
+     
+ 	/*Should match with linux mach type for this board */
+ 	gd->bd->bi_arch_number = 900;
+@@ -189,6 +285,24 @@
+ 	gd->flags = 0;
+ 
+ 	icache_enable ();
++	/* SCU */
++	*((volatile ulong*) 0x1e6e2000) = 0x1688A8A8;	/* unlock SCU */
++
++    reg = *((volatile ulong*) 0x1e6e2008);		/* LHCLK = HPLL/8 */
++    reg &= 0x1c0fffff;                          /* PCLK  = HPLL/8 */
++#ifdef CONFIG_AST2400
++    reg |= 0x61800000;							/* BHCLK = HPLL/8 */
++#else
++    reg |= 0x61b00000;							/* BHCLK = HPLL/8 */
++#endif
++    *((volatile ulong*) 0x1e6e2008) = reg;     
++	
++    *((volatile ulong*) SCU_KEY_CONTROL_REG) = 0; /* lock SCU */
++
++	*((volatile ulong*) 0x1e6e2000) = 0x1688A8A8;	/* unlock SCU */
++	QUANTA_OEM_INIT;
++	*((volatile ulong*) SCU_KEY_CONTROL_REG) = 0; /* lock SCU */
++
+ 
+ 	return 0;
+ }
+@@ -231,6 +345,10 @@
+ 	
+ #endif	
+ 
++#ifdef CONFIG_BOARDID_IN_EEPROM
++	boardid_init();
++#endif
++
+ 	setenv("verify", "n");
+ 	return (0);
+ }

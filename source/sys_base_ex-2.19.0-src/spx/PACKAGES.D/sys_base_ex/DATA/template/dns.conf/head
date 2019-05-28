@@ -1,0 +1,13 @@
+#!/bin/sh 
+DO_DDNS=n
+SET_FQDN=n	
+TSIG_AUTH=n
+SET_HOSTNAME=n
+SET_DOMAIN=n
+SET_v6DOMAIN=n
+SET_DNS=n
+SET_IPV6_PRIORITY=n
+SET_MDNS=n
+
+case ${IFACE} in
+

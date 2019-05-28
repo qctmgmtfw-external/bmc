@@ -1,0 +1,23 @@
+Source                   	:	Busybox_Fixes_ex
+Version : 2.3.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher  (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	Busybox_Fixes_ex
+Build-Depends            	:	Busybox_Pristine_ex
+Architecture             	:	ANY
+Urgency : low
+Description              	:	AMI Extensions and Fixes to Busybox_ex
+.
+
+Package                  	:	Busybox_Fixes_ex
+Section                  	:	info
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	AMI Extensions and Fixes to Busybox_ex
+.
+

@@ -1,0 +1,36 @@
+Package: openheaders_dev (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 05:54:07 GMT
+
+Package: openheaders_dev (1.2.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:25:04 GMT
+
+Package: openheaders_dev (1.1.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:37:13 GMT
+
+Package: openheaders_dev (1.0.0); urgency = new
+
+Abstract:
+	The package contains all the open source header files.
+
+Files Added: data, data/iso9660.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.OPENSOURCE, spx/PACKAGES.D, spx/PACKAGES.D/openheaders_dev, spx/PACKAGES.D/openheaders_dev/DATA, spx/PACKAGES.D/openheaders_dev/SCRIPTS, spx/PACKAGES.D/openheaders_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Winston (winstont@ami.com) Wed, 29 Aug 2012 22:25:52 EDT
+

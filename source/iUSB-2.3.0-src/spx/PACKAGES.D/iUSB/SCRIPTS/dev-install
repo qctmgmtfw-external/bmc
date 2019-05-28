@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+	ADD_MODULES_ONLY iUSB
+	ADD_UNLOAD_MODULE iUSB 8
+	MAKE_CHAR_NODE usb 100 0
+	
+debug-install:

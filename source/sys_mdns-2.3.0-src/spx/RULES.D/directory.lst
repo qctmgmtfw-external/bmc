@@ -1,0 +1,14 @@
+./usr
+./usr/sbin
+./usr/lib
+./usr/lib/avahi
+./etc/network/if-up.d
+./etc/network/if-post-down.d
+./etc/default
+./etc/avahi
+./etc/avahi/services
+./etc/avahi/host
+./etc/avahi/services
+./etc/init.d
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines
+

@@ -1,0 +1,76 @@
+--- linux-3.14.17/arch/arm/Kconfig	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/arch/arm/Kconfig	2014-08-21 15:02:13.457789007 -0400
+@@ -301,8 +301,17 @@
+ #
+ choice
+ 	prompt "ARM system type"
+-	default ARCH_VERSATILE if !MMU
+-	default ARCH_MULTIPLATFORM if MMU
++	default ARCH_AST2500EVB
++
++config ARCH_AST2500EVB
++   bool "ASPEED A2500 Evaluation Board"
++   select SOC_AST2500
++   select NEED_MACH_IO_H
++   help
++     This is an evaluation board from ASPEED based on AST2500 SOC
++     If you would like to build your kernel to run on one of these boards
++     then you must say 'Y' here. Otherwise say 'N'
++
+ 
+ config ARCH_MULTIPLATFORM
+ 	bool "Allow multiple platforms to be selected"
+@@ -882,6 +891,53 @@
+ 
+ endchoice
+ 
++# Define the SOC if any used here and sub components of the SOC here
++config SOC_AST2500
++   bool
++   select LEGENCY_ASTMAC100
++   select CPU_V6K
++   default y if ARCH_AST2500EVB
++
++config BASESOC_AST
++   bool
++   default y if SOC_AST2500
++config LEGENCY_ASTMAC100
++   tristate "Aspeed MAC 100 support"
++   select PHYLIB
++   depends on ETHERNET && BASESOC_AST
++   default y
++
++config BROADCAST_BLACKLIST
++  bool "Broadcast blacklist"
++  depends on BASESOC_AST
++
++config ASTSERIAL
++   bool "Aspeed Serial support"
++   depends on BASESOC_AST
++   default y if BASESOC_AST
++
++config AST_PHY_ADDR
++   int "AST200 MAC MII PHY Address" if LEGENCY_ASTMAC100
++   default "31"
++
++config UART_CLK
++   int "UART Clock in Hz"
++   depends on BASESOC_AST
++   default "24000000"
++
++config TIMER_CLK
++   int "TIMER Clock in Hz"
++   depends on BASESOC_AST
++   default "50000000"
++
++config FLASH_OPERATION_MODE_MASK
++   hex "Flash Operation Mode Mask"
++   depends on BASESOC_AST
++   default "0x00010003"
++
++#End of SOC components description
++
++
+ menu "Multiple platform selection"
+ 	depends on ARCH_MULTIPLATFORM
+ 

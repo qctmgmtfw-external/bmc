@@ -1,0 +1,102 @@
+Package: Bootloader_soc_ast2500_ex (2.5.0); urgency = high
+
+Abstract:
+	Add ECC support for AST2500.
+
+Files Modified: data/02-arch_arm_cpu_arm1176_ast2500_platform.S
+
+--Submitter: robinchiu (RobinChiu) Wed, 27 May 2015 12:03:48 CST
+
+Package: Bootloader_soc_ast2500_ex (2.4.0); urgency = high
+
+Abstract:
+	Apply AST's platform.S, for that AST knows its hareware settings well and it is better to maintain theirs directly.
+
+Files Modified: data/02-arch_arm_cpu_arm1176_ast2500_platform.S
+
+--Submitter: robinchiu (RobinChiu) Tue, 26 May 2015 19:10:26 CST
+
+Package: Bootloader_soc_ast2500_ex (2.3.0); urgency = medium
+
+Abstract:
+	Correct package.
+
+Files Modified: data/02-arch_arm_cpu_arm1176_ast2500_platform.S
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 04 May 2015 14:16:31 JWST
+
+Package: Bootloader_soc_ast2500_ex (2.2.0); urgency = medium
+
+Abstract:
+	Updated for AST2500EVB A1.
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/02-arch_arm_cpu_arm1176_ast2500_platform.S, spx/INFO
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 04 May 2015 10:37:57 JWST
+
+Package: Bootloader_soc_ast2500_ex (2.1.0); urgency = high
+
+Abstract:
+	Add ECC support for AST2500.
+
+Files Modified: data/02-arch_arm_cpu_arm1176_ast2500_platform.S
+
+--Submitter: robinchiu (RobinChiu) Thu, 18 Dec 2014 17:01:37 CST
+
+Package: Bootloader_soc_ast2500_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:10:09 GMT
+
+Package: Bootloader_soc_ast2500_ex (1.4.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:55:00 GMT
+
+Package: Bootloader_soc_ast2500_ex (1.3.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:04:06 GMT
+
+Package: Bootloader_soc_ast2500_ex (1.2.0); urgency = medium
+
+Abstract:
+	AST3200EVB compatible.
+
+Files Modified: data/02-arch_arm_cpu_arm1176_ast2500_platform.S
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 04 Sep 2014 16:56:03 CST
+
+Package: Bootloader_soc_ast2500_ex (1.1.0); urgency = medium
+
+Abstract:
+	Fixed build error.
+
+Files Added: spx/PACKAGES.D/Bootloader_soc_ast2500_ex, spx/PACKAGES.D/Bootloader_soc_ast2500_ex/DATA, spx/PACKAGES.D/Bootloader_soc_ast2500_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_soc_ast2500_ex/SCRIPTS/dev-install.py
+Files Deleted: spx/PACKAGES.D/Bootloader_soc_ast2400_ex, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/DATA, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/SCRIPTS/dev-install.py
+Files Modified: data/01-arch_arm_cpu_arm1176_ast2500_Makefile, data/02-arch_arm_cpu_arm1176_ast2500_platform.S
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 25 Aug 2014 11:27:02 CST
+
+Package: Bootloader_soc_ast2500_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2500 SOC related patches to Bootloader Uboot-2013.07
+
+Files Added: data, data/01-arch_arm_cpu_arm1176_ast2500_Makefile, data/02-arch_arm_cpu_arm1176_ast2500_platform.S, data/03-Makefile, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_soc_ast2400_ex, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/DATA, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 18 Aug 2014 14:38:29 CST
+

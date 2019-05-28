@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_NOCLEAN %SPXINC/adc
+        COPY_DIR ./ %SPXINC/adc
+
+debug-install:

@@ -1,0 +1,32 @@
+Source : Bootloader_amiext_ex
+Version : 2.7.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Samvinesh Christopher (vineshc@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 2013.07
+Builds : Bootloader_amiext_ex
+Build-Depends : Bootloader_Pristine_ex
+Architecture : ANY
+Urgency : medium
+Description : AMI Extensions to Bootloader Uboot-2013.07
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Bootloader_amiext_ex
+Section : info
+License : AMI
+Group : BASE
+Essential : NO
+Description : AMI Extensions to Bootloader Uboot-2013.07
+.
+

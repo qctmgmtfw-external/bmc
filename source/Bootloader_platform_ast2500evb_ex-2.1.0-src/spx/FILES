@@ -1,0 +1,6 @@
+./01-board_ast2500evb_ast2500evb.c 8637 5b82fbc83e86e02071982adf8748b8b9
+./02-board_ast2500evb_config.mk 1069 c6e2efb537e9be3e336884853269455f
+./03-board_ast2500evb_Makefile 1583 701bb27756ffb87e06185384e8ea73d5
+./04-board_ast2500evb_u-boot.lds 2643 7ffdf2ebfc438250a1f48c00bd6866d2
+./05-boards.cfg 809 62cc7a35f11fd44c0e0e26ee9b11e3eb
+./06-include_configs_ast2500evb.h 2173 17fec4551e78d1c57f82707324b08ed1

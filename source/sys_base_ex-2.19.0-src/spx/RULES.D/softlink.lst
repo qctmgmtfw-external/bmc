@@ -1,0 +1,168 @@
+# Directory Links
+#/lib64						-> lib
+/tmp						-> ./var/tmp
+/etc/rc0.d 					-> rc6.d
+/lib/init/rw				-> ../../var/rw
+/lib/security 				-> ./%MULTI_ARCH_LIB%/security
+
+# Device Links
+/dev/core 					-> ../proc/kcore
+/dev/fd 					-> ../proc/self/fd
+/dev/log 					-> ../var/syslogsock
+/dev/nfsd 					-> socksys
+/dev/ram 					-> ram1
+/dev/ramdisk 				-> ram0
+/dev/stderr 				-> fd/2
+/dev/stdin 					-> fd/0
+/dev/stdout 				-> fd/1
+/dev/X0R 					-> null
+
+#Alternative Name links 
+/usr/bin/awk				-> gawk
+/etc/mtab 					-> ../proc/mounts
+/etc/ioctl.save 			-> ../var/ioctl.save
+/etc/ld.so.cache 			-> ../var/ld.so.cache
+
+/etc/network/run 			-> ../../var/network/run
+/etc/network/ifstate 		-> ../../var/ifstate
+
+/etc/rc1.d/K20ssh 			-> ../init.d/ssh-main
+/etc/rc1.d/K20telnetd       -> ../init.d/telnetd
+/etc/rc1.d/K20tftpd         -> ../init.d/tftpd
+/etc/rc1.d/K20stunnel		-> ../init.d/stunnel4
+/etc/rc1.d/K30cron 			-> ../init.d/cron
+/etc/rc1.d/K90syslog 		-> ../init.d/sysklogd
+/etc/rc1.d/K90rsyslog 		-> ../init.d/rsyslog
+
+/etc/rc1.d/S20single 		-> ../init.d/single
+
+/etc/rc3.d/S10syslog              -> ../init.d/sysklogd
+/etc/rc3.d/S10rsyslog             -> ../init.d/rsyslog
+/etc/rc3.d/S16ssh                 -> ../init.d/ssh-main
+/etc/rc3.d/S16telnetd             -> ../init.d/telnetd
+/etc/rc3.d/S16tftpd               -> ../init.d/tftpd
+/etc/rc3.d/S20stunne1             -> ../init.d/stunnel4
+/etc/rc3.d/S89cron                -> ../init.d/cron
+/etc/rc3.d/S99zz-rc-init-complete -> ../init.d/rc-init-complete
+
+/etc/rc6.d/K20ssh 			-> ../init.d/ssh-main
+/etc/rc6.d/K20telnetd       -> ../init.d/telnetd
+/etc/rc6.d/K20tftpd         -> ../init.d/tftpd
+/etc/rc6.d/K20stunnel		-> ../init.d/stunnel4
+/etc/rc6.d/K30cron 			-> ../init.d/cron
+/etc/rc6.d/K90syslog 		-> ../init.d/sysklogd
+/etc/rc6.d/K90rsyslog 		-> ../init.d/rsyslog 
+
+/etc/rc6.d/S20sendsigs 		-> ../init.d/sendsigs
+#/etc/rc6.d/S40umountfs 		-> ../init.d/umountfs
+/etc/rc6.d/S90reboot 		-> ../init.d/reboot
+
+/etc/rc7.d/K20ssh 			-> ../init.d/ssh-main
+/etc/rc7.d/K20telnetd       -> ../init.d/telnetd
+/etc/rc7.d/K20tftpd         -> ../init.d/tftpd
+/etc/rc7.d/K20stunnel		-> ../init.d/stunnel4
+/etc/rc7.d/K30cron 			-> ../init.d/cron
+/etc/rc7.d/K90syslog 		-> ../init.d/sysklogd
+/etc/rc7.d/K90rsyslog		-> ../init.d/rsyslog
+
+/etc/rc8.d/K20ssh 			-> ../init.d/ssh-main
+/etc/rc8.d/K20telnetd       -> ../init.d/telnetd
+/etc/rc8.d/K20tftpd         -> ../init.d/tftpd
+/etc/rc8.d/K20stunnel		-> ../init.d/stunnel4
+/etc/rc8.d/K30cron 			-> ../init.d/cron
+/etc/rc8.d/K90syslog 		-> ../init.d/sysklogd
+/etc/rc8.d/K90rsyslog 		-> ../init.d/rsyslog
+
+/etc/rcS.d/S01init-sp.sh 	-> ../init.d/init-sp.sh
+/etc/rcS.d/S18mountall.sh 	-> ../init.d/mountall.sh
+/etc/rcS.d/S20modutils 		-> ../init.d/module-init-tools
+/etc/rcS.d/S30procps 		-> ../init.d/procps
+#/etc/rcS.d/S35mountall.sh 	-> ../init.d/mountall.sh
+/etc/rcS.d/S36hostname.sh 	-> ../init.d/hostname.sh
+/etc/rcS.d/S38drvload.sh          -> ../init.d/drvload.sh
+/etc/rcS.d/S39ifupdown 		-> ../init.d/ifupdown
+/etc/rcS.d/S40networking 	-> ../init.d/networking
+/etc/rcS.d/S45arpflux.sh 	-> ../init.d/arpflux.sh
+/etc/rcS.d/S55bootmisc.sh 	-> ../init.d/bootmisc.sh
+
+# Library Links
+#/lib/libcom_err.so.2 		-> libcom_err.so.2.1
+#/lib/libblkid.so.1 			-> libblkid.so.1.1.0
+#/lib/libkeyutils.so.1 		-> libkeyutils.so.1.3
+#/usr/lib/libpam.so	 			-> ../../lib/libpam.so.0
+#/usr/lib/libpam_misc.so		-> ../../lib/libpam_misc.so.0
+#/lib/libpam_misc.so			-> libpam_misc.so.0.82.0
+#/lib/libpopt.so 			-> libpopt.so.0
+#/lib/libpopt.so.0 			-> libpopt.so.0.0.0
+#/lib/libuuid.so.1 			-> libuuid.so.1.3.0
+#/lib/libwrap.so.0 			-> libwrap.so.0.7.6
+
+#/usr/lib/libopts.so.25			-> libopts.so.25.8.0
+#/usr/lib/libssl.so 			-> libssl.so.0
+#/usr/lib/libssl.so.0 		-> libssl.so.0.9.8
+#/usr/lib/libz.so 			-> libz.so.1
+#/usr/lib/libz.so.1 			-> libz.so.1.2.3.4
+#/usr/lib/libcrypto.so  		-> libcrypto.so.0
+#/usr/lib/libcrypto.so.0 	-> libcrypto.so.0.9.8
+
+#/usr/lib/libgssapi_krb5.so.2 -> libgssapi_krb5.so.2.2
+#/usr/lib/libgssapi_krb5.so 	 -> libgssapi_krb5.so.2
+#/usr/lib/libk5crypto.so.3 	 -> libk5crypto.so.3.1
+#/usr/lib/libk5crypto.so 	 -> libk5crypto.so.3
+#/usr/lib/libkrb5.so.3 		 -> libkrb5.so.3.3
+#/usr/lib/libkrb5.so 		 -> libkrb5.so.3
+#/usr/lib/libkrb5support.so 	 -> libkrb5support.so.0
+#/usr/lib/libkrb5support.so.0 -> libkrb5support.so.0.1
+
+
+
+
+
+# ------------------------ Configuration Links --------------------------------
+
+/etc/passwd 				-> /conf/passwd
+/etc/group 					-> /var/tmp/group
+/etc/shadow 				-> /conf/shadow
+/etc/hosts 					-> /conf/hosts
+/etc/hosts.allow 			-> /conf/hosts.allow
+/etc/hosts.deny 			-> /conf/hosts.deny
+/etc/network/interfaces 	-> /conf/interfaces
+/etc/adjtime 				-> /conf/adjtime
+/etc/network/bond.conf 		-> /conf/bond.conf
+/etc/crontab 				-> /conf/crontab
+/etc/hostname 				-> /conf/hostname
+/etc/localtime 				-> /conf/localtime
+/etc/resolv.conf 			-> /conf/resolv.conf
+/etc/syslog.conf			-> /conf/syslog.conf
+/etc/rsyslog.conf			-> /conf/rsyslog.conf
+/etc/logrotate.d/rotate.conf		-> /conf/rotate.conf
+
+
+/etc/pam.d/sshd				-> /etc/pam_withunix
+/etc/pam.d/login			-> /etc/pam_withunix
+/etc/pam.d/other			-> /etc/pam_wounix
+/etc/pam_withunix			-> /conf/pam_withunix
+/etc/pam_wounix				-> /conf/pam_wounix
+/etc/nsswitch.conf 			-> /conf/nsswitch.conf
+
+/etc/iproute2/rt_tables     -> /conf/rt_tables
+
+#-------- Links for Configuration Files which are created during runtime --------------
+
+# SSH Keys 
+/etc/ssh/ssh_host_dsa_key 		-> /conf/ssh_host_dsa_key
+/etc/ssh/ssh_host_dsa_key.pub 	-> /conf/ssh_host_dsa_key.pub
+/etc/ssh/ssh_host_rsa_key 		-> /conf/ssh_host_rsa_key
+/etc/ssh/ssh_host_rsa_key.pub 	-> /conf/ssh_host_rsa_key.pub
+
+#Location of public keys for Key based authentication for root SSH
+/root/.ssh					    -> /conf/root.ssh
+
+/usr/local/www/video		-> ../../../var/video
+/usr/local/www/SELLog      -> ../../../var/SELLog
+/usr/local/www/capture      -> ../../../var/capture
+/usr/local/www/bsod      -> ../../../var/bsod
+/usr/local/www/config.bak      -> ../../../var/bkupconf
+
+
+

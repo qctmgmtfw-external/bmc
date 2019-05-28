@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+#chkconfig: 2345 10 90
+#Runlevel : 3 = S99
+#/etc/init.d/rc-init-complete: This script will run at the end of the init process and touch a file to intimate the init process completed.
+
+touch /var/tmp/rc-init-complete
+

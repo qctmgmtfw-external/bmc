@@ -1,0 +1,28 @@
+diff -Naur busybox_ORIG/networking/udhcp/dhcpc.c busybox/networking/udhcp/dhcpc.c
+--- busybox_ORIG/networking/udhcp/dhcpc.c	2014-12-24 12:16:11.506432036 +0530
++++ busybox/networking/udhcp/dhcpc.c	2014-12-24 12:17:44.454892946 +0530
+@@ -1694,7 +1694,15 @@
+ 			/* case RELEASED: */
+ 			}
+ 			/* yah, I know, *you* say it would never happen */
+-			timeout = INT_MAX;
++			if (state == RELEASED)
++			{
++				state = INIT_SELECTING;
++				change_listen_mode(LISTEN_RAW);
++			}
++			else
++			{
++				timeout = INT_MAX;
++			}
+ 			continue; /* back to main loop */
+ 		} /* if select timed out */
+ 
+@@ -1729,7 +1737,6 @@
+ 			continue;
+ 		case SIGUSR2:
+ 			perform_release(server_addr, requested_ip);
+-			timeout = INT_MAX;
+ 			continue;
+ 		case SIGTERM:
+ 			bb_info_msg("Received SIGTERM");

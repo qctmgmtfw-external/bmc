@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+	ADD_MODULES watchdog
+	MAKE_CHAR_NODE watchdog 10 130
+
+debug-install:

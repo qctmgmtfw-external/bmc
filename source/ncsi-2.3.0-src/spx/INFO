@@ -1,0 +1,35 @@
+Source : ncsi
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Samvinesh Christopher (vineshc@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : ncsi
+Build-Depends : kernel_dev, global_dev, rules, Crosscc, helper_driver_dev, BaseSystem, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : NCSI 1.0 Device Driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : ncsi
+Config-Tag : NCSI Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel
+Required : helper, DevNodes
+Provides : SideBand_LAN
+Description : NCSI 1.0 Device Driver.
+.
+

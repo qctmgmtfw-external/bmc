@@ -1,0 +1,100 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          networking
+# Required-Start:    mountkernfs ifupdown $local_fs
+# Required-Stop:     ifupdown $local_fs
+# Default-Start:     S
+# Default-Stop:      0 6
+# Short-Description: Raise network interfaces.
+### END INIT INFO
+
+PATH="/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin"
+
+[ -x /sbin/ifup ] || exit 0
+
+. /lib/lsb/init-functions
+
+process_options() {
+    [ -e /etc/network/options ] || return 0
+    log_warning_msg "/etc/network/options still exists and it will be IGNORED! Read README.Debian of netbase."
+}
+
+check_network_file_systems() {
+    [ -e /proc/mounts ] || return 0
+
+    exec 9<&0 < /proc/mounts
+    while read DEV MTPT FSTYPE REST; do
+	case $DEV in
+	/dev/nbd*|/dev/nd[a-z]*|/dev/etherd/e*)
+	    log_warning_msg "not deconfiguring network interfaces: network devices still mounted."
+	    exit 0
+	    ;;
+	esac
+	case $FSTYPE in
+	nfs|nfs4|smbfs|ncp|ncpfs|cifs|coda|ocfs2|gfs|pvfs|pvfs2|fuse.httpfs|fuse.curlftpfs)
+	    log_warning_msg "not deconfiguring network interfaces: network file systems still mounted."
+	    exit 0
+	    ;;
+	esac
+    done
+    exec 0<&9 9<&-
+}
+
+case "$1" in
+start)
+
+	# Ractrends SP 4.0 : We use the same script for both NFS and Flash 
+	# Network should not be reconfigured for NFS. So this check is added
+	if [ -r /proc/cmdline ] && grep -q 'root=\/dev\/nfs' /proc/cmdline 
+	then
+	   log_action_msg "Booting via NFS. Network will not be reconfigured"
+	   exit 0
+	fi
+	
+	process_options
+
+	log_action_begin_msg "Configuring network interfaces"
+	if ifup -a; then
+	    log_action_end_msg $?
+	else
+	    log_action_end_msg $?
+	fi
+	;;
+
+stop)
+	check_network_file_systems
+
+	log_action_begin_msg "Deconfiguring network interfaces"
+
+# Ractrends SP 4.0 - Busybox ifdown does not support --exclude
+#	if ifdown -a --exclude=lo; then
+	if ifdown -a ; then
+	    log_action_end_msg $?
+	else
+	    log_action_end_msg $?
+	fi
+	;;
+
+force-reload|restart)
+	process_options
+
+	log_action_begin_msg "Reconfiguring network interfaces"
+# Ractrends SP 4.0 - Busybox ifdown/ifup  does not support --exclude
+#	ifdown -a --exclude=lo || true
+#	if ifup -a --exclude=lo; then
+	ifdown -a || true
+	if ifup -a ; then
+	    log_action_end_msg $?
+	else
+	    log_action_end_msg $?
+	fi
+	;;
+
+*)
+	echo "Usage: /etc/init.d/networking {start|stop|restart|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0
+

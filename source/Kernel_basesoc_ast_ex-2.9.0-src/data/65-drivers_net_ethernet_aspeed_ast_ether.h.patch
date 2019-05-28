@@ -1,0 +1,10 @@
+--- linux/drivers/net/ethernet/aspeed/ast_ether.h		2015-07-02 20:51:04.632159868 +0800
++++ linux-amiext/drivers/net/ethernet/aspeed/ast_ether.h	2015-07-02 20:51:16.112159992 +0800
+@@ -293,6 +293,7 @@
+ 	struct net_device_stats stats;
+ 	
+ 	spinlock_t lock;
++	spinlock_t phy_lock;
+ 	
+ 	/* virtual address of allocated descriptor */
+ 	struct ast_eth_desc *tx_desc;

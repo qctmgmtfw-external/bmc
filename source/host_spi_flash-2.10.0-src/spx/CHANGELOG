@@ -1,0 +1,273 @@
+Package: host_spi_flash (2.10.0); urgency = low
+
+Abstract:
+	Increased max times to check status register before we give up to give enough time for erase with block size 64k command
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Thu, 26 Feb 2015 13:56:59 GMT-5
+
+Package: host_spi_flash (2.9.0); urgency = low
+
+Abstract:
+	creating node for host_spi_flash char device
+
+Files Modified: spx/PACKAGES.D/host_spi_flash/SCRIPTS/dev-install
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Wed, 25 Feb 2015 17:53:03 GMT-5
+
+Package: host_spi_flash (2.8.0); urgency = low
+
+Abstract:
+	Added ioctl call to gain/release access of host spi.
+
+Files Modified: data/host_spi_flash.h, data/host_spi_flash_core.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Wed, 25 Feb 2015 15:50:39 GMT-5
+
+Package: host_spi_flash (2.7.0); urgency = high
+
+Abstract:
+	Updated the list to include supported erase block sizes. handled the write and erase spi command packet formation, added functions to get the erase block size and erase command based on the input data packet length
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 25 Feb 2015 02:17:56 EST
+
+Package: host_spi_flash (2.6.0); urgency = high
+
+Abstract:
+	Added separate functiosn for checking WIP and WEL. This makes it easier to handle each bit case wherever required
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 18 Feb 2015 23:11:03 EST
+
+Package: host_spi_flash (2.5.0); urgency = high
+
+Abstract:
+	Added condition to handle 4 byte addressing mode and non-4byte addressing mode based on condtion. the read command handler should take care of spi command packet format accordingly. W.r.t commit 71177, accessing spi address < 16MB offset will not work for 4-byte addressing mode enabled.
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Sat, 14 Feb 2015 20:51:09 EST
+
+Package: host_spi_flash (2.4.0); urgency = high
+
+Abstract:
+	Fixed Host SPI read issue for 16MB devices.
+
+Files Modified: data/host_spi_flash_core.c, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 24 Dec 2014 18:22:27 HMT
+
+Package: host_spi_flash (2.3.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:04:54 GMT
+
+Package: host_spi_flash (2.2.0); urgency = high
+
+Abstract:
+	Updated host spi flash driver
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Oct 2014 18:53:24 EDT
+
+Package: host_spi_flash (2.1.0); urgency = high
+
+Abstract:
+	Added support for Micron 64MB SPI Part and added comments
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Oct 2014 18:00:54 EDT
+
+Package: host_spi_flash (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:51:50 GMT
+
+Package: host_spi_flash (1.17.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 15:52:20 HMT
+
+Package: host_spi_flash (1.16.0); urgency = medium
+
+Abstract:
+	Add supports for kernel 3.
+
+Files Modified: data/host_spi_flash.h, data/host_spi_flash_core.c
+
+--Submitter: robinchiu (RobinChiu) Tue, 14 Oct 2014 17:13:19 CST
+
+Package: host_spi_flash (1.15.0); urgency = high
+
+Abstract:
+	Added support for 64MB SPI Part
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Oct 2014 12:16:38 EDT
+
+Package: host_spi_flash (1.14.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:36:22 GMT
+
+Package: host_spi_flash (1.13.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:45:32 GMT
+
+Package: host_spi_flash (1.12.0); urgency = high
+
+Abstract:
+	Updated the 4-Byte addressing support to take care of >16MB SPI Parts. Handled sending the 4B appropriate SPI commands for >16MB SPIs and 3B appropriate SPI commands for <=16MB SPI Parts. Incorporated teh appropriate macros based on PRJ configuration as well
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Sun, 21 Sep 2014 23:38:24 EDT
+
+Package: host_spi_flash (1.11.0); urgency = high
+
+Abstract:
+	Added support to configure clock + added 4byte addressing mode
+
+Files Modified: data/host_spi_flash.h, data/host_spi_flash_core.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 01 Aug 2014 19:57:21 EDT
+
+Package: host_spi_flash (1.10.0); urgency = high
+
+Abstract:
+	Added 32MB SPI Support like 4byte addressing and appropriate parsing of 4 bytes of address. Added support for Macronix 32MB SPI Part MX25L25635F
+
+Files Modified: data/host_spi_flash_core.c, spx/PACKAGES.D/host_spi_flash/SCRIPTS/dev-install
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 24 Jul 2014 16:34:50 EDT
+
+Package: host_spi_flash (1.9.0); urgency = low
+
+Abstract:
+	added support for latest kernel
+
+Files Modified: data/host_spi_flash_core.c, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D/host_spi_flash/SCRIPTS/dev-install
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Fri, 27 Jun 2014 19:29:16 HMT
+
+Package: host_spi_flash (1.8.1); urgency = low
+
+Abstract:
+	Fixed the sector_size and n_sectors.
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: terrychen (terrychen@ami.com.tw) Mon, 28 Oct 2013 11:09:08 CST
+
+Package: host_spi_flash (1.8.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:31:12 EDT
+
+Package: host_spi_flash (1.7.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:24:16 EDT
+
+Package: host_spi_flash (1.6.0); urgency = medium
+
+Abstract:
+	adding W25Q128FV chip entry to host spiflash table
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Tue, 06 Aug 2013 20:05:45 CST
+
+Package: host_spi_flash (1.5.0); urgency = high
+
+Abstract:
+	- Add new flash part "ATMEL AT25DF64".
+- Unprotect the sector and wait WIP bit status when flash is "AT25DF64".
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Wed, 08 Aug 2012 13:30:37 CST
+
+Package: host_spi_flash (1.4.0); urgency = high
+
+Abstract:
+	Support flash part "W25Q64BV"
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: royku (royku@ami.com.tw) Mon, 02 Jul 2012 15:16:36 CST
+
+Package: host_spi_flash (1.3.0); urgency = high
+
+Abstract:
+	- Support mew flash part "MX25L2005" and "N25Q064".
+- Unregister CORE_HAL module when release HOST_SPI module.
+
+Files Modified: data/host_spi_flash_core.c
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Fri, 15 Jun 2012 11:36:36 CST
+
+Package: host_spi_flash (1.2.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Sun, 26 Jun 2011 23:45:51 CST
+
+Package: host_spi_flash (1.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:21:45 EDT
+
+Package: host_spi_flash (1.0.0); urgency = new
+
+Abstract:
+	This package contains the common module of hot SPI flash driver.
+
+Files Added: data, data/Makefile, data/host_spi_flash.h, data/host_spi_flash_core.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/host_spi_flash, spx/PACKAGES.D/host_spi_flash/DATA, spx/PACKAGES.D/host_spi_flash/SCRIPTS, spx/PACKAGES.D/host_spi_flash/SCRIPTS/dev-install, spx/PACKAGES.D/host_spi_flash_dev, spx/PACKAGES.D/host_spi_flash_dev/DATA, spx/PACKAGES.D/host_spi_flash_dev/SCRIPTS, spx/PACKAGES.D/host_spi_flash_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 28 Oct 2010 11:05:08 CST
+

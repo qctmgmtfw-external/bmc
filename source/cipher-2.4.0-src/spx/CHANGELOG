@@ -1,0 +1,352 @@
+Package: cipher (2.4.0); urgency = medium
+
+Abstract:
+	SCAC fix for fortify issues
+
+Files Modified: data/cipher.h
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 23 Dec 2014 15:05:12 IST
+
+Package: cipher (2.3.0); urgency = medium
+
+Abstract:
+	SCAC fix for fortify issues
+
+Files Modified: data/cipher.h
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Mon, 22 Dec 2014 15:10:25 IST
+
+Package: cipher (2.2.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Thu, 18 Dec 2014 20:48:46 HMT
+
+Package: cipher (2.1.0); urgency = medium
+
+Abstract:
+	SCAL Fix for fortify issues
+
+Files Modified: data/ciphermain.c, spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Thu, 18 Dec 2014 14:08:59 IST
+
+Package: cipher (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:19:13 GMT
+
+Package: cipher (1.32.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:27:00 HMT
+
+Package: cipher (1.31.0); urgency = medium
+
+Abstract:
+	Updated Group Field Information.
+
+Files Modified: spx/INFO
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Wed, 15 Oct 2014 20:34:33 HMT
+
+Package: cipher (1.30.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:03:37 GMT
+
+Package: cipher (1.29.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:12:07 GMT
+
+Package: cipher (1.28.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/ciphermain.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:03:51 EDT
+
+Package: cipher (1.27.0); urgency = medium
+
+Abstract:
+	Removed unnecessary calling of remove_proc_entry
+
+Files Modified: data/ciphermain.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 25 Jul 2014 09:59:04 GMT
+
+Package: cipher (1.26.0); urgency = medium
+
+Abstract:
+	Fixed Typo error
+
+Files Modified: data/Makefile
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 16:56:23 HMT
+
+Package: cipher (1.25.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/Makefile, data/ciphermain.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:34:21 HMT
+
+Package: cipher (1.24.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/cipher/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:57:29 GMT
+
+Package: cipher (1.23.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/cipher/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:43:23 HMT
+
+Package: cipher (1.22.0); urgency = medium
+
+Abstract:
+	Fixes to support openssl based Hardware Encryption Engine
+
+Files Modified: data/cipher.h
+
+--Submitter: Winston (winstont@ami.com) Thu, 30 Jan 2014 15:05:34 EST
+
+Package: cipher (1.21.0); urgency = medium
+
+Abstract:
+	Add RSA action definition
+
+Files Modified: data/cipher.h
+
+--Submitter: yishanchen (yishanchen@ami.com.tw) Thu, 09 Jan 2014 11:44:52 CST
+
+Package: cipher (1.20.0); urgency = medium
+
+Abstract:
+	Changes done in a driver to process data more than a block size at a time.
+
+Files Modified: data/ciphermain.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 31 Dec 2013 19:37:55 EST
+
+Package: cipher (1.19.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:34:36 EDT
+
+Package: cipher (1.18.0); urgency = low
+
+Abstract:
+	Modified driver to support Kernel 3.4.11.
+
+Files Modified: data/ciphermain.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Sun, 15 Sep 2013 02:29:21 HMT
+
+Package: cipher (1.17.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:00:01 EDT
+
+Package: cipher (1.16.0); urgency = high
+
+Abstract:
+	Updating SourceLicense?, PackageLicense?, BinaryLicense? & Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ciphermain.c, spx/INFO
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 24 Jun 2011 14:43:27 CST
+
+Package: cipher (1.15.0); urgency = low
+
+Abstract:
+	error messages added when copy_to_user fails
+
+Files Modified: data/ciphermain.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 11:21:03 EDT
+
+Package: cipher (1.14.0); urgency = medium
+
+Abstract:
+	1. Added sha224, sha256, md5, hmac-sha224, hmac-sha256, and hmac-md5 support.
+2. Moved a condition check for block size into common padding function,
+   because hash function needs padding even the data size is the multiple of blocks.
+3. Added hash initial function.
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 21 Jun 2011 10:44:01 CST
+
+Package: cipher (1.13.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:07:06 EDT
+
+Package: cipher (1.12.0); urgency = medium
+
+Abstract:
+	Added HMAC-SHA1 support.
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 06 May 2011 15:12:26 CST
+
+Package: cipher (1.11.0); urgency = low
+
+Abstract:
+	In order to keep the hardware layer simple,
+Common layer just need to send one algorithmic block into hardware layer for one time.
+
+Files Modified: data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 29 Apr 2011 17:23:40 CST
+
+Package: cipher (1.10.0); urgency = medium
+
+Abstract:
+	1. Add a common function for general removing data padding.
+2. Extract the part of handling data in cipher_ioctl into a separated function.
+3. Change the complete into progress in cipher data structure for indicating the progress of transferring cipher data.
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 27 Apr 2011 13:49:41 CST
+
+Package: cipher (1.9.0); urgency = medium
+
+Abstract:
+	Remove the unnecessary invoking hw padding function in common padding function.
+
+Files Modified: data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 23 Mar 2011 12:10:07 CST
+
+Package: cipher (1.8.0); urgency = medium
+
+Abstract:
+	1. Added get info function for getting capabilities.
+2. Added common data padding function.
+3. Added "algo" and "complete" variables in cipher data structure.
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 22 Mar 2011 20:25:09 CST
+
+Package: cipher (1.7.0); urgency = medium
+
+Abstract:
+	Added CIPHER_HMAC_SHA1, AES_SET_DEC_KEY, AES_GET_KEY, and DES related enum defines
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 16 Mar 2011 16:02:41 CST
+
+Package: cipher (1.6.0); urgency = medium
+
+Abstract:
+	minor des3 enum name changes to make it similar to AES enum naming convention.
+
+Files Modified: data/cipher.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 03 Mar 2011 10:09:58 EST
+
+Package: cipher (1.5.0); urgency = medium
+
+Abstract:
+	Fixed the issue, for the output data length may longer or less than input data length.
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: royku (royku@ami.com.tw) Thu, 03 Mar 2011 18:58:18 CST
+
+Package: cipher (1.4.0); urgency = medium
+
+Abstract:
+	Fixed the error in the part of processing cipher data by block for cipher common driver.
+
+Files Modified: data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 23 Feb 2011 21:59:37 CST
+
+Package: cipher (1.3.0); urgency = medium
+
+Abstract:
+	Fixed for cipher common driver illegal access user space memory.
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 22 Feb 2011 21:08:42 CST
+
+Package: cipher (1.2.0); urgency = medium
+
+Abstract:
+	support for additional cipher algorithms as supported by SH7757 added to cipher core package.
+
+Files Modified: data/cipher.h, data/ciphermain.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 04 Feb 2011 13:50:24 EST
+
+Package: cipher (1.1.0); urgency = medium
+
+Abstract:
+	Rainier supports DES3,RNG,SHA1 and SHA256. So adding needed code to support to cipher core package.
+
+Files Modified: data/cipher.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 04 Feb 2011 11:14:40 EST
+
+Package: cipher (1.0.0); urgency = new
+
+Abstract:
+	This package provides the common (hardware independent) cipher driver.
+
+Files Added: data, data/Makefile, data/cipher.h, data/ciphermain.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/cipher, spx/PACKAGES.D/cipher/DATA, spx/PACKAGES.D/cipher/SCRIPTS, spx/PACKAGES.D/cipher/SCRIPTS/dev-install, spx/PACKAGES.D/cipher_driver_dev, spx/PACKAGES.D/cipher_driver_dev/DATA, spx/PACKAGES.D/cipher_driver_dev/SCRIPTS, spx/PACKAGES.D/cipher_driver_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 29 Jan 2011 14:54:04 CST
+

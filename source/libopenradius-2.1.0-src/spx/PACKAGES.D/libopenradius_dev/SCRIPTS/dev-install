@@ -1,0 +1,13 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/openradius
+	MKDIR_NOCLEAN %SPXINC/openradius
+	COPY_FILE ./md5.h %SPXINC/openradius
+	COPY_FILE ./radius.h %SPXINC/openradius
+	COPY_FILE ./pam_radius_auth.h %SPXINC/openradius
+	COPY_FILE ./libopenradius.a %SPXLIB/openradius
+	COPY_FILE ./libopenradius.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/openradius
+	ADD_LIBRARY_LINKS %SPXLIB/openradius libopenradius.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+
+debug-install:

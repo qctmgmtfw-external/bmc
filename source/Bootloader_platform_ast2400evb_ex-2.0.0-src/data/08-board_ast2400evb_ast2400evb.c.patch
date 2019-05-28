@@ -1,0 +1,26 @@
+--- uboot/board/ast2400evb/ast2400evb.c	2015-12-11 12:24:17.620511000 +0800
++++ uboot.new/board/ast2400evb/ast2400evb.c	2015-12-16 10:12:33.562385607 +0800
+@@ -275,6 +275,7 @@
+ int board_init (void)
+ {
+ 	unsigned long reg;
++	unsigned long reg2;
+     
+ 	/*Should match with linux mach type for this board */
+ 	gd->bd->bi_arch_number = 900;
+@@ -303,7 +304,14 @@
+ 	QUANTA_OEM_INIT;
+ 	*((volatile ulong*) SCU_KEY_CONTROL_REG) = 0; /* lock SCU */
+ 
+-
++	/* SCU7C */
++    reg2 = *((volatile ulong*) 0x1e6e207c);
++	if ((reg2 == 0x02000303) || (reg2 == 0x02010303) || (reg2 == 0x04000303) || (reg2 == 0x04000103) || (reg2 == 0x04000203) || (reg2 == 0x04000403) || (reg2 == 0x04010303) || (reg2 == 0x04010103))
++	{
++	*((volatile ulong*) 0x1e6ed07c) = 0x000000A8;	/* unlock*/
++	*((volatile ulong*) 0x1e6ed030) = 0x00040000;   /* disable common clock*/
++	*((volatile ulong*) 0x1e6ed07c) = 0x00000000;	/* lock*/
++	}	
+ 	return 0;
+ }
+ 

@@ -1,0 +1,36 @@
+Package: Bootloader_soc_ast2400_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:09:57 GMT
+
+Package: Bootloader_soc_ast2400_ex (1.2.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:54:49 GMT
+
+Package: Bootloader_soc_ast2400_ex (1.1.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:03:56 GMT
+
+Package: Bootloader_soc_ast2400_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2400 SOC related patches to Bootloader Uboot-2013.07
+
+Files Added: data, data/01-arch_arm_cpu_arm926ejs_ast2400_Makefile, data/02-arch_arm_cpu_arm926ejs_ast2400_platform.S, data/03-Makefile, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_soc_ast2400_ex, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/DATA, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_soc_ast2400_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 16:53:14 EDT
+

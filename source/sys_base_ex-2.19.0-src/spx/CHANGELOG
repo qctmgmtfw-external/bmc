@@ -1,0 +1,334 @@
+Package: sys_base_ex (2.19.0); urgency = low
+
+Abstract:
+	Fix issue related to tftpd script
+
+Files Modified: data/defaults/etc/init.d/tftpd
+
+--Submitter: Arvind Bisht (arvindb@amiindia.co.in) Tue, 24 Feb 2015 18:43:34 IST
+
+Package: sys_base_ex (2.18.0); urgency = high
+
+Abstract:
+	Added a flag to grep to extract out only the first entry when multiple dupentries exist. currently if there are more than 2 dupentries in the proc/mtd then bkup partition mount will fail. this fix addresses that.
+
+Files Modified: data/defaults/etc/init.d/mountall.sh
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 06 Feb 2015 18:54:34 EST
+
+Package: sys_base_ex (2.17.0); urgency = medium
+
+Abstract:
+	Enabling brctl command in busybox
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: Winston (winstont@ami.com) Wed, 04 Feb 2015 20:21:46 GMT
+
+Package: sys_base_ex (2.16.0); urgency = medium
+
+Abstract:
+	Revert back the changeset 72699.
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/sys_base.busybox.config
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Fri, 30 Jan 2015 17:52:38 HMT
+
+Package: sys_base_ex (2.15.0); urgency = medium
+
+Abstract:
+	Updating busybox configurations to disable grep and egrep
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: Winston (winstont@ami.com) Thu, 29 Jan 2015 04:06:15 GMT
+
+Package: sys_base_ex (2.14.0); urgency = medium
+
+Abstract:
+	Changes done to avoid unnessesary help contents from grep utility.And copying grep from target to imagetree insted from busybox.
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/sys_base.busybox.config
+
+--Submitter: shravan (shravans@amiindia.co.in) Wed, 28 Jan 2015 14:15:16 HMT
+
+Package: sys_base_ex (2.13.0); urgency = medium
+
+Abstract:
+	Disabled the ip command
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Mon, 19 Jan 2015 18:45:14 HMT
+
+Package: sys_base_ex (2.12.0); urgency = medium
+
+Abstract:
+	Multicast DNS support feature
+
+Files Modified: data/defaults/etc/defconfig/passwd, spx/PACKAGES.D/sys_base_ex/SCRIPTS/dev-install.py
+
+--Submitter: ranjodhbirkaur (ranjodhbirkaur@amiindia.co.in) Tue, 13 Jan 2015 10:45:20 HMT
+
+Package: sys_base_ex (2.11.0); urgency = medium
+
+Abstract:
+	Fixing IPv6 Conformance issues
+
+Files Modified: data/defaults/etc/network/if-pre-up.d/25-pre-up-bonding
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 09 Jan 2015 18:12:33 HMT
+
+Package: sys_base_ex (2.10.0); urgency = low
+
+Abstract:
+	Fix for logs creation
+
+Files Modified: data/defaults/etc/defconfig/rsyslog.conf, spx/PACKAGES.D/sys_base_ex/SCRIPTS/dev-install.py
+
+--Submitter: ranjodhbirkaur (ranjodhbirkaur@amiindia.co.in) Tue, 06 Jan 2015 17:24:09 HMT
+
+Package: sys_base_ex (2.9.0); urgency = medium
+
+Abstract:
+	Disable tar from busybox as it is taken from target.
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 06 Jan 2015 13:07:42 HMT
+
+Package: sys_base_ex (2.8.0); urgency = medium
+
+Abstract:
+	Removed iptables from sys_base and added in sys_iptables, Also configured BMC to reboot if there is any panic in kernel.
+
+Files Modified: data/defaults/etc/defconfig/crontab, data/defaults/etc/dhcp-script, data/defaults/etc/nwhelperapi.sh, data/defaults/etc/sysctl.conf, spx/RULES.D/files.lst
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Mon, 05 Jan 2015 19:58:31 HMT
+
+Package: sys_base_ex (2.7.0); urgency = medium
+
+Abstract:
+	Fixed ipv6 compatiablity errors
+
+Files Added: data/defaults/etc/network/if-up.d/02-up-ipv6autoconf
+Files Modified: spx/INFO
+
+--Submitter: RAJA JAYAVELU (jraja@amiindia.co.in) Fri, 19 Dec 2014 05:15:30 EST
+
+Package: sys_base_ex (2.6.0); urgency = low
+
+Abstract:
+	fix for eip 189103 X-86 platform
+
+Files Modified: spx/PACKAGES.D/sys_base_ex/DATA/template/inittab/tail.x86
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Wed, 10 Dec 2014 12:47:43 HMT
+
+Package: sys_base_ex (2.5.0); urgency = high
+
+Abstract:
+	Hard coded architecture value fails in other architecture
+
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 01 Dec 2014 17:29:56 EST
+
+Package: sys_base_ex (2.4.0); urgency = medium
+
+Abstract:
+	Fixed console login failure
+
+Files Modified: data/defaults/etc/defconfig/pam_withunix
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Tue, 18 Nov 2014 15:38:25 HMT
+
+Package: sys_base_ex (2.3.0); urgency = critical
+
+Abstract:
+	Backward compatibility to allow login after flashing RR8 2.x on RR9 3.x by preserving configurations
+
+Files Modified: data/defaults/etc/defconfig/pam_withunix, data/defaults/etc/defconfig/pam_wounix, spx/RULES.D/softlink.lst
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 14 Nov 2014 19:41:31 HMT
+
+Package: sys_base_ex (2.2.0); urgency = medium
+
+Abstract:
+	Diabling busybox ping6 support
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/sys_base.busybox.config
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Sun, 19 Oct 2014 14:47:17 CST
+
+Package: sys_base_ex (2.1.0); urgency = medium
+
+Abstract:
+	Updated P.CONFIG file for binary package.
+
+Files Modified: spx/PACKAGES.D/sys_base_ex/P.CONFIG
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Sat, 18 Oct 2014 21:11:39 HMT
+
+Package: sys_base_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:34:03 GMT
+
+Package: sys_base_ex (1.15.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:59:39 GMT
+
+Package: sys_base_ex (1.14.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:11:40 GMT
+
+Package: sys_base_ex (1.13.0); urgency = medium
+
+Abstract:
+	Enabled mount helpers for ntfs drives mount
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: indira valmiki (indirav@amiindia.co.in) Wed, 17 Sep 2014 10:46:01 HMT
+
+Package: sys_base_ex (1.12.0); urgency = medium
+
+Abstract:
+	Disabled CONFIG_FEATURE_IFUPDOWN_IP and NFIG_FEATURE_IFUPDOWN_IP_BUILTIN flags.
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: shravan (shravans@amiindia.co.in) Fri, 12 Sep 2014 21:08:14 HMT
+
+Package: sys_base_ex (1.11.0); urgency = medium
+
+Abstract:
+	Added new menu to support firmware tarball generation
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/sys_base_ex/SCRIPTS/dev-install.py
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Thu, 11 Sep 2014 21:38:50 HMT
+
+Package: sys_base_ex (1.10.0); urgency = medium
+
+Abstract:
+	Telnet service is allowed to access when service is disabled.
+
+Files Modified: data/defaults/etc/init.d/telnetd
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Wed, 10 Sep 2014 12:13:45 HMT
+
+Package: sys_base_ex (1.9.0); urgency = medium
+
+Abstract:
+	Enabled PAM support for busybox.
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 02 Sep 2014 21:01:00 HMT
+
+Package: sys_base_ex (1.8.0); urgency = medium
+
+Abstract:
+	Removed unwanted DATA driectory
+Added equivalent defconfig entries for conf entries
+
+Files Deleted: spx/DATA, spx/DATA/directory.lst, spx/DATA/files.lst, spx/DATA/softlink.lst, spx/DATA/sys_base.busybox.config
+Files Modified: spx/RULES.D/directory.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 19 Aug 2014 16:31:06 EDT
+
+Package: sys_base_ex (1.7.0); urgency = medium
+
+Abstract:
+	Copying library libp11-kit from Target to ImagTree
+
+Files Modified: spx/PACKAGES.D/sys_base_ex/SCRIPTS/dev-install.py, spx/RULES.D/files.lst
+
+--Submitter: Winston (winstont@ami.com) Thu, 14 Aug 2014 14:35:56 GMT
+
+Package: sys_base_ex (1.6.0); urgency = medium
+
+Abstract:
+	Changes in inittab for Kernel 3.x
+
+Files Added: spx/PACKAGES.D/sys_base_ex/DATA/template/inittab, spx/PACKAGES.D/sys_base_ex/DATA/template/inittab/head, spx/PACKAGES.D/sys_base_ex/DATA/template/inittab/tail, spx/PACKAGES.D/sys_base_ex/DATA/template/inittab/tail.x86
+Files Deleted: data/defaults/etc/inittab
+Files Modified: spx/PACKAGES.D/sys_base_ex/SCRIPTS/dev-install.py
+
+--Submitter: Winston (winstont@ami.com) Wed, 13 Aug 2014 15:56:43 GMT
+
+Package: sys_base_ex (1.5.0); urgency = medium
+
+Abstract:
+	Creating files needed for depmod
+
+Files Modified: data/defaults/etc/init.d/init-sp.sh, data/defaults/etc/init.d/module-init-tools, spx/RULES.D/softlink.lst
+
+--Submitter: Winston (winstont@ami.com) Wed, 06 Aug 2014 23:40:49 GMT
+
+Package: sys_base_ex (1.4.0); urgency = high
+
+Abstract:
+	Fixed post dhcp script location. Without this the 
+leased ip will not be set to the interface
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 06 Aug 2014 10:17:21 EDT
+
+Package: sys_base_ex (1.3.0); urgency = medium
+
+Abstract:
+	Option to run udhcpc in background
+
+Files Modified: spx/RULES.D/sys_base.busybox.config
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 01 Aug 2014 18:01:58 EDT
+
+Package: sys_base_ex (1.2.0); urgency = medium
+
+Abstract:
+	Renaming DATA to RULES.D
+
+Files Added: spx/RULES.D, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst, spx/RULES.D/sys_base.busybox.config
+Files Modified: spx/RULES.py
+
+--Submitter: Winston (winstont@ami.com) Fri, 01 Aug 2014 12:27:07 GMT
+
+Package: sys_base_ex (1.1.0); urgency = high
+
+Abstract:
+	Standard ps and start-stop-daemon are required by standard startup
+scripts
+Baud rate for getty changes to 115200
+
+Files Modified: data/defaults/etc/inittab, spx/DATA/files.lst, spx/DATA/sys_base.busybox.config, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 18:39:02 EDT
+
+Package: sys_base_ex (1.0.0); urgency = new
+
+Abstract:
+	Base System Package which creates a minimal working linux root filesystem .
+
+Files Added: data, data/defaults, data/defaults/etc, data/defaults/etc/core_features, data/defaults/etc/core_macros, data/defaults/etc/default, data/defaults/etc/default/stunnel4, data/defaults/etc/default_group, data/defaults/etc/defconfig, data/defaults/etc/defconfig/adjtime, data/defaults/etc/defconfig/bond.conf, data/defaults/etc/defconfig/crontab, data/defaults/etc/defconfig/hostname, data/defaults/etc/defconfig/hostname.conf, data/defaults/etc/defconfig/hosts, data/defaults/etc/defconfig/localtime, data/defaults/etc/defconfig/mountall_dual.sh, data/defaults/etc/defconfig/nsswitch.conf, data/defaults/etc/defconfig/pam_withunix, data/defaults/etc/defconfig/pam_wounix, data/defaults/etc/defconfig/passwd, data/defaults/etc/defconfig/pwdEncKey, data/defaults/etc/defconfig/resolv.conf, data/defaults/etc/defconfig/rotate.conf, data/defaults/etc/defconfig/rsyslog.conf, data/defaults/etc/defconfig/rt_tables, data/defaults/etc/defconfig/shadow, data/defaults/etc/defconfig/syslog.conf, data/defaults/etc/dhcp-script, data/defaults/etc/fstab, data/defaults/etc/init.d, data/defaults/etc/init.d/arpflux.sh, data/defaults/etc/init.d/bootmisc.sh, data/defaults/etc/init.d/drvload.sh, data/defaults/etc/init.d/ifupdown, data/defaults/etc/init.d/init-sp.sh, data/defaults/etc/init.d/module-init-tools, data/defaults/etc/init.d/mountall.sh, data/defaults/etc/init.d/networking, data/defaults/etc/init.d/procps, data/defaults/etc/init.d/rc-init-complete, data/defaults/etc/init.d/rsyslog, data/defaults/etc/init.d/sendsigs, data/defaults/etc/init.d/ssh, data/defaults/etc/init.d/ssh-main, data/defaults/etc/init.d/sysklogd, data/defaults/etc/init.d/telnetd, data/defaults/etc/init.d/tftpd, data/defaults/etc/inittab, data/defaults/etc/ld.so.conf.d, data/defaults/etc/logrotate.conf, data/defaults/etc/network, data/defaults/etc/network/if-down.d, data/defaults/etc/network/if-down.d/01-down-script, data/defaults/etc/network/if-post-down.d, data/defaults/etc/network/if-post-down.d/01-post-down-script, data/defaults/etc/network/if-post-down.d/25-post-down-vlan, data/defaults/etc/network/if-post-down.d/60-post-down-bonding, data/defaults/etc/network/if-post-down.d/96-post-down-advanced-routing, data/defaults/etc/network/if-pre-up.d, data/defaults/etc/network/if-pre-up.d/01-pre-up-script, data/defaults/etc/network/if-pre-up.d/25-pre-up-bonding, data/defaults/etc/network/if-pre-up.d/60-pre-up-vlan, data/defaults/etc/network/if-up.d, data/defaults/etc/network/if-up.d/01-up-script, data/defaults/etc/network/if-up.d/96-up-advancedrouting, data/defaults/etc/network/udhcpc.script, data/defaults/etc/nwhelperapi.sh, data/defaults/etc/pam.d, data/defaults/etc/reservedusers, data/defaults/etc/ssh, data/defaults/etc/ssh/sshd_config, data/defaults/etc/sysctl.conf, data/defaults/lib, data/defaults/lib/init, data/defaults/lib/init/vars.sh, data/defaults/lib/lsb, data/defaults/lib/lsb/init-functions, data/defaults/usr, data/defaults/usr/share, data/defaults/usr/share/zoneinfo, data/defaults/usr/share/zoneinfo/Etc, data/defaults/usr/share/zoneinfo/Etc/GMT+0:30, data/defaults/usr/share/zoneinfo/Etc/GMT+10:30, data/defaults/usr/share/zoneinfo/Etc/GMT+11:30, data/defaults/usr/share/zoneinfo/Etc/GMT+1:30, data/defaults/usr/share/zoneinfo/Etc/GMT+2:30, data/defaults/usr/share/zoneinfo/Etc/GMT+3:30, data/defaults/usr/share/zoneinfo/Etc/GMT+4:30, data/defaults/usr/share/zoneinfo/Etc/GMT+5:30, data/defaults/usr/share/zoneinfo/Etc/GMT+6:30, data/defaults/usr/share/zoneinfo/Etc/GMT+7:30, data/defaults/usr/share/zoneinfo/Etc/GMT+8:30, data/defaults/usr/share/zoneinfo/Etc/GMT+9:30, data/defaults/usr/share/zoneinfo/Etc/GMT-0:30, data/defaults/usr/share/zoneinfo/Etc/GMT-10:30, data/defaults/usr/share/zoneinfo/Etc/GMT-11:30, data/defaults/usr/share/zoneinfo/Etc/GMT-12:45, data/defaults/usr/share/zoneinfo/Etc/GMT-1:30, data/defaults/usr/share/zoneinfo/Etc/GMT-2:30, data/defaults/usr/share/zoneinfo/Etc/GMT-3:30, data/defaults/usr/share/zoneinfo/Etc/GMT-4:30, data/defaults/usr/share/zoneinfo/Etc/GMT-5:30, data/defaults/usr/share/zoneinfo/Etc/GMT-5:45, data/defaults/usr/share/zoneinfo/Etc/GMT-6:30, data/defaults/usr/share/zoneinfo/Etc/GMT-7:30, data/defaults/usr/share/zoneinfo/Etc/GMT-8:30, data/defaults/usr/share/zoneinfo/Etc/GMT-9:30, spx, spx/CHANGELOG, spx/DATA, spx/DATA/directory.lst, spx/DATA/files.lst, spx/DATA/softlink.lst, spx/DATA/sys_base.busybox.config, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.OPENSOURCE, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/sys_base_ex, spx/PACKAGES.D/sys_base_ex/DATA, spx/PACKAGES.D/sys_base_ex/DATA/device.lst, spx/PACKAGES.D/sys_base_ex/DATA/template, spx/PACKAGES.D/sys_base_ex/DATA/template/dns.conf, spx/PACKAGES.D/sys_base_ex/DATA/template/dns.conf/body, spx/PACKAGES.D/sys_base_ex/DATA/template/dns.conf/head, spx/PACKAGES.D/sys_base_ex/DATA/template/dns.conf/tail, spx/PACKAGES.D/sys_base_ex/DATA/template/interfaces, spx/PACKAGES.D/sys_base_ex/DATA/template/interfaces/body, spx/PACKAGES.D/sys_base_ex/DATA/template/interfaces/head, spx/PACKAGES.D/sys_base_ex/DATA/template/tty, spx/PACKAGES.D/sys_base_ex/DATA/template/tty/body, spx/PACKAGES.D/sys_base_ex/P.CONFIG, spx/PACKAGES.D/sys_base_ex/SCRIPTS, spx/PACKAGES.D/sys_base_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 17:59:38 EDT
+

@@ -1,0 +1,207 @@
+Package: adc (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/adc.h, data/adcmain.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:22:35 HMT
+
+Package: adc (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 02:48:06 GMT
+
+Package: adc (1.16.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:22:19 HMT
+
+Package: adc (1.15.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:35:18 GMT
+
+Package: adc (1.14.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 02:44:48 GMT
+
+Package: adc (1.13.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/adcmain.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:09:18 EDT
+
+Package: adc (1.12.0); urgency = medium
+
+Abstract:
+	Removed unnecessary calling of remove_proc_entry
+
+Files Modified: data/adcmain.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 25 Jul 2014 09:58:18 GMT
+
+Package: adc (1.11.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/adc/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:56:12 GMT
+
+Package: adc (1.10.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/adc/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:39:58 HMT
+
+Package: adc (1.9.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:36:36 EDT
+
+Package: adc (1.8.0); urgency = low
+
+Abstract:
+	Modified driver to support Kernel 3.4.11.
+
+Files Modified: data/adcmain.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Sun, 15 Sep 2013 02:25:51 HMT
+
+Package: adc (1.7.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sat, 21 Sep 2013 23:39:30 EDT
+
+Package: adc (1.6.0); urgency = high
+
+Abstract:
+	Updating the SourceLicense, PackageLicense, BinaryLicense and Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/adcmain.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 16:00:24 EDT
+
+Package: adc (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 13:54:33 EDT
+
+Package: adc (1.4.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/adc/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:47:25 EDT
+
+Package: adc (1.3.0); urgency = medium
+
+Abstract:
+	removed platform specific header file as this driver is arch-independent driver
+
+Files Modified: data/adcmain.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 15 Oct 2010 16:28:16 EDT
+
+Package: adc (1.2.0); urgency = medium
+
+Abstract:
+	Changes in ADC driver to comply with the changes to track open count in helper driver
+
+Files Modified: data/adcmain.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 27 Sep 2010 18:09:34 EDT
+
+Package: adc (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 12:54:22 EDT
+
+Package: adc (1.0.4); urgency = medium
+
+Abstract:
+	add adc for AST2300EVB
+
+Files Modified: data/adc.h, data/adcmain.c
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Mon, 19 Jul 2010 18:51:09 CST
+
+Package: adc (1.0.3); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 11:24:55 EDT
+
+Package: adc (1.0.2); urgency = high
+
+Abstract:
+	fix wrong MAJOR_NUM in dev-install
+
+Files Modified: data/adcmain.c, spx/PACKAGES.D/adc/SCRIPTS/dev-install, spx/INFO
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Mon, 26 Apr 2010 17:49:02 CST
+
+Package: adc (1.0.1); urgency = low
+
+Abstract:
+	Versoion Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:49:57 EST
+
+Package:adc (1.0.0);urgency=new
+
+Abstract:
+	This package contains the ADC common(hardware independent) driver.
+
+Files Added: adc.h, adcmain.c, Makefile
+
+--Submitter: Alex Yang (alexyang@ami.com.tw) Sat, 28 Nov 2009 14:21:06 -0500

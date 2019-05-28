@@ -1,0 +1,162 @@
+#!/bin/sh
+
+case "$IFACE" in
+    bond*|bond*.*|lo)
+                    exit 0
+esac
+
+IPToOctets()
+{
+        ip_address=$1
+        IFS=.
+        set $ip_address
+        octet1=$1
+        octet2=$2
+        octet3=$3
+        octet4=$4
+        echo $octet1 $octet2 $octet3 $octet4
+}
+
+NetworkAddress()
+{
+        ip_address=$1
+        subnetmask=$2
+        cidr=$3
+
+        octetip=$(IPToOctets $ip_address)
+        octetsn=$(IPToOctets $subnetmask)
+
+        octetip1=$(echo $octetip | awk '{print $1}')
+        octetip2=$(echo $octetip | awk '{print $2}')
+        octetip3=$(echo $octetip | awk '{print $3}')
+        octetip4=$(echo $octetip | awk '{print $4}')
+
+        octetsn1=$(echo $octetsn | awk '{print $1}')
+        octetsn2=$(echo $octetsn | awk '{print $2}')
+        octetsn3=$(echo $octetsn | awk '{print $3}')
+        octetsn4=$(echo $octetsn | awk '{print $4}')
+
+        netaddress=$(($octetip1 & $octetsn1)).$(($octetip2 & $octetsn2)).$(($octetip3 & $octetsn3)).$(($octetip4 & $octetsn4))
+        echo $netaddress
+}
+
+MaskToCidr() {
+        nbits=0
+        IFS=.
+        for dec in $1 ; do
+                case $dec in
+                        255) let nbits+=8;;
+                        254) let nbits+=7;;
+                        252) let nbits+=6;;
+                        248) let nbits+=5;;
+                        240) let nbits+=4;;
+                        224) let nbits+=3;;
+                        192) let nbits+=2;;
+                        128) let nbits+=1;;
+                        0) ;;
+                esac
+        done
+        echo "$nbits"
+}
+
+ShouldBeSkipped()
+{
+    echo $1 | grep "^#" > /dev/null
+    if [ $? == 0 ]
+    then
+        return 1
+    fi
+    if [ "`echo $1`" == "" ]
+    then
+        return 1
+    fi
+
+    return 0
+}
+
+if [ -f "/etc/core_features" ]
+then
+    feature=`cat /etc/core_features | grep -v "^#" | grep " *CONFIG_SPX_FEATURE_ADVANCED_IP_ROUTING_SUPPORT *$"`
+    if [ -z $feature ]
+    then
+            ADVANCED_ROUTING_SUPPORT='NO'
+            #echo "Advanced Routing Disabled..."
+        else
+            ADVANCED_ROUTING_SUPPORT='YES'
+            #echo "Advanced Routing Enabled..."
+        fi
+fi
+
+if [ "$ADVANCED_ROUTING_SUPPORT" == "YES" ]
+then
+cat /etc/network/interfaces |
+(
+#Read the first line
+while read line; do
+    INTERFACE_ADDR=`echo $line | awk '{print $2}'`
+
+    #Skip the comments
+    ShouldBeSkipped $line
+    if [ $? == 1 ]
+    then
+        continue
+    fi
+
+    #Skip the loopback interface
+    if [ "$INTERFACE_ADDR" == "lo" ]; then
+        continue
+    fi
+
+    #Update the router table entry for $IFACE
+    if [ "$IFACE" != "$INTERFACE_ADDR" ]; then
+        continue
+    fi
+
+    # Read line in the block and store the Interface Mode, if any
+    IFACEMODE=`echo $line | grep "inet " | awk '{print $4}' | cut -d':' -f2`
+
+    # If Interface Mode is not static read the next line 
+    if [ "$IFACEMODE" != "static" ]; then
+        continue
+    fi
+
+    if [ "$IFACEMODE" == "static" ]; then
+    	# Read next line in the block and store the IP Address, if any
+    	read line;
+	IP=`echo $line | grep "address" | awk '{print $2}' | cut -d':' -f2`
+
+    	# Read next line in the block and store the Net Mask, if any
+    	read line;
+	NETMASK=`echo $line | grep "netmask" | awk '{print $2}' | cut -d':' -f2`
+	
+    	# Read next next line in the block and store the Gateway, if any
+    	read line;
+    	read line;
+	GATEWAY=`echo $line | grep "gateway" | awk '{print $2}' | cut -d':' -f2`
+
+
+
+        CIDR=$(MaskToCidr $NETMASK)
+        NETADDR=$(NetworkAddress $IP $NETMASK $CIDR)
+
+	METRIC=0
+
+#	adding the routing table names in the rt_tables
+
+	NUM=`grep $INTERFACE_ADDR /conf/rt_tables | awk 'END { print NR }'`
+
+	if [ $NUM -eq 0 ]; then
+   		NUM=`cat /conf/rt_tables | awk 'END { print NR }'`
+		echo "$NUM  $INTERFACE_ADDR" >> /conf/rt_tables
+	fi
+
+#	route add default gw $GATEWAY dev $INTERFACE_ADDR metric $((METRIC++))
+	ip route add default via $GATEWAY dev $INTERFACE_ADDR table $INTERFACE_ADDR metric $((METRIC++))
+	ip route add "$NETADDR/$CIDR" dev $INTERFACE_ADDR table $INTERFACE_ADDR
+	ip rule del table $INTERFACE_ADDR
+	ip rule add from $IP table $INTERFACE_ADDR
+	echo "Advanced Routing done..."
+    fi
+done
+)
+fi

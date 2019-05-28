@@ -1,0 +1,10 @@
+--- linux-3.14.17/arch/arm/Makefile	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/arch/arm/Makefile	2014-08-21 15:03:45.357790732 -0400
+@@ -157,6 +157,7 @@
+ machine-$(CONFIG_ARCH_HIGHBANK)		+= highbank
+ machine-$(CONFIG_ARCH_HI3xxx)		+= hisi
+ machine-$(CONFIG_ARCH_INTEGRATOR)	+= integrator
++machine-$(CONFIG_ARCH_AST2500EVB)   += astevb
+ machine-$(CONFIG_ARCH_IOP13XX)		+= iop13xx
+ machine-$(CONFIG_ARCH_IOP32X)		+= iop32x
+ machine-$(CONFIG_ARCH_IOP33X)		+= iop33x

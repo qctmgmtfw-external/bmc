@@ -1,0 +1,6 @@
+# Install Script
+
+build-install:
+			MKDIR_NOCLEAN %SPXINC/jtag
+			COPY_DIR ./ %SPXINC/jtag
+debug-install:

@@ -1,0 +1,23 @@
+Source                   	:	Kernel_arch_arm_ex
+Version : 2.1.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	Kernel_arch_arm_ex
+Build-Depends            	:	Kernel_amiext_ex
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	ARM Fixes to Kernel 3.4.74
+.
+
+Package                  	:	Kernel_arch_arm_ex
+Section                  	:	info
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	ARM Fixes to Kernel 3.4.74
+.
+

@@ -1,0 +1,18 @@
+--- linux-3.14.17/mm/Makefile	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/mm/Makefile	2014-08-21 12:25:48.569612819 -0400
+@@ -38,6 +38,7 @@
+ obj-$(CONFIG_NUMA) 	+= mempolicy.o
+ obj-$(CONFIG_SPARSEMEM)	+= sparse.o
+ obj-$(CONFIG_SPARSEMEM_VMEMMAP) += sparse-vmemmap.o
++obj-$(CONFIG_ASHMEM) += ashmem.o
+ obj-$(CONFIG_SLOB) += slob.o
+ obj-$(CONFIG_MMU_NOTIFIER) += mmu_notifier.o
+ obj-$(CONFIG_KSM) += ksm.o
+@@ -47,6 +48,7 @@
+ obj-$(CONFIG_KMEMCHECK) += kmemcheck.o
+ obj-$(CONFIG_FAILSLAB) += failslab.o
+ obj-$(CONFIG_MEMORY_HOTPLUG) += memory_hotplug.o
++obj-$(CONFIG_BIGPHYS_AREA) += bigphysarea.o
+ obj-$(CONFIG_FS_XIP) += filemap_xip.o
+ obj-$(CONFIG_MIGRATION) += migrate.o
+ obj-$(CONFIG_QUICKLIST) += quicklist.o

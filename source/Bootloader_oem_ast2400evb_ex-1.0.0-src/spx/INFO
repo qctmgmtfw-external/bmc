@@ -1,0 +1,32 @@
+Source : Bootloader_oem_ast2400evb_ex
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Bhavesh Sahu (bhaveshsahu@amiindia.co.in)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 0.0.0
+Builds : Bootloader_oem_ast2400evb_ex
+Build-Depends : Bootloader_platform_ast2400evb_ex
+Customization-Type : OEMEXTN
+Architecture : ANY
+Urgency : new
+Description : AST2400EVB OEM Patches to Bootloader
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Bootloader_oem_ast2400evb_ex
+Section : info
+Group : BASE
+Essential : NO
+Description : AST2400EVB OEM Patches to Bootloader
+.
+

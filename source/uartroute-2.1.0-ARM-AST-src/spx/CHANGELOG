@@ -1,0 +1,164 @@
+Package: uartroute (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/uartroute.h, data/uartroute_mod.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:37:07 HMT
+
+Package: uartroute (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 07:11:29 GMT
+
+Package: uartroute (1.15.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:55:23 HMT
+
+Package: uartroute (1.14.0); urgency = medium
+
+Abstract:
+	ESSENTIAL field correction
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Wed, 15 Oct 2014 23:42:49 GMT
+
+Package: uartroute (1.13.0); urgency = high
+
+Abstract:
+	Function support in Kernel 3.x.
+
+Files Modified: data/uartroute.h
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Fri, 03 Oct 2014 14:49:48 CST
+
+Package: uartroute (1.12.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:40:02 GMT
+
+Package: uartroute (1.11.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:52:29 GMT
+
+Package: uartroute (1.10.0); urgency = medium
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/uartroute_mod.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:43:54 GMT
+
+Package: uartroute (1.9.0); urgency = low
+
+Abstract:
+	fix the flag of default uart routing in PRJ
+
+Files Modified: spx/PACKAGES.D/uartroute/SCRIPTS/dev-install
+
+--Submitter: pearcelee (pearcelee) Fri, 05 Sep 2014 10:38:57 CST
+
+Package: uartroute (1.8.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/uartroute_mod.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:44:11 GMT
+
+Package: uartroute (1.7.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/uartroute_mod.c, spx/PACKAGES.D/uartroute/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:35:20 HMT
+
+Package: uartroute (1.6.0); urgency = low
+
+Abstract:
+	Source P.CONFIG is synced with binary P.CONFIG
+
+Files Modified: spx/PACKAGES.D/uartroute/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Mon, 28 Apr 2014 10:48:20 GMT
+
+Package: uartroute (1.5.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/uartroute/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:05:19 GMT
+
+Package: uartroute (1.4.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/uartroute/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 21:04:28 HMT
+
+Package: uartroute (1.3.0); urgency = medium
+
+Abstract:
+	fix for eip149306 about switching uart route
+
+Files Added: data/uartroute_BMC.conf, data/uartroute_SOL.conf, data/uartroute_SYS.conf
+Files Deleted: data/uartroute.conf
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/uartroute/P.CONFIG, spx/PACKAGES.D/uartroute/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: pearcelee (pearcelee) Mon, 07 Apr 2014 15:36:51 CST
+
+Package: uartroute (1.2.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:40:50 EDT
+
+Package: uartroute (1.1.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:48:40 EDT
+
+Package: uartroute (1.0.0); urgency = new
+
+Abstract:
+	This package contains driver to control routing between io com ports and uarts
+
+Files Added: data, data/Makefile, data/uartroute.conf, data/uartroute.h, data/uartroute_mod.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/uartroute, spx/PACKAGES.D/uartroute/DATA, spx/PACKAGES.D/uartroute/P.CONFIG, spx/PACKAGES.D/uartroute/SCRIPTS, spx/PACKAGES.D/uartroute/SCRIPTS/dev-install, spx/PACKAGES.D/uartroute_dev, spx/PACKAGES.D/uartroute_dev/DATA, spx/PACKAGES.D/uartroute_dev/SCRIPTS, spx/PACKAGES.D/uartroute_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 13 Mar 2013 23:03:58 CST
+

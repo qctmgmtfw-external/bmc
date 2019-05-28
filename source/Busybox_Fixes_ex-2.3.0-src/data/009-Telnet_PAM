@@ -1,0 +1,143 @@
+--- busybox.org/networking/telnetd.c	2014-08-12 19:16:26.120972383 +0530
++++ busybox/networking/telnetd.c	2014-08-13 00:55:41.196854345 +0530
+@@ -246,6 +246,37 @@
+ 	OPT_WAIT       = (1 << 8) * ENABLE_FEATURE_TELNETD_INETD_WAIT, /* -w SEC */
+ };
+ 
++static int 
++getip4frm_mappedaddr (const struct sockaddr *sa)
++{
++	struct sockaddr_in6 *v6 = (struct sockaddr_in6 *)sa;
++
++	if (IN6_IS_ADDR_V4MAPPED (&v6->sin6_addr)){
++		return 1;
++	}
++	return 0;
++}
++
++static int
++get_port_number (const struct sockaddr *sa)
++{
++	socklen_t salen;
++	char strport[32];
++
++#if ENABLE_FEATURE_IPV6
++	if (sa->sa_family == AF_INET)
++		salen = sizeof(struct sockaddr_in);
++	if (sa->sa_family == AF_INET6)
++		salen = sizeof(struct sockaddr_in6);
++#endif
++	/* Return port number. */
++	if ((getnameinfo(sa, salen, NULL, 0,
++		strport, sizeof(strport), NI_NUMERICSERV)) != 0){
++		return -1;
++	}
++	return atoi(strport);
++}
++
+ static struct tsession *
+ make_new_session(
+ 		IF_FEATURE_TELNETD_STANDALONE(int sock)
+@@ -254,13 +285,16 @@
+ #if !ENABLE_FEATURE_TELNETD_STANDALONE
+ 	enum { sock = 0 };
+ #endif
+-	const char *login_argv[4];
++	const char *login_argv[5];
+ 	char *hostname1 = NULL;
++	char *localaddr = NULL;
++	char *term = NULL;
+ 	struct termios termbuf;
+ 	int fd, pid;
+ 	char tty_name[GETPTY_BUFSIZE];
+ 	struct tsession *ts = xzalloc(sizeof(struct tsession) + BUFSIZE * 2);
+-	len_and_sockaddr *lsa1=NULL;
++	len_and_sockaddr *lsa1=NULL, *lsa2=NULL;
++	char buf[256];
+ 
+ 	/*ts->buf1 = (char *)(ts + 1);*/
+ 	/*ts->buf2 = ts->buf1 + BUFSIZE;*/
+@@ -338,16 +372,6 @@
+ 	/* Child */
+ 	/* Careful - we are after vfork! */
+ 
+-	/* Restore default signal handling ASAP */
+-	bb_signals((1 << SIGCHLD) + (1 << SIGPIPE), SIG_DFL);
+-	/*Get the hostname*/
+-	lsa1 = get_peer_lsa(sock);
+-	if (lsa1) {
+-		/*convert it into string pattern */
+-		hostname1 = xmalloc_sockaddr2dotted_noport(&lsa1->u.sa);
+-		free(lsa1);
+-	}
+-
+ 	pid = getpid();
+ 
+ 	if (ENABLE_FEATURE_UTMP) {
+@@ -364,6 +388,42 @@
+ 	/* Make new session and process group */
+ 	setsid();
+ 
++	/* Restore default signal handling ASAP */
++	bb_signals((1 << SIGCHLD) + (1 << SIGPIPE), SIG_DFL);
++	term = getenv ("TERM");
++	clearenv ();
++	if (term)
++		xsetenv ("TERM", term);
++	/*Get the remote address and port*/
++	lsa1 = get_peer_lsa(sock);
++
++	/*Get the local address and port*/
++	lsa2 = get_sock_lsa(sock);
++	if (lsa1 && lsa2) {
++		/*if the remote address is mapped then convert it and add to the environ*/
++		hostname1 = xmalloc_sockaddr2dotted_noport(&lsa1->u.sa);
++		snprintf (buf, sizeof (buf), "%.50s %d %d", hostname1, get_port_number (&lsa1->u.sa), get_port_number (&lsa2->u.sa));
++		xsetenv("TELNET_CLIENT", buf);
++		if (getip4frm_mappedaddr (&lsa1->u.sa)){
++			xsetenv("TELNET_CLIENT", (buf+7));
++		}
++
++		/*if the local address is mapped then convert it and add to the environ*/
++		memset (buf , 0, sizeof (buf));
++		snprintf (buf, sizeof (buf), "%.60s %.50s %d", getenv ("TELNET_CLIENT"),
++		xmalloc_sockaddr2dotted_noport (&lsa2->u.sa), get_port_number (&lsa2->u.sa));
++		xsetenv ("TELNET_CONNECTION", buf);
++		if (getip4frm_mappedaddr (&lsa2->u.sa)){
++			localaddr = xmalloc_sockaddr2dotted_noport (&lsa2->u.sa);
++			snprintf (buf, sizeof (buf), "%.60s %.50s %d", getenv ("TELNET_CLIENT"),
++			(localaddr+7), get_port_number (&lsa2->u.sa));
++			xsetenv ("TELNET_CONNECTION", buf);
++		}
++		free (lsa1);
++		free (lsa2);
++	}
++	xsetenv("TTY_NAME", tty_name);
++
+ 	/* Open the child's side of the tty */
+ 	/* NB: setsid() disconnects from any previous ctty's. Therefore
+ 	 * we must open child's side of the tty AFTER setsid! */
+@@ -396,7 +456,14 @@
+ 	login_argv[1] = "-h";
+ 	/*Allow both IPv4 and IPv6 Address*/
+ 	login_argv[2] = hostname1;
++#ifdef CONFIG_SPX_FEATURE_GLOBAL_TELNET_AUTHENTICATION
++	/* Send BMC IP Address for authentication */
++	login_argv[3] = localaddr+7;
++	login_argv[4] = NULL;
++#else
+ 	login_argv[3] = NULL;
++	login_argv[4] = NULL;
++#endif
+ 	/* exec busybox applet (if PREFER_APPLETS=y), if that fails,
+ 	 * exec external program.
+ 	 * NB: sock is either 0 or has CLOEXEC set on it.
+@@ -435,6 +502,8 @@
+ 	kill(ts->shell_pid, SIGKILL);
+ 	waitpid(ts->shell_pid, NULL, 0);
+ #endif
++	if (ts->shell_pid > 0)
++		kill(ts->shell_pid, SIGTERM);
+ 	close(ts->ptyfd);
+ 	close(ts->sockfd_read);
+ 	/* We do not need to close(ts->sockfd_write), it's the same

@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_CLEAN %SPXINC/openheaders
+        COPY_DIR   .  %SPXINC/openheaders
+
+debug-install:

@@ -1,0 +1,4 @@
+./01-arch_arm_configs_ast2500evb_defconfig 44868 4fb848a880e594ceda3912ad6d43410a
+./02-arch_arm_Kconfig 1825 9ab2a44aeab5bca599c24763b1ad0846
+./03-arch_arm_Makefile 470 5ff95cf71525f81213bc71cdd8b0265f
+./04-arch_arm_tools_mach-types 741 05b39d804a76c8cdaa76f15660b7ea86

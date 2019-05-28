@@ -1,0 +1,26 @@
+--- linux/drivers/net/ethernet/aspeed/ast_ether.c	2015-09-14 13:42:29.147120560 +0800
++++ linux/drivers/net/ethernet/aspeed/ast_ether.c.new	2015-09-14 13:42:21.465248464 +0800
+@@ -1333,6 +1333,15 @@
+ 
+ 	return &priv->stats;
+ }
++
++//Quanta+++
++static int ast_ether_set_address(struct net_device *dev, void *p)
++{
++	/*TBD*/
++	return 0;
++}
++//Quanta+++
++
+ #ifdef HAVE_MULTICAST
+ static void ast_ether_set_multicast_list(struct net_device *dev)
+ {
+@@ -1548,6 +1557,7 @@
+ 	ndo_start_xmit:		ast_ether_tx,
+ 	ndo_tx_timeout:		ast_ether_timeout,
+ 	ndo_get_stats:		ast_ether_get_stats,
++	ndo_set_mac_address:	ast_ether_set_address, //Quanta
+ #ifdef  HAVE_MULTICAST
+ 	ndo_set_multicast_list:ast_ether_set_multicast_list,
+ #endif

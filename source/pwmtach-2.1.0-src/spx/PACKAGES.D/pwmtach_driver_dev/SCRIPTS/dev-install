@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_NOCLEAN %SPXINC/pwmtach
+        COPY_DIR ./ %SPXINC/pwmtach
+
+debug-install:

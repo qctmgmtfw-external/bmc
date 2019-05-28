@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+  		MKDIR_NOCLEAN %SPXINC/peci
+		COPY_DIR ./ %SPXINC/peci
+		
+debug-install:

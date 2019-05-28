@@ -1,0 +1,6 @@
+./Makefile 268 961bf7742055bf13ad1a984ba9d2ddf6
+./uartroute.h 2390 7bc88ab4bcc08683537f4ea26a9a9b34
+./uartroute_BMC.conf 0 d41d8cd98f00b204e9800998ecf8427e
+./uartroute_SOL.conf 0 d41d8cd98f00b204e9800998ecf8427e
+./uartroute_SYS.conf 0 d41d8cd98f00b204e9800998ecf8427e
+./uartroute_mod.c 13994 f774bd9e607ff652e4f91ab31cd5a3b9

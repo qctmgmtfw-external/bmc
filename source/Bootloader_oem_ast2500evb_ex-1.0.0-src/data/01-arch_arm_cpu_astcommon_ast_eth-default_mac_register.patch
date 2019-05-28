@@ -1,0 +1,38 @@
+diff -Naur uboot/arch/arm/cpu/astcommon/ast_eth.c uboot.new/arch/arm/cpu/astcommon/ast_eth.c
+--- uboot/arch/arm/cpu/astcommon/ast_eth.c	2015-10-14 15:58:57.425328571 +0800
++++ uboot.new/arch/arm/cpu/astcommon/ast_eth.c	2015-10-14 16:00:39.393149675 +0800
+@@ -714,34 +714,6 @@
+ 		scu_reg &= (~0x00000800);
+ 	*((volatile unsigned long *) SCU_SYS_RESET_REG) = scu_reg;
+ 
+-#if (CONFIG_AST2500) 
+-	scu_reg = *((volatile unsigned long *) SCU_REVISION_ID);
+-	//a1
+-	if(GET_HW_REVISION_ID(scu_reg)) {
+-		*((volatile ulong *) (SCU_MAC_CLOCK_DELAY)) = 0x00145249;        /* set MAC clock delay */
+-		*((volatile ulong *) (SCU_MAC_CLK_DELAY_100M)) = 0x00145249;     /* set MAC clock delay */
+-		*((volatile ulong *) (SCU_MAC_CLK_DELAY_10M)) = 0x00145249;      /* set MAC clock delay */
+-		*((volatile ulong *) (AST_SCU_VA_BASE + 0x1DC)) = ((0x6a << 16) | (0x6a << 8));
+-	} else {
+-	//a0
+-		*((volatile ulong *) (SCU_MAC_CLOCK_DELAY)) = 0x64f082; /* set MAC clock delay */
+-		*((volatile ulong *) (AST_SCU_VA_BASE + 0x1DC)) = ((0x6a << 16) | (0x6a << 8));
+-	}
+-#elif (CONFIG_AST2530 | CONFIG_AST3200)
+-	*((volatile ulong *) (SCU_MAC_CLOCK_DELAY)) = 0x64f082; /* set MAC clock delay */
+-	*((volatile ulong *) (AST_SCU_VA_BASE + 0x1DC)) = ((0x6a << 16) | (0x6a << 8));
+-#else
+-	*((volatile ulong *) (AST_SCU_VA_BASE + 0x48)) = 0x00002255; /* set MAC clock delay */
+-#endif
+-
+-	scu_reg = *((volatile unsigned long *) SCU_HW_STRAPPING_REG);
+-	if ((scu_reg & 0x00000040) || (scu_reg & 0x00000080)) {
+-		scu_reg = *((volatile unsigned long *) SCU_CLK_SELECT_REG);
+-		scu_reg &= ~(0x00070000);
+-		scu_reg |= 0x00010000;
+-		*((volatile ulong *) SCU_CLK_SELECT_REG) = scu_reg; /* set MAC clock divider to 4 */
+-	}
+-
+ 	*((volatile ulong *) SCU_KEY_CONTROL_REG) = 0; /* lock SCU */
+ 
+ 	udelay(10 * 1000);

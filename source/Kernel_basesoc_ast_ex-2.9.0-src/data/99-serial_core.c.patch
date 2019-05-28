@@ -1,0 +1,20 @@
+--- linux-3.14.17/drivers/tty/serial/serial_core.c	2016-01-07 17:19:33.000000000 +0800
++++ linux-3.14.17-ami/drivers/tty/serial/serial_core.c	2016-01-13 16:25:13.567339334 +0800
+@@ -2791,7 +2791,7 @@
+ 		 unsigned int overrun, unsigned int ch, unsigned int flag)
+ {
+ 	struct tty_port *tport = &port->state->port;
+-
++#if 0
+ 	if ((status & port->ignore_status_mask & ~overrun) == 0)
+ 		if (tty_insert_flip_char(tport, ch, flag) == 0)
+ 			++port->icount.buf_overrun;
+@@ -2803,6 +2803,8 @@
+ 	if (status & ~port->ignore_status_mask & overrun)
+ 		if (tty_insert_flip_char(tport, 0, TTY_OVERRUN) == 0)
+ 			++port->icount.buf_overrun;
++#endif
++	tty_insert_flip_char(tport, ch, flag);//Quanta++
+ }
+ EXPORT_SYMBOL_GPL(uart_insert_char);
+ 

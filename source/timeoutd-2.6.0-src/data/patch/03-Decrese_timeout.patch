@@ -1,0 +1,12 @@
+diff -Naur timeoutd/timeoutd.c timeoutd.new/timeoutd.c
+--- timeoutd/timeoutd.c	2012-04-17 18:32:42.123742506 +0530
++++ timeoutd.new/timeoutd.c	2012-04-17 18:33:11.935653114 +0530
+@@ -350,7 +350,7 @@
+         syslog(SYSLOG_DEBUG, "Finished checking utmp... sleeping for 1 minute.");
+ 	closelog();
+ #endif
+-        sleep(30);
++        sleep(5);
+     }
+ }
+ 

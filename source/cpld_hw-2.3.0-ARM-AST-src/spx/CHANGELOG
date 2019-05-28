@@ -1,0 +1,146 @@
+Package: cpld_hw (2.3.0); urgency = high
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/lattice.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Mon, 05 Jan 2015 15:41:41 IST
+
+Package: cpld_hw (2.2.0); urgency = high
+
+Abstract:
+	Modify license of package to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: robinchiu (RobinChiu) Tue, 18 Nov 2014 14:27:16 CST
+
+Package: cpld_hw (2.1.0); urgency = high
+
+Abstract:
+	Fix cpld verify issue.
+
+Files Modified: data/lattice.c, data/lattice.h, spx/INFO
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Mon, 03 Nov 2014 17:16:44 CST
+
+Package: cpld_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:21:33 GMT
+
+Package: cpld_hw (1.11.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:28:01 HMT
+
+Package: cpld_hw (1.10.0); urgency = medium
+
+Abstract:
+	ESSENTIAL field correction
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Wed, 15 Oct 2014 23:30:19 GMT
+
+Package: cpld_hw (1.9.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:05:45 GMT
+
+Package: cpld_hw (1.8.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:14:13 GMT
+
+Package: cpld_hw (1.7.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:08:06 EDT
+
+Package: cpld_hw (1.6.0); urgency = medium
+
+Abstract:
+	Modify erase operation of LCMXO based on reference code
+
+Files Modified: data/lattice.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 10 Apr 2014 16:07:16 CST
+
+Package: cpld_hw (1.5.0); urgency = medium
+
+Abstract:
+	Modify Build-Depends, jtag_hw_dev
+
+Files Modified: spx/INFO
+
+--Submitter: robinchiu (RobinChiu) Mon, 07 Apr 2014 16:13:06 CST
+
+Package: cpld_hw (1.4.0); urgency = medium
+
+Abstract:
+	Modify a common feature name of CPLD in core_features
+
+Files Modified: spx/PACKAGES.D/cpld_hw/SCRIPTS/dev-install
+
+--Submitter: robinchiu (RobinChiu) Wed, 19 Mar 2014 14:32:22 CST
+
+Package: cpld_hw (1.3.0); urgency = medium
+
+Abstract:
+	Add CPLD support features in core_features
+
+Files Modified: spx/PACKAGES.D/cpld_hw/SCRIPTS/dev-install
+
+--Submitter: robinchiu (RobinChiu) Fri, 14 Mar 2014 17:19:55 CST
+
+Package: cpld_hw (1.2.0); urgency = medium
+
+Abstract:
+	Refine CPLD programming flow
+
+Files Modified: data/jed.c, data/lattice.c, data/lattice.h
+
+--Submitter: robinchiu (RobinChiu) Thu, 27 Feb 2014 16:59:15 CST
+
+Package: cpld_hw (1.1.0); urgency = medium
+
+Abstract:
+	Change Package name  crosscc to  Provider name Crosscc  to support multiple compilers
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 26 Feb 2014 12:34:05 EST
+
+Package: cpld_hw (1.0.0); urgency = new
+
+Abstract:
+	This package contains cpld device related sources.
+
+Files Added: data, data/Makefile, data/cpld.c, data/jed.c, data/lattice.c, data/lattice.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/cpld_hw, spx/PACKAGES.D/cpld_hw/DATA, spx/PACKAGES.D/cpld_hw/SCRIPTS, spx/PACKAGES.D/cpld_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: robinchiu (RobinChiu) Mon, 30 Dec 2013 16:52:54 CST
+

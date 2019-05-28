@@ -1,0 +1,499 @@
+Package: videocap (2.7.0); urgency = medium
+
+Abstract:
+	Modify ECLK to (M-PLL / 2) for AST2500.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Tue, 26 May 2015 11:47:37 CST
+
+Package: videocap (2.6.0); urgency = medium
+
+Abstract:
+	Defined IOCTLs properly.
+
+Files Modified: data/ast_videocap_ioctl.h
+
+--Submitter: shravan (shravans@amiindia.co.in) Wed, 13 May 2015 13:04:56 HMT
+
+Package: videocap (2.5.0); urgency = medium
+
+Abstract:
+	KVM can not wake up host OS when host OS is RHEL 7
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 02 Apr 2015 11:47:29 AWST
+
+Package: videocap (2.4.0); urgency = low
+
+Abstract:
+	Support AST2530evb
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 04 Feb 2015 23:56:08 JWST
+
+Package: videocap (2.3.0); urgency = medium
+
+Abstract:
+	SCAL Fix for the fortify related issues
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_ioctl.c, data/ast_videocap_mmap.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 17 Dec 2014 15:34:38 IST
+
+Package: videocap (2.2.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/ast_videocap_data.h, data/ast_videocap_engine.c, data/ast_videocap_functions.h, data/ast_videocap_hw.h, data/ast_videocap_ioctl.c, data/ast_videocap_ioctl.h, data/ast_videocap_mmap.c, data/ast_videocap_module.c, data/ast_videocap_proc.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:40:21 HMT
+
+Package: videocap (2.1.0); urgency = medium
+
+Abstract:
+	Add AST2500 support.
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_hw.h, data/ast_videocap_ioctl.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Fri, 14 Nov 2014 16:06:01 CST
+
+Package: videocap (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 07:16:42 GMT
+
+Package: videocap (1.36.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:58:09 HMT
+
+Package: videocap (1.35.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:44:35 GMT
+
+Package: videocap (1.34.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:57:01 GMT
+
+Package: videocap (1.33.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_mmap.c, data/ast_videocap_proc.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:07:16 GMT
+
+Package: videocap (1.32.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_mmap.c, data/ast_videocap_proc.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:44:53 GMT
+
+Package: videocap (1.31.0); urgency = medium
+
+Abstract:
+	Fix for build error
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Wed, 16 Jul 2014 17:00:48 HMT
+
+Package: videocap (1.30.0); urgency = medium
+
+Abstract:
+	Fix for build error
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_functions.h, data/ast_videocap_module.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Tue, 15 Jul 2014 12:49:02 HMT
+
+Package: videocap (1.29.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_functions.h, data/ast_videocap_ioctl.c, data/ast_videocap_module.c, data/ast_videocap_proc.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:31:29 HMT
+
+Package: videocap (1.28.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/INFO, spx/PACKAGES.D/videocap/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 21:08:18 HMT
+
+Package: videocap (1.27.0); urgency = high
+
+Abstract:
+	Check SCU94[1:0] to control the video output on/off by SCU2C[3] in VGA mode or SCU8C[0] in DVO mode.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Wed, 22 Jan 2014 23:18:09 CST
+
+Package: videocap (1.26.0); urgency = medium
+
+Abstract:
+	Compiler errors and depenency errors fixed
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 12 Nov 2013 17:12:34 EST
+
+Package: videocap (1.25.0); urgency = medium
+
+Abstract:
+	Added provides field to properly select packages
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 07 Nov 2013 16:55:06 EST
+
+Package: videocap (1.24.0); urgency = medium
+
+Abstract:
+	Add auto mode support and use it in default to fix ast2400 video shaking issue in certain resolution.
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_hw.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 18 Oct 2013 15:24:31 CST
+
+Package: videocap (1.23.0); urgency = medium
+
+Abstract:
+	Added Config-Tag to fix the dependency.
+
+Files Modified: spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 07 Oct 2013 15:52:57 CST
+
+Package: videocap (1.22.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:56:32 EDT
+
+Package: videocap (1.21.0); urgency = low
+
+Abstract:
+	Updated to use Provides instead of binary name
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Oct 2013 13:08:49 EDT
+
+Package: videocap (1.20.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:53:22 EDT
+
+Package: videocap (1.19.0); urgency = medium
+
+Abstract:
+	When using 2150 and screen resolution is 1280*1024, the KVM screen will error
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 17 May 2013 15:52:53 CST
+
+Package: videocap (1.18.0); urgency = low
+
+Abstract:
+	For projects that doesn't require KVM, it doesn't allow disabling video driver. Essential set to "NO" to overcome this.
+
+Files Modified: spx/INFO
+
+--Submitter: Yugender P Subramanian (yugenderps@ami.com) Tue, 12 Feb 2013 17:00:29 EST
+
+Package: videocap (1.17.0); urgency = high
+
+Abstract:
+	- Supported for AST2400 SoC.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Mon, 29 Oct 2012 15:56:29 CST
+
+Package: videocap (1.16.0); urgency = medium
+
+Abstract:
+	If the host screen is BLANK, ex: turn on BMC, turn on JViewer, and finally turn on host OS
+it will make video engine config value as 0
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 24 May 2012 15:05:32 CST
+
+Package: videocap (1.15.0); urgency = high
+
+Abstract:
+	Fixed the total memory size and VGA memory size.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 15 Feb 2012 11:35:29 CST
+
+Package: videocap (1.14.0); urgency = medium
+
+Abstract:
+	Adjust hw reset initial sequence.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: thinkjao (thinkjao@ami.com.tw) Fri, 09 Dec 2011 19:33:10 CST
+
+Package: videocap (1.13.0); urgency = medium
+
+Abstract:
+	For EIP.64376, Host should remain locked when Host OS is rebooted.
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_functions.h, data/ast_videocap_ioctl.c, data/ast_videocap_ioctl.h
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Fri, 22 Jul 2011 20:29:55 CST
+
+Package: videocap (1.12.0); urgency = medium
+
+Abstract:
+	For eip 61080,
+Fixed KVM with Windows 2008 host different resolutions Fail.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Sun, 26 Jun 2011 15:12:19 CST
+
+Package: videocap (1.11.0); urgency = high
+
+Abstract:
+	Modifying SourceLicense, PackageLicense & Module_License to GPL-v2 from AMI
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/ast_videocap_module.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 15:42:12 EDT
+
+Package: videocap (1.10.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:58:20 EDT
+
+Package: videocap (1.9.0); urgency = medium
+
+Abstract:
+	Change dependency for configuration.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 17 Jan 2011 14:04:46 CST
+
+Package: videocap (1.8.0); urgency = medium
+
+Abstract:
+	Eliminate memcpy.
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_hw.h, data/ast_videocap_mmap.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 06 Jan 2011 14:42:29 CST
+
+Package: videocap (1.7.0); urgency = medium
+
+Abstract:
+	Remove useless header file.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 05 Jan 2011 17:47:09 CST
+
+Package: videocap (1.6.0); urgency = medium
+
+Abstract:
+	Support high resolution.
+
+Files Deleted: data/InternalMode.h, data/adc.h, data/vesa.h
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_hw.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 05 Jan 2011 16:28:18 CST
+
+Package: videocap (1.5.0); urgency = medium
+
+Abstract:
+	Support wide screen resolution.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 03 Jan 2011 17:43:02 CST
+
+Package: videocap (1.4.0); urgency = medium
+
+Abstract:
+	Support pass 2 feature for AST2300.
+
+Files Modified: data/ast_videocap_data.h, data/ast_videocap_engine.c, data/ast_videocap_hw.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 28 Dec 2010 10:54:11 CST
+
+Package: videocap (1.3.0); urgency = low
+
+Abstract:
+	Copied driver to generic location instead of kernel specific location
+
+Files Modified: spx/PACKAGES.D/videocap/SCRIPTS/dev-install
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Thu, 23 Dec 2010 22:51:18 CST
+
+Package: videocap (1.2.0); urgency = medium
+
+Abstract:
+	Add host video output on/off function.
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_hw.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 13 Dec 2010 15:52:22 CST
+
+Package: videocap (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:54:19 EDT
+
+Package: videocap (1.0.10); urgency = high
+
+Abstract:
+	Definitions of registers of DRAM controller are different between AST2050/AST2150 and AST2300.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 05 Jul 2010 14:09:51 CST
+
+Package: videocap (1.0.9); urgency = low
+
+Abstract:
+	Disable debug message.
+
+Files Modified: data/ast_videocap_engine.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 09 Jun 2010 17:54:57 CST
+
+Package: videocap (1.0.8); urgency = medium
+
+Abstract:
+	Add hardware cursor support.
+
+Files Modified: data/ast_videocap_engine.c, data/ast_videocap_hw.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Wed, 09 Jun 2010 14:22:07 CST
+
+Package: videocap (1.0.7); urgency = low
+
+Abstract:
+	Export configration structure.
+
+Files Modified: spx/RULES
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 04 Jun 2010 11:15:48 CST
+
+Package: videocap (1.0.6); urgency = high
+
+Abstract:
+	development packages should also be kept under provides to avoid conflict
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 23 Apr 2010 15:04:54 EDT
+
+Package: videocap (1.0.5); urgency = medium
+
+Abstract:
+	AST2050 SOC renamed to AST to support Both AST2050 and AST2150.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Tue, 20 Apr 2010 10:47:14 CST
+
+Package: videocap (1.0.4); urgency = medium
+
+Abstract:
+	Reset engine before mode detection to internal status of engine.
+
+Files Modified: data/ast_videocap_engine.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 16 Apr 2010 16:07:00 CST
+
+Package: videocap (1.0.3); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:26:43 EDT
+
+Package: videocap (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 18:12:58 EDT
+
+Package: videocap (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:24:09 EST
+
+Package:videocap (1.0.0);urgency=new
+
+Abstract:
+	This package contains the video capture dirver for AST2050 SoC.
+
+Files Added: adc.h, ast_videocap_data.h, ast_videocap_engine.c, ast_videocap_functions.h, ast_videocap_hw.h, ast_videocap_ioctl.c, ast_videocap_ioctl.h, ast_videocap_mmap.c, ast_videocap_module.c, ast_videocap_proc.c, InternalMode.h, Makefile, vesa.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 28 Jan 2010 13:38:21 +0800
+

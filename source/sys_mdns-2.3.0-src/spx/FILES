@@ -1,0 +1,2 @@
+./defaults/etc/init.d/avahi-daemon 2900 652a0b39a12095c3d65bd563f2d7d74c
+./defaults/usr/lib/avahi/avahi-daemon-check-dns.sh 4158 591fe885099cb21530475ec0d0976022

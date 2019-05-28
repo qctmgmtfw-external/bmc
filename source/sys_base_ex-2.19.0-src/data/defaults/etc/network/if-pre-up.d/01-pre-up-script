@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "Interface $IFACE is going to go up"
+echo 0 > /proc/sys/net/ipv6/conf/default/accept_ra  # Quanta
+echo 0 > /proc/sys/net/ipv6/conf/default/autoconf   # Quanta
+exit 0

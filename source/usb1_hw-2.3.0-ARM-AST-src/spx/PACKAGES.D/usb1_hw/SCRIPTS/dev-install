@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+	ADD_MODULES_ONLY usb1_hw
+ 	ADD_UNLOAD_MODULE usb1_hw 8
+
+debug-install:

@@ -1,0 +1,13 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./ncml.conf.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/conf/ncml.conf
+	COPY_FILE ./ncml.conf.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/etc/defconfig/ncml.conf
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH0" == "YES" ] || [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH1" == "YES" ] || [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_BOTH" == "YES" ]; then cp ./ncml_bond.conf %IMAGE_TREE/conf/ncml.conf; fi
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH0" == "YES" ] || [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH1" == "YES" ] || [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_BOTH" == "YES" ]; then cp ./ncml_bond.conf %IMAGE_TREE/etc/defconfig/ncml.conf; fi
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_SSICOMPUTEBLADE_SUPPORT" == "YES" ]; then cp ./ncml_ssi.conf.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/conf/ncml.conf; fi
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_SSICOMPUTEBLADE_SUPPORT" == "YES" ]; then cp ./ncml_ssi.conf.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/etc/defconfig/ncml.conf; fi
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_SSICOMPUTEBLADE_SUPPORT" == "YES" ] && [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH0" == "YES" -o "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH1" == "YES" -o "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_BOTH" == "YES" ]; then cp ./ncml_ssi_bond.conf %IMAGE_TREE/conf/ncml.conf; fi
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_SSICOMPUTEBLADE_SUPPORT" == "YES" ] && [ "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH0" == "YES" -o "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_ETH1" == "YES" -o "%CONFIG_SPX_FEATURE_ACTIVE_SLAVE_BOTH" == "YES" ]; then cp ./ncml_ssi_bond.conf %IMAGE_TREE/etc/defconfig/ncml.conf; fi
+	
+debug-install:

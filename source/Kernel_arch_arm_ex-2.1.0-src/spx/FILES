@@ -1,0 +1,7 @@
+./01-arch_arm_boot_compressed_head.S 491 39f8f0797826586e069a8817e8e01c3c
+./02-arch_arm_include_asm_serial.h 309 0e712eed98eb6af60aecf28ab69bd724
+./03-arch_arm_include_uapi_asm_setup.h 722 5b9a7407b1a269a37d6c96b7838bf109
+./04-arch_arm_kernel_atags_parse.c 934 d13c909ac437060eca677fcd025abd92
+./05-arch_arm_mm_alignment.c 390 32c50e42262cfbcd59c2624864e9f777
+./06-Makefile 607 9b743e83a319f695d8646d090cce243a
+./07-arch_arm_glue_cache.h 461 c0c228f2902e9abc09849fa47a047817

@@ -1,0 +1,488 @@
+Package: helper (2.8.0); urgency = high
+
+Abstract:
+	Rectifying fortify fixes
+
+Files Modified: data/fmhcore.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 17 Feb 2015 14:16:01 IST
+
+Package: helper (2.7.0); urgency = high
+
+Abstract:
+	Add support for mailbox
+
+Files Modified: data/driver_hal.h
+
+--Submitter: robinchiu (RobinChiu) Fri, 09 Jan 2015 13:51:24 CST
+
+Package: helper (2.6.0); urgency = high
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/Makefile, data/fwinfo.c, spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Thu, 08 Jan 2015 14:05:23 IST
+
+Package: helper (2.5.0); urgency = high
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 07 Jan 2015 15:01:18 IST
+
+Package: helper (2.4.0); urgency = high
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Added: spx/PACKAGES.D/helper/P.CONFIG
+Files Modified: data/Makefile, data/fwinfo.c, spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Mon, 05 Jan 2015 15:46:13 IST
+
+Package: helper (2.3.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/driver_hal.c, data/driver_hal.h, data/fmhcore.c, data/fwinfo.c, data/helper.h, data/helpmain.c, data/proc_sysctl.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:27:07 HMT
+
+Package: helper (2.2.0); urgency = high
+
+Abstract:
+	X-86 support related changes
+
+Files Added: spx/P.CONFIG
+Files Modified: data/fwinfo.c, spx/PACKAGES.D/helper/SCRIPTS/dev-install
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Thu, 27 Nov 2014 12:56:58 HMT
+
+Package: helper (2.1.0); urgency = medium
+
+Abstract:
+	Add SSP type to helper driver.
+
+Files Modified: data/driver_hal.h, spx/INFO
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 19 Nov 2014 17:20:09 CST
+
+Package: helper (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:48:24 GMT
+
+Package: helper (1.35.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:30:35 HMT
+
+Package: helper (1.34.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:33:19 GMT
+
+Package: helper (1.33.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:41:45 GMT
+
+Package: helper (1.32.0); urgency = medium
+
+Abstract:
+	Unable to retrieve the image1 and image2 Fwinfo in case of kernel version 3.14.17.
+
+Files Modified: data/fwinfo.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Wed, 10 Sep 2014 11:48:48 HMT
+
+Package: helper (1.31.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/driver_hal.c, data/fwinfo.c, data/helper.h, data/helpmain.c, data/proc_sysctl.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:03:28 GMT
+
+Package: helper (1.30.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/fwinfo.c, data/helper.h, data/helpmain.c, data/proc_sysctl.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:37:04 GMT
+
+Package: helper (1.29.0); urgency = medium
+
+Abstract:
+	Fixes in helper driver to be compatible to Kernel 2.6.10 and 3.x
+
+Files Modified: data/driver_hal.c, data/proc_sysctl.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 25 Jul 2014 09:54:40 GMT
+
+Package: helper (1.28.0); urgency = medium
+
+Abstract:
+	update for mctp over pcie
+
+Files Modified: data/driver_hal.h
+
+--Submitter: pearcelee (pearcelee) Fri, 11 Jul 2014 11:15:57 CST
+
+Package: helper (1.27.0); urgency = medium
+
+Abstract:
+	Fixed FMH offset calculation under wheezy target
+
+Files Modified: data/fmhcore.c, data/fwinfo.c
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Wed, 25 Jun 2014 21:06:26 HMT
+
+Package: helper (1.26.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/helper/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:59:13 GMT
+
+Package: helper (1.25.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/helper/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:38:37 HMT
+
+Package: helper (1.24.0); urgency = medium
+
+Abstract:
+	Corrected version number from Aux to Minor
+
+
+--Submitter: robinchiu (RobinChiu) Fri, 20 Dec 2013 12:36:18 CST
+
+Package: helper (1.23.1); urgency = medium
+
+Abstract:
+	Added JTAG macro
+
+Files Modified: data/driver_hal.h
+
+--Submitter: robinchiu (RobinChiu) Fri, 20 Dec 2013 11:31:51 CST
+
+Package: helper (1.23.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:31:49 EDT
+
+Package: helper (1.22.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:21:56 EDT
+
+Package: helper (1.21.0); urgency = low
+
+Abstract:
+	Added ACPI macro
+
+Files Modified: data/driver_hal.h
+
+--Submitter: Balaji Nagalingam Rajendiran (balajinr@ami.com) Tue, 06 Aug 2013 15:25:43 EDT
+
+Package: helper (1.20.0); urgency = medium
+
+Abstract:
+	Removed static declaration to get used by other libs
+
+Files Modified: data/fmhcore.c
+
+--Submitter: pravinash (pravinashj@amiindia.co.in) Mon, 29 Jul 2013 01:14:28 HMT
+
+Package: helper (1.19.0); urgency = low
+
+Abstract:
+	Updating helper module to support 3.4.36 kernel
+
+Files Modified: data/driver_hal.c, data/fwinfo.c, data/helpmain.c
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Fri, 07 Jun 2013 20:23:54 HMT
+
+Package: helper (1.18.0); urgency = medium
+
+Abstract:
+	Used irq save spin_lock and irq restore spin lock for interrupt handler.
+
+Files Modified: data/driver_hal.c, data/fwinfo.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 06 Mar 2013 19:05:20 HMT
+
+Package: helper (1.17.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/fmhcore.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 13:31:12 EDT
+
+Package: helper (1.16.0); urgency = low
+
+Abstract:
+	Changes done in dual image feature according to mtd concatenation.
+
+Files Modified: data/fwinfo.c
+
+--Submitter: NagaRamakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 30 Jan 2012 08:03:22 EST
+
+Package: helper (1.15.0); urgency = low
+
+Abstract:
+	read functions of Fwinfo1 and Fwinfo2 files changed,filling dummy values if any fw image is empty or corrupted.
+
+Files Modified: data/fwinfo.c
+
+--Submitter: NagaRamakrishna.K (nagaramakrishnak@amiindia.co.in) Mon, 12 Dec 2011 09:51:31 EST
+
+Package: helper (1.14.0); urgency = low
+
+Abstract:
+	Providing all images fw info in Dual Image case.
+
+Files Modified: data/fwinfo.c, data/helpmain.c
+
+--Submitter: NagaRamakrishna.K (nagaramakrishnak@amiindia.co.in) Wed, 07 Dec 2011 08:17:18 EST
+
+Package: helper (1.13.0); urgency = medium
+
+Abstract:
+	Added support for 3.X Kernels
+
+Files Modified: data/driver_hal.c, data/fwinfo.c, data/helpmain.c, data/proc_sysctl.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 02 Dec 2011 15:40:46 EST
+
+Package: helper (1.12.0); urgency = low
+
+Abstract:
+	Helper changes to update the firmware info properly in Single SPI DualImage case.
+
+Files Modified: data/fwinfo.c
+
+--Submitter: NagaRamakrishna.K (nagaramakrishnak@amiindia.co.in) Fri, 25 Nov 2011 08:53:29 EST
+
+Package: helper (1.11.0); urgency = low
+
+Abstract:
+	Updating the firmware info properly according to running image in Dual Image case
+
+Files Modified: data/fwinfo.c
+
+--Submitter: Naga Ramakrishna K (nagaramakrishnak@amiindia.co.in) Tue, 20 Sep 2011 22:01:21 TLT
+
+Package: helper (1.10.0); urgency = medium
+
+Abstract:
+	added EDEV_TYPE_BT device type for BT support
+
+Files Modified: data/driver_hal.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 05 Jul 2011 12:38:13 EDT
+
+Package: helper (1.9.0); urgency = high
+
+Abstract:
+	Updating SourceLicense, PackageLicense and BinaryLicense to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 16:29:57 EDT
+
+Package: helper (1.8.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:19:42 EDT
+
+Package: helper (1.7.0); urgency = low
+
+Abstract:
+	Add EDEV_TYPE_CIPHER device type for cipher driver
+
+Files Modified: data/driver_hal.h
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Sat, 29 Jan 2011 20:59:28 CST
+
+Package: helper (1.6.0); urgency = medium
+
+Abstract:
+	Made changes to return Jiffy values in Jiffies and not in Milli seconds.
+
+Files Modified: data/helpmain.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 27 Jan 2011 17:11:08 IST
+
+Package: helper (1.5.0); urgency = medium
+
+Abstract:
+	Added support in helper driver to get jiffies value in /proc/sys/ractrends/Helper/Jiffies.
+
+Files Modified: data/helpmain.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Thu, 16 Dec 2010 21:18:11 EST
+
+Package: helper (1.4.0); urgency = medium
+
+Abstract:
+	Add new type host SPI flash.
+
+Files Modified: data/driver_hal.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 28 Oct 2010 11:47:03 CST
+
+Package: helper (1.3.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/helper/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:48:14 EDT
+
+Package: helper (1.2.0); urgency = medium
+
+Abstract:
+	Added open count for each individual minor node open/close functions. Using this count, minor number specific initialization and cleanup can be done on the first open and last close there by avoiding undue initialization and cleanup.
+
+Files Modified: data/driver_hal.c, data/driver_hal.h
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 24 Sep 2010 20:35:46 IST
+
+Package: helper (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:46:22 EDT
+
+Package: helper (1.0.8); urgency = medium
+
+Abstract:
+	Added hardcoded fwinfo values when get_mtd_device returns error and also fails in defining the macro. This is a temporary fix for x86 and will be removed once the information is fetched from .MAP file.
+
+Files Modified: data/fwinfo.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 13 Aug 2010 00:10:43 IST
+
+Package: helper (1.0.7); urgency = medium
+
+Abstract:
+	Modified the helper package to get the firmware information only when get_mtd_device is succeeded, if it fails then the Macro specified in projdef.h will be
+used for its purpose. Kernel require mtd support for helper package to work.
+
+Files Modified: data/fwinfo.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 10 Aug 2010 22:02:26 IST
+
+Package: helper (1.0.6); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:26:25 EDT
+
+Package: helper (1.0.5); urgency = low
+
+Abstract:
+	Add watchdog device type.
+
+Files Modified: data/driver_hal.h
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 14 May 2010 17:58:34 CST
+
+Package: helper (1.0.4); urgency = critical
+
+Abstract:
+	Interrupt calls into helper driver were sleeping in mutex lock. Changed the locks to a combination of mutex and spinlocks to avoid sleeping within interrupt handler and to allow sleeping during other function calls. With these locks the list access is secured.
+
+Files Modified: data/driver_hal.c
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 23 Apr 2010 20:31:17 EDT
+
+Package: helper (1.0.3); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:43:30 EDT
+
+Package: helper (1.0.2); urgency = low
+
+Abstract:
+	Add dependency to platform package to make sure that platform module is the first module inserted.
+
+Files Modified: spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Thu, 01 Apr 2010 09:38:01 CST
+
+Package: helper (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:58:06 EST
+
+Package:helper (1.0.0);urgency=new
+
+Abstract:
+	This pacakges includes the helper driver module, required by all the other device drivers.
+
+Files Added: driver_hal.c, driver_hal.h, fwinfo.c, Makefile, helpmain.c, proc_sysctl.c, helper.h, fmhcore.c
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Tue, 8 Dec 2009 12:01:19 -0500

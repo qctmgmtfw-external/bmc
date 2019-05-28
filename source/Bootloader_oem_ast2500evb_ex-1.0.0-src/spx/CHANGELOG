@@ -1,0 +1,9 @@
+Package: Bootloader_oem_ast2500evb_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2500EVB OEM Patches to Bootloader
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_oem_ast2500evb_ex, spx/PACKAGES.D/Bootloader_oem_ast2500evb_ex/DATA, spx/PACKAGES.D/Bootloader_oem_ast2500evb_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_oem_ast2500evb_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 30 Apr 2015 18:53:00 CST
+

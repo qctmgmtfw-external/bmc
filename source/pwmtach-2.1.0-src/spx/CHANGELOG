@@ -1,0 +1,276 @@
+Package: pwmtach (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/fan_structs.h, data/pwmtach.h, data/pwmtach_ioctl.h, data/pwmtachmain.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:31:50 HMT
+
+Package: pwmtach (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:13:29 GMT
+
+Package: pwmtach (1.22.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:50:19 HMT
+
+Package: pwmtach (1.21.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:42:08 GMT
+
+Package: pwmtach (1.20.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:54:18 GMT
+
+Package: pwmtach (1.19.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/pwmtachmain.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:05:42 EDT
+
+Package: pwmtach (1.18.0); urgency = medium
+
+Abstract:
+	Fixed build error
+
+Files Modified: data/pwmtachmain.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Wed, 23 Jul 2014 16:30:00 HMT
+
+Package: pwmtach (1.17.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/pwmtach/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:02:56 GMT
+
+Package: pwmtach (1.16.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/pwmtach/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 21:01:29 HMT
+
+Package: pwmtach (1.15.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:44:24 EDT
+
+Package: pwmtach (1.14.0); urgency = low
+
+Abstract:
+	Modified driver to support Kernel 3.4.11.
+
+Files Modified: data/pwmtachmain.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Sun, 15 Sep 2013 02:31:33 HMT
+
+Package: pwmtach (1.13.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:55:51 EDT
+
+Package: pwmtach (1.12.0); urgency = medium
+
+Abstract:
+	Remove Kernel debug messages.
+
+Files Modified: data/pwmtachmain.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 29 Feb 2012 22:08:54 IST
+
+Package: pwmtach (1.11.0); urgency = medium
+
+Abstract:
+	Avoid spinning 2.5 seconds within kernel waiting for timeout.
+
+Files Modified: data/pwmtachmain.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Fri, 23 Dec 2011 15:56:41 IST
+
+Package: pwmtach (1.10.0); urgency = medium
+
+Abstract:
+	pwmtach changes-adding ioctl commands for clearing tach/pwm errors,setting duty cycle as value
+
+Files Modified: data/pwmtach.h, data/pwmtach_ioctl.h, data/pwmtachmain.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Mon, 19 Dec 2011 10:23:15 IST
+
+Package: pwmtach (1.9.0); urgency = medium
+
+Abstract:
+	The system hang periodically for a while when read the tach with error.
+Remove the busy wait function.
+
+Files Modified: data/pwmtachmain.c
+
+--Submitter:  () Fri, 18 Nov 2011 16:58:17 CST
+
+Package: pwmtach (1.8.0); urgency = medium
+
+Abstract:
+	Added Get status IOCTL for tach and pwm, Added 4 generic IOCTL command to set appropriate properties of PWM and TACH.
+
+Files Modified: data/pwmtach.h, data/pwmtach_ioctl.h, data/pwmtachmain.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Mon, 05 Sep 2011 15:20:41 IST
+
+Package: pwmtach (1.7.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/pwmtachmain.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 17:31:20 IST
+
+Package: pwmtach (1.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:30:07 EDT
+
+Package: pwmtach (1.5.0); urgency = low
+
+Abstract:
+	Platform header file is not needed for core drivers. This causes
+compilation errors in some architectures
+
+Files Modified: data/pwmtachmain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 07 Nov 2010 21:26:25 EST
+
+Package: pwmtach (1.4.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/pwmtach/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:50:37 EDT
+
+Package: pwmtach (1.3.0); urgency = low
+
+Abstract:
+	Added get_pwm_dutycycle function.  Also changed set_duty_cycle to allow values from 1 - 100 for better precision (0x01 - 0xff); pwm max is (0x00)
+
+Files Modified: data/pwmtach.h, data/pwmtach_ioctl.h, data/pwmtachmain.c, spx/INFO
+
+--Submitter: David Wise (davidw@ami.com) Wed, 27 Oct 2010 12:18:58 EDT
+
+Package: pwmtach (1.2.0); urgency = medium
+
+Abstract:
+	Changes in PWMTach driver to comply with the changes to track open count done in helper driver
+
+Files Modified: data/pwmtachmain.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 27 Sep 2010 18:12:54 EDT
+
+Package: pwmtach (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:11:51 EDT
+
+Package: pwmtach (1.0.5); urgency = medium
+
+Abstract:
+	Description:
+   pwmtach common driver / libpwmtach enhancement
+
+Add ioctl to set/read pwm/tach by channel basis , as well as set pwm through dutycycle instead of RPM.
+Libpwmtach has APIs which an be called by application.
+
+Files Modified: data/pwmtach_ioctl.h, data/pwmtachmain.c
+
+--Submitter: joywu (joywu) Wed, 08 Sep 2010 14:26:13 CST
+
+Package: pwmtach (1.0.4); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:14:57 EDT
+
+Package: pwmtach (1.0.3); urgency = low
+
+Abstract:
+	Changes to support return of RAW value from tachometer registers.
+
+Files Modified: data/pwmtachmain.c, spx/INFO
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Tue, 06 Apr 2010 17:37:06 EDT
+
+Package: pwmtach (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 18:01:20 EDT
+
+Package: pwmtach (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:13:43 EST
+
+Package:pwmtach (1.0.0);urgency=new
+
+Abstract:
+	This package provides the common (hardware independent) PWMTACH driver module.
+
+Files Added: pwmtach_ioctl.h, pwmtachmain.c, pwmtach.h, Makefile, fan_structs.h
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Tue, 8 Dec 2009 12:02:41 -0500

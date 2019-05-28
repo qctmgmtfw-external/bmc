@@ -1,0 +1,22 @@
+Source                   	:	openheaders_dev
+Version : 2.0.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Winston  (winstont@ami.com)
+License                  	:	OPENSOURCE
+Source-Location          	:	UNKNOWN
+Source-Version           	:	1.0.0
+Builds                   	:	openheaders_dev
+Architecture             	:	ALL
+Urgency : high
+Description              	:	The package contains all the open source header files.
+.
+
+Package                  	:	openheaders_dev
+Section                  	:	dev
+Group                    	:	DEVEL
+Essential                	:	NO
+Description              	:	This package contains open source header files
+.
+

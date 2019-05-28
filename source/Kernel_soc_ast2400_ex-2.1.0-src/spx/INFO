@@ -1,0 +1,23 @@
+Source                   	:	Kernel_soc_ast2400_ex
+Version : 2.1.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	Kernel_soc_ast2400_ex
+Build-Depends            	:	Kernel_basesoc_ast_ex
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	AST2400 SOC Fixes to Kernel 3.4.74
+.
+
+Package                  	:	Kernel_soc_ast2400_ex
+Section                  	:	info
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	AST2400 SOC Fixes to Kernel 3.4.74
+.
+

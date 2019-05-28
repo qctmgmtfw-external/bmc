@@ -1,0 +1,82 @@
+--- uboot/board/ast2400evb/ast2400evb.c	2016-01-21 16:58:56.061384000 +0800
++++ uboot.new/board/ast2400evb/ast2400evb.c	2016-01-21 19:03:56.044757961 +0800
+@@ -177,6 +177,55 @@
+ 	return 0;
+ }
+ #ifdef CONFIG_BOARDID_IN_EEPROM
++// Quanta ------ 
++#define CFG_I2C_CHANNEL_ID	CONFIG_SPX_FEATURE_GLOBAL_UBOOT_ENABLE_I2C_BUS /* channel number in PRJ */
++#define AST_I2C_CHANNEL_BASE ((CFG_I2C_CHANNEL_ID < 7)? 0x1E78A040 + (0x040 * (CFG_I2C_CHANNEL_ID)) : 0x1E78A300 + (0x040 * (CFG_I2C_CHANNEL_ID - 7)))
++#define I2C_FCR		(AST_I2C_CHANNEL_BASE + 0x00) /* function control register */
++#define I2C_CSR		(AST_I2C_CHANNEL_BASE + 0x14) /* command/status register */
++void i2c_recovery_fru(void)
++{
++	int i;
++   printf("\ni2c_recovery\n");	
++	*((volatile unsigned long *) I2C_FCR) = 0;  //disable bus
++	
++	for (i=0;i<8;i++)  //clear status
++	{
++		//clock low
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)&~(1<<12);
++		udelay(5);
++		//clock high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<12);
++		udelay(5);
++		
++		if((*((volatile unsigned long *) I2C_CSR)&(1<<17))!=0)
++			break;
++	}
++	
++	if(((*((volatile unsigned long *) I2C_CSR)&(1<<17))==0)||((*((volatile unsigned long *) I2C_CSR)&(1<<18))==0))
++	{
++		//force stop
++		//data low
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<15);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)&~(1<<14);
++		//clock high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<12);
++		//data high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<15);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<14);
++		udelay(5);
++	}
++	
++	//clock/data stop
++	*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR) &~((1<<15)|(1<<13));
++	
++	*((volatile unsigned long *) I2C_FCR) = 3;  //enable bus
++	
++}
++// ------ Quanta
++
+ void boardid_init (void)
+ {
+ 	int    i, offs, retry, ret = 0;
+@@ -192,6 +241,7 @@
+ 		while (++retry <= 6) {
+ 			if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, CFG_EEPROM_FRU_OFFSET, fru_buf, 8)) == 0)
+ 				break;
++			i2c_recovery_fru();
+ 		}
+ 		if (ret != 0)
+ 			break;
+@@ -212,6 +262,7 @@
+ 		while (++retry <= 6) {
+ 			if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, CFG_EEPROM_FRU_OFFSET+offs, fru_buf, 8)) == 0)
+ 				break;
++			i2c_recovery_fru();
+ 		}
+ 		if (ret != 0)
+ 			break;
+@@ -225,6 +276,7 @@
+ 			while (++retry <= 6) {
+ 				if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, offs+i*8, fru_buf+i*8, 8)) == 0)
+ 					break;
++				i2c_recovery_fru();
+ 			}
+ 			if (ret != 0)
+ 				break;

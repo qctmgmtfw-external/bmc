@@ -1,0 +1,11 @@
+--- linux/drivers/net/ethernet/aspeed/ast_ether.h		2015-07-03 10:46:51.744697723 +0800
++++ linux-amiext/drivers/net/ethernet/aspeed/ast_ether.h	2015-07-03 10:48:04.504698504 +0800
+@@ -3,7 +3,7 @@
+ 
+ // Quanta start
+ #define CONFIG_QUANTA_BROADCAST_STORM
+-//#define CONFIG_QUANTA_BROADCAST_STORM_AMA_ONLY
++#define CONFIG_QUANTA_BROADCAST_STORM_AMA_ONLY
+ // Quanta end
+ 
+ #ifdef CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT

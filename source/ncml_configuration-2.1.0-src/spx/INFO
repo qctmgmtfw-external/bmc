@@ -1,0 +1,24 @@
+Source                   	:	ncml_configuration
+Version : 2.1.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Veera Jothi R  (veerajothir@amiindia.co.in)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	ncml_configuration
+Build-Depends            	:	BaseSystem
+Customization-Type       	:	CONFIG
+Architecture             	:	ANY
+Urgency : low
+Description              	:	This package contains the default configuration file of ncml package.
+.
+
+Package                  	:	ncml_configuration
+Section                  	:	app
+Group                    	:	DEVEL
+Essential                	:	NO
+Description              	:	This package contains the default configuration file of ncml package.
+.
+

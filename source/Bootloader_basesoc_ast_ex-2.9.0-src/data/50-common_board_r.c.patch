@@ -1,0 +1,274 @@
+--- uboot/common/board_r.c	2013-07-23 19:58:13.000000000 +0800
++++ uboot_rr9/common/board_r.c	2015-08-04 21:24:40.585116005 +0800
+@@ -69,6 +69,11 @@
+ #endif
+ #include <linux/compiler.h>
+ 
++#if defined(CONFIG_POWER_RESTORE_POLICY)
++#include "ast_hw.h"
++#include "QuantaFeature.h"
++#endif
++
+ DECLARE_GLOBAL_DATA_PTR;
+ 
+ ulong monitor_flash_len;
+@@ -700,6 +705,249 @@
+ }
+ #endif
+ 
++#if defined(CONFIG_POWER_RESTORE_POLICY)
++extern void eeprom_init  (void);
++extern void i2c_recovery(void);
++
++static int initr_pwr_policy(void)
++{
++
++    unsigned int power_restore_policy;
++    unsigned int scu3C_reg;
++    unsigned int gpio020_reg;
++    unsigned int ast_reg = 0;
++    /*unsigned int gpio000_reg, gpio020_reg;*/
++    unsigned int power_on = 0;	//0: power off, 1:power on
++	char *s;
++    int 	retry, ret = 0;
++    uchar  ac_lost_buf[LEN_AC_LOST], policy_status=0, policy_status_old;	//policy_status: [2:1] Policy action, [0] Policy execution failure
++
++    s = getenv ("power_restore_policy");
++    power_restore_policy = s ? (int)simple_strtol(s, NULL, 10) : CONFIG_POWER_RESTORE_POLICY;
++    printf ("[%s, %s] power_restore_policy %u\n", __FILE__, __FUNCTION__ , power_restore_policy);
++
++    {
++        unsigned offset;
++
++        eeprom_init();
++
++        //printf("read EEPROM\n");
++        offset = SYSCFG_EEPROM_OFFSET + SYS_CFG_OFFSET(SYS_CFG, ac_lost[0]);
++        retry = 0;
++        while (++retry <= 3) {
++            if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, offset, ac_lost_buf, LEN_AC_LOST)) == 0) {
++                printf("[%s, %s] ac lost %x\n", __FILE__, __FUNCTION__, ac_lost_buf[0]);
++                break;
++            }
++
++            i2c_recovery();
++        }
++        if (ret > 3) {
++            printf("!!!!! [%s, %s] read ac lost buf failed !!!!!\n", __FILE__, __FUNCTION__);
++        }
++
++    }
++
++    // Check if AC power lost makes BMC firmeare reset, instead of watchdog
++    scu3C_reg = *(unsigned int *)(AST_SCU_VA_BASE +0x3C);
++	
++    // apply the power restore policy only if it is AC-on and the system is not on.
++    //if (PDK_IsACPowerOn() == TRUE && PDK_GetPSGood() != TRUE)
++	// Set the direction of GPIO_E2 to input.
++
++    //set GPIO_E2 to input pin
++    ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x24);
++    ast_reg &= ~(1 << 2);
++    *(unsigned int *)(AST_GPIO_VA_BASE + 0x24) = ast_reg;
++
++    gpio020_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x20);	// S2VM power good is GPIO_E2
++
++
++    if ( !(gpio020_reg & 0x00000004) && !(scu3C_reg & 0x02) )
++    {
++        switch((power_restore_policy))
++        {
++        case PWR_ALWAYS_ON:
++            printf("Power Restore Policy is ALWAYS ON  \n");
++            power_on = 1;
++            policy_status |= (PWR_ALWAYS_ON<<1) & 0x6;	//[2:1] Policy action
++            break;
++        case PWR_RESTORED:
++            // turn on the payload if the previous power-on was S0.
++            if (ac_lost_buf[0] == AC_UN_HEALTH)
++            {
++                printf("Power Restore Policy is PREVIIOS with AC_UNHEALTH\n");
++                power_on = 1;
++                policy_status |= (PWR_RESTORED<<1) & 0x6;	//[2:1] Policy action
++            }
++            else
++            {
++                printf("Power Restore Policy is PREVIIOS with AC_HEALTH\n");
++            }
++            break;
++        case PWR_ALWAYS_OFF:
++            // it is from AC-On, the payload is already in off mode,
++            printf("Power Restore Policy is ALWAYS OFF  \n");
++            break;
++        default :
++            break;
++        }
++    }
++
++    if (0 < power_on) {
++        ast_reg = *(unsigned int *)(AST_SCU_VA_BASE +0x00);
++
++        // disable GPIOD pass-through mode
++        ast_reg = *(unsigned int *)(AST_SCU_VA_BASE +0x70);
++        ast_reg &= ~(1<<21); 
++        *(unsigned int *)(AST_SCU_VA_BASE +0x70) = ast_reg;
++
++        // Set GPIOD3 to output button
++        ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x04);
++        ast_reg |= (1 << 27);
++        *(unsigned int *)(AST_GPIO_VA_BASE + 0x04) = ast_reg;
++
++        /*// press FIRST power button*/
++        ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00);
++        ast_reg &= ~(1 << 27);	// GPIOD3 is power button to PCH
++        *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++        udelay(1000*1000);
++
++        ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00); 
++        ast_reg |= (1 << 27);	// GPIOD3 is power button to PCH
++        *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++        printf("press FIRST power button\n");
++
++        udelay(1000*1000);
++        ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x20);	// F06 power good is GPIO_E2
++        if ( !(ast_reg & 0x00000004) )
++        {
++            // press SECOND power button
++            ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00);
++            ast_reg &= ~(1 << 27);	// GPIOD3 is power button to PCH
++            *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++            udelay(1000*1000);
++
++            ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00); 
++            ast_reg |= (1 << 27);	// GPIOD3 is power button to PCH
++            *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++            printf("press SECOND power button\n");
++        }
++        else
++            goto go_out;
++
++        udelay(1000*1000);
++        ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x20);	// F06 power good is GPIO_E2
++        if ( !(ast_reg & 0x00000004) )
++        {
++            // press THIRD power button
++            ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00);
++            ast_reg &= ~(1 << 27);	// GPIOD3 is power button to PCH
++            *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++            udelay(1000*1000);
++
++            ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00); 
++            ast_reg |= (1 << 27);	// GPIOD3 is power button to PCH
++            *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++            printf("press THIRD power button\n");
++        }
++        else
++            goto go_out;
++
++        udelay(1000*1000);
++        ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x20);	// F06 power good is GPIO_E2
++        if ( !(ast_reg & 0x00000004) )
++        {
++            // press 6 second power button, according experience there may lock by PCH and this way can release it
++            ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00);
++            ast_reg &= ~(1 << 27);	// GPIOD3 is power button to PCH
++            *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++            udelay(6*1000*1000);
++
++            ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00); 
++            ast_reg |= (1 << 27);	// GPIOD3 is power button to PCH
++            *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++            printf("press 6 second power button\n");
++        }
++        else
++            goto go_out;
++
++        udelay(1000*1000);
++        ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x20);	// F06 power good is GPIO_E2
++        if ( !(ast_reg & 0x00000004) )
++        {
++            // press FOURTH power button
++            ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00);
++            ast_reg &= 0xF7FFFFFF;	// GPIOD3 is power button to PCH
++            *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++            udelay(1000*1000);
++
++            ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x00); 
++            ast_reg |= 0x08000000;	// GPIOD3 is power button to PCH
++            *(unsigned int *)(AST_GPIO_VA_BASE + 0x00) = ast_reg;
++
++            printf("press FOURTH power button\n");
++        }
++
++        udelay(1000*1000);
++        ast_reg = *(unsigned int *)(AST_GPIO_VA_BASE + 0x20);	// F06 power good is GPIO_E2
++        if ( !(ast_reg & 0x00000004) )
++        {
++            //Set policy execution failure flag, policy_status[0] should be 1 here
++            policy_status |= 1;	//[0] Policy execution failure
++            printf("[%s, %s] Policy power execution failed\n", __FILE__, __FUNCTION__);
++        }
++
++
++go_out:
++        // last enable GPIOD pass-through function
++        ast_reg = *(unsigned int *)(AST_SCU_VA_BASE +0x70);
++        ast_reg |= (1<<21);
++        *(unsigned int *)(AST_SCU_VA_BASE +0x70) = ast_reg;
++    }
++
++    i2c_recovery();
++    retry = 0;
++    while (++retry <= 3) {
++        if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, UBOOT_PWR_POLICY_STS_OFFSET, &policy_status_old, 1)) == 0) {
++            break;
++        }
++        i2c_recovery();
++    }
++
++    if (ret > 3) {
++        printf("!!!!! [%s, %s] read UBOOT_PWR_POLICY_STS_OFFSET failed !!!!!\n", __FILE__, __FUNCTION__);
++    }
++    if (policy_status != policy_status_old) {
++        retry = 0;
++
++        i2c_recovery();
++        while (++retry <= 3) {
++            if ((ret = eeprom_write(CONFIG_SYS_EEPROM_ADDR, UBOOT_PWR_POLICY_STS_OFFSET, &policy_status, 1)) == 0) {
++                break;
++            }
++            i2c_recovery();
++        }
++        if (ret > 3) {
++            printf("!!!!! [%s, %s] Policy status save failed!!!!!\n", __FILE__, __FUNCTION__);
++        }
++    }
++
++    i2c_recovery();
++
++	return 0;
++}
++#endif
++
+ static int run_main_loop(void)
+ {
+ #ifdef CONFIG_SANDBOX
+@@ -914,6 +1162,9 @@
+ #ifdef CONFIG_MODEM_SUPPORT
+ 	initr_modem,
+ #endif
++#if defined(CONFIG_POWER_RESTORE_POLICY)
++	initr_pwr_policy,
++#endif
+ 	run_main_loop,
+ };
+ 

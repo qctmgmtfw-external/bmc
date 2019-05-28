@@ -1,0 +1,37 @@
+Source : platform
+Version : 2.1.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Ivan Lee (ivanlee@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : platform
+Build-Depends : Crosscc, kernel_dev, rules, DevNodes
+Customization-Type : HWINIT
+Architecture : ARM
+SOC : AST2500
+PLATFORM : AST2500EVB
+Urgency : low
+Description : This package contains the platform-specific hardware initialization module for AST2500EVB.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : platform
+Section : sys
+Group : DEVICE
+Essential : YES
+Depends : kernel
+Required : DevNodes
+Provides : PlatformDriver
+Description : This package contains the built platform-specific hardware initialization module for AST2500EVB.
+.
+

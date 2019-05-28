@@ -1,0 +1,6 @@
+#/usr/lib/libdbus-1.so.3 -> ../../lib/libdbus-1.so.3.4.0
+/etc/rcS.d/S44avahi-daemon 			-> ../init.d/avahi-daemon
+/etc/rc6.d/K44avahi-daemon 			-> ../init.d/avahi-daemon
+/etc/rc7.d/K44avahi-daemon 			-> ../init.d/avahi-daemon
+/etc/rc8.d/K44avahi-daemon 			-> ../init.d/avahi-daemon
+/etc/rc3.d/S17dbus 				-> ../init.d/dbus

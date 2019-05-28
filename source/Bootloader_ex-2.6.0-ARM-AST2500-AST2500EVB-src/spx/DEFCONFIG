@@ -1,0 +1,73 @@
+/*-------------------------------------------------------------------------------------------------------------------*/
+/* ----------------------------------------------AST2500EVB Configuration -------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------*/
+#ifndef __AST2500EVB_H__
+#define __AST2500EVB_H__
+
+#include <configs/board.cfg>
+#include <configs/ast.cfg>
+#include <configs/common.cfg>
+
+/* File Systems to be suported */
+#define CONFIG_FS_FAT		1
+#define CONFIG_CMD_FAT		1
+#define CONFIG_CMD_EXT2		1
+#define CONFIG_CMD_EXT4		1
+#define CONFIG_FS_EXT2		1
+#define CONFIG_FS_EXT4		1
+#define CONFIG_FS_GENERIC	1
+
+/* Overerride defaults */
+#undef DEBUG
+#undef CONFIG_SYS_ALT_MEMTEST
+
+/* This arm1176 core. Undefine other cores */
+#undef CONFIG_ARM926EJS
+#define CONFIG_ARM1176                  1
+
+/* Override ethernet address (if needed)*/
+#define	CONFIG_ETHADDR					00:00:00:00:00:00	/* Ethernet MAC0 Address 		*/
+#define	CONFIG_ETH1ADDR					00:00:00:00:00:00	/* Ethernet MAC1 Address 		*/
+
+/* Fixed values for board */
+#define	CONFIG_BOARD_NAME				"AST2500EVB"
+#define	CONFIG_CONS_INDEX				5 		
+#define	CONFIG_AST2500					1				
+#define CONFIG_AST2500EVB				1
+
+/* BigPhys Area*/
+#ifdef CONFIG_SPX_FEATURE_GLOBAL_FRAME_BUFFER_SUPPORT
+#define	CONFIG_BIGPHYSAREA			"8192"
+#else
+#define	CONFIG_BIGPHYSAREA			"6144"
+#endif
+
+/* Overerride Dram locations*/
+#undef  CONFIG_SYS_SDRAM_BASE
+#undef  CONFIG_SYS_LOAD_ADDR
+#define CONFIG_SYS_SDRAM_BASE                   0x80000000
+#define CONFIG_SYS_LOAD_ADDR                    (CONFIG_SYS_SDRAM_BASE + 0x00100000)
+
+/* Yafu Image downloading locations */
+#define YAFU_IMAGE_UPLOAD_LOCATION	(CONFIG_SYS_SDRAM_BASE + 0x02000000)  
+#define YAFU_TEMP_SECTOR_BUFFER         (CONFIG_SYS_SDRAM_BASE + 0x04000000)
+
+/* Defaut Memory Test Range	*/
+#define CONFIG_SYS_MEMTEST_START  	(CONFIG_SYS_SDRAM_BASE + 0x01000000)
+#define CONFIG_SYS_MEMTEST_END    	(CONFIG_SYS_SDRAM_BASE + 0x05000000)
+
+/* Flash Operation Mode Mask	*/
+#define CONFIG_FLASH_OPERATION_MODE_MASK	0x0001000F
+
+/* I2C EEPROM (AT24C128) configuration */
+#define CONFIG_I2C_CHANNEL_ID			CONFIG_SPX_FEATURE_GLOBAL_UBOOT_ENABLE_I2C_BUS
+#define CONFIG_SYS_EEPROM_ADDR			0x50
+#define	CONFIG_SYS_I2C_EEPROM_ADDR_LEN	1
+
+/* Network Configuration */
+#undef CONFIG_MACADDR_IN_EEPROM
+#define CONFIG_CMD_EEPROM 				0
+#define CONFIG_EEPROM_MACADDR_OFFSET	0x00
+#define CONFIG_EEPROM_MAC1ADDR_OFFSET	0x08
+/*-------------------------------------------------------------------------------------------------------------------*/
+#endif 

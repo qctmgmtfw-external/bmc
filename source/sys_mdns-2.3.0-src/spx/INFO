@@ -1,0 +1,23 @@
+Source                   	:	sys_mdns
+Version : 2.3.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Abhitesh Kumar  (abhiteshk@amiindia.co.in)
+License                  	:	GPL-V2
+Source-Location          	:	UNKNOWN
+Source-Version           	:	1.0.0
+Builds                   	:	sys_mdns
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	Mulitcast DNS is a way of using familiar DNS programming interfaces, packet formats and operating semantics, in a small network where no conventional DNS server has been installed.
+.
+
+Package                  	:	sys_mdns
+Config-Tag               	:	Multicast DNS Support
+Section                  	:	app
+Group                    	:	FEATURES
+Essential                	:	NO
+Description              	:	Mulitcast DNS is a way of using familiar DNS programming interfaces, packet formats and operating semantics, in a small network where no conventional DNS server has been installed.
+.
+

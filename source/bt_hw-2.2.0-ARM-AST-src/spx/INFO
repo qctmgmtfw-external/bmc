@@ -1,0 +1,35 @@
+Source : bt_hw
+Version : 2.2.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Rama Rao Bisa (RamaB@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : bt_hw
+Build-Depends : Crosscc, helper_driver_dev, kernel_dev, bt_driver_dev, rules, reset_hw, DevNodes
+Architecture : ARM
+SOC : AST
+Urgency : low
+Description : This package contains BT hardware driver for  AST series SOC
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : bt_hw
+Section : sys
+Group : DEVICE
+Essential : YES
+Depends : kernel, bt
+Required : helper, DevNodes
+Provides : btDriver
+Description : This package contains built BT hardware driver for  AST series SOC
+.
+

@@ -1,0 +1,135 @@
+Package: Bootloader_ex (2.6.0); urgency = medium
+
+Abstract:
+	Update INFO.
+
+Files Modified: spx/INFO
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 30 Apr 2015 18:52:26 CST
+
+Package: Bootloader_ex (2.5.0); urgency = medium
+
+Abstract:
+	Exported the CROSS_COMPILE variable in clean_source section.
+
+Files Modified: spx/RULES.py
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Thu, 12 Feb 2015 15:49:02 HMT
+
+Package: Bootloader_ex (2.4.0); urgency = low
+
+Abstract:
+	Corrected the YAFU_TEMP_SECTOR_BUFFER address considering the image size of 32MB with load address 0x42000000.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Mon, 09 Feb 2015 17:28:29 HMT
+
+Package: Bootloader_ex (2.3.0); urgency = high
+
+Abstract:
+	Change CFG_I2_CHANNEL_ID back to CONFIG_I2C_CHANNEL_ID and let it be configured by PRJ.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: robinchiu (RobinChiu) Thu, 06 Nov 2014 16:51:05 CST
+
+Package: Bootloader_ex (2.2.0); urgency = high
+
+Abstract:
+	Change CONFIG_I2C_CHANNEL_ID to CFG_I2C_CHANNEL_ID.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: robinchiu (RobinChiu) Wed, 05 Nov 2014 14:55:02 CST
+
+Package: Bootloader_ex (2.1.0); urgency = medium
+
+Abstract:
+	Add I2C EEPROM and Network related configuration.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: robinchiu (RobinChiu) Tue, 04 Nov 2014 15:16:54 CST
+
+Package: Bootloader_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:02:07 GMT
+
+Package: Bootloader_ex (1.7.0); urgency = medium
+
+Abstract:
+	Add flash_operation_mode_mask configuration for flash IO mode.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: robinchiu (RobinChiu) Tue, 30 Sep 2014 13:10:08 CST
+
+Package: Bootloader_ex (1.6.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:47:27 GMT
+
+Package: Bootloader_ex (1.5.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 02:57:00 GMT
+
+Package: Bootloader_ex (1.4.0); urgency = medium
+
+Abstract:
+	Revert bootdealy time to 0 to support faster time.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Fri, 29 Aug 2014 23:02:55 CST
+
+Package: Bootloader_ex (1.3.0); urgency = medium
+
+Abstract:
+	Add delay time for bootloader.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Fri, 29 Aug 2014 18:30:03 CST
+
+Package: Bootloader_ex (1.2.0); urgency = medium
+
+Abstract:
+	Changed configuration file.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Fri, 22 Aug 2014 11:54:01 CST
+
+Package: Bootloader_ex (1.1.0); urgency = medium
+
+Abstract:
+	Modified for AST2500EVB new header.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 18 Aug 2014 14:54:51 CST
+
+Package: Bootloader_ex (1.0.0); urgency = new
+
+Abstract:
+	This package contains bootloader for AST2500EVB (U-boot)
+
+Files Added: data, spx, spx/CHANGELOG, spx/DEFCONFIG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_ex, spx/PACKAGES.D/Bootloader_ex/DATA, spx/PACKAGES.D/Bootloader_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 18 Aug 2014 14:36:22 CST
+

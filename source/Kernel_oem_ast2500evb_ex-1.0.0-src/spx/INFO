@@ -1,0 +1,32 @@
+Source : Kernel_oem_ast2500evb_ex
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Bhavesh Sahu (bhaveshsahu@amiindia.co.in)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 0.0.0
+Builds : Kernel_oem_ast2500evb_ex
+Build-Depends : Kernel_platform_ast2500evb_ex
+Customization-Type : OEMEXTN
+Architecture : ANY
+Urgency : new
+Description : AST2500 OEM Patches to Kernel 3
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Kernel_oem_ast2500evb_ex
+Section : info
+Group : BASE
+Essential : NO
+Description : AST2500 OEM Patches to Kernel 3
+.
+

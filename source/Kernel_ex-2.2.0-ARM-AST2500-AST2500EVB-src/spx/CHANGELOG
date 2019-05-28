@@ -1,0 +1,99 @@
+Package: Kernel_ex (2.2.0); urgency = medium
+
+Abstract:
+	Update INFO file.
+
+Files Modified: spx/INFO
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 30 Apr 2015 18:50:51 CST
+
+Package: Kernel_ex (2.1.0); urgency = medium
+
+Abstract:
+	Supported contiguous memory allocator(CMA) for secondary service processor(SSP).
+
+Files Modified: spx/DEFCONFIG, spx/INFO
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 19 Nov 2014 17:17:17 CST
+
+Package: Kernel_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:15:07 GMT
+
+Package: Kernel_ex (1.7.0); urgency = medium
+
+Abstract:
+	Add flash_operation_mode_mask configuration for flash IO mode
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: robinchiu (RobinChiu) Tue, 30 Sep 2014 13:20:15 CST
+
+Package: Kernel_ex (1.6.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:57:15 GMT
+
+Package: Kernel_ex (1.5.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:07:00 GMT
+
+Package: Kernel_ex (1.4.0); urgency = medium
+
+Abstract:
+	Legacy LAN driver to support new kernel.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 10 Sep 2014 14:18:28 CST
+
+Package: Kernel_ex (1.3.0); urgency = medium
+
+Abstract:
+	Upgraded to kernel 3.14.17.
+
+Files Modified: spx/DEFCONFIG, spx/INFO, spx/PACKAGES.D/Kernel_dev_ex/SCRIPTS/dev-install.py, spx/PACKAGES.D/Kernel_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 03 Sep 2014 11:28:20 CST
+
+Package: Kernel_ex (1.2.0); urgency = medium
+
+Abstract:
+	Modified kernel configuration.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 27 Aug 2014 15:09:45 CST
+
+Package: Kernel_ex (1.1.0); urgency = medium
+
+Abstract:
+	Modified configuration.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Tue, 26 Aug 2014 19:32:38 CST
+
+Package: Kernel_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2500EVB Kernel 3.4.74 configuration
+
+Files Added: data, spx, spx/CHANGELOG, spx/DEFCONFIG, spx/DOCS, spx/DOCS/Images, spx/DOCS/Images/boot_logo_224.ppm, spx/DOCS/Images/boot_logo_a.ppm, spx/DOCS/PPM-HOWTO, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Kernel_dev_ex, spx/PACKAGES.D/Kernel_dev_ex/DATA, spx/PACKAGES.D/Kernel_dev_ex/SCRIPTS, spx/PACKAGES.D/Kernel_dev_ex/SCRIPTS/dev-install.py, spx/PACKAGES.D/Kernel_ex, spx/PACKAGES.D/Kernel_ex/DATA, spx/PACKAGES.D/Kernel_ex/SCRIPTS, spx/PACKAGES.D/Kernel_ex/SCRIPTS/dev-install.py, spx/PACKAGES.D/Kernel_modules_ex, spx/PACKAGES.D/Kernel_modules_ex/DATA, spx/PACKAGES.D/Kernel_modules_ex/SCRIPTS, spx/PACKAGES.D/Kernel_modules_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 25 Aug 2014 11:31:24 CST
+

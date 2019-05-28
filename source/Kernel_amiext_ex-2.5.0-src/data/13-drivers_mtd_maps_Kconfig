@@ -1,0 +1,16 @@
+--- linux.pristine/drivers/mtd/maps/Kconfig	2013-12-12 01:34:28.000000000 -0500
++++ linux-amiext/drivers/mtd/maps/Kconfig	2014-02-03 15:10:59.935029098 -0500
+@@ -247,6 +247,13 @@
+ 	  Mapping for the Flaga digital module. If you don't have one, ignore
+ 	  this setting.
+ 
++config MTD_RACTRENDS
++	tristate "Map driver for AMI Ractrends Based boards"
++	default y
++	select MTD_PARTITIONS
++	help
++	  Map driver for AMI Ractrends Based boards.
++
+ config MTD_SOLUTIONENGINE
+ 	tristate "CFI Flash device mapped on Hitachi SolutionEngine"
+ 	depends on SUPERH && SOLUTION_ENGINE && MTD_CFI && MTD_REDBOOT_PARTS

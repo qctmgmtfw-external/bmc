@@ -1,0 +1,34 @@
+--- busybox.org/loginutils/login.c	2014-09-10 20:49:23.650461804 +0530
++++ busybox/loginutils/login.c	2014-09-10 20:48:10.090939778 +0530
+@@ -184,24 +184,20 @@
+ 	cntdown = EMPTY_USERNAME_COUNT;
+  prompt:
+ 	print_login_prompt();
+-	/* skip whitespace */
+-	do {
+-		c = getchar();
+-		if (c == EOF)
+-			exit(EXIT_FAILURE);
+-		if (c == '\n') {
+-			if (!--cntdown)
+-				exit(EXIT_FAILURE);
++	c = getchar();
++	if (c == EOF) exit(EXIT_FAILURE);
++	if (c == '\n')
++	{
++		if (!--cntdown) exit(EXIT_FAILURE);
+ 			goto prompt;
+-		}
+-	} while (isspace(c)); /* maybe isblank? */
++	}
+ 
+ 	*buf++ = c;
+ 	if (!fgets(buf, size_buf-2, stdin))
+ 		exit(EXIT_FAILURE);
+ 	if (!strchr(buf, '\n'))
+ 		exit(EXIT_FAILURE);
+-	while ((unsigned char)*buf > ' ')
++	while ((((unsigned char)*buf > ' ') || isspace(*buf)) && ( '\n' != *buf))
+ 		buf++;
+ 	*buf = '\0';
+ }

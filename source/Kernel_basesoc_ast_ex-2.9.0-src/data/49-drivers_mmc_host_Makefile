@@ -1,0 +1,14 @@
+--- linux-3.14.17/drivers/mmc/host/Makefile	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/drivers/mmc/host/Makefile	2014-08-21 14:43:39.553768095 -0400
+@@ -65,6 +65,11 @@
+ obj-$(CONFIG_MMC_SDHCI_BCM_KONA)	+= sdhci-bcm-kona.o
+ obj-$(CONFIG_MMC_SDHCI_BCM2835)		+= sdhci-bcm2835.o
+ 
++ifeq ($(CONFIG_MMC_SDHCI),y)
++obj-$(CONFIG_MMC_SDHCI_AST)        += sdhci-ast.o
++endif
++
++
+ ifeq ($(CONFIG_CB710_DEBUG),y)
+ 	CFLAGS-cb710-mmc	+= -DDEBUG
+ endif
