@@ -1,0 +1,119 @@
+--- uboot/arch/arm/cpu/arm1176/ast2500/platform.S	2016-09-13 11:11:48.239648598 +0800
++++ uboot/arch/arm/cpu/arm1176/ast2500/platform.S.new	2016-09-13 10:38:48.243717000 +0800
+@@ -17,8 +17,8 @@
+  *
+  * Gary Hsu, <gary_hsu@aspeedtech.com>
+  *
+- * Version     : 12
+- * Release date: 2016.08.05
++ * Version     : 13
++ * Release date: 2016.09.06
+  *
+  * Priority of fix item:
+  * [P1] = critical
+@@ -56,13 +56,16 @@
+  *    |2016.01.27 : 1.[P3] Modify the first reset from full chip reset to SOC reset
+  *    |             2.[P3] Remove HPLL/MPLL patch code for revision A0
+  *    |             3.[P2] Move the reset_mmc code to be after MPLL initialized
+- * V9 |2016.02.19 : 1.[P3] Remove definietion "CONFIG_FIRMWARE_2ND_BOOT"
++ * V9 |2016.02.19 : 1.[P3] Remove definition "CONFIG_FIRMWARE_2ND_BOOT"
+  * V10|2016.04.21 : 1.[P1] Add USB PHY initial code - port B, to prevent wrong state on USB pins
+  * V11|2016.05.10 : 1.[P3] Add DRAM Extended temperature range support
+  * V12|2016.06.24 : 1.[P1] Modify LPC Reset input source when eSPI mode enabled
+  *    |2016.07.12 : 2.[P1] Modify DDR4 read path ODT from 60 ohm to 48 ohm, at address 0x1e6e0204
+  *    |           : 3.[P1] Modify DDR4 Ron calibration to manual mode to fix Vix issue, set Ron_pu = 0
+  *    |           : 4.[P2] Modify read timing margin report policy, change DDR4 min value from 0.35 to 0.3. Add "Warning" while violated.
++ * V13|2016.08.29 : 1.[P3] Add option to route debug message output port from UART5 to UART1
++ *    |2016.09.02 : 3.[P2] Add range control for cache function when ECC enabled
++ *    |2016.09.06 : 2.[P1] Enable full mask setting for first SOC reset, since the coverage of original default setting is not enough
+  *    |           :    Note: Read timing report is only a reference, it is not a solid rule for stability.
+  *
+  * Optional define variable
+@@ -70,10 +73,11 @@
+  *    CONFIG_DRAM_1333       //
+  *    CONFIG_DRAM_1600       // (default)
+  * 2. ECC Function enable
+- *    CONFIG_DRAM_ECC        // define to enable ECC function
+- *    CONFIG_DRAM_ECC_SIZE   // define the ECC protected memory size
+- * 3. UART5 message output   //
+- *    CONFIG_DRAM_UART_38400 // set the UART baud rate to 38400, default is 115200
++ *    CONFIG_DRAM_ECC             // define to enable ECC function
++ *    CONFIG_DRAM_ECC_SIZE        // define the ECC protected memory size
++ * 3. UART5 message output        //
++ *    CONFIG_DRAM_UART_38400      // set the UART baud rate to 38400, default is 115200
++ *    CONFIG_DRAM_UART_TO_UART1   // route UART5 to UART port1
+  * 4. DRAM Type
+  *    CONFIG_DDR3_8GSTACK    // DDR3 8Gbit Stack die
+  *    CONFIG_DDR4_4GX8       // DDR4 4Gbit X8 dual part
+@@ -97,8 +101,8 @@
+   Free registers:
+   r0, r1, r2, r3, r6, r7, r8, r9, r10, r11
+  ******************************************************************************/
+-#define ASTMMC_INIT_VER      0x0C                @ 8bit verison number
+-#define ASTMMC_INIT_DATE     0x20160805          @ Release date
++#define ASTMMC_INIT_VER      0x0D                @ 8bit verison number
++#define ASTMMC_INIT_DATE     0x20160906          @ Release date
+ 
+ #define ASTMMC_DDR4_MANUAL_RPU 0x0               @ 0x0-0xF, default set to 0, larger value means weaker driving
+ //#define ASTMMC_DDR4_MANUAL_RPD 0x0             @ 0x0-0xF, default not set, larger value means stronger driving
+@@ -307,6 +311,9 @@
+     ldr   r1, [r0]
+     and   r1, r1, #0x01
+     str   r1, [r0]
++    ldr   r0, =0x1e78501c                        @ restore normal mask setting
++    ldr   r1, =0x023FFFF3                        @ added 2016.09.06
++    str   r1, [r0]
+     b     bypass_first_reset
+ 
+ start_first_reset:
+@@ -319,7 +326,10 @@
+     ldr   r0, =0x1e785008
+     ldr   r1, =0x00004755
+     str   r1, [r0]
+-    ldr   r0, =0x1e78500c                        @ enable soc reset
++    ldr   r0, =0x1e78501c                        @ enable full mask of SOC reset
++    ldr   r1, =0x03FFFFFF                        @ added 2016.09.06
++    str   r1, [r0]
++    ldr   r0, =0x1e78500c                        @ enable SOC reset
+     ldr   r1, =0x00000013
+     str   r1, [r0]
+ wait_first_reset:
+@@ -405,7 +415,7 @@
+ /******************************************************************************
+  Disable WDT2 for 2nd boot function
+  ******************************************************************************/
+-/* Quanta disable WDT2++ */
++
+ #ifndef CONFIG_FIRMWARE_2ND_BOOT
+     ldr   r0, =0x1e78502c
+     mov   r1, #0
+@@ -518,6 +528,18 @@
+     str   r1, [r0]
+ 
+ /* Debug - UART console message */
++#ifdef CONFIG_DRAM_UART_TO_UART1
++    ldr   r0, =0x1e78909c                        @ route UART5 to UART Port1, 2016.08.29
++    ldr   r1, =0x10000004
++    str   r1, [r0]
++
++    ldr   r0, =0x1e6e2084
++    ldr   r1, [r0]
++    mov   r2, #0xC0                              @ Enable pinmux of TXD1/RXD1
++    orr   r1, r1, r2, lsl #16
++    str   r1, [r0]
++#endif
++
+     ldr   r0, =0x1e78400c
+     mov   r1, #0x83
+     str   r1, [r0]
+@@ -1918,8 +1940,9 @@
+ platform_exit:
+ #ifdef CONFIG_DRAM_ECC
+     ldr   r0, =0x1e6e0004
++    ldr   r2, =0x00000880                        @ add cache range control, 2016.09.02
+     ldr   r1, [r0]
+-    orr   r1, r1, #0x80
++    orr   r1, r1, r2
+     str   r1, [r0]
+ 
+     ldr   r0, =0x1e6e0054

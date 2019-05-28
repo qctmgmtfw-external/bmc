@@ -1,0 +1,72 @@
+--- linux-3.14.17/drivers/tty/serial/8250/8250_dma.c	2016-09-26 09:38:34.000000000 +0800
++++ linux-3.14.17-ami/drivers/tty/serial/8250/8250_dma.c	2016-09-26 15:29:25.277211158 +0800
+@@ -169,7 +169,7 @@
+ {
+     struct uart_8250_port *p = (struct uart_8250_port *)dev_id;
+     int count=0;
+-
++    u8  uart_count = CONFIG_SERIAL_8250_NR_UARTS;//Quanta, avoid deadlock.
+     u32 tx_sts = (u16) ast_uart_udma_read(UART_TX_UDMA_ISR);
+     u32 rx_sts = (u16) ast_uart_udma_read(UART_RX_UDMA_ISR);
+ 
+@@ -180,20 +180,36 @@
+         return IRQ_HANDLED;    
+     }
+ 
+-    while (rx_sts) {
++    //while (rx_sts) {//Quanta--
++    while ((rx_sts || tx_sts) && uart_count) {//Quanta
+         /* BMC DEBUG PORT doesn't SUPPORT DMA mode */
+-        if (p->dma==NULL) p++;
++        if (p->dma==NULL){ 
++            p++;
++            uart_count--;//Quanta
++            continue;//Quanta
++        }
+         if (rx_sts & (1 << count)) {
+             /* clear the interrupt status */
+             ast_uart_udma_write((1 << count), UART_RX_UDMA_ISR);
+             ast_udma_bufffdone(p, DMA_FROM_DEVICE);
+         }
++        //Quanta+++
++        if (tx_sts & (1 << count)) {
++            /* clear the interrupt status */
++            ast_uart_udma_write((1 << count), UART_TX_UDMA_ISR);
++            ast_udma_bufffdone(p, DMA_TO_DEVICE);
++        }
++        //+++Quanta
+         rx_sts &= ~(1 << count);
++        tx_sts &= ~(1 << count);//Quanta
+         count++;
+         p++;
+     }
+-
+-
++	if(rx_sts || tx_sts) {
++	    //Quanta, shold not enter this scope!
++	    printk("[UDMA] ISR error rx:%x tx:%x\n", rx_sts, tx_sts);
++	}
++#if 0 //Quanta--
+     count=0;
+ 
+     while (tx_sts) {
+@@ -208,7 +224,7 @@
+         count++;
+         p++;
+     }
+-
++#endif
+     return IRQ_HANDLED;
+ }
+ 
+--- linux/drivers/tty/serial/8250/Kconfig	2016-09-26 09:38:34.000000000 +0800
++++ linux.new/drivers/tty/serial/8250/Kconfig	2016-09-26 15:29:25.277211158 +0800
+@@ -102,7 +102,7 @@
+ 
+ config SERIAL_8250_DMA
+ 	bool "DMA support for 16550 compatible UART controllers" if EXPERT
+-	depends on SERIAL_8250 && DMADEVICES=y
++	depends on SERIAL_8250
+ 	default SERIAL_8250
+ 	help
+ 	  This builds DMA support that can be used with 8250/16650

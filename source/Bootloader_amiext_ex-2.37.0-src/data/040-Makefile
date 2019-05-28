@@ -1,0 +1,25 @@
+--- u-boot-2013.07/Makefile	2013-12-13 13:49:25.828958498 -0500
++++ uboot.new/Makefile	2013-12-13 12:18:50.644959146 -0500
+@@ -153,7 +153,7 @@
+ # The "examples" conditionally depend on U-Boot (say, when USE_PRIVATE_LIBGCC
+ # is "yes"), so compile examples after U-Boot is compiled.
+ SUBDIR_TOOLS = tools
+-SUBDIR_EXAMPLES = examples/standalone examples/api
++SUBDIR_EXAMPLES = examples/standalone examples/api examples/memtest
+ SUBDIRS = $(SUBDIR_TOOLS)
+ 
+ .PHONY : $(SUBDIRS) $(VERSION_FILE) $(TIMESTAMP_FILE)
+@@ -338,6 +338,13 @@
+ LIBS-y += post/libpost.o
+ LIBS-y += test/libtest.o
+ 
++LIBS-y+=drivers/spiflash/libspiflash.o
++LIBS-y += oem/ami/fmh/libfmh.o
++LIBS-$(CONFIG_YAFU_SUPPORT) += oem/ami/fwupdate/libfwupdate.o oem/ami/ipmi/libipmi.o
++LIBS-$(CONFIG_NCSI_SUPPORT) += oem/ami/ncsi/libncsi.o
++LIBS-$(CONFIG_R2C_SUPPORT) += oem/ami/r2c/libr2c.o
++LIBS-$(CONFIG_BOOTLOGO_SUPPORT) += oem/ami/bootlogo/libbootlogo.o
++
+ ifneq ($(CONFIG_AM33XX)$(CONFIG_OMAP34XX)$(CONFIG_OMAP44XX)$(CONFIG_OMAP54XX)$(CONFIG_TI814X),)
+ LIBS-y += $(CPUDIR)/omap-common/libomap-common.o
+ endif

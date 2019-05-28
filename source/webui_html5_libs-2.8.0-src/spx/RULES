@@ -1,0 +1,23 @@
+#Extract Source	in %SOURCE
+extract_source:
+	INVOKE_SHELL check_deps.sh
+	UNTAR_BZ2 %SOURCE/%PACKAGE/data/node_modules.tar.bz2 %SOURCE/%PACKAGE/data/
+	UNTAR_BZ2 %SOURCE/%PACKAGE/data/vendor.tar.bz2 %SOURCE/%PACKAGE/data/
+
+#Build Source in %BUILD
+build_source:
+	#CWD %BUILD/%PACKAGE/data/
+	#EXECUTE grunt default
+
+#Clean Source
+clean_source:
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create webui_html5_libs package
+build_package-webui_html5_libs:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp/vendor
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp/node_modules
+	COPY_DIR %BUILD/%PACKAGE/data/node_modules %TEMPDIR/%PACKAGE/tmp/node_modules
+	COPY_DIR %BUILD/%PACKAGE/data/vendor %TEMPDIR/%PACKAGE/tmp/vendor
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp 

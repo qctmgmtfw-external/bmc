@@ -1,0 +1,19 @@
+--- u-boot-2013.07/common/Makefile	2013-12-13 13:49:25.720958498 -0500
++++ uboot.new/common/Makefile	2013-12-11 16:31:46.080596536 -0500
+@@ -51,6 +51,7 @@
+ COBJS-y += env_callback.o
+ COBJS-y += env_flags.o
+ COBJS-$(CONFIG_ENV_IS_IN_DATAFLASH) += env_dataflash.o
++COBJS-$(CONFIG_ENV_IS_IN_SPI) += env_spi.o
+ COBJS-$(CONFIG_ENV_IS_IN_EEPROM) += env_eeprom.o
+ XCOBJS-$(CONFIG_ENV_IS_EMBEDDED) += env_embedded.o
+ COBJS-$(CONFIG_ENV_IS_IN_EEPROM) += env_embedded.o
+@@ -151,7 +152,7 @@
+ ifdef CONFIG_PCI
+ COBJS-$(CONFIG_CMD_PCI) += cmd_pci.o
+ endif
+-COBJS-y += cmd_pcmcia.o
++COBJS-$(CONFIG_CMD_PCMCIA) += cmd_pcmcia.o
+ COBJS-$(CONFIG_CMD_PORTIO) += cmd_portio.o
+ COBJS-$(CONFIG_CMD_PXE) += cmd_pxe.o
+ COBJS-$(CONFIG_CMD_READ) += cmd_read.o

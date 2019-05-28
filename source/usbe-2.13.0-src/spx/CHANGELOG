@@ -1,0 +1,956 @@
+Package: usbe (2.13.0); urgency = medium
+
+Abstract:
+	SOC specific change in CDROM driver
+
+Files Modified: data/bot.c, data/bot.h, data/bot_if.h, data/mod_reg.c, data/scsi.h, data/usb_core.h
+
+--Submitter: Logapriya Nagarajan (logapriyan@amiindia.co.in) Fri, 19 Feb 2016 14:53:13 HMT
+
+Package: usbe (2.12.0); urgency = medium
+
+Abstract:
+	SOC Specific change in CDROM Driver
+
+Files Modified: data/bot.c, data/bot.h, data/bot_if.h, data/mod_reg.c, data/scsi.h, data/usb_core.h
+
+--Submitter: Logapriya Nagarajan (logapriyan@amiindia.co.in) Thu, 11 Feb 2016 14:18:53 HMT
+
+Package: usbe (2.11.0); urgency = medium
+
+Abstract:
+	Pilot-4 support USB 2.0 only.
+
+Files Modified: data/descriptors.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 04 Feb 2016 16:23:52 CST
+
+Package: usbe (2.10.0); urgency = medium
+
+Abstract:
+	Add 0x4A(SCSI GET EVENT STATUS NOTIFICATION) SCSI command support for Pilot-4.
+
+Files Modified: data/bot.c, data/bot.h, data/bot_if.h, data/mod_reg.c, data/scsi.h, data/usb_core.h
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 18 Jan 2016 11:57:12 CST
+
+Package: usbe (2.9.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/usbe/DATA/.keep, spx/PACKAGES.D/usbe_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:52:55 EST
+
+Package: usbe (2.8.0); urgency = medium
+
+Abstract:
+	Adding ethernet over usb support for 3.X kernel
+
+Files Modified: data/linux.c, data/linux.h, data/mod_reg.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 29 Dec 2015 17:36:52 EST
+
+Package: usbe (2.7.0); urgency = high
+
+Abstract:
+	Fix for cd automount
+
+Files Modified: data/scsi.h
+
+--Submitter: Lakshmi Sravya K (lakshmisk@amiindia.co.in) Thu, 20 Aug 2015 17:34:45 IST
+
+Package: usbe (2.6.0); urgency = medium
+
+Abstract:
+	mouse freeze issue.allow data to driver on wakeup
+
+Files Modified: data/entry.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 07 Aug 2015 09:29:36 HMT
+
+Package: usbe (2.5.0); urgency = medium
+
+Abstract:
+	fix for fortify issues (value never used)
+
+Files Modified: data/coreusb.c
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Tue, 23 Jun 2015 23:38:00 HMT
+
+Package: usbe (2.4.0); urgency = high
+
+Abstract:
+	Added check to make sure that the pointer is not NULL before freeing them up. Reset them to NULL after freeing it up.  This condition check was not there for certain cases which was causing a crash.
+
+Files Modified: data/coreusb.c, data/mod_reg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 17 Jun 2015 12:28:14 EDT
+
+Package: usbe (2.3.0); urgency = medium
+
+Abstract:
+	fix for fortify issues Type Mismatch: Signed to Unsigned
+
+Files Modified: data/coreusb.c, data/descriptors.c, spx/INFO
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Tue, 09 Jun 2015 11:41:55 HMT
+
+Package: usbe (2.2.0); urgency = medium
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/descriptors.c, spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 24 Dec 2014 16:01:05 IST
+
+Package: usbe (2.1.0); urgency = high
+
+Abstract:
+	Validation, memory leak and FTS merge related changes
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Fri, 12 Dec 2014 14:45:23 HMT
+
+Package: usbe (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 07:14:42 GMT
+
+Package: usbe (1.54.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:57:07 HMT
+
+Package: usbe (1.53.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:42:50 GMT
+
+Package: usbe (1.52.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:55:19 GMT
+
+Package: usbe (1.51.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/linux.c, data/mod_reg.c, data/module.c, data/proc.c, data/proc.h
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:07:00 GMT
+
+Package: usbe (1.50.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/linux.c, data/module.c, data/proc.c, data/proc.h
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:44:38 GMT
+
+Package: usbe (1.49.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/coreusb.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:28:22 HMT
+
+Package: usbe (1.48.0); urgency = high
+
+Abstract:
+	Fix for USB spec violation when a device doesn't respond with a STALL when host requests for vendor specific data for a supported command (in this case, GetDescriptor command is supported, but invalid indexes were not returning STALL, but will send NAKs untill host timeouts)
+
+Files Modified: data/coreusb.c
+
+--Submitter: aruna (arunav@ami.com) Sun, 25 May 2014 11:44:41 EDT
+
+Package: usbe (1.47.0); urgency = high
+
+Abstract:
+	Fix for XHCI induced race condition which resulted in a 10-sec timeout, when UnHalt (Clear Stall) arrives before Halt handler goes to sleep
+
+Files Modified: data/bot.c
+
+--Submitter: aruna (arunav@ami.com) Sun, 25 May 2014 11:27:29 EDT
+
+Package: usbe (1.46.0); urgency = medium
+
+Abstract:
+	Keyboard LED status out of sync while host powered OFF; issue fixed.
+
+Files Modified: data/usb_ioctl.h
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Mon, 19 May 2014 15:18:29 HMT
+
+Package: usbe (1.45.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/usbe/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:06:24 GMT
+
+Package: usbe (1.44.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/usbe/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:59:05 HMT
+
+Package: usbe (1.43.0); urgency = medium
+
+Abstract:
+	#Added code to check current status in driver. If incoming state is same code will return success without setting.Kernel panic fix.
+
+Files Modified: data/coreusb.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 06 Feb 2014 11:30:14 CST
+
+Package: usbe (1.42.0); urgency = medium
+
+Abstract:
+	- Added condition according to Kernel requirement
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Wed, 29 Jan 2014 17:57:52 HMT
+
+Package: usbe (1.41.0); urgency = medium
+
+Abstract:
+	Added the microsoft OS decsrriptor
+
+Files Modified: data/coreusb.c, data/descriptors.c, data/descriptors.h, data/mod_reg.c, data/setup.c, data/usb_core.h
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 04 Nov 2013 12:04:30 HMT
+
+Package: usbe (1.40.0); urgency = medium
+
+Abstract:
+	To add USB node for USB 1.1 Host.
+
+Files Modified: spx/PACKAGES.D/usbe/SCRIPTS/dev-install
+
+--Submitter: thomaschao (thomaschao@ami.com.tw) Wed, 09 Oct 2013 11:04:28 CST
+
+Package: usbe (1.39.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:39:01 EDT
+
+Package: usbe (1.38.0); urgency = low
+
+Abstract:
+	Modified driver to support Kernel 3.4.11.
+
+Files Modified: data/coreusb.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Sun, 15 Sep 2013 02:32:07 HMT
+
+Package: usbe (1.37.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:52:16 EDT
+
+Package: usbe (1.36.0); urgency = medium
+
+Abstract:
+	Updated for latest 3.x.x kernel
+
+Files Modified: data/module.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 19 Jun 2013 14:14:27 EDT
+
+Package: usbe (1.35.0); urgency = low
+
+Abstract:
+	Removed unwanted printk.
+
+Files Modified: data/coreusb.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 06 May 2013 21:48:59 HMT
+
+Package: usbe (1.34.0); urgency = medium
+
+Abstract:
+	Merged the null pointer condition check into core
+
+Files Modified: data/bot.c
+
+--Submitter: arunadevi (arunadevid@amiindia.co.in) Wed, 03 Apr 2013 12:19:35 HMT
+
+Package: usbe (1.33.0); urgency = medium
+
+Abstract:
+	Added 2 ioctl calls to disable USB 2.0
+
+Files Modified: data/coreusb.c, data/coreusb.h, data/driver.c, data/usb_hw.h, data/usb_ioctl.h
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Thu, 07 Feb 2013 01:54:30 EST
+
+Package: usbe (1.32.0); urgency = high
+
+Abstract:
+	Power saving of using USB Selective Suspend Support
+
+Files Modified: data/coreusb.c, data/coreusb.h, data/driver.c, data/iusb.h, data/usb_hw.h, data/usb_ioctl.h
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 21 Dec 2012 13:15:12 CST
+
+Package: usbe (1.31.0); urgency = low
+
+Abstract:
+	Added Support for usb pipe
+
+Files Modified: data/coreusb.c, data/driver.c, data/usb_hw.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 08 Nov 2012 16:44:26 EST
+
+Package: usbe (1.30.0); urgency = medium
+
+Abstract:
+	Typecase modified to work for both 32 and 64 Bit
+
+Files Modified: data/linux.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 06 Aug 2012 16:44:59 EDT
+
+Package: usbe (1.29.0); urgency = medium
+
+Abstract:
+	Fix for compilation errors when debug message support is enabled.
+
+Files Modified: data/bot.c, data/linux.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 26 Jun 2012 15:41:05 EDT
+
+Package: usbe (1.28.0); urgency = low
+
+Abstract:
+	Remove redundant statement.
+
+Files Modified: data/mod_reg.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Fri, 27 Apr 2012 11:03:33 CST
+
+Package: usbe (1.27.0); urgency = medium
+
+Abstract:
+	Add a condition to disconnect decive to save boot time.
+
+Files Modified: data/mod_reg.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 26 Apr 2012 18:44:54 CST
+
+Package: usbe (1.26.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/bot.c, data/coreusb.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 14:34:18 EDT
+
+Package: usbe (1.25.0); urgency = medium
+
+Abstract:
+	Added support for 3.X Kernels
+
+Files Modified: data/driver.c, data/linux.c, data/linux.h, data/module.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 02 Dec 2011 15:39:59 EST
+
+Package: usbe (1.24.0); urgency = medium
+
+Abstract:
+	Fixes for 64 Bit
+
+Files Modified: data/coreusb.c, data/driver.c, data/linux.c, data/mod_reg.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 21 Sep 2011 11:43:25 EDT
+
+Package: usbe (1.23.0); urgency = high
+
+Abstract:
+	Fixes for 64 Bit data structures
+
+Files Modified: data/bot.c, data/coreusb.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 20 Sep 2011 08:56:23 EDT
+
+Package: usbe (1.22.0); urgency = medium
+
+Abstract:
+	additional checks added
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 09 Sep 2011 14:34:52 EDT
+
+Package: usbe (1.21.0); urgency = medium
+
+Abstract:
+	Device Information is copied and enabled when they are registered and disabled when un-registered. Earlier, this info was updated when the first application(s) request for devices.
+
+Files Modified: data/entry.c, data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 09 Sep 2011 12:53:32 EDT
+
+Package: usbe (1.20.0); urgency = medium
+
+Abstract:
+	added missing initialization
+
+Files Modified: data/descriptors.c, data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 22 Aug 2011 12:58:27 EDT
+
+Package: usbe (1.19.0); urgency = medium
+
+Abstract:
+	changing the lincence info in the source file too.
+
+Files Modified: data/module.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 15:45:01 EDT
+
+Package: usbe (1.18.0); urgency = medium
+
+Abstract:
+	source and package licence changed from AMI to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 15:06:58 EDT
+
+Package: usbe (1.17.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:56:38 EDT
+
+Package: usbe (1.16.0); urgency = medium
+
+Abstract:
+	removed macros from header file. two macros are unused and other four macros have been moved hub module.
+
+Files Modified: data/usb_hw.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 14 Apr 2011 12:33:21 EDT
+
+Package: usbe (1.15.0); urgency = medium
+
+Abstract:
+	changes to usbe core module as a result of adding HUB as a device module
+
+Files Modified: data/coreusb.c, data/coreusb.h, data/descriptors.c, data/mod_reg.c, data/usb_core.h, data/usb_hw.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 14 Apr 2011 09:57:58 EDT
+
+Package: usbe (1.14.0); urgency = medium
+
+Abstract:
+	passing the SCSI_START_STOP_UNIT command to Client now.
+
+Files Modified: data/bot.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 12 Apr 2011 10:04:37 EDT
+
+Package: usbe (1.13.0); urgency = medium
+
+Abstract:
+	logical bug fixed
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 15 Mar 2011 16:51:03 EDT
+
+Package: usbe (1.12.0); urgency = medium
+
+Abstract:
+	Enable USB device after endpoints init is completed.
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 14 Mar 2011 15:04:59 EDT
+
+Package: usbe (1.11.0); urgency = high
+
+Abstract:
+	added missing NULL pointer check
+
+Files Modified: data/bot.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 24 Feb 2011 12:13:55 EST
+
+Package: usbe (1.10.0); urgency = low
+
+Abstract:
+	code cleanup
+
+Files Modified: data/bot.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 10 Feb 2011 12:47:07 EST
+
+Package: usbe (1.9.0); urgency = medium
+
+Abstract:
+	install/uninstall_video_handler moved from iUSB module to this module.
+
+Files Modified: data/bot.c, data/mod_reg.c, data/usb_core.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 10 Feb 2011 12:39:52 EST
+
+Package: usbe (1.8.0); urgency = medium
+
+Abstract:
+	changes to avoid using global data for 2.6.28 kernel
+
+Files Modified: data/linux.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 21 Jan 2011 14:59:47 EST
+
+Package: usbe (1.7.0); urgency = medium
+
+Abstract:
+	changes to support 2.6.30 kernel for virtual ethernet.
+
+Files Modified: data/linux.c, data/linux.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 20 Jan 2011 15:04:31 EST
+
+Package: usbe (1.6.0); urgency = medium
+
+Abstract:
+	Previous commit has a mismatch between svn log and CHANGELOG. This will
+create issues in package management. So adding this empty commit
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 Jan 2011 17:11:34 EST
+
+Package: usbe (1.5.0); urgency = low
+
+Abstract:
+	unused IOCTL macros removed
+
+Files Modified: data/usb_ioctl.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 11 Jan 2011 17:01:38 EST
+
+Package: usbe (1.4.0); urgency = medium
+
+Abstract:
+	do not connect luncombo for SH7757 and replace Usb_OsDelay with mdelay.
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 30 Nov 2010 15:01:45 EST
+
+Package: usbe (1.3.0); urgency = medium
+
+Abstract:
+	for SH7757, media is connected to host during driver loading time.
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 11 Nov 2010 15:12:41 EST
+
+Package: usbe (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/usbe/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:51:55 EDT
+
+Package: usbe (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:54:00 EDT
+
+Package: usbe (1.0.37); urgency = medium
+
+Abstract:
+	Currently kmalloc and free have been used for every control transfer with data phase. This might lead to memory fragmentation so Now do malloc/free the buffers when device modiles connects/disconnects and removed malloc and free for every control transfer.
+
+Files Modified: data/coreusb.c, data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 03 Sep 2010 14:18:55 EDT
+
+Package: usbe (1.0.36); urgency = medium
+
+Abstract:
+	usbe core module changes to support dynamic virtual devices.
+
+Files Modified: data/entry.c, data/iusb.h, data/mod_reg.c, data/usb_core.h, data/usb_hw.h, data/usb_ioctl.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 12 Aug 2010 10:25:04 EDT
+
+Package: usbe (1.0.35); urgency = high
+
+Abstract:
+	set the network device private data needed differently for kernel 2.6.30.
+
+Files Modified: data/linux.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 22 Jul 2010 15:09:57 EDT
+
+Package: usbe (1.0.34); urgency = high
+
+Abstract:
+	priv member of struct net_device has been removed in kernel 2.6.30. These changes are to support both 2.6.30 and previous kernels.
+
+Files Modified: data/linux.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 22 Jul 2010 14:43:48 EDT
+
+Package: usbe (1.0.33); urgency = medium
+
+Abstract:
+	IUSB_DEVICE_FLASH macro defined.
+
+Files Modified: data/iusb.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 16 Jul 2010 10:03:40 EDT
+
+Package: usbe (1.0.32); urgency = medium
+
+Abstract:
+	LUN_3 macro defined.
+
+Files Modified: data/bot_if.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 15 Jul 2010 14:48:46 EDT
+
+Package: usbe (1.0.31); urgency = medium
+
+Abstract:
+	IUSB_HEADER field updated for proper name and VFLASH support IOCTL codes added.
+
+Files Modified: data/iusb.h, data/usb_ioctl.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 15 Jul 2010 10:23:40 EDT
+
+Package: usbe (1.0.30); urgency = medium
+
+Abstract:
+	removed USB_FLOPPY_EMULATE IOCTL,cleared some needed variables during unloading of device modules.
+
+Files Modified: data/descriptors.c, data/mod_reg.c, data/usb_hw.h, data/usb_ioctl.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 08 Jul 2010 14:28:00 EDT
+
+Package: usbe (1.0.29); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:15:18 EDT
+
+Package: usbe (1.0.28); urgency = medium
+
+Abstract:
+	IOCTLs codes added to set/get the hard disk RMB field of Inquiry data.
+
+Files Modified: data/usb_ioctl.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 25 May 2010 15:26:19 EDT
+
+Package: usbe (1.0.27); urgency = medium
+
+Abstract:
+	SCSI_MEDIUM_REMOVAL, SCSI_START_STOP_UNIT, SCSI_SEEK, SCSI_SYNC_CACHE and SCSU_SET_CD_SPEED responsed have been faked until Jviewer implements these commands. SCSI_INQUIRY and SCSI_REQUEST_SENSE commands respond with CSW_PASSED when direction flag is set OUT.
+
+Files Modified: data/bot.c, data/scsi.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 25 May 2010 13:02:13 EDT
+
+Package: usbe (1.0.26); urgency = medium
+
+Abstract:
+	removed 3 seconds delay is causing issue with yarkon virtual media devices when run from flash. NFS seems to be working. So keeping a delay 1 second now until yarkon issue is figured out.
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 13 May 2010 17:27:35 EDT
+
+Package: usbe (1.0.25); urgency = high
+
+Abstract:
+	This is to fix usb driver crash during Yafu USB flashing.
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 13 May 2010 11:09:04 EDT
+
+Package: usbe (1.0.24); urgency = medium
+
+Abstract:
+	Modified Rules to not to unload module when Firmware upgrade usb being used
+
+Files Modified: spx/PACKAGES.D/usbe/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 12 May 2010 16:22:12 EDT
+
+Package: usbe (1.0.23); urgency = low
+
+Abstract:
+	Removing the delay as this delay seems no longer needed to work with phoenix bios.
+
+Files Modified: data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 12 May 2010 10:44:37 EDT
+
+Package: usbe (1.0.22); urgency = low
+
+Abstract:
+	Support added to use both IN and OUT endpoints of same endpoint number.
+
+Files Modified: data/bot.c, data/coreusb.c, data/coreusb.h, data/descriptors.c, data/descriptors.h, data/mod_reg.c, data/proc.c, data/setup.c, data/usb_core.h, data/usb_hw.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 07 May 2010 10:00:53 EDT
+
+Package: usbe (1.0.21); urgency = low
+
+Abstract:
+	interface info structure is initialized for 6th USB_HW device. The MAX_USB_HW was 5 before. owner field is added to usb driver file_operations structure.
+
+Files Modified: data/descriptors.c, data/driver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 21 Apr 2010 10:56:40 EDT
+
+Package: usbe (1.0.20); urgency = low
+
+Abstract:
+	new IOCTL to read the current connect/disconnect state of USB hardware device added
+
+Files Modified: data/driver.c, data/usb_ioctl.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 20 Apr 2010 15:01:11 EDT
+
+Package: usbe (1.0.19); urgency = low
+
+Abstract:
+	open and release calls added in the USB driver.
+
+Files Modified: data/driver.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 19 Apr 2010 17:32:46 EDT
+
+Package: usbe (1.0.18); urgency = high
+
+Abstract:
+	1.Check added for SCSI_UNIT_TEST_READY command Data tranferlength filed to pass MSC tests of USB command verifier.
+2.wLength and Datalen fields of InRequest and OutRequest of DevInfo are set to 0 when Bus Reset occures.
+
+Files Modified: data/bot.c, data/coreusb.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 12 Apr 2010 10:37:00 EDT
+
+Package: usbe (1.0.17); urgency = low
+
+Abstract:
+	Max USB hardware devices have been increased to 6 as some SOCs have 6 USB controllers.
+
+Files Modified: data/usb_hw.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 01 Apr 2010 12:20:39 EDT
+
+Package: usbe (1.0.16); urgency = medium
+
+Abstract:
+	Currently, USB core does not check the return value of hardware module interrupt handler. Now support added to check the return value of interrupt handler. This will help handling shared interrupt situation when two hardware modules share a single IRQ.
+
+Files Modified: data/entry.c, data/coreusb.c, data/entry.h, data/coreusb.h, data/driver.c, data/usb_hw.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 01 Apr 2010 09:25:56 EDT
+
+Package: usbe (1.0.15); urgency = low
+
+Abstract:
+	changes result of luncombo now will have harddisk along with cd and fd.
+
+Files Modified: data/bot_if.h, data/bot.c, data/usb_hw.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 26 Mar 2010 18:13:18 EDT
+
+Package: usbe (1.0.14); urgency = low
+
+Abstract:
+	changes not to send zero length packet when requested datalength is same as response data length
+
+Files Modified: data/coreusb.c, data/setup.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 22 Mar 2010 12:05:49 EDT
+
+Package: usbe (1.0.13); urgency = medium
+
+Abstract:
+	This change improves the hermon cdspeed performance from 2x to 17x.
+
+Files Modified: data/coreusb.c, data/usb_hw.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 19 Mar 2010 13:06:23 EDT
+
+Package: usbe (1.0.12); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 18:12:51 EDT
+
+Package: usbe (1.0.11); urgency = low
+
+Abstract:
+	added support for SCSI_MODE_SENSE_6 command.
+
+Files Modified: data/scsi.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 25 Feb 2010 10:53:50 EST
+
+Package: usbe (1.0.10); urgency = medium
+
+Abstract:
+	using MaxPacketSize of Endpoint descriptor instead of hardware Endpoint size. we need not use the hardware endpoint size as it is in the endpoint descriptors.
+
+Files Modified: data/coreusb.c, data/usb_core.h, data/mod_reg.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 24 Feb 2010 11:34:43 EST
+
+Package: usbe (1.0.9); urgency = medium
+
+Abstract:
+	delay after disconnect to work with option ROM and EFI Bios
+
+Files Modified: data/coreusb.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 19 Feb 2010 10:09:37 EST
+
+Package: usbe (1.0.8); urgency = low
+
+Abstract:
+	used CfgIndex instead of hardcoded configuration value.
+
+Files Modified: data/proc.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 17 Feb 2010 17:53:38 EST
+
+Package: usbe (1.0.7); urgency = medium
+
+Abstract:
+	Timeout handling is added.
+
+Files Modified: data/linux.c, data/linux.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 17 Feb 2010 15:06:30 EST
+
+Package: usbe (1.0.6); urgency = low
+
+Abstract:
+	reuse the endpoints for new configurations of the same device.
+
+Files Modified: data/descriptors.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 12 Feb 2010 12:53:33 EST
+
+Package: usbe (1.0.5); urgency = low
+
+Abstract:
+	unused include file has been removed.
+
+Files Deleted: data/setup_inc.h
+Files Modified: data/coreusb.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 11 Feb 2010 17:15:29 EST
+
+Package: usbe (1.0.4); urgency = low
+
+Abstract:
+	The Virtual Ethernel Send buffers increased to 6
+
+Files Modified: data/linux.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 11 Feb 2010 14:18:53 EST
+
+Package: usbe (1.0.3); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:24:02 EST
+
+Package: usbe (1.0.2); urgency = low
+
+Abstract:
+	USB command verifier sends wrong interface number (0xFF) during class requests. So Validation of interface number added.
+
+Files Modified: data/descriptors.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 09 Feb 2010 14:46:20 EST
+
+Package: usbe (1.0.1); urgency = high
+
+Abstract:
+	changed to work with 8-byte EP0 buffer size and multiple buffers added to minimize the packet drop.
+
+Files Modified: data/linux.c, data/linux.h, data/coreusb.c, data/coreusb.h, spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 08 Feb 2010 17:11:23 EST
+
+Package:usbe (1.0.0);urgency=new
+
+Abstract:
+	This package provides the common (hardware independent) USB core driver module.
+
+Files Added: Makefile, hid_usb.h, usb_core.h, setup_inc.h, bot.c, module.c, entry.c, usb_driver.h, bot_if.h, usb_hw.h, arch.h, descriptors.c, mod_reg.c, setup.c, descriptors.h, iusb.h, scsi.h, bot.h, entry.h, mod_reg.h, proc.c, setup.h, linux.h, usb_module.h, linux.c, usb_ioctl.h, driver.c, coreusb.h, proc.h, header.h, coreusb.c
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Mon, 1 Feb 2010 14:21:19 -0500

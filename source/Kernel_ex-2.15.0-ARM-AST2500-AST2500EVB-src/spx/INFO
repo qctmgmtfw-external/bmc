@@ -1,0 +1,55 @@
+Source : Kernel_ex
+Version : 2.15.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Ivan Lee (ivanlee@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : Kernel_ex, Kernel_dev_ex, Kernel_modules_ex
+Build-Depends : buildtools, Crosscc, Kernel_platform_ast2500evb_ex, Kernel_oem_ast2500evb_ex
+Customization-Type : CONFIG
+Architecture : ARM
+SOC : AST2500
+PLATFORM : AST2500EVB
+Urgency : high
+Description : AST2500EVB Kernel 3.14.x configuration
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Kernel_ex
+Section : app
+Group : BASE
+Essential : YES
+Feature-Required : CONFIG_SPX_FEATURE_GLOBAL_KERNEL_VER3
+Required : DevNodes
+Provides : kernel
+Description : Provides the binary Kernel image that can be used on AST2500EVB
+.
+
+Package : Kernel_dev_ex
+Section : dev
+Group : DEVEL
+Essential : YES
+Feature-Required : CONFIG_SPX_FEATURE_GLOBAL_KERNEL_VER3
+Provides : kernel_dev
+Description : Provides the Kernel Development files - Needed for driver developement
+.
+
+Package : Kernel_modules_ex
+Section : app
+Group : BASE
+Essential : YES
+Feature-Required : CONFIG_SPX_FEATURE_GLOBAL_KERNEL_VER3
+Provides : kernel_modules
+Description : Kernel Module drivers.
+.
+

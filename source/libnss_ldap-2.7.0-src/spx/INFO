@@ -1,0 +1,32 @@
+Source : libnss_ldap
+Version : 2.7.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Siva Prakash R (sivaprakashr@amiindia.co.in)
+License : LGPL-V2.1
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : libnss_ldap
+Build-Depends : libuserm_dev, libpamhelper_dev, libuserauth_dev, libUserPrivilege_dev, libfeaturedefine_dev, libuserprivilegepdk_dev, libiniparser_dev, libldapconf_dev
+Architecture : ALL
+Urgency : medium
+Description : Implementation of libnss for ldap
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libnss_ldap
+Section : lib
+Group : AUTHENTICATION
+Essential : NO
+Required : pam_helperd, libuserauth, libUserPrivilege, libfeaturedefine, libuserprivilegepdk, libiniparser, libpamhelper, libuserm, libldapconf
+Description : Provides the libnss_ldap functionality
+.
+

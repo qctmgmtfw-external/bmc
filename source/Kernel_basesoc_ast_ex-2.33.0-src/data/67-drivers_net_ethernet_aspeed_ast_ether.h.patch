@@ -1,0 +1,63 @@
+--- linux/drivers/net/ethernet/aspeed/ast_ether.h	2015-07-02 20:38:06.188151519 +0800
++++ linux.new/drivers/net/ethernet/aspeed/ast_ether.h	2015-07-02 20:40:43.988153212 +0800
+@@ -1,6 +1,11 @@
+ #ifndef _AST_ETHER_H_
+ #define _AST_ETHER_H_
+ 
++// Quanta start
++#define CONFIG_QUANTA_BROADCAST_STORM
++#define CONFIG_QUANTA_BROADCAST_STORM_AMA_ONLY
++// Quanta end
++
+ #ifdef CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT
+ #define AST_ETHER_MAX_NUM       CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT
+ #else
+@@ -142,6 +147,9 @@
+ #define BROADCOM_BCM5421_OUI    0x180361
+ #define REALTEK_RTL82X1X_OUI	0x000732
+ #define MICREL_KSZ80X1_OUI		0x000885
++// Quanta start
++#define SMSC_LAN9303_OUI  0x00800F
++// Quanta end
+ 
+ /* addresses of PHY common registers */
+ #define PHY_COM_REG_ADDR_CONTROL 0
+@@ -203,6 +211,17 @@
+ #define MICREL_KSZ8041_REG_STATUS_HALF_100		0x0002 /* 010 */
+ #define MICREL_KSZ8041_REG_STATUS_HALF_10		0x0001 /* 001 */
+ 
++// Quanta start
++#define SMSC_LAN9303_REG_SPECIAL_CONTROL_STATUS		0x1F
++
++#define SMSC_LAN9303_REG_STATUS_MASK			0x001C /* bits[4:2] */
++#define SMSC_LAN9303_REG_STATUS_SHIFT			2
++#define SMSC_LAN9303_REG_STATUS_FULL_100		0x0006 /* 110 */
++#define SMSC_LAN9303_REG_STATUS_FULL_10		0x0005 /* 101 */
++#define SMSC_LAN9303_REG_STATUS_HALF_100		0x0002 /* 010 */
++#define SMSC_LAN9303_REG_STATUS_HALF_10		0x0001 /* 001 */
++// Quanta end
++
+ /* these valuse are the same for almost every PHY */
+ #define PHY_DUPLEX_HALF		0x00
+ #define PHY_DUPLEX_FULL		0x01
+@@ -255,10 +274,10 @@
+ /*---------------------------------------------------------------------------*/
+ 
+ /* the length of buffer length has to be a power of two */
+-#define RX_DES_NUM		32
++#define RX_DES_NUM		64/*32 Quanta*/
+ #define RX_BUF_SIZE		1536
+ 
+-#define TX_DES_NUM		32
++#define TX_DES_NUM		64/*32 Quanta*/
+ #define TX_BUF_SIZE		1536
+ 
+ struct ast_eth_desc {
+@@ -311,6 +330,7 @@
+        struct net_device *dev;
+        struct napi_struct napi;
+ #endif
++	u32 bcs_flag;//Quanta++
+ 	u8 phy_addr;
+ };
+ 

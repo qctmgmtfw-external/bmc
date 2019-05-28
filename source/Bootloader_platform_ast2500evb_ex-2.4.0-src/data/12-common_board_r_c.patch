@@ -1,0 +1,318 @@
+--- uboot/common/board_r.old	2018-04-03 14:28:58.433202901 +0800
++++ uboot/common/board_r.c	2018-04-03 14:27:39.525200943 +0800
+@@ -717,7 +717,28 @@
+ 
+ #ifdef CONFIG_BOARDID_IN_EEPROM
+ // Quanta ------ 
+-#define BOARDID_S7D "06"
++#define BOARDID_S5B   "00"
++#define BOARDID_S5B1  "01"
++#define BOARDID_S5BQ  "05"
++#define BOARDID_S5BV  "10"
++#define BOARDID_S5BT  "14"
++#define BOARDID_S5BM  "15"
++#define BOARDID_S5S   "03"
++#define BOARDID_S5T   "0D"
++#define BOARDID_S7D   "06"
++#define BOARDID_S5SF   "0E"
++#define BOARDID_S5BA  "12"
++#define BOARDID_S5E  "17"
++
++
++
++
++
++
++
++
++
++
+ #define UNLOCK_SCU() *((volatile ulong*) SCU_KEY_CONTROL_REG) = 0x1688A8A8
+ #define LOCK_SCU() *((volatile ulong*) SCU_KEY_CONTROL_REG) = 0x00
+ #define SCU_MISC_MULTI_PIN1_REG  	(AST_SCU_VA_BASE +  0x80)
+@@ -787,6 +808,117 @@
+ 	return 0;
+  }
+ 
++static int platform_s5b_init(void)
++ {
++	UNLOCK_SCU();
++
++	*((volatile unsigned long *) 0x1e6e0240)=0x85000002;
++
++
++
++
++
++
++	LOCK_SCU();
++	printf("[U-Boot]S5B platform init\n");
++
++	return 0;
++ }
++
++static int platform_s5bt_init(void)
++ {
++	UNLOCK_SCU();
++
++	*((volatile unsigned long *) 0x1e6e0240)=0x84000002;
++
++
++
++
++    
++
++	LOCK_SCU();
++	printf("[U-Boot]S5BT platform init\n");
++
++	return 0;
++ }
++
++static int platform_s5t_init(void)
++ {
++	UNLOCK_SCU();
++
++	*((volatile unsigned long *) 0x1e6e0240)=0x84000002;
++    
++
++
++
++    
++
++	LOCK_SCU();
++	printf("[U-Boot]S5T platform init\n");
++
++	return 0;
++ }
++
++static int platform_s5s_init(void)
++ {
++	UNLOCK_SCU();
++
++	*((volatile unsigned long *) 0x1e6e0240)=0x84000002;
++
++
++
++
++    
++
++	LOCK_SCU();
++	printf("[U-Boot]S5S platform init\n");
++
++	return 0;
++ }
++
++static int platform_s5ba_init(void)
++ {
++	UNLOCK_SCU();
++
++	*((volatile unsigned long *) 0x1e6e0240)=0x84000002;
++
++    
++
++	LOCK_SCU();
++	printf("[U-Boot]S5BA platform init\n");
++
++	return 0;
++}
++
++static int platform_s5e_init(void)
++ {
++	UNLOCK_SCU();
++
++	*((volatile unsigned long *) 0x1e6e0240)=0x97000002;
++
++    
++
++	LOCK_SCU();
++	printf("[U-Boot]S5E platform init\n");
++
++	return 0;
++}
++
++#if 0
++static int platform_s5ba_init(void)
++ {
++	UNLOCK_SCU();
++
++	*((volatile unsigned long *) 0x1e6e0240)=0x84000002;
++
++    
++
++	LOCK_SCU();
++	printf("[U-Boot]S5BA platform init\n");
++
++	return 0;
++}
++#endif
+  /**
+   * Default initialization, for most of the projects
+   */
+@@ -834,6 +966,114 @@
+ 	return is_valid_fru() && (boardid_str[0] == *s7dId && boardid_str[1] == *(s7dId+1)) ? 1 : 0;
+ }
+ 
++int is_s5b_platform(void)
++{
++    int result=0;
++    char *id1 = BOARDID_S5B;  //"00"
++    char *id2 = BOARDID_S5B1; //"01"
++    char *id3 = BOARDID_S5BQ; //"05"	
++    char *id4 = BOARDID_S5BV; //"10"	
++	 char *id5 = BOARDID_S5BM; //"15"
++
++
++
++
++    result  = (boardid_str[0] == *id1 && boardid_str[1] == *(id1+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id2 && boardid_str[1] == *(id2+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id3 && boardid_str[1] == *(id3+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id4 && boardid_str[1] == *(id4+1)) ? 1 : 0;
++	 result |= (boardid_str[0] == *id5 && boardid_str[1] == *(id5+1)) ? 1 : 0;
++    return is_valid_fru() && result;
++}
++
++int is_s5bt_platform(void)
++{
++    int result;
++	char *id = BOARDID_S5BT;	
++    
++
++
++
++    result = (boardid_str[0] == *id && boardid_str[1] == *(id+1)) ? 1 : 0;
++    
++
++	return is_valid_fru() && result;
++}
++
++int is_s5t_platform(void)
++{
++    int result;
++	char *id = BOARDID_S5T;	
++    
++
++
++
++    result = (boardid_str[0] == *id && boardid_str[1] == *(id+1)) ? 1 : 0;
++    
++
++	return is_valid_fru() && result;
++}
++
++int is_s5s_platform(void)
++{
++    int result;
++	char *id = BOARDID_S5S;	
++ 	char *id1 = BOARDID_S5SF; //"0E"
++
++    result = (boardid_str[0] == *id && boardid_str[1] == *(id+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id1 && boardid_str[1] == *(id1+1)) ? 1 : 0;
++
++	return is_valid_fru() && result;
++}
++
++int is_s5ba_platform(void)
++{
++    int result;
++	char *id = BOARDID_S5BA;	
++    
++
++
++
++    result = (boardid_str[0] == *id && boardid_str[1] == *(id+1)) ? 1 : 0;
++    
++
++	return is_valid_fru() && result;
++}
++
++
++int is_s5e_platform(void)
++{
++    int result;
++	char *id = BOARDID_S5E;	
++
++    result = (boardid_str[0] == *id && boardid_str[1] == *(id+1)) ? 1 : 0;
++
++	return is_valid_fru() && result;
++}
++
++#if 0
++int is_s5s_platform(void)
++{
++    int result;
++	char *id = BOARDID_S5S;	
++ 	char *id1 = BOARDID_S5SF; //"0E"
++
++    result = (boardid_str[0] == *id && boardid_str[1] == *(id+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id1 && boardid_str[1] == *(id1+1)) ? 1 : 0;
++
++	return is_valid_fru() && result;
++}
++#endif
++
++
++
++
++
++
++
++
++
++
+ /**
+  *  Run platform specific initialization here
+  */
+@@ -842,6 +1082,52 @@
+ 	if (is_s7d_platform())
+ 		return platform_s7d_init();
+ 
++    if (is_s5b_platform())
++    {
++
++        platform_s5b_init();
++
++    }
++    else if (is_s5bt_platform())
++    {
++
++        platform_s5bt_init();
++        
++    }
++    else if (is_s5s_platform())
++    {
++
++        platform_s5s_init();
++        
++    }
++    else if (is_s5t_platform())
++    {
++
++        platform_s5t_init();
++        
++    }
++    else if (is_s5ba_platform())
++    {
++
++        platform_s5ba_init();
++        
++    }
++	else if (is_s5e_platform())
++	{
++		platform_s5e_init();
++	}
++
++
++
++
++
++
++
++
++
++
++
++
+ 	return platform_default_init();
+ }
+ 

@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Interface $IFACE has gone down"
+exit 0

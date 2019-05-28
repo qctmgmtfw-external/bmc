@@ -1,0 +1,22 @@
+{
+  "name": "bower-xcharts",
+  "version": "0.3.0",
+  "main": "./xcharts.js",
+  "description": "A D3-based library for building custom charts and graphs.",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vperron/bower-xcharts.git"
+  },
+  "homepage": "https://github.com/vperron/bower-xcharts",
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "461e7d2c9c76efe3099a85aa93d9a3f3669bb3f8"
+  },
+  "_source": "git://github.com/vperron/bower-xcharts.git",
+  "_target": "~0.3.0",
+  "_originalSource": "bower-xcharts",
+  "_direct": true
+}

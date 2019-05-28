@@ -1,0 +1,41 @@
+Source : pwmtach
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Vinay Tandon (vinayt@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : pwmtach, pwmtach_driver_dev
+Build-Depends : kernel_dev, global_dev, rules, Crosscc, helper_driver_dev, libdbgout_dev, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : Added get_pwm_dutycycle function.  Also changed set_duty_cycle to allow values from 1 - 100 for better precision (0x01 - 0xff); pwm max is (0x00)
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : pwmtach
+Config-Tag : PWMTACH Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_pwmtach
+Required : helper, DevNodes
+Description : PWMTACH common driver module
+.
+
+Package : pwmtach_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package includes PWMATACH driver Development header files.
+.
+

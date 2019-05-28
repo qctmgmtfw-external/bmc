@@ -1,0 +1,15 @@
+--- linux-3.14.17/mm/Kconfig	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/mm/Kconfig	2014-08-21 12:26:48.601613946 -0400
+@@ -1,3 +1,12 @@
++config BIGPHYS_AREA
++	bool "Support for big physical area reservation"
++	---help---
++	  Enables kernel support for reserving large areas of physical memory
++	  at boot-time for use by certain device drivers (such as video
++	  framegrabbers, etc.) which require it. To use this feature, boot
++	  the kernel with the boot-time option 'bigphysarea=nnn' where
++	  'nnn' is the number of pages (a page is usually 4K) to reserve.
++
+ config SELECT_MEMORY_MODEL
+ 	def_bool y
+ 	depends on ARCH_SELECT_MEMORY_MODEL

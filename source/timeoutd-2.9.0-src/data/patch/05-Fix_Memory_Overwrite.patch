@@ -1,0 +1,67 @@
+--- timeoutd/timeoutd.c	2015-03-06 21:12:16.647620577 +0530
++++ timeoutd.new/timeoutd.c	2015-03-06 21:12:53.555890455 +0530
+@@ -262,8 +262,24 @@
+         syslog(SYSLOG_DEBUG, "Running in user check mode.  Checking user %s on %s.", argv[1], argv[2]);
+         closelog();
+ #endif
+-    	strcpy(dev, "/dev/");
+-    	strcat(dev, argv[2]);
++        if ((argv[2] != NULL) && (strlen(argv[2]) < 20))
++        {
++            strcpy(dev, "/dev/");
++            if((sizeof(dev) - strlen(dev) - 1) >= strlen(argv[2])) /*Source Size should be less than Destination Size*/            
++                strcat(dev, argv[2]);
++            else
++            {
++                printf("Error: Source size= %s is larger than Destination Size\n",argv[2]);
++                return -1;
++            }
++        }
++        else
++        {
++            openlog("timeoutd", OPENLOG_FLAGS, LOG_DAEMON);
++            syslog(LOG_ERR, "Incorrect invocation of timeoutd, invalid device(%s).", argv[2]);
++            closelog();
++            exit(5);
++        }
+         time_now = time((time_t *)0);  /* get current time */
+         now = *(localtime(&time_now));  /* Break it into bits */
+         now_hhmm = now.tm_hour * 100 + now.tm_min;
+@@ -704,6 +720,11 @@
+     else strcpy(set, in_set);
+ 
+     t = strtok(set, " ,");
++    if(strlen(t) > strlen(in_set)) /* Avoid Buffer overflow */
++    {
++        printf("timeoutd.c:Line no-717: Buffer overflow\n");
++        return 0;
++    }
+     while (t)
+     {
+         if (t[strlen(t)-1] == '*')
+@@ -775,7 +796,7 @@
+ 	        }
+ #endif
+                 if (/*logout_p->elem.ut_type == DEAD_PROCESS &&*/
+-                  !strcmp(login_p->elem.ut_line, logout_p->elem.ut_line))
++                  !strncmp(login_p->elem.ut_line, logout_p->elem.ut_line,sizeof(login_p->elem.ut_line)))
+                       break;
+                 prev_p = logout_p;
+                 logout_p = logout_p->next;
+@@ -1090,11 +1111,11 @@
+     }
+     else
+     {
+-    	if (limit_type == NOLOGINMSG)
+-    	    sprintf(msgbuf, "\r\n\r\nLogins not allowed at this time.  Please try again later.\r\n");
+-    	else
+-            sprintf(msgbuf, "\r\n\r\nYou have exceeded your %s time limit.  Logging you off now.\r\n\r\n", limit_names[(int)limit_type]);
+-    	write(tty, msgbuf, strlen(msgbuf));
++        if (limit_type == NOLOGINMSG)
++            snprintf(msgbuf,sizeof(msgbuf), "\r\n\r\nLogins not allowed at this time.  Please try again later.\r\n");
++        else
++            snprintf(msgbuf,sizeof(msgbuf), "\r\n\r\nYou have exceeded your %s time limit.  Logging you off now.\r\n\r\n", limit_names[(int)limit_type]);
++        write(tty, msgbuf, strlen(msgbuf));
+     }
+ }
+ 

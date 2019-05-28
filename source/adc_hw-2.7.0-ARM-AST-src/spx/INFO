@@ -1,0 +1,35 @@
+Source : adc_hw
+Version : 2.7.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Eric Hsu (erichsu@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : adc_hw
+Build-Depends : adc_driver_dev, Crosscc, helper_driver_dev, kernel_dev, rules, DevNodes
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : This package contains ADC hardware level driver for AST SOC
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : adc_hw
+Section : sys
+Group : DEVICE
+Essential : YES
+Depends : adc, kernel
+Required : helper, DevNodes
+Provides : adcDriver
+Description : This package contains built ADC hardware driver for AST2300EVB.
+.
+

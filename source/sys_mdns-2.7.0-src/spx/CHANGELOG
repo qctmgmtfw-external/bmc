@@ -1,0 +1,174 @@
+Package: sys_mdns (2.7.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/sys_mdns/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:27:11 EST
+
+Package: sys_mdns (2.6.0); urgency = low
+
+Abstract:
+	Added extra files and fixes for future target migrations and strict compilers
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 23 Jul 2015 14:32:44 EDT
+
+Package: sys_mdns (2.5.0); urgency = medium
+
+Abstract:
+	fix for eip 217944(mDNS: Avahi-daemon failed to start)
+
+Files Modified: spx/INFO, spx/RULES.D/files.lst
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Mon, 29 Jun 2015 09:38:13 HMT
+
+Package: sys_mdns (2.4.0); urgency = medium
+
+Abstract:
+	Changes done to assign proper run levels
+
+Files Modified: data/defaults/etc/init.d/avahi-daemon
+
+--Submitter: Winston (winstont@ami.com) Mon, 22 Jun 2015 01:36:02 EDT
+
+Package: sys_mdns (2.3.0); urgency = medium
+
+Abstract:
+	fix build error
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Thu, 20 Nov 2014 18:05:06 HMT
+
+Package: sys_mdns (2.2.0); urgency = medium
+
+Abstract:
+	fix for mDNS function doesn't work after User enabling on WebUI DNS page
+
+Files Modified: spx/PACKAGES.D/sys_mdns/SCRIPTS/dev-install, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Thu, 20 Nov 2014 11:49:16 HMT
+
+Package: sys_mdns (2.1.0); urgency = medium
+
+Abstract:
+	Fix for Binary Build.
+
+Files Modified: spx/PACKAGES.D/sys_mdns/SCRIPTS/dev-install
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Sun, 19 Oct 2014 05:15:51 HMT
+
+Package: sys_mdns (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:37:58 GMT
+
+Package: sys_mdns (1.10.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:03:08 GMT
+
+Package: sys_mdns (1.9.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:15:10 GMT
+
+Package: sys_mdns (1.8.0); urgency = medium
+
+Abstract:
+	mDNS function doesn't work after User enabling on WebUI DNS page
+
+Files Modified: spx/PACKAGES.D/sys_mdns/SCRIPTS/dev-install
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Thu, 07 Aug 2014 11:34:01 HMT
+
+Package: sys_mdns (1.7.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: spx/RULES.D/directory.lst, spx/RULES.D/files.lst
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:25:59 HMT
+
+Package: sys_mdns (1.6.0); urgency = medium
+
+Abstract:
+	Fix to resolve binary dependency
+
+Files Added: data/defaults, data/defaults/etc, data/defaults/etc/init.d, data/defaults/etc/init.d/avahi-daemon, data/defaults/usr, data/defaults/usr/lib, data/defaults/usr/lib/avahi, data/defaults/usr/lib/avahi/avahi-daemon-check-dns.sh
+Files Deleted: data/etc, data/etc/avahi, data/etc/avahi/avahi-daemon.conf, data/etc/avahi/hosts, data/etc/avahi/services, data/etc/dbus-1, data/etc/dbus-1/system.d, data/etc/dbus-1/system.d/avahi-dbus.conf, data/etc/default, data/etc/default/avahi-daemon, data/etc/init.d, data/etc/init.d/avahi-daemon, data/etc/network, data/etc/network/if-post-down.d, data/etc/network/if-post-down.d/avahi-daemon, data/etc/network/if-up.d, data/etc/network/if-up.d/avahi-daemon, data/etc/resolvconf, data/etc/resolvconf/update-libc.d, data/etc/resolvconf/update-libc.d/avahi-daemon, data/usr, data/usr/lib, data/usr/lib/avahi, data/usr/lib/avahi/avahi-daemon-check-dns.sh, data/usr/sbin, data/usr/share, data/usr/share/avahi, data/usr/share/avahi/avahi-service.dtd
+Files Modified: spx/PACKAGES.D/sys_mdns/SCRIPTS/dev-install, spx/RULES, spx/RULES.D/softlink.lst
+
+--Submitter: Winston (winstont@ami.com) Fri, 02 May 2014 15:00:34 GMT
+
+Package: sys_mdns (1.5.0); urgency = high
+
+Abstract:
+	Fix for Multicast DNS
+
+Files Modified: data/etc/init.d/avahi-daemon, spx/PACKAGES.D/sys_mdns/SCRIPTS/dev-install, spx/RULES.D/files.lst
+
+--Submitter: Winston (winstont@ami.com) Thu, 10 Apr 2014 20:14:04 GMT
+
+Package: sys_mdns (1.4.0); urgency = medium
+
+Abstract:
+	Adding proper description and correcting P.CONFIG.
+
+Files Modified: spx/INFO, spx/P.CONFIG, spx/PACKAGES.D/sys_mdns/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Wed, 02 Oct 2013 16:01:26 EDT
+
+Package: sys_mdns (1.3.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/P.CONFIG, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:13:24 EDT
+
+Package: sys_mdns (1.2.0); urgency = medium
+
+Abstract:
+	Adding P.CONFIG for binary.
+
+Files Added: spx/PACKAGES.D/sys_mdns/P.CONFIG
+Files Modified: spx/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Tue, 17 Sep 2013 12:10:35 EDT
+
+Package: sys_mdns (1.1.0); urgency = medium
+
+Abstract:
+	Fix in dev-install.
+
+Files Modified: spx/PACKAGES.D/sys_mdns/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Mon, 16 Sep 2013 20:15:51 EDT
+
+Package: sys_mdns (1.0.0); urgency = new
+
+Abstract:
+	Multicast DNS
+
+Files Added: data, data/etc, data/etc/avahi, data/etc/avahi/avahi-daemon.conf, data/etc/avahi/hosts, data/etc/avahi/services, data/etc/dbus-1, data/etc/dbus-1/system.d, data/etc/dbus-1/system.d/avahi-dbus.conf, data/etc/default, data/etc/default/avahi-daemon, data/etc/init.d, data/etc/init.d/avahi-daemon, data/etc/network, data/etc/network/if-post-down.d, data/etc/network/if-post-down.d/avahi-daemon, data/etc/network/if-up.d, data/etc/network/if-up.d/avahi-daemon, data/etc/resolvconf, data/etc/resolvconf/update-libc.d, data/etc/resolvconf/update-libc.d/avahi-daemon, data/usr, data/usr/lib, data/usr/lib/avahi, data/usr/lib/avahi/avahi-daemon-check-dns.sh, data/usr/sbin, data/usr/share, data/usr/share/avahi, data/usr/share/avahi/avahi-service.dtd, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/sys_mdns, spx/PACKAGES.D/sys_mdns/DATA, spx/PACKAGES.D/sys_mdns/SCRIPTS, spx/PACKAGES.D/sys_mdns/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Abhitesh (abhiteshk@amiindia.co.in) Thu, 04 Apr 2013 21:28:44 HMT
+

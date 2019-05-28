@@ -1,0 +1,16 @@
+# Install Script
+
+build-install:
+	#copy header file
+    MKDIR_NOCLEAN %SPXLIB/raphters
+	MKDIR_NOCLEAN %SPXINC/raphters      
+    COPY_FILE ./raphters.h %SPXINC/raphters
+    COPY_FILE ./dispatcher.h %SPXINC/raphters
+    COPY_FILE ./request.h %SPXINC/raphters
+    COPY_FILE ./response.h %SPXINC/raphters
+    COPY_FILE ./error.h %SPXINC/raphters
+    COPY_FILE ./libraphters.a %SPXLIB/raphters
+	COPY_FILE libraphters.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/raphters
+	ADD_LIBRARY_LINKS %SPXLIB/raphters libraphters.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+	
+debug-install:

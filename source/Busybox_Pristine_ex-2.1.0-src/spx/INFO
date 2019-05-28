@@ -1,0 +1,24 @@
+Source                   	:	Busybox_Pristine_ex
+Version : 2.1.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher  (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	http://www.busybox.net
+Source-Version           	:	1.21.1
+Builds                   	:	Busybox_Pristine_ex
+Build-Depends            	:	BaseSystem,Crosscc
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	BusyBox - The Swiss Army Knife of Embedded Linux
+.
+
+Package                  	:	Busybox_Pristine_ex
+Section                  	:	info
+Group                    	:	BASE
+Essential                	:	YES
+Feature-Required         	:	CONFIG_SPX_FEATURE_GLOBAL_BUSYBOX_EX
+Description              	:	BusyBox - The Swiss Army Knife of Embedded Linux
+.
+

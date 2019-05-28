@@ -1,0 +1,41 @@
+Source : netmon
+Version : 2.5.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Samvinesh Christopher (vineshc@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : netmon, netmon_driver_dev
+Build-Depends : kernel_dev, rules, Crosscc, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : Network Interface Monitor. It monitors addition/removal of network interface and changes in the Interface status.Applications query the Interface count, name and information. Also applications use ioctl calls to wait for Interface changes
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : netmon
+Config-Tag : NETMON Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel
+Required : helper, DevNodes
+Description : Network Interface Monitor. It monitors addition/removal of network interface and changes in the Interface status.Applications query the Interface count, name and information. Also applications use ioctl calls to wait for Interface changes
+.
+
+Package : netmon_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : Network Interface Monitor Development Package. It monitors addition/removal of network interface and changes in the Interface status.Applications query the Interface count, name and information. Also applications use ioctl calls to wait for Interface changesThis package Contains the related header files and libraries.
+.
+

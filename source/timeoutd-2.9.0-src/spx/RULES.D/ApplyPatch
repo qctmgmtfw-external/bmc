@@ -1,0 +1,21 @@
+#!bin/sh
+
+# Change to directory where the patch to be applied
+cd $1
+
+# Apply patches
+for i in  $2/*
+do
+        if ! [ -e $i ]
+        then
+                continue
+        fi
+        patch -p1 < $i > /dev/null
+        if [ $? != 0 ]
+        then
+                echo "Failed to patch $i"
+                exit 1
+        fi
+done
+
+exit 0

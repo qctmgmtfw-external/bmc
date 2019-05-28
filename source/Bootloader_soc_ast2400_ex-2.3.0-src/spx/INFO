@@ -1,0 +1,23 @@
+Source                   	:	Bootloader_soc_ast2400_ex
+Version : 2.3.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher  (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	2013.07
+Builds                   	:	Bootloader_soc_ast2400_ex
+Build-Depends            	:	Bootloader_basesoc_ast_ex
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	AST2400 SOC related patches to Bootloader Uboot-2013.07
+.
+
+Package                  	:	Bootloader_soc_ast2400_ex
+Section                  	:	info
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	AST2400 SOC related patches to Bootloader Uboot-2013.07
+.
+

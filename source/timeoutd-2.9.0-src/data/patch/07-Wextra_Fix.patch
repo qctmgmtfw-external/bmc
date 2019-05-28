@@ -1,0 +1,42 @@
+--- olddata/timeoutd.c	2015-12-28 16:00:46.806285178 +0530
++++ data/timeoutd.c	2015-12-28 16:00:58.118285540 +0530
+@@ -869,6 +869,9 @@
+     int		disc;
+ 
+     configline = 0;
++    if(0){
++        host=host;
++    }
+ 
+ #ifdef PWD_SUPPORT
+ /* Find primary group for specified user */
+@@ -1107,6 +1110,9 @@
+ void shutdown(signum)
+ int signum;
+ {
++    if(0){
++        signum=signum;
++    }
+     openlog("timeoutd", OPENLOG_FLAGS, LOG_DAEMON);
+     syslog(LOG_NOTICE, "Received SIGTERM.. exiting.");
+     closelog();
+@@ -1220,6 +1226,9 @@
+ {
+     int i = 0;
+ 
++    if(0){
++        signum=signum;
++    }
+     if (!allow_reread)
+         pending_reread = 1;
+     else
+@@ -1251,6 +1260,9 @@
+ {
+     int st;
+ 
++    if(0){
++        signum=signum;
++    }
+     wait(&st);
+     signal(SIGCHLD, reapchild);
+ }

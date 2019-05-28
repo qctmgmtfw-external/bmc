@@ -1,0 +1,130 @@
+Package: websockify (2.5.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/websockify/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Tue, 05 Jan 2016 00:01:44 EST
+
+Package: websockify (2.4.0); urgency = medium
+
+Abstract:
+	Fix For Bleeding Edge Compilation Errors
+
+Files Modified: data/websocket.c, data/websockify.c, spx/INFO, spx/LICENSES/LICENSE.LGPL-3
+
+--Submitter: rajaj (jraja@amiindia.co.in) Wed, 30 Dec 2015 20:11:07 IST
+
+Package: websockify (2.3.0); urgency = medium
+
+Abstract:
+	Corrected the license for websockify.
+
+Files Added: spx/LICENSES/LICENSE.LGPL-3
+Files Deleted: spx/LICENSES/LICENSE.OPENSOURCE
+Files Modified: spx/INFO
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Thu, 16 Jul 2015 17:35:25 HMT
+
+Package: websockify (2.2.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:34:45 GMT
+
+Package: websockify (2.1.0); urgency = medium
+
+Abstract:
+	Correcting GROUP field
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 24 Oct 2014 15:05:42 GMT
+
+Package: websockify (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 07:23:04 GMT
+
+Package: websockify (1.7.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:50:08 GMT
+
+Package: websockify (1.6.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 07:02:43 GMT
+
+Package: websockify (1.5.0); urgency = security
+
+Abstract:
+	Updating SSL method to be more secured
+
+Files Modified: data/websocket.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 08 Aug 2014 16:58:45 EDT
+
+Package: websockify (1.4.0); urgency = medium
+
+Abstract:
+	Changed from refering package name to Provides Value
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 12:14:08 EDT
+
+Package: websockify (1.3.0); urgency = high
+
+Abstract:
+	Added instance to run websockify for media redirection, modified the Makefile binary name
+
+Files Deleted: data/websockify
+Files Modified: data/Makefile, data/websockify.sh
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Tue, 27 May 2014 12:44:33 EDT
+
+Package: websockify (1.2.0); urgency = high
+
+Abstract:
+	Removed the base64 support and added binary support instead, because binary mode will be faster. base64 support can be added in the future if required. Currently only Little Endian to Big Endian is supported. Added comments in code to tell howto if anyone wants to convert from big endian to little endian
+
+Files Added: data/websockify
+Files Modified: data/Makefile, data/websocket.c, data/websocket.h, data/websockify.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 21 May 2014 17:21:45 EDT
+
+Package: websockify (1.1.0); urgency = medium
+
+Abstract:
+	Compiler/Linker errors fixed
+
+Files Modified: data/Makefile, data/websocket.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 25 Sep 2013 10:53:52 EDT
+
+Package: websockify (1.0.0); urgency = new
+
+Abstract:
+	This package contains the Websocket application.
+
+Files Added: data, data/Makefile, data/websocket.c, data/websocket.h, data/websockify.c, data/websockify.sh, spx, spx/BUGS, spx/BUGS/BUGS.SRC, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.OPENSOURCE, spx/PACKAGES.D, spx/PACKAGES.D/websockify, spx/PACKAGES.D/websockify/DATA, spx/PACKAGES.D/websockify/SCRIPTS, spx/PACKAGES.D/websockify/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Chandrasekar R (chandrasekarr@amiindia.co.in) Wed, 20 Mar 2013 15:24:01 HMT
+

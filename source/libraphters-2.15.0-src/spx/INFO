@@ -1,0 +1,39 @@
+Source : libraphters
+Version : 2.15.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Chandrasekar R (chandrasekarr@amiindia.co.in)
+License : LGPL-3
+Source-Location : https://github.com/DanielWaterworth/Raphters
+Source-Version : 1.0.0
+Builds : libraphters, libraphters_dev
+Build-Depends : libfcgi_dev, Crosscc, rules, global_dev, libqdecoder_dev
+Architecture : ALL
+Urgency : medium
+Description : Library package for raphters.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libraphters
+Section : lib
+Group : LIBRARY
+Essential : NO
+Required : libfcgi
+Description : RAPHTERS library.
+.
+
+Package : libraphters_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : RAPHTERS development header files.
+.
+

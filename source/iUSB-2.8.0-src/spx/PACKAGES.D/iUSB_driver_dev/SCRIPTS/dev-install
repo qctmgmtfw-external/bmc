@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXINC/iUSB
+	COPY_DIR ./ %SPXINC/iUSB
+	
+debug-install:

@@ -1,0 +1,46 @@
+diff -Naur linux/include/linux/mm.h linux.new/include/linux/mm.h
+--- linux/include/linux/mm.h	2016-12-12 19:18:41.311134764 +0800
++++ linux.new/include/linux/mm.h	2016-12-12 19:22:14.523134764 +0800
+@@ -1945,6 +1945,7 @@
+ #define FOLL_HWPOISON	0x100	/* check page is hwpoisoned */
+ #define FOLL_NUMA	0x200	/* force NUMA hinting page fault */
+ #define FOLL_MIGRATION	0x400	/* wait for page to replace migration entry */
++#define FOLL_COW        0x4000  /* intenal GUP flag */ 
+ 
+ typedef int (*pte_fn_t)(pte_t *pte, pgtable_t token, unsigned long addr,
+ 			void *data);
+diff -Naur linux/mm/memory.c linux.new/mm/memory.c
+--- linux/mm/memory.c	2016-12-12 19:19:50.543134764 +0800
++++ linux.new/mm/memory.c	2016-12-12 19:25:05.879134764 +0800
+@@ -1441,6 +1441,12 @@
+ }
+ EXPORT_SYMBOL_GPL(zap_vma_ptes);
+ 
++static inline bool can_follow_write_pte(pte_t pte, unsigned int flags) 
++{ 
++        return pte_write(pte) || 
++           ((flags & FOLL_COW) && pte_dirty(pte)); 
++} 
++
+ /**
+  * follow_page_mask - look up a page descriptor from a user-virtual address
+  * @vma: vm_area_struct mapping @address
+@@ -1561,7 +1567,7 @@
+ 	}
+ 	if ((flags & FOLL_NUMA) && pte_numa(pte))
+ 		goto no_page;
+-	if ((flags & FOLL_WRITE) && !pte_write(pte))
++	if ((flags & FOLL_WRITE) && !can_follow_write_pte(pte, flags))
+ 		goto unlock;
+ 
+ 	page = vm_normal_page(vma, address, pte);
+@@ -1868,7 +1874,7 @@
+ 				 */
+ 				if ((ret & VM_FAULT_WRITE) &&
+ 				    !(vma->vm_flags & VM_WRITE))
+-					foll_flags &= ~FOLL_WRITE;
++					foll_flags |= ~FOLL_COW;
+ 
+ 				cond_resched();
+ 			}
+

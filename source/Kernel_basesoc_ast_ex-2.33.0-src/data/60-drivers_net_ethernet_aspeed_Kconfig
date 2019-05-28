@@ -1,0 +1,40 @@
+--- linux/drivers/net/ethernet/aspeed/Kconfig	1970-01-01 05:30:00.000000000 +0530
++++ linux.new/drivers/net/ethernet/aspeed/Kconfig	2015-08-29 12:02:57.713327203 +0530
+@@ -0,0 +1,37 @@
++#
++# ASPEED network device configuration
++#
++
++config NET_ASPEED_MAC
++	bool "AST MAC devices"
++	default y
++	---help---
++	  If you want to enable the network (Ethernet) support for AST SOC, say Y
++
++
++if NET_ASPEED_MAC
++
++config ASTMAC100
++	tristate "Aspeed MAC100 support"
++	depends on ETHERNET && BASESOC_AST
++	default y
++	select PHYLIB
++	---help---
++	  This driver enables the latest ethernet driver from ASPEED for AST SOC.
++
++
++config LEGACY_ASTMAC100
++	tristate "Aspeed Legacy MAC100 support"
++	depends on ETHERNET && BASESOC_AST
++	default y
++	select PHYLIB
++	---help---
++	  This driver enables the legacy etherner driver from ASPEED for AST SOC.
++
++config AST_PHY_ADDR
++	int "AST MAC MII PHY Address" if ASTMAC100
++	default 31
++	---help---
++	  Phy Address for MAC devices
++
++endif # NET_ASPEED_MAC

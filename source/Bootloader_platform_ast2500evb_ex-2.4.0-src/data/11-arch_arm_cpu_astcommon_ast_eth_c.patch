@@ -1,0 +1,42 @@
+--- uboot_old/arch/arm/cpu/astcommon/ast_eth.c	2017-07-31 16:30:35.850695000 +0800
++++ uboot/arch/arm/cpu/astcommon/ast_eth.c	2017-10-19 10:45:17.039024000 +0800
+@@ -812,6 +812,22 @@
+        return 1; 
+ }  
+ 
++int ast_check_boardid(void)
++{
++#ifdef CONFIG_BOARDID_IN_EEPROM
++	extern int is_s7d_platform(void);
++	extern int is_valid_fru(void);
++
++	if ( is_s7d_platform() || !is_valid_fru() )	/** board id is not written yet */
++	{
++		printf("[U-BOOT] skip setting MDC1/MDIO1\n");
++		return 0;
++	}
++#endif
++
++	return 1;
++}
++
+ int ast_eth_initialize(bd_t *bis)
+ {
+ 	unsigned int scu_reg;
+@@ -859,9 +875,13 @@
+ 	*((volatile unsigned long *) SCU_SYS_RESET_REG) = scu_reg;
+ 
+ #if !defined(CONFIG_AST3200)
+-       /* Setting Multi PIN */ 
+-       scu_reg = *((volatile unsigned long *) SCU_MISC_MULTI_PIN3_REG); 
+-       *((volatile unsigned long *) SCU_MISC_MULTI_PIN3_REG) = (scu_reg | 0xC0000000); 
++	   /* Setting Multi PIN */ 
++	   
++	   	if (ast_check_boardid())
++	   	{
++			scu_reg = *((volatile unsigned long *) SCU_MISC_MULTI_PIN3_REG); 
++			*((volatile unsigned long *) SCU_MISC_MULTI_PIN3_REG) = (scu_reg | 0xC0000000); 
++		}
+  
+        if (use_num >= 2 && use_num <= 4) 
+        { 

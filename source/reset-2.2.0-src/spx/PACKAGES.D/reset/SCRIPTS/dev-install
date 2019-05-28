@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+				COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+				ADD_MODULES reset
+				MAKE_CHAR_NODE reset 110 0
+                
+debug-install:

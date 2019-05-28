@@ -1,0 +1,31 @@
+Source : Kernel_basesoc_ast_ex
+Version : 2.33.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Samvinesh Christopher (vineshc@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : Kernel_basesoc_ast_ex
+Build-Depends : Kernel_arch_arm_ex
+Architecture : ALL
+Urgency : medium
+Description : AST SOC Fixes to Kernel 3.4.74
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Kernel_basesoc_ast_ex
+Section : info
+Group : BASE
+Essential : NO
+Description : AST SOC Fixes to Kernel 3.4.74
+.
+

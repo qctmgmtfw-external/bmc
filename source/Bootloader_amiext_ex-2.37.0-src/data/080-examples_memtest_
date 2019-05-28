@@ -1,0 +1,484 @@
+--- uboot/examples/memtest/convert.c	1969-12-31 19:00:00.000000000 -0500
++++ uboot.exam/examples/memtest/convert.c	2014-07-28 17:23:30.965408920 -0400
+@@ -0,0 +1,481 @@
++/*************************************************************************
++RexDebug  - Generic Debugger 
++
++Copyright (c) 2000-2005, Samvinesh Christopher
++Written by Samvinesh Christopher.  Not derived from licensed software.
++
++Permission is granted to anyone to use this software for any purpose 
++on any computer system, and to redistribute it freely,subject to the 
++following restrictions:
++
++1. The author is not responsible for the consequences of use of this 
++   software, no matter how awful, even if they arise from defects in 
++   it.
++
++2. The origin of this software must not be misrepresented, either by 
++   explicit claim or by omission.
++
++3. Altered versions must be plainly marked as such, and must not  be 
++   misrepresented as being the original software.
++
++4. This notice may not be removed or altered.
++
++5. Commercial use of this software is allowed freely subject to prior
++   notificaiton to the author.
++**************************************************************************/
++#if 0
++#include <stdio.h>
++#include <string.h>			// Needs Strlen
++#include <ctype.h>			// Needs toupper
++#include "config.h"
++#include "types.h"
++#include "convert.h"
++#else
++#include <common.h>
++#include <exports.h>
++//#include <include/config.h>
++//#include <include/proto.h>
++//#include <include/helpers/helper.h>
++#include "types.h"
++char
++toupper(char ch)
++{
++	if ((ch >= 'a') && (ch <= 'z'))
++		return (ch - 'a'+ 'A');
++	return ch;
++}
++	
++#endif
++
++static 
++BOOL
++BinAsc2Value(char *Str,UINT32 *Value)
++{
++	UINT32	Index;
++	SINT16	StringLen;
++
++	StringLen = strlen(Str);
++
++	/* Check if it is in binary format */
++	if (toupper(Str[StringLen-1]) != 'B') 
++		return FALSE;
++
++	/* Skip b or B at the end */
++	StringLen -=1;
++
++	/* Maximum binary Characters allowed */
++	if (StringLen > 32)
++		return FALSE;
++
++	/* Initialize Value to Zero */
++	*Value = 0;
++
++	/* Initialize place value to 1. For Binary this will be multipled by 
++	   2 for every next higher place value */
++	Index = 1;
++
++	StringLen--; /* Least digit Index */	
++
++	/* Start from the least digit and work toward the higher digits */
++	for(;StringLen>=0;StringLen--,Index*=2)
++	{
++		/* Range from 0 to 1 */
++		if ((Str[StringLen] >= '0') && (Str[StringLen] <= '1')) 
++		{
++			*Value += ((Str[StringLen] - '0') * Index);
++			continue;
++		}
++		
++		/* Error Non binary character */
++		return FALSE;
++	}
++
++	return TRUE;
++}
++
++
++static 
++BOOL
++OctAsc2Value(char *Str,UINT32 *Value)
++{
++	UINT32 Index;
++	SINT16	StringLen;
++
++	StringLen = strlen(Str);
++
++	/* Check if it is in Octal format */
++	if (Str[0] != '0') 
++		return FALSE;
++		
++	/* Skip 0 and reduce String Len */
++	Str+=1;		
++	StringLen -=1;
++
++	/* Maximum Octal Characters allowed */
++	if (StringLen > 11)				
++		return FALSE;
++	if ((StringLen == 11) && (Str[0] > '3'))
++		return FALSE;
++		
++
++
++	/* Initialize Value to Zero */
++	*Value = 0;
++
++	/* Initialize place value to 1. For Octal this will be multipled by 
++	   8 for every next higher place value */
++	Index = 1;
++
++
++	StringLen--; /* Least digit Index */	
++
++	/* Start from the least digit and work toward the higher digits */
++	for(;StringLen>=0;StringLen--,Index*=8)
++	{
++		/* Range from 0 to 7 */
++		if ((Str[StringLen] >= '0') && (Str[StringLen] <= '7')) 
++		{
++			*Value += ((Str[StringLen] - '0') * Index);
++			continue;
++		}
++		
++		/* Error Non Octal character */
++		return FALSE;
++	}
++
++	return TRUE;
++}
++
++
++
++
++static 
++BOOL
++DecAsc2Value(char *Str,UINT32 *Value)
++{
++	UINT32 Index;
++	SINT16	StringLen;
++
++	StringLen = strlen(Str);
++
++	/* We don't convert negative Values */
++	if (Str[0] == '-')
++		return FALSE;
++
++		
++	/* Skip if a + or  - present and  reduce String Len */
++	if ((Str[0] == '+') || (Str[0] == '-'))
++	{
++		Str+=1;		
++		StringLen -=1;
++	}
++
++	/* Check if the Decimal Range is valid  0 to 4294967295 */
++	if (StringLen > 10)				
++		return FALSE;
++	if (StringLen == 10)
++	{
++		if (Str[0] < '4')
++			goto OkRange;
++		if (Str[0] > '4')
++			return FALSE;
++
++		/* Now Str[0] is 4 */
++		if (Str[1] < '2')	
++			goto OkRange;
++		if (Str[1] > '2')	
++			return FALSE;
++
++		/* Now Str[0..1] is 42 */
++		if (Str[2] < '9')	
++			goto OkRange;
++
++		/* Now Str[0..2] is 429 */
++		if (Str[3] < '4')	
++			goto OkRange;
++		if (Str[3] > '4')	
++			return FALSE;
++		
++		/* Now Str[0..3] is 4294 */
++		if (Str[4] < '9')	
++			goto OkRange;
++
++		/* Now Str[0..4] is 42949 */
++		if (Str[5] < '6')	
++			goto OkRange;
++		if (Str[5] > '6')	
++			return FALSE;
++
++		/* Now Str[0..5] is 429496 */
++		if (Str[6] < '7')	
++			goto OkRange;
++		if (Str[6] > '7')	
++			return FALSE;
++
++		/* Now Str[0..6] is 4294967 */
++		if (Str[7] < '2')	
++			goto OkRange;
++		if (Str[7] > '2')	
++			return FALSE;
++
++		/* Now Str[0..7] is 42949672 */
++		if (Str[8] < '9')	
++			goto OkRange;
++
++		/* Now Str[0..8] is 429496729 */
++		if (Str[9] < '5')	
++			goto OkRange;
++		if (Str[9] > '5')	
++			return FALSE;
++
++		/* Now Str[0..8] is 4294967295 */
++	}
++	
++OkRange:
++	/* Initialize Value to Zero */
++	*Value = 0;
++
++	/* Initialize place value to 1. For Decimal this will be multipled by 
++	   10 for every next higher place value */
++	Index = 1;
++
++
++	StringLen--; /* Least digit Index */	
++
++	/* Start from the least digit and work toward the higher digits */
++	for(;StringLen>=0;StringLen--,Index*=10)
++	{
++		/* Range from 0 to 9 */
++		if ((Str[StringLen] >= '0') && (Str[StringLen] <= '9')) 
++		{
++			*Value += ((Str[StringLen] - '0') * Index);
++			continue;
++		}
++		
++		/* Error Non Decimal character */
++		return FALSE;
++	}
++
++	return TRUE;
++}
++
++
++
++
++
++static 
++BOOL
++HexAsc2Value(char *Str,UINT32 *Value)
++{
++	UINT32 Index;
++	SINT16	StringLen;
++
++	StringLen = strlen(Str);
++
++	/* Check if it is in Hex format */
++	if ((Str[0] != '0') || (toupper(Str[1]) != 'X'))
++		return FALSE;
++
++	/* Skip 0x or 0X and reduce String Len */
++	Str+=2;		
++	StringLen -=2;
++
++	/* Maximum Hex Digit Characters allowed */
++	if (StringLen > 8)
++		return FALSE;
++
++	/* Initialize Value to Zero */
++	*Value = 0;
++
++	/* Initialize place value to 1. For hexadecimal this will be multipled by 
++	   16 for every next higher place value */
++	Index = 1;
++
++
++	StringLen--; /* Least digit Index */	
++
++	/* Start from the least digit and work toward the higher digits */
++	for(;StringLen>=0;StringLen--,Index*=16)
++	{
++		/* Range from 0 to 9 */
++		if ((Str[StringLen] >= '0') && (Str[StringLen] <= '9')) 
++		{
++			*Value += ((Str[StringLen] - '0') * Index);
++			continue;
++		}
++
++		/* Range from a to f */
++		if ((Str[StringLen] >= 'a') && (Str[StringLen] <= 'f'))
++		{
++			*Value += ((Str[StringLen] - 'a'+10) * Index);
++			continue;
++		}
++
++		/* Range from A to F */
++		if ((Str[StringLen] >= 'A') && (Str[StringLen] <= 'F'))
++		{
++			*Value += ((Str[StringLen] - 'A'+10) * Index);
++			continue;
++		}
++		
++		/* Error Non Hexadecimal character */
++		return FALSE;
++	}
++
++	return TRUE;
++}
++
++BOOL 
++Unsigned2Str(UINT32 Value, char *Asc, UINT16 AscLen, BOOL Qual, UINT16 Radix)
++{
++	UINT16 Index=0;
++	UINT16 Digit,i;
++	char  Temp;
++
++	if (Index >= AscLen)
++		return FALSE;
++
++	/* If need qualifier, suffix Binary (b) */
++	if (Qual)
++	{
++		if (Radix == 2)
++		{
++			Asc[Index++] = 'b';
++			if (Index >= AscLen)
++				return FALSE;
++		}
++	}
++	
++	/* If value is 0, put zero */
++	if (Value == 0)
++	{
++		Asc[Index++] = '0';
++		if (Index >= AscLen)
++			return FALSE;
++	}
++		
++	/* Convert the Value to string. The digits will be formed in reverse order */
++	while (Value != 0)
++	{
++		Digit = (UINT16)(Value%Radix);
++		if (Digit < 10)
++			Asc[Index++] = Digit + '0'; 
++		else
++			Asc[Index++] = Digit + 'A'-10; 
++		if (Index >= AscLen)
++			return FALSE;
++		Value /= Radix;
++	}
++
++	/* If need qualifier prefix Hex (0x) Octal (0) */
++	if (Qual)
++	{
++		if (Radix == 16)
++		{
++			Asc[Index++] = 'x';
++			Asc[Index++] = '0';
++		}
++		if (Radix == 8)
++		{
++			Asc[Index++] = '0';
++		}
++		if (Index >= AscLen)
++			return FALSE;
++	}
++
++	/* Terminate String */
++	Asc[Index] = 0;
++
++	/* Reverse the String */
++	for(i=0;i<Index/2;i++)
++	{
++		Temp = Asc[i];
++		Asc[i] = Asc[Index-1-i];
++		Asc[Index-1-i] = Temp;
++	}
++	return TRUE;
++}
++
++
++BOOL
++Signed2Str(SINT32 Value, char *Asc, UINT16 AscLen, BOOL Qual, UINT16 Radix)
++{
++	UINT32 PosValue;
++
++	/* If positive number */		
++	if (Value >=0)
++		return Unsigned2Str((UINT32)Value,Asc,AscLen,Qual,Radix);
++
++	/* For radix other than 10, there is no concept of negative number. So 
++       convert them into a equivalent +ve number and call Unsigned2Str */
++	if (Radix != 10)
++		return Unsigned2Str((UINT32)Value,Asc,AscLen,Qual,Radix);
++
++	/* Remove Negative Sign of Value and save a space in the string for - sign */
++	Asc++;
++	AscLen--;
++	PosValue = -Value;
++	if (Unsigned2Str(PosValue,Asc,AscLen,Qual,Radix) == FALSE)	
++		return FALSE;
++	
++	/* Add the - sign to the string */
++	Asc--;
++	*Asc='-';
++
++	return TRUE;
++}
++
++
++
++
++BOOL
++Str2Unsigned(char *Str,UINT32 *Value)
++{
++	BOOL Ret;
++
++	if (*Str == '+') 
++		Str++;
++	if (*Str == '-')
++		return FALSE;
++
++	/* 1. Try convert to Hex */
++	Ret = HexAsc2Value(Str,Value);
++	if (Ret == TRUE)
++		return TRUE;
++
++	/* 2. Try convert to Binary */
++	Ret= BinAsc2Value(Str,Value);
++	if (Ret == TRUE)
++		return TRUE;
++	
++	/* 3. Try convert to Octal */
++	Ret = OctAsc2Value(Str,Value);
++	if (Ret == TRUE)
++		return TRUE;
++
++	/* 4. Try convert to Decimal */	
++	return DecAsc2Value(Str,Value);
++}
++
++
++BOOL
++Str2Signed(char *Str,SINT32 *Value)
++{
++	UINT32 UValue;
++
++	if (Str[0] != '-')
++		return Str2Unsigned(Str,(UINT32 *)Value);
++	
++	
++	/* Remove the '-'  and do the conversion */
++	Str++;
++	if (Str2Unsigned(Str,&UValue) == FALSE)
++		return FALSE;
++
++	/* Check if exceeded the max possible positive INT32 value */
++	if (UValue > 2147483647L)
++		return FALSE;
++
++	*Value = -UValue;
++	return TRUE;
++}

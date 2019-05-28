@@ -1,0 +1,8 @@
+./usr/lib/libperl.so.5.14.2
+./lib/%MULTI_ARCH_LIB%/liblzma.so.5.0.0
+./usr/lib/%MULTI_ARCH_LIB%/libsensors.so.4.3.2
+./usr/lib/%MULTI_ARCH_LIB%/libxml2.so.2.8.0
+./usr/sbin/lldpd
+./usr/sbin/lldpctl
+./etc/default/lldpd
+./etc/init.d/lldpd

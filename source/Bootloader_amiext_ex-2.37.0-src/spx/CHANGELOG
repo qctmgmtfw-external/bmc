@@ -1,0 +1,483 @@
+Package: Bootloader_amiext_ex (2.37.0); urgency = medium
+
+Abstract:
+	corrected address computation in bootfmh command
+
+Files Added: data/098-oem_ami_fmh_cmd_fmh.c
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: rajaj (jraja@amiindia.co.in) Mon, 07 Mar 2016 19:45:36 IST
+
+Package: Bootloader_amiext_ex (2.36.0); urgency = high
+
+Abstract:
+	Remove workaround solutions that are no longer needed to fix can not access second spi flash issue.
+
+Files Modified: data/008-common_env_spi.c, data/097-drivers_spiflash_micron.c
+
+--Submitter: robinchiu (RobinChiu) Tue, 23 Feb 2016 13:54:06 JWST
+
+Package: Bootloader_amiext_ex (2.35.0); urgency = medium
+
+Abstract:
+	update for power8, review board #12189
+
+Files Modified: data/045-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: pearcelee (pearcelee) Wed, 03 Feb 2016 17:26:12 CST
+
+Package: Bootloader_amiext_ex (2.34.0); urgency = high
+
+Abstract:
+	Fixed build error
+
+Files Modified: data/019-drivers_spiflash_generic.c
+
+--Submitter: aruna (arunav@ami.com) Mon, 25 Jan 2016 11:22:24 EST
+
+Package: Bootloader_amiext_ex (2.33.0); urgency = high
+
+Abstract:
+	Fix for Pilot4: SPI flash write issues from bootloader
+
+Files Modified: data/019-drivers_spiflash_generic.c, data/097-drivers_spiflash_micron.c
+
+--Submitter: aruna (arunav@ami.com) Tue, 19 Jan 2016 13:16:09 EST
+
+Package: Bootloader_amiext_ex (2.32.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/Bootloader_amiext_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 19:11:39 EST
+
+Package: Bootloader_amiext_ex (2.31.0); urgency = high
+
+Abstract:
+	Move baudrate of debug message related modification for AST to basesoc package
+
+Files Modified: data/030-include_configs_common.cfg
+
+--Submitter: robinchiu (RobinChiu) Fri, 23 Oct 2015 16:47:46 JWST
+
+Package: Bootloader_amiext_ex (2.30.0); urgency = high
+
+Abstract:
+	Correct the baudrate of debug message for AST
+
+Files Modified: data/030-include_configs_common.cfg
+
+--Submitter: robinchiu (RobinChiu) Wed, 21 Oct 2015 15:30:05 JWST
+
+Package: Bootloader_amiext_ex (2.29.0); urgency = medium
+
+Abstract:
+	Added Quad Mode Support
+
+Files Modified: data/019-drivers_spiflash_generic.c, data/097-drivers_spiflash_micron.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Mon, 12 Oct 2015 19:15:52 CST
+
+Package: Bootloader_amiext_ex (2.28.0); urgency = low
+
+Abstract:
+	Support Winbond W35Q257FV
+
+Files Modified: data/019-drivers_spiflash_generic.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 01 Oct 2015 15:26:54 JWST
+
+Package: Bootloader_amiext_ex (2.27.0); urgency = high
+
+Abstract:
+	Fix build error for other projects
+
+Files Modified: data/044-oem_ami_fmh_bootargs.c
+
+--Submitter: robinchiu (RobinChiu) Wed, 30 Sep 2015 13:43:31 CST
+
+Package: Bootloader_amiext_ex (2.26.0); urgency = high
+
+Abstract:
+	Add rootdelay in bootargs for booting from eMMC only
+
+Files Modified: data/044-oem_ami_fmh_bootargs.c
+
+--Submitter: robinchiu (RobinChiu) Fri, 25 Sep 2015 15:40:34 CST
+
+Package: Bootloader_amiext_ex (2.25.0); urgency = high
+
+Abstract:
+	Add getting boot device information from bootargs environment variable for ext4load command back. Fix potential memory corruption.
+
+Files Modified: data/045-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: robinchiu (RobinChiu) Tue, 22 Sep 2015 15:25:06 CST
+
+Package: Bootloader_amiext_ex (2.24.0); urgency = medium
+
+Abstract:
+	Adding support to flash SD/eMMC
+
+Files Modified: data/030-include_configs_common.cfg, data/044-oem_ami_fmh_bootargs.c, data/045-oem_ami_fmh_cmd_fmh.c, data/092-include_env_default.h
+
+--Submitter: Winston (winstont@ami.com) Mon, 21 Sep 2015 02:33:09 EDT
+
+Package: Bootloader_amiext_ex (2.23.0); urgency = high
+
+Abstract:
+	Get boot partition from bootargs environment variable for ext4load command.
+
+Files Modified: data/045-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: robinchiu (RobinChiu) Fri, 11 Sep 2015 17:02:11 CST
+
+Package: Bootloader_amiext_ex (2.22.0); urgency = high
+
+Abstract:
+	Add get bootargs environment variable. Merge patches which are for support different mmc device and add rootdelay.
+
+Files Deleted: data/098-oem_ami_fmh_bootargs.c, data/099-oem_ami_fmh_cmd_fmh.c
+Files Modified: data/044-oem_ami_fmh_bootargs.c, data/045-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: robinchiu (RobinChiu) Wed, 09 Sep 2015 15:43:03 CST
+
+Package: Bootloader_amiext_ex (2.21.0); urgency = medium
+
+Abstract:
+	Enabled EFI Partition
+
+Files Modified: data/030-include_configs_common.cfg
+
+--Submitter: Winston (winstont@ami.com) Fri, 21 Aug 2015 18:10:00 EDT
+
+Package: Bootloader_amiext_ex (2.20.0); urgency = high
+
+Abstract:
+	Add support for different mmc device and add rootdelay
+
+Files Added: data/098-oem_ami_fmh_bootargs.c, data/099-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: robinchiu (RobinChiu) Mon, 10 Aug 2015 19:39:02 CST
+
+Package: Bootloader_amiext_ex (2.19.0); urgency = low
+
+Abstract:
+	Combined numonyx and micron spi driver into one as bothe share the same spi IDs.
+
+Files Deleted: data/024-drivers_spiflash_numonyx.c
+Files Modified: data/023-drivers_spiflash_Makefile, data/026-drivers_spiflash_spiflash.c, data/097-drivers_spiflash_micron.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Thu, 30 Jul 2015 19:05:40 GMT-5
+
+Package: Bootloader_amiext_ex (2.18.0); urgency = low
+
+Abstract:
+	ast2530evb support two stags bootloader
+
+Files Modified: data/008-common_env_spi.c, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 03 Jul 2015 18:22:29 JWST
+
+Package: Bootloader_amiext_ex (2.17.0); urgency = high
+
+Abstract:
+	fix u-boot fwupdate
+
+Files Modified: data/051-oem_ami_fmh_Makefile, data/054-oem_ami_fwupdate_Makefile, data/057-oem_ami_ipmi_Makefile, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: changjun kang (changjunk@ami.com) Fri, 12 Jun 2015 06:05:52 EDT
+
+Package: Bootloader_amiext_ex (2.16.0); urgency = medium
+
+Abstract:
+	Modified so that booting from eMMC/SD code is compiled based on feature CONFIG_SPX_FEATURE_MMC_BOOT
+
+Files Modified: data/045-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 22 May 2015 14:27:36 EDT
+
+Package: Bootloader_amiext_ex (2.15.0); urgency = medium
+
+Abstract:
+	Adding support to boot kernel from emmc/sd card
+
+Files Modified: data/045-oem_ami_fmh_cmd_fmh.c, data/047-oem_ami_fmh_cmd.h
+
+--Submitter: Winston (winstont@ami.com) Thu, 21 May 2015 22:13:12 EDT
+
+Package: Bootloader_amiext_ex (2.14.0); urgency = medium
+
+Abstract:
+	Supported Winbond W25M512.
+
+Files Modified: data/019-drivers_spiflash_generic.c, data/028-drivers_spiflash_winbond.c, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Tue, 28 Apr 2015 17:45:57 JWST
+
+Package: Bootloader_amiext_ex (2.13.0); urgency = medium
+
+Abstract:
+	fmh and bootfmh data abort issue
+
+Files Modified: data/051-oem_ami_fmh_Makefile
+
+--Submitter: changjun kang (changjunk@ami.com) Fri, 24 Apr 2015 12:30:28 EDT
+
+Package: Bootloader_amiext_ex (2.12.0); urgency = medium
+
+Abstract:
+	Fixed Boot FMH Issue in Pilot-4. This is caused due the unaligned access of the local variables in BootFMH
+
+Files Modified: data/045-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Wed, 22 Apr 2015 23:46:42 HMT
+
+Package: Bootloader_amiext_ex (2.11.0); urgency = low
+
+Abstract:
+	Pilot4/Orion U-Boot pac
+kages
+
+Files Added: data/097-drivers_spiflash_micron.c
+Files Modified: data/008-common_env_spi.c, data/019-drivers_spiflash_generic.c, data/023-drivers_spiflash_Makefile, data/026-drivers_spiflash_spiflash.c
+
+--Submitter: changjun kang (changjunk@ami.com) Wed, 01 Apr 2015 09:53:43 EDT
+
+Package: Bootloader_amiext_ex (2.10.0); urgency = low
+
+Abstract:
+	Recovery Image name in SD card is fixed to rom.ima so removed refering to env recoverybootfile.
+
+Files Modified: data/052-oem_ami_fwupdate_fwupdate.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Tue, 17 Mar 2015 20:35:55 GMT-5
+
+Package: Bootloader_amiext_ex (2.9.0); urgency = medium
+
+Abstract:
+	Add bootlogo command, and FMH support bootlogo partition.
+
+Files Added: data/094-oem_ami_bootlogo_Makefile, data/095-oem_ami_bootlogo_bootlogo.h, data/096-oem_ami_bootlogo_cmd_bootlogo.c
+Files Modified: data/035-include_oem_ami_fmh_fmh.h, data/040-Makefile, data/045-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Sat, 07 Mar 2015 10:56:13 JWST
+
+Package: Bootloader_amiext_ex (2.8.0); urgency = medium
+
+Abstract:
+	Correct size printing issue.
+
+Files Modified: data/043-net_tftp.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 26 Feb 2015 10:57:46 JWST
+
+Package: Bootloader_amiext_ex (2.7.0); urgency = medium
+
+Abstract:
+	added bootretry as default env variable
+
+Files Added: data/092-include_env_default.h
+Files Deleted: data/092-include-configs.h
+Files Modified: data/045-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: RAJA JAYAVELU (jraja@amiindia.co.in) Wed, 24 Dec 2014 04:36:45 EST
+
+Package: Bootloader_amiext_ex (2.6.0); urgency = high
+
+Abstract:
+	Merged Bmc firmware recovery patches to old patches
+
+Files Added: data/093-common_cmd_bootm.c
+Files Deleted: data/094-bmc_firmware_autorecovery, data/095-bmc_firmware_autorecovery, data/096-bmc_firmware_autorecovery, data/097-bmc_firmware_autorecovery, data/098-bmc_firmware_autorecovery, data/099-bmc_firmware_autorecovery, data/100-bmc_firmware_autorecovery
+Files Modified: data/034-include_net.h, data/035-include_oem_ami_fmh_fmh.h, data/042-net_net.c, data/045-oem_ami_fmh_cmd_fmh.c, data/049-oem_ami_fmh_fmhcore.c, data/052-oem_ami_fwupdate_fwupdate.c
+
+--Submitter: RAJA JAYAVELU (jraja@amiindia.co.in) Fri, 19 Dec 2014 05:07:07 EST
+
+Package: Bootloader_amiext_ex (2.5.0); urgency = high
+
+Abstract:
+	Add message of ECC feature.
+
+Files Modified: data/012-common_main.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 18 Dec 2014 16:58:52 CST
+
+Package: Bootloader_amiext_ex (2.4.0); urgency = high
+
+Abstract:
+	Merge common-main.c_memtest patch with 012-common_main.c
+
+Files Deleted: data/093-common_main.c_memtest
+Files Modified: data/012-common_main.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 18 Dec 2014 16:43:47 CST
+
+Package: Bootloader_amiext_ex (2.3.0); urgency = medium
+
+Abstract:
+	added BMC firmware autorecovery patches
+
+Files Added: data/001-common_board_f.c, data/002-common_cmd_boot.c, data/003-common_cmd_flash.c, data/004-common_cmd_mem.c, data/005-common_cmd_mmc.c, data/006-common_cmd_nvedit.c, data/007-common_env_common.c, data/008-common_env_spi.c, data/009-common_exports.c, data/010-common_flash.c, data/011-common_image.c, data/012-common_main.c, data/013-common_Makefile, data/014-common_miiphyutil.c, data/015-config.mk, data/016-drivers_mtd_cfi_flash.c, data/017-drivers_spiflash_atmel.c, data/018-drivers_spiflash_default.c, data/019-drivers_spiflash_generic.c, data/020-drivers_spiflash_intels33.c, data/021-drivers_spiflash_m25pxx.c, data/022-drivers_spiflash_macronix.c, data/023-drivers_spiflash_Makefile, data/024-drivers_spiflash_numonyx.c, data/025-drivers_spiflash_spansion.c, data/026-drivers_spiflash_spiflash.c, data/027-drivers_spiflash_spireg.c, data/028-drivers_spiflash_winbond.c, data/029-include_configs_board.cfg, data/030-include_configs_common.cfg, data/031-include__exports.h, data/032-include_exports.h, data/033-include_flash.h, data/034-include_net.h, data/035-include_oem_ami_fmh_fmh.h, data/036-include_oem_ami_fwupdate_kcs.h, data/037-include_oem_ami_fwupdate_kcsifc.h, data/038-include_oem_ami_ipmi_cmdhandler.h, data/039-include_spiflash.h, data/040-Makefile, data/041-net_bootp.c, data/042-net_net.c, data/043-net_tftp.c, data/044-oem_ami_fmh_bootargs.c, data/045-oem_ami_fmh_cmd_fmh.c, data/046-oem_ami_fmh_cmd_fmh.h, data/047-oem_ami_fmh_cmd.h, data/048-oem_ami_fmh_crc32.h, data/049-oem_ami_fmh_fmhcore.c, data/050-oem_ami_fmh_jffs2part.c, data/051-oem_ami_fmh_Makefile, data/052-oem_ami_fwupdate_fwupdate.c, data/053-oem_ami_fwupdate_kcsifc.c, data/054-oem_ami_fwupdate_Makefile, data/055-oem_ami_ipmi_cmdhandler.c, data/056-oem_ami_ipmi_IPMIDefs.h, data/057-oem_ami_ipmi_Makefile, data/058-oem_ami_ncsi_cmd_ncsi.c, data/059-oem_ami_ncsi_cmd_ncsi.h, data/060-oem_ami_ncsi_datadisp.c, data/061-oem_ami_ncsi_datadisp.h, data/062-oem_ami_ncsi_endian.h, data/063-oem_ami_ncsi_getmac.c, data/064-oem_ami_ncsi_Makefile, data/065-oem_ami_ncsi_ncsi.c, data/066-oem_ami_ncsi_ncsi.h, data/067-oem_ami_ncsi_ncsistart.c, data/068-oem_ami_ncsi_types.h, data/069-oem_ami_r2c_cmd_r2c.c, data/070-oem_ami_r2c_cmd_r2c.h, data/071-oem_ami_r2c_externs.h, data/072-oem_ami_r2c_Makefile, data/073-oem_ami_r2c_phases.c, data/074-oem_ami_r2c_r2c.h, data/075-oem_ami_r2c_sess_flash.c, data/076-oem_ami_r2c_session.c, data/077-oem_ami_r2c_sess_mem.c, data/078-oem_ami_r2c_sess_misc.c, data/079-oem_ami_r2c_term.c, data/080-examples_memtest_, data/081-examples_memtest_main.c, data/082-examples_memtest_Makefile, data/083-examples_memtest_memtester.c.org, data/084-examples_memtest_random.c, data/085-examples_memtest_read.c, data/086-examples_memtest_sizes.h, data/087-examples_memtest_stubs.c, data/088-examples_memtest_tests.c, data/089-examples_memtest_types.h, data/090-examples_memtest_type.h, data/091-examples_memtest_tests.h, data/092-include-configs.h, data/093-common_main.c_memtest, data/094-bmc_firmware_autorecovery, data/095-bmc_firmware_autorecovery, data/096-bmc_firmware_autorecovery, data/097-bmc_firmware_autorecovery, data/098-bmc_firmware_autorecovery, data/099-bmc_firmware_autorecovery, data/100-bmc_firmware_autorecovery
+Files Deleted: data/01-common_board_f.c, data/02-common_cmd_boot.c, data/03-common_cmd_flash.c, data/04-common_cmd_mem.c, data/05-common_cmd_mmc.c, data/06-common_cmd_nvedit.c, data/07-common_env_common.c, data/08-common_env_spi.c, data/09-common_exports.c, data/10-common_flash.c, data/11-common_image.c, data/12-common_main.c, data/13-common_Makefile, data/14-common_miiphyutil.c, data/15-config.mk, data/16-drivers_mtd_cfi_flash.c, data/17-drivers_spiflash_atmel.c, data/18-drivers_spiflash_default.c, data/19-drivers_spiflash_generic.c, data/20-drivers_spiflash_intels33.c, data/21-drivers_spiflash_m25pxx.c, data/22-drivers_spiflash_macronix.c, data/23-drivers_spiflash_Makefile, data/24-drivers_spiflash_numonyx.c, data/25-drivers_spiflash_spansion.c, data/26-drivers_spiflash_spiflash.c, data/27-drivers_spiflash_spireg.c, data/28-drivers_spiflash_winbond.c, data/29-include_configs_board.cfg, data/30-include_configs_common.cfg, data/31-include__exports.h, data/32-include_exports.h, data/33-include_flash.h, data/34-include_net.h, data/35-include_oem_ami_fmh_fmh.h, data/36-include_oem_ami_fwupdate_kcs.h, data/37-include_oem_ami_fwupdate_kcsifc.h, data/38-include_oem_ami_ipmi_cmdhandler.h, data/39-include_spiflash.h, data/40-Makefile, data/41-net_bootp.c, data/42-net_net.c, data/43-net_tftp.c, data/44-oem_ami_fmh_bootargs.c, data/45-oem_ami_fmh_cmd_fmh.c, data/46-oem_ami_fmh_cmd_fmh.h, data/47-oem_ami_fmh_cmd.h, data/48-oem_ami_fmh_crc32.h, data/49-oem_ami_fmh_fmhcore.c, data/50-oem_ami_fmh_jffs2part.c, data/51-oem_ami_fmh_Makefile, data/52-oem_ami_fwupdate_fwupdate.c, data/53-oem_ami_fwupdate_kcsifc.c, data/54-oem_ami_fwupdate_Makefile, data/55-oem_ami_ipmi_cmdhandler.c, data/56-oem_ami_ipmi_IPMIDefs.h, data/57-oem_ami_ipmi_Makefile, data/58-oem_ami_ncsi_cmd_ncsi.c, data/59-oem_ami_ncsi_cmd_ncsi.h, data/60-oem_ami_ncsi_datadisp.c, data/61-oem_ami_ncsi_datadisp.h, data/62-oem_ami_ncsi_endian.h, data/63-oem_ami_ncsi_getmac.c, data/64-oem_ami_ncsi_Makefile, data/65-oem_ami_ncsi_ncsi.c, data/66-oem_ami_ncsi_ncsi.h, data/67-oem_ami_ncsi_ncsistart.c, data/68-oem_ami_ncsi_types.h, data/69-oem_ami_r2c_cmd_r2c.c, data/70-oem_ami_r2c_cmd_r2c.h, data/71-oem_ami_r2c_externs.h, data/72-oem_ami_r2c_Makefile, data/73-oem_ami_r2c_phases.c, data/74-oem_ami_r2c_r2c.h, data/75-oem_ami_r2c_sess_flash.c, data/76-oem_ami_r2c_session.c, data/77-oem_ami_r2c_sess_mem.c, data/78-oem_ami_r2c_sess_misc.c, data/79-oem_ami_r2c_term.c, data/80-examples_memtest_, data/81-examples_memtest_main.c, data/82-examples_memtest_Makefile, data/83-examples_memtest_memtester.c.org, data/84-examples_memtest_random.c, data/85-examples_memtest_read.c, data/86-examples_memtest_sizes.h, data/87-examples_memtest_stubs.c, data/88-examples_memtest_tests.c, data/89-examples_memtest_types.h, data/90-examples_memtest_type.h, data/91-examples_memtest_tests.h, data/92-include-configs.h, data/93-common_main.c_memtest
+
+--Submitter: RAJA JAYAVELU (jraja@amiindia.co.in) Thu, 18 Dec 2014 00:58:32 EST
+
+Package: Bootloader_amiext_ex (2.2.0); urgency = medium
+
+Abstract:
+	Disable the memtest by default.
+
+Files Modified: data/30-include_configs_common.cfg
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 04 Dec 2014 12:04:54 HMT
+
+Package: Bootloader_amiext_ex (2.1.0); urgency = medium
+
+Abstract:
+	Added U-Boot Memory Test patch.
+
+Files Added: data/93-common_main.c_memtest
+Files Modified: data/30-include_configs_common.cfg, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 03 Dec 2014 23:30:07 HMT
+
+Package: Bootloader_amiext_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 02:58:24 GMT
+
+Package: Bootloader_amiext_ex (1.13.0); urgency = medium
+
+Abstract:
+	Add support for AST2500 and dual IO mode.
+
+Files Modified: data/17-drivers_spiflash_atmel.c, data/18-drivers_spiflash_default.c, data/19-drivers_spiflash_generic.c, data/20-drivers_spiflash_intels33.c, data/21-drivers_spiflash_m25pxx.c, data/22-drivers_spiflash_macronix.c, data/24-drivers_spiflash_numonyx.c, data/25-drivers_spiflash_spansion.c, data/28-drivers_spiflash_winbond.c, data/39-include_spiflash.h
+
+--Submitter: robinchiu (RobinChiu) Tue, 30 Sep 2014 13:01:13 CST
+
+Package: Bootloader_amiext_ex (1.12.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:44:09 GMT
+
+Package: Bootloader_amiext_ex (1.11.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 02:53:38 GMT
+
+Package: Bootloader_amiext_ex (1.10.0); urgency = medium
+
+Abstract:
+	Including default env variables for bootselector and recentlyprogfw.
+
+Files Added: data/92-include-configs.h
+Files Modified: data/30-include_configs_common.cfg
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Fri, 05 Sep 2014 19:16:03 HMT
+
+Package: Bootloader_amiext_ex (1.9.0); urgency = medium
+
+Abstract:
+	Report proper memory size to kernel
+
+Files Modified: data/44-oem_ami_fmh_bootargs.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 29 Aug 2014 14:13:15 EDT
+
+Package: Bootloader_amiext_ex (1.8.0); urgency = medium
+
+Abstract:
+	Reverting the Boot Delay value to '0'
+
+Files Modified: data/30-include_configs_common.cfg
+
+--Submitter: Winston (winstont@ami.com) Tue, 19 Aug 2014 11:56:20 GMT
+
+Package: Bootloader_amiext_ex (1.7.0); urgency = medium
+
+Abstract:
+	Changed bootdelay from 0 to 3 seconds
+
+Files Modified: data/30-include_configs_common.cfg
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Tue, 19 Aug 2014 20:26:18 HMT
+
+Package: Bootloader_amiext_ex (1.6.0); urgency = medium
+
+Abstract:
+	Fix for compilation errors when fail safe booting is enabled in PRJ
+
+Files Modified: data/30-include_configs_common.cfg, data/45-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: Winston (winstont@ami.com) Mon, 11 Aug 2014 00:41:43 GMT
+
+Package: Bootloader_amiext_ex (1.5.0); urgency = low
+
+Abstract:
+	Extended Memory Test standalone ELF application added
+
+Files Added: data/80-examples_memtest_, data/81-examples_memtest_main.c, data/82-examples_memtest_Makefile, data/83-examples_memtest_memtester.c.org, data/84-examples_memtest_random.c, data/85-examples_memtest_read.c, data/86-examples_memtest_sizes.h, data/87-examples_memtest_stubs.c, data/88-examples_memtest_tests.c, data/89-examples_memtest_types.h, data/90-examples_memtest_type.h, data/91-examples_memtest_tests.h
+Files Modified: data/40-Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 28 Jul 2014 19:12:59 EDT
+
+Package: Bootloader_amiext_ex (1.4.0); urgency = critical
+
+Abstract:
+	Fix for non MMMC Boot Configuration
+
+Files Modified: data/44-oem_ami_fmh_bootargs.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 22 Jul 2014 15:07:04 EDT
+
+Package: Bootloader_amiext_ex (1.3.0); urgency = medium
+
+Abstract:
+	Added Booting from MMC root file system  Added
+
+Files Modified: data/44-oem_ami_fmh_bootargs.c, data/45-oem_ami_fmh_cmd_fmh.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 21 Jul 2014 17:28:40 EDT
+
+Package: Bootloader_amiext_ex (1.2.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/30-include_configs_common.cfg
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:41:52 HMT
+
+Package: Bootloader_amiext_ex (1.1.0); urgency = low
+
+Abstract:
+	Fixed the  CONFIG_ENV_OVERWRITE spelling mistake
+
+Files Modified: data/30-include_configs_common.cfg
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 27 Jun 2014 14:24:12 EDT
+
+Package: Bootloader_amiext_ex (1.0.0); urgency = new
+
+Abstract:
+	AMI Extensions to Bootloader Uboot-2013.07
+
+Files Added: data, data/01-common_board_f.c, data/02-common_cmd_boot.c, data/03-common_cmd_flash.c, data/04-common_cmd_mem.c, data/05-common_cmd_mmc.c, data/06-common_cmd_nvedit.c, data/07-common_env_common.c, data/08-common_env_spi.c, data/09-common_exports.c, data/10-common_flash.c, data/11-common_image.c, data/12-common_main.c, data/13-common_Makefile, data/14-common_miiphyutil.c, data/15-config.mk, data/16-drivers_mtd_cfi_flash.c, data/17-drivers_spiflash_atmel.c, data/18-drivers_spiflash_default.c, data/19-drivers_spiflash_generic.c, data/20-drivers_spiflash_intels33.c, data/21-drivers_spiflash_m25pxx.c, data/22-drivers_spiflash_macronix.c, data/23-drivers_spiflash_Makefile, data/24-drivers_spiflash_numonyx.c, data/25-drivers_spiflash_spansion.c, data/26-drivers_spiflash_spiflash.c, data/27-drivers_spiflash_spireg.c, data/28-drivers_spiflash_winbond.c, data/29-include_configs_board.cfg, data/30-include_configs_common.cfg, data/31-include__exports.h, data/32-include_exports.h, data/33-include_flash.h, data/34-include_net.h, data/35-include_oem_ami_fmh_fmh.h, data/36-include_oem_ami_fwupdate_kcs.h, data/37-include_oem_ami_fwupdate_kcsifc.h, data/38-include_oem_ami_ipmi_cmdhandler.h, data/39-include_spiflash.h, data/40-Makefile, data/41-net_bootp.c, data/42-net_net.c, data/43-net_tftp.c, data/44-oem_ami_fmh_bootargs.c, data/45-oem_ami_fmh_cmd_fmh.c, data/46-oem_ami_fmh_cmd_fmh.h, data/47-oem_ami_fmh_cmd.h, data/48-oem_ami_fmh_crc32.h, data/49-oem_ami_fmh_fmhcore.c, data/50-oem_ami_fmh_jffs2part.c, data/51-oem_ami_fmh_Makefile, data/52-oem_ami_fwupdate_fwupdate.c, data/53-oem_ami_fwupdate_kcsifc.c, data/54-oem_ami_fwupdate_Makefile, data/55-oem_ami_ipmi_cmdhandler.c, data/56-oem_ami_ipmi_IPMIDefs.h, data/57-oem_ami_ipmi_Makefile, data/58-oem_ami_ncsi_cmd_ncsi.c, data/59-oem_ami_ncsi_cmd_ncsi.h, data/60-oem_ami_ncsi_datadisp.c, data/61-oem_ami_ncsi_datadisp.h, data/62-oem_ami_ncsi_endian.h, data/63-oem_ami_ncsi_getmac.c, data/64-oem_ami_ncsi_Makefile, data/65-oem_ami_ncsi_ncsi.c, data/66-oem_ami_ncsi_ncsi.h, data/67-oem_ami_ncsi_ncsistart.c, data/68-oem_ami_ncsi_types.h, data/69-oem_ami_r2c_cmd_r2c.c, data/70-oem_ami_r2c_cmd_r2c.h, data/71-oem_ami_r2c_externs.h, data/72-oem_ami_r2c_Makefile, data/73-oem_ami_r2c_phases.c, data/74-oem_ami_r2c_r2c.h, data/75-oem_ami_r2c_sess_flash.c, data/76-oem_ami_r2c_session.c, data/77-oem_ami_r2c_sess_mem.c, data/78-oem_ami_r2c_sess_misc.c, data/79-oem_ami_r2c_term.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_amiext_ex, spx/PACKAGES.D/Bootloader_amiext_ex/DATA, spx/PACKAGES.D/Bootloader_amiext_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_amiext_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 16:42:35 EDT
+

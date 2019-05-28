@@ -1,0 +1,235 @@
+#!/bin/sh
+
+# udhcpc script edited by Tim Riker <Tim@Rikers.org>
+
+IFACE=$interface
+
+. /conf/dns.conf
+. /etc/nwhelperapi.sh
+
+[ -z "$1" ] && echo "Error: should be called from udhcpc" && exit 1
+
+RESOLV_CONF="/conf/resolv_disabled.conf"
+[ -f $RESOLV_CONF ] || RESOLV_CONF="/conf/resolv.conf"
+
+NTP_CONF="/conf/ntp.conf"
+[ -n "$broadcast" ] && BROADCAST="broadcast $broadcast"
+[ -n "$subnet" ] && NETMASK="netmask $subnet"
+
+#[ -n "$ntpsrv" ] && NTPSRV="ntp $ntpsrv"
+#echo $NTPSRV
+
+# Ignore if the input param is deconfig as it takes time in reading the file or if the file doesn't exist.
+if [ $1 != "deconfig" ] && [ -f "/etc/core_features" ]
+then
+    feature=`cat /etc/core_features | grep -v "^#" | grep " *CONFIG_SPX_FEATURE_ADVANCED_IP_ROUTING_SUPPORT *$"`
+    if [ -z $feature ]
+    then
+            ADVANCED_ROUTING_SUPPORT='NO'
+            #echo "Advanced Routing Disabled..."
+        else
+            ADVANCED_ROUTING_SUPPORT='YES'
+            #echo "Advanced Routing Enabled..."
+        fi
+fi
+
+if [ "$ADVANCED_ROUTING_SUPPORT" == "YES" ]
+then
+ 
+IPToOctets()
+{
+	ip_address=$1
+	IFS=.
+	set $ip_address
+	octet1=$1
+	octet2=$2
+	octet3=$3
+	octet4=$4
+	echo $octet1 $octet2 $octet3 $octet4
+}
+ 
+NetworkAddress()
+{
+	ip_address=$1
+	subnetmask=$2
+	cidr=$3
+    
+	octetip=$(IPToOctets $ip_address)
+	octetsn=$(IPToOctets $subnetmask)
+
+	octetip1=$(echo $octetip | awk '{print $1}')
+	octetip2=$(echo $octetip | awk '{print $2}')
+	octetip3=$(echo $octetip | awk '{print $3}')
+	octetip4=$(echo $octetip | awk '{print $4}')
+
+	octetsn1=$(echo $octetsn | awk '{print $1}')
+	octetsn2=$(echo $octetsn | awk '{print $2}')
+	octetsn3=$(echo $octetsn | awk '{print $3}')
+	octetsn4=$(echo $octetsn | awk '{print $4}')
+    
+	netaddress=$(($octetip1 & $octetsn1)).$(($octetip2 & $octetsn2)).$(($octetip3 & $octetsn3)).$(($octetip4 & $octetsn4))
+	echo $netaddress
+}
+
+MaskToCidr() {
+	nbits=0
+	IFS=.
+	for dec in $1 ; do
+		case $dec in
+			255) let nbits+=8;;
+			254) let nbits+=7;;
+			252) let nbits+=6;;
+			248) let nbits+=5;;
+			240) let nbits+=4;;
+			224) let nbits+=3;;
+			192) let nbits+=2;;
+			128) let nbits+=1;;
+			0) ;;
+		esac
+	done
+	echo "$nbits"
+}
+
+Adroute_sup()
+{
+	case "$interface" in
+		bond*|bond*.*)
+			return 0
+
+	esac
+
+	return 1
+}
+fi
+
+case "$1" in
+	deconfig)
+		/sbin/ifconfig $interface 192.168.0.120 #Quanta
+		echo "" > /tmp/dhcp.$interface
+		;;
+
+	renew|bound)
+		/sbin/ifconfig $interface $ip $BROADCAST $NETMASK
+		echo "serverid: " $serverid                            
+		echo $serverid > /tmp/dhcp.$interface
+		echo "Address   : " $ip
+		echo "Netmask   : " $subnet
+		if [ -n "$router" ] ; then
+			echo "deleting routers"
+			while route del default gw 0.0.0.0 dev $interface 2>/dev/null ; do
+				:
+			done
+			if [ "$ADVANCED_ROUTING_SUPPORT" == "YES" ]
+			then
+				Adroute_sup
+				if [ $? == 1 ]; then
+					echo "deleting route & rule table $interface" 
+					ip route del table $interface
+					ip rule del table $interface
+				fi
+			fi
+
+			metric=0
+			if [ "$ADVANCED_ROUTING_SUPPORT" == "YES" ]
+			then
+				Adroute_sup
+				if [ $? == 1 ]; then
+					NUM=`grep $interface /conf/rt_tables | awk 'END { print NR }'`
+
+					if [ $NUM -eq 0 ]; then
+			    		NUM=`cat /conf/rt_tables | awk 'END { print NR }'`
+				    	echo "$NUM  $interface" >> /conf/rt_tables
+					fi
+				fi
+			fi
+
+			for i in $router ; do
+				echo "Router    : " $i
+				route add default gw $i dev $interface metric $((metric++))
+				if [ "$ADVANCED_ROUTING_SUPPORT" == "YES" ]
+				then
+					Adroute_sup
+					if [ $? == 1 ]; then
+						ip route add default via $i dev $interface table $interface metric $((metric++))
+					fi
+				fi
+			done
+			if [ "$ADVANCED_ROUTING_SUPPORT" == "YES" ]
+			then
+				Adroute_sup
+				if [ $? == 1 ]; then
+					cidr=$(MaskToCidr $subnet)
+					netaddr=$(NetworkAddress $ip $subnet $cidr)
+					ip route add "$netaddr/$cidr" dev $interface table $interface
+					ip rule add from $ip table $interface
+				fi
+			fi
+		fi
+        echo $ip > /conf/dhcp.preip_4
+        
+#               echo -n > $RESOLV_CONF
+#               [ -n "$domain" ] && echo search $domain >> $RESOLV_CONF
+#               [ -n "$domain" ] && echo "Domain    : " $domain
+#               for i in $dns ; do
+#                       echo "DnsServer : " $i
+#                       echo nameserver $i >> $RESOLV_CONF
+#               done
+#               ;;
+
+        INTERFACE=$interface #set the interface to whatever interface we are at
+#		getdnsvars #source the configuration from dhcpc-config
+
+    if [ ! -f /conf/no_write_resolv_conf ]; then
+    
+        if [ "$SET_DOMAIN" == 'yes' -o "$SET_DOMAIN" == 'y' ]; then
+		    [ -n "$domain" ] && AddDNSDomainName $domain
+		    [ -n "$domain" ] && echo "Domain    : " $domain
+		else
+		    echo "SET_DOMAIN is not true and it is $SET_DOMAIN"
+		fi
+
+        if [ "$SET_DNS" == 'yes' -o "$SET_DNS" == 'y' ]; then
+			#Clear Previous entries of IPV4 DNS address
+			Clear_IPV4
+		    cnt=0
+		    ONE=1    
+		    for i in $dns ; do
+				cnt=$(($cnt+$ONE))
+				#echo "Count -- $cnt"		    
+				echo "DnsServer : " $i
+				#AddDNSServerIP $i				#This API is replaced with the new API for overwriting problems.
+				AddDNSServerIP_New $i $cnt			
+				if [ "$SET_IPV6_PRIORITY" == 'yes' -o "$SET_IPV6_PRIORITY" == 'y' ]; then
+					break
+				fi	
+		    done
+		else
+		    echo "SET_DNS is false and it is $SET_DNS"
+		fi
+    fi
+
+#		echo "Came to ntp part.......!"
+		if [ -n "$ntpsrv" ] ; then
+			echo "ntpsrv : $ntpsrv"         
+			AddNTPServerName $ntpsrv
+		else
+			echo "No NTP support"
+		fi
+
+		#echo -n > $NTP_CONF
+		#[ -n "$ntpsrv" ] && echo server $ntpsrv >> $NTP_CONF
+
+                ;;
+esac
+
+# Run other udhcpc config scripts if they are present
+for i in /etc/network/udhcpc.d/* ; do
+	if [ -r "$i" ]; then
+        	# NOTE: sourcing in parens (subshell) so that an 'exit' in one script
+        	#       can't prevent the rest of the scripts from running by
+        	#       exiting the udhcpc.script itself!
+        	(. $i)
+    	fi
+done
+
+exit 0

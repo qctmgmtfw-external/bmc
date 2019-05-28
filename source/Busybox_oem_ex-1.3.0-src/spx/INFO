@@ -1,0 +1,33 @@
+Source : Busybox_oem_ex
+Version : 1.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Bhavesh Sahu (bhaveshsahu@amiindia.co.in)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 0.0.0
+Builds : Busybox_oem_ex
+Build-Depends : Busybox_Fixes_ex
+Customization-Type : OEMEXTN
+Architecture : ANY
+Urgency : medium
+Description : Package for OEM Customization.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Busybox_oem_ex
+Section : info
+Group : BASE
+Essential : YES
+Feature-Required : CONFIG_SPX_FEATURE_GLOBAL_BUSYBOX_EX
+Description : OEM Patches for busybox-src.
+.
+

@@ -1,0 +1,94 @@
+#!/bin/sh
+# /etc/init.d/telnetd: start telnet Server
+#
+# chkconfig: 2345 10 90
+#Runlevel : 1 = K20
+#Runlevel : 3 = S16
+#Runlevel : 6 = K20
+#Runlevel : 7 = K20
+#Runlevel : 8 = K20
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+. /lib/lsb/init-functions
+TELNET_PATH="/usr/sbin/telnetd"
+TELNET_NAME="telnetd"
+
+#check service state with ncml conf
+PORT_VAL_BYTE=2147483647
+SERVICE_NAME="[telnet]"
+SERVICE_CONF="/conf/ncml.conf"
+test -f $SERVICE_CONF || exit 0
+
+#check service state if enabled
+check_service_enabled()
+{
+    if [ -f $SERVICE_CONF ];
+    then
+    
+        SERVICE_STATE=`cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+                                   awk 'BEGIN {FS="="} /current_state/ {print $2 }'       | 
+                                   awk 'NR==1 {print $0}'`
+    
+        if [ $SERVICE_STATE == 0 ];
+        then
+#            log_action_msg "$SERVICE_NAME is disabled"
+            exit 1
+        else
+            log_action_msg "$SERVICE_NAME is enabled"
+        fi
+    
+    else
+        log_action_msg "$SERVICE_CONF doesn't exist"
+    fi
+}
+
+get_service_port()
+{
+    if [ -f $SERVICE_CONF ];
+    then
+
+        PORT=$((PORT_VAL_BYTE & `cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+                           awk 'BEGIN {FS="="} /secure_port/ {print $2 }'       | 
+                          awk 'NR==1 {print $0}'`))
+
+        if [[ $PORT -le 0 || $PORT -eq $PORT_VAL_BYTE ]];
+        then
+            log_action_msg "Secure port is disabled for $SERVICE_NAME"
+            PORT=$((PORT_VAL_BYTE & `cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+                            awk 'BEGIN {FS="="} /nonscecure_port/ {print $2 }'       | 
+                            awk 'NR==1 {print $0}'`))
+            if [[ $PORT -le 0 || $PORT -eq $PORT_VAL_BYTE ]];
+            then
+                log_action_msg "Non-Secure Port is also disabled for $SERVICE_NAME"
+                exit 1
+            else
+                log_action_msg "Non-Secure Port is enabled for $SERVICE_NAME with $PORT"
+            fi
+        
+        else
+            log_action_msg "Secure port is Enabled for $SERVICE_NAME with $PORT"
+        fi
+    else
+        log_action_msg "$SERVICE_CONF doesn't exist"
+    fi
+}
+
+case "$1" in
+  start)
+        PORT=0
+        check_service_enabled
+        get_service_port
+        log_daemon_msg "Starting TELNET Service in port number : $PORT" "telnetd"
+        start-stop-daemon --start --quiet --oknodo --pidfile /var/run/telnetd.pid --exec $TELNET_PATH -n $TELNET_NAME -- -p $PORT
+        log_end_msg $?
+    ;;
+  stop)     
+        log_daemon_msg "Stopping TELNET Service" "telnetd"
+        start-stop-daemon --stop --quiet --oknodo --exec $TELNET_PATH -n $TELNET_NAME
+        log_end_msg $?
+    ;;
+   *)
+    echo "Usage: /etc/init.d/telnetd {start|stop}"
+    exit 1
+esac
+
+exit 0

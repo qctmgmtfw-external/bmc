@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+		COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+		EXECUTE echo "videocap" >> %IMAGE_TREE/etc/unload.7;echo "videocap" >> %IMAGE_TREE/etc/unload.8;if [ "%CONFIG_SPX_FEATURE_FASTER_BOOT_SUPPORT" == "NO" ]; then echo "videocap" >> %IMAGE_TREE/etc/modules; fi
+# Quanta, change device from cdev(char device) to misc dev, The misc device node will be created automatically
+#		MAKE_CHAR_NODE videocap 15 0
+
+debug-install:

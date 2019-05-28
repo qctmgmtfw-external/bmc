@@ -1,0 +1,93 @@
+--- busybox.org/loginutils/login.c	2014-09-01 17:57:11.332351331 +0530
++++ busybox/loginutils/login.c	2014-09-10 20:45:24.112287851 +0530
+@@ -240,6 +240,18 @@
+ 
+ #if ENABLE_PAM
+ 
++pam_handle_t *pamh;
++
++static void signal_handler (int sig)
++{
++	/*Call the close session for logout audits*/
++	pam_close_session (pamh,PAM_SILENT);
++	if (pam_end (pamh, PAM_SUCCESS) != PAM_SUCCESS){
++		printf ("Failed to Release the PAM Session Inforamtion\n");
++	}
++	kill_myself_with_sig (sig);
++}
++
+ 
+ /*
+  * *@fn bb_conv
+@@ -347,7 +359,6 @@
+ 	IF_SELINUX(security_context_t user_sid = NULL;)
+ #if ENABLE_PAM
+ 	int pamret;
+-	pam_handle_t *pamh;
+ 	const char *pamuser;
+ 	const char *failed_msg;
+ 	struct passwd pwdstruct;
+@@ -446,14 +457,14 @@
+ 			failed_msg = "set_item(TTY)";
+ 			goto pam_auth_failed;
+ 		}
++
+ 		/* set RHOST */
+-		if (opt_host) {
+-			pamret = pam_set_item(pamh, PAM_RHOST, hostname);
+-			if (pamret != PAM_SUCCESS) {
+-				failed_msg = "set_item(RHOST)";
+-				goto pam_auth_failed;
+-			}
++		pamret = pam_set_item(pamh, PAM_RHOST, hostname);
++		if (pamret != PAM_SUCCESS) {
++			failed_msg = "set_item(RHOST)";
++			goto pam_auth_failed;
+ 		}
++
+ 		getpasswd = bb_ask_stdin("Password: ");
+ 		if (!getpasswd) {
+ 			return 0;
+@@ -593,8 +604,9 @@
+ 		run_login_script(pw, full_tty);
+ 
+ 	change_identity(pw);
++	xsetenv("PATH", (pw->pw_uid ? bb_default_path : bb_default_root_path));
+ 	setup_environment(pw->pw_shell,
+-			(!(opt & LOGIN_OPT_p) * SETUP_ENV_CLEARENV) + SETUP_ENV_CHANGEENV,
++			((opt & LOGIN_OPT_p) * SETUP_ENV_CLEARENV) + SETUP_ENV_CHANGEENV,
+ 			pw);
+ 
+ #if ENABLE_PAM
+@@ -610,7 +622,11 @@
+ 	motd();
+ 
+ 	if (pw->pw_uid == 0)
++	{
++		xsetenv("USER",    pw->pw_name);
++		xsetenv("LOGNAME", pw->pw_name);
+ 		syslog(LOG_INFO, "root login%s", fromhost);
++	}
+ 
+ 	if (ENABLE_FEATURE_CLEAN_UP)
+ 		free(fromhost);
+@@ -640,6 +656,7 @@
+ 	 * should we leave SIGINT etc enabled or disabled? */
+ 	signal(SIGINT, SIG_DFL);
+ #if ENABLE_PAM
++	bb_signals ((1 << SIGHUP) + (1 << SIGQUIT) + (1 << SIGTERM), signal_handler);
+ 	/*Use fork to get the control back*/
+ 	pid = fork ();
+ 	if (pid == 0){
+@@ -649,6 +666,11 @@
+ 		waitpid (pid, &status, 0);
+ 		/*Call the close session for logout audits*/
+ 		pam_close_session (pamh,PAM_SILENT);
++		if (pam_end (pamh, PAM_SUCCESS) != PAM_SUCCESS){
++			printf ("Failed to Release the PAM Session Inforamtion\n");
++		}
++		if (WIFEXITED(status))
++			return WEXITSTATUS(status);
+ 	}
+ #else
+ 	/* Exec login shell with no additional parameters */

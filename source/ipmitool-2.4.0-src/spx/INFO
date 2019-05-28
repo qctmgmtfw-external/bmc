@@ -1,0 +1,34 @@
+Source : ipmitool
+Version : 2.4.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Viswanathan S (viswanathans@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : ipmitool
+Build-Depends : libdbgout_dev, libipmi_dev, global_dev, ipmi_dev, libencryption_dev
+Architecture : ALL
+Urgency : medium
+Description : Contains the IPMITool modified to run with AMI SP-X Stack
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : ipmitool
+Config-Tag : IPMI Test Utility
+Section : app
+Group : TESTTOOL
+Essential : NO
+Depends : ipmimain
+Required : libipmiparams, libdbgout, libipmi
+Description : This package includes the Binary for ipmitool application.
+.
+

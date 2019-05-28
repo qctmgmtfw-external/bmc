@@ -1,0 +1,102 @@
+#!/bin/sh
+
+if [ -f  "/etc/dhcp-script" ]
+then
+    . /etc/dhcp-script
+    #echo "AMI DHCP4 script : dhcp.conf found."
+#else
+    #echo "AMI DHCP4 script : dhcp.conf not found. The extend parameters will not use."
+fi
+
+if [ -f  "/conf/dns.conf" ]
+then
+    . /conf/dns.conf
+    #echo "AMI DHCP4 script : dns.conf found."
+#else
+    #echo "AMI DHCP4 script : dns.conf not found. The extend parameters will not use."
+fi
+
+
+
+
+if [ -n "$SET_DHCP_PREIP4" ];then
+	REQ_PRE_IP="-r $SET_DHCP_PREIP4"
+fi
+
+    echo "Calling udhcpc.... "
+    
+if [ -f  "/etc/dhcp-script" ];then
+	if [ "$DO_DDNS" == 'yes'  -o "$DO_DDNS" == 'y' ]; then
+		if [ "$SET_FQDN" == 'yes'  -o "$SET_FQDN" == 'y' ]; then
+        	 	echo "Dhcp Client FQDN (Option 81)..."
+			REG_BMC_HOSTNAME="-t $SET_RETRY -T $SET_TIMEOUT  $REQ_PRE_IP -F $FQDN"
+   
+	  	else
+			if [ "$SET_HOSTNAME" == 'yes'  -o "$SET_HOSTNAME" == 'y' ]; then
+				echo "Dhcp Hostname(Dhcp Option 12)..."
+				REG_BMC_HOSTNAME="-t $SET_RETRY -T $SET_TIMEOUT  $REQ_PRE_IP -x hostname:$HOST_NAME"
+			fi
+		fi
+	fi
+
+fi
+#Checking the interface has vlan
+VLAN_SETTING_CONF="/conf/vlansetting.conf"
+TMP_IFACE_NAME=""
+TMP_VLAN_ID=0
+TMP_VLAN_PRIORITY=0
+MAX_NUM=`grep 'index' $VLAN_SETTING_CONF | awk -F= 'END{print $2}'`
+
+GetVLANIfaceName()
+{
+    VLAN_SECTION="[vlan$1]"
+
+        if [ -f $VLAN_SETTING_CONF ];
+        then
+                TMP_IFACE_NAME=`cat $VLAN_SETTING_CONF | awk -v val=$VLAN_SECTION '$1 == val, $1 == ""' |
+                                                                          awk 'BEGIN {FS="="} /interface_name/ {print $2}'      |
+                                                                          awk 'NR==1 {print $0}'`
+	   fi
+}
+
+GetVLANID()
+{
+    VLAN_SECTION="[vlan$1]"
+
+        if [ -f $VLAN_SETTING_CONF ];
+        then
+                TMP_VLAN_ID=`cat $VLAN_SETTING_CONF | awk -v val=$VLAN_SECTION '$1 == val, $1 == ""' |
+                                                                          awk 'BEGIN {FS="="} /vlanid/ {print $2}'           |
+                                                                          awk 'NR==1 {print $0}'`
+ 		fi
+}
+
+GetVLANPriority()
+{
+    VLAN_SECTION="[vlan$1]"
+
+        if [ -f $VLAN_SETTING_CONF ];
+        then
+                TMP_VLAN_PRIORITY=`cat $VLAN_SETTING_CONF | awk -v val=$VLAN_SECTION '$1 == val, $1 == ""' |
+                                                                                awk 'BEGIN {FS="="} /vlanpriority/ {print $2}'     |
+                                                                                awk 'NR==1 {print $0}'`
+    fi
+}
+
+	COUNTER=0
+	while [  $COUNTER -le $MAX_NUM ]; do
+ 		GetVLANIfaceName $COUNTER
+		GetVLANID 	$COUNTER
+		GetVLANPriority $COUNTER
+		if [ "$TMP_IFACE_NAME" == "$1" ] && [ "$TMP_VLAN_ID" -gt 0 ];
+		then
+			echo "Ignoring udhcpc for interface $1 due to vlan enabled "
+			exit 0
+		fi
+
+ 		let COUNTER=COUNTER+1 
+	done
+    udhcpc -b -p /var/run/udhcpc.$1.pid -i $1 $REG_BMC_HOSTNAME -O 248
+
+exit 0
+

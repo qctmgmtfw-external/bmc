@@ -1,0 +1,13 @@
+--- linux.org/drivers/video/ast/Makefile	1969-12-31 19:00:00.000000000 -0500
++++ linux.new/drivers/video/ast/Makefile	2014-01-31 16:38:40.967857073 -0500
+@@ -0,0 +1,10 @@
++#
++# Makefile for the AST frame buffer device driver
++#
++
++include ${SPXINC}/projdef.mk
++ifeq ($(CONFIG_SPX_FEATURE_GLOBAL_FRAME_BUFFER_SUPPORT), YES)
++obj-$(CONFIG_FB_AST) += astfb.o
++
++astfb-objs := ast_fb.o ast_fb_mode.o
++endif

@@ -1,0 +1,22 @@
+Source                   	:	sys_libsqlite3
+Version : 2.1.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Silambarasan M  (silambarasanm@amiindia.co.in)
+License                  	:	OPENSOURCE
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	sys_libsqlite3
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	System Package for Sqlite3 that includes sqlite3 functionalities.
+.
+
+Package                  	:	sys_libsqlite3
+Section                  	:	sys
+Group                    	:	SOFTWARE
+Essential                	:	NO
+Description              	:	System Package for Sqlite3 that includes sqlite3 functionalities.
+.
+

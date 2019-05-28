@@ -1,0 +1,4 @@
+./PATCHES/001-Makefile 2106 f99294becef3f5477ba4b49e82d36d8b
+./busybox-1.22.1.tar.bz2 2218650 337d1a15ab1cb1d4ed423168b1eb7d7e
+./init.sh 4110 3a3153ef343426567eff2368f92c775a
+./initramfs.lst 974 7c22b774f4a5f9451c59ea337b3f4715

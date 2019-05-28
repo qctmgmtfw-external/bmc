@@ -1,0 +1,12 @@
+1. Convert the image preferred for logo to ppm format using any image converter
+
+2. Install Netpbm package using the following command, if it is not installed
+        sudo apt-get install netpbm
+
+3. Reduce the number of colors in the image to 224 
+	ppmquant 224 boot_logo_a.ppm > boot_logo_224.ppm
+
+4. Convert it to PPMASCII format
+	pnmnoraw boot_logo_224.ppm > boot_logo_ascii_224.ppm
+
+5. Use boot_logo_ascii_224.ppm as logo image

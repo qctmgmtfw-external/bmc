@@ -1,0 +1,34 @@
+[sshd]
+        UID=520
+        GID=520
+        GECOS=sshd
+        DIR=/var/empty/sshd
+        SHELL=/sbin/nologin
+
+[ntp]
+        UID=521
+        GID=521
+        GECOS=ntp
+        DIR=/home/ntp
+        SHELL=/bin/false
+
+[stunnel4]
+        UID=522
+        GID=522
+        GECOS=stunnel4
+        DIR=/var/run/stunnel4
+        SHELL=/bin/false
+
+[sysadmin]
+        UID=0
+        GID=0
+        GECOS=sysadmin
+        DIR=/root
+        SHELL=/usr/local/bin/defshell
+        
+[daemon]
+        UID=1
+        GID=1
+        GECOS=daemon
+        DIR=/usr/sbin
+        SHELL=/bin/sh

@@ -1,0 +1,289 @@
+Package: snoop (2.7.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/snoop/DATA/.keep, spx/PACKAGES.D/snoop_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:05:57 EST
+
+Package: snoop (2.6.0); urgency = low
+
+Abstract:
+	added changes to Enable/Disable the snoop interrupts from user space
+
+Files Modified: data/snoop_ioctl.h, data/snoopmain.c
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Wed, 03 Jun 2015 12:54:32 HMT
+
+Package: snoop (2.5.0); urgency = low
+
+Abstract:
+	reverted back changes
+
+Files Modified: data/snoop.h, data/snoop_ioctl.h, data/snoopmain.c
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Wed, 20 May 2015 10:34:59 HMT
+
+Package: snoop (2.4.0); urgency = low
+
+Abstract:
+	added changes to allow user space programs to Enable/Disable the snoop interrupts
+
+Files Modified: data/snoop.h, data/snoop_ioctl.h, data/snoopmain.c
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Tue, 19 May 2015 19:49:47 HMT
+
+Package: snoop (2.3.0); urgency = medium
+
+Abstract:
+	Modified to create only needed device nodes
+
+Files Modified: spx/PACKAGES.D/snoop/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 14 May 2015 12:08:29 EDT
+
+Package: snoop (2.2.0); urgency = medium
+
+Abstract:
+	Defined IOCTLs properly.
+
+Files Modified: data/snoop_ioctl.h
+
+--Submitter: shravan (shravans@amiindia.co.in) Wed, 13 May 2015 12:59:26 HMT
+
+Package: snoop (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/snoop.h, data/snoop_ioctl.h, data/snoopmain.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:35:23 HMT
+
+Package: snoop (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:26:28 GMT
+
+Package: snoop (1.20.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:53:13 GMT
+
+Package: snoop (1.19.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:05:24 GMT
+
+Package: snoop (1.18.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/snoopmain.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:04:47 EDT
+
+Package: snoop (1.17.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/snoopmain.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:06:00 GMT
+
+Package: snoop (1.16.0); urgency = low
+
+Abstract:
+	Multi Snoop support
+
+Files Modified: data/snoop.h, data/snoopmain.c, spx/PACKAGES.D/snoop/SCRIPTS/dev-install
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 22 May 2014 15:24:38 CST
+
+Package: snoop (1.15.0); urgency = low
+
+Abstract:
+	added support for kernel version 3.4.11
+
+Files Modified: data/snoopmain.c
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Wed, 21 May 2014 16:32:30 HMT
+
+Package: snoop (1.14.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/snoop/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:04:40 GMT
+
+Package: snoop (1.13.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/snoop/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 21:04:52 HMT
+
+Package: snoop (1.12.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:41:48 EDT
+
+Package: snoop (1.11.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:05:57 EDT
+
+Package: snoop (1.10.0); urgency = high
+
+Abstract:
+	Binary build issue fixed
+
+Files Added: spx/PACKAGES.D/snoop/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Fri, 28 Sep 2012 18:07:15 EDT
+
+Package: snoop (1.9.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/snoopmain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Mar 2012 10:03:25 EDT
+
+Package: snoop (1.8.0); urgency = low
+
+Abstract:
+	Reverting the last changes w.r.t. conditional compilation
+
+Files Modified: data/Makefile, data/snoopmain.c, spx/PACKAGES.D/snoop_driver_dev/SCRIPTS/dev-install
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Fri, 10 Feb 2012 19:32:37 IST
+
+Package: snoop (1.7.0); urgency = low
+
+Abstract:
+	Removed the conditional compilation for the macro - FEATURE_SNOOP_CLEAR_DATA_SUPPORT
+
+Files Modified: data/Makefile, data/snoopmain.c, spx/PACKAGES.D/snoop_driver_dev/SCRIPTS/dev-install
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Fri, 10 Feb 2012 11:26:16 IST
+
+Package: snoop (1.6.0); urgency = low
+
+Abstract:
+	Add a project configuration option that can choice keep data or not when SNOOP support is added,
+
+Files Added: spx/P.CONFIG
+Files Modified: data/snoopmain.c, spx/INFO
+
+--Submitter: terrychen (terrychen@ami.com.tw) Thu, 01 Sep 2011 17:12:40 CST
+
+Package: snoop (1.5.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/snoopmain.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 15:14:04 IST
+
+Package: snoop (1.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:36:18 EDT
+
+Package: snoop (1.3.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/snoop/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:51:15 EDT
+
+Package: snoop (1.2.0); urgency = medium
+
+Abstract:
+	Changes in snoop driver to comply with the changes to track open count done in helper driver
+
+Files Modified: data/snoopmain.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 27 Sep 2010 18:14:08 EDT
+
+Package: snoop (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:15:04 EDT
+
+Package: snoop (1.0.3); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:15:10 EDT
+
+Package: snoop (1.0.2); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:25:11 EDT
+
+Package: snoop (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:14:56 EST
+
+Package:snoop (1.0.0);urgency=new
+
+Abstract:
+	This package has the Snoop common driver.
+
+Files Added: snoopmain.c, Makefile, snoop.h, snoop_ioctl.h
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Tue, 8 Dec 2009 12:03:31 -0500

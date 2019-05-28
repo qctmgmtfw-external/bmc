@@ -1,0 +1,33 @@
+Source : floppy
+Version : 2.6.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Rama Rao Bisa (RamaB@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : floppy
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, iUSB_driver_dev, usbe_driver_dev, libdbgout_dev, Floppy_HW_support, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package includes Floppy Device driver module.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : floppy
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_usb
+Required : helper, iUSB, usbe, Floppy_HW_support, DevNodes
+Description : This pacakge includes built Floppy Device Driver Module.
+.
+

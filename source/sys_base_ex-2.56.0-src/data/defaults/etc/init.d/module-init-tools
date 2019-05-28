@@ -1,0 +1,121 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Provides:          module-init-tools
+# Required-Start:    
+# Required-Stop:     
+# Should-Start:      checkroot
+# Should-stop:
+# Default-Start:     S
+# Default-Stop:
+# Short-Description: Process /etc/modules.
+# Description:       Load the modules listed in /etc/modules.
+### END INIT INFO
+
+# Silently exit if the kernel does not support modules or needs modutils.
+[ -f /proc/modules ] || exit 0
+[ ! -f /proc/ksyms ] || exit 0
+[ -x /sbin/modprobe  ] || exit 0
+
+. /etc/default/rcS
+. /lib/lsb/init-functions
+
+PATH="/sbin:/bin"
+
+KVER=$(uname -r)
+KMAJ=${KVER%${KVER#*.*[^.]}}
+KMAJ=${KMAJ%.}
+
+MODULEDEP="/etc/modules.dep"
+
+if [ -e /etc/modules-$KVER ]; then
+  MODULES_FILE=/etc/modules-$KVER
+elif [ -e /etc/modules-$KMAJ ]; then
+  MODULES_FILE=/etc/modules-$KMAJ
+else
+  MODULES_FILE=/etc/modules
+fi
+
+load_module() {
+  local module args
+  module="$1"
+  args="$2"
+
+  if [ "$VERBOSE" != no ]; then
+    log_action_msg "Loading kernel module $module"
+    modprobe $module $args || true
+  else
+    modprobe $module $args > /dev/null 2>&1 || true
+  fi	
+}
+
+# modprobe the modules hid depends
+check_module_dep () {
+  local module args
+  module="$1"
+  args="$2"
+
+  # Check modules.dep exist
+  if [ -e "$MODULEDEP" ]; then
+    # modprobe dependent moduels
+    while read line
+    do
+	module_name=${line%%[:]*}
+	module_dep_list=${line##*[:]}
+	if [ $module == $module_name ]; then
+		for dep in $module_dep_list
+		do  
+			tmp=${dep%%[,]*}
+			load_module "$tmp"
+ 		done
+    	fi
+    done < $MODULEDEP
+    load_module "$module" "$args"
+  else
+   load_module "$module" "$args"
+  fi
+}
+
+#The following line is for Ractrends SP 4.0 
+#Busybox modprobe works without running depmod. Debian modprobe wants
+#modules.dep to be present and hence we have to run depmod for NFS
+#Busybox depmod does not have --quick option and issues error. So we 
+#redirect the stderr to null.
+if [ -x /sbin/depmod ]; then
+    /sbin/depmod || true
+fi
+
+if [ "$VERBOSE" = no ]; then
+  log_action_begin_msg 'Loading kernel modules'
+fi
+
+# Loop over every line in /etc/modules.
+grep '^[^#]' $MODULES_FILE | \
+while read module args; do
+  [ "$module" ] || continue
+  check_module_dep "$module" "$args"
+done
+
+
+# Just in case a sysadmin prefers generic symbolic links in
+# /lib/modules/boot for boot time modules we will load these modules.
+#Commented out the following line for Ractrends SP 4.0 because 
+# 1.Busybox modprobe does not support these options
+# 2.SP 4.0 does not use boot time modules.
+#boot="$(modprobe --list --type boot)"
+for d in $boot; do
+  mod="${d##*/}"
+  mod="${mod%.ko}"
+  load_module "$mod" ""
+done
+
+if [ "$VERBOSE" = no ]; then 
+  log_action_end_msg 0
+fi
+
+if [ -r /etc/modprobe.conf ] \
+	&& ! grep -q '^include.*modprobe.d' /etc/modprobe.conf; then
+  log_warning_msg '/etc/modprobe.conf exists but does not include /etc/modprobe.d/!'
+fi
+
+exit 0
+

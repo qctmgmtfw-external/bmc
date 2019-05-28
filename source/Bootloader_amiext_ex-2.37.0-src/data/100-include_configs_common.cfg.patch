@@ -1,0 +1,38 @@
+--- uboot/include/configs/common.cfg		2015-07-01 21:22:50.107253619 +0800
++++ uboot.new/include/configs/common.cfg	2015-07-01 21:23:22.443253966 +0800
+@@ -27,20 +27,20 @@
+ #define CONFIG_BOOTP_MASK (CONFIG_BOOTP_SUBNETMASK | CONFIG_BOOTP_GATEWAY  |  CONFIG_BOOTP_HOSTNAME)
+ #define CONFIG_EXPORT_ETH_FNS   			1
+ 
+-#define	CONFIG_ETHADDR					00:00:00:00:00:00	/* Ethernet MAC0 Address 		*/
++#define	CONFIG_ETHADDR					00:16:36:00:01:11	/* Ethernet MAC0 Address 		*/
+ 
+ #if (CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT >= 2)
+-#define 	CONFIG_ETH1ADDR				00:00:00:00:00:00	/* Ethernet MAC1 Address 		*/
++#define 	CONFIG_ETH1ADDR				00:16:36:00:01:22	/* Ethernet MAC1 Address 		*/
+ #define		CONFIG_HAS_ETH1				1
+ #endif
+ 
+ #if (CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT >= 3)
+-#define 	CONFIG_ETH2ADDR				00:00:00:00:00:00	/* Ethernet MAC1 Address 		*/
++#define 	CONFIG_ETH2ADDR				00:16:36:00:01:33	/* Ethernet MAC1 Address 		*/
+ #define		CONFIG_HAS_ETH2				1
+ #endif
+ 
+ #if (CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT >= 4)
+-#define 	CONFIG_ETH3ADDR				00:00:00:00:00:00	/* Ethernet MAC1 Address 		*/
++#define 	CONFIG_ETH3ADDR				00:16:36:00:01:44	/* Ethernet MAC1 Address 		*/
+ #define		CONFIG_HAS_ETH3				1
+ #endif
+ #if CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT
+@@ -59,8 +59,8 @@
+ /* 					Boot configurtion						   */
+ /*-------------------------------------------------------------*/
+ #define CONFIG_MENUKEY			 			27					/* ESC Key to enter menu		*/
+-#define CONFIG_BOOTDELAY        			0 
+-#define CONFIG_ZERO_BOOTDELAY_CHECK        1
++#define CONFIG_BOOTDELAY        			3 
++#define CONFIG_ZERO_BOOTDELAY_CHECK         1
+ #define CONFIG_SILENT_CONSOLE				1
+ #define CONFIG_BOOTCOMMAND					"bootfmh"
+ #define CONFIG_SYS_AUTOLOAD					"no"

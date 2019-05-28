@@ -1,0 +1,47 @@
+--- timeoutd/timeoutd.c	2015-05-21 18:16:35.874835090 +0530
++++ timeoutd.new/timeoutd.c	2015-05-21 18:17:42.761994205 +0530
+@@ -985,7 +985,7 @@
+     char	host[17];
+     struct stat status, *pstat;
+     time_t      idle, sesstime, time();
+-    char Buf[100];
++    char AuditFile[100];
+     FILE *fp;
+ 
+     pstat = &status;    /* point to status structure */
+@@ -1037,11 +1037,31 @@
+     		       "User %s exceeded idle limit (idle for %d minutes, max=%d).\n",
+                    user, (int)idle, config[configline]->idlemax);
+     		closelog();
+-    		sprintf (Buf, "%s/%d", "/tmp/audit", utmpp->ut_pid);
+-    		fp = fopen (Buf, "w");
+-    		if (NULL != fp)
++    		sprintf (AuditFile, "%s","/tmp/audit/autoLogoutPIDEntryTable");
++    		struct stat stbuf;
++    		if (stat(AuditFile, &stbuf) == 0)
+     		{
+-    			fclose(fp);
++    			fp = fopen (AuditFile, "a+");
++    			if (NULL != fp)
++    			{
++    				fprintf(fp,"%d\n",utmpp->ut_pid);
++    				fclose(fp);
++    			}
++    		}
++    		else
++    		{
++    			fp = fopen(AuditFile,"w");
++    			if(NULL!=fp){
++    				if(-1 == chmod(AuditFile,S_IRWXU|S_IRGRP|S_IRWXO)){
++    					openlog("timeoutd", OPENLOG_FLAGS, LOG_DAEMON);
++    					syslog(LOG_NOTICE,
++    							"User %s failed to chmod file /tmp/audit/autoLogoutPIDEntryTable.\n",
++    							user);
++    					closelog();
++    				}
++    				fprintf(fp,"%d\n",utmpp->ut_pid);
++    				fclose(fp);
++    			}
+     		}
+ 		killit(utmpp->ut_pid, user, dev);
+     		break;

@@ -1,0 +1,12 @@
+--- uboot/arch/arm/cpu/arm1176/ast2500/platform.S	2016-11-08 17:48:49.695689451 +0800
++++ uboot/arch/arm/cpu/arm1176/ast2500/platform.S.new	2016-11-08 17:48:35.059689598 +0800
+@@ -104,7 +104,9 @@
+ #define ASTMMC_INIT_VER      0x0D                @ 8bit verison number
+ #define ASTMMC_INIT_DATE     0x20160906          @ Release date
+ 
++#ifndef ASTMMC_DDR4_MANUAL_RPU
+ #define ASTMMC_DDR4_MANUAL_RPU 0x0               @ 0x0-0xF, default set to 0, larger value means weaker driving
++#endif
+ //#define ASTMMC_DDR4_MANUAL_RPD 0x0             @ 0x0-0xF, default not set, larger value means stronger driving
+ 
+ #define ASTMMC_REGIDX_010    0x00

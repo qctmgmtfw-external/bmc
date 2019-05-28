@@ -1,0 +1,31 @@
+--- linux/drivers/usb/host/Makefile	2014-08-14 09:38:34.000000000 +0800
++++ linux.new/drivers/usb/host/Makefile	2015-01-26 14:28:17.158395445 +0800
+@@ -26,6 +26,15 @@
+ obj-$(CONFIG_PCI)		+= pci-quirks.o
+ 
+ obj-$(CONFIG_USB_EHCI_HCD)	+= ehci-hcd.o
++
++include ${SPXINC}/projdef.mk
++ifeq ($(CONFIG_SPX_FEATURE_GLOBAL_EHCI1_USB_HOST_CONTROLLER), YES)
++obj-$(CONFIG_USB_AST_EHCI_HCD)	+= ehci-hcd.o
++endif
++ifeq ($(CONFIG_SPX_FEATURE_GLOBAL_EHCI2_USB_HOST_CONTROLLER), YES)
++obj-$(CONFIG_USB_AST_EHCI_HCD)	+= ehci-hcd.o
++endif
++
+ obj-$(CONFIG_USB_EHCI_PCI)	+= ehci-pci.o
+ obj-$(CONFIG_USB_EHCI_HCD_PLATFORM)	+= ehci-platform.o
+ obj-$(CONFIG_USB_EHCI_MXC)	+= ehci-mxc.o
+@@ -55,6 +64,12 @@
+ obj-$(CONFIG_USB_OHCI_HCD_PXA27X)	+= ohci-pxa27x.o
+ 
+ obj-$(CONFIG_USB_UHCI_HCD)	+= uhci-hcd.o
++ifeq ($(CONFIG_SPX_FEATURE_GLOBAL_UHCI1_USB_HOST_CONTROLLER), YES)
++obj-$(CONFIG_USB_AST_UHCI_HCD)	+= uhci-hcd.o
++endif
++ifeq ($(CONFIG_SPX_FEATURE_GLOBAL_UHCI2_USB_HOST_CONTROLLER), YES)
++obj-$(CONFIG_USB_AST_UHCI_HCD)	+= uhci-hcd.o
++endif
+ obj-$(CONFIG_USB_FHCI_HCD)	+= fhci.o
+ obj-$(CONFIG_USB_XHCI_HCD)	+= xhci-hcd.o
+ obj-$(CONFIG_USB_SL811_HCD)	+= sl811-hcd.o

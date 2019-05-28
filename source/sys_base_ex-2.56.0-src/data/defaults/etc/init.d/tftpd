@@ -1,0 +1,102 @@
+#!/bin/sh
+# /etc/init.d/tftpd: start TFTP Server
+#
+# chkconfig: 2345 10 90
+#Runlevel : 1 = K20
+#Runlevel : 3 = S16
+#Runlevel : 6 = K20
+#Runlevel : 7 = K20
+#Runlevel : 8 = K20
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+. /lib/lsb/init-functions
+
+UDPSVD_PATH="/usr/bin/udpsvd"
+LISTEN_IP="0"
+TFTP_NAME="tftpd"
+TFTP_DIR="/usr/local/www/Java"
+
+#check service state with ncml conf
+PORT_VAL_BYTE=2147483647
+SERVICE_NAME="[tftp]"
+SERVICE_CONF="/conf/ncml.conf"
+#check service state if enabled
+check_service_enabled()
+{
+    if [ -f $SERVICE_CONF ];
+    then
+
+        SERVICE_STATE=`cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+                                   awk 'BEGIN {FS="="} /current_state/ {print $2 }'       | 
+                                   awk 'NR==1 {print $0}'`
+
+		if [ "$SERVICE_STATE" == "" ];
+		then
+			exit 1
+		fi
+    
+        if [ $SERVICE_STATE == 0 ];
+        then
+    #        log_action_msg "$SERVICE_NAME is disabled"
+            exit 1
+        else
+            log_action_msg "$SERVICE_NAME is enabled"
+        fi
+    
+    else
+        log_action_msg "$SERVICE_CONF doesn't exist"
+	exit 1
+    fi
+}
+
+get_service_port()
+{
+    if [ -f $SERVICE_CONF ];
+    then
+
+        PORT=$((PORT_VAL_BYTE & `cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+                           awk 'BEGIN {FS="="} /secure_port/ {print $2 }'       | 
+                          awk 'NR==1 {print $0}'`))
+
+        if [[ $PORT -le 0 || $PORT -eq $PORT_VAL_BYTE ]];
+        then
+            log_action_msg "Secure port is disabled for $SERVICE_NAME"
+            PORT=$((PORT_VAL_BYTE & `cat $SERVICE_CONF | awk -v val=$SERVICE_NAME '$1 == val, $1 == ""' | 
+                            awk 'BEGIN {FS="="} /nonscecure_port/ {print $2 }'       | 
+                            awk 'NR==1 {print $0}'`))
+            if [[ $PORT -le 0 || $PORT -eq $PORT_VAL_BYTE ]];
+            then
+                log_action_msg "Non-Secure Port is also disabled for $SERVICE_NAME"
+                exit 1
+            else
+                log_action_msg "Non-Secure Port is enabled for $SERVICE_NAME with $PORT"
+            fi
+        
+        else
+            log_action_msg "Secure port is Enabled for $SERVICE_NAME with $PORT"
+        fi
+    else
+        log_action_msg "$SERVICE_CONF doesn't exist"
+    fi
+}
+
+case "$1" in
+  start)
+        PORT=0
+        check_service_enabled
+        get_service_port
+        log_daemon_msg "Starting TFTP Service in port number : $PORT" "tftpd"
+        $UDPSVD_PATH -E $LISTEN_IP $PORT $TFTP_NAME $TFTP_DIR &
+        log_end_msg $?
+    ;;
+  stop)     
+        check_service_enabled
+        log_daemon_msg "Stopping TFTP Service " "tftpd"
+        killall -9 $UDPSVD_PATH
+        log_end_msg $?
+    ;;
+   *)
+    echo "Usage: /etc/init.d/tftpd {start|stop}"
+    exit 1
+esac
+
+exit 0

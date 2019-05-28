@@ -1,0 +1,2 @@
+/usr/lib/%MULTI_ARCH_LIB%/libsqlite3.so		-> libsqlite3.so.0.8.6
+/usr/lib/%MULTI_ARCH_LIB%/libsqlite3.so.0	-> libsqlite3.so.0.8.6

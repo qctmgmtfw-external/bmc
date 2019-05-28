@@ -1,0 +1,229 @@
+Package: watchdog (2.3.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/watchdog/DATA/.keep, spx/PACKAGES.D/watchdog_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:59:39 EST
+
+Package: watchdog (2.2.0); urgency = high
+
+Abstract:
+	Added dependency of libwatchdog package
+
+Files Modified: spx/INFO
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Mon, 12 Oct 2015 12:48:12 HMT
+
+Package: watchdog (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/watchdog_core.c, data/watchdog_core.h, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:41:25 HMT
+
+Package: watchdog (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 07:21:05 GMT
+
+Package: watchdog (1.19.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:59:05 HMT
+
+Package: watchdog (1.18.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:48:27 GMT
+
+Package: watchdog (1.17.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 07:00:57 GMT
+
+Package: watchdog (1.16.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/watchdog_core.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:04:18 EDT
+
+Package: watchdog (1.15.0); urgency = medium
+
+Abstract:
+	Fixed crash during unload of watchdog module
+
+Files Modified: data/watchdog_core.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Sat, 06 Sep 2014 15:12:32 HMT
+
+Package: watchdog (1.14.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/watchdog_core.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:07:30 GMT
+
+Package: watchdog (1.13.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/watchdog_core.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:45:07 GMT
+
+Package: watchdog (1.12.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/watchdog/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:07:03 GMT
+
+Package: watchdog (1.11.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/watchdog/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 21:08:54 HMT
+
+Package: watchdog (1.10.0); urgency = medium
+
+Abstract:
+	Added a proc entry for the timeout value of the watchdog
+
+Files Modified: data/watchdog_core.c
+
+--Submitter: Manoj Ashok (manoja@amiindia.co.in) Sat, 30 Nov 2013 15:53:50 HMT
+
+Package: watchdog (1.9.0); urgency = medium
+
+Abstract:
+	Modified watchdog common driver package to support kernel version 3.4.11.
+
+Files Modified: data/watchdog_core.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Wed, 16 Oct 2013 14:02:42 HMT
+
+Package: watchdog (1.8.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:37:24 EDT
+
+Package: watchdog (1.7.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:57:12 EDT
+
+Package: watchdog (1.6.0); urgency = low
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/watchdog_core.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 11:22:45 IST
+
+Package: watchdog (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 16:00:32 EDT
+
+Package: watchdog (1.4.0); urgency = medium
+
+Abstract:
+	Pilot specific code is removed.
+
+Files Modified: data/watchdog_core.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 21 Jan 2011 09:32:37 IST
+
+Package: watchdog (1.3.0); urgency = medium
+
+Abstract:
+	When the firmware reset is occurred due to hard reset and after that,
+when the watchdog timeout occurs, the firmware gets halt.
+This is because the Power-On-Reset(This is set whenever there is hard reset) is not cleared.
+So the fix is to clear the Power-On-Reset.
+
+Files Modified: data/watchdog_core.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 20 Jan 2011 12:43:15 IST
+
+Package: watchdog (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/watchdog/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:52:15 EDT
+
+Package: watchdog (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:55:19 EDT
+
+Package: watchdog (1.0.1); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:15:31 EDT
+
+Package: watchdog (1.0.0); urgency = new
+
+Abstract:
+	watchdog Common Device Driver.
+
+Files Added: data, data/Makefile, data/watchdog_core.c, data/watchdog_core.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/watchdog, spx/PACKAGES.D/watchdog/DATA, spx/PACKAGES.D/watchdog/SCRIPTS, spx/PACKAGES.D/watchdog/SCRIPTS/dev-install, spx/PACKAGES.D/watchdog_driver_dev, spx/PACKAGES.D/watchdog_driver_dev/DATA, spx/PACKAGES.D/watchdog_driver_dev/SCRIPTS, spx/PACKAGES.D/watchdog_driver_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 21 May 2010 10:52:57 CST
+

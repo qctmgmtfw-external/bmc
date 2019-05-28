@@ -1,0 +1,426 @@
+Package: Bootloader_basesoc_ast_ex (2.29.0); urgency = high
+
+Abstract:
+	remove the unused variables
+
+Files Modified: data/08-arch_arm_cpu_astcommon_ast_wdt.c
+
+--Submitter: pearcelee (pearcelee) Wed, 09 Mar 2016 10:19:46 CST
+
+Package: Bootloader_basesoc_ast_ex (2.28.0); urgency = high
+
+Abstract:
+	move the platform specific code to POWER8 packages, review board #13249
+
+Files Modified: data/08-arch_arm_cpu_astcommon_ast_wdt.c
+
+--Submitter: pearcelee (pearcelee) Mon, 07 Mar 2016 12:37:13 CST
+
+Package: Bootloader_basesoc_ast_ex (2.27.0); urgency = medium
+
+Abstract:
+	Memory corruption in ethernet driver in u-boot
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: vamshi krishnan G (vamshikrishnang@amiindia.co.in) Thu, 04 Feb 2016 11:48:32 IST
+
+Package: Bootloader_basesoc_ast_ex (2.26.0); urgency = medium
+
+Abstract:
+	update for power8, reivew board #12189
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c, data/08-arch_arm_cpu_astcommon_ast_wdt.c, data/12-arch_arm_cpu_astcommon_reset.c, data/18-include_ast_hwreg.h
+
+--Submitter: pearcelee (pearcelee) Wed, 03 Feb 2016 17:27:22 CST
+
+Package: Bootloader_basesoc_ast_ex (2.25.0); urgency = high
+
+Abstract:
+	When u-boot enable MAC DMA and boot into Linux, sometimes it could encounter kernel panic.
+Thus, disable MAC DMA & transmission before boot into Linux
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: charliechin (CharlieChin@ami.com.tw) Mon, 01 Feb 2016 15:39:18 JWST
+
+Package: Bootloader_basesoc_ast_ex (2.24.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/Bootloader_basesoc_ast_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 19:13:06 EST
+
+Package: Bootloader_basesoc_ast_ex (2.23.0); urgency = high
+
+Abstract:
+	PCIE related definitions and functions are added. There are some residual code from Aspeed checked in here, just for reference purpose. Currently only AST3200 SOC uses/enabled PCIE. 
+If other SOCs need to enable PCIE, please refer to other commits to follow which has platform/soc specific changes.
+
+Files Added: data/28-arch_arm_cpu_astcommon_ast_ahbc.c, data/29-arch_arm_cpu_astcommon_ast_ahbc.h, data/30-arch_arm_cpu_astcommon_ast_p2x.c, data/31-arch_arm_cpu_astcommon_ast_p2x.h, data/32-arch_arm_cpu_astcommon_ast_scu.c, data/33-arch_arm_cpu_astcommon_ast_scu.h, data/34-arch_arm_cpu_astcommon_pcie.c, data/35-arch_arm_cpu_astcommon_regs_ahbc.h, data/36-arch_arm_cpu_astcommon_regs_p2x.h, data/37-arch_arm_cpu_astcommon_regs_pcie.h
+Files Modified: data/11-arch_arm_cpu_astcommon_Makefile, data/15-include_ast_hwdef.h, data/17-include_ast_hwmap.h, data/23-arch_arm_cpu_astcommon_regs-scu.h
+
+--Submitter: Yugender P Subramanian (yugenderps@ami.com) Mon, 28 Dec 2015 14:52:51 EST
+
+Package: Bootloader_basesoc_ast_ex (2.22.0); urgency = medium
+
+Abstract:
+	adding registers used for postcode to header files
+
+Files Modified: data/18-include_ast_hwreg.h
+
+--Submitter: pavithras (pavithras@ami.com) Thu, 19 Nov 2015 18:00:40 GMT
+
+Package: Bootloader_basesoc_ast_ex (2.21.0); urgency = high
+
+Abstract:
+	Correct the baudrate of debug message
+
+Files Modified: data/19-include_configs_ast.cfg
+
+--Submitter: robinchiu (RobinChiu) Fri, 23 Oct 2015 16:50:16 JWST
+
+Package: Bootloader_basesoc_ast_ex (2.20.0); urgency = high
+
+Abstract:
+	Add selection of number of SDHC slot and number of eMMC
+
+Files Modified: data/06-arch_arm_cpu_astcommon_ast_mmc.c
+
+--Submitter: robinchiu (RobinChiu) Fri, 25 Sep 2015 15:43:55 CST
+
+Package: Bootloader_basesoc_ast_ex (2.19.0); urgency = medium
+
+Abstract:
+	Updated Min eMMC clock freq. for OEM platform.
+
+Files Deleted: data/28-arch_arm_cpu_astcommon_ast_mmc.c
+Files Modified: data/06-arch_arm_cpu_astcommon_ast_mmc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 22 Sep 2015 20:59:18 HMT
+
+Package: Bootloader_basesoc_ast_ex (2.18.0); urgency = medium
+
+Abstract:
+	Making changes generic to all platforms
+
+Files Added: data/26-drivers_mmc_sdhci.c, data/27-drivers_mmc_mmc.c, data/28-arch_arm_cpu_astcommon_ast_mmc.c
+Files Deleted: data/26-arch_arm_lib_bootm.c, data/27-arch_arm_include_asm_setup.h, data/28-include_configs_common.cfg, data/29-include_asm-generic_u-boot.h, data/30-drivers_mmc_sdhci.c, data/31-drivers_mmc_mmc.c, data/32-arch_arm_cpu_astcommon_ast_mmc.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 25 Aug 2015 19:55:05 HMT
+
+Package: Bootloader_basesoc_ast_ex (2.17.0); urgency = high
+
+Abstract:
+	Add eMMC support for AST2500
+
+Files Added: data/30-drivers_mmc_sdhci.c, data/31-drivers_mmc_mmc.c, data/32-arch_arm_cpu_astcommon_ast_mmc.c
+
+--Submitter: robinchiu (RobinChiu) Mon, 24 Aug 2015 18:48:06 CST
+
+Package: Bootloader_basesoc_ast_ex (2.16.0); urgency = medium
+
+Abstract:
+	Exporting ethernet address for vitual ethernet
+
+Files Added: data/26-arch_arm_lib_bootm.c, data/27-arch_arm_include_asm_setup.h, data/28-include_configs_common.cfg, data/29-include_asm-generic_u-boot.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 18 Aug 2015 20:15:34 HMT
+
+Package: Bootloader_basesoc_ast_ex (2.15.0); urgency = high
+
+Abstract:
+	Changes for AST3200 A1 Board to work
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c, data/21-arch_arm_cpu_astcommon_eth_scu.c, data/23-arch_arm_cpu_astcommon_regs-scu.h
+
+--Submitter: David S Yoon (davidy@ami.com) Thu, 25 Jun 2015 17:34:24 EDT
+
+Package: Bootloader_basesoc_ast_ex (2.14.0); urgency = medium
+
+Abstract:
+	Framebuffer HW init for AST2500EVB.
+
+Files Modified: data/18-include_ast_hwreg.h, data/25-arch_arm_cpu_astcommon_astfb.c, spx/INFO
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Fri, 12 Jun 2015 18:09:28 JWST
+
+Package: Bootloader_basesoc_ast_ex (2.13.0); urgency = medium
+
+Abstract:
+	Fixed the complier error.
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: kennywu (kennywu) Tue, 19 May 2015 12:06:21 CST
+
+Package: Bootloader_basesoc_ast_ex (2.12.0); urgency = medium
+
+Abstract:
+	Support BCM5461S PHY.
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c, data/18-include_ast_hwreg.h
+
+--Submitter: kennywu (kennywu) Mon, 18 May 2015 16:00:00 CST
+
+Package: Bootloader_basesoc_ast_ex (2.11.0); urgency = low
+
+Abstract:
+	Ast2530evb supported
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Sun, 10 May 2015 10:05:22 CST
+
+Package: Bootloader_basesoc_ast_ex (2.10.0); urgency = medium
+
+Abstract:
+	Modify clock frequency ratio selection because of spec is changed
+
+Files Modified: data/07-arch_arm_cpu_astcommon_ast_spiflash.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 30 Apr 2015 17:37:31 CST
+
+Package: Bootloader_basesoc_ast_ex (2.9.0); urgency = medium
+
+Abstract:
+	Add AST2500 A1 MAC IO Timing Setting.
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c, data/18-include_ast_hwreg.h
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 29 Apr 2015 13:52:04 CST
+
+Package: Bootloader_basesoc_ast_ex (2.8.0); urgency = medium
+
+Abstract:
+	Add Framebuffer register setting under u-boot.
+
+Files Added: data/25-arch_arm_cpu_astcommon_astfb.c
+Files Modified: data/11-arch_arm_cpu_astcommon_Makefile
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Sat, 07 Mar 2015 10:58:09 JWST
+
+Package: Bootloader_basesoc_ast_ex (2.7.0); urgency = medium
+
+Abstract:
+	Set u-boot TFTP block size as 512.
+
+Files Modified: data/19-include_configs_ast.cfg
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 26 Feb 2015 10:56:12 JWST
+
+Package: Bootloader_basesoc_ast_ex (2.6.0); urgency = medium
+
+Abstract:
+	Correct the I2C multi-function pins setting when bus number over than #9.
+
+Files Modified: data/03-arch_arm_cpu_astcommon_ast_i2c.c
+
+--Submitter: jammarchiang (JammarChiang@ami.com.tw) Fri, 06 Feb 2015 09:04:11 CST
+
+Package: Bootloader_basesoc_ast_ex (2.5.0); urgency = low
+
+Abstract:
+	Support ast2530evb
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c, data/07-arch_arm_cpu_astcommon_ast_spiflash.c, spx/INFO
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 04 Feb 2015 23:45:16 JWST
+
+Package: Bootloader_basesoc_ast_ex (2.4.0); urgency = medium
+
+Abstract:
+	added BMC firmware autorecovery patches
+
+Files Modified: data/08-arch_arm_cpu_astcommon_ast_wdt.c, data/11-arch_arm_cpu_astcommon_Makefile
+
+--Submitter: RAJA JAYAVELU (jraja@amiindia.co.in) Thu, 18 Dec 2014 01:00:56 EST
+
+Package: Bootloader_basesoc_ast_ex (2.3.0); urgency = high
+
+Abstract:
+	Assign i2c_bus_num variable to bus number 0.
+
+Files Modified: data/03-arch_arm_cpu_astcommon_ast_i2c.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 06 Nov 2014 16:45:58 CST
+
+Package: Bootloader_basesoc_ast_ex (2.2.0); urgency = high
+
+Abstract:
+	Rename i2c bus number variable which is defined in DEFCONFIG back to CFG_I2C_CHANNEL_ID to make it compatible with prior AST.
+
+Files Modified: data/03-arch_arm_cpu_astcommon_ast_i2c.c
+
+--Submitter: robinchiu (RobinChiu) Wed, 05 Nov 2014 14:51:53 CST
+
+Package: Bootloader_basesoc_ast_ex (2.1.0); urgency = medium
+
+Abstract:
+	Modify i2c bus number to be configured by DEFCONFIG.
+
+Files Modified: data/03-arch_arm_cpu_astcommon_ast_i2c.c
+
+--Submitter: robinchiu (RobinChiu) Tue, 04 Nov 2014 14:28:34 CST
+
+Package: Bootloader_basesoc_ast_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 02:59:58 GMT
+
+Package: Bootloader_basesoc_ast_ex (1.15.0); urgency = medium
+
+Abstract:
+	Add support for AST2500 and dual IO mode.
+
+Files Modified: data/07-arch_arm_cpu_astcommon_ast_spiflash.c
+
+--Submitter: robinchiu (RobinChiu) Tue, 30 Sep 2014 13:06:15 CST
+
+Package: Bootloader_basesoc_ast_ex (1.14.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:45:33 GMT
+
+Package: Bootloader_basesoc_ast_ex (1.13.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 02:55:06 GMT
+
+Package: Bootloader_basesoc_ast_ex (1.12.0); urgency = medium
+
+Abstract:
+	Rename Rules to Rules.py
+
+Files Added: spx/RULES.py
+Files Deleted: spx/RULES
+
+--Submitter: nicolaschen (nicolaschen@ami.com.tw) Mon, 15 Sep 2014 16:34:03 CST
+
+Package: Bootloader_basesoc_ast_ex (1.11.0); urgency = medium
+
+Abstract:
+	Support BCM54612 PHY
+
+Files Added: spx/RULES
+Files Deleted: spx/RULES.py
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: nicolaschen (nicolaschen@ami.com.tw) Mon, 15 Sep 2014 15:25:41 CST
+
+Package: Bootloader_basesoc_ast_ex (1.10.0); urgency = medium
+
+Abstract:
+	Changed line number of patch.
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 10 Sep 2014 15:22:49 CST
+
+Package: Bootloader_basesoc_ast_ex (1.9.0); urgency = medium
+
+Abstract:
+	Supported auto detecting phy_addr.
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 10 Sep 2014 14:52:41 CST
+
+Package: Bootloader_basesoc_ast_ex (1.8.0); urgency = medium
+
+Abstract:
+	AST3200EVB compatible.
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 04 Sep 2014 16:49:46 CST
+
+Package: Bootloader_basesoc_ast_ex (1.7.0); urgency = low
+
+Abstract:
+	When ECC is dsiabled , undef CONFIG_ECC to avoid accidently enable ecc:wq!
+
+Files Modified: data/19-include_configs_ast.cfg
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 29 Aug 2014 14:45:21 EDT
+
+Package: Bootloader_basesoc_ast_ex (1.6.0); urgency = medium
+
+Abstract:
+	modified to support AST2500EVB.
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Fri, 22 Aug 2014 11:52:09 CST
+
+Package: Bootloader_basesoc_ast_ex (1.5.0); urgency = medium
+
+Abstract:
+	Reverting the changes
+
+Files Deleted: data/25-include_configs_ast2.cfg
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 19 Aug 2014 12:00:25 GMT
+
+Package: Bootloader_basesoc_ast_ex (1.4.0); urgency = medium
+
+Abstract:
+	Add new ast configuration for AST2500EVB.
+
+Files Added: data/25-include_configs_ast2.cfg
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 18 Aug 2014 14:44:39 CST
+
+Package: Bootloader_basesoc_ast_ex (1.3.0); urgency = medium
+
+Abstract:
+	Modified to support ast2500evb.
+
+Files Modified: data/02-arch_arm_cpu_astcommon_ast_eth.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Mon, 18 Aug 2014 14:35:42 CST
+
+Package: Bootloader_basesoc_ast_ex (1.2.0); urgency = medium
+
+Abstract:
+	Fix for compilation errors when fail safe booting is enabled in PRJ
+
+Files Modified: data/08-arch_arm_cpu_astcommon_ast_wdt.c, data/11-arch_arm_cpu_astcommon_Makefile
+
+--Submitter: Winston (winstont@ami.com) Mon, 11 Aug 2014 00:42:39 GMT
+
+Package: Bootloader_basesoc_ast_ex (1.1.0); urgency = medium
+
+Abstract:
+	Updated for AST3200 Eval Board
+
+Files Added: data/21-arch_arm_cpu_astcommon_eth_scu.c, data/22-arch_arm_cpu_astcommon_ftgmac100.c, data/23-arch_arm_cpu_astcommon_regs-scu.h, data/24-arch_arm_cpu_astcommon_ftgmac100.h
+Files Modified: data/11-arch_arm_cpu_astcommon_Makefile, data/19-include_configs_ast.cfg
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 18 Jul 2014 17:18:28 EDT
+
+Package: Bootloader_basesoc_ast_ex (1.0.0); urgency = new
+
+Abstract:
+	AST SOC related patches to Bootloader Uboot-2013.07
+
+Files Added: data, data/01-arch_arm_cpu_astcommon_ast_clk.c, data/02-arch_arm_cpu_astcommon_ast_eth.c, data/03-arch_arm_cpu_astcommon_ast_i2c.c, data/04-arch_arm_cpu_astcommon_ast_kcs.c, data/05-arch_arm_cpu_astcommon_ast_kcs.h, data/06-arch_arm_cpu_astcommon_ast_mmc.c, data/07-arch_arm_cpu_astcommon_ast_spiflash.c, data/08-arch_arm_cpu_astcommon_ast_wdt.c, data/09-arch_arm_cpu_astcommon_cache.c, data/10-arch_arm_cpu_astcommon_interrupts.c, data/11-arch_arm_cpu_astcommon_Makefile, data/12-arch_arm_cpu_astcommon_reset.c, data/13-arch_arm_cpu_astcommon_soc_hw.h, data/14-arch_arm_cpu_astcommon_timer.c, data/15-include_ast_hwdef.h, data/16-include_ast_hw.h, data/17-include_ast_hwmap.h, data/18-include_ast_hwreg.h, data/19-include_configs_ast.cfg, data/20-include_soc_kcs.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_basesoc_ast_ex, spx/PACKAGES.D/Bootloader_basesoc_ast_ex/DATA, spx/PACKAGES.D/Bootloader_basesoc_ast_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_basesoc_ast_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 16:44:22 EDT
+

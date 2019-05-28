@@ -1,0 +1,45 @@
+Package: ssp (1.4.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/ssp/DATA/.keep, spx/PACKAGES.D/ssp_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:12:00 EST
+
+Package: ssp (1.3.0); urgency = high
+
+Abstract:
+	fix undeclared CONFIG_SPX_FEATURE_GLOBAL_SSP_MEMORY_SIZE for AST2500
+
+Files Modified: data/ssp.h, data/sspmain.c
+
+--Submitter: changjun kang (changjunk@ami.com) Wed, 30 Sep 2015 04:56:49 EDT
+
+Package: ssp (1.2.0); urgency = medium
+
+Abstract:
+	remove hardcoded load address
+
+Files Modified: data/ssp.h, data/sspmain.c
+
+--Submitter: changjun kang (changjunk@ami.com) Mon, 28 Sep 2015 12:48:33 EDT
+
+Package: ssp (1.1.0); urgency = low
+
+Abstract:
+	update ioctl cmds
+
+Files Modified: data/ssp.h, data/sspmain.c
+
+--Submitter: changjun kang (changjunk@ami.com) Wed, 23 Sep 2015 10:25:52 EDT
+
+Package: ssp (1.0.0); urgency = new
+
+Abstract:
+	This package contains the SSP common(hardware independent) driver.
+
+Files Added: data, data/Makefile, data/ssp.h, data/sspmain.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/ssp, spx/PACKAGES.D/ssp/DATA, spx/PACKAGES.D/ssp/SCRIPTS, spx/PACKAGES.D/ssp/SCRIPTS/dev-install, spx/PACKAGES.D/ssp_driver_dev, spx/PACKAGES.D/ssp_driver_dev/DATA, spx/PACKAGES.D/ssp_driver_dev/SCRIPTS, spx/PACKAGES.D/ssp_driver_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 20 Nov 2014 10:32:33 CST
+

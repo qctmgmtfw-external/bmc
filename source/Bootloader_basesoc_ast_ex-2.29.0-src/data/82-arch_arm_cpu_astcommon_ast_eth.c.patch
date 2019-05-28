@@ -1,0 +1,47 @@
+--- uboot_old/arch/arm/cpu/astcommon/ast_eth.c	2017-06-07 17:50:47.399409700 +0800
++++ uboot/arch/arm/cpu/astcommon/ast_eth.c	2017-06-07 18:54:49.387532644 +0800
+@@ -774,6 +774,44 @@
+ 	return 0;
+ }
+ 
++int ast_eth_reset(void) 
++{ 
++       int use_num; 
++       int i; 
++       u32 reg; 
++       struct eth_device *dev; 
++ 
++#ifdef CONFIG_NET_MULTI 
++       if(CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT > 0) 
++               use_num = CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT; 
++       else 
++               use_num = 1; 
++#else 
++       use_num = 1; 
++#endif 
++    for (i = 0; i < use_num; i ++) { 
++               dev = (struct eth_device *) malloc(sizeof(struct eth_device)); 
++               dev->iobase = ast_eth_reg_addr_base[i]; 
++ 
++               reg = ast_eth_read_reg(dev, MACCR_REG); 
++               reg |= MACCR_SW_RST; 
++               ast_eth_write_reg(dev, reg, MACCR_REG); 
++               udelay(1000); 
++ 
++               reg = ast_eth_read_reg(dev, MACCR_REG); 
++               reg |= MACCR_SW_RST; 
++               ast_eth_write_reg(dev, reg, MACCR_REG); 
++               udelay(1000); 
++ 
++               do { 
++                       reg = ast_eth_read_reg(dev, MACCR_REG); 
++                       udelay(1000); 
++               } while (reg & MACCR_SW_RST); 
++       } 
++       free(dev); 
++       return 1; 
++}  
++
+ int ast_eth_initialize(bd_t *bis)
+ {
+ 	unsigned int scu_reg;

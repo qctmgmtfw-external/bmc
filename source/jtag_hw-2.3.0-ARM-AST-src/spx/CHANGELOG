@@ -1,0 +1,139 @@
+Package: jtag_hw (2.3.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/jtag_hw/DATA/.keep, spx/PACKAGES.D/jtag_hw_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:20:20 EST
+
+Package: jtag_hw (2.2.0); urgency = high
+
+Abstract:
+	Remove unused variable.
+
+Files Modified: data/ast_jtag.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 20 Nov 2014 14:46:37 CST
+
+Package: jtag_hw (2.1.0); urgency = high
+
+Abstract:
+	Modify license of package to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: robinchiu (RobinChiu) Tue, 18 Nov 2014 14:26:04 CST
+
+Package: jtag_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:02:59 GMT
+
+Package: jtag_hw (1.10.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:44:38 HMT
+
+Package: jtag_hw (1.9.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:46:33 GMT
+
+Package: jtag_hw (1.8.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:56:09 GMT
+
+Package: jtag_hw (1.7.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/ast_jtag.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:07:08 EDT
+
+Package: jtag_hw (1.6.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/ast_jtag.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:37:27 GMT
+
+Package: jtag_hw (1.5.0); urgency = medium
+
+Abstract:
+	Add jtag_hw_dev
+
+Files Added: spx/PACKAGES.D/jtag_hw_dev, spx/PACKAGES.D/jtag_hw_dev/DATA, spx/PACKAGES.D/jtag_hw_dev/SCRIPTS, spx/PACKAGES.D/jtag_hw_dev/SCRIPTS/dev-install
+Files Modified: spx/INFO, spx/PACKAGES.D/jtag_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: robinchiu (RobinChiu) Mon, 07 Apr 2014 16:08:28 CST
+
+Package: jtag_hw (1.4.0); urgency = medium
+
+Abstract:
+	Modify JTAG driver to software mode
+
+Files Modified: data/ast_jtag.c, data/ast_jtag.h
+
+--Submitter: robinchiu (RobinChiu) Thu, 27 Feb 2014 17:04:55 CST
+
+Package: jtag_hw (1.3.0); urgency = medium
+
+Abstract:
+	Change Package name  crosscc to  Provider name Crosscc  to support multiple compilers
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 26 Feb 2014 12:34:18 EST
+
+Package: jtag_hw (1.2.0); urgency = medium
+
+Abstract:
+	Remove CPLD related source code
+
+Files Deleted: data/jed.c, data/lattice.c
+Files Modified: data/Makefile, data/ast_jtag.c, data/ast_jtag.h, spx/PACKAGES.D/jtag_hw/SCRIPTS/dev-install
+
+--Submitter: robinchiu (RobinChiu) Mon, 30 Dec 2013 16:35:16 CST
+
+Package: jtag_hw (1.1.0); urgency = medium
+
+Abstract:
+	Modified support list of CPLD and redefine JTAG Configuration
+
+Files Modified: data/ast_jtag.c, data/jed.c, data/lattice.c
+
+--Submitter: robinchiu (RobinChiu) Mon, 23 Dec 2013 18:48:45 CST
+
+Package: jtag_hw (1.0.0); urgency = new
+
+Abstract:
+	This package includes the jtag hardware driver for AST SoC.
+
+Files Added: data, data/Makefile, data/ast_jtag.c, data/ast_jtag.h, data/jed.c, data/lattice.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/jtag_hw, spx/PACKAGES.D/jtag_hw/DATA, spx/PACKAGES.D/jtag_hw/SCRIPTS, spx/PACKAGES.D/jtag_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: robinchiu (RobinChiu) Fri, 20 Dec 2013 12:07:43 CST
+

@@ -1,0 +1,8 @@
+--- linux.org/drivers/mtd/spichips/Makefile	2014-02-03 11:46:37.131262241 -0500
++++ linux.new/drivers/mtd/spichips/Makefile	2014-01-31 15:42:24.963921260 -0500
+@@ -13,3 +13,5 @@
+ 
+ # The default driver  should be the last in the list of suppported devices
+ obj-$(CONFIG_MTD_SPI_DEFAULT)   += default.o
++
++obj-$(CONFIG_MTD_AST_SPI)   += astspi.o

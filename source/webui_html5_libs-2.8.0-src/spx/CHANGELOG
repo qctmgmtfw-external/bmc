@@ -1,0 +1,136 @@
+Package: webui_html5_libs (2.8.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/webui_html5_libs/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Tue, 05 Jan 2016 00:02:46 EST
+
+Package: webui_html5_libs (2.7.0); urgency = high
+
+Abstract:
+	Added moment-timezone lib for better timezone handling
+
+Files Modified: data/bower.json, data/vendor.tar.bz2
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 31 Jul 2015 17:54:30 EWT
+
+Package: webui_html5_libs (2.6.0); urgency = high
+
+Abstract:
+	Added bootstrap-treeview lib
+
+Files Modified: data/bower.json, data/vendor.tar.bz2, spx/INFO
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 10 Jul 2015 12:21:38 EWT
+
+Package: webui_html5_libs (2.5.0); urgency = high
+
+Abstract:
+	Updated Sortable lib, Added Select2 lib
+
+Files Added: data/.bowerrc
+Files Modified: data/bower.json, data/vendor.tar.bz2
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 05 Jun 2015 13:39:46 EDT
+
+Package: webui_html5_libs (2.4.0); urgency = high
+
+Abstract:
+	C3 chart upgraded
+
+Files Modified: data/bower.json, data/vendor.tar.bz2
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 20 Mar 2015 20:23:13 EDT
+
+Package: webui_html5_libs (2.3.0); urgency = high
+
+Abstract:
+	Added footable for responsive table view
+
+Files Modified: data/bower.json, data/node_modules.tar.bz2, data/vendor.tar.bz2
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Wed, 11 Mar 2015 19:15:54 EDT
+
+Package: webui_html5_libs (2.2.0); urgency = high
+
+Abstract:
+	New client notification library added
+
+Files Modified: data/bower.json, data/vendor.tar.bz2, spx/INFO
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Mon, 12 Jan 2015 19:05:34 EST
+
+Package: webui_html5_libs (2.1.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:35:08 GMT
+
+Package: webui_html5_libs (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 07:24:12 GMT
+
+Package: webui_html5_libs (1.5.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:51:26 GMT
+
+Package: webui_html5_libs (1.4.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 07:04:01 GMT
+
+Package: webui_html5_libs (1.3.0); urgency = high
+
+Abstract:
+	Notification added for grunt, New Charting libraries added
+
+Files Modified: data/bower.json, data/node_modules.tar.bz2, data/package.json, data/vendor.tar.bz2
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Wed, 03 Sep 2014 13:04:18 EDT
+
+Package: webui_html5_libs (1.2.0); urgency = high
+
+Abstract:
+	ydn.db, graphs added
+
+Files Modified: data/bower.json, data/node_modules.tar.bz2, data/package.json, data/vendor.tar.bz2
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Thu, 21 Aug 2014 15:02:09 EDT
+
+Package: webui_html5_libs (1.1.0); urgency = medium
+
+Abstract:
+	Fixed build warning - checked and added curl command installation for nodejs downloading from web
+
+Files Modified: spx/RULES.D/check_deps.sh
+
+--Submitter: Prakash Somasundaram (sprakash@amiindia.co.in) Thu, 21 Aug 2014 08:00:20 EDT
+
+Package: webui_html5_libs (1.0.0); urgency = new
+
+Abstract:
+	Libraries required to build HTML5 based SPX UI
+
+Files Added: data, data/bower.json, data/node_modules.tar.bz2, data/package.json, data/vendor.tar.bz2, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.OPENSOURCE, spx/PACKAGES.D, spx/PACKAGES.D/webui_html5_libs, spx/PACKAGES.D/webui_html5_libs/DATA, spx/PACKAGES.D/webui_html5_libs/SCRIPTS, spx/PACKAGES.D/webui_html5_libs/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/check_deps.sh
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 08 Aug 2014 16:00:04 EDT
+

@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_NOCLEAN %SPXINC/ssp
+        COPY_DIR ./ %SPXINC/ssp
+
+debug-install:

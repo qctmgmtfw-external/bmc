@@ -1,0 +1,8 @@
+# Install Script
+
+build-install:
+		PRINT "BBBBBEN"
+  		MKDIR_NOCLEAN %SPXINC/mctppcie
+		COPY_DIR ./ %SPXINC/mctppcie
+		
+debug-install:

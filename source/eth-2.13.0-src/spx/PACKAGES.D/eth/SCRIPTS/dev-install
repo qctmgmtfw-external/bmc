@@ -1,0 +1,10 @@
+# Install Script
+
+build-install:
+        COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+	#ADD_MODULES eth
+	ADD_UNLOAD_MODULE eth 8
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_ETHERNET_OVER_USB" == "YES" ]; then echo "CONFIG_SPX_FEATURE_ETHERNET_OVER_USB" >> %IMAGE_TREE/etc/core_features; fi
+
+debug-install:
+

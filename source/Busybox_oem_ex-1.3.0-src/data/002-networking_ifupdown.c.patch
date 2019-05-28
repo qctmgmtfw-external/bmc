@@ -1,0 +1,156 @@
+--- busybox.org/networking/ifupdown.c	2015-08-28 16:39:31.840093464 +0800
++++ busybox/networking/ifupdown.c	2015-08-28 16:39:46.991944891 +0800
+@@ -46,6 +46,9 @@
+ #include "libbb.h"
+ /* After libbb.h, since it needs sys/types.h on some systems */
+ #include <sys/utsname.h>
++#include <sys/socket.h>
++#include <linux/if_arp.h>
++#include <arpa/inet.h>
+ #include <fnmatch.h>
+ 
+ #define MAX_OPT_DEPTH 10
+@@ -108,6 +111,22 @@
+ 	struct mapping_defn_t *mappings;
+ };
+ 
++/*IPv6 DUID*/
++#define DUID_FILE "/conf/dhcp6c_duid"
++#define MAC_ADDR_LEN	6
++
++/* DUID: DHCP unique Identifier */
++struct duid {
++	size_t duid_len;	/* length */
++	char *duid_id;		/* variable length ID value (must be opaque) */
++};
++
++/* DUID type 3 */
++struct dhcp6opt_duid_type3 {
++        u_int16_t dh6_duid1_type;
++        u_int16_t dh6_duid1_hwtype;
++        /* link-layer address follows */
++} __attribute__ ((__packed__));
+ 
+ #define OPTION_STR "anvf" IF_FEATURE_IFUPDOWN_MAPPING("m") "i:"
+ enum {
+@@ -413,10 +432,120 @@
+ # endif
+ }
+ 
++static ssize_t
++gethwid(buf, len, ifname, hwtypep)
++	char *buf;
++	int len;
++	const char *ifname;
++	u_int16_t *hwtypep;
++{
++	int fd;
++	struct ifreq ifr;
++	ssize_t l;
++
++	memset(&ifr, 0, sizeof(ifr));
++	fd = socket(AF_INET, SOCK_DGRAM, 0);
++
++	ifr.ifr_addr.sa_family = AF_INET;
++	strncpy(ifr.ifr_name, ifname, IFNAMSIZ-1);
++
++	if (ioctl(fd, SIOCGIFHWADDR, &ifr) != -1) {
++		#if 0
++        printf("Mac address: %02x:%02x:%02x:%02x:%02x:%02x\n",
++                (unsigned char)ifr.ifr_hwaddr.sa_data[0],
++                (unsigned char)ifr.ifr_hwaddr.sa_data[1],
++                (unsigned char)ifr.ifr_hwaddr.sa_data[2],
++                (unsigned char)ifr.ifr_hwaddr.sa_data[3],
++                (unsigned char)ifr.ifr_hwaddr.sa_data[4],
++                (unsigned char)ifr.ifr_hwaddr.sa_data[5]);
++		#endif
++    }
++	close(fd);
++
++	memcpy(buf, &ifr.ifr_hwaddr.sa_data, MAC_ADDR_LEN);	
++	
++	*hwtypep = ARPHRD_ETHER;
++	l = MAC_ADDR_LEN;
++		
++	return (l);	
++}
++
++int Refresh_DUID(ifname, duid)
++	char *ifname;
++	struct duid *duid;
++{
++	FILE *fp = NULL;
++	u_int16_t len = 0, hwtype;
++	struct dhcp6opt_duid_type3 *dp; /* we only support the type3 DUID */	
++	char tmpbuf[256];	/* DUID should be no more than 256 bytes */
++	int l,i;
++	
++	if ((l = gethwid(tmpbuf, sizeof(tmpbuf), ifname , &hwtype)) < 0) {
++		goto fail;
++	}
++	len = l + sizeof(struct dhcp6opt_duid_type3);
++		
++	memset(duid, 0, sizeof(*duid));
++	duid->duid_len = len;
++	
++	if ((duid->duid_id = (char *)malloc(len)) == NULL) {
++		printf("failed to allocate memory\n");
++		goto fail;
++	}
++	
++	/* copy (and fill) the ID */
++	dp = (struct dhcp6opt_duid_type3 *)duid->duid_id;
++	dp->dh6_duid1_type = htons(3); /* type 1 */
++	dp->dh6_duid1_hwtype = htons(hwtype);	
++	memcpy((void *)(dp + 1), tmpbuf, (len - sizeof(*dp)));
++ 	
++	for(i = 0 ; i < (len - sizeof(*dp)); i++){
++			//printf("%2x ",tmpbuf[i]);
++	}
++
++	/* save the (new) ID to the file for next time */
++	if (!fp) {
++		if ((fp = fopen(DUID_FILE, "w+")) == NULL) {
++			printf("failed to open DUID file for save\n");
++			goto fail;
++		}
++		if ((fwrite(&len, sizeof(len), 1, fp)) != 1) {
++			printf("failed to save DUID\n");
++			goto fail;
++		}
++
++		if ((fwrite(duid->duid_id, len, 1, fp)) != 1) {
++			printf("failed to save DUID\n");
++			goto fail;
++		}
++	}
++
++	if (fp)
++		fclose(fp);	
++	if (duid->duid_id) {
++		free(duid->duid_id);
++		duid->duid_id = NULL; /* for safety */
++	}
++    return 0;
++
++    fail:
++		if (fp)
++			fclose(fp);
++		if (duid->duid_id) {
++			free(duid->duid_id);
++			duid->duid_id = NULL; /* for safety */
++		}		
++		return (-1);    
++}
+ 
+ static int FAST_FUNC dhcp_up6(struct interface_defn_t *ifd, execfn *exec)
+ {
+ 	int result = 0;
++	static struct duid client_duid;
++
++    //refresh /conf/dhcp6c_duid
++    Refresh_DUID(ifd->iface, &client_duid);	
++
+     if (!execute("ifconfig %iface%[[ hw %hwaddress%]] up", ifd, exec))
+         return 0;
+ 

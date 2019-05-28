@@ -1,0 +1,243 @@
+Package: reset (2.2.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/reset/DATA/.keep, spx/PACKAGES.D/reset_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 22:58:06 EST
+
+Package: reset (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/proc.c, data/proc.h, data/reset.h, data/reset_ioctl.h, data/resetmain.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:33:30 HMT
+
+Package: reset (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:18:34 GMT
+
+Package: reset (1.21.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:51:49 HMT
+
+Package: reset (1.20.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:46:19 GMT
+
+Package: reset (1.19.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:58:32 GMT
+
+Package: reset (1.18.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/resetmain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:05:14 EDT
+
+Package: reset (1.17.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/proc.c, data/proc.h, data/resetmain.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:05:31 GMT
+
+Package: reset (1.16.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/proc.c, data/proc.h, data/resetmain.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:43:16 GMT
+
+Package: reset (1.15.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/proc.c, data/reset_ioctl.h, data/resetmain.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:29:54 HMT
+
+Package: reset (1.14.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/reset/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:03:34 GMT
+
+Package: reset (1.13.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/reset/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 21:02:44 HMT
+
+Package: reset (1.12.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:43:24 EDT
+
+Package: reset (1.11.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:59:20 EDT
+
+Package: reset (1.10.0); urgency = medium
+
+Abstract:
+	Updated for latest 3.x.x kernel
+
+Files Modified: data/resetmain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 19 Jun 2013 14:14:59 EDT
+
+Package: reset (1.9.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/proc.c, data/resetmain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Mar 2012 10:03:45 EDT
+
+Package: reset (1.8.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/resetmain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 14:24:26 EDT
+
+Package: reset (1.7.0); urgency = high
+
+Abstract:
+	wait_event_interruptible() function will wake-up whenever the condition satisfies or a signal arise to the parent process. Calling system() functions from PDK_BeforeCreatingTasks() causes a SIGCHLD signal to message handler. So PDK_LPC Reset occured. Inorder to avoid this issue, assign the return value of wait_event_interruptible() to ret
+
+Files Modified: data/resetmain.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Tue, 03 Jan 2012 15:10:56 IST
+
+Package: reset (1.6.0); urgency = medium
+
+Abstract:
+	Added support for 3.X Kernels
+
+Files Modified: data/proc.c, data/resetmain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 02 Dec 2011 15:38:46 EST
+
+Package: reset (1.5.0); urgency = medium
+
+Abstract:
+	Fix for 64 Bit
+
+Files Modified: data/proc.c, data/proc.h, data/resetmain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Sep 2011 09:37:30 EDT
+
+Package: reset (1.4.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/resetmain.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 16:43:39 IST
+
+Package: reset (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:32:07 EDT
+
+Package: reset (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/reset/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:50:56 EDT
+
+Package: reset (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:13:04 EDT
+
+Package: reset (1.0.2); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:15:03 EDT
+
+Package: reset (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:14:09 EST
+
+Package:reset (1.0.0);urgency=new
+
+Abstract:
+	Reset common driver module.
+
+Files Added: Makefile, proc.c, resetmain.c, reset.h, proc.h, reset_ioctl.h
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Mon, 21 Dec 2009 16:31:44 -0500

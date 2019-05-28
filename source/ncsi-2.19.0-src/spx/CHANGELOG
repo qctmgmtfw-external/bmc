@@ -1,0 +1,1083 @@
+Package: ncsi (2.19.0); urgency = medium
+
+Abstract:
+	Fortify Fix RR11.5
+
+Files Modified: data/core/ethtool.c
+
+--Submitter: Sreedhar B (bsreedhar@amiindia.co.in) Thu, 25 Feb 2016 14:50:19 HMT
+
+Package: ncsi (2.18.0); urgency = low
+
+Abstract:
+	vetobit in kernel driver was always disabled
+thus, let vetobit can be enabled/disabled (all NCSI channels) in kernel driver by setting PRJ
+line, and those below, will be ignored--
+M	data/core/interfaces.c
+
+Files Modified: data/core/interfaces.c
+
+--Submitter: charliechin (CharlieChin@ami.com.tw) Thu, 25 Feb 2016 11:24:45 JWST
+
+Package: ncsi (2.17.0); urgency = medium
+
+Abstract:
+	update fail-over mechanism
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c
+
+--Submitter: charliechin (CharlieChin@ami.com.tw) Fri, 08 Jan 2016 12:22:34 JWST
+
+Package: ncsi (2.16.0); urgency = medium
+
+Abstract:
+	Fix the ncsi cannot work on power8
+
+Files Modified: data/core/ncsilib.c, spx/INFO
+
+--Submitter: Pearce (pearcelee@ami.com.tw) Thu, 07 Jan 2016 10:09:11 EST
+
+Package: ncsi (2.15.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/ncsi/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 22:25:45 EST
+
+Package: ncsi (2.14.0); urgency = medium
+
+Abstract:
+	Modified the proc entry for speed, duplex and auto negotiation with appropriate values, usefull in get operation.
+
+Files Modified: data/core/ethtool.c, data/core/ncsilib.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Mon, 21 Sep 2015 11:35:24 HMT
+
+Package: ncsi (2.13.0); urgency = low
+
+Abstract:
+	P.CONFIG fixes for binary package
+
+Files Modified: spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Wed, 16 Sep 2015 18:15:08 EDT
+
+Package: ncsi (2.12.0); urgency = low
+
+Abstract:
+	passes the correct argument while getting the linkstatus
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Mon, 24 Aug 2015 14:06:11 HMT
+
+Package: ncsi (2.11.0); urgency = medium
+
+Abstract:
+	NCSI changes for,
+  1. Added a timeout for command retry, i.e when ever a command gets timeout without response then the driver has to wait for milliseconds before retrying the same.
+  2. The CONFIG_SPX_FEATURE_POLL_FOR_ASYNC_RESET Macro should be defined from the PRJ and the build fails if the feature is selected.
+  3. Instead of blindly deselecting all the package while init, deselecting all the other packages except package ID 0 as it is any way the first package to be selected in the next loop.
+
+Files Modified: data/core/comm.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/include/ncsi.h
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 12 Aug 2015 19:50:31 HMT
+
+Package: ncsi (2.10.0); urgency = medium
+
+Abstract:
+	Added below changes,
+ 1. NCSI always trying to enable the channel with enabling Hw arbitration, provided PRJ feature to enable/disable Hw Arbitration when Enable Channel.
+ 2. Reset Channel is happening in every enable channel, provided an proc entry option to enable or disable the init flag so that Enable channel will reset the channel according to that flag.
+ 3. User command should send 0x1f as the channel id for select package, Deselect Package and flow control. fixed that.
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/include/ncsi.h, spx/P.CONFIG
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 12 Aug 2015 12:20:33 HMT
+
+Package: ncsi (2.9.0); urgency = low
+
+Abstract:
+	Added changes to validate return value of snprintf
+
+Files Modified: data/core/proc.c
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Mon, 10 Aug 2015 17:11:25 HMT
+
+Package: ncsi (2.8.0); urgency = low
+
+Abstract:
+	Replaced mdelay() with msleep() to manke boot time faster
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Fri, 03 Jul 2015 18:34:36 HMT
+
+Package: ncsi (2.7.0); urgency = medium
+
+Abstract:
+	Added Set Flow Control command
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/include/interfaces.h, data/include/ncsi.h, spx/P.CONFIG, spx/PACKAGES.D/ncsi/P.CONFIG, spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: Manish M (manishm@amiindia.co.in) Wed, 01 Jul 2015 12:18:09 IST
+
+Package: ncsi (2.6.0); urgency = medium
+
+Abstract:
+	Fortify fixes for dangerous function
+
+Files Modified: data/core/ethtool.c, data/core/ncsicore.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Mon, 15 Jun 2015 15:45:13 HMT
+
+Package: ncsi (2.5.0); urgency = medium
+
+Abstract:
+	Defined IOCTLs properly.
+
+Files Modified: data/include/ncsi.h
+
+--Submitter: shravan (shravans@amiindia.co.in) Wed, 13 May 2015 13:01:36 HMT
+
+Package: ncsi (2.4.0); urgency = medium
+
+Abstract:
+	Fix : NCSI device getting closed when enabling bond.
+
+Files Modified: data/core/ethtool.c, data/core/ncsi_if.c, data/core/ncsicore.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Thu, 30 Apr 2015 14:19:50 HMT
+
+Package: ncsi (2.3.0); urgency = medium
+
+Abstract:
+	Fixed memory leak and invoking get version id only once.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Fri, 02 Jan 2015 18:42:38 HMT
+
+Package: ncsi (2.2.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/core/comm.c, data/core/ethtool.c, data/core/interfaces.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/helper/datadisp.c, data/include/datadisp.h, data/include/interfaces.h, data/include/ncsi.h, data/include/types.h, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:29:12 HMT
+
+Package: ncsi (2.1.0); urgency = medium
+
+Abstract:
+	Updated P.CONFIG file for binary package.
+
+Files Modified: spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Sat, 18 Oct 2014 21:08:49 HMT
+
+Package: ncsi (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 05:48:52 GMT
+
+Package: ncsi (1.90.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:46:04 HMT
+
+Package: ncsi (1.89.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:20:42 GMT
+
+Package: ncsi (1.88.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:32:41 GMT
+
+Package: ncsi (1.87.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/core/proc.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:04:38 GMT
+
+Package: ncsi (1.86.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Deleted: data/include/helper.h
+Files Modified: data/core/proc.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:41:54 GMT
+
+Package: ncsi (1.85.0); urgency = medium
+
+Abstract:
+	Changed from refering package name to Provides Value
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 12:46:06 EDT
+
+Package: ncsi (1.84.0); urgency = medium
+
+Abstract:
+	Fix BMC cannot configure PHY configuration for NC-SI interface
+
+Files Modified: data/core/ethtool.c
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Wed, 30 Jul 2014 17:27:32 CST
+
+Package: ncsi (1.83.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/core/ncsi_if.c, data/core/proc.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:35:54 HMT
+
+Package: ncsi (1.82.0); urgency = medium
+
+Abstract:
+	Allowed enabling 10G in NCSI.
+
+Files Modified: data/core/ncsilib.c, data/include/ncsi.h
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 02 Jul 2014 14:27:44 HMT
+
+Package: ncsi (1.81.0); urgency = medium
+
+Abstract:
+	Included the manual detection channel feature using proc file.
+
+Files Modified: data/core/ncsi_if.c, data/core/ncsicore.c, data/core/proc.c, data/include/interfaces.h, data/include/ncsi.h, spx/P.CONFIG
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Mon, 23 Jun 2014 10:33:13 HMT
+
+Package: ncsi (1.80.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:01:22 GMT
+
+Package: ncsi (1.79.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:55:35 HMT
+
+Package: ncsi (1.78.0); urgency = low
+
+Abstract:
+	Fix 2 issue in main trunk.
+
+A.No plug RJ-45 cable in NCSI LAN, but it is still up.
+
+B.During booting, NCSI driver can not be loaded. Discoveried this problem during fixing issue A.
+
+Files Modified: data/core/ncsi_if.c, data/core/ncsicore.c
+
+--Submitter: nicolaschen (nicolaschen@ami.com.tw) Thu, 17 Apr 2014 16:38:40 CST
+
+Package: ncsi (1.77.0); urgency = low
+
+Abstract:
+	Add ncsi under /dev directory
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: Connie Yin (conniey@ami.com) Fri, 28 Mar 2014 04:58:14 EDT
+
+Package: ncsi (1.76.0); urgency = medium
+
+Abstract:
+	Add ioctl inside ncsi driver.
+
+Files Modified: data/core/ncsi_if.c, data/core/ncsilib.c, data/include/ncsi.h
+
+--Submitter: Connie Yin (conniey@ami.com) Wed, 19 Mar 2014 08:43:59 EDT
+
+Package: ncsi (1.75.0); urgency = medium
+
+Abstract:
+	Fix for EIP # 151213: Getting ipmi error message when we view ncsi page.
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Thu, 23 Jan 2014 16:22:57 HMT
+
+Package: ncsi (1.74.0); urgency = medium
+
+Abstract:
+	Added mechanism to detect and handle Asynchronous Reset on the network controller, achieved by periodical polling of link status for every configured time interval
+
+Files Modified: data/core/interfaces.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/include/interfaces.h, data/include/ncsi.h, spx/P.CONFIG
+
+--Submitter: Anand Krishnan V (anandkrishnanv@amiindia.co.in) Wed, 22 Jan 2014 18:30:39 HMT
+
+Package: ncsi (1.73.0); urgency = medium
+
+Abstract:
+	M
+Update privodes to Sideband_LAN.
+--Tdohis line, and those below, will be ignored--
+M	spx/INFO
+
+Files Modified: spx/INFO
+
+--Submitter: kennywu (kennywu) Wed, 08 Jan 2014 19:42:36 CST
+
+Package: ncsi (1.72.0); urgency = medium
+
+Abstract:
+	Updating P.CONFIG of binary to be same as source
+
+Files Modified: spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Thu, 02 Jan 2014 13:16:07 EST
+
+Package: ncsi (1.71.0); urgency = medium
+
+Abstract:
+	Support Broadcom NCSI 10G BCM57810
+
+Files Modified: data/core/ncsicore.c, data/core/proc.c, data/include/ncsi.h, spx/P.CONFIG
+
+--Submitter: patrickhuang (patrickhuang@ami.com.tw) Mon, 25 Nov 2013 15:45:41 CST
+
+Package: ncsi (1.70.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:27:00 EDT
+
+Package: ncsi (1.69.0); urgency = low
+
+Abstract:
+	removed unwanted serial console messages
+
+Files Modified: data/core/comm.c, data/core/ethtool.c, data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Thu, 03 Oct 2013 18:24:39 MMT
+
+Package: ncsi (1.68.0); urgency = low
+
+Abstract:
+	Modified driver to support Kernel 3.4.11.
+
+Files Modified: data/core/ncsi_if.c, data/core/proc.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Sun, 15 Sep 2013 02:34:01 HMT
+
+Package: ncsi (1.67.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:39:22 EDT
+
+Package: ncsi (1.66.0); urgency = low
+
+Abstract:
+	Fix the Set NCSI OEM Extension command can't set channel 1 parameter
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 23 Aug 2013 11:48:15 CST
+
+Package: ncsi (1.65.0); urgency = medium
+
+Abstract:
+	Corrected sending oem command using the proc file.
+
+Files Modified: data/core/ncsilib.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 23 Jul 2013 15:29:23 CEST
+
+Package: ncsi (1.64.0); urgency = medium
+
+Abstract:
+	Added a feature to send NCSI commands to the controller using proc files.
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/include/interfaces.h, data/include/ncsi.h
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 17 Jul 2013 18:54:47 CEST
+
+Package: ncsi (1.63.0); urgency = medium
+
+Abstract:
+	Corrected the condition check.
+
+Files Modified: data/core/comm.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 02 Jul 2013 11:12:33 CEST
+
+Package: ncsi (1.62.0); urgency = medium
+
+Abstract:
+	Included the check which avoids the print in console when the controller misbehaves.
+
+Files Modified: data/core/comm.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Thu, 27 Jun 2013 13:28:07 CEST
+
+Package: ncsi (1.61.0); urgency = medium
+
+Abstract:
+	Reverted the changes as it affects in bonding.
+
+Files Modified: data/core/ncsi_if.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 14 Jun 2013 14:26:01 EDT
+
+Package: ncsi (1.60.0); urgency = medium
+
+Abstract:
+	Initialize the interface when interface is Up.
+
+Files Modified: data/core/ncsi_if.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 28 May 2013 14:49:04 HMT
+
+Package: ncsi (1.59.0); urgency = medium
+
+Abstract:
+	Included the code to make the driver communicate with controller.
+
+Files Modified: data/core/ncsilib.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 15 May 2013 16:03:05 HMT
+
+Package: ncsi (1.58.0); urgency = medium
+
+Abstract:
+	Included the Intel oem in locking mechanism. Increased the timeout to 60 seconds.
+
+Files Modified: data/core/comm.c, data/core/ethtool.c, data/core/ncsilib.c, data/include/ncsi.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 17 Apr 2013 19:01:48 HMT
+
+Package: ncsi (1.57.0); urgency = high
+
+Abstract:
+	Changes done to make sure that source and binary packages P.CONFIG remains the same
+
+Files Modified: spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Tue, 26 Mar 2013 16:47:04 EDT
+
+Package: ncsi (1.56.0); urgency = medium
+
+Abstract:
+	Fixed EIP 114291:NCSI Auto Failover Mode Doesn't Work
+Root cause: when channel 0 is down, it didn't enable channel 1 and vice versa.
+
+Files Modified: data/core/ncsilib.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Sun, 10 Mar 2013 11:03:35 CST
+
+Package: ncsi (1.55.0); urgency = medium
+
+Abstract:
+	NCSI patch to lock other commands in process.
+
+Files Modified: data/core/comm.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/include/interfaces.h, data/include/ncsi.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 14 Feb 2013 19:04:03 HMT
+
+Package: ncsi (1.54.0); urgency = low
+
+Abstract:
+	Fixed core_features & core_macros wipe out while Rebuilding sys_base alone
+
+Files Modified: spx/INFO
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Mon, 04 Feb 2013 19:12:00 HMT
+
+Package: ncsi (1.53.0); urgency = medium
+
+Abstract:
+	Added support for Intel's Set Management control for keep PHY Link-up(Veto bit) feature
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/include/interfaces.h, data/include/ncsi.h, spx/P.CONFIG
+
+--Submitter: Prakash.S (prakashs@amiindia.co.in) Mon, 28 Jan 2013 09:49:45 HMT
+
+Package: ncsi (1.52.0); urgency = medium
+
+Abstract:
+	Changes:
+If NON AEN Support is enable, then not need to return when NCSI_Issue_EnableAEN failed.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 22 Oct 2012 16:49:24 HMT
+
+Package: ncsi (1.51.0); urgency = low
+
+Abstract:
+	Calling netif_carrior_on(dev) before issuing NCSI_GetLinkStatus() command. This is to make sure that we can transmit the command even if the link is down; And, added retry mechanism for NCSI_GetParameters() command.
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c
+
+--Submitter: Kiran Kumar S (kirankumars@amiindia.co.in) Thu, 18 Oct 2012 18:54:05 HMT
+
+Package: ncsi (1.50.0); urgency = low
+
+Abstract:
+	Increased the polling interval period for issuing the NCSI Get Link Status from 2 to 5 seconds to minimize the CPU utilization; Removed mdelay(1000) from NCSI_GetLinkStatus() and added it in all the places where GetLinkStatus() is being called (i.e., having a delay before issuing the GetLinkStatus command). This is to avoid having a delay when calling from Timer Function(polling), as it utilizes much of the CPU.
+
+Files Modified: data/core/ethtool.c, data/core/ncsicore.c, data/core/ncsilib.c, data/include/ncsi.h, spx/P.CONFIG, spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: Kiran Kumar S (kirankumars@amiindia.co.in) Wed, 10 Oct 2012 11:40:38 IST
+
+Package: ncsi (1.49.0); urgency = medium
+
+Abstract:
+	Included the FEATURE_NCSI_INTERFACE_NAMES as a Macro in PRJ, included in Binary build.
+
+Files Modified: spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 09 Oct 2012 18:24:47 IST
+
+Package: ncsi (1.48.0); urgency = medium
+
+Abstract:
+	Included the FEATURE_NCSI_INTERFACE_NAMES as a Macro in PRJ.
+
+Files Modified: data/core/ncsi_if.c, spx/P.CONFIG
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 09 Oct 2012 18:13:59 IST
+
+Package: ncsi (1.47.0); urgency = low
+
+Abstract:
+	Bringing back the changes which were reverted for RR5
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/include/interfaces.h, data/include/ncsi.h, spx/P.CONFIG, spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: Kiran Kumar S (kirankumars@amiindia.co.in) Tue, 09 Oct 2012 17:57:46 IST
+
+Package: ncsi (1.46.0); urgency = high
+
+Abstract:
+	source reverted for RR5
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/include/interfaces.h, data/include/ncsi.h, spx/P.CONFIG, spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 28 Sep 2012 16:32:11 EDT
+
+Package: ncsi (1.45.0); urgency = high
+
+Abstract:
+	binary issues fixed
+
+Files Added: spx/PACKAGES.D/ncsi/P.CONFIG
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 28 Sep 2012 16:22:45 EDT
+
+Package: ncsi (1.44.0); urgency = low
+
+Abstract:
+	Added support for NC-SI controllers that doesn't support AEN link state change packets. This is achieved by issuing NCSI_GetLinkStatus command to the network controller periodically; The AEN support availability is determined by issuing the GetParameters command immediately after issuing EnableAEN command.
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c, data/include/interfaces.h, data/include/ncsi.h, spx/P.CONFIG
+
+--Submitter: Kiran Kumar S (kirankumars@amiindia.co.in) Tue, 25 Sep 2012 17:42:35 IST
+
+Package: ncsi (1.43.0); urgency = medium
+
+Abstract:
+	Set Speed, duplex and autonegotiation according to the user settings.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 21 Sep 2012 22:05:57 IST
+
+Package: ncsi (1.42.0); urgency = medium
+
+Abstract:
+	Added provision to set speed, auto negotiation and duplex in ncsi proc file.
+
+Files Modified: data/core/ncsicore.c, data/core/proc.c, data/include/interfaces.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 21 Sep 2012 20:10:05 IST
+
+Package: ncsi (1.41.0); urgency = low
+
+Abstract:
+	Updating the NCSI link status to the Netmon driver.
+
+Files Modified: data/core/ncsilib.c
+
+--Submitter: Kiran Kumar S (kirankumars@amiindia.co.in) Wed, 05 Sep 2012 20:35:02 IST
+
+Package: ncsi (1.40.0); urgency = high
+
+Abstract:
+	Avoid a race condition
+
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Thu, 30 Aug 2012 18:25:19 CST
+
+Package: ncsi (1.39.0); urgency = medium
+
+Abstract:
+	Increased the boot time by reducing the NCSI detect Channels.
+
+Files Modified: data/core/ncsicore.c, data/include/ncsi.h, spx/P.CONFIG
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 29 Aug 2012 19:13:34 IST
+
+Package: ncsi (1.38.0); urgency = medium
+
+Abstract:
+	Changes done to include macro CONFIG_SPX_FEATURE_NCSI_AUTO_FAILOVER to core_features instead of core_macros file.
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 16 Aug 2012 17:19:11 EDT
+
+Package: ncsi (1.37.0); urgency = high
+
+Abstract:
+	Introduce a new control path to do nothing when nothing is found.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Wed, 08 Aug 2012 20:04:45 CST
+
+Package: ncsi (1.36.0); urgency = medium
+
+Abstract:
+	- NCSI related configurations are added
+- NCSI configurations(channel id, package id and reset interface) are available for configurations, if user selects "Manual" option
+
+Files Added: spx/P.CONFIG
+
+--Submitter: Prakash.S (prakashs@amiindia.co.in) Thu, 26 Jul 2012 14:43:13 IST
+
+Package: ncsi (1.35.0); urgency = medium
+
+Abstract:
+	Reset NCSI interface when the Channel is changed depend on the PRJ macro.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 18 Jul 2012 19:40:17 IST
+
+Package: ncsi (1.34.0); urgency = medium
+
+Abstract:
+	Added change NCSI mode in WebUI support.
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 16 Jul 2012 12:00:47 CST
+
+Package: ncsi (1.33.0); urgency = high
+
+Abstract:
+	Removed P.Config file, as the content is moved to ncsicfg package
+
+Files Deleted: spx/P.CONFIG
+
+--Submitter: Prakash.S (prakashs@amiindia.co.in) Wed, 11 Jul 2012 17:19:14 IST
+
+Package: ncsi (1.32.0); urgency = medium
+
+Abstract:
+	Switching between auto and manual is now possible in runtime
+
+Files Modified: data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/include/interfaces.h
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Wed, 04 Jul 2012 18:14:10 CST
+
+Package: ncsi (1.31.0); urgency = high
+
+Abstract:
+	MacAddrChange should now succeed even when the link is down.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Tue, 03 Jul 2012 18:08:55 CST
+
+Package: ncsi (1.30.0); urgency = medium
+
+Abstract:
+	Merge /etc/features content to /etc/core_features.
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Sat, 30 Jun 2012 19:09:24 CST
+
+Package: ncsi (1.29.0); urgency = medium
+
+Abstract:
+	Fix: NCSI ReInitializing is not working properly when the link is down.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 15 Jun 2012 15:08:14 IST
+
+Package: ncsi (1.28.0); urgency = medium
+
+Abstract:
+	Reset NCSI Interface is done only for particular PackageID and ChannelID, instead of reinitializing all the packages.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 07 Jun 2012 16:52:52 IST
+
+Package: ncsi (1.27.0); urgency = medium
+
+Abstract:
+	Make sure netif_carrier is on before trying to do failover
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: Seires Lee (SeiresLee@ami.com.tw) Thu, 31 May 2012 15:00:18 CST
+
+Package: ncsi (1.26.0); urgency = low
+
+Abstract:
+	Automatically re-initializing the interface every time there is a shared LAN switching. Also, adding the dump_buffer support by default so that we can enable/disable the ncsi driver logging at runtime without the debug build.
+
+Files Modified: data/Makefile, data/core/comm.c, data/core/ncsicore.c, data/core/ncsilib.c
+
+--Submitter: Kiran Kumar S (kirankumars@amiindia.co.in) Tue, 22 May 2012 15:48:17 IST
+
+Package: ncsi (1.25.0); urgency = medium
+
+Abstract:
+	Supporting NCSI auto failover
+
+Files Added: spx/P.CONFIG
+Files Modified: data/core/ncsicore.c, data/core/ncsilib.c, spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: Prakash.S (prakashs@amiindia.co.in) Tue, 08 May 2012 10:58:03 IST
+
+Package: ncsi (1.24.0); urgency = medium
+
+Abstract:
+	Change to set MAC address for all channel.
+When bonding is enabled and using eth0's MAC address.
+If other NCSI channel is still using its own MAC,
+then connection will loss after change NCSI channel.
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 03 Apr 2012 18:43:18 CST
+
+Package: ncsi (1.23.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/core/ethtool.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 22:50:07 EDT
+
+Package: ncsi (1.22.0); urgency = medium
+
+Abstract:
+	remove disable channel before switch channel, back to previous version
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 23 Feb 2012 19:22:24 CST
+
+Package: ncsi (1.21.0); urgency = medium
+
+Abstract:
+	Disable channel before enable.
+
+Files Modified: data/core/ncsicore.c, data/core/proc.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 09 Feb 2012 19:57:41 CST
+
+Package: ncsi (1.20.0); urgency = medium
+
+Abstract:
+	switching b/w mulitple shared lan changes
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: pavithras (pavithras@amiindia.co.in) Wed, 01 Feb 2012 22:38:29 IST
+
+Package: ncsi (1.19.0); urgency = medium
+
+Abstract:
+	NCSI Support IPV6 on Intel82574
+
+Files Modified: data/core/ncsicore.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 05 Jan 2012 14:52:53 CST
+
+Package: ncsi (1.18.0); urgency = medium
+
+Abstract:
+	Added support for 3.X Kernels
+
+Files Modified: data/core/comm.c, data/core/interfaces.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/core/proc.c, data/include/ncsi.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 02 Dec 2011 15:37:56 EST
+
+Package: ncsi (1.17.0); urgency = medium
+
+Abstract:
+	using mutex_try lock to prevent scheduling in atomic context resulting in kernel BUG
+
+Files Modified: data/core/interfaces.c
+
+--Submitter: Sudan Varadachari Ayanam (varadiacharia@ami.com) Mon, 07 Nov 2011 14:34:55 EST
+
+Package: ncsi (1.16.0); urgency = medium
+
+Abstract:
+	Fixes for 64 Bit
+
+Files Modified: data/core/ncsilib.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 21 Sep 2011 11:44:12 EDT
+
+Package: ncsi (1.15.0); urgency = high
+
+Abstract:
+	Fix for low transfer speed on NCSI network when connected to 1G Switch
+
+Files Modified: data/include/ncsi.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 02 Aug 2011 15:29:02 EDT
+
+Package: ncsi (1.14.0); urgency = high
+
+Abstract:
+	Updating ncsi license from AMI to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 27 Jun 2011 15:00:18 EDT
+
+Package: ncsi (1.13.0); urgency = high
+
+Abstract:
+	Minor correction: Earlier, the condition for rtnl_trylock was checked wrongly and mutex lock was not freed
+
+Files Modified: data/core/ncsi_if.c, spx/INFO
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 22 Jun 2011 17:09:36 IST
+
+Package: ncsi (1.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:19:38 EDT
+
+Package: ncsi (1.11.0); urgency = medium
+
+Abstract:
+	Removed hard coded values with values from project configuration
+
+Files Modified: data/core/ncsi_if.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 25 Mar 2011 17:14:30 EDT
+
+Package: ncsi (1.10.0); urgency = high
+
+Abstract:
+	NCSI MAC Filtering address changed when ADDRCHANGE notification arrives - Neededfor bonding support
+
+ethtool get_settings changed from reading NCSI to reading internal data structure which are filled during init and during link status changes. This reduced the 
+overhead of NCSI communicaiton (the overhead was about 90% cpu usage when bonding calls the ethool every 100ms for MIIMON interval
+
+Files Modified: data/core/ethtool.c, data/core/interfaces.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/include/interfaces.h, data/include/ncsi.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 25 Mar 2011 15:57:33 EDT
+
+Package: ncsi (1.9.0); urgency = medium
+
+Abstract:
+	Added Link Status Change Notifiation to kernel
+SPX netmon driver will be notified for link up and link down
+which can notify  applications
+
+Files Modified: data/core/ncsilib.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 21 Mar 2011 16:43:21 EDT
+
+Package: ncsi (1.8.0); urgency = medium
+
+Abstract:
+	Added ethtool functions for NCSI. These functions will be called from networ driver
+
+Files Added: data/core/ethtool.c
+Files Modified: data/Makefile, data/core/interfaces.c, data/core/ncsi_if.c, data/core/ncsicore.c, data/core/ncsilib.c, data/include/interfaces.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 18 Mar 2011 16:20:09 EDT
+
+Package: ncsi (1.7.0); urgency = high
+
+Abstract:
+	NCSI detection is now done in the foreground.
+
+Files Modified: data/Makefile, data/core/ncsi_if.c, data/core/ncsicore.c, data/include/interfaces.h
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 03 Mar 2011 19:27:57 EST
+
+Package: ncsi (1.6.0); urgency = medium
+
+Abstract:
+	Added support to force NCSI link speed/duplex
+
+Files Modified: data/core/ncsicore.c, data/core/proc.c, data/include/interfaces.h, data/include/ncsi.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 07 Feb 2011 11:05:17 EST
+
+Package: ncsi (1.5.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/Makefile, data/core/ncsi_if.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:53:31 EST
+
+Package: ncsi (1.4.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:33:00 EST
+
+Package: ncsi (1.3.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/ncsi/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:49:39 EDT
+
+Package: ncsi (1.2.0); urgency = medium
+
+Abstract:
+	The NCSI driver uses the work queue mechanism to apply user settings.
+
+Files Modified: data/core/ncsi_if.c, data/core/ncsicore.c, data/include/interfaces.h
+
+--Submitter: Gray Chen (graychen@ami.com.tw) Mon, 04 Oct 2010 15:11:53 CST
+
+Package: ncsi (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:06:49 EDT
+
+Package: ncsi (1.0.6); urgency = medium
+
+Abstract:
+	Support NCSI LAN controllers which do not support NCSI checksum(the checksum field is always 0).
+
+Files Modified: data/core/ncsilib.c, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 09 Jul 2010 10:59:37 CST
+
+Package: ncsi (1.0.5); urgency = medium
+
+Abstract:
+	Modified the attribute of UserEnable and UserVlanID to 0644 for user settable support.
+
+Files Modified: data/core/proc.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 07 Jun 2010 12:46:08 CST
+
+Package: ncsi (1.0.4); urgency = medium
+
+Abstract:
+	Fixed Bug: If TRUE/FALSE is not defined earlier, it will fail
+
+Files Modified: data/include/types.h
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 06 May 2010 16:11:20 EDT
+
+Package: ncsi (1.0.3); urgency = high
+
+Abstract:
+	ncsi types are defined locally within the driver
+
+Files Modified: data/include/types.h
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 05 May 2010 16:52:41 EDT
+
+Package: ncsi (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:58:52 EDT
+
+Package: ncsi (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:12:02 EST
+
+Package:ncsi (1.0.0);urgency=new
+
+Abstract:
+	This package provides the NCSI Device Driver Support
+
+Files Added: helper, core, include, Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 18 Dec 2009 08:38:57 -0500

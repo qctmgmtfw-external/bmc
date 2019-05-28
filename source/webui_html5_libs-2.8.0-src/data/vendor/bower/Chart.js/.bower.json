@@ -1,0 +1,20 @@
+{
+  "name": "Chart.js",
+  "description": "Simple HTML5 Charts using the canvas element",
+  "homepage": "https://github.com/nnnick/Chart.js",
+  "author": "nnnick",
+  "main": [
+    "Chart.min.js"
+  ],
+  "dependencies": {},
+  "_release": "53c4cd5ce1",
+  "_resolution": {
+    "type": "branch",
+    "branch": "fix/almond-amd",
+    "commit": "53c4cd5ce1a8a5f23fd5fa210712f251cacdab2e"
+  },
+  "_source": "https://github.com/chandruxp/Chart.js.git",
+  "_target": "fix/almond-amd",
+  "_originalSource": "https://github.com/chandruxp/Chart.js.git",
+  "_direct": true
+}

@@ -1,0 +1,528 @@
+Package: Kernel_basesoc_ast_ex (2.33.0); urgency = medium
+
+Abstract:
+	added missed out switch cases
+
+Files Added: data/64-drivers_net_ethernet_aspeed_ast_ether.c
+
+--Submitter: rajaj (jraja@amiindia.co.in) Thu, 17 Mar 2016 21:55:00 IST
+
+Package: Kernel_basesoc_ast_ex (2.32.0); urgency = high
+
+Abstract:
+	Include the WDT2 condition check for the reboot code. BMC uses WDT for rebooting the BMC, and we should use WDT1 if WDT2 is used for BMC recovery and vice versa
+
+Files Added: data/63-arch_arm_mach-astevb_setup.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 18 Feb 2016 22:48:42 EST
+
+Package: Kernel_basesoc_ast_ex (2.31.0); urgency = medium
+
+Abstract:
+	update for power8, review board #12189
+
+Files Modified: data/03-arch_arm_include_asm_soc-ast_hwreg.h, data/17-arch_arm_mach-astevb_include_mach_system.h, data/53-drivers_net_ethernet_aspeed_ast_ether.c.patch, data/54-drivers_net_ethernet_aspeed_ast_ether.h.patch
+
+--Submitter: pearcelee (pearcelee) Wed, 03 Feb 2016 17:29:45 CST
+
+Package: Kernel_basesoc_ast_ex (2.30.0); urgency = low
+
+Abstract:
+	Due to AST2500/2530 UART DMA is fixed that only UART5 not with UART DMA buffer, the changes is fixing this issue.
+
+Files Modified: data/57-drivers_tty_serial_8250_8250_dma.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 26 Jan 2016 15:55:12 JWST
+
+Package: Kernel_basesoc_ast_ex (2.29.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/Kernel_basesoc_ast_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:29:40 EST
+
+Package: Kernel_basesoc_ast_ex (2.28.0); urgency = high
+
+Abstract:
+	PCIE related patches applicable to AST3200
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/24-arch_arm_mach-astevb_setup.c
+
+--Submitter: Yugender P Subramanian (yugenderps@ami.com) Mon, 28 Dec 2015 15:03:45 EST
+
+Package: Kernel_basesoc_ast_ex (2.27.0); urgency = low
+
+Abstract:
+	Fix the error ekpt showing when the uart is not selected by heardware
+
+Files Modified: data/57-drivers_tty_serial_8250_8250_dma.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 12 Nov 2015 06:51:17 JWST
+
+Package: Kernel_basesoc_ast_ex (2.26.0); urgency = high
+
+Abstract:
+	Add enable interrupts of two sd slots separately.
+
+Files Modified: data/50-drivers_mmc_host_sdhci-ast.c, data/51-drivers_mmc_host_sdhci-ast.h
+
+--Submitter: robinchiu (RobinChiu) Wed, 30 Sep 2015 19:08:43 CST
+
+Package: Kernel_basesoc_ast_ex (2.25.0); urgency = medium
+
+Abstract:
+	Updated Min eMMC clock freq. for OEM platform.
+
+Files Modified: data/51-drivers_mmc_host_sdhci-ast.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 22 Sep 2015 20:59:46 HMT
+
+Package: Kernel_basesoc_ast_ex (2.24.0); urgency = medium
+
+Abstract:
+	Fix for allowing invalid ICMP packets
+
+Files Added: data/62-drivers_net_ethernet_aspeed_ast_ether.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 18 Sep 2015 20:36:29 HMT
+
+Package: Kernel_basesoc_ast_ex (2.23.0); urgency = medium
+
+Abstract:
+	Added Kernel option to select new and legacy network driver.
+update set_mac_address ndo structure for bond interface to set the MAC address of slave interface.
+
+Files Added: data/60-drivers_net_ethernet_aspeed_Kconfig, data/61-drivers_net_ethernet_Kconfig
+Files Modified: data/34-drivers_net_ethernet_aspeed_Makefile, data/35-drivers_net_ethernet_Makefile, data/53-drivers_net_ethernet_aspeed_ast_ether.c.patch
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 31 Aug 2015 20:40:00 HMT
+
+Package: Kernel_basesoc_ast_ex (2.22.0); urgency = medium
+
+Abstract:
+	Exporting ethernet address for vitual ethernet
+
+Files Added: data/58-arch_arm_kernel_atags_parse.c, data/59-arch_arm_include_uapi_asm_setup.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 18 Aug 2015 20:17:22 HMT
+
+Package: Kernel_basesoc_ast_ex (2.21.0); urgency = medium
+
+Abstract:
+	Fixed EUI-64 format IPv6 Link-local and RA address is not assigned properly for eth1 interface.
+
+Files Deleted: data/58-drivers_net-ethernet_aspeed_ast_ether.c, data/59-drivers_net-ethernet_aspeed_ast_ether.h, data/60-drivers_net-ethernet_aspeed_ast_gmac.c, data/61-drivers_net-ethernet_aspeed_ast_gmac.h, data/62-drivers_net-ethernet_aspeed_ast_ether.c
+Files Modified: data/32-drivers_net_ethernet_aspeed_ast_gmac.c, data/33-drivers_net_ethernet_aspeed_ast_gmac.h, data/53-drivers_net_ethernet_aspeed_ast_ether.c.patch, data/54-drivers_net_ethernet_aspeed_ast_ether.h.patch, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 11 Aug 2015 11:32:43 HMT
+
+Package: Kernel_basesoc_ast_ex (2.20.0); urgency = medium
+
+Abstract:
+	Removing patch as unable to get IPv6 address.
+
+Files Added: data/62-drivers_net-ethernet_aspeed_ast_ether.c
+Files Deleted: data/62-drivers_net-ethernet_aspeed_ast_gmac.c, data/63-drivers_net-ethernet_aspeed_ast_ether.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Fri, 03 Jul 2015 18:59:33 HMT
+
+Package: Kernel_basesoc_ast_ex (2.19.0); urgency = medium
+
+Abstract:
+	Allow network driver to enter promisc mode in case of bridge
+
+Files Added: data/63-drivers_net-ethernet_aspeed_ast_ether.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 29 Jun 2015 21:06:52 HMT
+
+Package: Kernel_basesoc_ast_ex (2.18.0); urgency = medium
+
+Abstract:
+	Added mulitcast support list for bridging
+
+Files Added: data/62-drivers_net-ethernet_aspeed_ast_gmac.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 25 Jun 2015 20:52:43 HMT
+
+Package: Kernel_basesoc_ast_ex (2.17.0); urgency = high
+
+Abstract:
+	Add MCTP over PCIe and mailbox supports for AST2500
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h
+
+--Submitter: robinchiu (RobinChiu) Mon, 01 Jun 2015 16:57:42 CST
+
+Package: Kernel_basesoc_ast_ex (2.16.0); urgency = medium
+
+Abstract:
+	Flow control support
+
+Files Added: data/60-drivers_net-ethernet_aspeed_ast_gmac.c, data/61-drivers_net-ethernet_aspeed_ast_gmac.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 26 May 2015 11:52:14 HMT
+
+Package: Kernel_basesoc_ast_ex (2.15.0); urgency = medium
+
+Abstract:
+	Enabling Flow Control
+
+Files Added: data/58-drivers_net-ethernet_aspeed_ast_ether.c, data/59-drivers_net-ethernet_aspeed_ast_ether.h
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 25 May 2015 15:55:59 HMT
+
+Package: Kernel_basesoc_ast_ex (2.14.0); urgency = medium
+
+Abstract:
+	Support BCM5461S PHY.
+
+Files Modified: data/53-drivers_net_ethernet_aspeed_ast_ether.c.patch, data/54-drivers_net_ethernet_aspeed_ast_ether.h.patch
+
+--Submitter: kennywu (kennywu) Mon, 18 May 2015 15:37:43 CST
+
+Package: Kernel_basesoc_ast_ex (2.13.0); urgency = low
+
+Abstract:
+	Fix UART DMA RX data loss issue in ast2530 A1
+
+Files Deleted: data/58-arch_arm_mach-astevb_setup.c
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/24-arch_arm_mach-astevb_setup.c, data/36-drivers_tty_serial_8250_8250_core.c, data/57-drivers_tty_serial_8250_8250_dma.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 12 May 2015 17:23:07 JWST
+
+Package: Kernel_basesoc_ast_ex (2.12.0); urgency = low
+
+Abstract:
+	Ast2530evb supported
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/24-arch_arm_mach-astevb_setup.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Sun, 10 May 2015 10:06:28 CST
+
+Package: Kernel_basesoc_ast_ex (2.11.0); urgency = medium
+
+Abstract:
+	Modify clock frequency ratio selection and interrupt source table because of spec is changed.
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/29-drivers_mtd_spichips_astspi.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 30 Apr 2015 17:40:34 CST
+
+Package: Kernel_basesoc_ast_ex (2.10.0); urgency = medium
+
+Abstract:
+	adding AST1250 specific conditions for setup
+
+Files Added: data/58-arch_arm_mach-astevb_setup.c
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h
+
+--Submitter: pavithras (pavithras@ami.com) Tue, 31 Mar 2015 11:28:54 EDT
+
+Package: Kernel_basesoc_ast_ex (2.9.0); urgency = medium
+
+Abstract:
+	Enable multicast flag to fix the IPv6 address communication issue.
+
+Files Deleted: data/55-drivers_net_ethernet_aspeed_ast_ether.c
+Files Modified: data/53-drivers_net_ethernet_aspeed_ast_ether.c.patch
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 12 Mar 2015 00:35:10 HMT
+
+Package: Kernel_basesoc_ast_ex (2.8.0); urgency = medium
+
+Abstract:
+	Add USB HOST Controller Support for AST2500.
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/24-arch_arm_mach-astevb_setup.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Tue, 24 Feb 2015 11:34:21 CST
+
+Package: Kernel_basesoc_ast_ex (2.7.0); urgency = medium
+
+Abstract:
+	Enable Expand Reg and Clk125 for broadcom PHY.
+
+Files Modified: data/32-drivers_net_ethernet_aspeed_ast_gmac.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 06 Feb 2015 23:14:11 HMT
+
+Package: Kernel_basesoc_ast_ex (2.6.0); urgency = low
+
+Abstract:
+	Support AST2530evb
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/24-arch_arm_mach-astevb_setup.c, data/29-drivers_mtd_spichips_astspi.c, data/50-drivers_mmc_host_sdhci-ast.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 04 Feb 2015 23:48:28 JWST
+
+Package: Kernel_basesoc_ast_ex (2.5.0); urgency = high
+
+Abstract:
+	Add supports for mailbox
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h
+
+--Submitter: robinchiu (RobinChiu) Fri, 09 Jan 2015 13:49:37 CST
+
+Package: Kernel_basesoc_ast_ex (2.4.0); urgency = low
+
+Abstract:
+	Uart driver support AST2530 13 uart and uart DMA mode
+
+Files Added: data/56-drivers_tty_serial_8250_8250.h, data/57-drivers_tty_serial_8250_8250_dma.c
+Files Modified: data/01-arch_arm_include_asm_soc-ast_hwdef.h, data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/16-arch_arm_mach-astevb_include_mach_serial.h, data/24-arch_arm_mach-astevb_setup.c, data/36-drivers_tty_serial_8250_8250_core.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 18 Dec 2014 13:50:12 JWST
+
+Package: Kernel_basesoc_ast_ex (2.3.0); urgency = low
+
+Abstract:
+	SUPPORT AST2530 13 UARTS
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/16-arch_arm_mach-astevb_include_mach_serial.h, data/24-arch_arm_mach-astevb_setup.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 05 Dec 2014 17:37:16 JWST
+
+Package: Kernel_basesoc_ast_ex (2.2.0); urgency = medium
+
+Abstract:
+	Added code to enable the LED blink on the LAN port that corresponds to the speed.
+
+Files Modified: data/32-drivers_net_ethernet_aspeed_ast_gmac.c
+
+--Submitter: Jayachandran Gnanasekeran (jayachandrang@ami.com) Tue, 25 Nov 2014 09:57:22 EST
+
+Package: Kernel_basesoc_ast_ex (2.1.0); urgency = medium
+
+Abstract:
+	Supported contiguous memory allocator(CMA) for secondary service processor(SSP).
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/24-arch_arm_mach-astevb_setup.c, spx/INFO
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 19 Nov 2014 17:13:04 CST
+
+Package: Kernel_basesoc_ast_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:12:05 GMT
+
+Package: Kernel_basesoc_ast_ex (1.22.0); urgency = medium
+
+Abstract:
+	Due to the patch of mtdpart.c is common to all SoC, move it to Kernel_amiext_ex package.
+
+Files Deleted: data/56-drivers_mtd_mtdpart.c
+
+--Submitter: robinchiu (RobinChiu) Wed, 15 Oct 2014 13:30:03 CST
+
+Package: Kernel_basesoc_ast_ex (1.21.0); urgency = medium
+
+Abstract:
+	Add export symbols for host_spi_flash usage.
+
+Files Added: data/56-drivers_mtd_mtdpart.c
+
+--Submitter: robinchiu (RobinChiu) Tue, 14 Oct 2014 17:19:22 CST
+
+Package: Kernel_basesoc_ast_ex (1.20.0); urgency = medium
+
+Abstract:
+	restore default of auto negotiation was not setting back to default value unless ifup was done-fixed to set autoneg for ethtool ioctls too
+
+Files Added: data/55-drivers_net_ethernet_aspeed_ast_ether.c
+
+--Submitter: pavithras (pavithras@ami.com) Fri, 10 Oct 2014 18:29:05 EDT
+
+Package: Kernel_basesoc_ast_ex (1.19.0); urgency = medium
+
+Abstract:
+	Added set_mac_address to the net_device_ops.
+
+Files Modified: data/32-drivers_net_ethernet_aspeed_ast_gmac.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Wed, 08 Oct 2014 20:27:55 HMT
+
+Package: Kernel_basesoc_ast_ex (1.18.0); urgency = medium
+
+Abstract:
+	Add support for AST2500 and dual IO mode
+
+Files Deleted: data/52-drivers_mtd_spichips_astspi.c
+Files Modified: data/29-drivers_mtd_spichips_astspi.c
+
+--Submitter: robinchiu (RobinChiu) Tue, 30 Sep 2014 13:17:10 CST
+
+Package: Kernel_basesoc_ast_ex (1.17.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:54:44 GMT
+
+Package: Kernel_basesoc_ast_ex (1.16.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:04:18 GMT
+
+Package: Kernel_basesoc_ast_ex (1.15.0); urgency = medium
+
+Abstract:
+	Enabled write support for AST3200 microSD
+
+Files Modified: data/50-drivers_mmc_host_sdhci-ast.c
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Wed, 17 Sep 2014 16:31:02 HMT
+
+Package: Kernel_basesoc_ast_ex (1.14.0); urgency = medium
+
+Abstract:
+	Rename Rules to Rules.py
+
+Files Added: spx/RULES.py
+Files Deleted: spx/RULES
+
+--Submitter: nicolaschen (nicolaschen@ami.com.tw) Mon, 15 Sep 2014 16:33:26 CST
+
+Package: Kernel_basesoc_ast_ex (1.13.0); urgency = medium
+
+Abstract:
+	Support BCM54612 PHY
+
+Files Added: spx/RULES
+Files Deleted: spx/RULES.py
+Files Modified: data/53-drivers_net_ethernet_aspeed_ast_ether.c.patch, data/54-drivers_net_ethernet_aspeed_ast_ether.h.patch, spx/LICENSES/LICENSE.AMI
+
+--Submitter: nicolaschen (nicolaschen@ami.com.tw) Mon, 15 Sep 2014 15:26:30 CST
+
+Package: Kernel_basesoc_ast_ex (1.12.0); urgency = medium
+
+Abstract:
+	Kernel basesoc update from 3.4.74 to 3.14.17
+
+Files Modified: data/37-drivers_video_ast_ast_fb.c
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Mon, 15 Sep 2014 11:23:36 HMT
+
+Package: Kernel_basesoc_ast_ex (1.11.0); urgency = medium
+
+Abstract:
+	Enable multicast bit for IPv6.
+
+Files Modified: data/32-drivers_net_ethernet_aspeed_ast_gmac.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 12 Sep 2014 11:39:02 HMT
+
+Package: Kernel_basesoc_ast_ex (1.10.0); urgency = medium
+
+Abstract:
+	Legacy LAN driver to support new kernel.
+
+Files Added: data/53-drivers_net_ethernet_aspeed_ast_ether.c.patch, data/54-drivers_net_ethernet_aspeed_ast_ether.h.patch
+Files Modified: data/34-drivers_net_ethernet_aspeed_Makefile, data/35-drivers_net_ethernet_Makefile
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 10 Sep 2014 14:17:38 CST
+
+Package: Kernel_basesoc_ast_ex (1.9.0); urgency = medium
+
+Abstract:
+	Dual Image Firmware Boot/update with kernel 3.x.x.
+
+Files Added: data/52-drivers_mtd_spichips_astspi.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Fri, 05 Sep 2014 19:16:57 HMT
+
+Package: Kernel_basesoc_ast_ex (1.8.0); urgency = medium
+
+Abstract:
+	Add AST2500 Support.
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/24-arch_arm_mach-astevb_setup.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 03 Sep 2014 11:25:54 CST
+
+Package: Kernel_basesoc_ast_ex (1.7.0); urgency = low
+
+Abstract:
+	Removing unwanted patch file
+
+Files Deleted: data/36-drivers_tty_serial_8250_8250.c
+
+--Submitter: Winston (winstont@ami.com) Sat, 30 Aug 2014 00:28:34 GMT
+
+Package: Kernel_basesoc_ast_ex (1.6.0); urgency = medium
+
+Abstract:
+	Updating Kernel from 3.4.74 to 3.14.17
+
+Files Added: data/36-drivers_tty_serial_8250_8250_core.c
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/24-arch_arm_mach-astevb_setup.c, data/26-arch_arm_mm_Kconfig, data/28-arch_arm_soc-ast_ast-time.c, data/29-drivers_mtd_spichips_astspi.c, data/32-drivers_net_ethernet_aspeed_ast_gmac.c, data/35-drivers_net_ethernet_Makefile, data/43-drivers_video_Kconfig, data/44-drivers_video_Makefile, data/48-drivers_mmc_host_Kconfig, data/49-drivers_mmc_host_Makefile, data/50-drivers_mmc_host_sdhci-ast.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:53:45 GMT
+
+Package: Kernel_basesoc_ast_ex (1.5.0); urgency = medium
+
+Abstract:
+	Changed IRQ number.
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Fri, 29 Aug 2014 19:26:27 CST
+
+Package: Kernel_basesoc_ast_ex (1.4.0); urgency = medium
+
+Abstract:
+	Add AST2500 Support.
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/24-arch_arm_mach-astevb_setup.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 25 Aug 2014 11:29:30 CST
+
+Package: Kernel_basesoc_ast_ex (1.3.0); urgency = medium
+
+Abstract:
+	Update SD/MMC driver to address issues with AST3200 not detecting cards
+
+Files Modified: data/50-drivers_mmc_host_sdhci-ast.c
+
+--Submitter: Balasubramanian C (balasubramanianc@amiindia.co.in) Wed, 13 Aug 2014 20:22:11 HMT
+
+Package: Kernel_basesoc_ast_ex (1.2.0); urgency = high
+
+Abstract:
+	Fixes for AST3200 SoC
+
+Files Modified: data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/17-arch_arm_mach-astevb_include_mach_system.h, data/22-arch_arm_mach-astevb_Makefile, data/24-arch_arm_mach-astevb_setup.c
+
+--Submitter: Yugender P Subramanian (yugenderps@ami.com) Thu, 31 Jul 2014 14:15:39 EDT
+
+Package: Kernel_basesoc_ast_ex (1.1.0); urgency = medium
+
+Abstract:
+	Added support for KSZ9031 and RTL8211FD PHY parts
+
+Files Modified: data/32-drivers_net_ethernet_aspeed_ast_gmac.c, data/33-drivers_net_ethernet_aspeed_ast_gmac.h
+
+--Submitter: Yugender P Subramanian (yugenderps@ami.com) Fri, 25 Jul 2014 20:32:53 EDT
+
+Package: Kernel_basesoc_ast_ex (1.0.0); urgency = new
+
+Abstract:
+	AST SOC Fixes to Kernel 3.4.74
+
+Files Added: data, data/01-arch_arm_include_asm_soc-ast_hwdef.h, data/02-arch_arm_include_asm_soc-ast_hwmap.h, data/03-arch_arm_include_asm_soc-ast_hwreg.h, data/04-arch_arm_mach-astevb_include_mach_astmacdef.h, data/05-arch_arm_mach-astevb_include_mach_bits.h, data/06-arch_arm_mach-astevb_include_mach_debug-macro.S, data/07-arch_arm_mach-astevb_include_mach_dma.h, data/08-arch_arm_mach-astevb_include_mach_entry-macro.S, data/09-arch_arm_mach-astevb_include_mach_hardware.h, data/10-arch_arm_mach-astevb_include_mach_io.h, data/11-arch_arm_mach-astevb_include_mach_irqs.h, data/12-arch_arm_mach-astevb_include_mach_lowlevel_serial.h, data/13-arch_arm_mach-astevb_include_mach_memory.h, data/14-arch_arm_mach-astevb_include_mach_param.h, data/15-arch_arm_mach-astevb_include_mach_platform.h, data/16-arch_arm_mach-astevb_include_mach_serial.h, data/17-arch_arm_mach-astevb_include_mach_system.h, data/18-arch_arm_mach-astevb_include_mach_timex.h, data/19-arch_arm_mach-astevb_include_mach_uncompress.h, data/20-arch_arm_mach-astevb_include_mach_vmalloc.h, data/21-arch_arm_mach-astevb_irq.c, data/22-arch_arm_mach-astevb_Makefile, data/24-arch_arm_mach-astevb_setup.c, data/25-arch_arm_mach-astevb_time.c, data/26-arch_arm_mm_Kconfig, data/27-arch_arm_soc-ast_ast-irq.c, data/28-arch_arm_soc-ast_ast-time.c, data/29-drivers_mtd_spichips_astspi.c, data/30-drivers_mtd_spichips_Kconfig, data/31-drivers_mtd_spichips_Makefile, data/32-drivers_net_ethernet_aspeed_ast_gmac.c, data/33-drivers_net_ethernet_aspeed_ast_gmac.h, data/34-drivers_net_ethernet_aspeed_Makefile, data/35-drivers_net_ethernet_Makefile, data/36-drivers_tty_serial_8250_8250.c, data/37-drivers_video_ast_ast_fb.c, data/38-drivers_video_ast_ast_fb.h, data/39-drivers_video_ast_ast_fb_ioctl.h, data/40-drivers_video_ast_ast_fb_mode.c, data/41-drivers_video_ast_ast_fb_mode.h, data/42-drivers_video_ast_Makefile, data/43-drivers_video_Kconfig, data/44-drivers_video_Makefile, data/45-drivers_net_ethernet_aspeed_ftgmac100.c, data/46-drivers_net_ethernet_aspeed_ftgmac100.h, data/47-drivers_net_ethernet_aspeed_dev-eth.c, data/48-drivers_mmc_host_Kconfig, data/49-drivers_mmc_host_Makefile, data/50-drivers_mmc_host_sdhci-ast.c, data/51-drivers_mmc_host_sdhci-ast.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Kernel_basesoc_ast_ex, spx/PACKAGES.D/Kernel_basesoc_ast_ex/DATA, spx/PACKAGES.D/Kernel_basesoc_ast_ex/SCRIPTS, spx/PACKAGES.D/Kernel_basesoc_ast_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 16:58:35 EDT
+

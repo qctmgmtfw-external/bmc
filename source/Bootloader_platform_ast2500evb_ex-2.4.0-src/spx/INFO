@@ -1,0 +1,23 @@
+Source                   	:	Bootloader_platform_ast2500evb_ex
+Version : 2.4.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher  (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	2013.07
+Builds                   	:	Bootloader_platform_ast2500evb_ex
+Build-Depends            	:	Bootloader_soc_ast2500_ex
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	AST2500EVB related patches to Bootloader Uboot-2013.07
+.
+
+Package                  	:	Bootloader_platform_ast2500evb_ex
+Section                  	:	info
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	AST2500EVB related patches to Bootloader Uboot-2013.07
+.
+

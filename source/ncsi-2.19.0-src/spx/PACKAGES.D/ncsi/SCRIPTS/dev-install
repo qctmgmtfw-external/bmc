@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+		COPY_DIR		./ %IMAGE_TREE/lib/modules/generic/misc/
+		ADD_MODULES ncsi
+		MAKE_CHAR_NODE ncsi 200 0
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_NCSI_MANUAL_SWITCH" == "YES" ]; then echo "CONFIG_SPX_FEATURE_NCSI_MANUAL_SWITCH" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_NCSI_AUTO_FAILOVER" == "YES" ]; then echo "CONFIG_SPX_FEATURE_NCSI_AUTO_FAILOVER" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_NCSI_FLOW_CONTROL" == "YES" ]; then echo "CONFIG_SPX_FEATURE_NCSI_FLOW_CONTROL" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_NCSI_MULTI_NODE_CX4" == "YES" ]; then echo "CONFIG_SPX_FEATURE_NCSI_MULTI_NODE_CX4" >> %IMAGE_TREE/etc/core_features; fi
+debug-install:

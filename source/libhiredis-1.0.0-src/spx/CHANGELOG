@@ -1,0 +1,7 @@
+Package:libhiredis (1.0.0);urgency=new
+
+Abstract:
+	C liberary for Redis-client
+
+--Submitter: Shawn Huang (Shawn.Huang@quantatw.com) Wed, 25 Oct 2017 18:45:37 +0800
+

@@ -1,0 +1,34 @@
+Source : sys_base_ex
+Version : 2.56.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Samvinesh Christopher (vineshc@ami.com)
+License : OPENSOURCE
+Source-Location : AMI
+Source-Version : 0.0.0
+Builds : sys_base_ex
+Build-Depends : Target
+Architecture : ALL
+Urgency : medium
+Description : Base System Package which creates a minimal working linux root filesystem .
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : sys_base_ex
+Section : sys
+Group : BASE
+Essential : YES
+Feature-Required : CONFIG_SPX_FEATURE_GLOBAL_SYSBASE_EX
+Required : mountallapp
+Provides : BaseSystem
+Description : Base System Package which creates a minimal working linux root filesystem .
+.
+

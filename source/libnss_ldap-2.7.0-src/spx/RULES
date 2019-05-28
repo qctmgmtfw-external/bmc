@@ -1,0 +1,31 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE
+#Clean Source
+clean_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE clean
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+
+# Rules to create libnss_ldap package
+build_package-libnss_ldap:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE  %BUILD/%PACKAGE/data/libnss_ldap.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %TEMPDIR/%PACKAGE/tmp
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+
+# Rules to create libnss_ldap_dev package
+build_package-libnss_ldap_dev:
+#header file
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp/Includes
+	#library
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp/lib
+	COPY_FILE %BUILD/%PACKAGE/data/libnss_ldap.a %TEMPDIR/%PACKAGE/tmp/lib
+	COPY_FILE %BUILD/%PACKAGE/data/libnss_ldap.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %TEMPDIR/%PACKAGE/tmp/lib
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+

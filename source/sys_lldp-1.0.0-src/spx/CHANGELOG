@@ -1,0 +1,9 @@
+Package: sys_lldp (1.0.0); urgency = new
+
+Abstract:
+	System Package that includes all the LLDP related system-level libraries.
+
+Files Added: data, data/keep.folder, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.OPENSOURCE, spx/PACKAGES.D, spx/PACKAGES.D/sys_lldp, spx/PACKAGES.D/sys_lldp/DATA, spx/PACKAGES.D/sys_lldp/DATA/keep.folder, spx/PACKAGES.D/sys_lldp/SCRIPTS, spx/PACKAGES.D/sys_lldp/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/files.lst
+
+--Submitter: austinlin (austinlin) Thu, 18 Aug 2016 21:00:26 JWST
+

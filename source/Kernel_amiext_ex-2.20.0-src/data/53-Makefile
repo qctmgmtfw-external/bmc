@@ -1,0 +1,42 @@
+--- linux-3.14.17/Makefile	2014-08-13 21:38:34.000000000 -0400
++++ linux-3.14.17-ami/Makefile	2014-08-22 12:08:34.759215449 -0400
+@@ -1,7 +1,7 @@
+ VERSION = 3
+ PATCHLEVEL = 14
+ SUBLEVEL = 17
+-EXTRAVERSION =
++EXTRAVERSION = -ami
+ NAME = Remembering Coco
+ 
+ # *DOCUMENTATION*
+@@ -332,10 +332,14 @@
+ include $(srctree)/scripts/Kbuild.include
+ 
+ # Make variables (CC, etc...)
++ifeq ($(USE_CCACHE),1)
++CCACHE=ccache
++endif
++
+ 
+ AS		= $(CROSS_COMPILE)as
+ LD		= $(CROSS_COMPILE)ld
+-CC		= $(CROSS_COMPILE)gcc
++CC		= $(CACHE) $(CROSS_COMPILE)gcc
+ CPP		= $(CC) -E
+ AR		= $(CROSS_COMPILE)ar
+ NM		= $(CROSS_COMPILE)nm
+@@ -374,11 +378,12 @@
+ 		-Iarch/$(hdr-arch)/include/generated \
+ 		$(if $(KBUILD_SRC), -I$(srctree)/include) \
+ 		-Iinclude \
+-		$(USERINCLUDE)
++		-include ${SPXINC}/projdef.h \
++		$(USERINCLUDE) 
+ 
+ KBUILD_CPPFLAGS := -D__KERNEL__
+ 
+-KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
++KBUILD_CFLAGS   := -Wall -Werror -Wundef -Wstrict-prototypes -Wno-trigraphs \
+ 		   -fno-strict-aliasing -fno-common \
+ 		   -Werror-implicit-function-declaration \
+ 		   -Wno-format-security \

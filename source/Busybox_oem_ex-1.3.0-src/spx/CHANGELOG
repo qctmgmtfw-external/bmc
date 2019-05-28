@@ -1,0 +1,37 @@
+Package: Busybox_oem_ex (1.3.0); urgency = medium
+
+Abstract:
+	Fix for Binary build and P.CONFIG comparision
+
+Files Modified: spx/PACKAGES.D/Busybox_oem_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: shravan (shravans@amiindia.co.in) Fri, 25 Mar 2016 12:33:07 HMT
+
+Package: Busybox_oem_ex (1.2.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: data/.keep, spx/PACKAGES.D/Busybox_oem_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 19:32:19 EST
+
+Package: Busybox_oem_ex (1.1.0); urgency = low
+
+Abstract:
+	added busybox.options file to add/remove oem specific busybox changes
+
+Files Added: spx/RULES.D, spx/RULES.D/Busybox_oem_ex.busybox.options
+Files Modified: spx/PACKAGES.D/Busybox_oem_ex/SCRIPTS/dev-install.py
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Fri, 31 Jul 2015 14:24:45 HMT
+
+Package: Busybox_oem_ex (1.0.0); urgency = new
+
+Abstract:
+	Package for OEM Customization.
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Busybox_oem_ex, spx/PACKAGES.D/Busybox_oem_ex/DATA, spx/PACKAGES.D/Busybox_oem_ex/SCRIPTS, spx/PACKAGES.D/Busybox_oem_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Fri, 13 Feb 2015 19:14:27 HMT
+

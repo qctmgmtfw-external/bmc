@@ -1,0 +1,12 @@
+diff -Naur busybox.org/init/halt.c busybox/init/halt.c
+--- busybox.org/init/halt.c	2013-05-11 19:30:43.000000000 -0400
++++ busybox/init/halt.c	2014-08-05 12:53:47.000000000 -0400
+@@ -132,7 +132,7 @@
+ 
+ 	/* Perform action. */
+ 	rc = 1;
+-	if (!(flags & 4)) { /* no -f */
++	if (ENABLE_INIT && !(flags & 4)) { /* no -f */
+ //TODO: I tend to think that signalling linuxrc is wrong
+ // pity original author didn't comment on it...
+ 		if (ENABLE_FEATURE_INITRD) {

@@ -1,0 +1,61 @@
+diff -Naur busybox.org/Makefile busybox/Makefile
+--- busybox.org/Makefile	2013-06-29 11:00:18.000000000 -0400
++++ busybox/Makefile	2014-08-01 14:24:58.415831790 -0400
+@@ -287,9 +287,12 @@
+ MAKEFLAGS += -rR
+ 
+ # Make variables (CC, etc...)
++ifeq ($(USE_CCACHE),1)
++CCACHE=ccache
++endif
+ 
+ AS		= $(CROSS_COMPILE)as
+-CC		= $(CROSS_COMPILE)gcc
++CC		= $(CCACHE) $(CROSS_COMPILE)gcc
+ LD		= $(CC) -nostdlib
+ CPP		= $(CC) -E
+ AR		= $(CROSS_COMPILE)ar
+@@ -316,7 +319,7 @@
+ 
+ # Use LINUXINCLUDE when you must reference the include/ directory.
+ # Needed to be compatible with the O= option
+-CFLAGS		:= $(CFLAGS)
++CFLAGS		:= $(CFLAGS) -I$(objtree)/../../include/
+ # Added only to final link stage of busybox binary
+ CFLAGS_busybox	:= $(CFLAGS_busybox)
+ CPPFLAGS	:= $(CPPFLAGS)
+diff -Naur busybox.org/Makefile.flags busybox/Makefile.flags
+--- busybox.org/Makefile.flags	2013-05-11 19:30:43.000000000 -0400
++++ busybox/Makefile.flags	2014-08-01 14:37:05.659845443 -0400
+@@ -6,11 +6,31 @@
+ export BB_VER
+ SKIP_STRIP ?= n
+ 
++ifeq ($(ARCH),X86_64)
++CFLAGS  += -m64
++LDFLAGS += -m64
++endif
++
++
++
++ifneq ($(MULTI_ARCH_LIB), .)
++LDFLAGS += -L$(IMAGE_TREE)/lib/$(MULTI_ARCH_LIB) -L$(IMAGE_TREE)/usr/lib/$(MULTI_ARCH_LIB)
++EXTRA_LDFLAGS += -Wl,-L$(IMAGE_TREE)/lib/$(MULTI_ARCH_LIB) -Wl,-L$(IMAGE_TREE)/usr/lib/$(MULTI_ARCH_LIB)
++EXTRA_LDFLAGS += -Wl,-rpath-link=$(IMAGE_TREE)/lib/$(MULTI_ARCH_LIB) -Wl,-rpath-link=$(IMAGE_TREE)/usr/lib/$(MULTI_ARCH_LIB)
++EXTRA_LDFLAGS += -Wl,-rpath=/lib/$(MULTI_ARCH_LIB) -Wl,-rpath=/usr/lib/$(MULTI_ARCH_LIB)
++else
++LDFLAGS += -L$(IMAGE_TREE)/lib -L$(IMAGE_TREE)/usr/lib
++EXTRA_LDFLAGS += -Wl,-L$(IMAGE_TREE)/lib Wl,-L$(IMAGE_TREE)/usr/lib
++EXTRA_LDFLAGS += -Wl,-rpath-link=$(IMAGE_TREE)/lib Wl,-rpath-link=$(IMAGE_TREE)/usr/lib
++EXTRA_LDFLAGS += -Wl,-rpath=/lib Wl,-rpath=/usr/lib
++endif
++
+ # -std=gnu99 needed for [U]LLONG_MAX on some systems
+ CPPFLAGS += $(call cc-option,-std=gnu99,)
+ 
+ CPPFLAGS += \
+ 	-Iinclude -Ilibbb \
++	-I$(TARGETDIR)/usr/include/ \
+ 	$(if $(KBUILD_SRC),-Iinclude2 -I$(srctree)/include -I$(srctree)/libbb) \
+ 	-include include/autoconf.h \
+ 	-D_GNU_SOURCE -DNDEBUG \

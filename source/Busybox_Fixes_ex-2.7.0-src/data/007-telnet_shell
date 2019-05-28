@@ -1,0 +1,27 @@
+--- busybox.org/networking/telnetd.c	2014-08-11 10:38:13.041653722 +0530
++++ busybox/networking/telnetd.c	2014-08-11 10:44:05.725242330 +0530
+@@ -45,6 +45,7 @@
+ 
+ #include "libbb.h"
+ #include <syslog.h>
++#include "projdef.h"
+ 
+ #if DEBUG
+ # define TELCMDS
+@@ -82,9 +83,15 @@
+ 	const char *issuefile;
+ 	int maxfd;
+ } FIX_ALIASING;
++#ifdef CONFIG_SPX_FEATURE_GLOBAL_TELNET_AUTHENTICATION
++	static const char *loginpath = "/usr/local/bin/authshell";
++#else
++	static const char *loginpath = "/bin/login";
++#endif
++
+ #define G (*(struct globals*)&bb_common_bufsiz1)
+ #define INIT_G() do { \
+-	G.loginpath = "/bin/login"; \
++	G.loginpath = loginpath; \
+ 	G.issuefile = "/etc/issue.net"; \
+ } while (0)
+ 

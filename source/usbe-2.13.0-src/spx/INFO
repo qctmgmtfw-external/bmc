@@ -1,0 +1,41 @@
+Source : usbe
+Version : 2.13.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Rama Rao Bisa (RamaB@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : usbe, usbe_driver_dev
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, libdbgout_dev, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package provides the common (hardware independent) USB core driver module.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : usbe
+Config-Tag : USBE Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_usb
+Required : helper, DevNodes
+Description : USBE core driver module.
+.
+
+Package : usbe_driver_dev
+Section : dev
+Group : LIBRARY
+Essential : NO
+Description : This package includes usbe core driver Development header files.
+.
+

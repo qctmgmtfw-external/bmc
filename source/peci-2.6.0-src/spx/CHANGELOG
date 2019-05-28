@@ -1,0 +1,342 @@
+Package: peci (2.6.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/peci/DATA/.keep, spx/PACKAGES.D/peci_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 22:37:12 EST
+
+Package: peci (2.5.0); urgency = medium
+
+Abstract:
+	Defined IOCTLs properly.
+
+Files Modified: data/peciifc.h
+
+--Submitter: shravan (shravans@amiindia.co.in) Wed, 13 May 2015 13:02:22 HMT
+
+Package: peci (2.4.0); urgency = low
+
+Abstract:
+	Added changes to avoid strictly compile errors
+
+Files Modified: data/pecimain.c
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Tue, 05 May 2015 12:35:02 HMT
+
+Package: peci (2.3.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/peci.h, data/peciifc.h, data/pecimain.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:47:01 HMT
+
+Package: peci (2.2.0); urgency = high
+
+Abstract:
+	Add PECI logging support for kernel 3.
+
+Files Modified: data/pecimain.c
+
+--Submitter: robinchiu (RobinChiu) Fri, 12 Dec 2014 11:47:01 CST
+
+Package: peci (2.1.0); urgency = medium
+
+Abstract:
+	Correction for GROUP, Source-Location and Source-Version fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 23 Oct 2014 23:04:21 GMT
+
+Package: peci (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:00:06 GMT
+
+Package: peci (1.27.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 15:54:15 HMT
+
+Package: peci (1.26.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:30:26 GMT
+
+Package: peci (1.25.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:42:35 GMT
+
+Package: peci (1.24.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/pecimain.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:06:11 EDT
+
+Package: peci (1.23.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/pecimain.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:05:05 GMT
+
+Package: peci (1.22.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/pecimain.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:42:23 GMT
+
+Package: peci (1.21.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/pecimain.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:28:50 HMT
+
+Package: peci (1.20.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/peci/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:01:51 GMT
+
+Package: peci (1.19.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/peci/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:57:26 HMT
+
+Package: peci (1.18.0); urgency = medium
+
+Abstract:
+	Modified PECI driver to support kernel version 3.4.11
+
+Files Modified: data/pecimain.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Thu, 16 Jan 2014 17:29:35 HMT
+
+Package: peci (1.17.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:26:34 EDT
+
+Package: peci (1.16.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:45:11 EDT
+
+Package: peci (1.15.0); urgency = medium
+
+Abstract:
+	Header file changes for recent changes in PECI.
+
+Files Modified: data/peciifc.h
+
+--Submitter: Winston (winstont@ami.com) Mon, 22 Apr 2013 11:56:48 EDT
+
+Package: peci (1.14.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/pecimain.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Mar 2012 09:29:41 EDT
+
+Package: peci (1.13.0); urgency = medium
+
+Abstract:
+	Enabled Log in Peci drivers using PRJ.
+
+Files Modified: data/pecimain.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 22 Nov 2011 21:11:51 IST
+
+Package: peci (1.12.0); urgency = high
+
+Abstract:
+	Adding support for wrpciconfiglocal & rdpciconfiglocal. Also added hostid for the wrpciconfig and rdpciconfig which was required.
+
+Files Modified: data/peciifc.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 15 Nov 2011 16:42:33 EST
+
+Package: peci (1.11.0); urgency = high
+
+Abstract:
+	Removed passing the structure to the library and directy passing the variables
+
+Files Modified: data/peciifc.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 11 Aug 2011 19:15:58 EDT
+
+Package: peci (1.10.0); urgency = high
+
+Abstract:
+	Clearing the build error due to dependency
+
+Files Modified: data/peciifc.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 05 Aug 2011 13:40:26 EDT
+
+Package: peci (1.9.0); urgency = high
+
+Abstract:
+	Updating PECI core module for including the pack definitions
+
+Files Modified: data/peciifc.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 05 Aug 2011 11:41:13 EDT
+
+Package: peci (1.8.0); urgency = high
+
+Abstract:
+	Added Xmit_Feedback flag to display the transmitted feedback data
+
+Files Modified: data/peciifc.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 18 Jul 2011 15:12:23 EDT
+
+Package: peci (1.7.0); urgency = high
+
+Abstract:
+	Added WrMSR, RdPCIConfig, WrPCIConfig, AWFCS, target address domain support
+
+Files Modified: data/peci.h, data/peciifc.h, data/pecimain.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 18 Jul 2011 11:48:18 EDT
+
+Package: peci (1.6.0); urgency = high
+
+Abstract:
+	Updating SourceLicense, PackageLicense, BinaryLicense and Module_License to GPL-v2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/pecimain.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Jun 2011 16:38:59 EDT
+
+Package: peci (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:23:03 EDT
+
+Package: peci (1.4.0); urgency = medium
+
+Abstract:
+	Added support for Get DIB, RdPkgConfig, WrPkgConfig, RdIAmsr command specified in PECI 3.0.
+
+Files Modified: data/peciifc.h
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 19 Nov 2010 10:20:55 IST
+
+Package: peci (1.3.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/peci/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:49:58 EDT
+
+Package: peci (1.2.0); urgency = medium
+
+Abstract:
+	Changes in PECI driver to comply with the changes to track open count done in helper driver
+
+Files Modified: data/pecimain.c, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 27 Sep 2010 18:11:47 EDT
+
+Package: peci (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:07:52 EDT
+
+Package: peci (1.0.3); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:14:44 EDT
+
+Package: peci (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:59:18 EDT
+
+Package: peci (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:12:31 EST
+
+Package:peci (1.0.0);urgency=new
+
+Abstract:
+	This package provides the common (hardware independent) PECI driver module.
+
+Files Added: peciifc.h, pecimain.c, peci.h, Makefile
+
+--Submitter: Dinesh Selvam (dineshs@amiindia.co.in) Tue, 8 Dec 2009 12:02:24 -0500

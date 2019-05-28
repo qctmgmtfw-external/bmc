@@ -1,0 +1,43 @@
+--- linux/net/core/dev_ioctl.c	2015-07-02 20:38:06.188151519 +0800
++++ linux.new/net/core/dev_ioctl.c	2015-07-02 20:40:43.988153212 +0800
+@@ -5,7 +5,7 @@
+ #include <linux/net_tstamp.h>
+ #include <linux/wireless.h>
+ #include <net/wext.h>
+-
++#include "../../drivers/net/ethernet/aspeed/ast_ether.h"
+ /*
+  *	Map an interface index to its name (SIOCGIFNAME)
+  */
+@@ -122,6 +122,7 @@
+ {
+ 	int err;
+ 	struct net_device *dev = dev_get_by_name_rcu(net, ifr->ifr_name);
++	struct ast_ether_priv *priv = netdev_priv(dev);//Quanta
+ 
+ 	if (!dev)
+ 		return -ENODEV;
+@@ -169,7 +170,14 @@
+ 	case SIOCGIFTXQLEN:
+ 		ifr->ifr_qlen = dev->tx_queue_len;
+ 		return 0;
+-
++		
++	// Quanta +++
++	case SIOCGBCTPKTNUM:
++		if(ifr->ifr_data)
++			*((unsigned int*)ifr->ifr_data) = priv->bcs_flag;
++		return 0;
++	// +++ Quanta
++	
+ 	default:
+ 		/* dev_ioctl() should ensure this case
+ 		 * is never reached
+@@ -438,6 +446,7 @@
+ 	case SIOCGIFMAP:
+ 	case SIOCGIFINDEX:
+ 	case SIOCGIFTXQLEN:
++	case SIOCGBCTPKTNUM://Quanta
+ 		dev_load(net, ifr.ifr_name);
+ 		rcu_read_lock();
+ 		ret = dev_ifsioc_locked(net, &ifr, cmd);

@@ -1,0 +1,21 @@
+--- linux-3.14.17/drivers/video/Makefile	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/drivers/video/Makefile	2014-08-21 14:33:03.861756161 -0400
+@@ -4,6 +4,7 @@
+ 
+ # Each configuration option enables a list of files.
+ 
++include ${SPXINC}/projdef.mk
+ obj-$(CONFIG_VGASTATE)            += vgastate.o
+ obj-$(CONFIG_HDMI)                += hdmi.o
+ obj-y                             += fb_notify.o
+@@ -152,6 +153,10 @@
+ obj-$(CONFIG_FB_HYPERV)		  += hyperv_fb.o
+ obj-$(CONFIG_FB_OPENCORES)	  += ocfb.o
+ 
++ifeq ($(CONFIG_SPX_FEATURE_GLOBAL_FRAME_BUFFER_SUPPORT), YES)
++obj-$(CONFIG_FB_AST)             += ast/
++endif
++
+ # Platform or fallback drivers go here
+ obj-$(CONFIG_FB_UVESA)            += uvesafb.o
+ obj-$(CONFIG_FB_VESA)             += vesafb.o

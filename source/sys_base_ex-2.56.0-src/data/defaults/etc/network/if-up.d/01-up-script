@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Interface $IFACE is up"
+exit 0

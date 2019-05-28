@@ -1,0 +1,41 @@
+diff -Naur olddata/timeout data/timeout
+--- olddata/timeout	2012-04-25 19:10:22.620882056 +0530
++++ data/timeout	2012-04-25 19:17:56.383879566 +0530
+@@ -31,10 +31,12 @@
+         exit 0
+     fi
+     
++    mkdir /tmp/audit
+     echo "Starting Timeout Daemon Utility: timeoutd."
+     start-stop-daemon --start --quiet --exec $PATHFUL_TIMEOUT 
+     ;;
+   stop)
++    rm -rf /tmp/audit
+     echo "Stopping Timeout Daemon Utility: timeoutd."
+     start-stop-daemon --stop --quiet --exec $PATHFUL_TIMEOUT
+     ;;
+diff -Naur olddata/timeoutd.c data/timeoutd.c
+--- olddata/timeoutd.c	2012-04-25 19:17:13.571767230 +0530
++++ data/timeoutd.c	2012-04-25 19:17:37.091755187 +0530
+@@ -964,6 +964,8 @@
+     char	host[17];
+     struct stat status, *pstat;
+     time_t      idle, sesstime, time();
++    char Buf[100];
++    FILE *fp;
+ 
+     pstat = &status;    /* point to status structure */
+ #ifndef SUNOS
+@@ -1014,6 +1016,12 @@
+     		       "User %s exceeded idle limit (idle for %d minutes, max=%d).\n",
+                    user, (int)idle, config[configline]->idlemax);
+     		closelog();
++    		sprintf (Buf, "%s/%d", "/tmp/audit", utmpp->ut_pid);
++    		fp = fopen (Buf, "w");
++    		if (NULL != fp)
++    		{
++    			fclose(fp);
++    		}
+ 		killit(utmpp->ut_pid, user, dev);
+     		break;
+     	case SESSMAX:

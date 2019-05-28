@@ -1,0 +1,22 @@
+Source                   	:	Bootloader_Pristine_ex
+Version : 2.1.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher  (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	ftp.denx.de/pub/u-boot/
+Source-Version           	:	2013.07
+Builds                   	:	Bootloader_Pristine_ex
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	Pristine U-Boot Boot loader 2013.07
+.
+
+Package                  	:	Bootloader_Pristine_ex
+Section                  	:	info
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	Pristine U-Boot Boot loader 2013.07
+.
+

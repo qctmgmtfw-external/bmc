@@ -1,0 +1,391 @@
+Package: eth (2.13.0); urgency = medium
+
+Abstract:
+	Added new file DO_NOT_DELETE_AMI_INTERNAL_USAGE
+
+Files Added: spx/DOCS, spx/DOCS/DO_NOT_DELETE_AMI_INTERNAL_USAGE
+Files Modified: spx/INFO
+
+--Submitter: Prashant Vyankatrao Bharade (prashantbharadev@amiindia.co.in) Wed, 03 May 2017 19:52:43 MMT
+
+Package: eth (2.12.0); urgency = medium
+
+Abstract:
+	Addition of Category and Sub-Category fields to the packages.
+
+Files Modified: spx/INFO
+
+--Submitter: Prashant Vyankatrao Bharade (prashantbharadev@amiindia.co.in) Fri, 28 Apr 2017 15:42:37 MMT
+
+Package: eth (2.11.0); urgency = low
+
+Abstract:
+	Changes to add CONFIG_SPX_FEATURE_ETHERNET_OVER_USB to /etc/core_features when ethernet over USB support is enabled in PRJ
+
+Files Added: spx/P.CONFIG, spx/PACKAGES.D/eth/P.CONFIG
+Files Modified: spx/PACKAGES.D/eth/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Mon, 24 Apr 2017 23:05:15 EDT
+
+Package: eth (2.10.0); urgency = medium
+
+Abstract:
+	Fix for - unable to flash via yafu
+
+Files Modified: spx/INFO, spx/PACKAGES.D/eth/SCRIPTS/dev-install
+
+--Submitter: S Rajamanickem (srajamanickem@amiindia.co.in) Fri, 10 Mar 2017 12:55:13 IST
+
+Package: eth (2.9.0); urgency = low
+
+Abstract:
+	Changes for pilot4 to assign specified USB endpoints to designated USB dev type.
+
+Files Modified: data/eth_mod.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Wed, 08 Feb 2017 11:52:09 GMT-5
+
+Package: eth (2.8.0); urgency = medium
+
+Abstract:
+	Fortify fixes:Buffer Overflow
+
+Files Modified: data/eth_mod.c
+
+--Submitter: B Sreedhar (bsreedhar@amiindia.co.in) Mon, 06 Feb 2017 14:58:49 HMT
+
+Package: eth (2.7.0); urgency = medium
+
+Abstract:
+	Fortify Fix : Dangerous strcpy
+
+Files Modified: data/eth_mod.c
+
+--Submitter: B Sreedhar (bsreedhar@amiindia.co.in) Wed, 01 Feb 2017 15:53:51 HMT
+
+Package: eth (2.6.0); urgency = low
+
+Abstract:
+	Adding proper config tag and help description
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 19 Jan 2017 17:11:28 EST
+
+Package: eth (2.5.0); urgency = medium
+
+Abstract:
+	Remove Floppy Code References.
+
+Files Modified: data/eth_mod.c
+
+--Submitter: Mohammed Javith Akthar M (mohammedjavitham@amiindia.co.in) Fri, 09 Dec 2016 18:40:11 HMT
+
+Package: eth (2.4.0); urgency = low
+
+Abstract:
+	Handled issues in USB NIC for SMP.
+
+Files Modified: data/ether.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Fri, 11 Nov 2016 13:36:24 GMT-5
+
+Package: eth (2.3.0); urgency = medium
+
+Abstract:
+	.keep files changed to keep.folder
+
+Files Added: spx/PACKAGES.D/eth/DATA/keep.folder
+Files Deleted: spx/PACKAGES.D/eth/DATA/.keep
+
+--Submitter: Samvinesh Christopher (vinesh@ami.com) Thu, 05 May 2016 14:37:21 EDT
+
+Package: eth (2.2.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/eth/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 19:49:52 EST
+
+Package: eth (2.1.0); urgency = medium
+
+Abstract:
+	Adding support for 3.X kernel
+
+Files Modified: data/eth_mod.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 29 Dec 2015 17:27:08 EST
+
+Package: eth (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:34:24 GMT
+
+Package: eth (1.16.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:20:51 GMT
+
+Package: eth (1.15.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:28:40 GMT
+
+Package: eth (1.14.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/eth/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:58:07 GMT
+
+Package: eth (1.13.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/eth/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:44:33 HMT
+
+Package: eth (1.12.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:33:49 EDT
+
+Package: eth (1.11.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:11:44 EDT
+
+Package: eth (1.10.0); urgency = low
+
+Abstract:
+	Fix for compilation errors when debug message support is enabled.
+
+Files Modified: data/rndis.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 03 Jul 2012 10:54:44 EDT
+
+Package: eth (1.9.0); urgency = medium
+
+Abstract:
+	Fix for Build error
+
+Files Modified: data/rndis.c
+
+--Submitter: ManimehalaiS (manimehalais@amiindia.co.in) Wed, 04 Jan 2012 12:17:55 IST
+
+Package: eth (1.8.0); urgency = medium
+
+Abstract:
+	rndisinf is included in the Required field
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 16 Sep 2011 14:30:37 EDT
+
+Package: eth (1.7.0); urgency = medium
+
+Abstract:
+	virtual ethernet needs HIGH speed USB controller
+
+Files Modified: data/eth_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 23 Aug 2011 13:01:47 EDT
+
+Package: eth (1.6.0); urgency = medium
+
+Abstract:
+	ETH_HW_support dummy package added to Required field
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 19 Aug 2011 15:54:59 EDT
+
+Package: eth (1.5.0); urgency = medium
+
+Abstract:
+	Licence Info changed to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/eth_mod.c, spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 16:33:24 EDT
+
+Package: eth (1.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:12:19 EDT
+
+Package: eth (1.3.0); urgency = low
+
+Abstract:
+	typo corrected.
+
+Files Modified: data/eth_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 20 Jan 2011 16:59:39 EST
+
+Package: eth (1.2.0); urgency = medium
+
+Abstract:
+	eth module install location changed.
+
+Files Modified: spx/PACKAGES.D/eth/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 28 Oct 2010 11:13:29 EDT
+
+Package: eth (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:43:14 EDT
+
+Package: eth (1.0.12); urgency = low
+
+Abstract:
+	Interval field has been restored to 1
+
+Files Modified: data/eth_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 10 May 2010 14:27:10 EDT
+
+Package: eth (1.0.11); urgency = high
+
+Abstract:
+	Changes result of Support added to use both IN and OUT endpoints of same endpoint number.
+
+Files Modified: data/eth_mod.c, data/ether.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 07 May 2010 10:05:05 EDT
+
+Package: eth (1.0.10); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:43:17 EDT
+
+Package: eth (1.0.9); urgency = medium
+
+Abstract:
+	Ethernet module can make use of high speed USB port if available.
+
+Files Modified: data/eth_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 25 Feb 2010 10:27:17 EST
+
+Package: eth (1.0.8); urgency = medium
+
+Abstract:
+	Using MaxPacketSize of Endpoint descriptor instead of hardware endpoint size.
+
+Files Modified: data/ether.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 24 Feb 2010 11:35:53 EST
+
+Package: eth (1.0.7); urgency = low
+
+Abstract:
+	debug messages updated.
+
+Files Modified: data/eth_mod.c, data/rndis.c, data/eth_mod.h, data/ether.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 18 Feb 2010 10:36:50 EST
+
+Package: eth (1.0.6); urgency = medium
+
+Abstract:
+	Timeout handling is added.
+
+Files Added: data/eth_mod.h
+Files Modified: data/ether.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Wed, 17 Feb 2010 15:09:01 EST
+
+Package: eth (1.0.5); urgency = low
+
+Abstract:
+	max endpoint size for bulk endpoints is increased to 512.
+
+Files Modified: data/eth_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 12 Feb 2010 12:55:10 EST
+
+Package: eth (1.0.4); urgency = low
+
+Abstract:
+	1.Support added to choose large FIFO endpoints when available with hardware.
+
+Files Modified: data/eth_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 11 Feb 2010 14:28:04 EST
+
+Package: eth (1.0.3); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:56:44 EST
+
+Package: eth (1.0.2); urgency = low
+
+Abstract:
+	virtual ethernet modules will use usbe package version >= 1.0.0
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 09 Feb 2010 15:30:51 EST
+
+Package: eth (1.0.1); urgency = low
+
+Abstract:
+	updated virtual ethernel device module
+
+Files Modified: data/rndis.c, data/ether.c, data/ether.h
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 08 Feb 2010 17:20:04 EST
+
+Package:eth (1.0.0);urgency=new
+
+Abstract:
+	This Package creates USB ethernet device module.
+
+Files Added: Makefile, rndis.h, ndis.h, eth_mod.c, ether.h, ether.c, cdc.h, rndis.c
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Mon, 1 Feb 2010 10:51:10 -0500

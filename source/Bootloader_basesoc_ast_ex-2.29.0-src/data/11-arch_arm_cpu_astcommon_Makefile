@@ -1,0 +1,56 @@
+--- u-boot_orig/arch/arm/cpu/astcommon/Makefile	1969-12-31 19:00:00.000000000 -0500
++++ u-boot_mod/arch/arm/cpu/astcommon/Makefile	2015-12-23 19:19:53.964588606 -0500
+@@ -0,0 +1,53 @@
++#
++# * Copyright (C) 2007-2013 American Megatrends Inc
++# *
++# * This program is free software; you can redistribute it and/or modify
++# * it under the terms of the GNU General Public License as published by
++# * the Free Software Foundation; either version 2 of the License, or
++# * (at your option) any later version.
++# *
++# * This program is distributed in the hope that it will be useful,
++# * but WITHOUT ANY WARRANTY; without even the implied warranty of
++# * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++# * GNU General Public License for more details.
++# *
++# * You should have received a copy of the GNU General Public License
++# * along with this program; if not, write to the Free Software
++# * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++# 
++
++include $(TOPDIR)/config.mk
++
++LIB = $(obj)libastcommon.o
++
++SOBJS-y = 
++
++COBJS-y	= timer.o reset.o interrupts.o cache.o 
++COBJS-y	+= ast_spiflash.o ast_clk.o
++COBJS-y += ast_mmc.o ast_wdt.o
++COBJS-$(CONFIG_YAFU_SUPPORT) += ast_kcs.o
++COBJS-$(CONFIG_CMD_I2C) += ast_i2c.o
++COBJS-$(CONFIG_LEGACY_NET) +=ast_eth.o
++COBJS-$(CONFIG_FTGMAC_NET) += ftgmac100.o eth_scu.o
++COBJS-$(CONFIG_BOOTLOGO_SUPPORT) += ast_fb.o
++COBJS-$(CONFIG_PCI) += ast-ahbc.o ast-scu.o pcie.o ast-p2x.o
++
++#-------------------------------------------------------------------
++COBJS	:= $(COBJS-y)
++SOBJS	:= $(SOBJS-y)
++SRCS	:= $(SOBJS:.o=.S) $(COBJS:.o=.c)
++OBJS	:= $(addprefix $(obj),$(COBJS))
++SOBJS	:= $(addprefix $(obj),$(SOBJS))
++
++$(LIB):	$(obj).depend $(OBJS) $(SOBJS)
++	$(call cmd_link_o_target, $(OBJS) $(SOBJS))
++
++#########################################################################
++
++# defines $(obj).depend target
++include $(SRCTREE)/rules.mk
++
++sinclude $(obj).depend
++
++#########################################################################
++

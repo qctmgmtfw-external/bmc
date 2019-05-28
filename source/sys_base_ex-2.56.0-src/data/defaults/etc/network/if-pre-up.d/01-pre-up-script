@@ -1,0 +1,12 @@
+#!/bin/sh
+echo "Interface $IFACE is going to go up"
+# Quanta +++
+if [ "$ADDRFAM" == "inet" ] && [ -f "/etc/core_features" ]; then
+    feature=`cat /etc/core_features | grep -v "^#" | grep " *CONFIG_SPX_FEATURE_ADVANCED_IP_ROUTING_SUPPORT *$"`
+    if [ -n "$feature" ] && [ -d /proc/sys/net/ipv4/conf/$IFACE ]; then
+        echo 1 > /proc/sys/net/ipv4/conf/$IFACE/arp_ignore
+        echo 2 > /proc/sys/net/ipv4/conf/$IFACE/arp_announce
+    fi
+fi
+# +++ Quanta
+exit 0

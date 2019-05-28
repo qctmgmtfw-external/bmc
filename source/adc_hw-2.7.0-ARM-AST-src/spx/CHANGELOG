@@ -1,0 +1,216 @@
+Package: adc_hw (2.7.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/adc_hw/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 19:03:13 EST
+
+Package: adc_hw (2.6.0); urgency = medium
+
+Abstract:
+	Added AST1250 support to read adc compensation value
+
+Files Modified: data/adcmain_hw.c, spx/INFO
+
+--Submitter: Thamarai Selvan M (thamaraiselvanm@amiindia.co.in) Wed, 30 Dec 2015 19:53:23 HMT
+
+Package: adc_hw (2.5.0); urgency = medium
+
+Abstract:
+	Updated for non-float value by ADC App
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Mon, 07 Sep 2015 18:45:20 CST
+
+Package: adc_hw (2.4.0); urgency = high
+
+Abstract:
+	Remove 'Compensating sensing mode' to 'Trigger compensating method'.
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: robinchiu (RobinChiu) Thu, 21 May 2015 18:55:05 CST
+
+Package: adc_hw (2.3.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/adc_hw.h, data/adcmain_hw.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:44:25 HMT
+
+Package: adc_hw (2.2.0); urgency = medium
+
+Abstract:
+	Lakshmi Sravya K <lakshmisk@amiindia.co.in>: Fixes for fortiy issues
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Thu, 11 Dec 2014 16:02:23 IST
+
+Package: adc_hw (2.1.0); urgency = medium
+
+Abstract:
+	Add 'Auto compensating sensing mode' to AST2500EVB.
+
+Files Modified: data/adcmain_hw.c, spx/INFO
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Wed, 12 Nov 2014 09:19:52 JWST
+
+Package: adc_hw (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 02:48:55 GMT
+
+Package: adc_hw (1.14.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:36:01 GMT
+
+Package: adc_hw (1.13.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 02:45:29 GMT
+
+Package: adc_hw (1.12.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/Makefile, data/adcmain_hw.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:09:04 EDT
+
+Package: adc_hw (1.11.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:36:11 GMT
+
+Package: adc_hw (1.10.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/adc_hw/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:56:38 GMT
+
+Package: adc_hw (1.9.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/adc_hw/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:40:27 HMT
+
+Package: adc_hw (1.8.0); urgency = high
+
+Abstract:
+	ADC output check format error.
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: kentyeh (kentyeh@ami.com.tw) Wed, 09 Apr 2014 16:49:15 CST
+
+Package: adc_hw (1.7.0); urgency = high
+
+Abstract:
+	Fixed adc output get minus value.
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: kentyeh (kentyeh@ami.com.tw) Mon, 24 Mar 2014 16:51:43 CST
+
+Package: adc_hw (1.6.0); urgency = medium
+
+Abstract:
+	Correct revision to 1.6.0.
+
+
+--Submitter: garypaung (garypaung@ami.com.tw) Thu, 26 Dec 2013 00:18:43 CST
+
+Package: adc_hw (1.5.1); urgency = medium
+
+Abstract:
+	Revise the behavior of read compensation value to match the description of AST2400 datasheet.
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: garypaung (garypaung@ami.com.tw) Wed, 25 Dec 2013 22:29:09 CST
+
+Package: adc_hw (1.5.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:36:24 EDT
+
+Package: adc_hw (1.4.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sat, 21 Sep 2013 23:40:50 EDT
+
+Package: adc_hw (1.3.0); urgency = high
+
+Abstract:
+	Supported AST2400 SoC.
+
+Files Modified: data/adc_hw.h, data/adcmain_hw.c
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Thu, 25 Oct 2012 14:05:41 CST
+
+Package: adc_hw (1.2.0); urgency = high
+
+Abstract:
+	Improve Voltage Measurement Accuracy. 
+Refer to ASPEED application note Ref NO.A2300-08.
+
+Files Modified: data/adcmain_hw.c
+
+--Submitter: garypaung (garypaung@ami.com.tw) Wed, 30 May 2012 19:52:59 CST
+
+Package: adc_hw (1.1.0); urgency = low
+
+Abstract:
+	Updated package information.
+
+Files Modified: spx/INFO
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Fri, 27 Apr 2012 18:43:07 CST
+
+Package: adc_hw (1.0.0); urgency = new
+
+Abstract:
+	This package contains ADC hardware level driver for AST2300EVB
+
+Files Added: data, data/Makefile, data/adc_hw.h, data/adcmain_hw.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/adc_hw, spx/PACKAGES.D/adc_hw/DATA, spx/PACKAGES.D/adc_hw/SCRIPTS, spx/PACKAGES.D/adc_hw/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Eric Hsu (erichsu@ami.com.tw) Fri, 27 Apr 2012 18:34:38 CST
+

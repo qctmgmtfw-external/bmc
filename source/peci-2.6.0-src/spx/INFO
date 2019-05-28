@@ -1,0 +1,41 @@
+Source : peci
+Version : 2.6.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Dinesh Selvam (dineshs@amiindia.co.in)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : peci, peci_driver_dev
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, libdbgout_dev, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package provides the common (hardware independent) PECI driver module.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : peci
+Config-Tag : PECI Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_peci
+Required : helper, DevNodes
+Description : PECI common driver module.
+.
+
+Package : peci_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package includes PECI driver Development header files.
+.
+

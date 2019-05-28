@@ -1,0 +1,8 @@
+#Virtual Consoles
+1:23:respawn:/sbin/getty 115200 tty1
+2:2349:respawn:/sbin/getty 115200 tty2
+3:23:respawn:/sbin/getty 115200 tty3
+4:23:respawn:/sbin/getty 115200 tty4
+5:23:respawn:/sbin/getty 115200 tty5
+6:23:respawn:/sbin/getty 115200 tty6
+

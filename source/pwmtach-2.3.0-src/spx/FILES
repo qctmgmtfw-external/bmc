@@ -1,0 +1,5 @@
+./Makefile 299 609d1f3a4fac01d69e98c135e1137c19
+./fan_structs.h 1327 9e82bf64e19d31ee1826d8d1dc692d60
+./pwmtach.h 3490 bb4efc3975bf155c36b751360d7b0de1
+./pwmtach_ioctl.h 3711 0f71c26abc57b7c7dbde8cd73f0c2129
+./pwmtachmain.c 21975 440cd62b35853664b6b37843f6627f23

@@ -1,0 +1,12 @@
+	eth$IFNUM)	
+		DO_DDNS=y
+        SET_FQDN=n
+        TSIG_AUTH=n
+        SET_HOSTNAME=n
+		SET_DOMAIN=y
+        SET_v6DOMAIN=n
+		SET_DNS=y
+        SET_IPV6_PRIORITY=n
+        SET_MDNS=n
+		;; 
+

@@ -1,0 +1,75 @@
+--- busybox.org/loginutils/getty.c	2014-08-01 15:34:33.307910168 -0400
++++ busybox/loginutils/getty.c	2014-08-01 15:56:31.495934915 -0400
+@@ -519,6 +519,46 @@
+ 	_exit(EXIT_SUCCESS);
+ }
+ 
++
++/* AMI Extension Begin --------------------------------------------*/
++#define PROC_CMDLINE "/proc/cmdline"
++#define BUF_LEN 1024
++char console[64];
++
++static void 
++UserConfigTTY(void)
++{
++		FILE *fp;
++    	char cmdline_buf[BUF_LEN],*sepstr,speedstr[BUF_LEN],*str;
++
++        fp = fopen(PROC_CMDLINE,"r");
++        if(fp == NULL)
++        {
++       		bb_error_msg_and_die("Error in opening file %s \n",PROC_CMDLINE);
++        }
++
++        if(fgets(cmdline_buf,BUF_LEN,fp) == NULL)
++        {
++       		fclose(fp);
++       		bb_error_msg_and_die("Error in fgets %s \n",PROC_CMDLINE);
++        }
++
++        sepstr= strstr(cmdline_buf,"console=");
++        sscanf(sepstr,"console=%s",cmdline_buf);
++        sscanf(cmdline_buf,"%[=^]",cmdline_buf);
++        str = strtok(cmdline_buf,",");
++	    G.tty_name = console;
++        strncpy((char *)G.tty_name,str,strlen(str));  /* Terminal Name */
++        str = strtok(NULL,",");
++        strncpy(&speedstr[0],str,strlen(str));
++        G.speeds[0] = bcode(speedstr);	/* Baud rate */
++   		fclose(fp);
++
++		return;
++}
++/* AMI Extension End -----------------------------------------------*/
++
++
+ int getty_main(int argc, char **argv) MAIN_EXTERNALLY_VISIBLE;
+ int getty_main(int argc UNUSED_PARAM, char **argv)
+ {
+@@ -536,6 +576,25 @@
+ 	/* Parse command-line arguments */
+ 	parse_args(argv);
+ 
++/* AMI Extension Begin --------------------------------------------*/
++/* 
++     We call getty from initab with console and arbitary baud rate  
++	So this code will kick in which the correct terminal name and 
++    baud rate from the kernel cmdline opion "console="
++*/
++	if (NOT_LONE_DASH(G.tty_name)) 
++	{
++		if (G.tty_name[0] != '/')
++			G.tty_name = xasprintf("/dev/%s", G.tty_name); 
++	}
++	if(strcmp(G.tty_name,"/dev/console")==0)
++    {
++       UserConfigTTY();
++    }
++
++/* AMI Extension End -----------------------------------------------*/
++	
++
+ 	/* Create new session and pgrp, lose controlling tty */
+ 	pid = setsid();  /* this also gives us our pid :) */
+ 	if (pid < 0) {

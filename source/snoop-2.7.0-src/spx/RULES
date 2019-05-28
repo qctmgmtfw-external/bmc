@@ -1,0 +1,26 @@
+#Extract Source in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE
+		
+#Clean Source
+clean_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE clean
+		
+#-----------------Mandatory Rules for every binary Package ----------------------------
+#Rules to create snoop package
+build_package-snoop:
+		PACK_SPX ./ %BUILD/%PACKAGE/data/snoop.ko
+		
+#Rules to create snoop_driver_dev package
+build_package-snoop_driver_dev:
+		MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/Module.symvers %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/snoop.h %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/snoop_ioctl.h %TEMPDIR/%PACKAGE/tmp
+		PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+		

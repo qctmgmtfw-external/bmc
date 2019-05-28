@@ -1,0 +1,41 @@
+Source : kcs
+Version : 2.12.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Vinay Tandon (vinayt@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : kcs, kcs_driver_dev
+Build-Depends : Crosscc, rules, global_dev, kernel_dev, helper_driver_dev, libdbgout_dev, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : KCS Common Device Driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : kcs
+Config-Tag : KCS Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_kcs
+Required : reset, helper, DevNodes
+Description : KCS common driver
+.
+
+Package : kcs_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : KCS driver devl package
+.
+

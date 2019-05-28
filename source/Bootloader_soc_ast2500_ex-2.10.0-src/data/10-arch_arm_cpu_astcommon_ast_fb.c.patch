@@ -1,0 +1,13 @@
+--- uboot/arch/arm/cpu/astcommon/ast_fb.c	Tue Sep 20 10:37:19 2016
++++ uboot/arch/arm/cpu/astcommon/ast_fb.c	Tue Sep 20 10:41:26 2016
+@@ -19,7 +19,8 @@
+         *(unsigned long *)(SCU_SYS_RESET_REG) |= (1 << 6);
+         udelay(10000);
+         *(unsigned long *)(SCU_SYS_RESET_REG) &= ~((1 << 6) | (1 << 13));
+-        *(unsigned long *)(SCU_MISC_CONTROL_REG) &= ~(0x01 << 4);
++	//clear MISC_CONTROL[21], because platform.S set it.
++	*(unsigned long *)(SCU_MISC_CONTROL_REG) &= ~((0x01 << 4)| (0x01 <<21)); 
+         *(unsigned long *)(SCU_MISC_CONTROL_REG) |= ((0x1 << 16) | (1 << 18) | (0x01 << 7));
+         *(unsigned long *)(SCU_SYS_RESET_CTL_REG2) &= ~(1 << 5);
+         *(unsigned long *)(SCU_D2PLL_EXTENDED_REG) = 0x585;
+

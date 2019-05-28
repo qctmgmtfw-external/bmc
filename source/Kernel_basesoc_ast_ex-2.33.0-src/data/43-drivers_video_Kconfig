@@ -1,0 +1,18 @@
+--- linux-3.14.17/drivers/video/Kconfig	2014-08-13 21:38:34.000000000 -0400
++++ linux.new/drivers/video/Kconfig	2014-08-21 14:32:14.597755236 -0400
+@@ -1564,6 +1564,15 @@
+ 	  (315/H/PRO, 55x, 650, 651, 740, 330, 661, 741, 760, 761) as well
+ 	  as XGI V3XT, V5, V8 and Z7.
+ 
++config FB_AST
++       bool "ASPEED AST graphics display controller support"
++       depends on FB && BASESOC_AST
++       select FB_CFB_FILLRECT
++       select FB_CFB_COPYAREA
++       select FB_CFB_IMAGEBLIT
++       help
++          Say Y here to support use of the AST graphics display controller.
++
+ config FB_VIA
+        tristate "VIA UniChrome (Pro) and Chrome9 display support"
+        depends on FB && PCI && X86

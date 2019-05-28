@@ -1,0 +1,13 @@
+--- linux.org/drivers/mtd/spichips/Kconfig	2014-02-03 11:46:37.123262243 -0500
++++ linux.new/drivers/mtd/spichips/Kconfig	2014-01-31 15:42:24.963921260 -0500
+@@ -79,4 +79,10 @@
+ 	help
+ 	   Erase Block Size of the SPI Device that does not support ReadID 
+ 
++config MTD_AST_SPI
++	bool "AST SOC SPI Flash Controller"
++	depends on MTD_SPI
++	help
++		If you are using SPI device on AST SOC, select Y
++
+ endmenu

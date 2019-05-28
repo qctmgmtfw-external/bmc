@@ -1,0 +1,41 @@
+Source : snoop
+Version : 2.7.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Vinay Tandon (vinayt@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : snoop_driver_dev, snoop
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, reset_driver_dev, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package has the Snoop common driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : snoop_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package contains the Snoop Driver development files.
+.
+
+Package : snoop
+Config-Tag : Snoop Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_snoop
+Required : reset, helper, DevNodes
+Description : This package contains the Snoop Common driver.
+.
+

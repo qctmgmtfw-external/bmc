@@ -1,0 +1,35 @@
+--- uboot/arch/arm/cpu/arm1176/ast2500/platform.S	2016-06-21 15:48:44.221841837 +0800
++++ uboot/arch/arm/cpu/arm1176/ast2500/platform.S.new	2016-07-01 10:42:49.173883945 +0800
+@@ -81,6 +81,10 @@
+  *    CONFIG_FIRMWARE_2ND_BOOT (Removed)
+  * 6. Enable DRAM extended temperature range mode
+  *    CONFIG_DRAM_EXT_TEMP
++ * 7. UART5 message output   //
++ *    FEATURE_DRAM_INIT_UART_38400 // add radio button in PRJ
++ *    FEATURE_DRAM_INIT_UART_57600
++ *	  FEATURE_DRAM_INIT_UART_115200
+  ******************************************************************************
+  */
+ 
+@@ -523,11 +527,18 @@
+     mov   r2, r2, lsr #12
+     tst   r2, #0x01
+     ldr   r0, =0x1e784000
+-    moveq r1, #0x0D                              @ Baudrate 115200
+-    movne r1, #0x01                              @ Baudrate 115200, div13
+-#ifdef CONFIG_DRAM_UART_38400
++#if defined (CONFIG_SPX_FEATURE_DRAM_INIT_UART_38400)
+     moveq r1, #0x27                              @ Baudrate 38400
+     movne r1, #0x03                              @ Baudrate 38400 , div13
++#elif defined (CONFIG_SPX_FEATURE_DRAM_INIT_UART_57600)
++    moveq r1, #0x1A                              @ Baudrate 57600
++    movne r1, #0x0D                              @ Baudrate 57600 , div13
++#elif defined (CONFIG_SPX_FEATURE_DRAM_INIT_UART_115200)
++    moveq r1, #0x0D                              @ Baudrate 115200
++    movne r1, #0x01                              @ Baudrate 115200, div13
++#else
++    moveq r1, #0x0D                              @ Baudrate 115200
++    movne r1, #0x01                              @ Baudrate 115200, div13
+ #endif
+     str   r1, [r0]
+ 

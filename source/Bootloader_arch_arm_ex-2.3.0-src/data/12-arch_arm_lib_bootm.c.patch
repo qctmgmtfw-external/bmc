@@ -1,0 +1,22 @@
+--- uboot_orig/arch/arm/lib/bootm.c	2017-06-07 17:50:47.083409690 +0800
++++ uboot/arch/arm/lib/bootm.c	2017-06-07 18:49:11.727521839 +0800
+@@ -38,6 +38,8 @@
+ 
+ static struct tag *params;
+ 
++extern int ast_eth_reset(void);
++
+ static ulong get_sp(void)
+ {
+ 	ulong ret;
+@@ -90,6 +92,10 @@
+ 	udc_disconnect();
+ #endif
+ 	cleanup_before_linux();
++	
++	printf("Reset MAC Controller ...\n\n");
++	ast_eth_reset();
++	
+ }
+ 
+ static void setup_start_tag (bd_t *bd)

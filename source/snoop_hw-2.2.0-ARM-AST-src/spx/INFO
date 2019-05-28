@@ -1,0 +1,35 @@
+Source : snoop_hw
+Version : 2.2.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : David Chang (DavidChang@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : snoop_hw
+Build-Depends : Crosscc, helper_driver_dev, kernel_dev, rules, snoop_driver_dev, reset_hw, DevNodes
+Architecture : ARM
+SOC : AST
+Urgency : medium
+Description : This package contains the LPC snoop hardware driver for AST SoC.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : snoop_hw
+Section : sys
+Group : DEVICE
+Essential : YES
+Depends : kernel, snoop
+Required : helper, DevNodes
+Provides : snoopDriver
+Description : This package contains the built LPC snoop hardware driver for AST SoC.
+.
+

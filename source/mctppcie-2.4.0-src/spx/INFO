@@ -1,0 +1,33 @@
+Source                   	:	mctppcie
+Version : 2.4.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Ben Chen  (benchen@ami.com.tw)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	mctppcie, mctppcie_driver_dev
+Build-Depends            	:	Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, libdbgout_dev
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	This package provides the common (hardware independent) MCTP PCIE driver module.
+.
+
+Package                  	:	mctppcie
+Config-Tag               	:	MCTP PCIE Device Support
+Section                  	:	sys
+Group                    	:	DEVICE
+Essential                	:	NO
+Depends                  	:	kernel, hw_mctppcie
+Required                 	:	helper
+Description              	:	MCTP PCIE common driver module.
+.
+
+Package                  	:	mctppcie_driver_dev
+Section                  	:	dev
+Group                    	:	DEVEL
+Essential                	:	NO
+Description              	:	This package includes MCTP PCIE driver Development header files.
+.
+

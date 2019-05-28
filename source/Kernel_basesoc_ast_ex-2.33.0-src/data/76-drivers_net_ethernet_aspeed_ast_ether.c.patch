@@ -1,0 +1,13 @@
+--- linux/drivers/net/ethernet/aspeed/ast_ether.c	2018-01-18 09:55:32.144010578 +0800
++++ linux/drivers/net/ethernet/aspeed/ast_ether_new.c	2018-01-17 15:49:59.000000000 +0800
+@@ -1954,7 +1954,9 @@
+ 
+ 	for (id = 0; id < AST_ETHER_USE_NUM; id ++) {
+ 		if (ast_ether_init_one(id) == 0)
+-			result = 0;		
++			result = 0;
++		
++		netif_carrier_off(ast_ether_netdev[id]); // clear the state to default.
+ 	}
+ 	return result;
+ }

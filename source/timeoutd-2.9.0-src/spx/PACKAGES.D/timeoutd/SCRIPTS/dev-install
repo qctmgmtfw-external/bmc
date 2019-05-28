@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./timeoutd %IMAGE_TREE/usr/local/bin/
+	COPY_TO_CONF ./timeouts
+	ADD_CONF_LINK /etc timeouts
+	SET_INIT_SCRIPT ./timeout
+	EXECUTE chmod 777 %IMAGE_TREE/etc/init.d/timeout
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_TIMEOUTD_SESSION_TIMEOUT" != "0" ]; then echo "CONFIG_SPX_FEATURE_TIMEOUTD_SESSION_TIMEOUT" >>  %IMAGE_TREE/etc/core_features; echo "CONFIG_SPX_FEATURE_TIMEOUTD_SESSION_TIMEOUT"="%CONFIG_SPX_FEATURE_TIMEOUTD_SESSION_TIMEOUT" >>  %IMAGE_TREE/etc/core_macros; fi
+	
+debug-install:

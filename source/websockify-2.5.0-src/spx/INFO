@@ -1,0 +1,33 @@
+Source : websockify
+Version : 2.5.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Chandrasekar R (chandrasekarr@amiindia.co.in)
+License : LGPL-3
+Source-Location : https://github.com/kanaka/websockify
+Source-Version : 1.0.0
+Builds : websockify
+Build-Depends : global_dev, libdbgout_dev, libunix_dev, BaseSystem
+Architecture : ALL
+Urgency : medium
+Description : This package contains the Websocket application.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : websockify
+Config-Tag : Websockets
+Section : app
+Group : TESTTOOL
+Essential : NO
+Required : libunix, libdbgout
+Description : This package includes the binary for Websockify application.
+.
+

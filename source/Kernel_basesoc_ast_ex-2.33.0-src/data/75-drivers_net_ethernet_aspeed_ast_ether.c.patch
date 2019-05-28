@@ -1,0 +1,42 @@
+--- linux/drivers/net/ethernet/aspeed/ast_ether.c	2017-04-15 14:47:42.655631194 +0800
++++ linux/drivers/net/ethernet/aspeed/ast_ether.c.new	2017-04-15 14:46:38.323632412 +0800
+@@ -266,7 +266,9 @@
+ 		case BROADCOM_BCM5221_OUI:
+ 		case BROADCOM_BCM5241_OUI:
+ 		case MICREL_KSZ80X1_OUI:
++			break;
+ 		case REALTEK_RTL82X1X_OUI:
++			printk(KERN_ERR ">>>>> Phy Identified : REALTEK_RTL82X1X_OUI\n");
+ //Quanta------
+         	/* S4E for LED configuration */
+         	/* switch to extend page44, reg31 = 0x0007 */
+@@ -290,6 +292,18 @@
+         	ast_ether_phy_write_register(dev, priv->phy_addr, 31, 0x0000);
+ 	
+ 	  		/* S4E for LED configuration end */
++ 			/* S2B: it is disabled amber LED blinking. if PHY found LAN device or link parnter support 802.3az, it will blink amber. */
++        	ast_ether_phy_write_register(dev, 0, 31, 0x0005); /* switch to page5. */
++	
++        	ast_ether_phy_write_register(dev, 0, 5, 0x8b82);
++	
++	     	reg_val = ast_ether_phy_read_register(dev, 0, 6);
++	     	reg_val = reg_val & 0xFFEF;
++	     	ast_ether_phy_write_register(dev, 0, 6, reg_val);
++	
++	     	ast_ether_phy_write_register(dev, 0, 31, 0x0000); /* switch back to page 0. */
++	
++	     	/* S2B: end */
+ 			break;
+ 		case SMSC_LAN9303_OUI:
+ 			// Quanta TBD       case 0x3fffff:
+@@ -343,6 +357,10 @@
+ 
+ 	priv->phy_rev = (reg_val & 0x000F); /* Revision[5:0] in ID_LO[3:0] */
+ 
++	//printk(KERN_ERR ">>>>> priv->phy_oui = %x >>>>>\n", priv->phy_oui);
++	//printk(KERN_ERR ">>>>> priv->phy_model = %x >>>>>\n", priv->phy_model);
++	//printk(KERN_ERR ">>>>> priv->phy_rev = %x >>>>>\n", priv->phy_rev);
++
+ 	ast_ether_enable_expand_regs_and_clk(dev);
+ }
+ 

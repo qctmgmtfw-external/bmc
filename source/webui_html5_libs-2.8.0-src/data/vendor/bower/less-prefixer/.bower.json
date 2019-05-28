@@ -1,0 +1,14 @@
+{
+  "name": "less-prefixer",
+  "homepage": "https://github.com/JoelSutherland/LESS-Prefixer",
+  "_release": "f441f34809",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "f441f348096a89811ebd7a29b5089ca3bde036c1"
+  },
+  "_source": "git://github.com/JoelSutherland/LESS-Prefixer.git",
+  "_target": "*",
+  "_originalSource": "less-prefixer",
+  "_direct": true
+}

@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc
+	ADD_MODULES kcs
+# Nodes are created by kcs hardware for every instance of kcs
+	MAKE_CHAR_NODE kcs0 42 0
+	MAKE_CHAR_NODE kcs1 42 1
+	MAKE_CHAR_NODE kcs2 42 2
+	
+debug-install:

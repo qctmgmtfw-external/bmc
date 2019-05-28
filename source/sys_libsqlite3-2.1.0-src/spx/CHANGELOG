@@ -1,0 +1,72 @@
+Package: sys_libsqlite3 (2.1.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: data/.keep, spx/PACKAGES.D/sys_libsqlite3/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:26:27 EST
+
+Package: sys_libsqlite3 (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:37:34 GMT
+
+Package: sys_libsqlite3 (1.5.0); urgency = medium
+
+Abstract:
+	Adding package Group info
+
+Files Modified: spx/INFO
+
+--Submitter: Manoj Ashok (manoja@amiindia.co.in) Wed, 15 Oct 2014 17:23:45 HMT
+
+Package: sys_libsqlite3 (1.4.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:02:47 GMT
+
+Package: sys_libsqlite3 (1.3.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:14:50 GMT
+
+Package: sys_libsqlite3 (1.2.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:26:59 HMT
+
+Package: sys_libsqlite3 (1.1.0); urgency = medium
+
+Abstract:
+	Compiler/Linker errors fixed
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 25 Sep 2013 10:54:37 EDT
+
+Package: sys_libsqlite3 (1.0.0); urgency = new
+
+Abstract:
+	System Package for Sqlite3 that includes sqlite3 functionalities.
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.OPENSOURCE, spx/PACKAGES.D, spx/PACKAGES.D/sys_libsqlite3, spx/PACKAGES.D/sys_libsqlite3/DATA, spx/PACKAGES.D/sys_libsqlite3/SCRIPTS, spx/PACKAGES.D/sys_libsqlite3/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Silambarasan M (silambarasanm@amiindia.co.in) Fri, 15 Jun 2012 15:15:54 IST
+

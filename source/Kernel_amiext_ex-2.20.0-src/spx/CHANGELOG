@@ -1,0 +1,304 @@
+Package: Kernel_amiext_ex (2.20.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/Kernel_amiext_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:27:46 EST
+
+Package: Kernel_amiext_ex (2.19.0); urgency = high
+
+Abstract:
+	Fixes Vulnerability CVE-2015-5364/5366 Testcases:IPMI communication and KVM Stress test
+
+Files Added: data/79-net_ipv4_udp.c, data/80-net_ipv6_udp.c
+
+--Submitter: SRAVYA (lakshmisk@amiindia.co.in) Wed, 25 Nov 2015 08:24:12 EST
+
+Package: Kernel_amiext_ex (2.18.0); urgency = low
+
+Abstract:
+	Support Winbond W35Q257FV
+
+Files Modified: data/22-drivers_mtd_spichips_generic.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 01 Oct 2015 16:48:38 JWST
+
+Package: Kernel_amiext_ex (2.17.0); urgency = high
+
+Abstract:
+	Add variables for SDHC controller driver of Pilot4
+
+Files Added: data/78-include_linux_mmc_sdhci.h
+
+--Submitter: robinchiu (RobinChiu) Fri, 07 Aug 2015 11:32:20 CST
+
+Package: Kernel_amiext_ex (2.16.0); urgency = low
+
+Abstract:
+	Combined numonyx and micron spi driver into one as bothe share the same spi IDs.
+
+Files Deleted: data/28-drivers_mtd_spichips_numonyx.c
+Files Modified: data/27-drivers_mtd_spichips_Makefile, data/75-drivers_mtd_spichips_micron.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Thu, 30 Jul 2015 19:06:17 GMT-5
+
+Package: Kernel_amiext_ex (2.15.0); urgency = critical
+
+Abstract:
+	DMA masters like I2C, SDHC, USBHC on the same AHB bus and active at the same time have issues. There is no provision to disable DMA of USB HC, so the I2C and SDHC DMA have to be disabled. This only affects projects that uses USB host controllers. Projects that uses USB device controllers should be good. This hardware issue is confirmed to be in AST3200/AST3100/2500/2520/2400/1250. There is a separate CONFIG to enable/disable I2C DMA. This patch relies on a different CONFIG for SDHC DMA, i.e CONFIG_SPX_FEATURE_GLOBAL_DISABLE_SDHC_DMA. Any other projects that want to disable SDHC DMA can define this CONFIG.
+
+Files Modified: data/66-drivers_mmc_host_sdhci.c
+
+--Submitter: Yugender P Subramanian (yugenderps@ami.com) Tue, 28 Jul 2015 20:02:29 EDT
+
+Package: Kernel_amiext_ex (2.14.0); urgency = low
+
+Abstract:
+	Added extra files and fixes for future target migrations and strict compilers
+
+Files Added: data/77-fs_namespace.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 23 Jul 2015 14:34:20 EDT
+
+Package: Kernel_amiext_ex (2.13.0); urgency = medium
+
+Abstract:
+	Removing the code Restart SD-Server for lmedia
+
+Files Deleted: data/77-drivers_mmc_core_bus.c
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Tue, 23 Jun 2015 16:56:39 HMT
+
+Package: Kernel_amiext_ex (2.12.0); urgency = medium
+
+Abstract:
+	Fixed shared lan link issue with bond enabled.
+
+Files Modified: data/35-drivers_net_bonding_bond_main.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Thu, 11 Jun 2015 15:29:04 HMT
+
+Package: Kernel_amiext_ex (2.11.0); urgency = low
+
+Abstract:
+	Adding Kernel_initramfs_ex to Build-Depends
+
+Files Modified: data/30-drivers_mtd_spichips_spiaccess.c, spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Tue, 19 May 2015 14:09:36 EDT
+
+Package: Kernel_amiext_ex (2.10.0); urgency = medium
+
+Abstract:
+	Disabling intramfs,Virtual Terminal and Legacy PTS terminal configurations
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sun, 17 May 2015 21:32:05 EDT
+
+Package: Kernel_amiext_ex (2.9.0); urgency = medium
+
+Abstract:
+	Fix for SD card detection in Lmedia page
+
+Files Added: data/77-drivers_mmc_core_bus.c
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Tue, 12 May 2015 13:19:30 HMT
+
+Package: Kernel_amiext_ex (2.8.0); urgency = medium
+
+Abstract:
+	Fix for Ipv6 Vulanrability.
+
+Files Added: data/76-Vulnarability_on_IPv6_ndisc.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Mon, 04 May 2015 15:45:25 HMT
+
+Package: Kernel_amiext_ex (2.7.0); urgency = medium
+
+Abstract:
+	Supported Winbond W25M512.
+
+Files Modified: data/22-drivers_mtd_spichips_generic.c, data/34-drivers_mtd_spichips_winbond.c, spx/INFO
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Tue, 28 Apr 2015 17:46:33 JWST
+
+Package: Kernel_amiext_ex (2.6.0); urgency = medium
+
+Abstract:
+	Added MICRON SPI Chip and changes in extended address handling for Pilot-IV SPI
+
+Files Added: data/75-drivers_mtd_spichips_micron.c
+Files Modified: data/22-drivers_mtd_spichips_generic.c, data/24-drivers_mtd_spichips_Kconfig, data/27-drivers_mtd_spichips_Makefile
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Wed, 22 Apr 2015 23:51:31 HMT
+
+Package: Kernel_amiext_ex (2.5.0); urgency = medium
+
+Abstract:
+	Advertise flow control
+
+Files Added: data/74-include_linux_eth_over.h
+Files Modified: data/12-drivers_mtd_maps_fmh.h, data/15-drivers_mtd_maps_ractrends.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 09 Apr 2015 23:42:17 HMT
+
+Package: Kernel_amiext_ex (2.4.0); urgency = medium
+
+Abstract:
+	supported bootlogo partition for FMH.
+
+Files Modified: data/12-drivers_mtd_maps_fmh.h, data/15-drivers_mtd_maps_ractrends.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Sat, 07 Mar 2015 11:00:53 JWST
+
+Package: Kernel_amiext_ex (2.3.0); urgency = medium
+
+Abstract:
+	fix for data length which causes ncsi command Enable AEN issue
+
+Files Added: data/73-include_uapi_linux_i2c.h
+Files Modified: spx/INFO
+
+--Submitter: pearcelee (pearcelee) Wed, 04 Mar 2015 14:48:13 CST
+
+Package: Kernel_amiext_ex (2.2.0); urgency = medium
+
+Abstract:
+	Modify to support SSIF
+
+Files Modified: data/05-drivers_i2c_i2c-core.c
+
+--Submitter: yishanchen (yishanchen@ami.com.tw) Wed, 14 Jan 2015 04:45:12 PST
+
+Package: Kernel_amiext_ex (2.1.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:05:57 GMT
+
+Package: Kernel_amiext_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:10:08 GMT
+
+Package: Kernel_amiext_ex (1.11.0); urgency = medium
+
+Abstract:
+	Add export symbols for host_spi_flash usage.
+
+Files Added: data/72-drivers_mtd_mtdpart.c
+
+--Submitter: robinchiu (RobinChiu) Wed, 15 Oct 2014 13:25:09 CST
+
+Package: Kernel_amiext_ex (1.10.0); urgency = medium
+
+Abstract:
+	cifs fix for ipv6 link local address
+
+Files Added: data/71-cifs_link_local_fix
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Fri, 10 Oct 2014 16:06:51 GMT
+
+Package: Kernel_amiext_ex (1.9.0); urgency = medium
+
+Abstract:
+	Add support for AST2500 and dual IO mode.
+
+Files Modified: data/20-drivers_mtd_spichips_atmel.c, data/21-drivers_mtd_spichips_default.c, data/22-drivers_mtd_spichips_generic.c, data/23-drivers_mtd_spichips_intels33.c, data/25-drivers_mtd_spichips_m25pxx.c, data/26-drivers_mtd_spichips_macronix.c, data/28-drivers_mtd_spichips_numonyx.c, data/29-drivers_mtd_spichips_spansion.c, data/31-drivers_mtd_spichips_spiflash.h, data/34-drivers_mtd_spichips_winbond.c
+
+--Submitter: robinchiu (RobinChiu) Tue, 30 Sep 2014 13:13:26 CST
+
+Package: Kernel_amiext_ex (1.8.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:53:01 GMT
+
+Package: Kernel_amiext_ex (1.7.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:02:23 GMT
+
+Package: Kernel_amiext_ex (1.6.0); urgency = medium
+
+Abstract:
+	AMI realated SD quirks support for kernel 3.14.17
+
+Files Modified: data/65-include_linux_mmc_sdhci.h, data/66-drivers_mmc_host_sdhci.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 12 Sep 2014 19:07:48 GMT
+
+Package: Kernel_amiext_ex (1.5.0); urgency = high
+
+Abstract:
+	Fixes for 64-Bit Processors
+
+Files Modified: data/55-mm_bigphysarea.c, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 08 Sep 2014 16:21:04 EDT
+
+Package: Kernel_amiext_ex (1.4.0); urgency = medium
+
+Abstract:
+	Fixing build failure for dual image with kernel version 3.14.17.
+
+Files Modified: data/15-drivers_mtd_maps_ractrends.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Fri, 05 Sep 2014 16:21:44 HMT
+
+Package: Kernel_amiext_ex (1.3.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Added: data/45-include_uapi_linux_i2c-dev.h, data/68-include_uapi_linux_ip.h, data/69-include_uapi_linux_sysctl.h, data/70-Kernel_warn_fixes
+Files Deleted: data/45-include_linux_i2c-dev.h
+Files Modified: data/02-Documentation_networking_ip-sysctl.txt, data/03-drivers_gpu_drm_gma500_cdv_device.c, data/04-drivers_gpu_drm_gma500_gtt.c, data/05-drivers_i2c_i2c-core.c, data/06-drivers_i2c_i2c-dev.c, data/07-drivers_i2c_Makefile, data/08-drivers_mtd_Kconfig, data/13-drivers_mtd_maps_Kconfig, data/14-drivers_mtd_maps_Makefile, data/17-drivers_mtd_nand_Kconfig, data/18-drivers_mtd_nand_Makefile, data/19-drivers_mtd_nand_nand_bbt.c, data/22-drivers_mtd_spichips_generic.c, data/35-drivers_net_bonding_bond_main.c, data/37-drivers_net_Makefile, data/38-drivers_tty_vt_vt.c, data/39-drivers_video_console_fbcon.c, data/40-drivers_video_fbmem.c, data/46-include_linux_i2c.h, data/47-include_linux_inetdevice.h, data/48-include_linux_mm.h, data/49-include_linux_netdevice.h, data/50-init_do_mounts.c, data/51-init_Kconfig, data/52-kernel_kallsyms.c, data/53-Makefile, data/55-mm_bigphysarea.c, data/56-mm_Kconfig, data/57-mm_Makefile, data/58-mm_shmem.c, data/59-net_core_dev.c, data/60-net_core_rtnetlink.c, data/61-net_ipv4_arp.c, data/62-net_ipv4_devinet.c, data/63-net_ipv6_addrconf.c, data/64-net_ipv6_route.c, data/65-include_linux_mmc_sdhci.h, data/66-drivers_mmc_host_sdhci.c, data/67-net_core_neighbour.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:38:07 GMT
+
+Package: Kernel_amiext_ex (1.2.0); urgency = medium
+
+Abstract:
+	Modified proc_handler for accessing the timing values properly for Kernel 3.x
+
+Files Added: data/67-net_core_neighbour.c
+Files Modified: data/63-net_ipv6_addrconf.c
+
+--Submitter: jithintk (jithintk@amiindia.com) Mon, 18 Aug 2014 21:36:41 HMT
+
+Package: Kernel_amiext_ex (1.1.0); urgency = low
+
+Abstract:
+	Added Functions to get available max bigphys area
+
+Files Modified: data/43-include_linux_bigphysarea.h, data/52-kernel_kallsyms.c, data/55-mm_bigphysarea.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 29 Jul 2014 17:39:43 EDT
+
+Package: Kernel_amiext_ex (1.0.0); urgency = new
+
+Abstract:
+	AMI Extensions to Kernel 3.4.74
+
+Files Added: data, data/01-Documentation_bigphysarea.txt, data/02-Documentation_networking_ip-sysctl.txt, data/03-drivers_gpu_drm_gma500_cdv_device.c, data/04-drivers_gpu_drm_gma500_gtt.c, data/05-drivers_i2c_i2c-core.c, data/06-drivers_i2c_i2c-dev.c, data/07-drivers_i2c_Makefile, data/08-drivers_mtd_Kconfig, data/09-drivers_mtd_Makefile, data/10-drivers_mtd_maps_crc32.h, data/11-drivers_mtd_maps_fmhcore.c, data/12-drivers_mtd_maps_fmh.h, data/13-drivers_mtd_maps_Kconfig, data/14-drivers_mtd_maps_Makefile, data/15-drivers_mtd_maps_ractrends.c, data/16-drivers_mtd_nand_amimap.c, data/17-drivers_mtd_nand_Kconfig, data/18-drivers_mtd_nand_Makefile, data/19-drivers_mtd_nand_nand_bbt.c, data/20-drivers_mtd_spichips_atmel.c, data/21-drivers_mtd_spichips_default.c, data/22-drivers_mtd_spichips_generic.c, data/23-drivers_mtd_spichips_intels33.c, data/24-drivers_mtd_spichips_Kconfig, data/25-drivers_mtd_spichips_m25pxx.c, data/26-drivers_mtd_spichips_macronix.c, data/27-drivers_mtd_spichips_Makefile, data/28-drivers_mtd_spichips_numonyx.c, data/29-drivers_mtd_spichips_spansion.c, data/30-drivers_mtd_spichips_spiaccess.c, data/31-drivers_mtd_spichips_spiflash.h, data/32-drivers_mtd_spichips_spimtd.c, data/33-drivers_mtd_spichips_spireg.c, data/34-drivers_mtd_spichips_winbond.c, data/35-drivers_net_bonding_bond_main.c, data/36-drivers_net_eth_over.c, data/37-drivers_net_Makefile, data/38-drivers_tty_vt_vt.c, data/39-drivers_video_console_fbcon.c, data/40-drivers_video_fbmem.c, data/41-fs_jffs2_scan.c, data/42-include_linux_ashmem.h, data/43-include_linux_bigphysarea.h, data/44-include_linux_eth_over.h, data/45-include_linux_i2c-dev.h, data/46-include_linux_i2c.h, data/47-include_linux_inetdevice.h, data/48-include_linux_mm.h, data/49-include_linux_netdevice.h, data/50-init_do_mounts.c, data/51-init_Kconfig, data/52-kernel_kallsyms.c, data/53-Makefile, data/54-mm_ashmem.c, data/55-mm_bigphysarea.c, data/56-mm_Kconfig, data/57-mm_Makefile, data/58-mm_shmem.c, data/59-net_core_dev.c, data/60-net_core_rtnetlink.c, data/61-net_ipv4_arp.c, data/62-net_ipv4_devinet.c, data/63-net_ipv6_addrconf.c, data/64-net_ipv6_route.c, data/65-include_linux_mmc_sdhci.h, data/66-drivers_mmc_host_sdhci.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Kernel_amiext_ex, spx/PACKAGES.D/Kernel_amiext_ex/DATA, spx/PACKAGES.D/Kernel_amiext_ex/SCRIPTS, spx/PACKAGES.D/Kernel_amiext_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 16:55:41 EDT
+

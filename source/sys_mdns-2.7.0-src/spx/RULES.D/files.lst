@@ -1,0 +1,38 @@
+./usr/lib/%MULTI_ARCH_LIB%/libavahi-common.so.3
+./usr/lib/%MULTI_ARCH_LIB%/libavahi-core.so.7
+./usr/lib/libdaemon.so.0 | ./usr/lib/%MULTI_ARCH_LIB%/libdaemon.so.0
+./usr/lib/%MULTI_ARCH_LIB%/libexpat.so.1 |./usr/lib/%MULTI_ARCH_LIB%/libexpat.so
+./lib/%MULTI_ARCH_LIB%/libexpat.so.1   : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/libexpatw.so.1
+./usr/lib/%MULTI_ARCH_LIB%/libexpatw.so   : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/libdbus-1.so
+
+
+./usr/sbin/avahi-daemon
+./etc/network/if-up.d/avahi-daemon
+./etc/network/if-post-down.d/avahi-daemon
+./etc/default/avahi-daemon
+./etc/avahi/hosts
+./etc/avahi/avahi-daemon.conf
+./etc/dbus-1/system.d/avahi-dbus.conf
+./etc/dbus-1/system.conf
+./etc/init.d/dbus
+./usr/bin/dbus-daemon
+./lib/%MULTI_ARCH_LIB%/libsystemd-login.so.0 : OPTIONAL
+./lib/%MULTI_ARCH_LIB%/libsystemd-login.so.0.2.1 : OPTIONAL
+./lib/%MULTI_ARCH_LIB%/libdbus-1.so.3
+
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/lib4758cca.so  : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libatalla.so   : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libchil.so     : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libgmp.so      : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libnuron.so    : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libsureware.so : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libaep.so      : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libcapi.so     : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libcswift.so   : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libgost.so     : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libpadlock.so  : OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/openssl-1.0.0/engines/libubsec.so    : OPTIONAL
+
+#./usr/share/avahi/avahi-service.dtd

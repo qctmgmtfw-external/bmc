@@ -1,0 +1,14 @@
+--- uboot/include/env_default.h-ori	2017-12-07 14:43:02.175311000 +0800
++++ uboot/include/env_default.h	2017-12-07 14:47:13.375311000 +0800
+@@ -139,6 +139,11 @@
+ #ifdef CONFIG_SPX_FEATURE_BMC_FIRMWARE_AUTO_RECOVERY
+         "bootretry="  __stringify(CONFIG_SPX_FEATURE_BMC_FIRMWARE_REBOOT_RETRY_COUNT)    "\0"
+ #endif
++
++#ifdef CONFIG_SPX_FEATURE_BMC_FIRMWARE_AUTO_RECOVERY
++        "recoveryserverip="  __stringify(192.168.0.200)    "\0"
++#endif
++
+ #ifdef	CONFIG_FWU_ALL
+ 	"fwu_all="	__stringify(CONFIG_FWU_ALL)		"\0"
+ #endif

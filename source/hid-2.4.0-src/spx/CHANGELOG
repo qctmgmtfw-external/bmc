@@ -1,0 +1,354 @@
+Package: hid (2.4.0); urgency = medium
+
+Abstract:
+	Fortify fix
+
+Files Modified: data/hid_mod.c
+
+--Submitter: Sreedhar B (bsreedhar@amiindia.co.in) Wed, 24 Feb 2016 18:19:57 HMT
+
+Package: hid (2.3.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/hid/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:05:50 EST
+
+Package: hid (2.2.0); urgency = medium
+
+Abstract:
+	Support HID for P4.
+
+Files Modified: data/hid_mod.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 12 Nov 2015 17:05:25 CST
+
+Package: hid (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/hid.h, data/hid_mod.c, data/keybd.c, data/keybd.h, data/mouse.c, data/mouse.h, data/pipe.c, data/pipe.h, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Thu, 18 Dec 2014 20:50:23 HMT
+
+Package: hid (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:48:36 GMT
+
+Package: hid (1.25.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:30:49 HMT
+
+Package: hid (1.24.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:33:31 GMT
+
+Package: hid (1.23.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:42:00 GMT
+
+Package: hid (1.22.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/hid_mod.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:03:42 GMT
+
+Package: hid (1.21.0); urgency = medium
+
+Abstract:
+	Keyboard LED status out of sync while host powered OFF; issue fixed.
+
+Files Modified: data/hid_mod.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Mon, 19 May 2014 15:17:43 HMT
+
+Package: hid (1.20.0); urgency = medium
+
+Abstract:
+	Fix to execute AddModulesDep script
+
+Files Modified: spx/PACKAGES.D/hid/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Sat, 03 May 2014 14:04:18 GMT
+
+Package: hid (1.19.0); urgency = medium
+
+Abstract:
+	Giving executable permission for AddModulesDep
+
+Files Modified: spx/RULES.D/AddModulesDep
+
+--Submitter: Winston (winstont@ami.com) Sat, 03 May 2014 13:28:46 GMT
+
+Package: hid (1.18.0); urgency = medium
+
+Abstract:
+	Resolving binary dependency
+
+Files Modified: spx/PACKAGES.D/hid/SCRIPTS/dev-install, spx/RULES, spx/RULES.D/AddModulesDep
+
+--Submitter: Winston (winstont@ami.com) Fri, 02 May 2014 14:54:14 GMT
+
+Package: hid (1.17.0); urgency = medium
+
+Abstract:
+	fix the order of loading hid, usb0_hw and usb1_hw modules
+
+Files Added: spx/RULES.D, spx/RULES.D/AddModulesDep
+Files Modified: spx/PACKAGES.D/hid/SCRIPTS/dev-install
+
+--Submitter: pearcelee (pearcelee) Fri, 22 Nov 2013 17:02:47 CST
+
+Package: hid (1.16.0); urgency = medium
+
+Abstract:
+	Added the microsoft OS descriptor
+
+Files Modified: data/hid_mod.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 04 Nov 2013 12:08:59 HMT
+
+Package: hid (1.15.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:31:36 EDT
+
+Package: hid (1.14.0); urgency = low
+
+Abstract:
+	Modified driver to support Kernel 3.4.11.
+
+Files Modified: data/hid_mod.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Sun, 15 Sep 2013 02:33:00 HMT
+
+Package: hid (1.13.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:22:06 EDT
+
+Package: hid (1.12.0); urgency = medium
+
+Abstract:
+	Added Configuration to Enable/Disable Pipe Support
+
+Files Added: spx/P.CONFIG
+Files Modified: data/Makefile, data/hid_mod.c, data/pipe.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 09 Nov 2012 13:32:37 EST
+
+Package: hid (1.11.0); urgency = low
+
+Abstract:
+	Added USB HID Pipe support. By default it is not enabled
+
+Files Added: data/pipe.c, data/pipe.h
+Files Modified: data/Makefile, data/hid.h, data/hid_mod.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 08 Nov 2012 16:45:23 EST
+
+Package: hid (1.10.0); urgency = medium
+
+Abstract:
+	fix a bug not send the mouse/keybd events until the queue is full. This issue is noticed when remote mouse is moved on java console when the server was booted to text console
+
+Files Modified: data/keybd.c, data/mouse.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 03 Oct 2011 11:05:09 EDT
+
+Package: hid (1.9.0); urgency = low
+
+Abstract:
+	Fixes for 64 bit data structure.
+
+Files Modified: data/hid_mod.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 21 Sep 2011 13:57:44 IST
+
+Package: hid (1.8.0); urgency = medium
+
+Abstract:
+	syncing with hid2 for to take care of timing out cases for mouse and keybd events
+
+Files Modified: data/keybd.c, data/mouse.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 29 Aug 2011 13:14:19 EDT
+
+Package: hid (1.7.0); urgency = medium
+
+Abstract:
+	Licence Info changed to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/hid_mod.c, spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 16:40:51 EDT
+
+Package: hid (1.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:19:52 EDT
+
+Package: hid (1.5.0); urgency = medium
+
+Abstract:
+	fixed USB command verifier test failure after making changes to support japanese keyboard.
+
+Files Modified: data/hid.h, data/keybd.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 06 Jan 2011 11:48:47 EST
+
+Package: hid (1.4.0); urgency = medium
+
+Abstract:
+	Added the Japanese keycode support in driver such that process the keycode above 101,changed the 101 to 255.
+
+Files Modified: data/keybd.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 26 Nov 2010 18:08:06 IST
+
+Package: hid (1.3.0); urgency = medium
+
+Abstract:
+	avoided accessing user space data.
+
+Files Modified: data/hid_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 04 Nov 2010 18:37:03 EDT
+
+Package: hid (1.2.0); urgency = medium
+
+Abstract:
+	hid module install location changed.
+
+Files Modified: spx/PACKAGES.D/hid/SCRIPTS/dev-install
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 28 Oct 2010 11:01:19 EDT
+
+Package: hid (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:46:32 EDT
+
+Package: hid (1.0.8); urgency = medium
+
+Abstract:
+	This change because of IUSB_HEADER field name change.
+
+Files Modified: data/hid_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 15 Jul 2010 11:21:51 EDT
+
+Package: hid (1.0.7); urgency = low
+
+Abstract:
+	cleaned up the code.
+
+Files Modified: data/hid_mod.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 08 Jul 2010 14:36:43 EDT
+
+Package: hid (1.0.6); urgency = low
+
+Abstract:
+	removed Config-Tag from binary package fields so that it will not appear as configurable option in Device Configuration of MDS.
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 14 Jun 2010 16:53:52 EDT
+
+Package: hid (1.0.5); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:12:48 EDT
+
+Package: hid (1.0.4); urgency = medium
+
+Abstract:
+	USB media dependencies resolved for MDS
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 21 Apr 2010 13:44:31 EDT
+
+Package: hid (1.0.3); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:47:23 EDT
+
+Package: hid (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:58:13 EST
+
+Package: hid (1.0.1); urgency = low
+
+Abstract:
+	version of iUSB and usbe module dependancy updated to >= 1.0.0
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 09 Feb 2010 11:11:00 EST
+
+Package:hid (1.0.0);urgency=new
+
+Abstract:
+	This package includes (hardware independent) HID Device Module.
+
+Files Added: Makefile, hid.h, mouse.h, hid_mod.c, keybd.c, keybd.h, mouse.c
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Mon, 1 Feb 2010 15:34:42 -0500

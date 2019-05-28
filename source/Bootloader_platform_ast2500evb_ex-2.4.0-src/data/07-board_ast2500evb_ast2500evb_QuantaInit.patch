@@ -1,0 +1,226 @@
+--- uboot/board/ast2500evb/ast2500evb.c	2016-08-18 13:24:13.951278165 +0800
++++ uboot/board/ast2500evb/ast2500evb_new.c	2016-08-18 13:26:12.467276979 +0800
+@@ -61,7 +61,16 @@
+ #define AST_CE1_SEGMENT_ADDRESS 0x54500000      // 0x28000000 - 0x29FFFFFF
+ #define AST_CE2_SEGMENT_ADDRESS 0x58540000      // 0x2A000000 - 0x2BFFFFFF
+ #endif
+-
++//------Quanta
++#define AST2400_A0_CHIPID       0x02000303
++#define AST2400_A1_CHIPID       0x02010303
++#define AST2500_A0_CHIPID       0x04000303
++#define AST2510_A0_CHIPID       0x04000103
++#define AST2520_A0_CHIPID       0x04000203
++#define AST2530_A0_CHIPID       0x04000403
++#define AST2500_A1_CHIPID       0x04010303
++#define AST2510_A1_CHIPID       0x04010103
++//Quanta------
+ extern void soc_init(void);
+ 
+ DECLARE_GLOBAL_DATA_PTR;
+@@ -82,10 +91,157 @@
+ 
+ 	return 0;
+ }
++#ifdef CONFIG_BOARDID_IN_EEPROM_DONT_USE
++// Quanta ------ 
++#define CFG_I2C_CHANNEL_ID	CONFIG_SPX_FEATURE_GLOBAL_UBOOT_ENABLE_I2C_BUS /* channel number in PRJ */
++#define AST_I2C_CHANNEL_BASE ((CFG_I2C_CHANNEL_ID < 7)? 0x1E78A040 + (0x040 * (CFG_I2C_CHANNEL_ID)) : 0x1E78A300 + (0x040 * (CFG_I2C_CHANNEL_ID - 7)))
++#define I2C_FCR		(AST_I2C_CHANNEL_BASE + 0x00) /* function control register */
++#define I2C_CSR		(AST_I2C_CHANNEL_BASE + 0x14) /* command/status register */
++void i2c_recovery_fru(void)
++{
++	int i;
++   printf("\ni2c_recovery\n");	
++	*((volatile unsigned long *) I2C_FCR) = 0;  //disable bus
++	
++	for (i=0;i<8;i++)  //clear status
++	{
++		//clock low
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)&~(1<<12);
++		udelay(5);
++		//clock high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<12);
++		udelay(5);
++		
++		if((*((volatile unsigned long *) I2C_CSR)&(1<<17))!=0)
++			break;
++	}
++	
++	if(((*((volatile unsigned long *) I2C_CSR)&(1<<17))==0)||((*((volatile unsigned long *) I2C_CSR)&(1<<18))==0))
++	{
++		//force stop
++		//data low
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<15);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)&~(1<<14);
++		//clock high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<12);
++		//data high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<15);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<14);
++		udelay(5);
++	}
++	
++	//clock/data stop
++	*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR) &~((1<<15)|(1<<13));
++	
++	*((volatile unsigned long *) I2C_FCR) = 3;  //enable bus
++	
++}
++// ------ Quanta
++
++void boardid_init (void)
++{
++	int    i, offs, retry, ret = 0;
++	uchar  fru_buf[256], chksum;
++	char   *tmp = NULL, boardid_env[8], boardid_tmp[8];
++
++	eeprom_init();
++
++	sprintf(boardid_env, "%02X", 0xFF);
++	do {
++		// read Common Header
++		retry = 0;
++		while (++retry <= 6) {
++			if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, CFG_EEPROM_FRU_OFFSET, fru_buf, 8)) == 0)
++				break;
++			i2c_recovery_fru();
++		}
++		if (ret != 0)
++			break;
++
++		chksum = 0;
++		for (i = 0; i < 8; i++) {
++			chksum += fru_buf[i];
++		}
++		if (chksum != 0)
++			break;
++
++		offs = fru_buf[3] * 8;
++		if ((fru_buf[3] == 0) || (offs >= sizeof(fru_buf)))
++			break;
++
++		// read Board Info Area
++		retry = 0;
++		while (++retry <= 6) {
++			if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, CFG_EEPROM_FRU_OFFSET+offs, fru_buf, 8)) == 0)
++				break;
++			i2c_recovery_fru();
++		}
++		if (ret != 0)
++			break;
++
++		if ((offs + fru_buf[1]*8) >= sizeof(fru_buf))
++			break;
++
++		offs += CFG_EEPROM_FRU_OFFSET;
++		for (i = 1; i < fru_buf[1]; i++) {
++			retry = 0;
++			while (++retry <= 6) {
++				if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, offs+i*8, fru_buf+i*8, 8)) == 0)
++					break;
++				i2c_recovery_fru();
++			}
++			if (ret != 0)
++				break;
++		}
++		if (i != fru_buf[1])
++			break;
++
++		offs = fru_buf[1] * 8;
++		chksum = 0;
++		for (i = 0; i < offs; i++) {
++			chksum += fru_buf[i];
++		}
++		if (chksum != 0)
++			break;
++
++		offs = 7 + (fru_buf[6] & 0x3F);  // Board Product Name
++		for (i = 0; i < 4; i++) {
++			offs += 1 + (fru_buf[offs] & 0x3F);
++		}
++
++		// Custom Field 1
++		if (fru_buf[offs] == 0xC1)
++			break;
++		offs += 1 + (fru_buf[offs] & 0x3F);
++
++		// Custom Field 2
++		if (fru_buf[offs] == 0xC1)
++			break;
++		offs += 1 + (fru_buf[offs] & 0x3F);
++
++		// Custom Field 3
++		if ((fru_buf[offs] == 0xC1) || ((fru_buf[offs] & 0x3F) != 2))
++			break;
++		offs += 1;
++		memcpy(boardid_env, &fru_buf[offs], 2);
++	} while (0);
++
++	if ((tmp = getenv("boardid")))
++		memcpy(boardid_tmp, tmp, 2);
++	setenv("boardid", boardid_env);
++
++	if ((tmp != NULL) && (memcmp(boardid_env, boardid_tmp, 2) != 0))
++		saveenv();
++}
++#endif
++// --- Quanta
+ 
+ int board_init (void)
+ {
+-    
++	unsigned long chip_id;
+ 	/*Should match with linux mach type for this board */
+ 	gd->bd->bi_arch_number = 900;
+ 	
+@@ -96,11 +252,25 @@
+ 
+ 	icache_enable ();
+ 	
+-#ifdef CONFIG_AST2500	
+-	/* Set I2C Bus Number */
+-	i2c_set_bus_num(CONFIG_I2C_CHANNEL_ID);
+-#endif	
++//#ifdef CONFIG_AST2500	//Quanta--
++//	/* Set I2C Bus Number */
++//	i2c_set_bus_num(CONFIG_I2C_CHANNEL_ID);
++//#endif	
++
++	*((volatile ulong*) 0x1e6e2000) = 0x1688A8A8;	/* unlock SCU */
++	QUANTA_OEM_INIT;
++	*((volatile ulong*) SCU_KEY_CONTROL_REG) = 0; /* lock SCU */
+ 
++	/* SCU7C */
++    chip_id = *((volatile ulong*) 0x1e6e207c);
++	if ((chip_id == AST2400_A0_CHIPID) || (chip_id == AST2400_A1_CHIPID) || (chip_id == AST2500_A0_CHIPID) || (chip_id == AST2510_A0_CHIPID) ||
++	    (chip_id == AST2520_A0_CHIPID) || (chip_id == AST2530_A0_CHIPID) || (chip_id == AST2500_A1_CHIPID) || (chip_id == AST2510_A1_CHIPID))
++	{
++		*((volatile ulong*) 0x1e6ed07c) = 0x000000A8;	/* unlock*/
++		*((volatile ulong*) 0x1e6ed030) = 0x00040000;   /* disable common clock*/
++		*((volatile ulong*) 0x1e6ed07c) = 0x00000000;	/* lock*/
++	}
++			
+ 	return 0;
+ }
+ 
+@@ -142,6 +312,16 @@
+ 	
+ #endif	
+ 
++#ifdef CONFIG_BOARDID_IN_EEPROM_DONT_USE
++	boardid_init();
++#endif
++
++// Quanta +++
++#ifdef QUANTA_OEM_MISC_INIT
++	QUANTA_OEM_MISC_INIT;
++#endif
++// +++ Quanta
++
+ 	setenv("verify", "n");
+ 	return (0);
+ }

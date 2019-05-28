@@ -1,0 +1,33 @@
+#!/bin/sh
+#
+#chkconfig: 2345 10 90
+#Runlevel : 3 = S99
+#/etc/init.d/rc-init-complete: This script will run at the end of the init process and touch a file to intimate the init process completed.
+
+touch /var/tmp/rc-init-complete
+
+#add for VNC use
+export LD_LIBRARY_PATH=/usr/local/lib
+BMC_FW_INFO=`cat /proc/ractrends/Helper/FwInfo | grep FW_VERSION | awk 'BEGIN {FS="="} {print $2}'`
+
+MAJOR=`echo $BMC_FW_INFO | awk 'BEGIN {FS="."} {print $1}'`
+MINOR=`echo $BMC_FW_INFO | awk 'BEGIN {FS="."} {print $2}'`
+AUX=`echo $BMC_FW_INFO | awk 'BEGIN {FS="."} {print $3}'`
+
+echo "[  VNC INFO  ] BMC VERSION: $BMC_FW_INFO -- MAJOR: $MAJOR MINOR: $MINOR AUX: $AUX"
+
+if [ $AUX == "05" ]; then
+	echo "[  VNC INFO  ] START TO RUN VNC DAEMON! "
+	/usr/local/bin/quanta_vnc -rfbauth /conf/quanta_passwd &
+fi
+
+if [ -x /usr/local/bin/smash ]; then
+	echo "Start to Initialize smash"
+	/usr/local/bin/smash init &
+fi
+#because redis initialize SEL time cost lots of time we fork another process to do it after all the service initial done
+if [ -f /usr/local/sync-agent/extensions/ipmi/init-SEL-afterBootComplete.lua ]; then
+	echo "Start to Initialize SEL "
+	cd /usr/local/sync-agent
+	luajit ./extensions/ipmi/init-SEL-afterBootComplete.lua &
+fi

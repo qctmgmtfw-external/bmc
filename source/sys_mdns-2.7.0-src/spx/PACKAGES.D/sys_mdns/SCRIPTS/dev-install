@@ -1,0 +1,15 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %IMAGE_TREE/etc/avahi/
+		COPY_DIR . %IMAGE_TREE
+#		COPY_FILE %BUILD/%PACKAGE/data/etc/avahi/avahi-daemon.conf %IMAGE_TREE/etc/avahi/
+#		COPY_FILE %BUILD/%PACKAGE/data/etc/init.d/avahi-daemon %IMAGE_TREE/etc/init.d/
+#		COPY_FILE %BUILD/%PACKAGE/data/usr/lib/avahi/avahi-daemon-check-dns.sh %IMAGE_TREE/usr/lib/avahi/
+#		COPY_FILE %network/if-up.d/avahi-daemon %IMAGE_TREE/etc/network/if-up.d/96-up-avahi-daemon
+#		RENAME %IMAGE_TREE/etc/network/if-up.d/avahi-daemon %IMAGE_TREE/etc/network/if-up.d/96-up-avahi-daemon
+#		COPY_FILE %BUILD/%PACKAGE/data/etc/network/if-post-down.d/avahi-daemon %IMAGE_TREE/etc/network/if-post-down.d/40-down-avahi-daemon
+		RENAME %IMAGE_TREE/etc/network/if-post-down.d/avahi-daemon %IMAGE_TREE/etc/network/if-post-down.d/40-down-avahi-daemon
+#		SET_INIT_SCRIPT %BUILD/%PACKAGE/data/defaults/etc/init.d/avahi-daemon
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_MDNS_SUPPORT" == "YES" ]; then echo "CONFIG_SPX_FEATURE_MDNS_SUPPORT=MDNS" >> %IMAGE_TREE/etc/core_features; fi
+debug-install:

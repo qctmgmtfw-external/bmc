@@ -1,0 +1,32 @@
+# List of Supported Rules
+supported_rules: extract_source build_source clean_source
+
+#Extract Source	in %SOURCE
+extract_source:
+	#MKDIR_CLEAN %SOURCE/%PACKAGE/data
+	#SET_VALUE PACKAGE_NAME %PACKAGE
+	#INVOKE_SHELL Extractsource.sh
+	#RENAME %SOURCE/%PACKAGE/data/hiredis  %SOURCE/%PACKAGE/data/hiredis
+
+
+#Build Source in %BUILD
+build_source:
+	CWD %BUILD/%PACKAGE/data/hiredis
+	SET_VALUE PACKAGE_NAME %PACKAGE
+	SET_VALUE BUILDAREA %DEVAREA/Build
+	SET_VALUE DESTDIR %BUILD/%PACKAGE/data/OUTPUT
+	SET_VALUE CC %CROSS_COMPILE"gcc"
+	SET_VALUE CXX %CROSS_COMPILE"g++"
+	INVOKE_MAKE install
+
+#Clean Source
+clean_source:
+	CWD %BUILD/%PACKAGE/data/hiredis
+	INVOKE_MAKE clean
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+# Rules to create libhiredis package
+build_package-libhiredis:
+	STRIP_UNNEEDED %BUILD/%PACKAGE/data/OUTPUT/usr/local/lib/libhiredis.so.0.13.3
+	PACK_SPX  ./   %BUILD/%PACKAGE/data/OUTPUT/usr/local/lib/libhiredis.so.0.13.3
+

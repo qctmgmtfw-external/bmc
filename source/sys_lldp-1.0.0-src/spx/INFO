@@ -1,0 +1,33 @@
+Source : sys_lldp
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Austin Lin (AustinLin@ami.com.tw)
+License : OPENSOURCE
+Source-Location : http://packages.debian.org
+Source-Version : 1.0.0
+Builds : sys_lldp
+Architecture : ANY
+Urgency : new
+Description : System Package that includes all the LLDP related system-level libraries.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : sys_lldp
+Config-Tag : LLDP(Link Layer Discovery Protocol)
+Section : sys
+License : OPENSOURCE
+Group : FEATURES
+Essential : NO
+Required : sys_net_snmp
+Description : System Package that includes all the LLDP related system-level libraries.
+.
+

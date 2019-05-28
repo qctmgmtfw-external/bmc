@@ -1,0 +1,25 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE
+
+#Clean Source
+clean_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE clean
+		
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create netmon package
+build_package-netmon:
+		PACK_SPX  ./   %BUILD/%PACKAGE/data/netmon.ko
+
+# Rules to create netmon_driver_dev package
+build_package-netmon_driver_dev:
+		MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/Module.symvers %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/netmon_io.h %TEMPDIR/%PACKAGE/tmp
+		PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp

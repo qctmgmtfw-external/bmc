@@ -1,0 +1,18 @@
+--- linux/arch/arm/mach-astevb/setup.c	2015-07-02 20:38:06.188151519 +0800
++++ linux.new/arch/arm/mach-astevb/setup.c	2015-07-02 20:40:43.988153212 +0800
+@@ -172,6 +172,15 @@
+     /*
+      *      * Use WDT to restart system
+      *           */
++     // Quanta +++ 
++     // Move disable CE0, CE1, CE2 from user space to kernel space.
++     // Here is the last step for CPU restart, assume all process has been stopped.
++	  unsigned long reg32;
++     reg32 = *(volatile unsigned long *) (AST_FMC_VA_BASE);
++     reg32 = reg32 & ~0x001F0000;
++     *(volatile unsigned long *) (AST_FMC_VA_BASE) = reg32;
++     //printk("Stop ready !!! %#08lx\n", reg32);
++     // +++ Quanta
+ #ifdef CONFIG_SPX_FEATURE_SELECT_WDT2
+     *(volatile unsigned long *) (WDT_RELOAD_REG) = 0x10;
+     *(volatile unsigned long *) (WDT_CNT_RESTART_REG) = 0x4755;

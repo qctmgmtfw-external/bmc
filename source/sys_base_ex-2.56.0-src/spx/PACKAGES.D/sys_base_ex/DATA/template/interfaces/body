@@ -1,0 +1,3 @@
+auto eth$IFNUM
+iface eth$IFNUM inet $TYPE
+

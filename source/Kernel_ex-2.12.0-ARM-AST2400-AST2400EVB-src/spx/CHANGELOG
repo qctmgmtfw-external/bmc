@@ -1,0 +1,191 @@
+Package: Kernel_ex (2.12.0); urgency = medium
+
+Abstract:
+	Enabling INITRD support in Kernel
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Winston (winstont@ami.com) Wed, 24 Feb 2016 11:15:18 EST
+
+Package: Kernel_ex (2.11.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/Kernel_dev_ex/DATA/.keep, spx/PACKAGES.D/Kernel_ex/DATA/.keep, spx/PACKAGES.D/Kernel_modules_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:34:17 EST
+
+Package: Kernel_ex (2.10.0); urgency = medium
+
+Abstract:
+	Enabled legacy network driver.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 31 Aug 2015 20:48:23 HMT
+
+Package: Kernel_ex (2.9.0); urgency = medium
+
+Abstract:
+	Disabling CONFIG_ASTMAC100 support
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Winston (winstont@ami.com) Wed, 22 Jul 2015 18:46:20 EDT
+
+Package: Kernel_ex (2.8.0); urgency = high
+
+Abstract:
+	Initramfs removed from kernel configuration
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 28 May 2015 14:17:00 EDT
+
+Package: Kernel_ex (2.7.0); urgency = medium
+
+Abstract:
+	Change udev reguired from sys_udev to DevNodes
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 22 May 2015 11:34:19 EDT
+
+Package: Kernel_ex (2.6.0); urgency = medium
+
+Abstract:
+	Enabling Initramfs in Kernel Configuration
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Winston (winstont@ami.com) Tue, 19 May 2015 14:11:04 EDT
+
+Package: Kernel_ex (2.5.0); urgency = medium
+
+Abstract:
+	Disabling intramfs,Virtual Terminal and Legacy PTS terminal configurations
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Winston (winstont@ami.com) Sun, 17 May 2015 21:32:43 EDT
+
+Package: Kernel_ex (2.4.0); urgency = medium
+
+Abstract:
+	Disabled the Micron spi chip support under Mtd Devices.
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Fri, 24 Apr 2015 15:28:48 HMT
+
+Package: Kernel_ex (2.3.0); urgency = medium
+
+Abstract:
+	Add Framebuffer, Console, and user level input event for kernel.
+
+Files Modified: spx/DEFCONFIG, spx/INFO
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Sat, 07 Mar 2015 11:02:48 JWST
+
+Package: Kernel_ex (2.2.0); urgency = medium
+
+Abstract:
+	Added Kernel_oem package in Build-Depends
+
+Files Modified: spx/INFO
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Fri, 13 Feb 2015 19:39:01 HMT
+
+Package: Kernel_ex (2.1.0); urgency = medium
+
+Abstract:
+	Enabling Ethernet Bridging support in Kernel
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Winston (winstont@ami.com) Wed, 04 Feb 2015 15:35:00 GMT
+
+Package: Kernel_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:14:54 GMT
+
+Package: Kernel_ex (1.7.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:57:25 GMT
+
+Package: Kernel_ex (1.6.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:07:11 GMT
+
+Package: Kernel_ex (1.5.0); urgency = low
+
+Abstract:
+	Default SPX bootlogo added
+
+Files Added: data/BootLogo.ppm, spx/DOCS/Images/BootLogo.bmp, spx/DOCS/Images/BootLogo.ppm.bin
+Files Deleted: spx/DOCS/Images/boot_logo_224.ppm, spx/DOCS/Images/boot_logo_a.ppm
+Files Modified: spx/DOCS/PPM-HOWTO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 05 Sep 2014 16:43:00 EDT
+
+Package: Kernel_ex (1.4.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: spx/DEFCONFIG, spx/INFO, spx/PACKAGES.D/Kernel_dev_ex/SCRIPTS/dev-install.py, spx/PACKAGES.D/Kernel_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:38:57 GMT
+
+Package: Kernel_ex (1.3.0); urgency = medium
+
+Abstract:
+	Changes done to create needed link files in /var/run needed for depmod
+
+Files Modified: spx/PACKAGES.D/Kernel_modules_ex/SCRIPTS/dev-install.py
+
+--Submitter: Winston (winstont@ami.com) Wed, 06 Aug 2014 23:43:03 GMT
+
+Package: Kernel_ex (1.2.0); urgency = low
+
+Abstract:
+	Enable SD/MMC support
+
+Files Modified: spx/DEFCONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 21 Jul 2014 17:30:22 EDT
+
+Package: Kernel_ex (1.1.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: spx/DEFCONFIG, spx/INFO
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Tue, 08 Jul 2014 15:27:04 HMT
+
+Package: Kernel_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2400EVB Kernel 3.4.74 configuration
+
+Files Added: data, spx, spx/CHANGELOG, spx/DEFCONFIG, spx/DOCS, spx/DOCS/Images, spx/DOCS/Images/boot_logo_224.ppm, spx/DOCS/Images/boot_logo_a.ppm, spx/DOCS/PPM-HOWTO, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Kernel_dev_ex, spx/PACKAGES.D/Kernel_dev_ex/DATA, spx/PACKAGES.D/Kernel_dev_ex/SCRIPTS, spx/PACKAGES.D/Kernel_dev_ex/SCRIPTS/dev-install.py, spx/PACKAGES.D/Kernel_ex, spx/PACKAGES.D/Kernel_ex/DATA, spx/PACKAGES.D/Kernel_ex/SCRIPTS, spx/PACKAGES.D/Kernel_ex/SCRIPTS/dev-install.py, spx/PACKAGES.D/Kernel_modules_ex, spx/PACKAGES.D/Kernel_modules_ex/DATA, spx/PACKAGES.D/Kernel_modules_ex/SCRIPTS, spx/PACKAGES.D/Kernel_modules_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 May 2014 16:59:29 EDT
+

@@ -1,0 +1,31 @@
+Source : Bootloader_arch_arm_ex
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Samvinesh Christopher (vineshc@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 2013.07
+Builds : Bootloader_arch_arm_ex
+Build-Depends : Bootloader_amiext_ex
+Architecture : ANY
+Urgency : medium
+Description : ARM related patches to Bootloader Uboot-2013.07
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Bootloader_arch_arm_ex
+Section : info
+Group : BASE
+Essential : NO
+Description : ARM related patches to Bootloader Uboot-2013.07
+.
+

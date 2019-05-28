@@ -1,0 +1,472 @@
+Package: kcs (2.12.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/kcs/DATA/.keep, spx/PACKAGES.D/kcs_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:23:05 EST
+
+Package: kcs (2.11.0); urgency = medium
+
+Abstract:
+	FIX : KCS Response issue with Timeout, Included the sequence number validation in KCS driver.
+
+Files Modified: data/kcs.h, data/kcsmain.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Mon, 05 Oct 2015 12:17:12 HMT
+
+Package: kcs (2.10.0); urgency = medium
+
+Abstract:
+	aligning the spin_lock variable location in structure to fix kernel panic in orion platform with SMP enabled.
+
+Files Modified: data/kcs.h
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Wed, 01 Jul 2015 08:02:54 HMT
+
+Package: kcs (2.9.0); urgency = medium
+
+Abstract:
+	Modified to create only needed device nodes
+
+Files Modified: spx/PACKAGES.D/kcs/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 14 May 2015 12:06:53 EDT
+
+Package: kcs (2.8.0); urgency = low
+
+Abstract:
+	KCS logs support in kernel3.x
+
+Files Modified: data/kcsmain.c
+
+--Submitter: ramakrishna (nagaramakrishnak@amiindia.co.in) Fri, 03 Apr 2015 14:42:32 HMT
+
+Package: kcs (2.7.0); urgency = medium
+
+Abstract:
+	Fixed  binary build issues.
+
+Files Modified: spx/PACKAGES.D/kcs/P.CONFIG
+
+--Submitter: shravan (shravans@amiindia.co.in) Fri, 13 Mar 2015 17:24:34 HMT
+
+Package: kcs (2.6.0); urgency = medium
+
+Abstract:
+	Build error fix.
+
+Files Modified: data/kcs.h, data/kcsmain.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 31 Dec 2014 17:49:58 HMT
+
+Package: kcs (2.5.0); urgency = medium
+
+Abstract:
+	Fixed build error for kernel 3.x
+
+Files Modified: data/kcs.h, data/kcsmain.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 31 Dec 2014 12:27:34 HMT
+
+Package: kcs (2.4.0); urgency = medium
+
+Abstract:
+	Removed comments.
+
+Files Modified: data/kcsmain.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 30 Dec 2014 14:11:55 HMT
+
+Package: kcs (2.3.0); urgency = medium
+
+Abstract:
+	Included lock for accessing the global structure member.
+
+Files Modified: data/kcs.h, data/kcs_timeout.c, data/kcsmain.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 30 Dec 2014 14:08:03 HMT
+
+Package: kcs (2.2.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/kcs.h, data/kcs_ioctl.h, data/kcs_timeout.c, data/kcs_timeout.h, data/kcsifc.h, data/kcsmain.c, data/proc.c, data/proc.h, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 16 Dec 2014 19:27:22 HMT
+
+Package: kcs (2.1.0); urgency = low
+
+Abstract:
+	Fixed essential, dependencies and empty menues
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 03 Dec 2014 13:46:39 EST
+
+Package: kcs (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:05:27 GMT
+
+Package: kcs (1.33.0); urgency = medium
+
+Abstract:
+	Fixing kcs hang issue
+
+Files Modified: data/kcs.h, data/kcsmain.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 17 Oct 2014 18:30:22 CST
+
+Package: kcs (1.32.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:48:47 GMT
+
+Package: kcs (1.31.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:58:30 GMT
+
+Package: kcs (1.30.0); urgency = medium
+
+Abstract:
+	Fix for incorrect/missing module dependencies
+
+Files Modified: data/kcsmain.c, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 17 Sep 2014 14:06:54 EDT
+
+Package: kcs (1.29.0); urgency = high
+
+Abstract:
+	Changes to be compatible for Kernel 3.4.11
+
+Files Modified: data/kcsmain.c, data/proc.c, data/proc.h
+
+--Submitter: Winston (winstont@ami.com) Fri, 05 Sep 2014 16:04:23 GMT
+
+Package: kcs (1.28.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/kcsmain.c, data/proc.c, data/proc.h
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:37:40 GMT
+
+Package: kcs (1.27.0); urgency = medium
+
+Abstract:
+	Updating for SH4 based Kernel Rev 3.4.11 also
+
+Files Modified: data/kcs_timeout.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Mon, 11 Aug 2014 10:14:57 HMT
+
+Package: kcs (1.26.0); urgency = medium
+
+Abstract:
+	SPX Core 2.0 related changes
+
+Files Modified: data/kcs_ioctl.h, data/kcs_timeout.c, data/kcsmain.c, data/proc.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Mon, 07 Jul 2014 15:29:16 HMT
+
+Package: kcs (1.25.0); urgency = medium
+
+Abstract:
+	Reverted previous changes.
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/kcs/P.CONFIG
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 24 Jun 2014 12:37:13 HMT
+
+Package: kcs (1.24.0); urgency = medium
+
+Abstract:
+	Added PRJ option to enable the I2C Recovery Polling.
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/kcs/P.CONFIG
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 23 Jun 2014 14:19:20 HMT
+
+Package: kcs (1.23.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/kcs/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 11:00:05 GMT
+
+Package: kcs (1.22.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/kcs/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:47:37 HMT
+
+Package: kcs (1.21.0); urgency = medium
+
+Abstract:
+	Fixed KCS hang issue when BMC is rebooted with host powered on
+
+Files Modified: data/kcsmain.c
+
+--Submitter: Anand Krishnan V (anandkrishnanv@amiindia.co.in) Fri, 21 Feb 2014 16:05:59 HMT
+
+Package: kcs (1.20.0); urgency = low
+
+Abstract:
+	Support Ast1250_1070evb KCS feature
+
+Files Modified: spx/PACKAGES.D/kcs/SCRIPTS/dev-install
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 22 Jan 2014 20:16:20 CST
+
+Package: kcs (1.19.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:29:25 EDT
+
+Package: kcs (1.18.0); urgency = low
+
+Abstract:
+	Modified driver to support Kernel 3.4.11.
+
+Files Modified: data/kcs_timeout.c, data/kcsmain.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Sun, 15 Sep 2013 02:33:29 HMT
+
+Package: kcs (1.17.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:31:54 EDT
+
+Package: kcs (1.16.0); urgency = high
+
+Abstract:
+	Binary build issue fixed
+
+Files Added: spx/PACKAGES.D/kcs/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Fri, 28 Sep 2012 18:06:09 EDT
+
+Package: kcs (1.15.0); urgency = medium
+
+Abstract:
+	I2C driver statistic.
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 22 May 2012 17:59:12 IST
+
+Package: kcs (1.14.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/kcs_timeout.c, data/kcsmain.c, data/proc.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 23 Mar 2012 10:04:47 EDT
+
+Package: kcs (1.13.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/kcs_timeout.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 13:38:43 EDT
+
+Package: kcs (1.12.0); urgency = medium
+
+Abstract:
+	Enabled Log in KCS drivers using PRJ.
+
+Files Added: spx/P.CONFIG
+Files Modified: data/kcsmain.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 22 Nov 2011 21:12:48 IST
+
+Package: kcs (1.11.0); urgency = medium
+
+Abstract:
+	KCS Interrupt Enabling/Disabling is done based on the requested channel number
+
+Files Modified: data/kcs.h, data/kcsmain.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 22 Nov 2011 11:44:44 IST
+
+Package: kcs (1.10.0); urgency = high
+
+Abstract:
+	Correction in licensing.
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: data/kcsmain.c, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Fri, 24 Jun 2011 15:54:30 IST
+
+Package: kcs (1.9.0); urgency = medium
+
+Abstract:
+	Fixed issue where aborted commands were being responded to.
+
+Files Modified: data/kcs.h, data/kcsmain.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 15 Jun 2011 18:22:06 IST
+
+Package: kcs (1.8.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:31:03 EDT
+
+Package: kcs (1.7.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/kcs/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:48:53 EDT
+
+Package: kcs (1.6.0); urgency = medium
+
+Abstract:
+	The ioctl structure is correctly re-arranged.
+
+Files Modified: data/kcs_ioctl.h
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 27 Oct 2010 04:12:14 EDT
+
+Package: kcs (1.5.0); urgency = medium
+
+Abstract:
+	When the kcs interface is started the status of the kcs must be changed to IDLE_STATE.
+
+Files Modified: data/kcs_ioctl.h, data/kcsmain.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Wed, 27 Oct 2010 03:37:12 EDT
+
+Package: kcs (1.4.0); urgency = low
+
+Abstract:
+	Added IOCTl Access to enable or disable the KCS interrupt,
+By default KCS interrupt is disable, And it is enabled by KCSifc Task.
+
+Files Modified: data/kcs.h, data/kcs_ioctl.h, data/kcsmain.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Tue, 26 Oct 2010 14:32:00 IST
+
+Package: kcs (1.3.0); urgency = medium
+
+Abstract:
+	Used the open count from helper module to identify:
+1. If it is a first open, to initialize the KCSBuffer
+2. If it is the last close, to cleanup KCSBuffer
+
+Files Modified: data/kcsmain.c
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Fri, 24 Sep 2010 20:38:20 IST
+
+Package: kcs (1.2.0); urgency = medium
+
+Abstract:
+	Fix in driver to set OBF properly
+
+Files Modified: data/kcsmain.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Wed, 22 Sep 2010 18:30:07 EDT
+
+Package: kcs (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:49:13 EDT
+
+Package: kcs (1.0.5); urgency = high
+
+Abstract:
+	Implementing the KCS Non Communication Interrupt
+
+Files Modified: data/kcs_ioctl.h, data/kcsmain.c, spx/INFO
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 05 Aug 2010 23:01:41 IST
+
+Package: kcs (1.0.4); urgency = high
+
+Abstract:
+	Dependecy on hw support added. This will avoid showing/selecting the core driver/application/library  if the hardware/soc does not support the device
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Jun 2010 12:13:17 EDT
+
+Package: kcs (1.0.3); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:23:09 EDT
+
+Package: kcs (1.0.2); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:50:11 EDT
+
+Package: kcs (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:00:37 EST
+
+Package:kcs (1.0.0);urgency=new
+
+Abstract:
+	KCS Common Device Driver.
+
+Files Added: kcs_ioctl.h, kcs_timeout.h, proc.h, kcs_timeout.c, kcs.h, kcsmain.c, Makefile, proc.c, kcsifc.h
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Thu, 17 Dec 2009 16:58:54 +0800

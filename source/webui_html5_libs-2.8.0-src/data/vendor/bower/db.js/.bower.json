@@ -1,0 +1,15 @@
+{
+  "name": "db.js",
+  "homepage": "https://github.com/aaronpowell/db.js",
+  "version": "0.9.0",
+  "_release": "0.9.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.9.0",
+    "commit": "fd0664502d8748e866850c0aec8ae32a9549f51e"
+  },
+  "_source": "git://github.com/aaronpowell/db.js.git",
+  "_target": "~0.9.0",
+  "_originalSource": "db.js",
+  "_direct": true
+}

@@ -1,0 +1,91 @@
+Package: mctppcie (2.4.0); urgency = medium
+
+Abstract:
+	.keep files changed to keep.folder
+
+Files Added: spx/PACKAGES.D/mctppcie/DATA/keep.folder, spx/PACKAGES.D/mctppcie_driver_dev/DATA/keep.folder
+Files Deleted: spx/PACKAGES.D/mctppcie/DATA/.keep, spx/PACKAGES.D/mctppcie_driver_dev/DATA/.keep
+
+--Submitter: Samvinesh Christopher (vinesh@ami.com) Thu, 05 May 2016 17:15:54 EDT
+
+Package: mctppcie (2.3.0); urgency = medium
+
+Abstract:
+	fixed hal device type for mctppcie.
+
+Files Modified: data/mctppciemain.c
+
+--Submitter: kennyhsieh (kennyhsieh) Mon, 14 Mar 2016 18:59:10 CST
+
+Package: mctppcie (2.2.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/mctppcie/DATA/.keep, spx/PACKAGES.D/mctppcie_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 22:21:17 EST
+
+Package: mctppcie (2.1.0); urgency = high
+
+Abstract:
+	Remove hardware related code and add supports for kernel ver3.
+
+Files Modified: data/mctppcie.h, data/mctppciemain.c, spx/INFO, spx/RULES
+
+--Submitter: robinchiu (RobinChiu) Mon, 01 Jun 2015 17:02:47 CST
+
+Package: mctppcie (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 05:44:26 GMT
+
+Package: mctppcie (1.4.0); urgency = medium
+
+Abstract:
+	Updated Group Field Information.
+
+Files Modified: spx/INFO
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Wed, 15 Oct 2014 20:37:53 HMT
+
+Package: mctppcie (1.3.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:17:32 GMT
+
+Package: mctppcie (1.2.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:29:36 GMT
+
+Package: mctppcie (1.1.0); urgency = medium
+
+Abstract:
+	Changed from refering package name to Provides Value
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 12:13:56 EDT
+
+Package: mctppcie (1.0.0); urgency = new
+
+Abstract:
+	This package provides the common (hardware independent) MCTP PCIE driver module.
+
+Files Added: data, data/Makefile, data/mctppcie.h, data/mctppcieifc.h, data/mctppciemain.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/mctppcie, spx/PACKAGES.D/mctppcie/DATA, spx/PACKAGES.D/mctppcie/SCRIPTS, spx/PACKAGES.D/mctppcie/SCRIPTS/dev-install, spx/PACKAGES.D/mctppcie_driver_dev, spx/PACKAGES.D/mctppcie_driver_dev/DATA, spx/PACKAGES.D/mctppcie_driver_dev/SCRIPTS, spx/PACKAGES.D/mctppcie_driver_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: pearcelee (pearcelee) Wed, 09 Jul 2014 16:44:10 CST
+

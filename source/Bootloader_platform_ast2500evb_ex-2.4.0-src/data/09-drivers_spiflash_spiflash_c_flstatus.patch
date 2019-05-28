@@ -1,0 +1,24 @@
+--- uboot/drivers/spiflash/spiflash.c.old	2016-07-27 13:47:38.482862992 +0800
++++ uboot/drivers/spiflash/spiflash.c	2016-07-30 22:12:16.113253146 +0800
+@@ -373,7 +373,20 @@
+ 	return totalsize;
+ }
+ 
+-
++int flash_status(int bank, unsigned char *status, int dir)
++{
++	struct spi_flash_private *priv=dev_map[bank].fldrv_priv;
++	struct spi_ctrl_driver *ctrl_drv = priv->ctrl_drv;	
++    int ret;
++
++    if (dir == 0) {
++        ret = spi_generic_read_status(0, ctrl_drv, status);
++    }
++    else {
++        ret = spi_generic_write_status(0, ctrl_drv, *status);
++    }
++    return ret;
++}
+ 
+ int 
+ flash_erase (flash_info_t *info, int s_first, int s_last)

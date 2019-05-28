@@ -1,0 +1,18 @@
+Package: Bootloader_oem_ast2400evb_ex (1.1.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: data/.keep, spx/PACKAGES.D/Bootloader_oem_ast2400evb_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 19:18:52 EST
+
+Package: Bootloader_oem_ast2400evb_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2400EVB OEM Patches to Bootloader
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Bootloader_oem_ast2400evb_ex, spx/PACKAGES.D/Bootloader_oem_ast2400evb_ex/DATA, spx/PACKAGES.D/Bootloader_oem_ast2400evb_ex/SCRIPTS, spx/PACKAGES.D/Bootloader_oem_ast2400evb_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Fri, 13 Feb 2015 19:15:28 HMT
+

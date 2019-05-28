@@ -1,0 +1,405 @@
+Package: iUSB (2.8.0); urgency = medium
+
+Abstract:
+	SOC specific change in CDROM driver
+
+Files Modified: data/iusb-cdrom.c, data/iusb-hdisk.c
+
+--Submitter: Logapriya Nagarajan (logapriyan@amiindia.co.in) Fri, 19 Feb 2016 14:52:46 HMT
+
+Package: iUSB (2.7.0); urgency = medium
+
+Abstract:
+	SOC Specific change in CDROM Driver
+
+Files Modified: data/iusb-cdrom.c, data/iusb-hdisk.c, spx/INFO
+
+--Submitter: Logapriya Nagarajan (logapriyan@amiindia.co.in) Thu, 11 Feb 2016 14:18:22 HMT
+
+Package: iUSB (2.6.0); urgency = medium
+
+Abstract:
+	Add 0x4A(SCSI GET EVENT STATUS NOTIFICATION) SCSI command support for Pilot-4.
+
+Files Modified: data/iusb-cdrom.c, data/iusb-hdisk.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 18 Jan 2016 11:56:10 CST
+
+Package: iUSB (2.5.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/iUSB/DATA/.keep, spx/PACKAGES.D/iUSB_driver_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:18:23 EST
+
+Package: iUSB (2.4.0); urgency = high
+
+Abstract:
+	Fix for cd automount
+
+Files Modified: data/iusb-cdrom.c
+
+--Submitter: Lakshmi Sravya K (lakshmisk@amiindia.co.in) Thu, 20 Aug 2015 17:33:21 IST
+
+Package: iUSB (2.3.0); urgency = medium
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/iusb-scsi.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 31 Dec 2014 17:55:28 IST
+
+Package: iUSB (2.2.0); urgency = medium
+
+Abstract:
+	SCAC fix for fortify issues
+
+Files Modified: data/iusb-scsi.c, data/iusb-vendor.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Mon, 29 Dec 2014 14:09:41 IST
+
+Package: iUSB (2.1.0); urgency = low
+
+Abstract:
+	Updated Copyrights year
+
+Files Modified: data/iusb-cdrom.c, data/iusb-cdrom.h, data/iusb-hdisk.c, data/iusb-hdisk.h, data/iusb-hid.c, data/iusb-hid.h, data/iusb-inc.h, data/iusb-scsi.c, data/iusb-scsi.h, data/iusb-vendor.c, data/iusb-vendor.h, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Thu, 18 Dec 2014 20:52:40 HMT
+
+Package: iUSB (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:00:49 GMT
+
+Package: iUSB (1.22.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:44:26 HMT
+
+Package: iUSB (1.21.0); urgency = medium
+
+Abstract:
+	Updated Group Field Information.
+
+Files Modified: spx/INFO
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Wed, 15 Oct 2014 20:35:15 HMT
+
+Package: iUSB (1.20.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:44:21 GMT
+
+Package: iUSB (1.19.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:54:06 GMT
+
+Package: iUSB (1.18.0); urgency = medium
+
+Abstract:
+	Adding back proper macros ADD_MODULES,ADD_MODULES_ONLY which was changed recently for Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/iUSB/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:59:52 GMT
+
+Package: iUSB (1.17.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: spx/PACKAGES.D/iUSB/SCRIPTS/dev-install
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:59:27 HMT
+
+Package: iUSB (1.16.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:29:37 EDT
+
+Package: iUSB (1.15.0); urgency = low
+
+Abstract:
+	Modified driver to support Kernel 3.4.11.
+
+Files Modified: data/iusb-scsi.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Sun, 15 Sep 2013 02:29:55 HMT
+
+Package: iUSB (1.14.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:29:33 EDT
+
+Package: iUSB (1.13.0); urgency = low
+
+Abstract:
+	Debug message is commented out as it keeps on spamming.
+
+Files Modified: data/iusb-cdrom.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 11 Jan 2013 10:52:07 EST
+
+Package: iUSB (1.12.0); urgency = medium
+
+Abstract:
+	#Increasing total device count to 12
+
+Files Modified: data/iusb-cdrom.h, data/iusb-hdisk.c, data/iusb-hdisk.h, spx/RULES
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 21 Nov 2012 00:14:47 IST
+
+Package: iUSB (1.11.0); urgency = medium
+
+Abstract:
+	Fix for compilation errors when debug message support is enabled.
+
+Files Modified: data/iusb-scsi.c, data/iusb-vendor.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 26 Jun 2012 15:40:27 EDT
+
+Package: iUSB (1.10.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/iusb-scsi.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 13:36:35 EDT
+
+Package: iUSB (1.9.0); urgency = high
+
+Abstract:
+	Fixes for 64 Bit data structures
+
+Files Modified: data/iusb-scsi.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 20 Sep 2011 08:56:00 EDT
+
+Package: iUSB (1.8.0); urgency = medium
+
+Abstract:
+	Licence Info changed to GPL-V2
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 16:51:59 EDT
+
+Package: iUSB (1.7.0); urgency = medium
+
+Abstract:
+	Licence Info changed to GPL-V2
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: data/iusb-scsi.c, spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 23 Jun 2011 16:44:21 EDT
+
+Package: iUSB (1.6.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:27:58 EDT
+
+Package: iUSB (1.5.0); urgency = medium
+
+Abstract:
+	install/uninstall_video_handler moved from this module to usbe.
+
+Files Modified: data/iusb-scsi.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 10 Feb 2011 12:38:38 EST
+
+Package: iUSB (1.4.0); urgency = medium
+
+Abstract:
+	provided support for video callback function.
+
+Files Modified: data/iusb-scsi.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 10 Feb 2011 10:56:53 EST
+
+Package: iUSB (1.3.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/iusb-vendor.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:52:51 EST
+
+Package: iUSB (1.2.0); urgency = medium
+
+Abstract:
+	Copied driver to generic location instead of kernel specific locaton
+
+Files Modified: spx/PACKAGES.D/iUSB/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 27 Oct 2010 14:48:43 EDT
+
+Package: iUSB (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 13:47:22 EDT
+
+Package: iUSB (1.0.13); urgency = low
+
+Abstract:
+	number of hdisk/floppy instances have been increased to 6 from 4
+
+Files Modified: data/iusb-hdisk.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 16 Aug 2010 10:42:28 EDT
+
+Package: iUSB (1.0.12); urgency = low
+
+Abstract:
+	Now printing unsupported SCSI commands in the USB driver.
+
+Files Modified: data/iusb-cdrom.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Mon, 09 Aug 2010 10:16:12 EDT
+
+Package: iUSB (1.0.11); urgency = medium
+
+Abstract:
+	Moved the SCSI_READ_12 from Unsupported to supported
+
+Files Modified: data/iusb-cdrom.c
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Sat, 07 Aug 2010 14:55:08 IST
+
+Package: iUSB (1.0.10); urgency = medium
+
+Abstract:
+	Support added to release the hdisk and cdrom instances during unloading of modules. Also increased the cdrom and hdisk instances to 4.
+
+Files Modified: data/iusb-cdrom.c, data/iusb-cdrom.h, data/iusb-hdisk.c, data/iusb-hdisk.h, data/iusb-scsi.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 08 Jul 2010 14:29:41 EDT
+
+Package: iUSB (1.0.9); urgency = medium
+
+Abstract:
+	SCSI_READ_12 and SCSI_WRITE_12 commands have been moved from unsupported to supported commands. SCSI_WRITE_12 has not been implemented in Jviewer as of this commit.
+
+Files Modified: data/iusb-hdisk.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 25 May 2010 13:03:44 EDT
+
+Package: iUSB (1.0.8); urgency = medium
+
+Abstract:
+	Modified Rules to not to unload module when Firmware upgrade usb being used
+
+Files Modified: spx/PACKAGES.D/iUSB/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 12 May 2010 16:22:27 EDT
+
+Package: iUSB (1.0.7); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:43:37 EDT
+
+Package: iUSB (1.0.6); urgency = low
+
+Abstract:
+	bug fix with hdisk instances.
+
+Files Modified: data/iusb-hdisk.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 26 Mar 2010 18:19:27 EDT
+
+Package: iUSB (1.0.5); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:48:49 EDT
+
+Package: iUSB (1.0.4); urgency = medium
+
+Abstract:
+	The changes brought from SP2 AST2050 to fix USB Command verifier MSC TEST issues.
+
+Files Modified: data/iusb-scsi.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 26 Feb 2010 09:56:13 EST
+
+Package: iUSB (1.0.3); urgency = low
+
+Abstract:
+	SCSI_MODE_SENSE_6 command is added to supported command list
+
+Files Modified: data/iusb-hdisk.c
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Thu, 25 Feb 2010 11:17:48 EST
+
+Package: iUSB (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:59:33 EST
+
+Package: iUSB (1.0.1); urgency = low
+
+Abstract:
+	version of usbe module dependancy updated to >= 1.0.0
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 09 Feb 2010 10:51:05 EST
+
+Package:iUSB (1.0.0);urgency=new
+
+Abstract:
+	This package provides the common (hardware independent) iUSB driver module.
+
+Files Added: Makefile, iusb-vendor.c, iusb-hid.h, iusb-hdisk.c, iusb-hid.c, iusb-vendor.h, iusb-scsi.h, iusb-scsi.c, iusb-hdisk.h, iusb-inc.h, iusb-cdrom.c, iusb-cdrom.h
+
+--Submitter: Rama Rao Bisa (RamaB@ami.com) Tue, 26 Jan 2010 14:50:38 -0500

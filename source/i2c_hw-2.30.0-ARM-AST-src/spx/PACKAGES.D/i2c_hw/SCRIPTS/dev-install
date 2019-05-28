@@ -1,0 +1,21 @@
+# Install Script
+
+build-install:
+			COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+			ADD_MODULES i2c_hw
+			MAKE_CHAR_NODE i2c0 89 0
+			MAKE_CHAR_NODE i2c1 89 1
+			MAKE_CHAR_NODE i2c2 89 2
+			MAKE_CHAR_NODE i2c3 89 3
+			MAKE_CHAR_NODE i2c4 89 4
+			MAKE_CHAR_NODE i2c5 89 5
+			MAKE_CHAR_NODE i2c6 89 6
+			MAKE_CHAR_NODE i2c7 89 7
+			MAKE_CHAR_NODE i2c8 89 8
+			MAKE_CHAR_NODE i2c9 89 9
+			MAKE_CHAR_NODE i2c10 89 10
+			MAKE_CHAR_NODE i2c11 89 11
+			MAKE_CHAR_NODE i2c12 89 12
+			MAKE_CHAR_NODE i2c13 89 13
+                
+debug-install:

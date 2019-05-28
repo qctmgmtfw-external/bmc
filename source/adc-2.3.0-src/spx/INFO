@@ -1,0 +1,41 @@
+Source : adc
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Alex Yang (alexyang@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : adc, adc_driver_dev
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package contains the ADC common(hardware independent) driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : adc
+Config-Tag : ADC Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_adc
+Required : helper, DevNodes
+Description : ADC common driver module
+.
+
+Package : adc_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package contains ADC driver development header files.
+.
+

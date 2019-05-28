@@ -1,0 +1,13 @@
+--- linux/drivers/net/ethernet/Kconfig	2014-08-14 07:08:34.000000000 +0530
++++ linux.new/drivers/net/ethernet/Kconfig	2015-08-29 12:16:20.676767026 +0530
+@@ -11,6 +11,10 @@
+ 
+ if ETHERNET
+ 
++config AST
++	tristate
++source "drivers/net/ethernet/aspeed/Kconfig"
++
+ config MDIO
+ 	tristate
+ 

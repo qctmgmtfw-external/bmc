@@ -1,0 +1,18 @@
+Package: Kernel_oem_ast2500evb_ex (1.1.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: data/.keep, spx/PACKAGES.D/Kernel_oem_ast2500evb_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:37:15 EST
+
+Package: Kernel_oem_ast2500evb_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2500 OEM Patches to Kernel 3
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Kernel_oem_ast2500evb_ex, spx/PACKAGES.D/Kernel_oem_ast2500evb_ex/DATA, spx/PACKAGES.D/Kernel_oem_ast2500evb_ex/SCRIPTS, spx/PACKAGES.D/Kernel_oem_ast2500evb_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Fri, 13 Feb 2015 19:15:58 HMT
+

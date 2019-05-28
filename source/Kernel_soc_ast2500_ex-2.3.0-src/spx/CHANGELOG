@@ -1,0 +1,63 @@
+Package: Kernel_soc_ast2500_ex (2.3.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/Kernel_soc_ast2500_ex/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 20:48:26 EST
+
+Package: Kernel_soc_ast2500_ex (2.2.0); urgency = medium
+
+Abstract:
+	Add USB HOST Controller Support for AST2500.
+
+Files Added: data/02-drivers_usb_host_ehci-ast.c, data/03-drivers_usb_host_ehci-hcd.c, data/04-drivers_usb_host_Kconfig, data/05-drivers_usb_host_Makefile, data/06-drivers_usb_host_uhci-ast.c, data/07-drivers_usb_host_uhci-hcd.c, data/08-drivers_usb_host_uhci-hcd.h, data/09-drivers_usb_host_uhci-hub.c, data/10-drivers_usb_Makefile
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Tue, 24 Feb 2015 11:36:26 CST
+
+Package: Kernel_soc_ast2500_ex (2.1.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:21:56 GMT
+
+Package: Kernel_soc_ast2500_ex (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:26:53 GMT
+
+Package: Kernel_soc_ast2500_ex (1.2.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 06:09:18 GMT
+
+Package: Kernel_soc_ast2500_ex (1.1.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:20:23 GMT
+
+Package: Kernel_soc_ast2500_ex (1.0.0); urgency = new
+
+Abstract:
+	AST2500 SOC Fixes to Kernel 3.4.74
+
+Files Added: data, data/01-arch_arm_mach-astevb_Makefile.boot, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/Kernel_soc_ast2500_ex, spx/PACKAGES.D/Kernel_soc_ast2500_ex/DATA, spx/PACKAGES.D/Kernel_soc_ast2500_ex/SCRIPTS, spx/PACKAGES.D/Kernel_soc_ast2500_ex/SCRIPTS/dev-install.py, spx/RULES.py
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 25 Aug 2014 11:32:37 CST
+

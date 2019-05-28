@@ -1,0 +1,14 @@
+# Install Script
+
+build-install:
+ 	MKDIR_NOCLEAN %SPXINC/hiredis
+	MKDIR_NOCLEAN %SPXLIB/hiredis
+	CWD %BUILD/%PACKAGE/data/OUTPUT/usr/local
+	COPY_FILE ./lib/libhiredis.so.0.13.3 %SPXLIB/hiredis/
+	ADD_LIBRARY_LINKS %SPXLIB/hiredis/ libhiredis.so.0.13.3
+	COPY_DIR include %SPXINC
+	COPY_FILE ./lib/libhiredis.so.0.13.3 %IMAGE_TREE/usr/local/lib/
+	ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib/ libhiredis.so.0.13.3
+	
+debug-install:
+

@@ -1,0 +1,14 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+
+#Clean Source
+clean_source:
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create ncml_configuration package
+build_package-ncml_configuration:
+	PACK_SPX ./ %SOURCE/%PACKAGE/data

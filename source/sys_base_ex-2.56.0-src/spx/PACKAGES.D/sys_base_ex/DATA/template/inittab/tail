@@ -1,0 +1,12 @@
+###############################################################
+# Default Serial Console on Serial Port 0 (or Console)
+# Two reasons why ttySX is used instead of console:
+#  1. /dev/console does not support ^C. 
+#  2. Using /dev/console, does not set "tty" correctly. This 
+#     leads to failure of many apps which uses tty to determine 
+#     the stdin/stdout (Samba installation is one of them)
+################################################################
+# By default /dev/console is used. But busybox getty is modified 
+# to use the ttySX console defined in /conf/console_tty
+################################################################
+co:2345789:respawn:/sbin/getty -L console 115200  vt100

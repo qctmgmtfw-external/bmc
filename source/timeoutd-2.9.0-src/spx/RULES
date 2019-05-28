@@ -1,0 +1,23 @@
+#Extract Source	in %SOURCE
+extract_source:
+		INVOKE_SHELL ApplyPatch  %SOURCE/%PACKAGE/data %SOURCE/%PACKAGE/data/patch
+
+#Build Source in %BUILD
+build_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE
+		
+#Clean Source
+clean_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE clean
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create timeoutd package
+build_package-timeoutd:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/timeoutd %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/timeout %TEMPDIR/%PACKAGE/tmp
+	INVOKE_SHELL CreateTimeoutConf %CONFIG_SPX_FEATURE_TIMEOUTD_SESSION_TIMEOUT %TEMPDIR/%PACKAGE/tmp/timeouts
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp

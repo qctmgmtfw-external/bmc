@@ -1,0 +1,31 @@
+Source : webui_html5_libs
+Version : 2.8.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : OpenSource
+Maintainer : Chandrasekar R (chandrasekarr@ami.com)
+License : OPENSOURCE
+Source-Location : Bower
+Source-Version : July 11 2014
+Builds : webui_html5_libs
+Architecture : ALL
+Urgency : medium
+Description : Libraries required to build HTML5 based SPX UI
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : webui_html5_libs
+Config-Tag : SPX HTML5 UI Libraries
+Section : lib
+Group : DEVEL
+Essential : NO
+Description : Libraries required to build HTML5 based SPX UI
+.
+

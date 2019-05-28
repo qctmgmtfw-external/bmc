@@ -1,0 +1,35 @@
+Source : watchdog_hw
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Seires Lee (SeiresLee@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : watchdog_hw
+Build-Depends : watchdog_driver_dev, Crosscc, helper_driver_dev, kernel_dev, global_dev, rules, DevNodes
+Architecture : ARM
+SOC : AST
+Urgency : high
+Description : This package contains watchdog hardware driver for AST SoC.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : watchdog_hw
+Section : sys
+Group : DEVICE
+Essential : YES
+Depends : kernel, watchdog
+Required : helper, DevNodes
+Provides : watchdogDriver
+Description : This package contains built watchdog hardware driver for AST SoC.
+.
+

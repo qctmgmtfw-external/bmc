@@ -1,0 +1,6 @@
+./Makefile 210 97be86b3b24b0d61ccabdaee067d406e
+./proc.c 2335 68ca3caaa561bb9fe44beab3bb2becbb
+./proc.h 1360 9097ce3109225b6ab9446d0442241604
+./reset.h 1021 645618c03ad3eabada220cb0483dc298
+./reset_ioctl.h 979 59f1b846014c184e33096de12eddf6a7
+./resetmain.c 11275 76e77845c68ffe14cfd2922538c5ce2a

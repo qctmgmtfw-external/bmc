@@ -1,0 +1,41 @@
+Source : reset
+Version : 2.2.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Vinay Tandon (vinayt@ami.com)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : reset, reset_driver_dev
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, libdbgout_dev, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : Reset common driver module.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : reset
+Config-Tag : Reset Manager Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : hw_reset
+Required : kernel, helper, DevNodes
+Description : Reset common driver binary package
+.
+
+Package : reset_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : Reset common driver development package.
+.
+

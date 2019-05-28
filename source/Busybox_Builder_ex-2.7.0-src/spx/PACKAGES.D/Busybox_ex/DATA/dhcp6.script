@@ -1,0 +1,34 @@
+#!/bin/sh
+
+interface=`grep 'iface eth' /conf/interfaces  | awk '{ print $2 }'`
+
+if [ -f  "/etc/dhcp-script" ]
+then
+    . /etc/dhcp-script
+    #echo "AMI DHCP6 script : dhcp.conf found."
+#else
+    #echo "AMI DHCP6 script : dhcp.conf not found.  The extend parameters will not use."
+fi
+
+#if [ -n "$SET_DHCP_PREIP6" ];then
+#    echo "AMI DHCP6 : Send requested address"
+#	REQ_PRE_IP="-R $SET_DHCP_PREIP6"
+#fi
+    echo " calling dhcp6c.... "
+#if [ -f  "/etc/dhcp-script" ];then
+#    dhcp6c -p /var/run/dhcp6c.$1.pid $1 $REQ_PRE_IP 
+#else
+
+#Remove dhcp6c_duid before dhcp6c create to avoid other process create it.
+rm /conf/dhcp6c_duid
+
+if [ -f "/conf/dhcp6c.dbg" ]
+then
+    dhcp6c -p /var/run/dhcp6c.$1.pid -D -f $1 &
+else 
+    dhcp6c -p /var/run/dhcp6c.$1.pid $1
+fi
+#fi
+
+exit 0
+

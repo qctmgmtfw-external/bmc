@@ -1,0 +1,226 @@
+diff -Naur busybox.org/networking/ifupdown.c busybox/networking/ifupdown.c
+--- busybox.org/networking/ifupdown.c	2013-06-29 10:58:06.000000000 -0400
++++ busybox/networking/ifupdown.c	2014-08-05 12:31:00.000000000 -0400
+@@ -399,7 +399,7 @@
+ # else
+ 	result = execute("ifconfig %iface%[[ media %media%]][[ hw %hwaddress%]][[ mtu %mtu%]] up", ifd, exec);
+ 	result += execute("ifconfig %iface% add %address%/%netmask%", ifd, exec);
+-	result += execute("[[route -A inet6 add ::/0 gw %gateway%[[ metric %metric%]]]]", ifd, exec);
++	result += execute("[[route -A inet6 add ::/0 gw %gateway%[[ metric %metric%]] %iface%]]", ifd, exec);
+ # endif
+ 	return ((result == 3) ? 3 : 0);
+ }
+@@ -413,6 +413,40 @@
+ # endif
+ }
+ 
++
++static int FAST_FUNC dhcp_up6(struct interface_defn_t *ifd, execfn *exec)
++{
++	int result = 0;
++    if (!execute("ifconfig %iface%[[ hw %hwaddress%]] up", ifd, exec))
++        return 0;
++
++    if (!(result = execute("dhcp6.script %iface%", ifd, exec))){
++    	return execute("dhcp6c -p /var/run/dhcp6c.%iface%.pid %iface% ", ifd, exec);
++    }else{
++        return (result);
++    }
++}
++
++static int FAST_FUNC dhcp_down6(struct interface_defn_t *ifd, execfn *exec)
++{
++   int result = 0;
++
++	result = execute(
++		"test -f /var/run/dhcp6c.%iface%.pid && "
++		"kill `cat /var/run/dhcp6c.%iface%.pid` 2>/dev/null",
++		ifd, exec);
++	usleep(100000);
++# if ENABLE_FEATURE_IFUPDOWN_IP
++	result= execute("ip link set %iface% down", ifd, exec);
++# else
++	result= execute("ifconfig %iface% down", ifd, exec);
++# endif
++   return (result);
++}
++
++
++
++
+ # if ENABLE_FEATURE_IFUPDOWN_IP
+ static int FAST_FUNC v4tunnel_up(struct interface_defn_t *ifd, execfn *exec)
+ {
+@@ -438,6 +472,8 @@
+ 	{ "static"   , static_up6      , static_down6    , },
+ 	{ "manual"   , manual_up_down6 , manual_up_down6 , },
+ 	{ "loopback" , loopback_up6    , loopback_down6  , },
++	{ "auto"	 , dhcp_up6		   , dhcp_down6		 , },
++	{ "autoconf" , dhcp_up6		   , dhcp_down6		 , },
+ };
+ 
+ static const struct address_family_t addr_inet6 = {
+@@ -507,8 +543,8 @@
+ 	/* result = execute("[[route del default gw %gateway% %iface%]]", ifd, exec); */
+ 	/* Bringing the interface down deletes the routes in itself.
+ 	   Otherwise this fails if we reference 'gateway' when using this from dhcp_down */
+-	result = 1;
+-	result += execute("ifconfig %iface% down", ifd, exec);
++	result = execute("ifconfig %iface% 0.0.0.0", ifd, exec);
++    result += execute("ifconfig %iface% down", ifd, exec);
+ # endif
+ 	return ((result == 2) ? 2 : 0);
+ }
+@@ -533,6 +569,11 @@
+ 		"pump -i %iface%[[ -h %hostname%]][[ -l %leasehours%]]",
+ 		"pump -i %iface% -k",
+ 	},
++
++ 	{ "dhcp4.script",    //AMI dhcp script
++        "dhcp4.script  %iface% [[-h %hostname%]] [[-l %clientid%]]",
++        "kill `cat /var/run/udhcpc.%iface%.pid` 2>/dev/null",
++    },  
+ 	{ "udhcpc",
+ 		"udhcpc " UDHCPC_CMD_OPTIONS " -p /var/run/udhcpc.%iface%.pid -i %iface%[[ -H %hostname%]][[ -c %client%]]"
+ 				"[[ -s %script%]][[ %udhcpc_opts%]]",
+@@ -564,6 +605,7 @@
+ # elif ENABLE_UDHCPC
+ static int FAST_FUNC dhcp_up(struct interface_defn_t *ifd, execfn *exec)
+ {
++	int rv;	
+ #  if ENABLE_FEATURE_IFUPDOWN_IP
+ 	/* ip doesn't up iface when it configures it (unlike ifconfig) */
+ 	if (!execute("ip link set[[ addr %hwaddress%]] %iface% up", ifd, exec))
+@@ -573,9 +615,14 @@
+ 	if (!execute("ifconfig %iface%[[ hw %hwaddress%]] up", ifd, exec))
+ 		return 0;
+ #  endif
+-	return execute("udhcpc " UDHCPC_CMD_OPTIONS " -p /var/run/udhcpc.%iface%.pid "
+-			"-i %iface%[[ -H %hostname%]][[ -c %client%]][[ -s %script%]][[ %udhcpc_opts%]]",
+-			ifd, exec);
++	if (!(rv = execute("dhcp4.script %iface% [[-h %hostname%]] [[-l %clientid%]]", ifd, exec)))
++	{
++		return execute("udhcpc " UDHCPC_CMD_OPTIONS " -p /var/run/udhcpc.%iface%.pid "
++				"-i %iface%[[ -H %hostname%]][[ -c %client%]][[ -s %script%]][[ %udhcpc_opts%]]",
++				ifd, exec);
++	}
++	else
++		return rv;
+ }
+ # else
+ static int FAST_FUNC dhcp_up(struct interface_defn_t *ifd UNUSED_PARAM,
+diff -Naur busybox.org/networking/udhcp/common.c busybox/networking/udhcp/common.c
+--- busybox.org/networking/udhcp/common.c	2013-06-29 10:58:06.000000000 -0400
++++ busybox/networking/udhcp/common.c	2014-08-01 14:31:44.183839407 -0400
+@@ -26,7 +26,7 @@
+ //	{ OPTION_IP | OPTION_LIST                 , 0x04 }, /* DHCP_TIME_SERVER   */
+ //	{ OPTION_IP | OPTION_LIST                 , 0x05 }, /* DHCP_NAME_SERVER   */
+ 	{ OPTION_IP | OPTION_LIST     | OPTION_REQ, 0x06 }, /* DHCP_DNS_SERVER    */
+-//	{ OPTION_IP | OPTION_LIST                 , 0x07 }, /* DHCP_LOG_SERVER    */
++	{ OPTION_IP | OPTION_LIST     | OPTION_REQ, 0x07 }, /* DHCP_LOG_SERVER    */
+ //	{ OPTION_IP | OPTION_LIST                 , 0x08 }, /* DHCP_COOKIE_SERVER */
+ 	{ OPTION_IP | OPTION_LIST                 , 0x09 }, /* DHCP_LPR_SERVER    */
+ 	{ OPTION_STRING_HOST          | OPTION_REQ, 0x0c }, /* DHCP_HOST_NAME     */
+diff -Naur busybox.org/networking/udhcp/common.h busybox/networking/udhcp/common.h
+--- busybox.org/networking/udhcp/common.h	2013-05-11 19:30:44.000000000 -0400
++++ busybox/networking/udhcp/common.h	2014-08-05 13:11:54.290237640 -0400
+@@ -131,6 +131,7 @@
+ //#define DHCP_NIS_DOMAIN       0x28
+ //#define DHCP_NIS_SERVER       0x29
+ //#define DHCP_NTP_SERVER       0x2a
++#define DHCP_VENDOR_INFO		0x2b
+ //#define DHCP_WINS_SERVER      0x2c
+ #define DHCP_REQUESTED_IP       0x32 /* sent by client if specific IP is wanted */
+ #define DHCP_LEASE_TIME         0x33
+diff -Naur busybox.org/networking/udhcp/dhcpc.c busybox/networking/udhcp/dhcpc.c
+--- busybox.org/networking/udhcp/dhcpc.c	2013-05-11 19:30:44.000000000 -0400
++++ busybox/networking/udhcp/dhcpc.c	2014-08-05 13:21:12.000000000 -0400
+@@ -39,6 +39,7 @@
+ 	"hostname\0"       Required_argument "H"
+ 	"fqdn\0"           Required_argument "F"
+ 	"interface\0"      Required_argument "i"
++	"interval\0"	   Required_argument "I"
+ 	"now\0"            No_argument       "n"
+ 	"pidfile\0"        Required_argument "p"
+ 	"quit\0"           No_argument       "q"
+@@ -81,8 +82,9 @@
+ 	OPT_x = 1 << 18,
+ 	OPT_f = 1 << 19,
+ 	OPT_B = 1 << 20,
++	OPT_I = 1 << 21,
+ /* The rest has variable bit positions, need to be clever */
+-	OPTBIT_B = 20,
++	OPTBIT_B = 21,
+ 	USE_FOR_MMU(             OPTBIT_b,)
+ 	IF_FEATURE_UDHCPC_ARPING(OPTBIT_a,)
+ 	IF_FEATURE_UDHCP_PORT(   OPTBIT_P,)
+@@ -1221,7 +1223,7 @@
+ int udhcpc_main(int argc UNUSED_PARAM, char **argv)
+ {
+ 	uint8_t *temp, *message;
+-	const char *str_V, *str_h, *str_F, *str_r;
++	const char *str_V, *str_h, *str_F, *str_r,*str_I;
+ 	IF_FEATURE_UDHCP_PORT(char *str_P;)
+ 	void *clientid_mac_ptr;
+ 	llist_t *list_O = NULL;
+@@ -1251,7 +1253,7 @@
+ 	/* O,x: list; -T,-t,-A take numeric param */
+ 	opt_complementary = "O::x::T+:t+:A+" IF_UDHCP_VERBOSE(":vv") ;
+ 	IF_LONG_OPTS(applet_long_options = udhcpc_longopts;)
+-	opt = getopt32(argv, "CV:H:h:F:i:np:qRr:s:T:t:SA:O:ox:fB"
++	opt = getopt32(argv, "CV:H:h:F:i:np:qRr:s:T:t:SA:O:ox:fBI:"
+ 		USE_FOR_MMU("b")
+ 		IF_FEATURE_UDHCPC_ARPING("a")
+ 		IF_FEATURE_UDHCP_PORT("P:")
+@@ -1264,6 +1266,7 @@
+ 		, &list_x
+ 		IF_FEATURE_UDHCP_PORT(, &str_P)
++	    , &str_I
+ 		IF_UDHCP_VERBOSE(, &dhcp_verbose)
+ 	);
+ 	if (opt & (OPT_h|OPT_H)) {
+ 		//msg added 2011-11
+@@ -1358,6 +1361,13 @@
+ 		logmode |= LOGMODE_SYSLOG;
+ 	}
+ 
++	if (opt & OPT_I) 
++       client_config.interval = atoi(str_I);
++    else
++           client_config.interval = 0;
++	printf("DHCP internal = %d\n",client_config.interval);
++
++
+ 	/* Make sure fd 0,1,2 are open */
+ 	bb_sanitize_stdio();
+ 	/* Equivalent of doing a fflush after every \n */
+@@ -1448,7 +1458,8 @@
+ 					/* broadcast */
+ 					send_discover(xid, requested_ip);
+ 					timeout = discover_timeout;
+-					packet_num++;
++					if (discover_retries != 0xFF)  /* 0xFF is keeping retry*/
++						packet_num++;
+ 					continue;
+ 				}
+  leasefail:
+@@ -1467,7 +1478,7 @@
+ 					goto ret;
+ 				}
+ 				/* wait before trying again */
+-				timeout = tryagain_timeout;
++				timeout = tryagain_timeout+client_config.interval *10;
+ 				packet_num = 0;
+ 				continue;
+ 			case REQUESTING:
+diff -Naur busybox.org/networking/udhcp/dhcpc.h busybox/networking/udhcp/dhcpc.h
+--- busybox.org/networking/udhcp/dhcpc.h	2013-06-29 10:58:06.000000000 -0400
++++ busybox/networking/udhcp/dhcpc.h	2014-08-01 12:31:07.871703556 -0400
+@@ -23,6 +23,7 @@
+ 
+ 	uint16_t first_secs;
+ 	uint16_t last_secs;
++	uint8_t	 interval;				/* Optional interval value for retry */
+ } FIX_ALIASING;
+ 
+ /* server_config sits in 1st half of bb_common_bufsiz1 */

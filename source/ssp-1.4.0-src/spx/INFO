@@ -1,0 +1,41 @@
+Source : ssp
+Version : 1.4.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : AdamLin (AdamLin@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : ssp, ssp_driver_dev
+Build-Depends : Crosscc, global_dev, helper_driver_dev, kernel_dev, rules, DevNodes
+Architecture : ALL
+Urgency : medium
+Description : This package contains the SSP common(hardware independent) driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : ssp
+Config-Tag : SSP Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel
+Required : helper, DevNodes
+Description : SSP common driver module
+.
+
+Package : ssp_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package contains SSP driver development header files.
+.
+

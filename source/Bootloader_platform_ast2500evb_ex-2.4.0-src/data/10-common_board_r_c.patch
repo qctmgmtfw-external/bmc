@@ -1,0 +1,314 @@
+--- uboot_old/common/board_r.c	2017-07-31 16:30:35.846695000 +0800
++++ uboot/common/board_r.c	2017-11-29 13:46:12.281069000 +0800
+@@ -69,6 +69,10 @@
+ #endif
+ #include <linux/compiler.h>
+ 
++#ifdef CONFIG_BOARDID_IN_EEPROM
++#include "ast_hw.h"
++#endif
++
+ DECLARE_GLOBAL_DATA_PTR;
+ 
+ ulong monitor_flash_len;
+@@ -712,6 +716,198 @@
+ }
+ 
+ #ifdef CONFIG_BOARDID_IN_EEPROM
++// Quanta ------ 
++#define BOARDID_S7D "06"
++#define UNLOCK_SCU() *((volatile ulong*) SCU_KEY_CONTROL_REG) = 0x1688A8A8
++#define LOCK_SCU() *((volatile ulong*) SCU_KEY_CONTROL_REG) = 0x00
++#define SCU_MISC_MULTI_PIN1_REG  	(AST_SCU_VA_BASE +  0x80)
++#define SCU_MISC_MULTI_PIN2_REG  	(AST_SCU_VA_BASE +  0x84)
++#define SCU_MISC_MULTI_PIN8_REG  	(AST_SCU_VA_BASE +  0xA4)
++#define GPIO_EFGH_DATA_REG			(AST_GPIO_VA_BASE + 0x20)
++#define GPIO_EFGH_DIR_REG			(AST_GPIO_VA_BASE + 0x24)
++#define GPIO_MNOP_DATA_REG			(AST_GPIO_VA_BASE + 0x78)
++#define GPIO_MNOP_DIR_REG			(AST_GPIO_VA_BASE + 0x7C)
++#define LPC_HOST_CTRL_REG0			(AST_LPC_VA_BASE + 0xA0)
++/**
++ *  S7D specific initialization
++ */
++ static int platform_s7d_init(void)
++ {
++	UNLOCK_SCU();
++
++	/* SCU2C Misc Control Register  */
++	ulong reg = *((volatile ulong*) SCU_MISC_CONTROL_REG);
++	reg = reg & ~(1<<29);	/** Enable gpioq7 */
++	reg = reg & ~(1<<1);	/** Enable gpioq6 */
++	*((volatile ulong*) SCU_MISC_CONTROL_REG) = reg;
++
++	reg = *((volatile ulong*) SCU_HW_STRAPPING_REG);
++	reg &= ~(1<<19);			/** enable gpioy2y3 */
++	reg &= ~(1<<13);			/** enable gpioi0123 */
++	*((volatile ulong*) SCU_HW_STRAPPING_REG) = reg;
++
++	reg = *((volatile ulong*) SCU_MISC_MULTI_PIN1_REG);
++	reg &= ~(1<<3);				/** enable gpioa3 */
++	reg &= ~(1<<20);			/** enable gpioe4 */
++	reg &= ~(1<<30);			/** enable gpiof6 */
++	*((volatile ulong*) SCU_MISC_MULTI_PIN1_REG) = reg;
++
++	reg = *((volatile ulong*) SCU_MISC_MULTI_PIN2_REG);
++	reg &= ~(1<<31);			/** enable gpiom7 */
++	reg &= ~(1<<30);			/** enable gpiom6 */
++	reg &= ~(1<<29);			/** enable gpiom5 */
++	reg &= ~(1<<24);			/** enable gpiom0 */
++	*((volatile ulong*) SCU_MISC_MULTI_PIN2_REG) = reg;
++
++	reg = *((volatile ulong*) SCU_MISC_MULTI_PIN3_REG);
++	reg &= ~(1 << 2);	/** disable pwm2 */
++	reg &= ~(1 << 3);	/** disable pwm3 */
++	reg &= ~(1 << 4);	/** disable pwm4 */
++	reg &= ~(1 << 5);	/** disable pwm5 */
++	reg &= ~(1 << 6);	/** disable pwm6 */
++	reg &= ~(1 << 7);	/** disable pwm7 */
++	reg &= ~(1<<30);			/** enable gpior6 */
++	reg &= ~(1<<31);			/** enable gpior7 */
++	*((volatile ulong*) SCU_MISC_MULTI_PIN3_REG) = reg;
++
++	reg = *((volatile ulong*) SCU_MISC_MULTI_PIN8_REG);
++	reg &= ~(1<<30);			/** enable gpioaa6 */
++	reg &= ~(1<<24);			/** enable gpioaa0 */
++	reg &= ~(1<<11);			/** enable gpioy3 */
++	reg &= ~(1<<10);			/** enable gpioy2 */
++	*((volatile ulong*) SCU_MISC_MULTI_PIN8_REG) = reg;
++
++	reg = *((volatile ulong*) LPC_HOST_CTRL_REG0);
++	reg &= ~(1<<0);				/** enable gpiof6 */
++	*((volatile ulong*) LPC_HOST_CTRL_REG0) = reg;
++
++	LOCK_SCU();
++	printf("[U-Boot]S7D platform init\n");
++
++	return 0;
++ }
++
++ /**
++  * Default initialization, for most of the projects
++  */
++static int platform_default_init(void)
++{
++	UNLOCK_SCU();
++	ulong reg = *((volatile ulong*) SCU_MISC_MULTI_PIN2_REG);
++	reg |= (1<<31);   /* Enable UART2 RXD1 or VPB9         */
++	reg |= (1<<30);   /* Enable UART2 TXD1 or VPB8         */
++	*((volatile ulong*) SCU_MISC_MULTI_PIN2_REG) = reg;
++
++	reg = *((volatile ulong*) GPIO_EFGH_DATA_REG);
++	reg &= ~(0x4000);			/** gpiof6 low */
++	*((volatile ulong*) GPIO_EFGH_DATA_REG) = reg;
++
++	reg = *((volatile ulong*) GPIO_EFGH_DIR_REG);
++	reg |= 0x4000;				/** gpiof6 output */
++	*((volatile ulong*) GPIO_EFGH_DIR_REG) = reg;
++
++	reg = *((volatile ulong*) GPIO_MNOP_DATA_REG);
++	reg |= 0x21;				/** gpiom0, m5 high */
++	*((volatile ulong*) GPIO_MNOP_DATA_REG) = reg;
++
++	reg = *((volatile ulong*) GPIO_MNOP_DIR_REG);
++	reg |= 0x21;				/** gpiom0,m5 output */
++	*((volatile ulong*) GPIO_MNOP_DIR_REG) = reg;
++
++	LOCK_SCU();
++
++	printf("[U-Boot]Default platform init\n");
++	return 0;
++}
++
++char boardid_str[8] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
++uchar fru_chksum = 0xff;
++
++int is_valid_fru(void)
++{
++	return fru_chksum == 0 ? 1 : 0;
++}
++
++int is_s7d_platform(void)
++{
++	char *s7dId = BOARDID_S7D;	/** s7d board id */
++	return is_valid_fru() && (boardid_str[0] == *s7dId && boardid_str[1] == *(s7dId+1)) ? 1 : 0;
++}
++
++/**
++ *  Run platform specific initialization here
++ */
++static int platform_init(char *boardStr)
++{
++	if (is_s7d_platform())
++		return platform_s7d_init();
++
++	return platform_default_init();
++}
++
++/**
++ * Recover the i2c bus of eeprom
++ * This is just another copy from ast_eth.c to avoid CONFIG_MACADDR_IN_EEPROM not defined
++ */
++#if defined(CONFIG_HARD_I2C) || defined(CONFIG_SOFT_I2C)
++#define CFG_I2C_CHANNEL_ID	CONFIG_SPX_FEATURE_GLOBAL_UBOOT_ENABLE_I2C_BUS /* channel number in PRJ */
++#define AST_I2C_CHANNEL_BASE ((CFG_I2C_CHANNEL_ID < 7)? 0x1E78A040 + (0x040 * (CFG_I2C_CHANNEL_ID)) : 0x1E78A300 + (0x040 * (CFG_I2C_CHANNEL_ID - 7)))
++#define I2C_FCR		(AST_I2C_CHANNEL_BASE + 0x00) /* function control register */
++#define I2C_CSR		(AST_I2C_CHANNEL_BASE + 0x14) /* command/status register */
++static int i2c_recovery(void)
++{
++	int i;
++	*((volatile unsigned long *) I2C_FCR) = 0;  //disable bus
++
++	for (i=0;i<8;i++)  //clear status
++	{
++		//clock low
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)&~(1<<12);
++		udelay(5);
++		//clock high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<12);
++		udelay(5);
++
++		if((*((volatile unsigned long *) I2C_CSR)&(1<<17))!=0)
++			break;
++	}
++
++	if(((*((volatile unsigned long *) I2C_CSR)&(1<<17))==0)||((*((volatile unsigned long *) I2C_CSR)&(1<<18))==0))
++	{
++		//force stop
++		//data low
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<15);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)&~(1<<14);
++		//clock high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<13);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<12);
++		//data high
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<15);
++		*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR)|(1<<14);
++		udelay(5);
++	}
++
++	//clock/data stop
++	*((volatile unsigned long *) I2C_CSR) = *((volatile unsigned long *) I2C_CSR) &~((1<<15)|(1<<13)); 
++	*((volatile unsigned long *) I2C_FCR) = 3;  //enable bus
++
++	printf("[U-Boot]Recover I2C bus:%d\n", CFG_I2C_CHANNEL_ID);
++
++	return 0;
++}
++#endif
++
++static int bus_recovery(void)
++{
++#if defined(CONFIG_HARD_I2C) || defined(CONFIG_SOFT_I2C)
++	return i2c_recovery();
++#else
++	return 0;
++#endif
++}
++
+ static int boardid_init (void)
+ {
+ 	int    i, offs, retry, ret = 0;
+@@ -727,6 +923,8 @@
+ 		while (++retry <= 3) {
+ 			if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, CFG_EEPROM_FRU_OFFSET, fru_buf, 8)) == 0)
+ 				break;
++
++			bus_recovery();
+ 		}
+ 		if (ret != 0)
+ 			break;
+@@ -747,6 +945,8 @@
+ 		while (++retry <= 3) {
+ 			if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, CFG_EEPROM_FRU_OFFSET+offs, fru_buf, 8)) == 0)
+ 				break;
++
++			bus_recovery();
+ 		}
+ 		if (ret != 0)
+ 			break;
+@@ -760,6 +960,8 @@
+ 			while (++retry <= 3) {
+ 				if ((ret = eeprom_read(CONFIG_SYS_EEPROM_ADDR, offs+i*8, fru_buf+i*8, 8)) == 0)
+ 					break;
++
++				bus_recovery();
+ 			}
+ 			if (ret != 0)
+ 				break;
+@@ -775,6 +977,8 @@
+ 		if (chksum != 0)
+ 			break;
+ 
++		fru_chksum = 0;
++
+ 		offs = 7 + (fru_buf[6] & 0x3F);  // Board Product Name
+ 		for (i = 0; i < 4; i++) {
+ 			offs += 1 + (fru_buf[offs] & 0x3F);
+@@ -795,23 +999,35 @@
+ 			break;
+ 		offs += 1;
+ 		memcpy(boardid_env, &fru_buf[offs], 2);
++		memcpy(boardid_str, &fru_buf[offs], 2);
+ 	} while (0);
+ 
+-	memcpy(boardid_tmp, getenv("boardid"), 2);
++	if (getenv("boardid"))	/** In case not found, return value would be null */
++	{
++		memcpy(boardid_tmp, getenv("boardid"), 2);	/** null source may cause a problem */
+ 	
++		if (memcmp(boardid_env, boardid_tmp, 2) != 0)
++		{
++			setenv("boardid", boardid_env);
++			saveenv();
++			memcpy(boardid_tmp, getenv("boardid"), 2);
++		}
+ 
+-	if (memcmp(boardid_env, boardid_tmp, 2) != 0)
++		platform_init(boardid_tmp);
++		puts("  BOARDID");	
++		printf (" :%s(Hex)\n",boardid_tmp);
++	}
++	else
+ 	{
+-		setenv("boardid", boardid_env);
+-		saveenv();
+-		memcpy(boardid_tmp, getenv("boardid"), 2);
++		platform_init(boardid_tmp);
++		printf ("BOARDID is not found\n");
+ 	}
+-		
+-	puts("  BOARDID");	
+-	printf (" :%s(Hex)\n",boardid_tmp);
++
+ 	return 0;
+ }
++// ------ Quanta
+ #endif
++
+ /*
+  * Over time we hope to remove these functions with code fragments and
+  * stub funtcions, and instead call the relevant function directly.
+@@ -980,6 +1196,12 @@
+ #ifdef CONFIG_BITBANGMII
+ 	initr_bbmii,
+ #endif
++
++#ifdef CONFIG_BOARDID_IN_EEPROM
++	INIT_FUNC_WATCHDOG_RESET
++	boardid_init,
++#endif
++
+ #ifdef CONFIG_CMD_NET
+ 	INIT_FUNC_WATCHDOG_RESET
+ 	initr_net,
+@@ -1016,7 +1238,7 @@
+ 	initr_modem,
+ #endif
+ #ifdef CONFIG_BOARDID_IN_EEPROM
+-	boardid_init,
++	//boardid_init,
+ #endif
+ 	run_main_loop,
+ };

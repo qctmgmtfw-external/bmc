@@ -1,0 +1,9 @@
+1. Create a raw BMP (Non-Rle) - 244 Color 640x480  - Bootlogo_244.bmp
+2. Convert BMP to PPM
+	   bmptoppm Bootlogo_244.bmp > Bootlogo_244.ppm.bin
+3. Convert to PPM ASCII Format
+		pnmnoraw Bootlogo_244.ppm.bin > Bootlogo.ppm
+
+Alternatively if you create a image > 244 colors (from step 1 and 2) you
+need to reduce the image to 244 color using 
+   	ppmquant Bootlogo_hi.ppm > Bootlogo_224.ppm  					

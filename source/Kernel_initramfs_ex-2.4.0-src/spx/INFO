@@ -1,0 +1,23 @@
+Source                   	:	Kernel_initramfs_ex
+Version : 2.4.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher  (vineshc@ami.com)
+License                  	:	GPL-V2
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	Kernel_initramfs_ex
+Build-Depends            	:	Kernel_Pristine_ex,Crosscc
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	Kernel Initramfs support
+.
+
+Package                  	:	Kernel_initramfs_ex
+Section                  	:	info
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	Kernel Initramfs support
+.
+

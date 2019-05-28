@@ -1,0 +1,43 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+	CWD %BUILD/%PACKAGE/data
+	INVOKE_MAKE
+	
+#Clean Source
+clean_source:
+	CWD %BUILD/%PACKAGE/data
+	INVOKE_MAKE clean
+	
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create usbe package
+build_package-usbe:
+	PACK_SPX ./ %BUILD/%PACKAGE/data/usbe.ko
+
+# Rules to create usbe_driver_dev package
+build_package-usbe_driver_dev:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/Module.symvers %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/usbe.ko %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/bot.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/bot_if.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/coreusb.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/descriptors.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/linux.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/mod_reg.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/setup.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/usb_core.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/usb_hw.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/scsi.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/usb_ioctl.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/usb_hw.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/iusb.h %TEMPDIR/%PACKAGE/tmp
+	COPY_FILE %BUILD/%PACKAGE/data/hid_usb.h %TEMPDIR/%PACKAGE/tmp
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+		
+	
+	
+	

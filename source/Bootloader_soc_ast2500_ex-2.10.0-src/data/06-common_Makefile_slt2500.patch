@@ -1,0 +1,10 @@
+--- uboot/common/Makefile	2016-07-27 13:43:09.588728436 +0800
++++ uboot/common/Makefile.new	2016-07-27 13:42:59.672686509 +0800
+@@ -248,6 +248,7 @@
+ COBJS-$(CONFIG_FIT_SIGNATURE) += image-sig.o
+ COBJS-y += memsize.o
+ COBJS-y += stdio.o
++COBJS-y += cmd_slt2500.o
+ 
+ 
+ COBJS	:= $(sort $(COBJS-y))

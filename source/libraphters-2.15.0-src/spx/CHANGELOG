@@ -1,0 +1,256 @@
+Package: libraphters (2.15.0); urgency = medium
+
+Abstract:
+	Fix For Fortify Issue
+
+Files Modified: data/dispatcher.c, data/response.c
+
+--Submitter: Nandakumar Nanjappan (nandakumarn@amiindia.co.in) Wed, 10 Feb 2016 12:11:54 HMT
+
+Package: libraphters (2.14.0); urgency = high
+
+Abstract:
+	Changing license from LGPL-V2 to LGPL-V3
+
+Files Added: spx/LICENSES/LICENSE.LGPL-3
+Files Deleted: spx/LICENSES/LICENSE.LGPL-V2.1
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Mon, 08 Feb 2016 18:51:18 EST
+
+Package: libraphters (2.13.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/libraphters/DATA/.keep, spx/PACKAGES.D/libraphters_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 22:03:27 EST
+
+Package: libraphters (2.12.0); urgency = medium
+
+Abstract:
+	Fix for Bleeding edge compilation error
+
+Files Modified: data/dispatcher.h
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Wed, 30 Dec 2015 19:58:05 IST
+
+Package: libraphters (2.11.0); urgency = high
+
+Abstract:
+	upload size fix
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Wed, 22 Jul 2015 21:59:58 EWT
+
+Package: libraphters (2.10.0); urgency = high
+
+Abstract:
+	accomodate long size
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Wed, 22 Jul 2015 11:42:29 EWT
+
+Package: libraphters (2.9.0); urgency = high
+
+Abstract:
+	Session expiry tickle restored at the end of call
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Mon, 18 May 2015 18:53:45 EDT
+
+Package: libraphters (2.8.0); urgency = high
+
+Abstract:
+	Fixing session expiry issue. concurrent file write due to frequent unnecessary save operation removed.
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 15 May 2015 19:25:02 EDT
+
+Package: libraphters (2.7.0); urgency = high
+
+Abstract:
+	Move session save after error to prevent from clearing existing values
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Wed, 13 May 2015 18:40:58 EDT
+
+Package: libraphters (2.6.0); urgency = high
+
+Abstract:
+	Workaround for missing session values
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Tue, 12 May 2015 20:00:30 EDT
+
+Package: libraphters (2.5.0); urgency = high
+
+Abstract:
+	Fix null CSRFTokens
+
+Files Modified: data/dispatcher.h, spx/INFO
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Mon, 11 May 2015 19:17:17 EDT
+
+Package: libraphters (2.4.0); urgency = security
+
+Abstract:
+	CSRF Token handled in authorization
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Tue, 05 May 2015 13:59:09 EDT
+
+Package: libraphters (2.3.0); urgency = high
+
+Abstract:
+	Added functionality for URL to max upload size mapping
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Garret Naegle (garretn@ami.com) Wed, 11 Feb 2015 11:39:16 EST
+
+Package: libraphters (2.2.0); urgency = high
+
+Abstract:
+	Max upload size handling
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Thu, 22 Jan 2015 20:35:47 EST
+
+Package: libraphters (2.1.0); urgency = critical
+
+Abstract:
+	Advanced regex parsing for easier url manipulation
+
+Files Deleted: spx/LICENSES/LICENSE.PublicDomain
+Files Modified: data/dispatcher.c, spx/INFO
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Mon, 22 Dec 2014 20:21:14 EST
+
+Package: libraphters (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 05:28:16 GMT
+
+Package: libraphters (1.11.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 11:08:41 HMT
+
+Package: libraphters (1.10.0); urgency = high
+
+Abstract:
+	Introduction of OUTPUT macros and fix header handling
+
+Files Added: spx/LICENSES/LICENSE.LGPL-V2.1
+Files Modified: data/dispatcher.h, spx/INFO
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Wed, 15 Oct 2014 18:02:58 EDT
+
+Package: libraphters (1.9.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:03:33 GMT
+
+Package: libraphters (1.8.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:15:37 GMT
+
+Package: libraphters (1.7.0); urgency = high
+
+Abstract:
+	Introduced Weak Pre and Post hooks for handlers
+
+Files Modified: data/Makefile, data/dispatcher.h, spx/INFO
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Mon, 15 Sep 2014 18:33:28 EDT
+
+Package: libraphters (1.6.0); urgency = medium
+
+Abstract:
+	Extending the session timeout period on each Authorized API call
+
+Files Modified: data/dispatcher.h
+
+--Submitter: manikandangm (manikandangm@amiindia.co.in) Tue, 24 Jun 2014 13:09:27 HMT
+
+Package: libraphters (1.5.0); urgency = high
+
+Abstract:
+	Implemented X-HTTP-Method-Override in REST framework
+
+Files Modified: data/request.c
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Wed, 19 Feb 2014 14:34:22 EST
+
+Package: libraphters (1.4.0); urgency = high
+
+Abstract:
+	safesystem dev file inclusion removed
+
+Files Modified: data/Makefile
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Thu, 19 Dec 2013 20:11:35 EST
+
+Package: libraphters (1.3.0); urgency = critical
+
+Abstract:
+	safesystem dependency removed
+
+Files Modified: data/Makefile
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Thu, 19 Dec 2013 20:03:00 EST
+
+Package: libraphters (1.2.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:24:20 EDT
+
+Package: libraphters (1.1.0); urgency = high
+
+Abstract:
+	Added support for multipart uploading handler
+
+Files Modified: data/dispatcher.h
+
+--Submitter: Chandrasekar R (chandrasekarr@amiindia.co.in) Tue, 25 Jun 2013 21:54:32 HMT
+
+Package: libraphters (1.0.0); urgency = new
+
+Abstract:
+	Library package for raphters.
+
+Files Added: data, data/AUTHORS, data/CMakeLists.txt, data/COPYING, data/COPYING.lesser, data/Makefile, data/RAPHT, data/README, data/dispatcher.c, data/dispatcher.h, data/error.h, data/raphters.c, data/raphters.h, data/request.c, data/request.h, data/response.c, data/response.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.PublicDomain, spx/PACKAGES.D, spx/PACKAGES.D/libraphters, spx/PACKAGES.D/libraphters/DATA, spx/PACKAGES.D/libraphters/SCRIPTS, spx/PACKAGES.D/libraphters/SCRIPTS/dev-install, spx/PACKAGES.D/libraphters_dev, spx/PACKAGES.D/libraphters_dev/DATA, spx/PACKAGES.D/libraphters_dev/SCRIPTS, spx/PACKAGES.D/libraphters_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: valantina (valantinaa@amiindia.co.in) Tue, 19 Mar 2013 21:28:19 HMT
+

@@ -1,0 +1,7 @@
+--- linux.pristine/drivers/mtd/maps/Makefile	2013-12-12 01:34:28.000000000 -0500
++++ linux-amiext/drivers/mtd/maps/Makefile	2014-02-03 15:10:59.935029098 -0500
+@@ -43,3 +43,4 @@
+ obj-$(CONFIG_MTD_GPIO_ADDR)	+= gpio-addr-flash.o
+ obj-$(CONFIG_MTD_LATCH_ADDR)	+= latch-addr-flash.o
+ obj-$(CONFIG_MTD_LANTIQ)	+= lantiq-flash.o
++obj-$(CONFIG_MTD_RACTRENDS)	+= ractrends.o fmhcore.o

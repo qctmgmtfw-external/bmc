@@ -1,0 +1,37 @@
+--- uboot/common/cmd_flash.c.old	2016-07-27 13:47:38.386862588 +0800
++++ uboot/common/cmd_flash.c	2016-07-30 22:12:05.893208398 +0800
+@@ -327,6 +327,34 @@
+ 	return 0;
+ }
+ 
++extern int flash_status(int bank, unsigned char *status, int dir);
++
++static int do_flstatus(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
++{
++    unsigned char status;
++    unsigned long tmp;
++    int ret;
++
++    if (argc < 2) {
++        ret = flash_status(0, &status, 0);
++    }
++    else {
++        tmp = simple_strtoul(argv[1], NULL, 16);
++        status =(unsigned char)(tmp & 0xff);
++        ret = flash_status(0, &status, 1);
++    }
++    printf("ret: %d\nstatus: %02X\n", ret, status);
++    
++    return 0;
++}
++
++U_BOOT_CMD(
++	flstatus,    2,    1,    do_flstatus,
++	"print flash status byte",
++	"\n    - print status of 1st bank\n"
++	"flstatus\n    - print status of 1st bank"
++);
++
+ static int do_flerase(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
+ {
+ #ifndef CONFIG_SYS_NO_FLASH

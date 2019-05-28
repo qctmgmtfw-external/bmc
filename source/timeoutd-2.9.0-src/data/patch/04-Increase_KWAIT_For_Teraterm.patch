@@ -1,0 +1,11 @@
+--- timeoutd_orig/timeoutd.c	2013-12-18 15:49:47.055489879 +0530
++++ timeoutd/timeoutd.c	2013-12-18 15:40:13.859478885 +0530
+@@ -118,7 +118,7 @@
+ #define	DAYMSG		2
+ #define	NOLOGINMSG	3
+ 
+-#define KWAIT		5  /* Time to wait after sending a kill signal */
++#define KWAIT		10  /* Time to wait after sending a kill signal */
+ 
+ char	*limit_names[] = {"idle", "session", "daily", "nologin"};
+ 

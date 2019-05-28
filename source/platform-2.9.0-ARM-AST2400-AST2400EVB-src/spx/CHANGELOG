@@ -1,0 +1,180 @@
+Package: platform (2.9.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/platform/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 22:45:21 EST
+
+Package: platform (2.8.0); urgency = medium
+
+Abstract:
+	Removed OEM platform initialization code.
+
+Files Modified: data/platform_ast2400evb.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 26 Feb 2015 21:26:55 HMT
+
+Package: platform (2.7.0); urgency = medium
+
+Abstract:
+	Fixed Build Error.
+
+Files Modified: data/platform_ast2400evb.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 11 Feb 2015 18:41:53 HMT
+
+Package: platform (2.6.0); urgency = medium
+
+Abstract:
+	Fixed proc file read operation in kernel 3.x.
+
+Files Modified: data/platform_ast2400evb.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 10 Feb 2015 22:18:04 HMT
+
+Package: platform (2.5.0); urgency = medium
+
+Abstract:
+	Fixed Build Error.
+
+Files Modified: data/platform_ast2400evb.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 10 Feb 2015 19:39:54 HMT
+
+Package: platform (2.4.0); urgency = medium
+
+Abstract:
+	Fixed Build error for 3.X kernel.
+
+Files Modified: data/platform_ast2400evb.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 10 Feb 2015 15:13:11 HMT
+
+Package: platform (2.3.0); urgency = low
+
+Abstract:
+	Fixed conditional compilation
+
+Files Modified: data/platform_ast2400evb.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Tue, 13 Jan 2015 20:42:46 HMT
+
+Package: platform (2.2.0); urgency = medium
+
+Abstract:
+	Added Platform Initialization for OEM Platform.
+
+Files Modified: data/platform_ast2400evb.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 13 Jan 2015 19:21:37 HMT
+
+Package: platform (2.1.0); urgency = medium
+
+Abstract:
+	Enable SD/eMMC card slot #2.
+
+Files Modified: data/platform_ast2400evb.c, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 10 Jan 2015 16:18:01 HMT
+
+Package: platform (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:06:45 GMT
+
+Package: platform (1.9.0); urgency = medium
+
+Abstract:
+	INFO file for SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: shravan (shravan@amiindia.co.in) Fri, 17 Oct 2014 17:49:43 HMT
+
+Package: platform (1.8.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:35:52 GMT
+
+Package: platform (1.7.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:48:08 GMT
+
+Package: platform (1.6.0); urgency = high
+
+Abstract:
+	Upgrading Kernel from 3.4.74 to 3.14.17
+
+Files Modified: data/platform_ast2400evb.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 29 Aug 2014 19:42:49 GMT
+
+Package: platform (1.5.0); urgency = low
+
+Abstract:
+	Adding entry to /etc/modules
+
+Files Modified: spx/PACKAGES.D/platform/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Wed, 13 Aug 2014 18:05:52 GMT
+
+Package: platform (1.4.0); urgency = medium
+
+Abstract:
+	Enable the PWMATCAH0 when module initial, EIP177080.
+
+Files Modified: data/platform_ast2400evb.c, spx/INFO
+
+--Submitter: terrychen (terrychen@ami.com.tw) Tue, 05 Aug 2014 16:16:30 CST
+
+Package: platform (1.3.0); urgency = low
+
+Abstract:
+	Load module into proper directory
+
+Files Modified: spx/PACKAGES.D/platform/SCRIPTS/dev-install
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 05 Feb 2014 18:06:27 EST
+
+Package: platform (1.2.0); urgency = medium
+
+Abstract:
+	Adding DevNodes to Build-Depends and Required fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 03 Oct 2013 23:25:09 EDT
+
+Package: platform (1.1.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:46:57 EDT
+
+Package: platform (1.0.0); urgency = new
+
+Abstract:
+	This package contains the platform-specific hardware initialization module for AST2400EVB.
+
+Files Added: data, data/Makefile, data/platform_ast2400evb.c, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/platform, spx/PACKAGES.D/platform/DATA, spx/PACKAGES.D/platform/SCRIPTS, spx/PACKAGES.D/platform/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Cheng-Chia,Yang (ChiaYang@ami.com.tw) Tue, 23 Oct 2012 15:24:30 CST
+

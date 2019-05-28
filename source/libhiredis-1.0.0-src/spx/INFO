@@ -1,0 +1,32 @@
+Source : libhiredis
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : Quanta
+Maintainer : Shawn Huang (Shawn.Huang@quantatw.com)
+License : PublicDomain
+Source-Location : https://github.com/redis/hiredis
+Source-Version : 0.13.3
+Builds : libhiredis
+Architecture : ALL
+Urgency : new
+Description : C liberary for Redis-client
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libhiredis
+Config-Tag : libhiredis
+Section : lib
+License : OPENSOURCE
+Group : LIBRARY
+Essential : NO
+Description : c redis-client library.
+.
+

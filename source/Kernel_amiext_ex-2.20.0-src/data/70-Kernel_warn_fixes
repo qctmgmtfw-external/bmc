@@ -1,0 +1,24 @@
+diff -Naur linux-3.14.17-ami/fs/aio.c linux-3.14.17-ami.withoutfixes/fs/aio.c
+--- linux-3.14.17-ami/fs/aio.c	2014-08-22 12:21:29.595229996 -0400
++++ linux-3.14.17-ami.withfixes/fs/aio.c	2014-08-22 12:19:03.235227248 -0400
+@@ -1303,7 +1303,7 @@
+ {
+ 	struct file *file = req->ki_filp;
+ 	ssize_t ret;
+-	unsigned long nr_segs;
++	unsigned long nr_segs =0;
+ 	int rw;
+ 	fmode_t mode;
+ 	aio_rw_op *rw_op;
+diff -Naur linux-3.14.17-ami/net/netfilter/nfnetlink.c linux-3.14.17-ami.withoutfixes/net/netfilter/nfnetlink.c
+--- linux-3.14.17-ami/net/netfilter/nfnetlink.c	2014-08-22 12:21:30.683230016 -0400
++++ linux-3.14.17-ami.withfixes/net/netfilter/nfnetlink.c	2014-08-22 12:19:07.059227320 -0400
+@@ -360,7 +360,7 @@
+ static void nfnetlink_rcv(struct sk_buff *skb)
+ {
+ 	struct nlmsghdr *nlh = nlmsg_hdr(skb);
+-	struct net *net = sock_net(skb->sk);
++	//struct net *net = sock_net(skb->sk);
+ 	int msglen;
+ 
+ 	if (nlh->nlmsg_len < NLMSG_HDRLEN ||

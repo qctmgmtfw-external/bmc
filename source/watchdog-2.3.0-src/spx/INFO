@@ -1,0 +1,41 @@
+Source : watchdog
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Seires Lee (SeiresLee@ami.com.tw)
+License : GPL-V2
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : watchdog, watchdog_driver_dev
+Build-Depends : Crosscc, helper_driver_dev, kernel_dev, rules, global_dev, DevNodes, libwatchdog_dev, libwatchdog
+Architecture : ALL
+Urgency : medium
+Description : watchdog Common Device Driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : watchdog
+Config-Tag : Watchdog Device Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel, hw_watchdog
+Required : helper, DevNodes
+Description : watchdog common driver
+.
+
+Package : watchdog_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : watchdog common driver development package
+.
+

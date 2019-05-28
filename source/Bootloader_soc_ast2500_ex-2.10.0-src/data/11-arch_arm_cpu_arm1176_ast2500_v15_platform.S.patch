@@ -1,0 +1,64 @@
+--- uboot/arch/arm/cpu/arm1176/ast2500/platform.S.old	2017-04-19 15:52:47.096552253 +0800
++++ uboot/arch/arm/cpu/arm1176/ast2500/platform.S	2017-04-19 17:01:45.048596635 +0800
+@@ -17,8 +17,8 @@
+  *
+  * Gary Hsu, <gary_hsu@aspeedtech.com>
+  *
+- * Version     : 14
+- * Release date: 2016.11.07
++ * Version     : 15
++ * Release date: 2017.04.13
+  *
+  * Priority of fix item:
+  * [P1] = critical
+@@ -68,6 +68,8 @@
+  *    |2016.09.06 : 2.[P1] Enable full mask setting for first SOC reset, since the coverage of original default setting is not enough
+  * V14|2016.10.25 : 1.[P2] Change Ron manual calibration to default OFF, customer can enable it to do fine-tuning of the Vix issue
+  *    |2016.11.07 : 2.[P3] Add log information of DDR4 PHY Vref training
++ * V15|2017.04.06 : 1.[P1] Modify USB portA initial sequence, this is to prevent DMA lock condition of USB Virtual Hub device for some chips.
++ *    |2017.04.13 : 2.[P2] Add initial sequence for LPC controller
+  *    |           :    Note: Read timing report is only a reference, it is not a solid rule for stability.
+  *
+  * Optional define variable
+@@ -103,8 +105,8 @@
+   Free registers:
+   r0, r1, r2, r3, r6, r7, r8, r9, r10, r11
+  ******************************************************************************/
+-#define ASTMMC_INIT_VER      0x0E                @ 8bit verison number
+-#define ASTMMC_INIT_DATE     0x20161107          @ Release date
++#define ASTMMC_INIT_VER      0x0F                @ 8bit verison number
++#define ASTMMC_INIT_DATE     0x20170413          @ Release date
+ 
+ /******************************************************************************
+   BMC side DDR IO driving manual mode fine-tuning, used to improve CK/CKN Vix violation.
+@@ -329,6 +331,12 @@
+     b     bypass_first_reset
+ 
+ start_first_reset:
++    ldr   r0, =0x1e789130                        @ Clear LPC interrupt
++    ldr   r1, =0x00000080
++    str   r1, [r0]
++    ldr   r0, =0x1e789138                        @ Clear LPC interrupt
++    ldr   r1, =0x00010198
++    str   r1, [r0]
+     ldr   r0, =0x1e62009c                        @ clear software strap flag for doing again after reset
+     ldr   r1, =0xAEEDFC20
+     str   r1, [r0]
+@@ -393,6 +401,9 @@
+     ldr   r1, [r0]
+     orr   r1, r1, r2
+     str   r1, [r0]
++    ldr   r0, =0x1e6e2090                        @ set portA as host mode
++    ldr   r1, =0x2000A000
++    str   r1, [r0]
+     ldr   r0, =0x1e6e2094                        @ set portB as host mode
+     ldr   r1, =0x00004000
+     str   r1, [r0]
+@@ -2182,6 +2193,7 @@
+     ldr   r0, =0x1e6e2090                        @ Enable MAC interface pull low
+     ldr   r1, [r0]
+     bic   r1, r1, #0x0000F000
++    bic   r1, r1, #0x20000000                    @ Set USB portA as Device mode
+     str   r1, [r0]
+ 
+ /* Test - DRAM initial time */

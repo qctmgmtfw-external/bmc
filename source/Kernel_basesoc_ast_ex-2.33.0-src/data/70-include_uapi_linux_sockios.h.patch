@@ -1,0 +1,10 @@
+--- linux/include/uapi/linux/sockios.h	2015-07-02 20:38:06.188151519 +0800
++++ linux.new/include/uapi/linux/sockios.h	2015-07-02 20:40:43.988153212 +0800
+@@ -129,6 +129,7 @@
+ #define SIOCGHWTSTAMP	0x89b1		/* get config			*/
+ 
+ /* Device private ioctl calls */
++#define SIOCGBCTPKTNUM	0x89C0		/* Quanta-Get Broardcast flag */
+ 
+ /*
+  *	These 16 ioctls are available to devices via the do_ioctl() device

@@ -1,0 +1,132 @@
+--- uboot/common/board_r.c	2018-06-28 10:34:51.092692463 +0800
++++ uboot/common/board_r.c.new	2018-07-04 14:42:52.054594657 +0800
+@@ -729,8 +729,14 @@
+ #define BOARDID_S5SF   "0E"
+ #define BOARDID_S5BA  "12"
+ #define BOARDID_S5E  "17"
+-
+-
++#define BOARDID_S5L01 "18"
++#define BOARDID_S5L23 "19"
++#define BOARDID_S5L45 "1a"
++#define BOARDID_S5L67 "1b"
++#define BOARDID_S5L89 "1c"
++#define BOARDID_S5L045 "1A"
++#define BOARDID_S5L067 "1B"
++#define BOARDID_S5L089 "1C"
+ 
+ 
+ 
+@@ -919,6 +925,60 @@
+ 	return 0;
+ }
+ #endif
++
++static int platform_s5l_init(void)
++{
++	UNLOCK_SCU();
++
++	*((volatile unsigned long *) 0x1e6e0240)=0x84000002;
++    
++	/* 0x1e6e2084(SCU84)*/
++	ulong reg = *((volatile ulong*) SCU_MISC_MULTI_PIN2_REG);
++	reg &= ~(1 << 30);	/** enable gpiom6(disable UART2 RXD1),diff as S5T */
++	reg &= ~(1 << 31);	/** enable gpiom7(disable UART2 RXD1),diff as S5T */
++	*((volatile ulong*) SCU_MISC_MULTI_PIN2_REG) = reg;
++
++	/* 0x1e6e2088(SCU88)*/
++    	reg = *((volatile ulong*) SCU_MISC_MULTI_PIN3_REG);
++	reg &= ~(1 << 6);	/** enable gpioN6(disable pwm6) */
++	reg &= ~(1 << 7);	/** enable gpioN7(disable pwm7) */
++	reg &= ~(1 << 30);	/** enable gpior6 */
++	reg &= ~(1 << 31);	/** enable gpior7 */
++	*((volatile ulong*) SCU_MISC_MULTI_PIN3_REG) = reg;
++
++	/*0x1e780000(GPIO)*/
++	reg = *((volatile ulong*) (AST_GPIO_BASE + 0x20 + 0x04)); 	/* Dir : GPIOH, GPIOG, GPIOF, GPIOE */
++        reg |= (1 << 14);						/*bit 14 = 1 >> F6=OUTPUT*/
++	*((volatile ulong*) (AST_GPIO_BASE + 0x20 + 0x04)) = reg;
++
++	reg = *((volatile ulong*) (AST_GPIO_BASE + 0x78));		/* Data: GPIOP, GPIOO, GPION, GPIOM */
++	reg &= ~(1 << 5);						/*bit 5 = 0 >> M5 = 0*/
++	reg |= (1 << 28);						/*bit 28 = 1 >> P4 = 1*/
++	*((volatile ulong*) (AST_GPIO_BASE + 0x78)) = reg;
++
++	reg = *((volatile ulong*) (AST_GPIO_BASE + 0x78 + 0x04));	/* Dir : GPIOP, GPIOO, GPION, GPIOM */
++	reg |= (1);							/*bit 0 = 1 >> M0 = OUTPUT*/
++	reg |= (1 << 28);						/*bit 28 = 1 >> P4 = OUTPUT*/
++	*((volatile ulong*) (AST_GPIO_BASE + 0x78 + 0x04)) = reg;
++
++	reg = *((volatile ulong*) (AST_GPIO_BASE + 0x80 + 0x04));	/* Dir : GPIOT, GPIOS, GPIOR, GPIOQ */
++	reg &= ~(1 << 20);						/*bit 20 = 0 >> S4 = INPUT*/
++	reg &= ~(1 << 21);						/*bit 21 = 0 >> S5 = INPUT*/
++	reg &= ~(1 << 22);						/*bit 22 = 0 >> S6 = INPUT*/
++	*((volatile ulong*) (AST_GPIO_BASE + 0x80 + 0x04)) = reg;
++
++	reg = *((volatile ulong*) (AST_GPIO_BASE + 0x1E0 + 0x04));	/* Dir :GPIOAB, GPIOAA, GPIOZ, GPIOY*/
++	reg &= ~(1 << 12);						/*bit 12 = 0 >> Z4 = INPUT*/
++	*((volatile ulong*) (AST_GPIO_BASE + 0x1E0 + 0x04)) = reg;
++
++	/*enable PWM */
++	*((volatile unsigned long *) (AST_PWM_FAN_BASE + 0x40))=0x00000300;/*enable PWM, and set PWM E/F to type M */
++
++	LOCK_SCU();
++	printf("[U-Boot]S5L platform init\n");
++
++	return 0;
++}
+  /**
+   * Default initialization, for most of the projects
+   */
+@@ -1065,7 +1125,29 @@
+ }
+ #endif
+ 
++int is_s5l_platform(void)
++{
++    int result=0;
++    char *id1 = BOARDID_S5L01; //"18"
++    char *id2 = BOARDID_S5L23; //"19"
++    char *id3 = BOARDID_S5L45; //"1a"	
++    char *id4 = BOARDID_S5L67; //"1b"	
++    char *id5 = BOARDID_S5L89; //"1c"
++    char *id6 = BOARDID_S5L045; //"1A"
++    char *id7 = BOARDID_S5L067; //"1B"
++    char *id8 = BOARDID_S5L089; //"1C"
++
++    result  = (boardid_str[0] == *id1 && boardid_str[1] == *(id1+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id2 && boardid_str[1] == *(id2+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id3 && boardid_str[1] == *(id3+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id4 && boardid_str[1] == *(id4+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id5 && boardid_str[1] == *(id5+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id6 && boardid_str[1] == *(id6+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id7 && boardid_str[1] == *(id7+1)) ? 1 : 0;
++    result |= (boardid_str[0] == *id8 && boardid_str[1] == *(id8+1)) ? 1 : 0;
+ 
++    return is_valid_fru() && result;
++}
+ 
+ 
+ 
+@@ -1103,7 +1185,7 @@
+     else if (is_s5t_platform())
+     {
+ 
+-        platform_s5t_init();
++        return platform_s5t_init();
+         
+     }
+     else if (is_s5ba_platform())
+@@ -1116,6 +1198,12 @@
+ 	{
+ 		platform_s5e_init();
+ 	}
++    else if (is_s5l_platform())
++    {
++
++        return platform_s5l_init();
++        
++    }
+ 
+ 
+ 

@@ -1,0 +1,202 @@
+./bin/ip
+#./bin/egrep
+#./bin/grep
+./bin/ping6
+#./bin/false
+#./usr/bin/logger
+./bin/tar
+
+./bin/ps
+./usr/bin/ssh-keygen
+./usr/bin/gawk
+./usr/bin/getent
+./usr/bin/bc
+
+
+./sbin/start-stop-daemon
+./sbin/klogd		:OPTIONAL
+./sbin/mii-tool
+./sbin/MAKEDEV
+./sbin/init
+./usr/sbin/rsyslogd | ./sbin/syslogd
+./sbin/reboot
+./sbin/shutdown
+
+./usr/sbin/logrotate
+./usr/sbin/cron
+./usr/sbin/sshd
+./usr/sbin/flash_erase
+./sbin/ethtool
+
+
+./usr/share/zoneinfo/Etc/GMT+12
+./usr/share/zoneinfo/Etc/GMT+11
+./usr/share/zoneinfo/Etc/GMT+10
+./usr/share/zoneinfo/Etc/GMT+9
+./usr/share/zoneinfo/Etc/GMT+8
+./usr/share/zoneinfo/Etc/GMT+7
+./usr/share/zoneinfo/Etc/GMT+6
+./usr/share/zoneinfo/Etc/GMT+5
+./usr/share/zoneinfo/Etc/GMT+4
+./usr/share/zoneinfo/Etc/GMT+3
+./usr/share/zoneinfo/Etc/GMT+2
+./usr/share/zoneinfo/Etc/GMT+1
+./usr/share/zoneinfo/Etc/GMT-0
+./usr/share/zoneinfo/Etc/GMT-1
+./usr/share/zoneinfo/Etc/GMT-2
+./usr/share/zoneinfo/Etc/GMT-3
+./usr/share/zoneinfo/Etc/GMT-4
+./usr/share/zoneinfo/Etc/GMT-5
+./usr/share/zoneinfo/Etc/GMT-6
+./usr/share/zoneinfo/Etc/GMT-7
+./usr/share/zoneinfo/Etc/GMT-8
+./usr/share/zoneinfo/Etc/GMT-9
+./usr/share/zoneinfo/Etc/GMT-10
+./usr/share/zoneinfo/Etc/GMT-11
+./usr/share/zoneinfo/Etc/GMT-12
+
+
+./lib/ld-linux.so.3 	 | ./lib/ld-linux.so.2	 | ./lib/ld-linux-x86-64.so.2	| ./lib64/ld-linux-x86-64.so.2
+./lib/libproc-3.2.8.so	 | ./lib/%MULTI_ARCH_LIB%/libprocps.so.0 | ./lib/%MULTI_ARCH_LIB%/libprocps.so.3
+
+./lib/%MULTI_ARCH_LIB%/librt.so.1				
+./lib/%MULTI_ARCH_LIB%/libcrypt.so.1 			
+./lib/%MULTI_ARCH_LIB%/libpthread.so.0 		
+./lib/%MULTI_ARCH_LIB%/libresolv.so.2 		
+./lib/%MULTI_ARCH_LIB%/libc.so.6 				
+./lib/%MULTI_ARCH_LIB%/libdl.so.2 			
+./lib/%MULTI_ARCH_LIB%/libm.so.6 				
+./lib/%MULTI_ARCH_LIB%/libnsl.so.1 			
+./lib/%MULTI_ARCH_LIB%/libutil.so.1 			
+./lib/%MULTI_ARCH_LIB%/libnss_compat.so.2 	
+./lib/%MULTI_ARCH_LIB%/libnss_dns.so.2 		
+./lib/%MULTI_ARCH_LIB%/libnss_files.so.2 		
+./lib/%MULTI_ARCH_LIB%/libcap.so | ./lib/%MULTI_ARCH_LIB%/libcap.so.2
+./lib/%MULTI_ARCH_LIB%/libsepol.so.1
+./lib/%MULTI_ARCH_LIB%/libattr.so.1
+./lib/%MULTI_ARCH_LIB%/libselinux.so.1
+./lib/%MULTI_ARCH_LIB%/libkeyutils.so.1  
+./lib/%MULTI_ARCH_LIB%/libcom_err.so.2
+./lib/%MULTI_ARCH_LIB%/libwrap.so.0
+./lib/%MULTI_ARCH_LIB%/libuuid.so.1
+./lib/%MULTI_ARCH_LIB%/libpopt.so.0
+./lib/%MULTI_ARCH_LIB%/libblkid.so.1
+./lib/%MULTI_ARCH_LIB%/libgcc_s.so.1
+./lib/%MULTI_ARCH_LIB%/libpcre.so.3		: OPTIONAL
+./lib/%MULTI_ARCH_LIB%/libreadline.so.6		: OPTIONAL
+./lib/%MULTI_ARCH_LIB%/security/pam_env.so
+./lib/%MULTI_ARCH_LIB%/security/pam_unix.so
+./lib/%MULTI_ARCH_LIB%/security/pam_limits.so
+./lib/%MULTI_ARCH_LIB%/security/pam_nologin.so
+./lib/%MULTI_ARCH_LIB%/security/pam_unix.so
+./lib/%MULTI_ARCH_LIB%/security/pam_unix.so
+./lib/%MULTI_ARCH_LIB%/security/pam_limits.so
+./lib/%MULTI_ARCH_LIB%/security/pam_env.so
+./lib/%MULTI_ARCH_LIB%/security/pam_nologin.so
+
+#./lib/lsb/init-functions
+./lib/init/mount-functions.sh
+./lib/init/vars.sh
+
+./usr/lib/%MULTI_ARCH_LIB%/libsigsegv.so.2		: OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/libmpfr.so.4		: OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/libgmp.so		: OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/libgmp.so.10		: OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/libtinfo.so		: OPTIONAL
+./lib/%MULTI_ARCH_LIB%/libaudit.so.1		: OPTIONAL
+./lib/%MULTI_ARCH_LIB%/libkmod.so.2		: OPTIONAL
+
+./usr/lib/libopts.so.25 | ./usr/lib/%MULTI_ARCH_LIB%/libopts.so.25
+./usr/lib/libsigsegv.so.2		: OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/libssl.so
+./usr/lib/%MULTI_ARCH_LIB%/libz.so	: OPTIONAL
+./usr/lib/%MULTI_ARCH_LIB%/libz.so.1	| ./lib/%MULTI_ARCH_LIB%/libz.so.1
+./usr/lib/%MULTI_ARCH_LIB%/libcrypto.so
+./usr/lib/%MULTI_ARCH_LIB%/libpam.so
+./usr/lib/%MULTI_ARCH_LIB%/libpam_misc.so
+./usr/lib/%MULTI_ARCH_LIB%/libp11-kit.so
+./usr/lib/%MULTI_ARCH_LIB%/libp11-kit.so.0
+
+#Kerberos Files needed for SSH
+./usr/lib/%MULTI_ARCH_LIB%/libgssapi_krb5.so
+./usr/lib/%MULTI_ARCH_LIB%/libgssapi_krb5.so.2
+./usr/lib/%MULTI_ARCH_LIB%/libk5crypto.so
+./usr/lib/%MULTI_ARCH_LIB%/libk5crypto.so.3
+./usr/lib/%MULTI_ARCH_LIB%/libkrb5support.so
+./usr/lib/%MULTI_ARCH_LIB%/libkrb5support.so.0
+./usr/lib/%MULTI_ARCH_LIB%/libkrb5.so
+./usr/lib/%MULTI_ARCH_LIB%/libkrb5.so.3
+
+
+#rsyslog files needed
+./usr/lib/rsyslog/lmnet.so          :OPTIONAL
+./usr/lib/rsyslog/imklog.so         :OPTIONAL
+./usr/lib/rsyslog/lmzlibw.so        :OPTIONAL
+./usr/lib/rsyslog/immark.so         :OPTIONAL
+./usr/lib/rsyslog/imuxsock.so       :OPTIONAL
+./usr/lib/rsyslog/lmnetstrms.so     :OPTIONAL
+./usr/lib/rsyslog/lmtcpclt.so       :OPTIONAL
+./usr/lib/rsyslog/lmnsd_ptcp.so     :OPTIONAL
+
+#USB deb library
+./usr/lib/%MULTI_ARCH_LIB%/libusb.so                 :OPTIONAL
+
+#Block device dev library
+./usr/lib/%MULTI_ARCH_LIB%/libblkid.so               :OPTIONAL
+
+#UDEV dev library
+./usr/lib/%MULTI_ARCH_LIB%/libudev.so                :OPTIONAL
+
+#./etc/group 						:	DEFCONFIG
+#./etc/hosts							:	DEFCONFIG
+./etc/hosts.allow					:	DEFCONFIG
+./etc/hosts.deny					:	DEFCONFIG
+#./etc/network/interfaces			:	DEFCONFIG
+
+./etc/syslog.conf| ./etc/rsyslog.conf			:	DEFCONFIG
+./etc/pam.conf
+./etc/login.defs
+./etc/fstab
+./etc/services
+./etc/inittab
+./etc/host.conf
+
+./etc/security/access.conf
+./etc/security/pam_env.conf
+./etc/security/time.conf
+./etc/security/group.conf
+./etc/security/limits.conf
+
+# Needed for nsupdate
+#./etc/network/if-up.d/95-up-nsupdate
+#./etc/network/if-down.d/05-down-nsupdate
+#./etc/init.d/nsupdate.sh
+#./etc/network.conf			:	DEFCONFIG
+# /etc/network/network.conf -> /conf/network.conf
+
+./etc/init.d/rcS
+./etc/init.d/single
+./etc/init.d/reboot
+#./etc/init.d/sendsigs
+./etc/init.d/cron
+./etc/init.d/umountfs
+./etc/init.d/hostname.sh
+./etc/init.d/sysklogd |  ./etc/init.d/rsyslog
+./etc/init.d/halt
+./etc/init.d/rc
+./etc/init.d/mountkernfs.sh
+
+./etc/logrotate.conf
+#./etc/ssh/sshd_config		:	DEFCONFIG
+./etc/ssh/moduli
+#./etc/nsswitch.conf
+
+#./etc/pam.d/login
+#./etc/pam.d/other
+#./etc/pam.d/sshd
+./etc/sysctl.conf
+./etc/protocols
+./etc/default/rcS
+./etc/default/ssh
+./etc/default/devpts
+./etc/default/stunnel4

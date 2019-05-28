@@ -1,0 +1,51 @@
+--- linux/drivers/usb/host/Kconfig	2014-08-14 09:38:34.000000000 +0800
++++ linux.new/drivers/usb/host/Kconfig	2015-01-22 16:39:56.540821863 +0800
+@@ -275,6 +275,27 @@
+ 
+ endif # USB_EHCI_HCD
+ 
++config USB_AST_EHCI_HCD
++	tristate "AST EHCI HCD (USB 2.0) support"
++	---help---
++	  The Enhanced Host Controller Interface (EHCI) is standard for USB 2.0
++	  "high speed" (480 Mbit/sec, 60 Mbyte/sec) host controller hardware.
++	  If your USB host controller supports USB 2.0, you will likely want to
++	  configure this Host Controller Driver.
++
++	  EHCI controllers are packaged with "companion" host controllers (OHCI
++	  or UHCI) to handle USB 1.1 devices connected to root hub ports.  Ports
++	  will connect to EHCI if the device is high speed, otherwise they
++	  connect to a companion controller.  If you configure EHCI, you should
++	  probably configure the OHCI (for NEC and some other vendors) USB Host
++	  Controller Driver or UHCI (for Via motherboards) Host Controller
++	  Driver too.
++
++	  You may want to read <file:Documentation/usb/ehci.txt>.
++
++	  To compile this driver as a module, choose M here: the
++	  module will be called ehci-hcd.
++
+ config USB_OXU210HP_HCD
+ 	tristate "OXU210HP HCD support"
+ 	---help---
+@@ -548,9 +569,19 @@
+ 	  To compile this driver as a module, choose M here: the
+ 	  module will be called uhci-hcd.
+ 
++config USB_AST_UHCI_HCD
++        tristate "AST UHCI HCD support"
++        depends on USB
++        ---help---
++          The AST UHCI host controller is an embedded HC based on AMBA bus.
++          You may want to read <file:Documentation/usb/uhci.txt>.
++
++          To compile this driver as a module, choose M here: the
++          module will be called uhci-hcd.
++
+ config USB_UHCI_SUPPORT_NON_PCI_HC
+ 	bool
+-	default y if (SPARC_LEON || USB_UHCI_PLATFORM)
++	default y if (SPARC_LEON || USB_UHCI_PLATFORM || SOC_AST2500)
+ 
+ config USB_UHCI_PLATFORM
+ 	bool

@@ -1,0 +1,14 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+
+#Clean Source
+clean_source:
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create openheaders_dev package
+build_package-openheaders_dev:
+	PACK_SPX ./ %SOURCE/%PACKAGE/data

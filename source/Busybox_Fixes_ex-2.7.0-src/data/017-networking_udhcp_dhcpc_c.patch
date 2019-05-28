@@ -1,0 +1,18 @@
+--- busybox_ORIG/networking/udhcp/dhcpc.c	2015-06-14 11:59:12.085259187 +0800
++++ busybox/networking/udhcp/dhcpc.c	2015-06-14 11:59:18.669259257 +0800
+@@ -1891,13 +1891,13 @@
+ #ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
+ 					if(timing2 != 0)
+ 					{
+-						if(lease_seconds > timing2)
++						if ((lease_seconds/2) < timing2)  //if(lease_seconds > timing2)  // Quanta
+ 						{
+ 							timeout = timing2 + tryagain_timeout;
+ 						}
+ 						else
+ 						{
+-							timeout = lease_seconds + tryagain_timeout;
++							timeout = (lease_seconds/2) + tryagain_timeout;  //lease_seconds + tryagain_timeout;  // Quanta
+ 						}
+ 					}
+ 					else

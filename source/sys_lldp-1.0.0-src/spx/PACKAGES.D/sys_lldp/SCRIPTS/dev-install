@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+		COPY_DIR .  %IMAGE_TREE
+		APPEND_TO_FILE _lldpd:x:888: %IMAGE_TREE/etc/default_group
+		APPEND_TO_FILE _lldpd:*:14386:0:99999:7::: %IMAGE_TREE/etc/defconfig/shadow
+		APPEND_TO_FILE _lldpd:*:30:888:_lldpdUser::: %IMAGE_TREE/etc/defconfig/passwd
+		CREATE_SOFT_LINK /etc/init.d/lldpd %IMAGE_TREE/etc/rc3.d/S94lldpd
+		
+		
+debug-install:

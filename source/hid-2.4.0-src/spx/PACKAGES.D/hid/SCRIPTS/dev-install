@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./hid.ko %IMAGE_TREE/lib/modules/generic/misc/
+	ADD_MODULES hid
+	EXECUTE sh AddModulesDep
+	
+debug-install:
+

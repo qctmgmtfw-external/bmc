@@ -1,0 +1,13 @@
+--- uboot_old/common/cmd_eeprom.c	2015-07-01 21:02:45.923240703 +0800
++++ uboot/common/cmd_eeprom.c		2015-07-01 21:03:27.523241149 +0800
+@@ -408,7 +408,9 @@
+ #endif
+ #if defined(CONFIG_HARD_I2C) || \
+     defined(CONFIG_SOFT_I2C)
+-	i2c_init (CONFIG_SYS_I2C_SPEED, CONFIG_SYS_I2C_SLAVE);
++	//i2c_init (CONFIG_SYS_I2C_SPEED, CONFIG_SYS_I2C_SLAVE);
++	//Quanta
++	i2c_set_bus_num(CONFIG_SYS_I2C_BUS);
+ #endif
+ }
+ 

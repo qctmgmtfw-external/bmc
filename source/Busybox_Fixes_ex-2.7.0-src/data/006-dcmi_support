@@ -1,0 +1,242 @@
+diff -Naur busybox.org/networking/udhcp/dhcpc.c busybox/networking/udhcp/dhcpc.c
+--- busybox.org/networking/udhcp/dhcpc.c	2014-08-07 14:11:28.453722151 -0400
++++ busybox/networking/udhcp/dhcpc.c	2014-08-07 16:17:54.085864561 -0400
+@@ -24,6 +24,7 @@
+ #include "common.h"
+ #include "dhcpd.h"
+ #include "dhcpc.h"
++#include "projdef.h"
+ 
+ #include <netinet/if_ether.h>
+ #include <linux/filter.h>
+@@ -120,6 +121,32 @@
+ 	[OPTION_S32             ] = sizeof("-2147483684 "),
+ };
+ 
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
++
++#define DCMI_MGMT_ID_STRING   0x01
++#define DCMI_VENDOR_CLASS_ID  0x02
++#define DCMI_RANDOM_BACK_OFF_ENABLED  0x80
++
++int discovery_option = 0, timing1 = 0, timing2 = 0, timing3 = 0;
++uint8_t *vendorinfo = NULL;
++typedef struct
++{
++	uint8_t  xcode;
++	const char  *xdata;
++}xvendorinfo;
++
++const xvendorinfo vinfo[] = 
++{
++	{0x1,	"DCMI"	},
++	{0x2,	CONFIG_SPX_FEATURE_DCMI_PRIVATE_IANA_NUMBER	},
++	{0x3,	CONFIG_SPX_FEATURE_DCMI_FIRMWARE_VERSION	},
++	{0xF2,	CONFIG_SPX_FEATURE_DCMI_ADDITIONAL_INFORMATIOM	}
++};
++
++//char vendorxdata[sizeof(vinfo) + sizeof(vinfo)/sizeof(xvendorinfo)];		 // Fix This
++char vendorxdata[1024];	/* Safe size */
++#endif
++
+ /* note: ip is a pointer to an IP in network order, possibly misaliged */
+ static int sprint_nip(char *dest, const char *pre, const uint8_t *ip)
+ {
+@@ -587,6 +614,16 @@
+ 	memcpy(packet->chaddr, client_config.client_mac, 6);
+ 	if (client_config.clientid)
+ 		udhcp_add_binary_option(packet, client_config.clientid);
++		
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
++	if ((type != DHCPDECLINE) && (type != DHCPRELEASE))
++	{
++		if(vendorinfo)
++			udhcp_add_binary_option(packet,vendorinfo);
++	}
++#endif
++
++		
+ }
+ 
+ static void add_client_options(struct dhcp_packet *packet)
+@@ -1089,6 +1126,33 @@
+ 	}
+ }
+ 
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
++/*read the dcmi conf file*/
++static void read_dcmi_conf(void)
++{
++	FILE *fp;
++	char ReadLine[100];
++//	int voption=0,time1=0,time2=0,time3=0;
++
++	fp = fopen("/conf/dcmi.conf","rb");
++	if(fp == NULL)
++	{
++		bb_info_msg("Unable to locate DCMI conf file, Setting Default values...");	
++		return;
++	}
++	while(!feof(fp))
++	{
++		fgets(ReadLine,100,fp);
++		sscanf(ReadLine,"discovery=%d\n",&discovery_option);
++		sscanf(ReadLine,"timing1=%d\n",&timing1);
++		sscanf(ReadLine,"timing2=%d\n",&timing2);
++		sscanf(ReadLine,"timing3=%d\n",&timing3);
++	}
++	
++	fclose(fp);
++	
++}
++#endif
+ static void perform_release(uint32_t server_addr, uint32_t requested_ip)
+ {
+ 	char buffer[sizeof("255.255.255.255")];
+@@ -1131,6 +1195,24 @@
+ }
+ #endif
+ 
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
++static char* get_vendor_info(void)
++{
++	int i,j;
++
++	for(i=0,j=0;i<sizeof(vinfo)/sizeof(xvendorinfo);i++)
++	{
++		vendorxdata[OPT_CODE + j] = vinfo[i].xcode;
++		vendorxdata[OPT_LEN + j] = strlen(vinfo[i].xdata);
++		memcpy(&vendorxdata[OPT_DATA+j],vinfo[i].xdata,strlen(vinfo[i].xdata));
++		j = j+ 2 + strlen(vinfo[i].xdata);
++	}
++
++	return vendorxdata;
++}
++#endif
++
++
+ //usage:#if defined CONFIG_UDHCP_DEBUG && CONFIG_UDHCP_DEBUG >= 1
+ //usage:# define IF_UDHCP_VERBOSE(...) __VA_ARGS__
+ //usage:#else
+@@ -1231,6 +1313,10 @@
+ 	int tryagain_timeout = 20;
+ 	int discover_timeout = 3;
+ 	int discover_retries = 3;
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
++	int current_timeout  = 0;
++	char hostname[HOST_NAME_MAX]= {0};
++#endif
+ 	uint32_t server_addr = server_addr; /* for compiler */
+ 	uint32_t requested_ip = 0;
+ 	uint32_t xid = xid; /* for compiler */
+@@ -1376,6 +1462,39 @@
+ 	write_pidfile(client_config.pidfile);
+ 	/* Goes to stdout (unless NOMMU) and possibly syslog */
+ 	bb_info_msg("%s (v"BB_VER") started", applet_name);
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
++	/*Reading DCMI conf file for 1.5 support discovery*/
++	read_dcmi_conf();
++
++	if(discovery_option & DCMI_MGMT_ID_STRING)
++	{
++		/*Get the Mgmt controller ID i.e hostname*/
++		gethostname(hostname,HOST_NAME_MAX);
++		client_config.hostname = alloc_dhcp_option(DHCP_HOST_NAME,hostname, 0);
++	}
++
++	if(discovery_option & DCMI_VENDOR_CLASS_ID)
++	{
++		/*Add Vendor Class Idendifier DHCP option i.e 60*/
++		client_config.vendorclass = alloc_dhcp_option(DHCP_VENDOR,"DCMI36465:1.5",0);
++
++		/*Read the Encapsulated Vendor information*/
++		get_vendor_info();
++
++		/*Add the Vendor Specific information DHCP option i.e 43*/
++		vendorinfo = alloc_dhcp_option(DHCP_VENDOR_INFO,vendorxdata,0);
++	}
++
++	if(timing1 != 0)
++	{
++		current_timeout = timing1;
++	}
++	if(timing3 != 0)
++	{
++		tryagain_timeout = timing3;
++	}
++#endif
++
+ 	/* Set up the signal pipe */
+ 	udhcp_sp_setup();
+ 	/* We want random_xid to be random... */
+@@ -1457,7 +1576,29 @@
+ 						xid = random_xid();
+ 					/* broadcast */
+ 					send_discover(xid, requested_ip);
++					
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
++					if(timing1 != 0)
++					{
++						timeout = current_timeout;
++
++						if(discovery_option & DCMI_RANDOM_BACK_OFF_ENABLED)
++						{
++							current_timeout = (2 * current_timeout) * (double)rand() / (double)RAND_MAX;
++						}
++						else
++						{
++							current_timeout  = (2 * current_timeout) * 1;
++						}
++					}
++					else
++					{
++						timeout = discover_timeout;
++					}
++#else
+ 					timeout = discover_timeout;
++#endif
++				
+ 					if (discover_retries != 0xFF)  /* 0xFF is keeping retry*/
+ 						packet_num++;
+ 					continue;
+@@ -1479,6 +1620,13 @@
+ 				}
+ 				/* wait before trying again */
+ 				timeout = tryagain_timeout+client_config.interval *10;
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT 
++				/* Reset the Current timeout value*/
++				if(timing1 != 0)
++				{
++					current_timeout = timing1;
++				}
++#endif
+ 				packet_num = 0;
+ 				continue;
+ 			case REQUESTING:
+@@ -1733,7 +1881,25 @@
+ 				}
+ #endif
+ 				/* enter bound state */
+-				timeout = lease_seconds / 2;
++#ifdef CONFIG_SPX_FEATURE_DCMI_VERSION_1_5_SUPPORT
++					if(timing2 != 0)
++					{
++						if(lease_seconds > timing2)
++						{
++							timeout = timing2 + tryagain_timeout;
++						}
++						else
++						{
++							timeout = lease_seconds + tryagain_timeout;
++						}
++					}
++					else
++					{
++						timeout = lease_seconds / 2;
++					}
++#else
++					timeout = lease_seconds / 2;
++#endif
+ 				temp_addr.s_addr = packet.yiaddr;
+ 				bb_info_msg("Lease of %s obtained, lease time %u",
+ 					inet_ntoa(temp_addr), (unsigned)lease_seconds);

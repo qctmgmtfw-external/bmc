@@ -1,0 +1,36 @@
+Source : Bootloader_ex
+Version : 2.10.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Samvinesh Christopher (vineshc@ami.com)
+License : GPL-V2
+Source-Location : ftp.denx.de/pub/u-boot/
+Source-Version : 2013.07
+Builds : Bootloader_ex
+Build-Depends : Bootloader_platform_ast2500evb_ex, buildtools, Crosscc, Bootloader_oem_ast2500evb_ex
+Customization-Type : CONFIG
+Architecture : ARM
+SOC : AST2500
+PLATFORM : AST2500EVB
+Urgency : medium
+Description : This package contains bootloader for AST2500EVB (U-boot)
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : Bootloader_ex
+Section : sys
+Group : BASE
+Essential : YES
+Feature-Required : CONFIG_SPX_FEATURE_GLOBAL_BOOTLOADER_DENX
+Provides : BootSupport
+Description : Bootloader for AST2500EVB.
+.
+

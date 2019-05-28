@@ -1,0 +1,11 @@
+--- busybox/networking/udhcp/common.c	2014-09-02 16:21:57.763883433 +0530
++++ busybox.new/networking/udhcp/common.c	2014-09-02 16:22:18.287883314 +0530
+@@ -26,7 +26,7 @@
+ //	{ OPTION_IP | OPTION_LIST                 , 0x04 }, /* DHCP_TIME_SERVER   */
+ //	{ OPTION_IP | OPTION_LIST                 , 0x05 }, /* DHCP_NAME_SERVER   */
+ 	{ OPTION_IP | OPTION_LIST     | OPTION_REQ, 0x06 }, /* DHCP_DNS_SERVER    */
+-	{ OPTION_IP | OPTION_LIST     | OPTION_REQ, 0x07 }, /* DHCP_LOG_SERVER    */
++//	{ OPTION_IP | OPTION_LIST     | OPTION_REQ, 0x07 }, /* DHCP_LOG_SERVER    */
+ //	{ OPTION_IP | OPTION_LIST                 , 0x08 }, /* DHCP_COOKIE_SERVER */
+ 	{ OPTION_IP | OPTION_LIST                 , 0x09 }, /* DHCP_LPR_SERVER    */
+ 	{ OPTION_STRING_HOST          | OPTION_REQ, 0x0c }, /* DHCP_HOST_NAME     */

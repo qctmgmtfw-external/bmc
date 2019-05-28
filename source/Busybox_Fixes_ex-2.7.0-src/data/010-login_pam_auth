@@ -1,0 +1,185 @@
+--- busybox.org/loginutils/login.c	2014-08-11 17:52:07.841502747 +0530
++++ busybox/loginutils/login.c	2014-08-12 19:14:23.561571742 +0530
+@@ -28,10 +28,16 @@
+  * Apparently they like to confuse people. */
+ # include <security/pam_appl.h>
+ # include <security/pam_misc.h>
++# include <string.h>
++#define MAX_NAME_LEN 25
++
++int bb_conv(int num_msg,const struct pam_message **msg,struct pam_response **resp,void *appdata_ptr);
++
+ static const struct pam_conv conv = {
+-	misc_conv,
++	bb_conv,
+ 	NULL
+ };
++static const char *bb_password = NULL;
+ #endif
+ 
+ enum {
+@@ -232,6 +238,94 @@
+ 	_exit(EXIT_SUCCESS);
+ }
+ 
++#if ENABLE_PAM
++
++
++/*
++ * *@fn bb_conv
++ * *@brief conversation function for direct communication b/w loaded module and application.
++ * * In conventional misc_conv  password prompting happens multi times for authentication failure in each PAM module.
++ * * bb_conv provides the password to the module for authentication.
++ * *           @param num_msg     - Number of messages
++ * *           @param pam_message - Array of messages to application  PAM Module.
++ * *           @param resp   - PAM respose structure.
++ * *           @param appdata_ptr- data ptr.
++ * *           @return Returns error on conversation failure.
++ * */
++
++int bb_conv(int num_msg,const struct pam_message **msg, struct pam_response **resp,void *appdata_ptr)
++{
++	struct pam_response *bb_resp;
++	int i;
++
++	*resp = NULL;
++
++	if (num_msg <= 0 || num_msg > PAM_MAX_NUM_MSG)
++	{       
++		printf("\n Exceeding Maximum numbef of messages in the pam conversation function...\n");
++		*resp = NULL;
++		return (PAM_CONV_ERR);
++	}
++
++	//allocate as many responses as num messages
++	bb_resp = (struct pam_response *)calloc( num_msg, sizeof(struct pam_response));
++	if(bb_resp == NULL)
++	{
++		printf("\n Allocating memory for pam_respose failed........\n");
++		return (PAM_CONV_ERR);
++	}
++
++	for(i=0; i < num_msg; i++)
++	{
++		switch (msg[i]->msg_style)
++		{
++			case PAM_PROMPT_ECHO_OFF:
++				if (bb_password == NULL)
++					goto fail_conv;
++				if ((bb_resp[i].resp = strdup(bb_password)) == NULL)
++					goto fail_conv;
++				bb_resp[i].resp_retcode = PAM_SUCCESS;
++				break;
++
++			case PAM_PROMPT_ECHO_ON:
++				/*for security reason*/
++				goto fail_conv;
++
++			case PAM_ERROR_MSG:
++				if (fprintf(stderr, "%s\n", msg[i]->msg) < 0)           
++					goto fail_conv;
++				if ((bb_resp[i].resp = strdup("")) == NULL)
++					goto fail_conv;
++				bb_resp[i].resp_retcode = PAM_SUCCESS;
++				break;
++
++			case PAM_TEXT_INFO:
++				if (fprintf(stdout, "%s\n", msg[i]->msg) < 0)                               
++					goto fail_conv;
++				if ((bb_resp[i].resp = strdup("")) == NULL)
++					goto fail_conv;
++				bb_resp[i].resp_retcode = PAM_SUCCESS;
++				break;
++			default:
++				goto fail_conv;
++		}
++	}
++	*resp = bb_resp;
++	appdata_ptr = appdata_ptr;      
++	return (PAM_SUCCESS);
++
++fail_conv:
++	printf("\n login.c: bb_conv failed\n");
++	for(i = 0; i < num_msg; i++)
++	{
++		if (bb_resp[i].resp != NULL)
++			free(bb_resp[i].resp);
++	}
++	free(bb_resp);
++	return (PAM_CONV_ERR);
++}
++#endif
++
+ int login_main(int argc, char **argv) MAIN_EXTERNALLY_VISIBLE;
+ int login_main(int argc UNUSED_PARAM, char **argv)
+ {
+@@ -258,7 +352,24 @@
+ 	const char *failed_msg;
+ 	struct passwd pwdstruct;
+ 	char pwdbuf[256];
++	char *getpasswd;
+ 	char **pamenv;
++	char hostname[MAX_NAME_LEN];
++	pid_t pid;
++	int status;
++
++	memset (hostname, 0, sizeof (hostname));
++	/*if the first argument is NULL or not equals to  -h just give the loopback address.
++	telnet login always gives the argv[1] = -h and normal login pass the argument according
++	to user options example: "login -f user" or login*/
++	if ((NULL == argv[1]) || (0 != strcmp("-h", argv[1]))){
++		memcpy (hostname, "127.0.0.1", sizeof (hostname));
++		clearenv();
++	}
++	else if (NULL != argv[2]) {
++		sprintf (hostname, "%s", argv[2]);
++	}
++
+ #endif
+ #if ENABLE_LOGIN_SESSION_AS_CHILD
+ 	pid_t child_pid;
+@@ -337,12 +448,19 @@
+ 		}
+ 		/* set RHOST */
+ 		if (opt_host) {
+-			pamret = pam_set_item(pamh, PAM_RHOST, opt_host);
++			pamret = pam_set_item(pamh, PAM_RHOST, hostname);
+ 			if (pamret != PAM_SUCCESS) {
+ 				failed_msg = "set_item(RHOST)";
+ 				goto pam_auth_failed;
+ 			}
+ 		}
++		getpasswd = bb_ask_stdin("Password: ");
++		if (!getpasswd) {
++			return 0;
++		}
++
++		bb_password = getpasswd;
++
+ 		if (!(opt & LOGIN_OPT_f)) {
+ 			pamret = pam_authenticate(pamh, 0);
+ 			if (pamret != PAM_SUCCESS) {
+@@ -521,9 +639,21 @@
+ 	 * Need to find out what standards say about /bin/login -
+ 	 * should we leave SIGINT etc enabled or disabled? */
+ 	signal(SIGINT, SIG_DFL);
+-
++#if ENABLE_PAM
++	/*Use fork to get the control back*/
++	pid = fork ();
++	if (pid == 0){
++		run_shell(pw->pw_shell, 1, NULL, NULL);
++	}else{
++		/*Wait until process exit*/
++		waitpid (pid, &status, 0);
++		/*Call the close session for logout audits*/
++		pam_close_session (pamh,PAM_SILENT);
++	}
++#else
+ 	/* Exec login shell with no additional parameters */
+ 	run_shell(pw->pw_shell, 1, NULL, NULL);
+-
++	return 0;
++#endif
+ 	/* return EXIT_FAILURE; - not reached */
+ }
