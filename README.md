@@ -59,7 +59,7 @@ Here is the product name and branch mapping table.
     CB220 BMC                           RR2
     SD1Q-1ULH BMC                       RR2
     
-    Switch Product                      Branch
+    Switch Product                      
     -------------------------------------------
     T1048-LY4R                          RR115_S
     T3048-LY7                           RR115_S
