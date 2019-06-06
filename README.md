@@ -1,7 +1,8 @@
 # bmc
-We create this repository for Quanta BMC open source code.
+We create this repository for Quanta BMC open source code. 
 
 Here is the product name and branch mapping table.
+
 ---
 
     Product Name                        Branch
