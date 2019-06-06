@@ -1,0 +1,130 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/raid_management"><%= locale.raid_management %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"><%= locale.create_logical_device %></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger hide">
+                <!-- <i class="fa fa-ban"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                
+				<div class="form-group"  >
+				<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_devicechoose_raid_ctrl %></div>
+    <label for="create_logical_device_ctrl_name"><%= locale.create_logical_device_ctrl_name %></label>
+    <select name="idraid_name" id="idraid_name" class="form-control">
+    	
+    </select>
+</div>
+<div class="form-group"  >
+<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_devicechoose_raid_levels %></div>
+    <label for="raid_level"><%= locale.create_logical_deviceraid_level %></label>
+    <select name="raid_level" id="idraid_level" class="form-control">
+    	<option value='0'><%= locale.raid_levels_0 %></option>
+    </select>
+</div>
+<div class="form-group"  id="div_span">
+</div>
+<div class="btnTray hide" id="divbuttonCreateSpan">    
+    <input type="button" id="btnCreateSpan" name="proceed" value="Create Span">
+ </div>
+<div class="form-group"  id="div_span_data">
+
+</div>
+<div class="form-group">
+<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_device_enter_the_virtual_device_name %></div>
+    <label for="VDName"><%= locale.create_logical_devicelogical_name %></label>
+    <input type="text" class="form-control" id="idVDName" value="" maxlength="15" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_device_enter_virtual_device_size %></div>
+    <label for="VDSize"><%= locale.create_logical_devicecapacity_gb %></label>
+    <input type="text" class="form-control" id="idVDSize" value="" placeholder="">
+</div>
+<div class="form-group">
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_deviceselect_initial_state %></div>
+    <label for="initState"><%= locale.create_logical_deviceinitialization %></label>
+    <select name="initState" id="idinitState" class="form-control">
+    	<option value='0'><%= locale.create_logical_deviceno_initialization %></option><option value='1'><%= locale.create_logical_devicequick_initialization %></option><option value='2'><%= locale.create_logical_devicefull_initialization %></option>
+    </select>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_deviceselect_stripe_size %></div>
+    <label for="StripeSize"><%= locale.create_logical_devicestripe_size %></label>
+    <select name="StripeSize" id="idStripeSize" class="form-control">
+    	<option value='9'><%= locale.create_logical_device256kb %></option>
+    </select>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_deviceselect_read_policy %></div>
+    <label for="read_policy"><%= locale.create_logical_deviceread_policy %></label>
+    <select name="read_policy" id="idread_policy" class="form-control">
+    	<option value='0'><%= locale.create_logical_deviceno_read_ahead %></option><option value='1'><%= locale.create_logical_devicealways_read_ahead %></option>
+    </select>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_deviceselect_write_policy %></div>
+    <label for="write_policy"><%= locale.create_logical_devicewrite_policy %></label>
+    <select name="write_policy" id="idwrite_policy" class="form-control">
+    	<option value='0'><%= locale.create_logical_devicewrite_through %></option><option value='1'><%= locale.create_logical_devicealways_write_back %></option><option value='2'><%= locale.create_logical_devicewrite_back_with_bbu %></option>
+    </select>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_deviceselect_io_policy %></div>
+    <label for="io_policy"><%= locale.create_logical_deviceio_policy %></label>
+    <select name="io_policy" id="idio_policy" class="form-control">
+    	<option value='0'><%= locale.create_logical_devicedirect_io %></option><option value='1'><%= locale.create_logical_devicecache_io %></option>
+    </select>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_deviceselect_access_policy %></div>
+    <label for="access_policy"><%= locale.create_logical_deviceaccess_policy %></label>
+    <select name="access_policy" id="idaccess_policy" class="form-control">
+    	<option value='0'><%= locale.create_logical_devicereadwrite %></option><option value='1'><%= locale.create_logical_deviceread_only %></option><option value='2'><%= locale.create_logical_deviceblocked %></option>
+    </select>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_deviceselect_disk_policy %></div>
+    <label for="disk_policy"><%= locale.create_logical_devicedisk_cache_policy %></label>
+    <select name="disk_policy" id="iddisk_policy" class="form-control">
+    	<option value='0'><%= locale.create_logical_deviceunchanged %></option><option value='1'><%= locale.create_logical_deviceenabled %></option><option value='2'><%= locale.create_logical_devicedisabled %></option>
+    </select>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.create_logical_deviceselect_unconfigured_physical_device %></div>
+    <label for="device_id"><%= locale.create_logical_deviceunconfigured_physical_drives %></label>
+    <select name="device_id" id="iddevice_id" class="form-control" multiple="multiple" size="5">    	
+    </select>
+</div><div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "controller_id": 261,
+    "controller_name": "LSI MegaRAID SAS 9361-8i (261)",
+    "record_id": 1,
+    "timestamp": 1434102178,
+    "event_code": 1,
+    "event_type": 1,
+    "event_class":2,
+    "event_desc":"Time established as 06\/11\/15 20:46:31; (33 seconds since power on)"
+  },
+  {
+    "id": 2,
+    "controller_id": 260,
+    "controller_name": "LSI MegaRAID 9361-8i (260)",
+    "record_id": 2,
+    "timestamp": 1434102178,
+    "event_code": 2,
+    "event_type": 4,
+    "event_class":2,
+    "event_desc":"Time established as 06\/11\/15 20:46:30; (32 seconds since power on)"
+  },
+  {
+    "id": 3,
+    "controller_id": 260,
+    "controller_name": "LSI MegaRAID 9361-8i (260)",
+    "record_id": 3,
+    "timestamp": 1434102178,
+    "event_code": 2,
+    "event_type": 4,
+    "event_class":2,
+    "event_desc":"Controller operating temperature within normal range, full operation restored"
+  },
+  {
+    "id": 4,
+    "controller_id": 260,
+    "controller_name": "LSI MegaRAID 9361-8i (260)",
+    "record_id": 4,
+    "timestamp": 1434102178,
+    "event_code": 1,
+    "event_type": 4,
+    "event_class":2,
+    "event_desc":""
+  }
+]

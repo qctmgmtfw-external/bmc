@@ -1,0 +1,1193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/strings/nls/root/sensor_specific_states.js</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="../../../../prettify.css">
+
+    <style>
+        body, html {
+            margin:0; padding: 0;
+        }
+        body {
+            font-family: Helvetica Neue, Helvetica,Arial;
+            font-size: 10pt;
+        }
+        div.header, div.footer {
+            background: #eee;
+            padding: 1em;
+        }
+        div.header {
+            z-index: 100;
+            position: fixed;
+            top: 0;
+            border-bottom: 1px solid #666;
+            width: 100%;
+        }
+        div.footer {
+            border-top: 1px solid #666;
+        }
+        div.body {
+            margin-top: 10em;
+        }
+        div.meta {
+            font-size: 90%;
+            text-align: center;
+        }
+        h1, h2, h3 {
+            font-weight: normal;
+        }
+        h1 {
+            font-size: 12pt;
+        }
+        h2 {
+            font-size: 10pt;
+        }
+        pre {
+            font-family: Consolas, Menlo, Monaco, monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 14px;
+            font-size: 14px;
+            -moz-tab-size: 2;
+            -o-tab-size:  2;
+            tab-size: 2;
+        }
+
+        div.path { font-size: 110%; }
+        div.path a:link, div.path a:visited { color: #000; }
+        table.coverage { border-collapse: collapse; margin:0; padding: 0 }
+
+        table.coverage td {
+            margin: 0;
+            padding: 0;
+            color: #111;
+            vertical-align: top;
+        }
+        table.coverage td.line-count {
+            width: 50px;
+            text-align: right;
+            padding-right: 5px;
+        }
+        table.coverage td.line-coverage {
+            color: #777 !important;
+            text-align: right;
+            border-left: 1px solid #666;
+            border-right: 1px solid #666;
+        }
+
+        table.coverage td.text {
+        }
+
+        table.coverage td span.cline-any {
+            display: inline-block;
+            padding: 0 5px;
+            width: 40px;
+        }
+        table.coverage td span.cline-neutral {
+            background: #eee;
+        }
+        table.coverage td span.cline-yes {
+            background: #b5d592;
+            color: #999;
+        }
+        table.coverage td span.cline-no {
+            background: #fc8c84;
+        }
+
+        .cstat-yes { color: #111; }
+        .cstat-no { background: #fc8c84; color: #111; }
+        .fstat-no { background: #ffc520; color: #111 !important; }
+        .cbranch-no { background:  yellow !important; color: #111; }
+        .missing-if-branch {
+            display: inline-block;
+            margin-right: 10px;
+            position: relative;
+            padding: 0 4px;
+            background: black;
+            color: yellow;
+            xtext-decoration: line-through;
+        }
+        .missing-if-branch .typ {
+            color: inherit !important;
+        }
+
+        .entity, .metric { font-weight: bold; }
+        .metric { display: inline-block; border: 1px solid #333; padding: 0.3em; background: white; }
+        .metric small { font-size: 80%; font-weight: normal; color: #666; }
+
+        div.coverage-summary table { border-collapse: collapse; margin: 3em; font-size: 110%; }
+        div.coverage-summary td, div.coverage-summary table  th { margin: 0; padding: 0.25em 1em; border-top: 1px solid #666; border-bottom: 1px solid #666; }
+        div.coverage-summary th { text-align: left; border: 1px solid #666; background: #eee; font-weight: normal; }
+        div.coverage-summary th.file { border-right: none !important; }
+        div.coverage-summary th.pic { border-left: none !important; text-align: right; }
+        div.coverage-summary th.pct { border-right: none !important; }
+        div.coverage-summary th.abs { border-left: none !important; text-align: right; }
+        div.coverage-summary td.pct { text-align: right; border-left: 1px solid #666; }
+        div.coverage-summary td.abs { text-align: right; font-size: 90%; color: #444; border-right: 1px solid #666; }
+        div.coverage-summary td.file { text-align: right; border-left: 1px solid #666; white-space: nowrap;  }
+        div.coverage-summary td.pic { min-width: 120px !important;  }
+        div.coverage-summary a:link { text-decoration: none; color: #000; }
+        div.coverage-summary a:visited { text-decoration: none; color: #333; }
+        div.coverage-summary a:hover { text-decoration: underline; }
+        div.coverage-summary tfoot td { border-top: 1px solid #666; }
+
+        div.coverage-summary .yui3-datatable-sort-indicator, div.coverage-summary .dummy-sort-indicator {
+            height: 10px;
+            width: 7px;
+            display: inline-block;
+            margin-left: 0.5em;
+        }
+        div.coverage-summary .yui3-datatable-sort-indicator {
+            background: url("http://yui.yahooapis.com/3.6.0/build/datatable-sort/assets/skins/sam/sort-arrow-sprite.png") no-repeat scroll 0 0 transparent;
+        }
+        div.coverage-summary .yui3-datatable-sorted .yui3-datatable-sort-indicator {
+            background-position: 0 -20px;
+        }
+        div.coverage-summary .yui3-datatable-sorted-desc .yui3-datatable-sort-indicator {
+            background-position: 0 -10px;
+        }
+
+        .high { background: #b5d592 !important; }
+        .medium { background: #ffe87c !important; }
+        .low { background: #fc8c84 !important; }
+
+        span.cover-fill, span.cover-empty {
+            display:inline-block;
+            border:1px solid #444;
+            background: white;
+            height: 12px;
+        }
+        span.cover-fill {
+            background: #ccc;
+            border-right: 1px solid #444;
+        }
+        span.cover-empty {
+            background: white;
+            border-left: none;
+        }
+        span.cover-full {
+            border-right: none !important;
+        }
+        pre.prettyprint {
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        .com { color: #999 !important; }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">app/strings/nls/root/sensor_specific_states.js</span></h1>
+    <h2>
+        
+        Statements: <span class="metric">100% <small>(1 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Functions: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        Lines: <span class="metric">100% <small>(1 / 1)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/strings/nls/root/</a> &#187; sensor_specific_states.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">define({
+    "sensor_specific_0": "reserved",
+    "sensor_specific_1": "Temperature",
+    "sensor_specific_2": "Voltage",
+    "sensor_specific_3": "Current",
+    "sensor_specific_4": "Fan",
+&nbsp;
+&nbsp;
+    "sensor_specific_5_0": "General Chassis Intrusion",
+    "sensor_specific_5_1": "Drive Bay Intrusion",
+    "sensor_specific_5_2": "I/O Card Area Intrusion",
+    "sensor_specific_5_3": "Processor Area Intrusion",
+    "sensor_specific_5_4": "LAN Leash Lost (System unplugged from LAN)",
+    "sensor_specific_5_5": "Unauthorized Dock",
+    "sensor_specific_5_6": "Fan Area Intrusion",
+&nbsp;
+&nbsp;
+&nbsp;
+    "sensor_specific_6_0": "Secure Mode Violation Attempt",
+    "sensor_specific_6_1": "Pre-boot Password Violation - user password",
+    "sensor_specific_6_2": "Pre-boot Password Violation Attempt - setup password",
+    "sensor_specific_6_3": "Pre-boot Password Violation - network boot password",
+    "sensor_specific_6_4": "Other Pre-boot Password Violation",
+    "sensor_specific_6_5": "Out-of-Band Access Password Violation",
+&nbsp;
+&nbsp;
+    "sensor_specific_7_0": "IERR",
+    "sensor_specific_7_1": "Thermal Trip",
+    "sensor_specific_7_2": "FRB1/BIST Failure",
+    "sensor_specific_7_3": "FRB2/Hang in POST Faliure",
+    "sensor_specific_7_4": "FRB3/Processor Startup/Initialization Failure",
+    "sensor_specific_7_5": "Configuration Error (DMI)",
+    "sensor_specific_7_6": "SM BIOS 'Uncorrectable CPU-complex Error",
+    "sensor_specific_7_7": "Processor Presence Detected",
+    "sensor_specific_7_8": "Processor Disabled",
+    "sensor_specific_7_9": "Terminator Presence Detected",
+    "sensor_specific_7_10": "Processor Automatically Throttled",
+    "sensor_specific_7_11": "Machine Check Exception",
+    "sensor_specific_7_12": "Correctable Machine Check Error",
+&nbsp;
+&nbsp;
+    "sensor_specific_8_0": "Presence Detected",
+    "sensor_specific_8_1": "Power Supply Failure Detected",
+    "sensor_specific_8_2": "Predictive Failure Asserted",
+    "sensor_specific_8_3": "Power Supply Input Lost (AC/DC)",
+    "sensor_specific_8_4": "Power Supply Input Lost or Out of Range",
+    "sensor_specific_8_5": "Power Supply Input Out of Range, but Present",
+    "sensor_specific_8_6": "Configuration Error",
+&nbsp;
+&nbsp;
+    "sensor_specific_9_0": "Power Off / Power Down",
+    "sensor_specific_9_1": "Power Cycle",
+    "sensor_specific_9_2": "240VA Power Down",
+    "sensor_specific_9_3": "Interlock Power Down",
+    "sensor_specific_9_4": "AC Lost / Power input lost",
+    "sensor_specific_9_5": "Soft Power Control Failure",
+    "sensor_specific_9_6": "Power Unit Failure Detected",
+    "sensor_specific_9_7": "Predictive Failure",
+&nbsp;
+&nbsp;
+    "sensor_specific_12_0": "Correctable ECC",
+    "sensor_specific_12_1": "Uncorrectable ECC",
+    "sensor_specific_12_2": "Parity",
+    "sensor_specific_12_3": "Memory Scrub Failure",
+    "sensor_specific_12_4": "Memory Device Disabled",
+    "sensor_specific_12_5": "Correctable ECC Logging Limit Reached",
+    "sensor_specific_12_6": "Presence Detected",
+    "sensor_specific_12_7": "Configuration Error",
+    "sensor_specific_12_8": "Spare",
+    "sensor_specific_12_9": "Memory Automatically Throttled",
+    "sensor_specific_12_10": "Critical Overtemperature",
+&nbsp;
+&nbsp;
+    "sensor_specific_13_0": "Drive Presence",
+    "sensor_specific_13_1": "Drive Fault",
+    "sensor_specific_13_2": "Predictive Failure",
+    "sensor_specific_13_3": "Hot Spare",
+    "sensor_specific_13_4": "Consistency Check / Parity Check in progress",
+    "sensor_specific_13_5": "In Critical Array",
+    "sensor_specific_13_6": "In Failed Array",
+    "sensor_specific_13_7": "Rebuild/Remap in progress",
+    "sensor_specific_13_8": "Rebuild/Remap Aborted",
+&nbsp;
+&nbsp;
+    "sensor_specific_15_0": "Error",
+    "sensor_specific_15_1": "Hang",
+    "sensor_specific_15_2": "Progress",
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+    "sensor_specific_16_0": "Correctable Memory Error Logging Disabled",
+    "sensor_specific_16_1": "Event 'Type' Logging Disabled",
+    "sensor_specific_16_2": "Log Area Reset/Cleared",
+    "sensor_specific_16_3": "All Event Logging Disabled",
+    "sensor_specific_16_4": "SEL Full",
+    "sensor_specific_16_5": "SEL Almost Full",
+    "sensor_specific_16_6": "Correctable Machine Check Error Logging Disabled",
+&nbsp;
+&nbsp;
+    "sensor_specific_17_0": "BIOS Watchdog Reset",
+    "sensor_specific_17_1": "OS Watchdog Reset",
+    "sensor_specific_17_2": "OS Watchdog Shutdown",
+    "sensor_specific_17_3": "OS Watchdog Power Down",
+    "sensor_specific_17_4": "OS Watchdog Power Cycle",
+    "sensor_specific_17_5": "OS Watchdog NMI",
+    "sensor_specific_17_6": "OS Watchdog Expired",
+    "sensor_specific_17_7": "OS Watchdog Pre-timeout Interrupt, non-NMI",
+&nbsp;
+&nbsp;
+    "sensor_specific_18_0": "System Reconfigured",
+    "sensor_specific_18_1": "OEM System Boot Event",
+    "sensor_specific_18_2": "Undetermined System Hardware Failure",
+    "sensor_specific_18_3": "Entry Added to Auxiliary Log",
+    "sensor_specific_18_4": "PEF Action",
+    "sensor_specific_18_5": "Timestamp Clock Synch",
+&nbsp;
+&nbsp;
+    "sensor_specific_19_0": "Front Panel NMI",
+    "sensor_specific_19_1": "Bus Timeout",
+    "sensor_specific_19_2": "I/O Channel Check NMI",
+    "sensor_specific_19_3": "Software NMI",
+    "sensor_specific_19_4": "PCI PERR",
+    "sensor_specific_19_5": "PCI SERR",
+    "sensor_specific_19_6": "EISA Fail Safe Timeout",
+    "sensor_specific_19_7": "Bus Correctable Error",
+    "sensor_specific_19_8": "Bus Uncorrectable Error",
+    "sensor_specific_19_9": "Fatal NMI",
+    "sensor_specific_19_10": "Bus Fatal Error",
+    "sensor_specific_19_11": "Bus Degraded",
+&nbsp;
+&nbsp;
+    "sensor_specific_20_0": "Power Button Pressed",
+    "sensor_specific_20_1": "Sleep Button Pressed",
+    "sensor_specific_20_2": "Reset Button Pressed",
+    "sensor_specific_20_3": "FRU Latch Open",
+    "sensor_specific_20_4": "FRU Service Request Button",
+&nbsp;
+&nbsp;
+    "sensor_specific_25_0": "Soft Power Control Failure",
+    "sensor_specific_25_1": "Thermal Trip",
+&nbsp;
+&nbsp;
+    "sensor_specific_27_0": "Cable/Interconnect is connected",
+    "sensor_specific_27_1": "Configuration Error",
+&nbsp;
+&nbsp;
+    "sensor_specific_29_0": "Initiated By Power Up",
+    "sensor_specific_29_1": "Initiated By Hard Reset",
+    "sensor_specific_29_2": "Initiated By Warm Reset",
+    "sensor_specific_29_3": "User Requested PXE Boot",
+    "sensor_specific_29_4": "Automatic Boot to Diagnostic",
+    "sensor_specific_29_5": "OS / run-time software initiated hard reset",
+    "sensor_specific_29_6": "OS / run-time software initiated warm reset",
+    "sensor_specific_29_7": "System Restart",
+&nbsp;
+&nbsp;
+    "sensor_specific_30_0": "No Bootable Media",
+    "sensor_specific_30_1": "Non-Bootable Diskette Left in Drive",
+    "sensor_specific_30_2": "PXE Server Not Found",
+    "sensor_specific_30_3": "Invalid Boot Sector",
+    "sensor_specific_30_4": "Timeout Waiting For User Selection of Boot Source",
+&nbsp;
+&nbsp;
+    "sensor_specific_31_0": "A: Boot Completed",
+    "sensor_specific_31_1": "C: Boot Completed",
+    "sensor_specific_31_2": "PXE Boot Completed",
+    "sensor_specific_31_3": "Diagnostic Boot Completed",
+    "sensor_specific_31_4": "CD-ROM Boot Completed",
+    "sensor_specific_31_5": "ROM Boot Completed",
+    "sensor_specific_31_6": "Boot Completed - Boot Device Not Specified",
+&nbsp;
+&nbsp;
+    "sensor_specific_32_0": "Critical stop during OS load / initialization",
+    "sensor_specific_32_1": "Run-time Critical Stop",
+    "sensor_specific_32_2": "OS Graceful Stop",
+    "sensor_specific_32_3": "OS Graceful Shutdown",
+    "sensor_specific_32_4": "Soft Shutdown initiated by PEF",
+    "sensor_specific_32_5": "Agent Not Responding",
+&nbsp;
+&nbsp;
+    "sensor_specific_33_0": "Fault Status Asserted",
+    "sensor_specific_33_1": "Identify Status Asserted",
+    "sensor_specific_33_2": "Slot/Connector Device Installed/Attached",
+    "sensor_specific_33_3": "Slot/Connector Ready For Device Installation",
+    "sensor_specific_33_4": "Slot/Connector Ready For Device Removal",
+    "sensor_specific_33_5": "Slot Power is Off",
+    "sensor_specific_33_6": "Slot/Connector Device Removal Request",
+    "sensor_specific_33_7": "Interlock Asserted",
+    "sensor_specific_33_8": "Slot is Disabled",
+    "sensor_specific_33_9": "Slot Holds Spare Device",
+&nbsp;
+&nbsp;
+    "sensor_specific_34_0": "S0/G0 'Working",
+    "sensor_specific_34_1": "S1 'Sleeping With System HW &amp; Processor Context Maintained'",
+    "sensor_specific_34_2": "S2 'Sleeping, Processor Context Lost'",
+    "sensor_specific_34_3": "S3 'Sleeping, Processor &amp; HW Context Lost, Memory Retained'",
+    "sensor_specific_34_4": "S4 'Non-Volatile Sleep/Suspend To Disk'",
+    "sensor_specific_34_5": "S5/G2 'Soft Off'",
+    "sensor_specific_34_6": "S4/S5 Soft Off, Particular S4/S5 State Cannot Be Determined",
+    "sensor_specific_34_7": "G3 / Mechanical Off",
+    "sensor_specific_34_8": "Sleeping in S1, S2, or S3",
+    "sensor_specific_34_9": "G1 Sleeping",
+    "sensor_specific_34_10": "S5 Entered By Override",
+    "sensor_specific_34_11": "Legacy ON State",
+    "sensor_specific_34_12": "Legacy OFF State",
+    "sensor_specific_34_13": "Unknown",
+&nbsp;
+&nbsp;
+    "sensor_specific_35_0": "Timer Expired",
+    "sensor_specific_35_1": "Hard Reset",
+    "sensor_specific_35_2": "Power Down",
+    "sensor_specific_35_3": "Power Cycle",
+    "sensor_specific_35_4": "Reserved",
+    "sensor_specific_35_5": "Reserved",
+    "sensor_specific_35_6": "Reserved",
+    "sensor_specific_35_7": "Reserved",
+    "sensor_specific_35_8": "Timer Interrupt",
+&nbsp;
+&nbsp;
+    "sensor_specific_36_0": "Platform Generated Page",
+    "sensor_specific_36_1": "Platform Generated LAN Alert",
+    "sensor_specific_36_2": "Platform Event Trap Generated",
+    "sensor_specific_36_3": "Platform Generated SNMP Trap, OEM Format",
+&nbsp;
+&nbsp;
+    "sensor_specific_37_0": "Entity Present",
+    "sensor_specific_37_1": "Entity Absent",
+    "sensor_specific_37_2": "Entity Disabled",
+&nbsp;
+&nbsp;
+    "sensor_specific_39_0": "LAN Heartbeat Lost",
+    "sensor_specific_39_1": "LAN Heartbeat",
+&nbsp;
+&nbsp;
+    "sensor_specific_40_0": "Sensor Access Degraded or Unavailable",
+    "sensor_specific_40_1": "Controller Access Degraded or Unavailable",
+    "sensor_specific_40_2": "Management Controller Off-line",
+    "sensor_specific_40_3": "Management Controller Unavailable",
+    "sensor_specific_40_4": "Sensor failure",
+    "sensor_specific_40_5": "FRU failure",
+&nbsp;
+&nbsp;
+    "sensor_specific_41_0": "Battery Low",
+    "sensor_specific_41_1": "Battery Failed",
+    "sensor_specific_41_2": "Battery Presence Detected",
+&nbsp;
+&nbsp;
+    "sensor_specific_42_0": "Session Activated",
+    "sensor_specific_42_1": "Session Deactivated",
+    "sensor_specific_42_2": "Invalid Username or Password",
+    "sensor_specific_42_3": "Invalid password disable",
+&nbsp;
+&nbsp;
+    "sensor_specific_43_0": "Hardware Change Detected",
+    "sensor_specific_43_1": "Firmware / Software Change Detected",
+    "sensor_specific_43_2": "Hardware Incompatibility Detected",
+    "sensor_specific_43_3": "Firmware / Software Incompatibility Detected",
+    "sensor_specific_43_4": "Invalid or Unsupported Hardware Version",
+    "sensor_specific_43_5": "Invalid or Unsupported Firmware / Software Version",
+    "sensor_specific_43_6": "Hardware Change Detected was successful",
+    "sensor_specific_43_7": "Firmware / Software Change Detected was successful",
+&nbsp;
+&nbsp;
+    "sensor_specific_44_0": "FRU Not Installed",
+    "sensor_specific_44_1": "FRU Inactive",
+    "sensor_specific_44_2": "FRU Activation Requested",
+    "sensor_specific_44_3": "FRU Activation In Progress",
+    "sensor_specific_44_4": "FRU Active",
+    "sensor_specific_44_5": "FRU Deactivation Requested",
+    "sensor_specific_44_6": "FRU Deactivation In Progress",
+    "sensor_specific_44_7": "FRU Communication Lost",
+&nbsp;
+&nbsp;
+    "sensor_specific_240_0": "Transition to M0",
+    "sensor_specific_240_1": "Transition to M1",
+    "sensor_specific_240_2": "Transition to M2",
+    "sensor_specific_240_3": "Transition to M3",
+    "sensor_specific_240_4": "Transition to M4",
+    "sensor_specific_240_5": "Transition to M5",
+    "sensor_specific_240_6": "Transition to M6",
+    "sensor_specific_240_7": "Transition to M7",
+&nbsp;
+&nbsp;
+    "sensor_specific_241_0": "IPMB-A disabled, IPMB-B disabled",
+    "sensor_specific_241_1": "IPMB-A enabled, IPMB-B disabled",
+    "sensor_specific_241_2": "IPMB-A disabled, IPMB-B enabled",
+    "sensor_specific_241_3": "IPMB-A enabled, IPMP-B enabled",
+&nbsp;
+&nbsp;
+    "sensor_specific_242_0": "Module Handle Closed",
+    "sensor_specific_242_1": "Module Handle Opened",
+    "sensor_specific_242_2": "Quiesced",
+&nbsp;
+&nbsp;
+    "sensor_specific_192_0": "OEM Specific"
+});</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Apr 18 2014 17:53:56 GMT-0400 (EDT)</div>
+</div>
+
+<script src="../../../../prettify.js"></script>
+
+<script src="http://yui.yahooapis.com/3.6.0/build/yui/yui-min.js"></script>
+<script>
+
+    YUI().use('datatable', function (Y) {
+
+        var formatters = {
+          pct: function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              try {
+                  return o.value.toFixed(2) + '%';
+              } catch (ex) { return o.value + '%'; }
+          },
+          html: function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              return o.record.get(o.column.key + '_html');
+          }
+        },
+          defaultFormatter = function (o) {
+              o.className += o.record.get('classes')[o.column.key];
+              return o.value;
+          };
+
+        function getColumns(theadNode) {
+            var colNodes = theadNode.all('tr th'),
+                cols = [],
+                col;
+            colNodes.each(function (colNode) {
+                col = {
+                    key: colNode.getAttribute('data-col'),
+                    label: colNode.get('innerHTML') || ' ',
+                    sortable: !colNode.getAttribute('data-nosort'),
+                    className: colNode.getAttribute('class'),
+                    type: colNode.getAttribute('data-type'),
+                    allowHTML: colNode.getAttribute('data-html') === 'true' || colNode.getAttribute('data-fmt') === 'html'
+                };
+                col.formatter = formatters[colNode.getAttribute('data-fmt')] || defaultFormatter;
+                cols.push(col);
+            });
+            return cols;
+        }
+
+        function getRowData(trNode, cols) {
+            var tdNodes = trNode.all('td'),
+                    i,
+                    row = { classes: {} },
+                    node,
+                    name;
+            for (i = 0; i < cols.length; i += 1) {
+                name = cols[i].key;
+                node = tdNodes.item(i);
+                row[name] = node.getAttribute('data-value') || node.get('innerHTML');
+                row[name + '_html'] = node.get('innerHTML');
+                row.classes[name] = node.getAttribute('class');
+                //Y.log('Name: ' + name + '; Value: ' + row[name]);
+                if (cols[i].type === 'number') { row[name] = row[name] * 1; }
+            }
+            //Y.log(row);
+            return row;
+        }
+
+        function getData(tbodyNode, cols) {
+            var data = [];
+            tbodyNode.all('tr').each(function (trNode) {
+                data.push(getRowData(trNode, cols));
+            });
+            return data;
+        }
+
+        function replaceTable(node) {
+            if (!node) { return; }
+            var cols = getColumns(node.one('thead')),
+                data = getData(node.one('tbody'), cols),
+                table,
+                parent = node.get('parentNode');
+
+            table = new Y.DataTable({
+                columns: cols,
+                data: data,
+                sortBy: 'file'
+            });
+            parent.set('innerHTML', '');
+            table.render(parent);
+        }
+
+        Y.on('domready', function () {
+            replaceTable(Y.one('div.coverage-summary table'));
+            if (typeof prettyPrint === 'function') {
+                prettyPrint();
+            }
+        });
+    });
+</script>
+</body>
+</html>

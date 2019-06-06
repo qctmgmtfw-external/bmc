@@ -19,11 +19,10 @@
 #include <linux/interrupt.h>
 #include <linux/mtd/mtd.h>
 #include <linux/mtd/partitions.h>
-#include <linux/delay.h>
+
 #include <asm/io.h>
 
 #include "driver_hal.h"
-
 #include "host_spi_flash.h"
 
 /* base address of flash */
@@ -118,15 +117,6 @@ static unsigned int ast_host_spi_flash_phys_addr = AST_HOST_SPI2_FLASH_PHYS_ADDR
 char *spi_ifc="SPI2";
 char spi1_ifc[]="SPI1";
 module_param(spi_ifc, charp, S_IRUGO);
-
-#ifdef CONFIG_SPX_FEATURE_QUANTA_S5H_PROJECT//CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-#define GPIO_BASE_R2	0x1E780080
-void *scu_virt_base_R = NULL;
-#define GPIO_P6		0x1e780078
-static int GPIOP6_data = 0;
-void *scu_virt_base_p6 = NULL;
-#endif
-
 //+++Quanta
 static const unsigned char clock_selection_table[] =
 {
@@ -262,28 +252,10 @@ static void reset_flash(void)
     reg |= (SPI_FAST_READ_CMD << AST_HOST_SPI_CMD_SHIFT) | AST_HOST_SPI_DUMMY_1 | AST_HOST_SPI_CE_LOW | AST_HOST_SPI_CMD_MODE_FAST;
     iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
 #else
-    
-#ifdef CONFIG_SPX_FEATURE_QUANTA_S5H_PROJECT//CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-    if(!GPIOP6_data)
-    {
-		reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-		reg &= ~(AST_HOST_SPI_CMD_MASK | AST_HOST_SPI_DUMMY_MASK | AST_HOST_SPI_CMD_MODE_MASK | AST_HOSTSPI_INACT_PULS_WID_MASK | AST_HOSTSPI_IO_MODE_MASK | AST_HOST_SPI_CMD_MODE_MASK);
-		reg |= AST_HOST_SPI_CMD_MODE_USER;
-		iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-    }
-    else
-    {
-    	reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-		reg &= ~(AST_HOST_SPI_CMD_MASK | AST_HOST_SPI_DUMMY_MASK | AST_HOST_SPI_CMD_MODE_MASK | AST_HOSTSPI_INACT_PULS_WID_MASK | AST_HOSTSPI_IO_MODE_MASK);
-		reg |= (AST_HOST_SPI_CMD_MODE_NORMAL << AST_HOST_SPI_CMD_SHIFT) | AST_HOST_SPI_CE_LOW | AST_HOST_SPI_CMD_MODE_NORMAL;
-		iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-    }
-#else
     reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
     reg &= ~(AST_HOST_SPI_CMD_MASK | AST_HOST_SPI_DUMMY_MASK | AST_HOST_SPI_CMD_MODE_MASK | AST_HOSTSPI_INACT_PULS_WID_MASK | AST_HOSTSPI_IO_MODE_MASK);
     reg |= (AST_HOST_SPI_CMD_MODE_NORMAL << AST_HOST_SPI_CMD_SHIFT) | AST_HOST_SPI_CE_LOW | AST_HOST_SPI_CMD_MODE_NORMAL;
     iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-#endif
 #endif
 }
 
@@ -299,72 +271,29 @@ static void enable_spi_write(void)
 static void chip_select_active(void)
 {
     uint32_t reg;
-#ifdef CONFIG_SPX_FEATURE_QUANTA_S5H_PROJECT//CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-    if(!GPIOP6_data)
-    {
-		reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-		reg &= ~(AST_HOST_SPI_CMD_MODE_MASK | AST_HOST_SPI_CE_MASK);
-		reg |= AST_HOST_SPI_CMD_MODE_USER;
-		iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-		reg = ioread32( scu_virt_base_R);
-		reg &= ~(0x00000400);
-		iowrite32(reg, scu_virt_base_R);
-    }
-    else
-    {
-    	reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-		reg &= ~(AST_HOST_SPI_CMD_MODE_MASK | AST_HOST_SPI_CE_MASK);
-		reg |= (AST_HOST_SPI_CE_LOW | AST_HOST_SPI_CMD_MODE_USER);
-		iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-    }
-#else
+
     reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
     reg &= ~(AST_HOST_SPI_CMD_MODE_MASK | AST_HOST_SPI_CE_MASK);
     reg |= (AST_HOST_SPI_CE_LOW | AST_HOST_SPI_CMD_MODE_USER);
     iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-#endif	
 }
 
 static void chip_select_deactive(void)
 {
     uint32_t reg;
-#ifdef CONFIG_SPX_FEATURE_QUANTA_S5H_PROJECT//CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-    if(!GPIOP6_data)
-    {
-    	reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-		reg &= ~(AST_HOST_SPI_CMD_MODE_MASK | AST_HOST_SPI_CE_MASK);
-		reg |= AST_HOST_SPI_CMD_MODE_USER;
-		iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-		reg = ioread32(scu_virt_base_R);  
-		reg &= ~(0x00000400);
-		reg |= (0x00000400);
-		iowrite32(reg, scu_virt_base_R);
-    }
-    else
-    {
-    	reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-		reg &= ~(AST_HOST_SPI_CMD_MODE_MASK | AST_HOST_SPI_CE_MASK);
-		reg |= (AST_HOST_SPI_CE_HI | AST_HOST_SPI_CMD_MODE_USER);
-		iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-    }
-    
-#else
-    reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-	reg &= ~(AST_HOST_SPI_CMD_MODE_MASK | AST_HOST_SPI_CE_MASK);
-	reg |= (AST_HOST_SPI_CE_HI | AST_HOST_SPI_CMD_MODE_USER);
-	iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
-#endif 
-}
 
+    reg = ioread32(ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
+    reg &= ~(AST_HOST_SPI_CMD_MODE_MASK | AST_HOST_SPI_CE_MASK);
+    reg |= (AST_HOST_SPI_CE_HI | AST_HOST_SPI_CMD_MODE_USER);
+    iowrite32(reg, ast_host_spi_flash_virt + AST_HOST_SPI_CTRL_REG);
+}
 
 static int ast_host_spi_flash_transfer(unsigned char *cmd, unsigned int cmd_len, unsigned char *data, unsigned long data_len, int data_dir)
 {
     int i;
 
     chip_select_active();
-#ifdef CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-    ndelay(10);
-#endif
+
     /* issue command */
     for (i = 0; i < cmd_len; i ++)
         iowrite8(cmd[i], ast_host_spi_flash_mem_virt);
@@ -387,7 +316,7 @@ static int ast_host_spi_flash_transfer(unsigned char *cmd, unsigned int cmd_len,
     }
 
     chip_select_deactive();
-    
+
     reset_flash();
 
     return 0;
@@ -487,9 +416,6 @@ static void ast_host_spi_flash_change_mode(int mode)
 int __init ast_host_spi_flash_init(void)
 {
     int rc;
-#ifdef CONFIG_SPX_FEATURE_QUANTA_S5H_PROJECT//CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-    uint32_t reg;
-#endif
     //Quanta+++
     if(spi_ifc!=NULL)
     {
@@ -528,25 +454,7 @@ int __init ast_host_spi_flash_init(void)
         rc = -ENOMEM;
         goto out_release_mem_region;
     }
-    
-#ifdef CONFIG_SPX_FEATURE_QUANTA_S5H_PROJECT//CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-    if ( (scu_virt_base_p6 = ioremap(GPIO_P6, SZ_4K)) < 0)
-	{
-		printk("SCU IO space %08x-%08x already in use ", GPIO_P6, GPIO_P6 + SZ_4K - 1);
-		rc = -EBUSY;
-		goto out_release_mem_region_gpio_p6;
-	}
-   
-    reg = ioread32(scu_virt_base_p6);
-    GPIOP6_data = ~(int)(reg & 0x40000008)>>29;
-    
-	if ( GPIOP6_data && (scu_virt_base_R = ioremap(GPIO_BASE_R2, SZ_4K)) < 0)
-	{
-		printk("SCU IO space %08x-%08x already in use ", GPIO_BASE_R2, GPIO_BASE_R2 + SZ_4K - 1);
-		rc = -EBUSY;
-		goto out_release_mem_region_gpio;
-	}
-#endif
+
 #ifndef CONFIG_SPX_FEATURE_GLOBAL_AST2500_ENABLE_LPC_TO_AHB_BRIDGE
     ast_host_spi_flash_change_mode(MASTER_MODE);
 #endif
@@ -571,12 +479,6 @@ int __init ast_host_spi_flash_init(void)
 
     return 0;
 
-#ifdef CONFIG_SPX_FEATURE_QUANTA_S5H_PROJECT//CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-out_release_mem_region_gpio_p6:
-	release_mem_region(GPIO_P6, SZ_4K);
-out_release_mem_region_gpio:
-	release_mem_region(GPIO_BASE_R2, SZ_4K);
-#endif
 out_iounmap:
     iounmap(ast_host_spi_flash_mem_virt);
 out_release_mem_region:

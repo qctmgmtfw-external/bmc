@@ -1,0 +1,13 @@
+# Install Script
+
+build-install:
+	MKDIR_NOCLEAN %SPXLIB/ipmi
+	COPY_DIR lib %SPXLIB/ipmi
+	MKDIR_NOCLEAN %SPXINC/libipmi        
+    COPY_DIR include %SPXINC/libipmi
+    COPY_FILE ./libipmi_AMIEXT.h %SPXINC/libipmi
+    COPY_FILE ./sensor_helpers.h %SPXINC/libipmi
+	ADD_LIBRARY_LINKS %SPXLIB/ipmi libipmi.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+        
+debug-install:
+

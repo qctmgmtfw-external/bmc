@@ -237,6 +237,12 @@ as_control( struct i2c_adapter *i2c_adap, unsigned long cmd,
            	i2c_as_reset(i2c_adap->nr);
             break;
 
+        case I2C_USER_RECOVERY:
+			printk("I2C%d: I2C user recovery\n",i2c_adap->nr);
+            /* recovery bus */
+			i2c_bus_recovery(i2c_adap->nr);
+            break;
+
 		case I2C_SET_REC_INFO:
 			if (copy_from_user(&bus_recovery_info, (void*)arg, sizeof(bus_recovery_info_T))) 
 				return -EFAULT;

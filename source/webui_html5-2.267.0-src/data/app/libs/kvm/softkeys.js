@@ -1,0 +1,104 @@
+var softkeys = {};
+//[keyCode, keyLocation, shiftKey, ctrlKey, altKey]
+softkeys['k_a'] = [65, 0, 0, 0, 0]; //a
+softkeys['k_b'] = [66, 0, 0, 0, 0];
+softkeys['k_c'] = [67, 0, 0, 0, 0];
+softkeys['k_d'] = [68, 0, 0, 0, 0];
+softkeys['k_e'] = [69, 0, 0, 0, 0];
+softkeys['k_f'] = [70, 0, 0, 0, 0];
+softkeys['k_g'] = [71, 0, 0, 0, 0];
+softkeys['k_h'] = [72, 0, 0, 0, 0];
+softkeys['k_i'] = [73, 0, 0, 0, 0];
+softkeys['k_j'] = [74, 0, 0, 0, 0];
+softkeys['k_k'] = [75, 0, 0, 0, 0];
+softkeys['k_l'] = [76, 0, 0, 0, 0];
+softkeys['k_m'] = [77, 0, 0, 0, 0];
+softkeys['k_n'] = [78, 0, 0, 0, 0];
+softkeys['k_o'] = [79, 0, 0, 0, 0];
+softkeys['k_p'] = [80, 0, 0, 0, 0];
+softkeys['k_q'] = [81, 0, 0, 0, 0];
+softkeys['k_r'] = [82, 0, 0, 0, 0];
+softkeys['k_s'] = [83, 0, 0, 0, 0];
+softkeys['k_t'] = [84, 0, 0, 0, 0];
+softkeys['k_u'] = [85, 0, 0, 0, 0];
+softkeys['k_v'] = [86, 0, 0, 0, 0];
+softkeys['k_w'] = [87, 0, 0, 0, 0];
+softkeys['k_x'] = [88, 0, 0, 0, 0];
+softkeys['k_y'] = [89, 0, 0, 0, 0];
+softkeys['k_z'] = [90, 0, 0, 0, 0]; //z
+softkeys['k_A'] = [65, 0, 1, 0, 0]; //A
+softkeys['k_B'] = [66, 0, 1, 0, 0];
+softkeys['k_C'] = [67, 0, 1, 0, 0];
+softkeys['k_D'] = [68, 0, 1, 0, 0];
+softkeys['k_E'] = [69, 0, 1, 0, 0];
+softkeys['k_F'] = [70, 0, 1, 0, 0];
+softkeys['k_G'] = [71, 0, 1, 0, 0];
+softkeys['k_H'] = [72, 0, 1, 0, 0];
+softkeys['k_I'] = [73, 0, 1, 0, 0];
+softkeys['k_J'] = [74, 0, 1, 0, 0];
+softkeys['k_K'] = [75, 0, 1, 0, 0];
+softkeys['k_L'] = [76, 0, 1, 0, 0];
+softkeys['k_M'] = [77, 0, 1, 0, 0];
+softkeys['k_N'] = [78, 0, 1, 0, 0];
+softkeys['k_O'] = [79, 0, 1, 0, 0];
+softkeys['k_P'] = [80, 0, 1, 0, 0];
+softkeys['k_Q'] = [81, 0, 1, 0, 0];
+softkeys['k_R'] = [82, 0, 1, 0, 0];
+softkeys['k_S'] = [83, 0, 1, 0, 0];
+softkeys['k_T'] = [84, 0, 1, 0, 0];
+softkeys['k_U'] = [85, 0, 1, 0, 0];
+softkeys['k_V'] = [86, 0, 1, 0, 0];
+softkeys['k_W'] = [87, 0, 1, 0, 0];
+softkeys['k_X'] = [88, 0, 1, 0, 0];
+softkeys['k_Y'] = [89, 0, 1, 0, 0];
+softkeys['k_Z'] = [90, 0, 1, 0, 0]; //Z
+softkeys['k_1'] = [49, 0, 0, 0, 0]; //1
+softkeys['k_2'] = [50, 0, 0, 0, 0]; //
+softkeys['k_3'] = [51, 0, 0, 0, 0];
+softkeys['k_4'] = [52, 0, 0, 0, 0];
+softkeys['k_5'] = [53, 0, 0, 0, 0];
+softkeys['k_6'] = [54, 0, 0, 0, 0];
+softkeys['k_7'] = [55, 0, 0, 0, 0];
+softkeys['k_8'] = [56, 0, 0, 0, 0];
+softkeys['k_9'] = [57, 0, 0, 0, 0]; //9
+softkeys['k_0'] = [48, 0, 0, 0, 0]; //0
+softkeys['k_!'] = [49, 0, 1, 0, 0]; //!
+softkeys['k_@'] = [50, 0, 1, 0, 0]; //@
+softkeys['k_#'] = [51, 0, 1, 0, 0];
+softkeys['k_$'] = [52, 0, 1, 0, 0];
+softkeys['k_%'] = [53, 0, 1, 0, 0];
+softkeys['k_^'] = [54, 0, 1, 0, 0];
+softkeys['k_&'] = [55, 0, 1, 0, 0];
+softkeys['k_*'] = [56, 0, 1, 0, 0];
+softkeys['k_('] = [57, 0, 1, 0, 0]; //(
+softkeys['k_)'] = [48, 0, 1, 0, 0]; //)
+softkeys['k_ '] = [32, 0, 0, 0, 0]; //space
+softkeys['k_='] = [187, 0, 0, 0, 0]; //=
+softkeys['k_-'] = [189, 0, 0, 0, 0]; //-
+softkeys['k_+'] = [187, 0, 1, 0, 0]; //+
+softkeys['k__'] = [189, 0, 1, 0, 0]; //_
+softkeys['k_.'] = [190, 0, 0, 0, 0]; //.
+softkeys['k_['] = [219, 0, 0, 0, 0]; //[
+softkeys['k_]'] = [221, 0, 0, 0, 0]; //]
+softkeys['k_\\'] = [220, 0, 0, 0, 0]; //\
+softkeys['k_;'] = [186, 0, 0, 0, 0]; //;
+softkeys['k_\''] = [222, 0, 0, 0, 0]; //'
+softkeys['k_`'] = [192, 0, 0, 0, 0]; //`
+softkeys['k_,'] = [188, 0, 0, 0, 0]; //,
+softkeys['k_/'] = [191, 0, 0, 0, 0]; ///
+
+softkeys['k_{'] = [219, 0, 1, 0, 0]; //{
+softkeys['k_}'] = [221, 0, 1, 0, 0]; //}
+softkeys['k_|'] = [220, 0, 1, 0, 0]; //|
+softkeys['k_:'] = [186, 0, 1, 0, 0]; //:
+softkeys['k_"'] = [222, 0, 1, 0, 0]; //"
+softkeys['k_~'] = [192, 0, 1, 0, 0]; //~
+softkeys['k_<'] = [188, 0, 1, 0, 0]; //<
+softkeys['k_>'] = [190, 0, 1, 0, 0]; //>
+softkeys['k_?'] = [191, 0, 1, 0, 0]; //?
+
+if (typeof define == "function" && define.amd) {
+    define(function() {
+        return softkeys;
+    });
+}

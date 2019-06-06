@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"policy_group": "1",
+		"enable_policy": "1",
+		"policy_action": "always_send_alert",
+		"interface_name": "eth0",
+		"destination_id": "1",
+		"alert_string": "0",
+		"alert_string_key": "1"
+	},
+	{
+		"id": 2,
+		"policy_group": "1",
+		"enable_policy": "1",
+		"policy_action": "skip_on_prev_success_and_proceed",
+		"interface_name": "eth0",
+		"destination_id": "2",
+		"alert_string": "0",
+		"alert_string_key": "1"
+	},
+	{
+		"id": 3,
+		"policy_group": "1",
+		"enable_policy": "0",
+		"policy_action": "stop_on_prev_success",
+		"interface_name": "eth1",
+		"destination_id": "3",
+		"alert_string": "0",
+		"alert_string_key": "1"
+	},
+	{
+		"id": 4,
+		"policy_group": "1",
+		"enable_policy": "1",
+		"policy_action": "switch_channel_on_prev_success",
+		"interface_name": "eth0",
+		"destination_id": "4",
+		"alert_string": "1",
+		"alert_string_key": ""
+	},
+	{
+		"id": 5,
+		"policy_group": "1",
+		"enable_policy": "1",
+		"policy_action": "switch_alert_type_on_prev_success",
+		"interface_name": "eth0",
+		"destination_id": "5",
+		"alert_string": "0",
+		"alert_string_key": "1"
+	}
+]

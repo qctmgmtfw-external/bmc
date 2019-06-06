@@ -66,8 +66,6 @@ typedef struct
 #endif
 	int 	(*UsbHwUpstreamMediaDisable) (uint8 DevNo);
 	int 	(*UsbHwUpstreamMediaEnable) (uint8 DevNo);
-	int     (*UsbHwGetdevicetypeEps) (int devno, uint8* pdata, uint8* num_eps); 
-	int     (*UsbHwSetCurrentDevType)(int devno, int DevType);
     uint8	NumEndpoints;		/* Usable Endpoints, excluding Control 0 endpoints */
 	uint8	BigEndian;	
     uint8   WriteFifoLock;

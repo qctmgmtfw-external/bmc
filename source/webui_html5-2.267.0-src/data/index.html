@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>Quanta Cloud</title>
+
+    <!-- Application styles. -->
+    <!-- build:[href] /styles.min.css -->
+    <link rel="stylesheet" href="/app/styles/index.css">
+    <!-- /build -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/libs/js/html5shiv.js"></script>
+    <script src="/libs/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <!-- Processing Icon container. -->
+    <div id="processing_maindiv" style="display:none">
+        <div class="processing_bg_outer">
+            <div class="processing_bg_inner"></div>
+        </div>
+        <div class="processing_img_outer">
+            <div>
+                <img class="processing_img_inner" src="images/loading.GIF">
+            </div>
+            <div class="processing_content">Processing ... </div>
+        </div>
+    </div>
+    <!-- Application container. -->
+    <main role="main" id="main"></main>
+
+    <!-- Application source. -->
+    <!-- build:[src] /source.min.js -->
+    <script data-main="/app/main" src="/vendor/bower/requirejs/require.js"></script>
+    <!-- /build -->
+</body>
+
+</html>

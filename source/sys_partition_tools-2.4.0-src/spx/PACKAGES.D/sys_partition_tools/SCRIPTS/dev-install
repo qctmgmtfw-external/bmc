@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+	COPY_DIR .  %IMAGE_TREE
+	CWD %IMAGE_TREE/lib
+	EXECUTE  rm -f libext2fs.so.2
+	CREATE_SOFT_LINK	libext2fs.so.2.4	libext2fs.so.2
+	EXECUTE  rm -f libe2p.so.2
+	CREATE_SOFT_LINK	libe2p.so.2.3	libe2p.so.2
+    
+debug-install:

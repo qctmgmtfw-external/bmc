@@ -1,0 +1,101 @@
+[{
+    "device": {
+        "id": 0,
+        "name": "FRU Device"
+    },
+
+    "common_header": {
+        "version": 1,
+        "internal_use_area_start_offset": 0,
+        "chassis_info_area_start_offset": 1,
+        "board_info_area_start_offset": 5,
+        "product_info_area_start_offset": 12,
+        "multi_record_area_start_offset": 0
+    },
+
+    "chassis": {
+        "version": 1,
+        "length": 4,
+        "type": "Main Server Chassis",
+        "part_number": "XXX-ENCL0014-0001",
+        "serial_number": "00000000",
+        "custom_fields": null
+    },
+
+    "board": {
+        "version": 1,
+        "length": 7,
+        "language": 0,
+        "date": "Fri Mar 21 07:41:00 2014",
+        "manufacturer": "Netronome",
+        "product_name": "Nemesis",
+        "serial_number": "13500003",
+        "part_number": "AMDA0056-0001",
+        "fru_file_id": "",
+        "custom_fields": null
+    },
+
+    "product": {
+        "version": 1,
+        "length": 5,
+        "language": 0,
+        "manufacturer": "Netronome",
+        "product_name": "Nemesis",
+        "part_number": "...",
+        "product_version": "...",
+        "serial_number": "...",
+        "asset_tag": "...",
+        "fru_file_id": "",
+        "custom_fields": null
+    }
+}, {
+    "device": {
+        "id": 1,
+        "name": "FRU Device 2"
+    },
+
+    "common_header": {
+        "version": 1,
+        "internal_use_area_start_offset": 0,
+        "chassis_info_area_start_offset": 1,
+        "board_info_area_start_offset": 5,
+        "product_info_area_start_offset": 12,
+        "multi_record_area_start_offset": 0
+    },
+
+    "chassis": {
+        "version": 1,
+        "length": 4,
+        "type": "Main Server Chassis 2",
+        "part_number": "XXX-ENCL0014-0002",
+        "serial_number": "00000002",
+        "custom_fields": null
+    },
+
+    "board": {
+        "version": 1,
+        "length": 7,
+        "language": 0,
+        "date": "Fri Mar 25 07:41:00 2014",
+        "manufacturer": "NetronomeX",
+        "product_name": "NemesisX",
+        "serial_number": "13500002",
+        "part_number": "AMDA0056-0002",
+        "fru_file_id": "",
+        "custom_fields": null
+    },
+
+    "product": {
+        "version": 1,
+        "length": 5,
+        "language": 0,
+        "manufacturer": "Netronome 2",
+        "product_name": "Nemesis 2",
+        "part_number": "....",
+        "product_version": "....",
+        "serial_number": "....",
+        "asset_tag": "....",
+        "fru_file_id": "",
+        "custom_fields": null
+    }
+}]

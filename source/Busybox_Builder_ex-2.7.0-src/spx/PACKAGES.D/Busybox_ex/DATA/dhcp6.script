@@ -18,10 +18,6 @@ fi
 #if [ -f  "/etc/dhcp-script" ];then
 #    dhcp6c -p /var/run/dhcp6c.$1.pid $1 $REQ_PRE_IP 
 #else
-
-#Remove dhcp6c_duid before dhcp6c create to avoid other process create it.
-rm /conf/dhcp6c_duid
-
 if [ -f "/conf/dhcp6c.dbg" ]
 then
     dhcp6c -p /var/run/dhcp6c.$1.pid -D -f $1 &

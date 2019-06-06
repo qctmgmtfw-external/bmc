@@ -1,0 +1,102 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%=locale.sensor_reading%> 
+        <small><%=locale.livereading_allsensor%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%=locale.home%></a> 
+        </li>
+        <li class="active">
+            <%=locale.sensor_reading%>  
+        </li>
+    </ol>
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <!--
+    <div class="row">
+        <div class="col-md-12">
+            <~~!search sensors ~~>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder="<%=locale.search_sensors%>" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div role="alert" class="alert alert-info help-item hide"><%= locale.page_desc %></div>
+    <div class="row animated fadeInUp">
+        <div class="col-md-12">
+            <div class="box box-danger">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> <%=locale.critical_sensor%> (<span id='total-critical'>...</span>)</h3>
+                </div>
+                <div class="cards row box-body" id="critical-sensor-content">
+                    <div class='info col-md-12'><i class='fa fa-info-circle'></i> <%=locale.loading%></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row animated fadeInUp delay-0">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> <%=locale.discrete_sensor%> (<span id='total-discrete'>...</span>)</h3>
+                </div>
+                <div class="box-body" id="discrete-sensor-content">
+                    <table class="table table-body">
+                        <tr>
+                            <th width="30%"><%=locale.sensor_name%></th>
+                            <th width="30%"><%=locale.state%></th>
+                            <th class="hide"><%=locale.behavior%></th>
+                        </tr>
+                    </table>
+                    <div class='info'><i class='fa fa-info-circle'></i> <%=locale.loading%></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row animated fadeInUp delay-1">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> <%=locale.normal_sensor%> (<span id='total-normal'>...</span>)</h3>
+                </div>
+                <div class="box-body" id="normal-sensor-content">
+                    <table class="table table-body">
+                        
+                        <tr>
+                            <th width="30%"><%=locale.sensor_name%></th>
+                            <th width="30%"><%=locale.reading%></th> 
+                            <th><%=locale.behavior%></th>
+                        </tr>
+                        
+                    </table>
+                    <div class='info'><i class='fa fa-info-circle'></i> <%=locale.loading%></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row animated fadeInUp delay-2">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> <%=locale.disabled_sensor%> (<span id='total-disabled'>...</span>)</h3>
+                </div>
+                <div class="box-body row" id="disabled-sensor-content">
+                    <div class='info col-md-12'><i class='fa fa-info-circle'></i> <%=locale.loading%></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content

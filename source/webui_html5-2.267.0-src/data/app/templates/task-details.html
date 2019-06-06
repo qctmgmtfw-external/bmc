@@ -1,0 +1,315 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+         <%=locale.tasks_events%>
+        <small><%=locale.schedules_bmcevents%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%=locale.home%></a>
+        </li>
+        <li><a href="#tasks"> <%=locale.tasks_events%></a>
+        </li>
+        <li class="active">
+            <%=(id? "Edit Task "+id : "New Task")%>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="pull-right">
+                <button type="button" class="btn btn-danger btn-delete-task"><i class="fa fa-trash-o"></i> 
+                    <%=locale.delete_task%></button>
+                <button type="button" class="btn btn-primary btn-save-task"><i class="fa fa-save"></i>
+                    <%=locale.save_task%></button>
+            </div>
+            <div class="form-group  col-sm-3">
+                <div class="input-group" id="task-head">
+                    <span class="input-group-addon">
+                        <span class="fa fa-chevron-right"></span>
+                    </span>
+                    <input type="text" id="task-title" class="form-control" placeholder="<%=locale.task_title%>" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid tasks-container edit">
+        <div class="row">
+
+            <div class="col-md-4">
+                <h5><%=locale.execute_script%></h5>
+                <div class="text-center" id="execution-list">
+                    <small><%=locale.importing_script_lib%></small>
+                </div>
+                <hr/>
+                <h5><%=locale.script_lib%></h5>
+                <div>
+                    <div class="form-group col-sm-12">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="filter-scripts" 
+                            placeholder="<%=locale.search_script_lib%>" />
+                            <span class="input-group-addon"  id="btn-filter-scripts">
+                                <span class="glyphicon-search glyphicon"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 
+                    <input type='search' class="form-control" id='search-qscripts' style='width: 90%; margin: 2%' placeholder='Search Scripts' /> -->
+                    <ul class="col-lg-12 list" id="script-library">
+
+                    </ul>
+                    <div class="clearfix">
+                        <br/>
+                    </div>
+                    <div class="clearfix hide text-right bg-info import-tab">
+                        <strong><%=locale.import_from%></strong>
+                        <button class='btn btn-default'><%=locale.file_sys%></button>
+                        <button class='btn btn-primary'><%=locale.mrac_cloud%></button>
+                    </div>
+                    <div class="clearfix">
+                        <br/>
+                    </div>
+                    <div class="alert-message block-message info center hide">
+                        <%=locale.write_script%> <a class='btn'><%=locale.mrac_cloud_saetool%></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <h5><%=locale.selected_events%></h5>
+                <small><%=locale.blank_listening_events%></small>
+                <div class="events">
+                    <br/>
+                    <input type='checkbox' id="Sensor" data-type="Sensor" data-filter-id="sensor-filters" />
+                    <select class='normal' id="sensor-filters">
+                        <option value='0' selected><%=locale.any%></option>
+                        <option value='1'><%=locale.temperature%></option>
+                        <option value='2'><%=locale.voltage%></option>
+                        <option value='3'><%=locale.current%></option>
+                        <option value='4'><%=locale.fan%></option>
+                        <option value='5'><%=locale.chassis_instrusion%></option>
+                        <option value='6'><%=locale.security_violation%></option>
+                        <option value='7'><%=locale.processor%></option>
+                        <option value='8'><%=locale.power_supply%></option>
+                        <option value='9'><%=locale.power_unit%></option>
+                        <option value='10'><%=locale.cooling_device%></option>
+                        <option value='11'><%=locale.unit_based_sensor%></option>
+                        <option value='12'><%=locale.memory%></option>
+                        <option value='13'><%=locale.device_slot%></option>
+                        <option value='14'><%=locale.post_memory_size%></option>
+                        <option value='15'><%=locale.system_firmware_prog%></option>
+                        <option value='16'><%=locale.events_loggoing_disabled%></option>
+                        <option value='17'><%=locale.bmc_watchdog%></option>
+                        <option value='18'><%=locale.system%></option>
+                        <option value='19'><%=locale.critical_interrupt%></option>
+                        <option value='20'><%=locale.button_pressed%></option>
+                        <option value='21'><%=locale.board%></option>
+                        <option value='22'><%=locale.microcontroller%></option>
+                        <option value='23'><%=locale.add_card%></option>
+                        <option value='24'><%=locale.chassis%></option>
+                        <option value='25'><%=locale.chip_set%></option>
+                        <option value='26'><%=locale.other_fru%></option>
+                        <option value='27'><%=locale.cable_connect%></option>
+                        <option value='28'><%=locale.terminator%></option>
+                        <option value='29'><%=locale.system_boot%></option>
+                        <option value='30'><%=locale.boot_error%></option>
+                        <option value='31'><%=locale.os_boot%></option>
+                        <option value='32'><%=locale.os_shutdown%></option>
+                        <option value='33'><%=locale.slot_connector%></option>
+                        <option value='34'><%=locale.acpi%></option>
+                        <option value='35'><%=locale.watchdog2%></option>
+                        <option value='36'><%=locale.platform_alert%></option>
+                        <option value='37'><%=locale.entity_presence%></option>
+                        <option value='38'><%=locale.monitor_asic%></option>
+                        <option value='39'><%=locale.lan_heartbeat%></option>
+                        <option value='40'><%=locale.mangt_subsys_health%></option>
+                        <option value='41'><%=locale.battery%></option>
+                        <option value='42'><%=locale.session_audit%></option>
+                        <option value='43'><%=locale.version_change%></option>
+                        <option value='44'><%=locale.fru_state%></option>
+                        <option value='45'><%=locale.other_fruher_sensors%></option>
+                    </select><%=locale.sensor_event%>
+                    <br/>
+                    <br/>
+                    <input type='checkbox' id="Remote" data-type="Remote" data-filter="0" />
+                    <%=locale.console_redirection%> 
+                    <br/>
+                    <br/>
+                    <input type='checkbox' id="Web" data-type="Web" data-filter-id="web-filters" />
+                    <%=locale.webuser_logon%> 
+                    <select class='normal' id="web-filters">
+                        <option value='0' selected><%=locale.any%></option>
+                        <option value='9'><%=locale.login%></option>
+                        <option value='10'><%=locale.logoff%></option>
+                        <option value='11'><%=locale.automically_logoff%></option>
+                        <option value='12'><%=locale.connection_lost%></option>
+                    </select>
+                    <%=locale.event%> 
+                    <br/>
+                    <br/>
+                    <input type='checkbox' id="BIOS" data-type="BIOS" data-filter="0" />
+                    <%=locale.bios_genevent%> 
+                    <br/>
+                    <br/>
+                    <input type='checkbox' id='SMS' data-type="SMS" data-filter="0" />
+                    <%=locale.sys_mangt_softevent%> 
+                    <br/>
+                    <br/>
+                    <input type='checkbox' id='SMI' data-type="SMI" data-filter="0" />
+                    <%=locale.smi_event%> 
+                    <hr/>
+
+                    <h5><%=locale.activate_task%></h5>
+                    <div class="row form-group">
+                        <label class="col-xs-12">
+                            <input type="radio" name="task-listen" value="0"><%=locale.immediately%>
+                        </label>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-xs-4">
+                            <input type="radio" name="task-listen" value="1"><%=locale.from%> 
+                        </label>
+                        <div class="input-group col-xs-6 date" id="task-start">
+                            <input type="text" class="form-control  col-xs-4" placeholder="Activation Date" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h5><%=locale.repeat%> </h5>
+                <form>
+                    <fieldset>
+                        <div class="clearfix">
+                            <label for="repeat"><%=locale.repeats%> </label>
+                            <div class="input">
+                                <select class="normal" name="repeat" id="repeat">
+                                    <option value="0"><%=locale.every_minute%> </option>
+                                    <option value="1"><%=locale.hourly%> </option>
+                                    <option value="2"><%=locale.daily%> </option>
+                                    <!--
+                            <option>Every Weekday (Mon-Fri)</option>
+                            <option>Every Mon.,Wed. and Fri.</option>
+                            <option>Every Tues. and Thurs.</option>
+                            -->
+                                    <option selected value="3"><%=locale.weekly%> </option>
+                                    <option value="4"><%=locale.monthly%> </option>
+                                    <option value="5"><%=locale.yearly%> </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label><%=locale.repeat_every%></label>
+                            <div class="input-group">
+                                <input class="form-control col-xs-2" id="repeat-interval" type="text" 
+                                placeholder="<%=locale.weeks%> " />
+                                <div class="input-group-addon" id="interval-help"><%=locale.weeks%> </div>
+                            </div>
+                        </div>
+                        <div class="clearfix" id="repeats-on">
+                            <label><%=locale.repeat_on%> </label>
+                            <div class="input">
+                                <ul class="inputs-list" rel="twipsy" data-placement="left" title="Must choose a day!">
+
+                                    <label>
+                                        <input type="checkbox" name="repeat-on" value="0" />
+                                        <span><%=locale.monday%> </span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="repeat-on" value="1" />
+                                        <span><%=locale.tuesday%> </span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="repeat-on" value="2" />
+                                        <span><%=locale.wednesday%> </span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="repeat-on" value="3" />
+                                        <span><%=locale.thursday%> </span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="repeat-on" value="4" />
+                                        <span><%=locale.friday%> </span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="repeat-on" value="5" />
+                                        <span><%=locale.saturday%> </span>
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="repeat-on" value="6" checked/>
+                                        <span><%=locale.sunday%> </span>
+                                    </label>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix" id="repeat-by">
+                            <label><%=locale.repeat_by%> </label>
+                            <div class="input">
+                                <ul class="inputs-list">
+
+                                    <label>
+                                        <input type="radio" name="repeat_by" value='day_of_month' checked /><%=locale.day_of_month%>  
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" name="repeat_by" value='day_of_week' />
+                                        <%=locale.day_of_week%>  
+                                    </label>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label><%=locale.ends%> </label>
+                            <div class="input">
+                                <div class="row">
+                                    <label class="col-xs-12">
+                                        <input type="radio" name="ends" value="never" checked />
+                                        <%=locale.never%>  
+                                    </label>
+                                </div>
+
+                                <div class="row">
+                                    <label class="col-xs-12">
+                                        <input type="radio" name="ends" value="occurrence" />
+                                        <%=locale.after%>  
+                                        <input type="number" value='1' class="disabled" id="occurrence" style="width:50px" size="20" disabled /> <%=locale.occurrences%> 
+                                    </label>
+                                </div>
+
+                                <div class="row">
+                                    <label class="col-xs-3">
+                                        <input type="radio" name="ends" value="ondate" /><%=locale.on%> 
+                                    </label>
+                                    <div class="input-group col-xs-6 date" id="task-end">
+                                        <input class="form-control" type="text" placeholder="Chosen date and time" />
+                                        <span class="input-group-addon">
+                                            <span class="fa fa-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <label for=""></label>
+                            <div class="input">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

@@ -47,12 +47,6 @@
 #define NCSI_RETRY_TIMEOUT	((3 * HZ)/10)	/* 3/10 seconds */
 #define NCSI_1G_SUPPORT		1
 #define NCSI_10G_SUPPORT	1
-#define NCSI_25G_SUPPORT	1
-
-/*---------------------NCSI AEN Control Code ----------------------------*/
-#define LINK_STATUS_CHANGE_CONTROL_AEN				0x01
-#define REQUIRED_CONTROL_AEN						0x02
-#define HOST_NC_DRIVER_STATUS_CHANGE_CONTROL_AEN	0x04
 
 /*--------------------- Ncsi Library Return Codes--------------------------*/
 #define NCSI_ERR_SUCCESS	0
@@ -331,7 +325,6 @@ typedef struct
 #define LINK_ENABLE_100_MBPS			0x0004
 #define LINK_ENABLE_1000_MBPS			0x0008
 #define LINK_ENABLE_10_GBPS				0x0010
-#define LINK_ENABLE_25_GBPS				0x0040
 #define LINK_ENABLE_HALF_DUPLEX			0x0100
 #define LINK_ENABLE_FULL_DUPLEX			0x0200
 #define LINK_ENABLE_PAUSE_CAPS			0x0400
@@ -395,7 +388,6 @@ typedef struct
 #define LINK_1000THD			(0x6 << 1)			
 #define LINK_1000TFD		(0x7 << 1)			
 #define LINK_10GT			(0x8 << 1)			
-#define LINK_25GT			(0xa << 1)	
 
 #define OTHER_INDICATOR_HOST_UP		0x01
 
@@ -875,7 +867,7 @@ int NCSI_Issue_ChannelCommands		(NCSI_IF_INFO *info,UINT8 Command,UINT8 PackageI
 int NCSI_Issue_GetVersionID			(NCSI_IF_INFO *info,UINT8 PackageID,UINT8 ChannelID,
 											UINT32 *Ver1,UINT32 *Ver2,UINT32 *Ver3);
 int NCSI_Issue_GetCapabilities		(NCSI_IF_INFO *info,UINT8 PackageID,UINT8 ChannelID,
-											UINT32 *Caps, UINT32 *AENCaps, UINT8 *ChannelCount);
+											UINT32 *Caps, UINT8 *ChannelCount);
 int NCSI_Issue_SetMacAddress		(NCSI_IF_INFO *info,UINT8 PackageID,UINT8 ChannelID,
 											UINT8 *MacAddr,UINT8 MacFilterNo,UINT8 MacType);
 int NCSI_Issue_EnableBcastFilter	(NCSI_IF_INFO *info,UINT8 PackageID,UINT8 ChannelID, 
@@ -903,7 +895,6 @@ int CheckIfAEN(NCSI_IF_INFO *info, struct sk_buff *skb);
 int CheckAENSupport(NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelID);
 #endif
 void DisplayLinkStatus(NCSI_IF_INFO* info, UINT32 Link, UINT8 verbose);
-void WriteLinkStatus(UINT32 Link); //Alan++
 
 int NCSI_Issue_SetVLANFilter(NCSI_IF_INFO *info,UINT8 PackageID, UINT8 ChannelID, UINT16 VLANId, UINT8 FilterSelector);
 int NCSI_Issue_EnableVLAN(NCSI_IF_INFO *info,UINT8 PackageID, UINT8 ChannelID,UINT8 VLANFilterMode);

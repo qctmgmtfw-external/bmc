@@ -1,0 +1,255 @@
+Package: sys_failsafeconf (3.5.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/sys_failsafeconf/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:23:37 EST
+
+Package: sys_failsafeconf (3.4.0); urgency = low
+
+Abstract:
+	Added extra files and fixes for future target migrations and strict compilers
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 23 Jul 2015 14:33:12 EDT
+
+Package: sys_failsafeconf (3.3.0); urgency = medium
+
+Abstract:
+	Correction in License files
+
+Files Added: spx/LICENSES/LICENSE.AMI
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+
+--Submitter: Winston (winstont@ami.com) Tue, 31 Mar 2015 19:00:00 GMT
+
+Package: sys_failsafeconf (3.2.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:29:56 GMT
+
+Package: sys_failsafeconf (3.1.0); urgency = medium
+
+Abstract:
+	Changed rsync priority in runlevel 7 and 8
+
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Wed, 19 Nov 2014 20:53:04 HMT
+
+Package: sys_failsafeconf (3.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:35:14 GMT
+
+Package: sys_failsafeconf (2.19.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:00:42 GMT
+
+Package: sys_failsafeconf (2.18.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:12:44 GMT
+
+Package: sys_failsafeconf (2.17.0); urgency = medium
+
+Abstract:
+	Every first time Failsafe configuration support not working.
+
+Files Modified: data/defaults/etc/rsyncconf.sh
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Thu, 18 Sep 2014 12:41:11 HMT
+
+Package: sys_failsafeconf (2.16.0); urgency = medium
+
+Abstract:
+	Added Runlevel to restart the service for warm reboot.
+
+Files Modified: data/defaults/etc/init.d/rsyncconfd
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Aug 2014 20:24:44 HMT
+
+Package: sys_failsafeconf (2.15.0); urgency = medium
+
+Abstract:
+	Changed from refering package name to Provides Value
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 12:16:01 EDT
+
+Package: sys_failsafeconf (2.14.0); urgency = low
+
+Abstract:
+	Added changes to reduce BMC shutdown time
+
+Files Modified: data/defaults/etc/init.d/rsyncconfd, spx/LICENSES/LICENSE.AMI
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Tue, 10 Jun 2014 15:37:00 HMT
+
+Package: sys_failsafeconf (2.13.0); urgency = high
+
+Abstract:
+	Adding condition to wait on either close_write or on modify event for inotifywait to initiate the rsync operation
+
+Files Modified: data/defaults/etc/rsyncconf.sh
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 24 Sep 2013 13:17:52 EDT
+
+Package: sys_failsafeconf (2.12.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO, spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:11:33 EDT
+
+Package: sys_failsafeconf (2.11.0); urgency = medium
+
+Abstract:
+	1. Changed to start rsync generically for any backup partition.
+2. if fail safe feature is enabled and rsync is not started yet then starting rsync process
+
+Files Modified: data/defaults/etc/init.d/rsyncconfd, data/defaults/etc/rsyncconf.sh
+
+--Submitter: pravinash (pravinashj@amiindia.co.in) Thu, 13 Jun 2013 03:45:01 HMT
+
+Package: sys_failsafeconf (2.10.0); urgency = low
+
+Abstract:
+	Fixing buffer message too much in pipe when add sel speed is faster than backup conf folder speed.
+
+Files Modified: data/defaults/etc/rsyncconf.sh
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Tue, 12 Mar 2013 14:40:50 CST
+
+Package: sys_failsafeconf (2.9.0); urgency = medium
+
+Abstract:
+	Changes done for proper killing of rsync.
+
+Files Modified: data/defaults/etc/init.d/rsyncconfd
+
+--Submitter: Winston (winstont@ami.com) Mon, 03 Dec 2012 13:04:35 EST
+
+Package: sys_failsafeconf (2.8.0); urgency = high
+
+Abstract:
+	run-time loading issues fixed
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 22 Jun 2012 16:48:46 EDT
+
+Package: sys_failsafeconf (2.7.0); urgency = low
+
+Abstract:
+	Versions of library is not hard coded. The correct version of library is taken by travesing from <library>.so file
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 20 Jun 2012 14:46:49 EDT
+
+Package: sys_failsafeconf (2.6.0); urgency = medium
+
+Abstract:
+	added the P.CONFIG for  binary customer
+
+Files Added: spx/PACKAGES.D/sys_failsafeconf/P.CONFIG
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 08 Mar 2012 17:42:57 IST
+
+Package: sys_failsafeconf (2.5.0); urgency = medium
+
+Abstract:
+	#Removed the conditiaon compilation for CONFIG_SPX_FEATURE_GLOBAL_FAILSAFECONF
+
+Files Modified: spx/PACKAGES.D/sys_failsafeconf/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 14 Feb 2012 23:43:50 IST
+
+Package: sys_failsafeconf (2.4.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:40:45 EDT
+
+Package: sys_failsafeconf (2.3.0); urgency = low
+
+Abstract:
+	Remove ldconfig for its size is too large.
+
+Files Modified: spx/RULES.D/directory.lst, spx/RULES.D/files.lst
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Mon, 25 Apr 2011 16:35:47 CST
+
+Package: sys_failsafeconf (2.2.0); urgency = medium
+
+Abstract:
+	Added delete parameter for rsync, and bkupconf will not keep those files that are deleted from conf folder now.
+
+Files Modified: data/defaults/etc/rsyncconf.sh
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 07 Apr 2011 15:25:46 CST
+
+Package: sys_failsafeconf (2.1.0); urgency = medium
+
+Abstract:
+	Added ldconfig for linking the libraries that fail-safe function needs.
+
+Files Modified: spx/RULES.D/directory.lst, spx/RULES.D/files.lst
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 01 Apr 2011 18:21:11 CST
+
+Package: sys_failsafeconf (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:53:23 EST
+
+Package: sys_failsafeconf (1.1.0); urgency = high
+
+Abstract:
+	Added function to check if bkupconf exists before starting fail-safe conf service.
+
+Files Modified: data/defaults/etc/init.d/rsyncconfd
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 05 Oct 2010 16:28:16 CST
+
+Package: sys_failsafeconf (1.0.0); urgency = new
+
+Abstract:
+	This package contains fail-safe configuration related files.
+
+Files Added: data, data/defaults, data/defaults/etc, data/defaults/etc/init.d, data/defaults/etc/init.d/rsyncconfd, data/defaults/etc/rsync-excludes, data/defaults/etc/rsyncconf.sh, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/sys_failsafeconf, spx/PACKAGES.D/sys_failsafeconf/DATA, spx/PACKAGES.D/sys_failsafeconf/SCRIPTS, spx/PACKAGES.D/sys_failsafeconf/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/CreateTree, spx/RULES.D/device.lst, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Thu, 30 Sep 2010 21:52:10 CST
+

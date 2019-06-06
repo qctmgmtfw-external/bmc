@@ -1,0 +1,13 @@
+{
+    "single_port": 0,
+    "kvm_encryption": 0,
+    "keyboard_language": "AD",
+    "local_media_enable": 0,
+    "remote_media_enable": 0,
+    "vmedia_attach": 0,
+    "retry_count": 1,
+    "retry_time_interval": 10,
+    "local_monitor_off": 0,
+    "automatic_off": 0,
+    "sd_card_status": 0
+}

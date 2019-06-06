@@ -1,0 +1,11 @@
+
+	<td><div class='media_type'><% var av = model.get('media_type'); var avset = false; %><% if(av == '1'){ avset = true;  %><%= locale.cddvd %><% } %><% if(av == '2'){ avset = true;  %><%= locale.floppy %><% } %><% if(av == '4'){ avset = true;  %><%= locale.hard_disk %><% } %><% if(avset == false) { %><%= av %><% } %></div></td><td><div class='media_index'><%= model.get('media_index') %></div></td><td><div class='image_name'><%= model.get('image_name') %></div></td><td><div class='redirection_status'><% var av = model.get('redirection_status'); var avset = false; %><% if(av != 1){ avset = true;  %><%= locale.halted %><%= (av<17?locale['status_'+av]:"") %><% } %><% if(av == '1'){ avset = true;  %><%= locale.started %><% } %><% if(avset == false) { %><%= av %><% } %></div></td><td><div class='session_index'><% var si = model.get('session_index'); if(si==255){si="N/A"} %><%=si%></div></td>
+	<td style='position: relative'>
+		<a class="btn btn-default disabled action-1" href="javascript://"><i class="fa fa-play"></i></a>
+		<a class="btn btn-default disabled action-2" href="javascript://"><i class="fa fa-stop"></i></a>
+		<a class="btn btn-default action-3" href="javascript://"><i class="fa fa-upload"></i></a>
+		<input type="file" class='media_upload' data-media_index="<%=model.get('media_index')%>" data-media_type="<%=model.get('media_type')%>" style="width: 39px;  height: 34px;  position: absolute;  top: 9px;  left: 89px;  opacity: 0;" id="media_<%=model.get('media_type')%>_<%=model.get('media_index')%>"/>
+		<a class="btn btn-default action-4" href="javascript://"><i class="fa fa-trash"></i></a>
+		<a class="btn btn-success hide edit" href="#image_redirection/lmedia/edit/:id"><i class="ion ion-edit"></i></a>
+		<a class="btn btn-danger hide delete" href="#image_redirection/lmedia/edit/:id"><i class="ion ion-close-circled"></i></a>
+	</td>

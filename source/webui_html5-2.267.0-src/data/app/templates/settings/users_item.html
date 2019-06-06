@@ -1,0 +1,10 @@
+<div class="col-md-3 list-item">
+    <a href='#settings/users/edit/:id'>
+        <div class="col-md-3 icon">
+            <i class="fa fa-user iconic"></i>
+        </div>
+        <div class="col-md-9 contents">
+            <label class='username'><%= model.get('name') %></label> <em class='status'><% var av = model.get('access'); %><% if(av == '0'){  %><%= locale.disabled %><% } %><% if(av == '1'){  %><%= locale.active %><% } %><% if(av == '-1'){  %><%= locale.empty_slot %><% } %></em> <div class='privilege'><% var av = model.get('network_privilege'); %><% if(av == 'none'){  %><%= locale.no_access %><% } %><% if(av == 'administrator'){  %><%= locale.administrator %><% } %><% if(av == 'oem'){  %><%= locale.oem %><% } %><% if(av == 'operator'){  %><%= locale.operator %><% } %><% if(av == 'user'){  %><%= locale.user %><% } %></div> <div class='capabilities tags'><span class='kvm'><%= locale.kvm %></span> <span class='vmedia'><%= locale.vmedia %></span> <span class='snmp'><%= locale.snmp %></span> </div><div class='email_id'><%= model.get('email_id') %></div>             
+        </div>
+    </a>
+</div>

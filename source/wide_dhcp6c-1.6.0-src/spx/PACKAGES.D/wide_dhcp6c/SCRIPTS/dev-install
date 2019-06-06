@@ -1,0 +1,6 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./dhcp6c %IMAGE_TREE/sbin/
+
+debug-install:

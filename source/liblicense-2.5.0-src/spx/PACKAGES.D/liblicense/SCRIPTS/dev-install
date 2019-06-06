@@ -1,0 +1,30 @@
+# Install Script
+
+build-install:
+    MKDIR_NOCLEAN %SPXLIB/license
+    COPY_FILE ./liblicense.a %SPXLIB/license
+    COPY_FILE ./liblicense.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/license
+    ADD_LIBRARY_LINKS %SPXLIB/license liblicense.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+    COPY_FILE    ./liblicense.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX  %IMAGE_TREE/usr/local/lib/
+    ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib liblicense.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+    EXECUTE if [ "%CONFIG_SPX_FEATURE_KVM_LICENSE_ENABLED" == "YES" ]; then echo "KVM:adviserd.sh:adviserd:v" > ./license.temp ; echo "KVM|30|1|ff:ff:ff:ff:ff:ff" > ./status.temp; fi
+    EXECUTE if [ "%CONFIG_SPX_FEATURE_MEDIA_LICENSE_ENABLED" == "YES" ]; then echo "MEDIA:vmscript:vmapp:v" >> ./license.temp; echo "MEDIA|30|1|ff:ff:ff:ff:ff:ff" >> ./status.temp; fi
+    EXECUTE if [ "%CONFIG_SPX_FEATURE_RDSERVER_LICENSE_ENABLED" == "YES" ]; then echo "MEDIA:rdserver:rdserver:v" >> ./license.temp; echo "MEDIA|30|1|ff:ff:ff:ff:ff:ff" >> ./status.temp; fi
+    EXECUTE if [ "%CONFIG_SPX_FEATURE_RMEDIA_LICENSE_ENABLED" == "YES" ]; then echo "RMEDIA:rmedia.sh:rmedia:v" >> ./license.temp; echo "RMEDIA|30|1|ff:ff:ff:ff:ff:ff" >> ./status.temp; fi
+    EXECUTE if [ "%CONFIG_SPX_FEATURE_LMEDIA_LICENSE_ENABLED" == "YES" ]; then echo "LMEDIA:lmedia.sh:lmedia:v" >> ./license.temp; echo "LMEDIA|30|1|ff:ff:ff:ff:ff:ff" >> ./status.temp; fi
+    EXECUTE if [ "%CONFIG_SPX_FEATURE_WSMAN_LICENSE_ENABLED" == "YES" ]; then echo "CIM:cimstack:qomd:v" >> ./license.temp; echo "CIM|30|1|ff:ff:ff:ff:ff:ff" >> ./status.temp; fi
+    EXECUTE if [ -f ./license.temp ]; then sort ./license.temp > ./license.conf; fi
+    EXECUTE if [ -f ./status.temp ]; then uniq ./status.temp > ./status; fi
+    MKDIR_CLEAN  %IMAGE_TREE/conf/license
+    MKDIR_CLEAN  %IMAGE_TREE/etc/defconfig/license
+    MKDIR_CLEAN  %IMAGE_TREE/etc/license
+    EXECUTE if [ -f ./license.conf ]; then cp ./license.conf %IMAGE_TREE/etc/license/;fi
+    COPY_FILE  ./count_days   %IMAGE_TREE/conf/license/
+    EXECUTE if [ -f ./status ]; then cp ./status %IMAGE_TREE/conf/license; fi
+    EXECUTE if [ -f ./status ]; then echo 1 > %IMAGE_TREE/conf/license/count_days ; fi
+    COPY_DIR  %IMAGE_TREE/conf/license/  %IMAGE_TREE/etc/defconfig/license/
+    COPY_FILE  ./lic_daily.sh   %IMAGE_TREE/etc/license/
+    EXECUTE chmod 755 %IMAGE_TREE/etc/license/lic_daily.sh
+    EXECUTE grep "lic_daily.sh" %IMAGE_TREE/conf/crontab; if [ $? != 0 ]; then echo "   10 0 * * *      sysadmin        /etc/license/lic_daily.sh " >> %IMAGE_TREE/conf/crontab; echo "   10 0 * * *       sysadmin       /etc/license/lic_daily.sh " >> %IMAGE_TREE/etc/defconfig/crontab;fi
+
+debug-install:

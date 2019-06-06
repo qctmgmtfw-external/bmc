@@ -1,0 +1,39 @@
+[
+
+    {
+        "id": 1,
+        "channel_interface": "eth0",
+        "email_id": "megarac@ami.com",
+        "primary_smtp_enable": 1,
+        "primary_server_name": "IPMIServer_1",
+        "primary_smtp_port": 25,
+        "primary_server_ip": "10.0.0.1",
+        "primary_smtp_authentication": 1,
+        "primary_username": "admin",
+        "secondary_smtp_enable": 1,
+        "secondary_server_name": "IPMIServer_4",
+        "secondary_smtp_port": 25,
+        "secondary_server_ip": "10.0.0.3",
+        "secondary_smtp_authentication": 1,
+        "secondary_username": "admin"
+    },
+
+    {
+        "id": 2,
+        "channel_interface": "eth1",
+        "email_id": "ami@ami.com",
+        "primary_smtp_enable": 0,
+        "primary_server_name": "IPMIServer_2",
+        "primary_smtp_port": 25,
+        "primary_server_ip": "10.0.0.11",
+        "primary_smtp_authentication": 0,
+        "primary_username": "",
+        "secondary_smtp_enable": 0,
+        "secondary_server_name": "IPMIServer_3",
+        "secondary_smtp_port": 25,
+        "secondary_server_ip": "10.0.0.14",
+        "secondary_smtp_authentication": 0,
+        "secondary_username": ""
+    }
+
+]

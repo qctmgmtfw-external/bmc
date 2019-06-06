@@ -1,0 +1,5 @@
+[
+{"id": 1, "ip_start": "172.16.97.59", "ip_end": "", "rule": "block", "timeout": 1, "start_time": 1408939138, "end_time": 1416939138},
+{"id": 2, "ip_start": "172.16.97.60", "ip_end": "172.16.97.70", "rule": "block", "timeout": 1, "start_time": 1408959238, "end_time": 1416959338},
+{"id": 3, "ip_start": "172.16.98.1", "ip_end": "172.16.98.100", "rule": "allow", "timeout": 1, "start_time": 1409936138, "end_time": 1419939738}
+]

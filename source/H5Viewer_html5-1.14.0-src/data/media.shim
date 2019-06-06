@@ -1,0 +1,4 @@
+		,
+		"cdrom": ["datastream", "base64", "protocol-cdrom", "cdimage", "iusb-header",
+            "iusb-scsi", "iusb-scsi-packet", "iusb-session", "media-socket", "scsi-packet" ]
+            

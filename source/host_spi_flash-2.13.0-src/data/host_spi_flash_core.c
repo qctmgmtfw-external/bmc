@@ -823,15 +823,8 @@ int host_spi_flash_register(unsigned char num, void *hw_ops, void **hw_data)
     // Also set a flag to indicate to other read/write/erase functions to identify the mode
     if (hw_hal->partitions.size > ADDR_16MB)
     {
-        //spi_ctrl_4b_mode = 1;
-        //enter_4byte_addr_mode(hw_ops);
-#ifdef CONFIG_SPX_FEATURE_QUANTA_AMD_SUPPORT
-		spi_ctrl_4b_mode = 0;
-		exit_4byte_addr_mode(hw_ops);
-#else
-		spi_ctrl_4b_mode = 1;
-		enter_4byte_addr_mode(hw_ops);
-#endif
+        spi_ctrl_4b_mode = 1;
+        enter_4byte_addr_mode(hw_ops);
     }
 
     return 0;

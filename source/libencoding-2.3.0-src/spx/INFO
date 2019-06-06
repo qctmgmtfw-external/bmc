@@ -1,0 +1,38 @@
+Source : libencoding
+Version : 2.3.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : ravisastrys (ravisastrys@amiindia.co.in)
+License : BSD.CyoEncoding
+Source-Location : http://sourceforge.net/projects/cyoencode/
+Source-Version : 1.0.0
+Builds : libencoding, libencoding_dev
+Build-Depends : Crosscc, global_dev, ipmi_dev, ipmipdk_dev, libdbgout_dev, libunix_dev, rules
+Architecture : ALL
+Urgency : medium
+Description : Containes the encoding and decoding functions
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libencoding
+Section : lib
+Group : LIBRARY
+Essential : NO
+Description : This package contains the encoding and decoding functions
+.
+
+Package : libencoding_dev
+Section : app
+Group : DEVEL
+Essential : NO
+Description : Package Description.
+.
+

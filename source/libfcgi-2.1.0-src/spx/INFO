@@ -1,0 +1,30 @@
+Source                   	:	libfcgi
+Version : 2.1.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Chandrasekar R  (chandrasekarr@amiindia.co.in)
+License                  	:	PublicDomain
+Source-Location          	:	http://www.fastcgi.com
+Source-Version           	:	2.4.1
+Builds                   	:	libfcgi, libfcgi_dev
+Build-Depends            	:	global_dev
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	Library package for fastcgi.
+.
+
+Package                  	:	libfcgi
+Section                  	:	lib
+Group                    	:	LIBRARY
+Essential                	:	NO
+Description              	:	FastCGI library.
+.
+
+Package                  	:	libfcgi_dev
+Section                  	:	dev
+Group                    	:	DEVEL
+Essential                	:	NO
+Description              	:	FastCGI developement header files.
+.
+

@@ -1,0 +1,240 @@
+<section class="content-header">
+  <h1>
+    <%= locale.title %>
+      <small>
+        
+        <%= locale.tag %>
+          
+        </small>
+      </h1>
+      <ol class="breadcrumb">
+        <li>
+          <a href="#">
+            <i class="fa fa-home">
+            </i>
+            <%= locale.home %>
+            </a>
+          </li>
+          <li>
+            <a href="#maintenance">
+              <%= locale.maintenance %>
+              </a>
+            </li>
+            <li class="active">
+              <%= locale.title %>
+              </li>
+      </ol>
+      </section>
+      
+      <!-- Main content -->
+      <section class="content">
+        <div class="col-md-5">
+          <div class="box box-primary animated fadeInUp">
+            <div class="box-header">
+              <div class="pull-right help">
+                <a class="col-sm-1 help-link" href="#">
+                  <i class="fa fa-question-circle">
+                  </i>
+                </a>
+              </div>
+              <h3 class="box-title">
+                <%= locale.dual_image_config %>
+                </h3>
+              </div>
+              <div class="box-body">
+                <div class="alert alert-success hide">
+                  <!-- 
+<i class="fa fa-check">
+</i>
+-->
+              <!-- 
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+&times;
+</button>
+-->
+              <b>
+                <%= locale.strongSuccessMsg %>
+                </b>
+                
+                <%= locale.successMsg %>
+                </div>
+                <div class="alert alert-danger hide">
+                  <!-- 
+<i class="fa fa-ban">
+</i>
+-->
+              <!-- 
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+&times;
+</button>
+-->
+              <b>
+                <%= locale.strongFailureMsg %>
+                </b>
+                
+                <%= locale.failureMsg %>
+                </div>
+                <form action="javascript://" method="POST" role="form">
+                  <div class="form-group"  >
+                  </table>
+                  <br/>
+                  
+                  <table cellspacing="0" cellpadding="0" border="2" width="100%">
+	   				<td valign="top">
+                      <div>
+                        
+                        <div class="form-group">
+                          <center><label for="fw_version_1">
+                            IMAGE-1
+                          </label></center>
+                          
+                          <br/>
+                          
+                          <div class="alert alert-info help-item hide"    role="alert">
+                            <%= locale.it_displays_the_firmware_version_of_images_1%>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label for="fw_version_1">
+                                  Firmware Verison
+                                </label>
+                              </div>
+                              <div class="col-md-6" id="idfw_version_1">
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div class="form-group"  >
+                            <div class="alert alert-info help-item hide"    role="alert">
+                              <%= locale.it_displays_the_current_state_of_image_1 %>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <label for="state_1">
+                                    State
+                                  </label>
+                                </div>
+                                <div class="col-md-6" id="idstate_1">
+                                </div>
+                              </div>
+                              
+                            </div>
+                            <div class="alert alert-info help-item hide"    role="alert">
+                              <%= locale.Check_this_option_to_boot_image_1_in_the_next_boot_up_process %>
+                              </div>
+                              <label>
+                              <input type='radio' value='1' name='boot_image' id='iddboot_image' >
+                              
+                              <%= locale.boot_image_to_be_booted_from_upon_reset %>
+                              </label> <br/>
+                            </td>
+                          </table>
+                        </table>
+                        <br/>
+                        
+                        <table cellspacing="0" cellpadding="0" border="2" width="100%">
+                          <td valign="top">
+                            <div>
+                              
+                              <div class="form-group">
+                                <center><label for="fw_version_2">
+                                  IMAGE-2
+                                </label></center>
+                                
+                                <br/>
+                                
+                                <div class="alert alert-info help-item hide"    role="alert">
+                                  <%= locale.it_displays_the_firmware_version_of_images_2%>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <label for="fw_version_2">
+                                        Firmware Verison
+                                      </label>
+                                    </div>
+                                    <div class="col-md-6" id="idfw_version_2">
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                                <div class="form-group"  >
+                                  <div class="alert alert-info help-item hide"    role="alert">
+                                    <%= locale.it_displays_the_current_state_of_image_2 %>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-md-6">
+                                        <label for="state_2">
+                                          State
+                                        </label>
+                                      </div>
+                                      <div class="col-md-6" id="idstate_2">
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                  <div class="alert alert-info help-item hide"    role="alert">
+                                    <%= locale.Check_this_option_to_boot_image_2_in_the_next_boot_up_process %>
+                                    </div>
+                                    <label>
+                                    <input type='radio' value='2' name='boot_image' id='idboot_image' >
+                                    
+                                    <%= locale.boot_image_to_be_booted_from_upon_reset %>
+                                    </label> <br/>
+                                  </td>
+                                </table>
+                                
+                                <br/>
+                                <div class="alert alert-info help-item hide"    role="alert">
+                                  <%= locale.Check_this_option_to_boot_higher_firmware_version_image_in_the_next_boot_up_process %>
+                                  </div>
+                                  <label>
+                                  <input type='radio' value='0' name='boot_image' id='idboot_image' >
+                                  
+                                  <%= locale.boot_imagehigher_firmware_version_ %>
+                                  </label> <br/>
+                                  <br/>
+                                  <div class="alert alert-info help-item hide"    role="alert">
+                                    <%= locale.Check_this_option_to_boot_lower_firmware_version_image_in_the_next_boot_up_process %>
+                                    </div>
+                                    <label>
+							        <input type='radio' value='3' name='boot_image' id='idboot_image' >
+                                   
+                                   <%= locale.boot_imagelower_firmware_version %>
+                                   </label> <br/>
+                                   <br/>
+                                   <div class="alert alert-info help-item hide"    role="alert">
+                                     <%= locale.Check_this_option_to_boot_most_recently_updated_firmware_image_in_the_next_boot_up_process %>
+                                     </div>
+                                     <label>
+                                     <input type='radio' value='4' name='boot_image' id='idboot_image' >
+                                     
+                                     <%= locale.boot_imagemost_recently_updated_firmware_ %>
+                                     </label> <br/>
+                                     <br/>
+                                     <div class="alert alert-info help-item hide"    role="alert">
+                                       <%= locale.Check_this_option_to_boot_least_recently_updated_firmware_image_in_the_next_boot_up_process %>
+                                       </div>
+                                       <label>
+                                       <input type='radio' value='5' name='boot_image' id='idboot_image' >
+                                       
+                                       <%= locale.boot_imageleast_recently_updated_firmware %>
+                                       </label>
+                                       <br/>
+                                       
+                                     </div>
+                                     <div class="pull-right">
+                                       <a class="btn btn-primary" id="save">
+                                         <i id='save-icon' class="fa fa-save">
+                                         </i>
+                                         &nbsp; 
+                                         <%= locale.saveLabel %>
+                                         </a>
+                                       </div>
+                                       <div class="clearfix">
+                                       </div>
+                                     </form>
+                                   </div>
+                                   <!-- /.box-body -->
+                               </div>
+                   </div>
+  </section>

@@ -1,0 +1,8 @@
+./sbin/fdisk
+./sbin/fsck.ext2
+./sbin/mkfs.cramfs
+./sbin/mkfs.ext2
+./sbin/mkfs.ext3
+./sbin/mkfs.ext4
+./lib/%MULTI_ARCH_LIB%/libext2fs.so.2
+./lib/%MULTI_ARCH_LIB%/libe2p.so.2

@@ -1,0 +1,22 @@
+#Extract Source in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+	CWD %BUILD/%PACKAGE/data
+	INVOKE_MAKE
+
+#Clean Source
+clean_source:
+	CWD %BUILD/%PACKAGE/data
+	INVOKE_MAKE clean
+
+#-----------------Mandatory Rules for every binary Package ----------------------------
+# Rules to create mdio_mod package
+build_package-mdio_mod:
+		PACK_SPX  ./   %BUILD/%PACKAGE/data/mdio.ko
+
+# Rules to create mdio_mod_driver_dev package
+build_package-mdio_mod_driver_dev:
+		MKDIR_CLEAN %SPXINC/mdio
+		COPY_FILE %BUILD/%PACKAGE/data/mdio.h %SPXINC/mdio

@@ -1,0 +1,170 @@
+Package: defaulthost (2.2.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/defaulthost/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 19:48:03 EST
+
+Package: defaulthost (2.1.0); urgency = medium
+
+Abstract:
+	Changes done to assign proper run levels
+
+Files Modified: data/defaulthost.sh
+
+--Submitter: Winston (winstont@ami.com) Mon, 22 Jun 2015 01:33:53 EDT
+
+Package: defaulthost (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 03:32:50 GMT
+
+Package: defaulthost (1.12.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 05:19:21 GMT
+
+Package: defaulthost (1.11.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 03:27:17 GMT
+
+Package: defaulthost (1.10.0); urgency = medium
+
+Abstract:
+	Changed from refering package name to Provides Value
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 12:28:23 EDT
+
+Package: defaulthost (1.9.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:10:32 EDT
+
+Package: defaulthost (1.8.0); urgency = medium
+
+Abstract:
+	Added the diretory create statement for building GPL_PDK in MDS
+
+Files Modified: spx/PACKAGES.D/defaulthost/SCRIPTS/dev-install
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 02 Jan 2013 12:01:47 CST
+
+Package: defaulthost (1.7.0); urgency = medium
+
+Abstract:
+	Modified the code for CONFIG_SPX_FEATURE_GLOBAL_HOST_PREFIX for replacing the strcpy with GetMacrodefine_string .
+
+Files Modified: data/Makefile, data/defaulthost.c
+
+--Submitter: ravisastrys (ravisastrys@amiindia.co.in) Thu, 16 Feb 2012 00:32:44 IST
+
+Package: defaulthost (1.6.0); urgency = low
+
+Abstract:
+	Fixed to boot in non verbose mode when quiet option is given in kernel command line option
+
+Files Modified: data/defaulthost.sh
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 25 Jan 2012 16:18:48 EST
+
+Package: defaulthost (1.5.0); urgency = medium
+
+Abstract:
+	Modified the hardcoded value of the hostname from AMI to macro
+
+Files Modified: data/defaulthost.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Tue, 20 Sep 2011 14:36:47 JST
+
+Package: defaulthost (1.4.0); urgency = low
+
+Abstract:
+	Removed unused file.
+
+Files Deleted: data/hostname.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 06 Jul 2011 18:56:31 IST
+
+Package: defaulthost (1.3.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:11:46 EDT
+
+Package: defaulthost (1.2.0); urgency = medium
+
+Abstract:
+	Modified to GetHostNameConf and SetHostNameConf for new hostname.conf with INI format.
+
+Files Modified: data/Makefile, data/defaulthost.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Fri, 22 Apr 2011 15:55:43 CST
+
+Package: defaulthost (1.1.0); urgency = medium
+
+Abstract:
+	Fix for the issue : Default Hostname of the BMC device is not getting updated after updating the MAC address via either updating the ethaddr environment variable or using Set LAN Configuration Parameter command
+
+Files Modified: data/defaulthost.c
+
+--Submitter: Prakash S (prakashs@amiindia.co.in) Sat, 18 Sep 2010 07:33:00 IST
+
+Package: defaulthost (1.0.3); urgency = high
+
+Abstract:
+	run-time dependencies fixed for pilot-ii to be able to create an image from binary only pacakges
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 22 Apr 2010 15:21:44 EDT
+
+Package: defaulthost (1.0.2); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:21:38 EDT
+
+Package: defaulthost (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:56:37 EST
+
+Package:defaulthost (1.0.0);urgency=new
+
+Abstract:
+	This package includes default host application that runs duringsystem startup to configure the hostname.
+
+Files Added: hostname.c, Makefile, defaulthost.c, defaulthost.sh
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 11 Nov 2009 15:40:26 -0500

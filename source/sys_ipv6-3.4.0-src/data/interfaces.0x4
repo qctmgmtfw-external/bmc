@@ -1,0 +1,23 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto eth0
+iface eth0 inet dhcp
+iface eth0 inet6 autoconf
+
+auto eth1
+iface eth1 inet dhcp
+iface eth1 inet6 autoconf
+
+auto eth2
+iface eth2 inet dhcp
+iface eth2 inet6 autoconf
+
+auto eth3
+iface eth3 inet dhcp
+iface eth3 inet6 autoconf

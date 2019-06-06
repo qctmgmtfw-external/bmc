@@ -1,0 +1,34 @@
+
+# DHCPv6 client settings for interface <eth0> <eth1>
+
+interface eth0 {
+	send ia-na 11111;
+	request domain-name-servers;
+	request domain-name;
+	script  "/etc/dhcp6c-script";
+	};
+id-assoc na 11111 {};	
+
+interface eth1 {
+	send ia-na 22222;
+	request domain-name-servers;
+	request domain-name;
+	script  "/etc/dhcp6c-script";
+	};
+id-assoc na 22222 {};
+
+interface eth2 {
+	send ia-na 33333;
+	request domain-name-servers;
+	request domain-name;
+	script  "/etc/dhcp6c-script";
+	};
+id-assoc na 33333 {};	
+	
+interface eth3 {
+	send ia-na 44444;
+	request domain-name-servers;
+	request domain-name;
+	script  "/etc/dhcp6c-script";
+	};
+id-assoc na 44444 {};		

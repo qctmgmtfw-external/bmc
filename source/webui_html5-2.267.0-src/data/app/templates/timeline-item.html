@@ -1,0 +1,37 @@
+<!-- timeline item -->
+
+<!-- timeline icon -->
+<i class="<%=severity_icon%>"></i>
+<div class="timeline-item">
+    <span class="time"><i class="fa fa-clock-o"></i><%=BMC_fromnow%>
+    </span>
+
+
+    <h3 class="timeline-header">
+      <%=recordid%>
+       <i class="fa fa-ellipsis-v"></i>
+        <label style="color: #72AEEE;">
+            <%=cause%>
+        </label>
+        <i class="fa fa-ellipsis-v"></i>
+            <%=sensor_type%>
+        <i class="fa fa-ellipsis-v"></i>
+            <!--<%=locale.created%>-->
+            <%=event%>
+    </h3>
+
+
+    <div class="timeline-body">
+         <i><<%=event_message%></i> <span class="bmc_time"><%=bmc_time%></span><span class="client_time"><%=client_time%></span>
+    </div>
+
+<!--
+    <div class='timeline-footer'>
+        <a class="btn btn-primary btn-xs">
+            <%=locale.suggestion%>
+        </a>
+    </div>
+-->
+</div>
+
+<!-- END timeline item -->

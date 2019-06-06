@@ -9,8 +9,6 @@
 # Short-Description:	OpenBSD Secure Shell server
 ### END INIT INFO
 
-echo "new file from AMI"
-
 PORT_VAL_BYTE=2147483647
 set -e
 

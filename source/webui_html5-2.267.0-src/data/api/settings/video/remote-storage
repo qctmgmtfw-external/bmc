@@ -1,0 +1,14 @@
+{ 
+	"id" : 1,
+	"remote_support" : 1, 
+	"mount_status" : -1, 
+	"ip_address" : "10.0.3.193", 
+	"remote_path" : "\\home\\",
+	"max_dumps" : 10,
+	"max_duration" : 10,
+	"max_size" : 10, 
+	"share_type" : "NFS", 
+	"domain_name" : "", 
+	"user_name" : "", 
+	"password" : "" 
+}

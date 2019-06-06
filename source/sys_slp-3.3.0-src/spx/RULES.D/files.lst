@@ -1,0 +1,11 @@
+#for slp
+./etc/init.d/slpd
+./etc/slp.conf 
+./etc/slp.reg
+./etc/slp.spi
+./usr/sbin/slpd
+./usr/lib/libslp.so | ./usr/lib/%MULTI_ARCH_LIB%/libslp.so
+
+
+
+

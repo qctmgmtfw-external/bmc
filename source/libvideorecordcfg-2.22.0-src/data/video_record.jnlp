@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jnlp spec="1.0+" codebase="<% JAVA_RC_PARAMS("$IP_KEY$"); %>/Java">
+     <information>
+        <title>JViewer</title>
+        <vendor>American Megatrends, Inc.</vendor>
+        <description kind="one-line">JViewer Console Redirection Application</description>
+        <description kind="tooltip">JViewer Console Redirection Application</description>
+        <description kind="short">
+            JViewer enables a user to view the video display of managed server via KVM.  
+            It also enables the user to redirect his local keyboard, mouse for managing the server remotely.
+        </description>
+    </information>
+	<security>
+		<all-permissions/>
+	</security>
+    <resources>
+        <j2se version="1.5+" initial-heap-size="100m" max-heap-size="1024m"/>
+    </resources>
+    <resources>
+        <j2se version="1.5+"/>
+        <jar href="release/JViewer.jar"/>
+    </resources>
+    <resources>
+        <j2se version="1.5+"/>
+        <jar href="release/JViewer-SOC.jar"/>
+    </resources>
+    <resources>
+        <j2se version="1.5+"/>
+        <jar href="release/JViewer-OEM.jar"/>
+    </resources>
+    <resources>
+        <j2se version="1.5+"/>
+        <jar href="release/JViewer-AVIStream.jar"/>
+    </resources>
+    <application-desc>
+        <% JAVA_RC_PARAMS("$ALL_ARGUMENTS$"); %>
+    </application-desc>
+</jnlp>

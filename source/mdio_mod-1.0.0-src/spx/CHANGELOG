@@ -1,0 +1,7 @@
+Package:mdio_mod (1.0.0);urgency=new
+
+Abstract:
+	This package contains the access reg driver.
+
+--Submitter: Always Chen (Always.Chen@quantatw.com) Mon, 23 May 2016 20:01:49 +0800
+

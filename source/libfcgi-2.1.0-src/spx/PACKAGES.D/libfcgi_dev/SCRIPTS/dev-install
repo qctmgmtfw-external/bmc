@@ -1,0 +1,12 @@
+# Install Script
+
+build-install:
+	#copy header file
+	MKDIR_CLEAN %SPXINC/fastcgi
+    COPY_DIR ./ %SPXINC/fastcgi
+    #copy library files
+    MKDIR_CLEAN %SPXLIB/fastcgi
+    COPY_DIR ./lib %SPXLIB/fastcgi
+	ADD_LIBRARY_LINKS %SPXLIB/fastcgi libfcgi.so.0.0.0
+	
+debug-install:

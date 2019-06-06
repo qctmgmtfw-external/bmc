@@ -186,7 +186,7 @@
 /*-----------------------------------------------------------------------------------------------*/
 /* hardware information about UDC endpoint */
 
-#define AST_USBHUB_EP_NUM			15	//21 //Alan, according to AST2500 spec, the endpoint num is 15
+#define AST_USBHUB_EP_NUM			21
 #define AST_USBHUB_DEV_EP_NUM		3 /* endpoint for each device */
 
 /* registers of UDC endpoint */

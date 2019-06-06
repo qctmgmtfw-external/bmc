@@ -1,0 +1,6 @@
+/etc/rc1.d/K91rsyncconfd	-> ../init.d/rsyncconfd
+/etc/rc3.d/S90rsyncconfd	-> ../init.d/rsyncconfd
+/etc/rc6.d/K91rsyncconfd	-> ../init.d/rsyncconfd
+/etc/rc7.d/K10rsyncconfd	-> ../init.d/rsyncconfd
+/etc/rc8.d/K10rsyncconfd	-> ../init.d/rsyncconfd
+

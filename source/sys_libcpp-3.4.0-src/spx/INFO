@@ -1,0 +1,23 @@
+Source                   	:	sys_libcpp
+Version : 3.4.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	SPX Core Team  (spcoreteam@ami.com)
+License                  	:	AMI
+Source-Location          	:	Debian
+Source-Version           	:	1.0.0
+Builds                   	:	sys_libcpp
+Build-Depends            	:	Crosscc, Target
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	System Package providing CPP runtime Library
+.
+
+Package                  	:	sys_libcpp
+Section                  	:	sys
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	System Package providing CPP runtime Library
+.
+

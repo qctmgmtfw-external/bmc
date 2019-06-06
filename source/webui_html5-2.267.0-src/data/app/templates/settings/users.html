@@ -1,0 +1,50 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+       <!-- <div class="row">
+        <div class="col-md-12">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder="Search <%= locale.title %>" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+	<!--<div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>-->
+    <div class="row">
+        <div class="col-md-12 list">
+		 <div class="row">
+                <div class="alert alert-info help-item hide" role="alert"><%= locale.user_hlp %>
+                </div>
+            </div>
+
+            <div class="col-md-3 list-item list-add-item hide">
+                <a href='%%add-link'>
+                    <div class="col-md-3 icon">
+                        <i class="ion-plus-circled iconic"></i>
+                    </div>
+                    <div class="col-md-9 contents">
+                        %%add-text
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

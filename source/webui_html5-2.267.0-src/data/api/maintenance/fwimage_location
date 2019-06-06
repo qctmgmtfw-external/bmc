@@ -1,0 +1,5 @@
+{ 
+
+	"id" : 1, "prototype_type" : "tftp", "server_address" : "10.0.3.193", "image_name" : "/home/share", "retry_count" : 1 
+
+}

@@ -1,0 +1,13 @@
+<div class="col-md-3 list-item" style= "height:150px">
+    <a href='#settings/pef/lan_destinations/edit/:id'>
+        <div class="col-md-3 icon">
+            <i class="ion-flag iconic"></i>
+        </div>
+        <div class="col-md-9 contents">
+            <label class='lan_channel'><span><%= locale.lan_channel_ %></span><%= model.get('lan_channel') %></label> <div class='channel_id'><span><%= locale.lan_destination_ %></span><%= model.get('channel_id') %></div> <div class='destination_type'><% var av = model.get('destination_type'); %><% if(av == 'snmp'){  %><%= locale.snmp_trap %><% } %><% if(av == 'email'){  %><%= locale.email %><% } %></div> <div class='destination_address'><%= model.get('destination_address') %></div> <label class='name'><span><%= locale.sent_to_ %></span><%= model.get('name') %></label>             
+        </div>
+    </a>
+            	<div class="pull-right">
+    	<button type="button" class="form-control btn btn-default testalert_btn" id="idtest_alert"><%= locale.lan_destinationssend_test_alert %></button>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+auto veth0
+iface veth0 inet dhcp
+iface veth0 inet6 autoconf
+auto veth1
+iface veth1 inet dhcp
+iface veth1 inet6 autoconf
+auto veth2
+iface veth2 inet dhcp
+iface veth2 inet6 autoconf
+auto veth3
+iface veth3 inet dhcp
+iface veth3 inet6 autoconf
+

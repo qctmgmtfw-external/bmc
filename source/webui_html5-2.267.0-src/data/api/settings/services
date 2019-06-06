@@ -1,0 +1,8 @@
+[
+	{ "id" : 1, "service_id" : 1,  "service_name" : "web",	"state" : 1,  "ifc_name" : "eth0",  "non_secure_port" : 80,    "secure_port" : 443,   "time_out" : 1800,  "maximum_sessions" : 20,  "active_session" : 2 },
+	{ "id" : 2, "service_id" : 2,  "service_name" : "kvm", 	"state" : 1,  "ifc_name" : "eth0",  "non_secure_port" : 7578,  "secure_port" : 7582,  "time_out" : 60,	  "maximum_sessions" : 2,   "active_session" : 0 },
+	{ "id" : 3, "service_id" : 4,  "service_name" : "media",  "state" : 0,  "ifc_name" : "eth0",  "non_secure_port" : 5120,  "secure_port" : 5124,  "time_out" : 60,    "maximum_sessions" : 1,   "active_session" : 0 },
+	{ "id" : 4, "service_id" : 8,  "service_name" : "ssh", 	"state" : 1,  "ifc_name" : "both",  "non_secure_port" : 0, 	   "secure_port" : 22, 	  "time_out" : 60,    "maximum_sessions" : 1,   "active_session" : 0 },
+	{ "id" : 5, "service_id" : 16, "service_name" : "telnet", "state" : 0,  "ifc_name" : "eth1",  "non_secure_port" : 23,    "secure_port" : 0, 	  "time_out" : 60,    "maximum_sessions" : 1,   "active_session" : 0 }
+]
+

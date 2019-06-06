@@ -1,0 +1,23 @@
+		,
+		"datastream": "./libs/DataStream",
+		"encoding": "./libs/encoding",
+		"encoding-indexes": "./libs/encoding-indexes",
+        "base64": "./libs/kvm/base64",
+        "event_listener": "./libs/kvm/event_listener",
+        "ivtp": "./libs/kvm/ivtp",
+        "mjbuilder": "./libs/kvm/mjbuilder",
+        "softkeys": "./libs/kvm/softkeys",
+        "touch_event_listener": "./libs/kvm/touch_event_listener",
+        "usbkeyboardenglish": "./libs/kvm/usbkeyboardenglish",
+        "usbkeyboardgerman": "./libs/kvm/usbkeyboardgerman",
+        "usbkeyboardmessage": "./libs/kvm/usbkeyboardmessage",
+        "usbmessage": "./libs/kvm/usbmessage",
+        "usbmousemessage": "./libs/kvm/usbmousemessage",
+		"usermacros": "./libs/kvm/usermacros",
+        "utils": "./libs/kvm/utils",
+
+        //soc specific TODO: change it to common folder during build
+        "videosocket": "./libs/kvm/videosocket",
+        "decode_worker": "./libs/kvm/ast/decode_worker.min",
+        "video": "./libs/kvm/ast/video_worker",
+        "hardwareCursor": "./libs/kvm/ast/hardwareCursor"        

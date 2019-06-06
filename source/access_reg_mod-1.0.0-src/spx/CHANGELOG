@@ -1,0 +1,7 @@
+Package:access_reg_mod (1.0.0);urgency=new
+
+Abstract:
+	This package contains the access reg driver.
+
+--Submitter: Always Chen (Always.Chen@quantatw.com) Fri, 21 Nov 2014 14:50:19 +0800
+

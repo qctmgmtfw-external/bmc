@@ -55,24 +55,6 @@
 #define AST_WATCHDOG2_CLEAR		0x34
 #define AST_WATCHDOG2_WIDTH		0x38
 
-#define AST_WATCHDOG3_VALUE		0x44
-#define AST_WATCHDOG3_RESTART	0x48
-#define AST_WATCHDOG3_CTRL		0x4C
-
-#if defined(CONFIG_SPX_FEATURE_SELECT_WDT3)
-#  define AST_WDT_VALUE_REG AST_WATCHDOG3_VALUE
-#  define AST_WDT_RESTART_REG AST_WATCHDOG3_RESTART
-#  define AST_WDT_CTRL_REG AST_WATCHDOG3_CTRL
-#elif defined(CONFIG_SPX_FEATURE_SELECT_WDT2)
-#  define AST_WDT_VALUE_REG AST_WATCHDOG2_VALUE
-#  define AST_WDT_RESTART_REG AST_WATCHDOG2_RESTART
-#  define AST_WDT_CTRL_REG AST_WATCHDOG2_CTRL
-#else
-#  define AST_WDT_VALUE_REG AST_WATCHDOG_VALUE
-#  define AST_WDT_RESTART_REG AST_WATCHDOG_RESTART
-#  define AST_WDT_CTRL_REG AST_WATCHDOG_CTRL
-#endif
-
 /* bits of watchdog control register */
 #define AST_WATCHDOG_CTRL_CLOCK         0x10
 #define AST_WATCHDOG_CTRL_EXTERNAL      0x08
@@ -91,23 +73,39 @@ static int ast_watchdog_hal_id;
 
 static void ast_watchdog_set_value(int value)
 {
-	iowrite32(value * AST_WATCHDOG_COUNT_PER_SEDOND, ast_watchdog_virt_base + AST_WDT_VALUE_REG);
+#ifdef CONFIG_SPX_FEATURE_SELECT_WDT2
+	iowrite32(value * AST_WATCHDOG_COUNT_PER_SEDOND, ast_watchdog_virt_base + AST_WATCHDOG2_VALUE);
+#else	
+	iowrite32(value * AST_WATCHDOG_COUNT_PER_SEDOND, ast_watchdog_virt_base + AST_WATCHDOG_VALUE);
+#endif
 }
 
 static void ast_watchdog_count(void)
 {
-	iowrite32(AST_WATCHDOG_RELOAD_MAGIC, ast_watchdog_virt_base + AST_WDT_RESTART_REG);
+#ifdef CONFIG_SPX_FEATURE_SELECT_WDT2
+	iowrite32(AST_WATCHDOG_RELOAD_MAGIC, ast_watchdog_virt_base + AST_WATCHDOG2_RESTART);
+#else	
+	iowrite32(AST_WATCHDOG_RELOAD_MAGIC, ast_watchdog_virt_base + AST_WATCHDOG_RESTART);
+#endif
 }
 
 static void ast_watchdog_enable(void)
 {
 	/* we use external 1MHz clock source */
-	iowrite32(AST_WATCHDOG_CTRL_CLOCK | AST_WATCHDOG_CTRL_RESET | AST_WATCHDOG_CTRL_ENABLE, ast_watchdog_virt_base + AST_WDT_CTRL_REG);
+#ifdef CONFIG_SPX_FEATURE_SELECT_WDT2
+	iowrite32(AST_WATCHDOG_CTRL_CLOCK | AST_WATCHDOG_CTRL_RESET | AST_WATCHDOG_CTRL_ENABLE, ast_watchdog_virt_base + AST_WATCHDOG2_CTRL);
+#else
+	iowrite32(AST_WATCHDOG_CTRL_CLOCK | AST_WATCHDOG_CTRL_RESET | AST_WATCHDOG_CTRL_ENABLE, ast_watchdog_virt_base + AST_WATCHDOG_CTRL);
+#endif
 }
 
 static void ast_watchdog_disable(void)
 {
-	iowrite32(ioread32(ast_watchdog_virt_base + AST_WDT_CTRL_REG) & ~AST_WATCHDOG_CTRL_ENABLE, ast_watchdog_virt_base + AST_WDT_CTRL_REG);
+#ifdef CONFIG_SPX_FEATURE_SELECT_WDT2
+	iowrite32(ioread32(ast_watchdog_virt_base + AST_WATCHDOG2_CTRL) & ~AST_WATCHDOG_CTRL_ENABLE, ast_watchdog_virt_base + AST_WATCHDOG2_CTRL);
+#else
+	iowrite32(ioread32(ast_watchdog_virt_base + AST_WATCHDOG_CTRL) & ~AST_WATCHDOG_CTRL_ENABLE, ast_watchdog_virt_base + AST_WATCHDOG_CTRL);
+#endif
 }
 
 static struct watchdog_hal_ops_t ast_ops = {

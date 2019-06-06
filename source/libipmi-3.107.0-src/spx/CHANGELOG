@@ -1,0 +1,4179 @@
+Package: libipmi (3.107.0); urgency = medium
+
+Abstract:
+	Netfun value updated on UDS session creation.
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Thu, 10 Mar 2016 20:49:50 IST
+
+Package: libipmi (3.106.0); urgency = high
+
+Abstract:
+	fix the wrong size of buffer copied with sensor name
+
+Files Modified: data/libipmi_sensor.c
+
+--Submitter: pearcelee (pearcelee) Thu, 10 Mar 2016 17:11:39 CST
+
+Package: libipmi (3.105.0); urgency = medium
+
+Abstract:
+	Fix for Fortify issues
+
+Files Modified: data/libipmi_AppDevice.c, data/libipmi_uds_session.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: abhilash padmakar nimbalkar (abhilashpadmakarn@amiindia.co.in) Thu, 03 Mar 2016 19:14:11 HMT
+
+Package: libipmi (3.104.0); urgency = medium
+
+Abstract:
+	Fix for libipmi_sw Build fail in windows
+
+Files Modified: data/libipmi_IPM.c, data/libipmi_network_session.c, data/libipmi_serial_session.c, data/libipmi_usb_session.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Thu, 18 Feb 2016 19:15:42 IST
+
+Package: libipmi (3.103.0); urgency = medium
+
+Abstract:
+	Fix For Fortify Issues
+
+Files Modified: data/ipmb_interface.c
+
+--Submitter: Nandakumar Nanjappan (nandakumarn@amiindia.co.in) Thu, 18 Feb 2016 13:23:53 HMT
+
+Package: libipmi (3.102.0); urgency = medium
+
+Abstract:
+	FortifyFix
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c, data/libipmi_IPM.c, data/libipmi_uds_session.c
+
+--Submitter: Sreedhar B (bsreedhar@amiindia.co.in) Tue, 16 Feb 2016 19:34:30 HMT
+
+Package: libipmi (3.101.0); urgency = medium
+
+Abstract:
+	Added runtime OEM Netfn support for yafuflash commands
+
+Files Modified: data/include/libipmi_struct.h, data/libipmi_AMIFlash.c, data/libipmi_AMIOEM.c, data/libipmi_session.c
+
+--Submitter: Arvind (arvindb@amiindia.co.in) Thu, 11 Feb 2016 19:10:30 IST
+
+Package: libipmi (3.100.0); urgency = medium
+
+Abstract:
+	Fix For Fortify Issue
+
+Files Modified: data/libipmi_network.c, data/libipmi_network_session.c, data/libipmi_serial_session.c, data/libipmi_usb_session.c
+
+--Submitter: Nandakumar Nanjappan (nandakumarn@amiindia.co.in) Wed, 10 Feb 2016 12:44:19 HMT
+
+Package: libipmi (3.99.0); urgency = medium
+
+Abstract:
+	Replaced extern with MACRO to avoid build error in win platform
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: Arvind (arvindb@amiindia.co.in) Tue, 09 Feb 2016 14:33:54 IST
+
+Package: libipmi (3.98.0); urgency = medium
+
+Abstract:
+	Added runtime OEM Netfn support for yafuflash commands
+
+Files Modified: data/Makefile, data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c, data/libipmi_AMIOEM.c
+
+--Submitter: Arvind (arvindb@amiindia.co.in) Thu, 04 Feb 2016 18:57:40 IST
+
+Package: libipmi (3.97.0); urgency = medium
+
+Abstract:
+	Fix For Build warnings
+
+Files Modified: data/dbgout.c, data/libipmi_AMIOEM.c
+
+--Submitter: Abarna B (abarnab@amiindia.co.in) Thu, 04 Feb 2016 17:24:31 HMT
+
+Package: libipmi (3.96.0); urgency = low
+
+Abstract:
+	Fixel SAL issue in CMX
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: u b s kiran kumar (suryakk@amiindia.co.in) Tue, 02 Feb 2016 14:12:51 HMT
+
+Package: libipmi (3.95.0); urgency = low
+
+Abstract:
+	1.Added changes to verify the received data from UDS interface and expected data by comparing response length,cmd,NetFN. 2.pSession->hSMBMCUDSSession->byIPMBSeqNum seems to be shifted in wrong direction,so corrected it. 3. Added change to get new values for every select call.
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Thu, 21 Jan 2016 10:24:43 HMT
+
+Package: libipmi (3.94.0); urgency = medium
+
+Abstract:
+	Fix for system administrator setting failure
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Mon, 18 Jan 2016 17:38:24 IST
+
+Package: libipmi (3.93.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/libipmi/DATA/.keep, spx/PACKAGES.D/libipmi_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 21:10:33 EST
+
+Package: libipmi (3.92.0); urgency = medium
+
+Abstract:
+	Fix for bleeding edge compilation errors
+
+Files Modified: data/libipmi_AMIFlash.c, data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c, data/libipmi_Chassis.c, data/libipmi_StorDevice.c, data/libipmi_XportDevice.c, data/libipmi_fru.c, data/libipmi_ipmb_session.c, data/libipmi_network.c, data/libipmi_network_session.c, data/libipmi_sdr.c, data/libipmi_sensor.c, data/libipmi_serial_session.c, data/libipmi_session.c, data/libipmi_uds_session.c, data/libipmi_usb_session.c, data/sdr_cache.c, data/sensor_helpers.c
+
+--Submitter: Prashant Vyankatrao Bharade (prashantbharadev@amiindia.co.in) Tue, 29 Dec 2015 12:41:29 HMT
+
+Package: libipmi (3.91.0); urgency = medium
+
+Abstract:
+	Assigning char to INT8 and signed char to INT8S
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Winston (winstont@ami.com) Mon, 28 Dec 2015 02:02:13 EST
+
+Package: libipmi (3.90.0); urgency = medium
+
+Abstract:
+	Add declaration for IPMI command
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: kennyhsieh (kennyhsieh) Tue, 15 Dec 2015 17:21:29 CST
+
+Package: libipmi (3.89.0); urgency = medium
+
+Abstract:
+	Add supports for online ME firmware update
+
+Files Modified: data/libipmi_AMIFlash.c
+
+--Submitter: kennyhsieh (kennyhsieh) Tue, 01 Dec 2015 10:59:52 CST
+
+Package: libipmi (3.88.0); urgency = medium
+
+Abstract:
+	Fix for SSH login fail for 16byte user
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Wed, 04 Nov 2015 17:24:30 IST
+
+Package: libipmi (3.87.0); urgency = medium
+
+Abstract:
+	changes made in header file for build conflict
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Tue, 03 Nov 2015 16:17:25 IST
+
+Package: libipmi (3.86.0); urgency = medium
+
+Abstract:
+	libipmi support for newly added RAID Commands.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Mon, 02 Nov 2015 19:11:18 IST
+
+Package: libipmi (3.85.0); urgency = medium
+
+Abstract:
+	Fixed Windows build error.
+
+Files Modified: data/libipmi_usb_session.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 26 Sep 2015 01:41:38 HMT
+
+Package: libipmi (3.84.0); urgency = medium
+
+Abstract:
+	Fix for Radius configuration Set Failure in WebUI
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Wed, 23 Sep 2015 18:33:34 IST
+
+Package: libipmi (3.83.0); urgency = medium
+
+Abstract:
+	Checking condition for completion code whether BIOSTables or available or not
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Pinapatruni suresh (pinapatrunis@amiindia.co.in) Mon, 07 Sep 2015 22:20:24 HMT
+
+Package: libipmi (3.82.0); urgency = medium
+
+Abstract:
+	Fix for Getting the appropriate user ID for LDAP/AD/RADIUS in the Active session.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Mon, 24 Aug 2015 22:00:39 IST
+
+Package: libipmi (3.81.0); urgency = low
+
+Abstract:
+	fix for eip233657 to return the error message when RADIUS is disable
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Pearce (pearcelee@ami.com.tw) Fri, 21 Aug 2015 10:50:42 EDT
+
+Package: libipmi (3.80.0); urgency = medium
+
+Abstract:
+	Implemented libipmi_HL_GetBIOSTable higher level function to communicate with IPMI, to get the BIOSTable info.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Pinapatruni suresh (pinapatrunis@amiindia.co.in) Tue, 04 Aug 2015 10:56:21 HMT
+
+Package: libipmi (3.79.0); urgency = low
+
+Abstract:
+	Added extra files and fixes for future target migrations and strict compilers
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 23 Jul 2015 14:32:59 EDT
+
+Package: libipmi (3.78.0); urgency = medium
+
+Abstract:
+	Added System Inventory wrapper library.
+
+Files Added: data/libipmi_sysinventory.c
+Files Modified: data/Makefile, data/include/libipmi_AMIOEM.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sun, 05 Jul 2015 14:03:01 HMT
+
+Package: libipmi (3.77.0); urgency = medium
+
+Abstract:
+	Fixed Build error for yafuflash and libipmi.
+
+Files Modified: data/libipmi_AppDevice.c, data/libipmi_StorDevice.c, data/libipmi_network_session.c, data/libipmi_serial_session.c, data/libipmi_usb_session.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Tue, 30 Jun 2015 21:31:33 HMT
+
+Package: libipmi (3.76.0); urgency = medium
+
+Abstract:
+	Removed unused RAID parameters.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 27 Jun 2015 16:04:18 HMT
+
+Package: libipmi (3.75.0); urgency = medium
+
+Abstract:
+	Multiple Static IPv6 Support.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Thu, 25 Jun 2015 22:43:15 HMT
+
+Package: libipmi (3.74.0); urgency = medium
+
+Abstract:
+	Added libipmi wrappper API for Enclosure and Topology Information.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 24 Jun 2015 13:00:34 HMT
+
+Package: libipmi (3.73.0); urgency = medium
+
+Abstract:
+	fix for fortify issues (value never used)
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_XportDevice.c
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Tue, 23 Jun 2015 23:18:52 HMT
+
+Package: libipmi (3.72.0); urgency = medium
+
+Abstract:
+	fix for fortify issues (obsolete)
+
+Files Modified: data/ipmb_utils.c, data/libipmi_usb_session.c
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Tue, 23 Jun 2015 13:29:19 HMT
+
+Package: libipmi (3.71.0); urgency = medium
+
+Abstract:
+	Fortify fixes for Dangerous function
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Mon, 15 Jun 2015 15:40:46 HMT
+
+Package: libipmi (3.70.0); urgency = medium
+
+Abstract:
+	Fortify fixes for dangerous function
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c, data/libipmi_StorDevice.c, data/libipmi_fru.c, data/libipmi_ipmb_sensor.c, data/libipmi_network_session.c, data/libipmi_serial_session.c, data/libipmi_uds_session.c, data/libipmi_usermgmt.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Fri, 12 Jun 2015 00:02:31 HMT
+
+Package: libipmi (3.69.0); urgency = medium
+
+Abstract:
+	fix for fortify issues Type Mismatch: Signed to Unsigned and insecure randomness
+
+Files Modified: data/libipmi_fru.c, data/libipmi_helper.c, data/libipmi_network_session.c
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Tue, 09 Jun 2015 11:10:25 HMT
+
+Package: libipmi (3.68.0); urgency = medium
+
+Abstract:
+	Fortify fixes for format string
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Wed, 03 Jun 2015 11:42:44 HMT
+
+Package: libipmi (3.67.0); urgency = high
+
+Abstract:
+	Added libipmi API for getting the POH counter value
+
+Files Modified: data/include/libipmi_ChassisDevice.h, data/libipmi_Chassis.c, data/libipmi_sensor.c, data/sensor_helpers.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 29 May 2015 13:01:35 EDT
+
+Package: libipmi (3.66.0); urgency = medium
+
+Abstract:
+	Added libipmi wrapper function for RAID Configuration and SAS IT Controller.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 28 May 2015 12:50:46 HMT
+
+Package: libipmi (3.65.0); urgency = low
+
+Abstract:
+	eip:211954 adding ssl/tls option to the smtp client
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Hemanth Kumar (hemanthkumarm@amiindia.co.in) Mon, 18 May 2015 14:36:21 HMT
+
+Package: libipmi (3.64.0); urgency = low
+
+Abstract:
+	Removed debug statements
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Mon, 11 May 2015 17:23:05 HMT
+
+Package: libipmi (3.63.0); urgency = low
+
+Abstract:
+	addead missing function declaration
+
+Files Modified: data/include/libipmi_fru.h
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Wed, 06 May 2015 11:51:54 HMT
+
+Package: libipmi (3.62.0); urgency = low
+
+Abstract:
+	fix build error
+
+Files Modified: data/include/libipmi_fru.h
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Wed, 29 Apr 2015 11:40:03 HMT
+
+Package: libipmi (3.61.0); urgency = low
+
+Abstract:
+	Added High Level function for GetUserPrivilege,some changes to avoid alignment trap and modified the variable name,because it is not according to function name
+
+Files Modified: data/include/libipmi_AppDevice.h, data/include/libipmi_fru.h, data/libipmi_AppDevice.c, data/libipmi_fru.c, data/libipmi_ncml.c
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Tue, 28 Apr 2015 19:58:13 HMT
+
+Package: libipmi (3.60.0); urgency = medium
+
+Abstract:
+	Fortify Fix for Unreleased resources
+
+Files Modified: data/ipmb_utils.c, spx/INFO
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Fri, 24 Apr 2015 21:04:52 HMT
+
+Package: libipmi (3.59.0); urgency = medium
+
+Abstract:
+	Modified for image redirection issue.RR10 patch changes.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: kirankumarb (kirankumarb@amiindia.co.in) Thu, 16 Apr 2015 20:10:34 HMT
+
+Package: libipmi (3.58.0); urgency = medium
+
+Abstract:
+	fix for timezone related functions
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Wed, 08 Apr 2015 16:06:36 HMT
+
+Package: libipmi (3.57.0); urgency = medium
+
+Abstract:
+	fix for Not able to set email id with 64bytes username for the users
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: rajamanickamt (rajamanickamt@amiindia.co.in) Tue, 07 Apr 2015 11:35:26 IST
+
+Package: libipmi (3.56.0); urgency = low
+
+Abstract:
+	EIP:- 207160 For this issue we have added a Portnumber field in System and Audit log page.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: kalaivananm (kalaivananm@amiindia.co.in) Thu, 02 Apr 2015 19:32:36 HMT
+
+Package: libipmi (3.55.0); urgency = low
+
+Abstract:
+	Enhancing session Timeout
+
+Files Modified: data/include/libipmi_struct.h
+
+--Submitter: u b s kiran kumar (suryakk@amiindia.co.in) Fri, 20 Mar 2015 11:52:13 IST
+
+Package: libipmi (3.54.0); urgency = medium
+
+Abstract:
+	Provide Set IPv6 Support for IPv6compliancesupport is in enabled postion.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: Pinapatruni suresh (pinapatrunis@amiindia.co.in) Wed, 18 Mar 2015 15:41:39 HMT
+
+Package: libipmi (3.53.0); urgency = medium
+
+Abstract:
+	Fixed libcrypto errors and USB sessions
+
+Files Modified: data/include/libipmi_session.h, data/libipmi_session.c, data/libipmi_usb_session.c, data/libipmi_utils.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Fri, 13 Mar 2015 12:19:21 GMT+5
+
+Package: libipmi (3.52.0); urgency = medium
+
+Abstract:
+	Fixed build error for windows platform.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Wed, 11 Mar 2015 11:10:04 GMT+5
+
+Package: libipmi (3.51.0); urgency = medium
+
+Abstract:
+	depending on configuration change mount corresponding media type
+
+Files Modified: data/libipmi_AMIOEM.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 09 Mar 2015 19:56:29 GMT
+
+Package: libipmi (3.50.0); urgency = medium
+
+Abstract:
+	Fixed fortify issues.
+
+Files Modified: data/libipmi_serial_session.c, data/libipmi_uds_session.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 09 Mar 2015 18:42:01 HMT
+
+Package: libipmi (3.49.0); urgency = medium
+
+Abstract:
+	Fix for fortify Buffer overflow
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Fri, 06 Mar 2015 22:56:55 HMT
+
+Package: libipmi (3.48.0); urgency = medium
+
+Abstract:
+	Fix for Fortify Buffer overflow
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_network_session.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Fri, 06 Mar 2015 21:33:20 HMT
+
+Package: libipmi (3.47.0); urgency = medium
+
+Abstract:
+	Fortity Fixes.
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: Manish M (manishm@amiindia.co.in) Fri, 06 Mar 2015 17:55:42 HMT
+
+Package: libipmi (3.46.0); urgency = medium
+
+Abstract:
+	Fix for fortify buffer overflow
+
+Files Modified: data/libipmi_ncml.c, data/libipmi_network_session.c, data/libipmi_serial_session.c, data/libipmi_uds_session.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Thu, 05 Mar 2015 21:08:31 HMT
+
+Package: libipmi (3.45.0); urgency = medium
+
+Abstract:
+	added functions for set ssl certificate commands
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Mon, 02 Mar 2015 10:23:33 HMT
+
+Package: libipmi (3.44.0); urgency = medium
+
+Abstract:
+	ReqLen Validation
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Thu, 19 Feb 2015 15:34:06 HMT
+
+Package: libipmi (3.43.0); urgency = medium
+
+Abstract:
+	Fix :- EIP-203328 system firewall setting tab issues
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: kalaivananm (kalaivananm@amiindia.co.in) Wed, 18 Feb 2015 12:34:43 HMT
+
+Package: libipmi (3.42.0); urgency = medium
+
+Abstract:
+	Assigned the Default port number for rsyslog.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Wed, 18 Feb 2015 11:35:45 HMT
+
+Package: libipmi (3.41.0); urgency = high
+
+Abstract:
+	Rectifying fortify fixes
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_sensor.c, data/libipmi_usb_session.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 17 Feb 2015 15:15:25 IST
+
+Package: libipmi (3.40.0); urgency = medium
+
+Abstract:
+	Rectifying fortify fixes
+
+Files Added: data/libipmi_utils.c
+Files Modified: data/Makefile, data/include/libipmi_session.h, data/libipmi_AMIOEM.c, data/libipmi_network_session.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Fri, 13 Feb 2015 13:59:25 IST
+
+Package: libipmi (3.39.0); urgency = medium
+
+Abstract:
+	IPMI Firewall Bug Fixes
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Thu, 12 Feb 2015 14:38:48 HMT
+
+Package: libipmi (3.38.0); urgency = medium
+
+Abstract:
+	Fixed EIP 201311: AST2400Dual:Threshold Settings tab is missing in sensor readings page.
+
+Files Modified: data/libipmi_sdr.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Wed, 28 Jan 2015 16:48:38 HMT
+
+Package: libipmi (3.37.0); urgency = medium
+
+Abstract:
+	Changed for HPM feature implementation
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: kirankumarb (kirankumarb@amiindia.co.in) Wed, 21 Jan 2015 22:37:42 HMT
+
+Package: libipmi (3.36.0); urgency = medium
+
+Abstract:
+	Removing codes which causes compilation error in X86 architecture
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_network_session.c
+
+--Submitter: Winston (winstont@ami.com) Thu, 15 Jan 2015 00:05:15 GMT
+
+Package: libipmi (3.35.0); urgency = medium
+
+Abstract:
+	Modified for Smash Lite scorpio/core mode
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/include/libipmi_Misc.h, data/libipmi_AMIOEM.c, data/libipmi_Misc.c, spx/INFO
+
+--Submitter: ravib (bojankiravi@amiindia.co.in) Wed, 14 Jan 2015 06:05:44 UTC
+
+Package: libipmi (3.34.0); urgency = medium
+
+Abstract:
+	Fixed Flashing Firmware via Yafuflash USB medium
+
+Files Modified: data/include/libipmi_usb.h
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 13 Jan 2015 23:13:28 HMT
+
+Package: libipmi (3.33.0); urgency = medium
+
+Abstract:
+	Fixed SAL Session crashed and Network Session creation failed.
+
+Files Modified: data/libipmi_network.c, data/libipmi_rmcp.c, data/libipmi_session.c
+
+--Submitter: amar (amarendrakumars@amiindia.co.in) Mon, 12 Jan 2015 21:51:06 HMT
+
+Package: libipmi (3.32.0); urgency = medium
+
+Abstract:
+	Fixed Build error for Windows
+
+Files Modified: data/libipmi_fru.c, data/libipmi_network.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Mon, 12 Jan 2015 20:55:16 HMT
+
+Package: libipmi (3.31.0); urgency = medium
+
+Abstract:
+	Added/changed the SOL feature related issues.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: kirankumarb (kirankumarb@amiindia.co.in) Fri, 09 Jan 2015 13:52:58 HMT
+
+Package: libipmi (3.30.0); urgency = high
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/Makefile, data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c, data/libipmi_StorDevice.c, data/libipmi_XportDevice.c, data/libipmi_network.c, data/libipmi_network_session.c, data/libipmi_rmcp.c, data/libipmi_sdr.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Fri, 09 Jan 2015 11:44:57 IST
+
+Package: libipmi (3.29.0); urgency = medium
+
+Abstract:
+	fixed build error
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 08 Jan 2015 16:01:51 GMT
+
+Package: libipmi (3.28.0); urgency = medium
+
+Abstract:
+	#Autovideo record : max duration,size,count configurable
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 08 Jan 2015 14:42:03 GMT
+
+Package: libipmi (3.27.0); urgency = medium
+
+Abstract:
+	fixed issue in getmediainfo command
+
+Files Modified: data/libipmi_AMIOEM.c, spx/INFO
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 07 Jan 2015 20:06:35 GMT
+
+Package: libipmi (3.26.0); urgency = medium
+
+Abstract:
+	Moving of feature AMI Service Configuration commands into specific packages
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Tue, 06 Jan 2015 14:45:28 HMT
+
+Package: libipmi (3.25.0); urgency = medium
+
+Abstract:
+	Fixing the Build error
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: karthikeyanm (karthikeyanm@amiindia.co.in) Tue, 06 Jan 2015 12:25:25 HMT
+
+Package: libipmi (3.24.0); urgency = medium
+
+Abstract:
+	Serial Log configuration:Remote share changes
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Maheswari Alagarasamy (maheswaria@amiindia.co.in) Mon, 05 Jan 2015 21:11:52 HMT
+
+Package: libipmi (3.23.0); urgency = medium
+
+Abstract:
+	fix for Set Serial Log Configuration in request length
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Mon, 05 Jan 2015 13:50:29 IST
+
+Package: libipmi (3.22.0); urgency = medium
+
+Abstract:
+	Added the missed API declaration in header file
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: karthikeyanm (karthikeyanm@amiindia.co.in) Fri, 02 Jan 2015 19:20:29 HMT
+
+Package: libipmi (3.21.0); urgency = medium
+
+Abstract:
+	Added IPMI Layer for HPM Commands
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: karthikeyanm (karthikeyanm@amiindia.co.in) Fri, 02 Jan 2015 18:47:57 HMT
+
+Package: libipmi (3.20.0); urgency = medium
+
+Abstract:
+	SCAC fix for fortify issues
+
+Files Modified: data/include/libipmi_network.h, data/libipmi_AMIOEM.c, data/libipmi_fru.c, data/libipmi_network.c, data/libipmi_uds_session.c, data/libipmi_usb_session.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 31 Dec 2014 11:52:02 IST
+
+Package: libipmi (3.19.0); urgency = medium
+
+Abstract:
+	"Freed tmpPtr memory before return"
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 29 Dec 2014 20:58:11 IST
+
+Package: libipmi (3.18.0); urgency = medium
+
+Abstract:
+	Added new parameter for Getting FULL FIRMWARE INFO in Dual Image
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Thu, 11 Dec 2014 16:59:54 HMT
+
+Package: libipmi (3.17.0); urgency = medium
+
+Abstract:
+	updated request length related to remote kvm configuration
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Thu, 11 Dec 2014 15:29:59 GMT
+
+Package: libipmi (3.16.0); urgency = medium
+
+Abstract:
+	Modified for smash lite scorpio
+
+Files Added: data/include/libipmi_Misc.h, data/libipmi_Misc.c
+Files Modified: data/Makefile
+
+--Submitter: ravib (bojankiravi@amiindia.co.in) Wed, 10 Dec 2014 13:06:15 UTC
+
+Package: libipmi (3.15.0); urgency = medium
+
+Abstract:
+	Changes in SOL Trigger Event API
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Maheswari Alagarasamy (maheswaria@amiindia.co.in) Tue, 09 Dec 2014 19:36:14 HMT
+
+Package: libipmi (3.14.0); urgency = low
+
+Abstract:
+	Corrected libipmi API for firmware recovery info
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Mon, 08 Dec 2014 18:01:22 HMT
+
+Package: libipmi (3.13.0); urgency = medium
+
+Abstract:
+	IPtables Bugfixes
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Mon, 08 Dec 2014 13:53:18 HMT
+
+Package: libipmi (3.12.0); urgency = medium
+
+Abstract:
+	Updated libcrypto library for SUSE 11 64-bit
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_session.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Fri, 05 Dec 2014 23:10:48 HMT
+
+Package: libipmi (3.11.0); urgency = medium
+
+Abstract:
+	Remove extra eula headers
+
+Files Modified: data/include/g2cdhostwindows.h, spx/INFO
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Thu, 04 Dec 2014 11:22:47 HMT
+
+Package: libipmi (3.10.0); urgency = medium
+
+Abstract:
+	LIBIPMI commands for SOL Log Configuration/Trigger commands
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Maheswari Alagarasamy (maheswaria@amiindia.co.in) Wed, 03 Dec 2014 20:51:12 HMT
+
+Package: libipmi (3.9.0); urgency = low
+
+Abstract:
+	Seperate Sel log for auto logout and ordinary logout has been added
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Fri, 28 Nov 2014 13:48:33 HMT
+
+Package: libipmi (3.8.0); urgency = high
+
+Abstract:
+	X-86 support related changes
+
+Files Added: spx/P.CONFIG, spx/PACKAGES.D/libipmi/P.CONFIG
+Files Modified: data/Makefile, data/libipmi_sensor.c, spx/PACKAGES.D/libipmi/SCRIPTS/dev-install
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Thu, 27 Nov 2014 12:58:12 HMT
+
+Package: libipmi (3.7.0); urgency = medium
+
+Abstract:
+	EIP Fix :- 190689 
+Added the following header file from libipmi_AMIOEM.c
+and used Enum name "PEND_OP_MANAGE_BMC_BKUPCONFIG" instead of enum value "38"
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: kalaivananm (kalaivananm@amiindia.co.in) Tue, 25 Nov 2014 21:35:13 HMT
+
+Package: libipmi (3.6.0); urgency = low
+
+Abstract:
+	Added libipmi call for Set/Get firmware recovery info command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Tue, 25 Nov 2014 19:16:01 HMT
+
+Package: libipmi (3.5.0); urgency = medium
+
+Abstract:
+	Fix for issue:The event log list displayed in web ui incorrectly.
+
+Files Modified: data/include/libipmi_StorDevice.h, data/libipmi_StorDevice.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Fri, 21 Nov 2014 12:33:45 HMT
+
+Package: libipmi (3.4.0); urgency = medium
+
+Abstract:
+	IPv6 Support for IPMI Firewall
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Thu, 13 Nov 2014 15:09:02 HMT
+
+Package: libipmi (3.3.0); urgency = medium
+
+Abstract:
+	Removed hard coded values in LIBIPMI AMISetVideoRcdConf
+
+Files Modified: data/libipmi_AMIOEM.c, spx/INFO
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Wed, 12 Nov 2014 16:21:52 HMT
+
+Package: libipmi (3.2.0); urgency = medium
+
+Abstract:
+	updated request length
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Wed, 12 Nov 2014 12:16:57 HMT
+
+Package: libipmi (3.1.0); urgency = medium
+
+Abstract:
+	Fixed issue in write flash command to avoid CRC checksum failure
+
+Files Modified: data/libipmi_AMIFlash.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Sun, 19 Oct 2014 23:29:59 HMT
+
+Package: libipmi (3.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:45:11 GMT
+
+Package: libipmi (2.272.0); urgency = medium
+
+Abstract:
+	Removing the gateway field.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Fri, 17 Oct 2014 18:26:18 HMT
+
+Package: libipmi (2.271.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 10:27:32 HMT
+
+Package: libipmi (2.270.0); urgency = medium
+
+Abstract:
+	Changes to Done to remove gateway field if IPV6 compliance future is enabled in PRJ.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Tue, 14 Oct 2014 19:45:53 HMT
+
+Package: libipmi (2.269.0); urgency = medium
+
+Abstract:
+	Fix for EIP#186866.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Tue, 14 Oct 2014 17:56:52 HMT
+
+Package: libipmi (2.268.0); urgency = medium
+
+Abstract:
+	Added Support for RMedia Different Share Paths.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Mon, 13 Oct 2014 18:38:36 HMT
+
+Package: libipmi (2.267.0); urgency = medium
+
+Abstract:
+	Added LIBIPMI Wrapper function for RAID Event Log.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/include/libipmi_errorcodes.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 07 Oct 2014 02:43:13 HMT
+
+Package: libipmi (2.266.0); urgency = low
+
+Abstract:
+	Display SOLSSH on webui
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: changjun kang (changjunk@ami.com) Fri, 03 Oct 2014 14:09:52 EDT
+
+Package: libipmi (2.265.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 06:25:39 GMT
+
+Package: libipmi (2.264.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:37:14 GMT
+
+Package: libipmi (2.263.0); urgency = medium
+
+Abstract:
+	Added LIBIPMI wrapper API for RAIDInfo command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 24 Sep 2014 20:05:59 HMT
+
+Package: libipmi (2.262.0); urgency = medium
+
+Abstract:
+	updated reguest length
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 05 Sep 2014 14:02:27 CST
+
+Package: libipmi (2.261.0); urgency = medium
+
+Abstract:
+	Updated Reqlen value properly.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Wed, 20 Aug 2014 18:08:05 HMT
+
+Package: libipmi (2.260.0); urgency = medium
+
+Abstract:
+	Fixed dynamic IPv6 address is not displayed in Web-UI.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 20 Aug 2014 01:43:24 HMT
+
+Package: libipmi (2.259.0); urgency = medium
+
+Abstract:
+	Added API to get all the IPv6 Addresses.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 20 Aug 2014 00:11:51 HMT
+
+Package: libipmi (2.258.0); urgency = medium
+
+Abstract:
+	Modified parameter calling.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Sun, 17 Aug 2014 13:36:22 HMT
+
+Package: libipmi (2.257.0); urgency = medium
+
+Abstract:
+	IPMI IPv6 Compliance.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: shravan (shravans@amiindia.co.in) Sun, 17 Aug 2014 10:20:16 HMT
+
+Package: libipmi (2.256.0); urgency = medium
+
+Abstract:
+	Added crypto path for latest target. It is needed for CMX project.
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 14 Aug 2014 17:24:51 HMT
+
+Package: libipmi (2.255.0); urgency = medium
+
+Abstract:
+	VMedia instance count for kVM feature
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 12 Aug 2014 16:26:40 CST
+
+Package: libipmi (2.254.0); urgency = medium
+
+Abstract:
+	Add STARTTLS Support for SMTP client.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Sun, 10 Aug 2014 20:10:44 CST
+
+Package: libipmi (2.253.0); urgency = medium
+
+Abstract:
+	Fixed getting IPMI error 204 while setting SMTP configuration
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Fri, 08 Aug 2014 20:05:24 HMT
+
+Package: libipmi (2.252.0); urgency = medium
+
+Abstract:
+	Added the Sensor name as Extended SEL of Record Type 0xDF
+
+Files Modified: data/libipmi_StorDevice.c
+
+--Submitter: kirankumarb (kirankumarb@amiindia.co.in) Thu, 31 Jul 2014 20:11:20 HMT
+
+Package: libipmi (2.251.0); urgency = medium
+
+Abstract:
+	Added AMIOEM command for MUX switching
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Manoj Ashok (manoja@amiindia.co.in) Tue, 24 Jun 2014 16:06:01 HMT
+
+Package: libipmi (2.250.0); urgency = medium
+
+Abstract:
+	--This line, and those below, will be ignored--
+dified the condition in libipmi COMMAND side, if the user enabled then only we can able to change the root user password.
+M	data/libipmi_AMIOEM.c
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Mon, 16 Jun 2014 18:15:28 HMT
+
+Package: libipmi (2.249.0); urgency = high
+
+Abstract:
+	Fix to generate random session id's based on time
+
+Files Modified: data/libipmi_network_session.c
+
+--Submitter: Winston (winstont@ami.com) Mon, 02 Jun 2014 12:29:57 GMT
+
+Package: libipmi (2.248.0); urgency = medium
+
+Abstract:
+	Fixed Get error message when disable LDAP authentication in web ui.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Thu, 08 May 2014 20:08:04 HMT
+
+Package: libipmi (2.247.0); urgency = medium
+
+Abstract:
+	Declared a prototype in libipmi
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: bhavesh sahu (bhaveshsahu@amiindia.co.in) Thu, 08 May 2014 18:28:28 HMT
+
+Package: libipmi (2.246.0); urgency = medium
+
+Abstract:
+	Fixed LDAP login Issue
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 06 May 2014 17:54:56 HMT
+
+Package: libipmi (2.245.0); urgency = medium
+
+Abstract:
+	Adding more search path for libcrypto library
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: Winston (winstont@ami.com) Mon, 28 Apr 2014 18:48:53 GMT
+
+Package: libipmi (2.244.0); urgency = medium
+
+Abstract:
+	Fixed EIP 157122 Login Logout Event not logged when SSH session is created via IPv6 address
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Wed, 16 Apr 2014 12:49:23 HMT
+
+Package: libipmi (2.243.0); urgency = medium
+
+Abstract:
+	Changes in ipmi HL API for getNetworkSahreConfig command to not to populate password.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: valantina (valantinaa@amiindia.co.in) Fri, 11 Apr 2014 18:40:57 HMT
+
+Package: libipmi (2.242.0); urgency = medium
+
+Abstract:
+	Adding some more libraries to crypto table
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: Winston (winstont@ami.com) Wed, 09 Apr 2014 15:27:24 GMT
+
+Package: libipmi (2.241.0); urgency = medium
+
+Abstract:
+	Updating crypto library table
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: Winston (winstont@ami.com) Mon, 07 Apr 2014 18:59:22 GMT
+
+Package: libipmi (2.240.0); urgency = medium
+
+Abstract:
+	Added status support for network operation
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Abhitesh Kumar (abhiteshk@amiindia.co.in) Tue, 25 Mar 2014 21:14:07 HMT
+
+Package: libipmi (2.239.0); urgency = medium
+
+Abstract:
+	populating UpdatePercentage value for getcomponentupdatestatus to comply with recent IPMI command change
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: valantina (valantinaa@amiindia.co.in) Thu, 20 Mar 2014 16:03:43 HMT
+
+Package: libipmi (2.238.0); urgency = medium
+
+Abstract:
+	Deallocating memory while session creation failed in UDP medoum
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: ajay (ajaykumarg@amiindia.co.in) Thu, 20 Mar 2014 10:33:41 HMT
+
+Package: libipmi (2.237.0); urgency = medium
+
+Abstract:
+	Added IPMICMD_AMIGetExtendedLogConf for ExtLog Command.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: shravan (shravan@amiindia.co.in) Tue, 18 Mar 2014 19:55:32 MMT
+
+Package: libipmi (2.236.0); urgency = medium
+
+Abstract:
+	Fixed  Exit Firmware Update Mode issue
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: arunadevid (arunadevid@amiindia.co.in) Mon, 10 Mar 2014 18:30:36 HMT
+
+Package: libipmi (2.235.0); urgency = medium
+
+Abstract:
+	Getting IPMI error when navigating to Remote Session and Virtual Media Pages in WEB UI
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Wed, 05 Mar 2014 20:09:13 HMT
+
+Package: libipmi (2.234.0); urgency = medium
+
+Abstract:
+	Add USB Switch Setting Support.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: IvanLee (ivanlee@ami.com.tw) Sun, 02 Mar 2014 19:10:09 CST
+
+Package: libipmi (2.233.0); urgency = medium
+
+Abstract:
+	Modified Input parameter for supporting multiple image update
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Abhitesh (abhiteshk@amiindia.co.in) Sat, 01 Mar 2014 21:14:09 HMT
+
+Package: libipmi (2.232.0); urgency = medium
+
+Abstract:
+	Added API for Validate Bundle
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Abhitesh (abhiteshk@amiindia.co.in) Sat, 01 Mar 2014 20:18:21 HMT
+
+Package: libipmi (2.231.0); urgency = medium
+
+Abstract:
+	Add Web-UI support for SMBMC.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/include/libipmi_session.h, data/include/libipmi_struct.h, data/libipmi_AMIOEM.c, data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 26 Feb 2014 10:43:40 CST
+
+Package: libipmi (2.230.0); urgency = medium
+
+Abstract:
+	fixed EIP 134311 Dual image:Changed threshold values for CPU temperature sensors are not getting updated in UI
+
+Files Modified: data/include/libipmi_sensor.h, data/libipmi_sensor.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 25 Feb 2014 13:21:16 HMT
+
+Package: libipmi (2.229.0); urgency = medium
+
+Abstract:
+	Fixed Set Network Share configuration issue and added API for Set Network Share Operations
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: arunadevid (arunadevid@amiindia.co.in) Mon, 24 Feb 2014 19:50:03 HMT
+
+Package: libipmi (2.228.0); urgency = medium
+
+Abstract:
+	Fixed the parsing issue in Get image info and Get/Set Network Share
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: arunadevid (arunadevid@amiindia.co.in) Sat, 22 Feb 2014 18:09:39 HMT
+
+Package: libipmi (2.227.0); urgency = medium
+
+Abstract:
+	Check for Sequence number in ipmb Receive and clsoing socket at ipmi error
+
+Files Modified: data/ipmb_interface.c, data/libipmi_fru.c, data/libipmi_ipmb_session.c, data/libipmi_network.c, data/libipmi_uds_session.c
+
+--Submitter: ajay (ajaykumarg@amiindia.co.in) Thu, 20 Feb 2014 16:16:22 HMT
+
+Package: libipmi (2.226.0); urgency = medium
+
+Abstract:
+	Included crypto library path which will be loaded dynamically
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Thu, 20 Feb 2014 15:06:33 HMT
+
+Package: libipmi (2.225.0); urgency = medium
+
+Abstract:
+	Added proper read SEL entry count in the request for Get SEL Entries command
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Manoj Ashok (manoja@amiindia.co.in) Tue, 18 Feb 2014 19:11:19 HMT
+
+Package: libipmi (2.224.0); urgency = medium
+
+Abstract:
+	Fix For Issue: Get error message when disable LDAP authentication in web UI.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Tue, 18 Feb 2014 11:08:20 HMT
+
+Package: libipmi (2.223.0); urgency = medium
+
+Abstract:
+	Modified to load libcrypto library dynamically
+
+Files Modified: data/include/libipmi_session.h, data/libipmi_network_session.c, data/libipmi_session.c
+
+--Submitter: Winston (winstont@ami.com) Wed, 12 Feb 2014 17:51:46 EST
+
+Package: libipmi (2.222.0); urgency = low
+
+Abstract:
+	ImGet Component name
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Maheswari Alagarasamy (maheswaria@amiindia.co.in) Tue, 11 Feb 2014 19:43:04 HMT
+
+Package: libipmi (2.221.0); urgency = medium
+
+Abstract:
+	Removed the hard coded value for channel number as we need to send it in the request
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: arunadevid (arunadevid@amiindia.co.in) Tue, 11 Feb 2014 17:50:53 HMT
+
+Package: libipmi (2.220.0); urgency = low
+
+Abstract:
+	Handle Exit firmware update mode
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Maheswari Alagarasamy (maheswaria@amiindia.co.in) Mon, 10 Feb 2014 17:12:19 HMT
+
+Package: libipmi (2.219.0); urgency = low
+
+Abstract:
+	HAPIFN layer for Firmware Update command
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Maheswari Alagarasamy (maheswaria@amiindia.co.in) Mon, 10 Feb 2014 11:51:44 HMT
+
+Package: libipmi (2.218.0); urgency = medium
+
+Abstract:
+	Added new command to send/receive miscellaneous info to/from BMC
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c
+
+--Submitter: Pravinash (pravinashj@amiindia.co.in) Thu, 06 Feb 2014 17:19:46 HMT
+
+Package: libipmi (2.217.0); urgency = medium
+
+Abstract:
+	LMedia/RMedia Multiple (cd, fd, hd) redirection support has been added from IPMI Commands.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Tue, 04 Feb 2014 13:44:01 HMT
+
+Package: libipmi (2.216.0); urgency = medium
+
+Abstract:
+	Added new API to upload the Public key based on Function ID.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 27 Jan 2014 22:53:13 CST
+
+Package: libipmi (2.215.0); urgency = medium
+
+Abstract:
+	Added LIBIPMI Command for Clear Image Info
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Fri, 17 Jan 2014 20:21:47 HMT
+
+Package: libipmi (2.214.0); urgency = medium
+
+Abstract:
+	ipmb over multiple i2c buses support added in libipmi for CMM
+
+Files Added: data/include/ipmb_interface.h, data/include/ipmb_structs.h, data/include/ipmb_utils.h
+Files Modified: data/Makefile, data/include/libipmi_struct.h, data/ipmb_interface.c, data/ipmb_private.h, data/ipmb_utils.c, data/libipmi_ipmb_session.c, data/libipmi_session.c, spx/INFO
+
+--Submitter: ajay (ajaykumarg@amiindia.co.in) Thu, 16 Jan 2014 22:52:12 HMT
+
+Package: libipmi (2.213.0); urgency = medium
+
+Abstract:
+	Added libipmi_AMIFlash.c in Makefile for CMM
+
+Files Modified: data/Makefile
+
+--Submitter: ajay (ajaykumarg@amiindia.co.in) Thu, 16 Jan 2014 21:24:37 HMT
+
+Package: libipmi (2.212.0); urgency = medium
+
+Abstract:
+	#Updated proper Image type in getmediainfo
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 16 Jan 2014 12:53:11 GMT
+
+Package: libipmi (2.211.0); urgency = medium
+
+Abstract:
+	Added the multiple instance for CD/FD/HD for lmedia
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 16 Jan 2014 05:01:52 HMT
+
+Package: libipmi (2.210.0); urgency = medium
+
+Abstract:
+	Backup/Restore support added for configuration files from WebuI
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Mon, 06 Jan 2014 16:39:56 HMT
+
+Package: libipmi (2.209.0); urgency = medium
+
+Abstract:
+	Added libipmi layer for Backup-Restore BMC Config commands
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: thamarais (thamaraiselvanm@amiindia.co.in) Thu, 02 Jan 2014 17:46:22 HMT
+
+Package: libipmi (2.208.0); urgency = medium
+
+Abstract:
+	Added libipmi Wrapper function for Firmware Update Command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 02 Jan 2014 18:15:34 CST
+
+Package: libipmi (2.207.0); urgency = medium
+
+Abstract:
+	Added LIBIPMI call to get the Active Interfaces count and their ethIndex values.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Fri, 27 Dec 2013 14:35:15 HMT
+
+Package: libipmi (2.206.0); urgency = medium
+
+Abstract:
+	Fixed Build error for YAFUFLASH in Windows and DOS platform
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 24 Dec 2013 19:43:38 HMT
+
+Package: libipmi (2.205.0); urgency = medium
+
+Abstract:
+	Restricted Invalid Threshold values for Sensor
+
+Files Modified: data/libipmi_sdr.c, data/sensor_helpers.c, data/sensor_helpers.h
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Wed, 18 Dec 2013 12:04:13 HMT
+
+Package: libipmi (2.204.0); urgency = medium
+
+Abstract:
+	function request => LDAP extension for StartTLS
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 13 Dec 2013 14:27:26 CST
+
+Package: libipmi (2.203.0); urgency = medium
+
+Abstract:
+	Fix for EIP145264.
+
+Files Modified: data/scsi.c
+
+--Submitter: Utpal Patel (utpalpatel@ami.com.tw) Fri, 13 Dec 2013 12:09:54 CST
+
+Package: libipmi (2.202.0); urgency = medium
+
+Abstract:
+	Implemented MTRACE feature Support for QOMD and SMASHCLPD process
+
+Files Modified: data/Makefile
+
+--Submitter: Rajesh S (rajesh@amiindia.co.in) Wed, 11 Dec 2013 17:29:44 HMT
+
+Package: libipmi (2.201.0); urgency = medium
+
+Abstract:
+	Added libipmi API for Data Transfer Command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 09 Dec 2013 17:09:25 CST
+
+Package: libipmi (2.200.0); urgency = low
+
+Abstract:
+	changes done according to libdbgout.
+
+Files Modified: data/dbgout.c
+
+--Submitter: ramakrishna (nagaramakrishnak@amiindia.co.in) Mon, 02 Dec 2013 21:35:20 HMT
+
+Package: libipmi (2.199.0); urgency = medium
+
+Abstract:
+	Added the function, LIBIPMI_HL_AMIGetSELRecords()
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Manoj Ashok (manoja@amiindia.co.in) Sat, 30 Nov 2013 16:49:43 HMT
+
+Package: libipmi (2.198.0); urgency = medium
+
+Abstract:
+	System firewall with timeout support configuration added in WebUI
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Wed, 27 Nov 2013 15:54:36 HMT
+
+Package: libipmi (2.197.0); urgency = medium
+
+Abstract:
+	Fixed EIP 133907 The test Mail still received when the SMTP Server Authentication is failed
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 19 Nov 2013 13:03:03 HMT
+
+Package: libipmi (2.196.0); urgency = medium
+
+Abstract:
+	KVM Reconnect Feature
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Tamil Kumaran S (tamilkumarans@amiindia.co.in) Thu, 14 Nov 2013 22:11:42 HMT
+
+Package: libipmi (2.195.0); urgency = medium
+
+Abstract:
+	No of PAM modules will be load dynamically as per PRJ configurations
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Thu, 14 Nov 2013 12:55:51 HMT
+
+Package: libipmi (2.194.0); urgency = medium
+
+Abstract:
+	Added bridging support for IPMI UDS
+
+Files Modified: data/include/libipmi_struct.h, data/libipmi_network_session.c, data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Wed, 13 Nov 2013 14:17:13 CST
+
+Package: libipmi (2.193.0); urgency = medium
+
+Abstract:
+	Added Firewall timeout support
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Pradipta Kumar Rout (pradiptakumarr@amiindia.co.in) Mon, 11 Nov 2013 12:55:48 HMT
+
+Package: libipmi (2.192.0); urgency = medium
+
+Abstract:
+	Pre-Event video recording configuration support from WebUI
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Tue, 05 Nov 2013 12:23:27 GMT-5
+
+Package: libipmi (2.191.0); urgency = medium
+
+Abstract:
+	Added support for pre-event video recording
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Durga C (durgac@amiindia.co.in) Fri, 25 Oct 2013 00:59:02 CST
+
+Package: libipmi (2.190.0); urgency = medium
+
+Abstract:
+	Fix to receive more than 1000 bytes from BMC.
+
+Files Modified: data/libipmi_network.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 24 Oct 2013 18:57:25 CST
+
+Package: libipmi (2.189.0); urgency = medium
+
+Abstract:
+	If we set the vlan priority for eth0 , the same value is penentrating in eth1 vlan priority also. Resetting the variable to avoid this issue.
+
+Files Modified: data/libipmi_XportDevice.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: shravan (shravan@amiindia.co.in) Wed, 16 Oct 2013 15:09:58 HMT
+
+Package: libipmi (2.188.0); urgency = medium
+
+Abstract:
+	Changed IPMILDAPCONFIG structure member name
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Mon, 30 Sep 2013 11:43:04 HMT
+
+Package: libipmi (2.187.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: data/Makefile, data/libipmi_AMIOEM.c, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:55:59 EDT
+
+Package: libipmi (2.186.0); urgency = medium
+
+Abstract:
+	#Modified code to allow domain name as optional for autovideo record and rmedia configuration
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 18 Sep 2013 16:55:07 GMT
+
+Package: libipmi (2.185.0); urgency = low
+
+Abstract:
+	Fix fail to Change threshold values of sensors by using web UI
+
+Files Modified: data/include/libipmi_sdr.h, data/libipmi_sdr.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Thu, 12 Sep 2013 09:57:36 CST
+
+Package: libipmi (2.184.0); urgency = medium
+
+Abstract:
+	Fix for the Set RISCfg in libipmi layer
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Tue, 03 Sep 2013 20:25:44 HMT
+
+Package: libipmi (2.183.0); urgency = medium
+
+Abstract:
+	#fixed issue in setting vmedia configuration.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 03 Sep 2013 11:29:04 GMT
+
+Package: libipmi (2.182.0); urgency = medium
+
+Abstract:
+	Removed unwanted header file.
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 02 Sep 2013 17:42:36 CST
+
+Package: libipmi (2.181.0); urgency = medium
+
+Abstract:
+	Added one Restart Parameter in the Set VMedia Configuration Command
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Fri, 30 Aug 2013 22:21:18 HMT
+
+Package: libipmi (2.180.0); urgency = medium
+
+Abstract:
+	Corrected the ReqLen for Set VideoRcdConf Command
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Tue, 27 Aug 2013 17:31:20 HMT
+
+Package: libipmi (2.179.0); urgency = medium
+
+Abstract:
+	Changes done to not force speed and duplex when autonegotiation is ON.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: Winston (winstont@ami.com) Mon, 26 Aug 2013 18:05:21 EDT
+
+Package: libipmi (2.178.0); urgency = medium
+
+Abstract:
+	Added one more Parameter as Restart in the Set Video Record Configuration Command.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Fri, 23 Aug 2013 11:10:46 HMT
+
+Package: libipmi (2.177.0); urgency = medium
+
+Abstract:
+	Declaring prototype for IPMICMD_GetChannelAccess.
+
+Files Modified: data/include/libipmi_AppDevice.h
+
+--Submitter: Winston (winstont@ami.com) Wed, 21 Aug 2013 15:16:54 EDT
+
+Package: libipmi (2.176.0); urgency = low
+
+Abstract:
+	Added higher level APIs to Getfeaturestatus command
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: ramakrishna (nagaramakrishnak@amiindia.co.in) Wed, 21 Aug 2013 19:33:24 HMT
+
+Package: libipmi (2.175.0); urgency = low
+
+Abstract:
+	Fix AcquireContext will return error "NTE_BAD_KEYSET (0x80090016)" when yafuflash running in winxp. And Fix inet_pton() can't been running in WinXp.
+
+Files Modified: data/libipmi_network_session.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Wed, 14 Aug 2013 18:09:15 CST
+
+Package: libipmi (2.174.0); urgency = medium
+
+Abstract:
+	Modified the ReqLen of the Alert Immediate Command in the Libipmi layer.
+
+Files Modified: data/libipmi_PEF.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Wed, 07 Aug 2013 16:32:23 HMT
+
+Package: libipmi (2.173.0); urgency = low
+
+Abstract:
+	Replacing AES and HMAC_SHA1 related API's with Windows Cryptography API
+
+Files Modified: data/include/g2cdhostwindows.h, data/libipmi_network_session.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Mon, 05 Aug 2013 12:24:28 CST
+
+Package: libipmi (2.172.0); urgency = low
+
+Abstract:
+	Replacing AES and HMAC related APIs with openssl Higher Level API
+
+Files Deleted: data/include/devioctl.h
+Files Modified: data/Makefile, data/include/libipmi_errorcodes.h, data/include/libipmi_session.h, data/libipmi_network_session.c
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Mon, 29 Jul 2013 21:17:00 CST
+
+Package: libipmi (2.171.0); urgency = medium
+
+Abstract:
+	Added Version Management Support
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c, spx/INFO
+
+--Submitter: pravinash (pravinashj@amiindia.co.in) Mon, 29 Jul 2013 01:07:17 HMT
+
+Package: libipmi (2.170.0); urgency = medium
+
+Abstract:
+	IPMI Commnad has been implemented in Libifc layer for AD, LDAP, RADIUS support pages - WebUI.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Thu, 25 Jul 2013 14:19:39 GMT-5
+
+Package: libipmi (2.169.0); urgency = medium
+
+Abstract:
+	Added Libipmi Commands for Run_Time Single Port Feature Status.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Wed, 24 Jul 2013 11:50:40 HMT
+
+Package: libipmi (2.168.0); urgency = medium
+
+Abstract:
+	Added the libipmi command for the RIS Start and Stop IPMI Command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Mon, 22 Jul 2013 16:14:37 HMT
+
+Package: libipmi (2.167.0); urgency = medium
+
+Abstract:
+	Libipmi Commands for the Get and Set RIS Configuration Commands.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Thu, 18 Jul 2013 16:09:00 HMT
+
+Package: libipmi (2.166.0); urgency = medium
+
+Abstract:
+	Declared prototype in header file
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Mon, 15 Jul 2013 20:32:10 HMT
+
+Package: libipmi (2.165.0); urgency = medium
+
+Abstract:
+	ADDED IPMI and LIBIPMI Commands for Video Record Configuration
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Mon, 15 Jul 2013 18:49:53 HMT
+
+Package: libipmi (2.164.0); urgency = medium
+
+Abstract:
+	Added New OEM OEM command for yafuflash to activate the recently flashed devices
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c
+
+--Submitter: pravinash (pravinashj@amiindia.co.in) Wed, 10 Jul 2013 00:37:04 HMT
+
+Package: libipmi (2.163.0); urgency = medium
+
+Abstract:
+	LIBIPMI Commands for the Radius, AD and LDAP Configuration Parameters
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: prateekv (prateekv@amiindia.co.in) Mon, 08 Jul 2013 14:22:18 HMT
+
+Package: libipmi (2.162.0); urgency = medium
+
+Abstract:
+	Added VMedia Configuration Commands
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Tue, 02 Jul 2013 19:28:51 HMT
+
+Package: libipmi (2.161.0); urgency = medium
+
+Abstract:
+	Fixed windows compilation error.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 02 Jul 2013 18:02:03 HMT
+
+Package: libipmi (2.160.0); urgency = medium
+
+Abstract:
+	Added the session management feature,Stop the session from web support for KVM,Cd,FD and HD
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 01 Jul 2013 20:22:07 HMT
+
+Package: libipmi (2.159.0); urgency = medium
+
+Abstract:
+	Added LIBIPMI ACommands For Get/Set Syslog Configurations
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Fri, 28 Jun 2013 17:40:30 HMT
+
+Package: libipmi (2.158.0); urgency = medium
+
+Abstract:
+	Added Libipmi Commands for the Remote Configuration Parameters.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Fri, 21 Jun 2013 17:03:14 HMT
+
+Package: libipmi (2.157.0); urgency = low
+
+Abstract:
+	Added IPMI Command to get SSL Certificate status in Libifc layer
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Wed, 19 Jun 2013 13:29:35 HMT
+
+Package: libipmi (2.156.0); urgency = medium
+
+Abstract:
+	LIBIPMI Commands for the NEW AMI_OEM Command for GET SSL Certificate Status
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Mon, 17 Jun 2013 13:04:15 HMT
+
+Package: libipmi (2.155.0); urgency = medium
+
+Abstract:
+	LIBIPMI API for the IPMI_AMI_OEM Command GetPreserveConf Status
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Mon, 17 Jun 2013 12:41:25 HMT
+
+Package: libipmi (2.154.0); urgency = medium
+
+Abstract:
+	Added the LIBIPMI API for the Get NCSI Settings By using the Port Number
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Mon, 10 Jun 2013 12:35:01 HMT
+
+Package: libipmi (2.153.0); urgency = medium
+
+Abstract:
+	Implemented the libipmi interface functions for the Command GET_SYSTEM_INFO_PARAM
+
+Files Modified: data/include/libipmi_AppDevice.h, data/libipmi_AppDevice.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Tue, 21 May 2013 17:18:59 HMT
+
+Package: libipmi (2.152.0); urgency = medium
+
+Abstract:
+	Host Monitor Lock/Unlock Feature added Remote session page in WebUI
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Thu, 09 May 2013 18:21:59 HMT
+
+Package: libipmi (2.151.0); urgency = medium
+
+Abstract:
+	Fix for cd media flash in case signed image
+
+Files Modified: data/libipmi_usb_session.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 02 May 2013 04:16:11 GMT+5
+
+Package: libipmi (2.150.0); urgency = low
+
+Abstract:
+	Fixed PAM IPMI user login issue by using AMIGetChannelType command
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/include/libipmi_AppDevice.h, data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Thu, 04 Apr 2013 13:58:37 GMT
+
+Package: libipmi (2.149.0); urgency = low
+
+Abstract:
+	Fixed PAM IPMI user login failure
+
+Files Modified: data/libipmi_AppDevice.c
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Thu, 28 Mar 2013 08:22:06 GMT
+
+Package: libipmi (2.148.0); urgency = medium
+
+Abstract:
+	DNS Service enable/disable and BMC register via Hostname method Webui-added
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Wed, 13 Mar 2013 21:25:37 HMT
+
+Package: libipmi (2.147.0); urgency = high
+
+Abstract:
+	Added the IPMI Command HL API for the runtime enabled/disbled the Turn off host dsiplay and Auto lock(Turn off the host display) while launching the JViewer
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 08 Mar 2013 23:47:46 CST
+
+Package: libipmi (2.146.0); urgency = low
+
+Abstract:
+	Added OEM commands for license uploading
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: patra (poulabipatra@amiindia.co.in) Thu, 28 Feb 2013 11:35:41 GMT
+
+Package: libipmi (2.145.0); urgency = medium
+
+Abstract:
+	Changes done to pass a fixed timeout value for YAFU Activate flash mode command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c
+
+--Submitter: Winston (winstont@ami.com) Thu, 14 Feb 2013 16:17:06 EST
+
+Package: libipmi (2.144.0); urgency = low
+
+Abstract:
+	Duplication of function name
+
+Files Modified: data/include/libipmi_helper.h, data/libipmi_helper.c, data/libipmi_network_session.c, data/libipmi_serial_session.c
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Mon, 04 Feb 2013 11:44:30 HMT
+
+Package: libipmi (2.143.0); urgency = low
+
+Abstract:
+	Fixed PAM error while log in using eth1 ip
+
+Files Modified: data/include/libipmi_AppDevice.h, data/libipmi_AppDevice.c
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Fri, 25 Jan 2013 21:29:41 HMT
+
+Package: libipmi (2.142.0); urgency = low
+
+Abstract:
+	Fixed IPMI user privilege when PAM order is changed
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Fri, 11 Jan 2013 21:31:34 HMT
+
+Package: libipmi (2.141.0); urgency = medium
+
+Abstract:
+	System firewall support added
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Fri, 11 Jan 2013 13:54:44 HMT
+
+Package: libipmi (2.140.0); urgency = medium
+
+Abstract:
+	Adding Multiple Login Failed counter
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 04 Jan 2013 02:22:57 GMT+5
+
+Package: libipmi (2.139.0); urgency = medium
+
+Abstract:
+	Power consumption support added for Virtual USB devices from WebUI
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Wed, 02 Jan 2013 16:07:19 HMT
+
+Package: libipmi (2.138.0); urgency = medium
+
+Abstract:
+	Changes done to support SAL application.
+
+Files Modified: data/include/libipmi_sal_session.h, data/include/libipmi_sdr.h, data/libipmi_sdr.c, data/libipmi_session.c
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Fri, 28 Dec 2012 18:42:04 HMT
+
+Package: libipmi (2.137.0); urgency = medium
+
+Abstract:
+	Modified the Set Register DNS request value.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 21 Dec 2012 21:57:33 HMT
+
+Package: libipmi (2.136.0); urgency = high
+
+Abstract:
+	Power saving of using USB Selective Suspend Support
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 21 Dec 2012 13:10:37 CST
+
+Package: libipmi (2.135.0); urgency = medium
+
+Abstract:
+	Timezone localization support was added from WebUI
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: Sakthivel R (sakthivelr@amiindia.co.in) Mon, 17 Dec 2012 16:06:51 HMT
+
+Package: libipmi (2.134.0); urgency = medium
+
+Abstract:
+	Increasing the usb session timeout to 20000 milliseconds by default.
+
+Files Modified: data/libipmi_session.c, data/libipmi_usb_session.c
+
+--Submitter: Winston (winstont@ami.com) Mon, 03 Dec 2012 12:56:33 EST
+
+Package: libipmi (2.133.0); urgency = medium
+
+Abstract:
+	Multiple Login Failed support
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 27 Nov 2012 16:39:41 IST
+
+Package: libipmi (2.132.0); urgency = low
+
+Abstract:
+	Changed TCRIT to TDBG
+
+Files Modified: data/libipmi_AppDevice.c
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Mon, 26 Nov 2012 04:16:19 EST
+
+Package: libipmi (2.131.0); urgency = medium
+
+Abstract:
+	Wrappers to support signed image support in Yafu Utilities.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Wed, 21 Nov 2012 14:25:35 HMT
+
+Package: libipmi (2.130.0); urgency = medium
+
+Abstract:
+	Changes needed to synchronize NTP in ipmi layer
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: banuprakashreddym (banuprakashreddym@amiindia.co.in) Fri, 09 Nov 2012 13:05:36 HMT
+
+Package: libipmi (2.129.0); urgency = medium
+
+Abstract:
+	Added function to retrive all possible IPv6 addresses for a channel
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: Anand Krishnan V (anandkrishnanv@amiindia.co.in) Thu, 08 Nov 2012 10:20:17 HMT
+
+Package: libipmi (2.128.0); urgency = medium
+
+Abstract:
+	Added changes to make NTP feature configurable.
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: banuprakashreddym (banuprakashreddym@amiindia.co.in) Fri, 19 Oct 2012 09:03:21 UTC
+
+Package: libipmi (2.127.0); urgency = medium
+
+Abstract:
+	Added Process and Thread ID in UDS Session info Table, Using this information we can find which process and threads is created UDS session.
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 17 Oct 2012 16:11:07 CEST
+
+Package: libipmi (2.126.0); urgency = low
+
+Abstract:
+	Fixed Yafutool execution problem in case of Windows version
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIEXT.h
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Fri, 12 Oct 2012 19:52:29 IST
+
+Package: libipmi (2.125.0); urgency = low
+
+Abstract:
+	Added support to flash individual configuration in /conf for Yafutool and YafuKCS
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: sena (sudarshans@amiindia.co.in) Thu, 11 Oct 2012 17:16:04 IST
+
+Package: libipmi (2.124.0); urgency = medium
+
+Abstract:
+	Timezone high level functions
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 17 Sep 2012 16:07:27 IST
+
+Package: libipmi (2.123.0); urgency = medium
+
+Abstract:
+	Removed ReserveSDR function before GetallSDR function is called as it is not necessary.
+
+Files Modified: data/libipmi_sdr.c
+
+--Submitter: banuprakashreddym (banuprakashreddym@amiindia.co.in) Fri, 14 Sep 2012 08:13:03 UTC
+
+Package: libipmi (2.122.0); urgency = medium
+
+Abstract:
+	Support BIOS update for standard feature
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIEXT.h, data/libipmi_AMIFlash.c, data/libipmi_AMIOEM.c
+
+--Submitter: PatrickHuang (PatrickHuang@ami.com.tw) Fri, 07 Sep 2012 20:10:49 CST
+
+Package: libipmi (2.121.0); urgency = medium
+
+Abstract:
+	Removed unwanted code and moved some headers to new package .
+
+Files Deleted: data/include/ntddcdrm.h, data/include/ntdddisk.h, data/include/ntddscsi.h, data/include/ntddstor.h
+Files Modified: data/Makefile, data/include/libipmi_sdr.h, data/libipmi_sdr.c, data/libipmi_session.c, spx/INFO
+
+--Submitter: banuprakashreddym (banuprakashreddym@amiindia.co.in) Fri, 31 Aug 2012 18:30:40 IST
+
+Package: libipmi (2.120.0); urgency = medium
+
+Abstract:
+	Added the SAL support for Generic CMM
+
+Files Added: data/include/libipmi_sal_session.h
+Files Modified: data/Makefile, data/include/libipmi_sdr.h, data/libipmi_sdr.c, data/libipmi_session.c
+
+--Submitter: Jithin T K (jithintk@amiindia.co.in) Tue, 07 Aug 2012 17:13:31 IST
+
+Package: libipmi (2.119.0); urgency = medium
+
+Abstract:
+	Correcting dependency for libipmi.
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Mon, 16 Jul 2012 11:29:06 EDT
+
+Package: libipmi (2.118.0); urgency = medium
+
+Abstract:
+	Added change NCSI mode in WebUI support.
+
+Files Modified: data/include/libipmi_XportDevice.h
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Mon, 16 Jul 2012 12:00:10 CST
+
+Package: libipmi (2.117.0); urgency = medium
+
+Abstract:
+	Added support for Get/Set NCSI Mode change
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: Prakash.S (prakashs@amiindia.co.in) Fri, 06 Jul 2012 09:14:23 IST
+
+Package: libipmi (2.116.0); urgency = high
+
+Abstract:
+	Added the extended privilege support,such that KVM/VMedia enable/disable for the each users.Replaced the userflag member to Extended privilege
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 28 Jun 2012 18:39:27 IST
+
+Package: libipmi (2.115.0); urgency = low
+
+Abstract:
+	Adding a dummy IDBG_LINUXAPP_Runtime_DbgOut to libipmi.
+
+Files Modified: data/dbgout.c
+
+--Submitter: Winston (winstont@ami.com) Wed, 27 Jun 2012 22:33:53 EDT
+
+Package: libipmi (2.114.0); urgency = medium
+
+Abstract:
+	Updated the libipmi with pam radius related changes
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Wed, 27 Jun 2012 18:52:35 IST
+
+Package: libipmi (2.113.0); urgency = medium
+
+Abstract:
+	Fix for compilation errors when debug message support is enabled.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 26 Jun 2012 15:36:42 EDT
+
+Package: libipmi (2.112.0); urgency = medium
+
+Abstract:
+	Added AMI command for U-Boot memory test in libipmi layer.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 25 Jun 2012 13:11:46 IST
+
+Package: libipmi (2.111.0); urgency = medium
+
+Abstract:
+	License contamination for libipmi
+
+Files Deleted: data/aes.c, data/hmac.c, data/include/aes.h, data/include/hmac.h, data/include/sha1.h, data/sha1.c
+Files Modified: data/Makefile, data/include/libipmi_session.h
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Tue, 19 Jun 2012 10:51:13 IST
+
+Package: libipmi (2.110.0); urgency = medium
+
+Abstract:
+	KVM Login Audit support
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 14 Jun 2012 13:24:37 IST
+
+Package: libipmi (2.109.0); urgency = medium
+
+Abstract:
+	Add NULL pointer checking.
+
+Files Modified: data/libipmi_StorDevice.c
+
+--Submitter: Zhong Da Jun (zhongj@ami.com) Fri, 08 Jun 2012 14:12:03 JST
+
+Package: libipmi (2.108.0); urgency = medium
+
+Abstract:
+	changes done for proper flashing of firmware
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Thu, 07 Jun 2012 16:12:56 IST
+
+Package: libipmi (2.107.0); urgency = medium
+
+Abstract:
+	Added proper validation for EmailFormat.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: banuprakashreddym (banuprakashreddym@amiindia.co.in) Thu, 07 Jun 2012 11:54:16 IST
+
+Package: libipmi (2.106.0); urgency = medium
+
+Abstract:
+	Add set sensor thresholds via WebUI support.
+
+Files Modified: data/Makefile, data/include/libipmi_sdr.h, data/libipmi_sdr.c, data/sensor_helpers.c, data/sensor_helpers.h
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Wed, 30 May 2012 20:42:23 CST
+
+Package: libipmi (2.105.0); urgency = medium
+
+Abstract:
+	In AMISetSNMPConf and AMIGetSNMPConf is changed to configure with the userID  passed as argument.
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 04 May 2012 12:41:27 IST
+
+Package: libipmi (2.104.0); urgency = medium
+
+Abstract:
+	Fixes to establish IPMI session using cipher suite 3.
+
+Files Modified: data/aes.c, data/include/aes.h, data/include/devioctl.h, data/libipmi_network_session.c
+
+--Submitter: Winston (winstont@ami.com) Fri, 13 Apr 2012 11:55:09 EDT
+
+Package: libipmi (2.103.0); urgency = medium
+
+Abstract:
+	Used strcasecmp instead of strcmp to ignore the case of service name
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: banuprakashreddym (banuprakashreddym@amiindia.co.in) Fri, 06 Apr 2012 21:07:26 IST
+
+Package: libipmi (2.102.0); urgency = medium
+
+Abstract:
+	Changes made in removing the structure pAMIGetChNumReq for Get Channel Number calls
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c, data/libipmi_sensor.c
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Mon, 02 Apr 2012 20:17:14 IST
+
+Package: libipmi (2.101.0); urgency = medium
+
+Abstract:
+	Removed the unwanted members from the AMIGetSNMPConfReq_T.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: ravisastrys (ravisastrys@amiindia.co.in) Tue, 27 Mar 2012 22:02:08 IST
+
+Package: libipmi (2.100.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c, data/libipmi_StorDevice.c, data/libipmi_helper.c, data/sensor_helpers.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 13:52:06 EDT
+
+Package: libipmi (2.99.0); urgency = medium
+
+Abstract:
+	Adding the check for loop back ip while creating the ipmi session.
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: ravisastrys (ravisastrys@amiindia.co.in) Tue, 20 Mar 2012 20:48:33 IST
+
+Package: libipmi (2.98.0); urgency = medium
+
+Abstract:
+	Changed the test condition of variable j in while loop
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: banuprakashreddym (banuprakashreddym@amiindia.co.in) Tue, 20 Mar 2012 19:03:40 IST
+
+Package: libipmi (2.97.0); urgency = medium
+
+Abstract:
+	Added AMIYAFUDualImgSup wrapper function.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 15 Mar 2012 21:15:27 IST
+
+Package: libipmi (2.96.0); urgency = medium
+
+Abstract:
+	Removed isfeaturedefine dependency.
+
+Files Modified: data/Makefile, data/libipmi_AMIOEM.c, spx/INFO
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 08 Mar 2012 12:18:43 IST
+
+Package: libipmi (2.95.0); urgency = medium
+
+Abstract:
+	Changed service name to HTTP for audit
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 08 Mar 2012 10:37:02 IST
+
+Package: libipmi (2.94.0); urgency = medium
+
+Abstract:
+	User access & network privilege allowed for fixed users.
+
+Files Modified: data/libipmi_AppDevice.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Wed, 07 Mar 2012 12:15:04 IST
+
+Package: libipmi (2.93.0); urgency = medium
+
+Abstract:
+	Adding host ip at pam authentication to get the correct privilege for given user at given channel number.
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c
+
+--Submitter: ravisastrys (ravisastrys@amiindia.co.in) Tue, 06 Mar 2012 11:40:56 IST
+
+Package: libipmi (2.92.0); urgency = medium
+
+Abstract:
+	Added Higher-Level API for GetFwVersion Command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 05 Mar 2012 23:12:17 IST
+
+Package: libipmi (2.91.0); urgency = medium
+
+Abstract:
+	Added higher-level API for DualImage Support.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 05 Mar 2012 21:43:07 IST
+
+Package: libipmi (2.90.0); urgency = medium
+
+Abstract:
+	Changes for Dual Image Support.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c
+
+--Submitter: Winston (winstont@ami.com) Thu, 01 Mar 2012 19:53:04 EST
+
+Package: libipmi (2.89.0); urgency = medium
+
+Abstract:
+	Assinging publickey audit type when publickey failed case
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 01 Mar 2012 21:44:11 IST
+
+Package: libipmi (2.88.0); urgency = low
+
+Abstract:
+	Updated debug message.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 21 Feb 2012 22:22:03 IST
+
+Package: libipmi (2.87.0); urgency = medium
+
+Abstract:
+	Removed the condition compailation for CONFIG_SPX_FEATURE_SNMP_SUPPORT
+
+Files Modified: data/Makefile
+
+--Submitter: ravisastrys (ravisastrys@amiindia.co.in) Thu, 16 Feb 2012 19:56:02 IST
+
+Package: libipmi (2.86.0); urgency = low
+
+Abstract:
+	Removed condition compilation for NCSI macros
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Thu, 16 Feb 2012 14:58:57 IST
+
+Package: libipmi (2.85.0); urgency = medium
+
+Abstract:
+	Removed Conditional Compilation of SNMP Support
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 15 Feb 2012 22:01:32 IST
+
+Package: libipmi (2.84.0); urgency = medium
+
+Abstract:
+	Removed condition compilation for sys IPV6 support (CONFIG_SPX_FEATURE_GLOBAL_IPV6).
+
+Files Modified: data/Makefile, data/libipmi_AMIOEM.c, spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 14 Feb 2012 21:55:01 IST
+
+Package: libipmi (2.83.0); urgency = low
+
+Abstract:
+	Removed the conditional compilation for the macro - FEATURE_PHY_SUPPORT
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Fri, 10 Feb 2012 11:15:58 IST
+
+Package: libipmi (2.82.0); urgency = medium
+
+Abstract:
+	Added SMTP enable/disable library code in libipmi layer.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Arockia Selva Rani. A (arockiaa@amiindia.co.in) Thu, 09 Feb 2012 10:44:45 IST
+
+Package: libipmi (2.81.0); urgency = medium
+
+Abstract:
+	Changed maximum number of supported IPMI user from 10 to 16.
+
+Files Modified: data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 02 Feb 2012 12:06:54 IST
+
+Package: libipmi (2.80.0); urgency = medium
+
+Abstract:
+	Fix for SSH/Telnet Fails because of UDS Session Channel Number is 0x0D
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 01 Feb 2012 20:26:06 IST
+
+Package: libipmi (2.79.0); urgency = medium
+
+Abstract:
+	Changes done to remove the hardcoded channel number.Handled MBMC UDS Communications.
+
+Files Modified: data/include/libipmi_session.h, data/include/libipmi_struct.h, data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c, data/libipmi_ncml.c, data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 23 Jan 2012 17:31:37 IST
+
+Package: libipmi (2.78.0); urgency = low
+
+Abstract:
+	Fixed response size issue in libipmi UDS commands
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 23 Jan 2012 09:21:28 IST
+
+Package: libipmi (2.77.0); urgency = medium
+
+Abstract:
+	Added the wrappers to trigger UDS Channel Info Command to get the Channel Type,Channel Number and BMC Instance as response
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Fri, 13 Jan 2012 18:51:37 IST
+
+Package: libipmi (2.76.0); urgency = medium
+
+Abstract:
+	Getting proper userId for sysadmin
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 05 Jan 2012 14:48:14 IST
+
+Package: libipmi (2.75.0); urgency = medium
+
+Abstract:
+	Getting userId from passwd structure
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 03 Jan 2012 10:55:00 IST
+
+Package: libipmi (2.74.0); urgency = medium
+
+Abstract:
+	Getting the shell information from passwd structure
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_uds_session.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Tue, 20 Dec 2011 16:23:52 IST
+
+Package: libipmi (2.73.0); urgency = medium
+
+Abstract:
+	Added LIBIPMI_HL_AMIGetIPMISessionTimeOut libipmi layer function for getting ipmisession timeout.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Fri, 16 Dec 2011 18:08:21 IST
+
+Package: libipmi (2.72.0); urgency = medium
+
+Abstract:
+	Added libipmi layer function for AMIGetIPMISessionTimeOut command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Fri, 16 Dec 2011 17:00:13 IST
+
+Package: libipmi (2.71.0); urgency = medium
+
+Abstract:
+	Changes:
+1. Added New LIBIPMI_HL_GetAllSensorInfo function to get all sensor information.
+
+Files Modified: data/include/libipmi_StorDevice.h, data/libipmi_StorDevice.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 14 Dec 2011 18:31:58 IST
+
+Package: libipmi (2.70.0); urgency = medium
+
+Abstract:
+	change memcmp to strncmp for string comparison.
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 13 Dec 2011 19:22:33 IST
+
+Package: libipmi (2.69.0); urgency = medium
+
+Abstract:
+	Problem with Get UserId from Name.
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 13 Dec 2011 16:21:02 IST
+
+Package: libipmi (2.68.0); urgency = medium
+
+Abstract:
+	Problem with Get UserId from Name.
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 13 Dec 2011 16:14:45 IST
+
+Package: libipmi (2.67.0); urgency = medium
+
+Abstract:
+	Fixes for 64-bit.
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_fru.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 12 Dec 2011 19:04:16 IST
+
+Package: libipmi (2.66.0); urgency = medium
+
+Abstract:
+	SIGPIPE Signal is sent by send system call when trying to send data using expired session.
+Added Flag MSG_NOSIGNAL which disables the generation of SIGPIPE.
+
+Files Modified: data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 08 Dec 2011 15:34:08 IST
+
+Package: libipmi (2.65.0); urgency = medium
+
+Abstract:
+	Fix for windows build error.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 02 Dec 2011 01:37:43 IST
+
+Package: libipmi (2.64.0); urgency = medium
+
+Abstract:
+	Added wrapper function for Set/Get DNS related configuration.
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 01 Dec 2011 18:09:00 IST
+
+Package: libipmi (2.63.0); urgency = medium
+
+Abstract:
+	Copy sensor helper header file into common libipmi folder.
+
+Files Modified: spx/PACKAGES.D/libipmi_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 01 Dec 2011 16:00:50 IST
+
+Package: libipmi (2.62.0); urgency = medium
+
+Abstract:
+	libipmi calls for Setting Multiple static Ipv6 address
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/include/libipmi_XportDevice.h, data/libipmi_AMIOEM.c, data/libipmi_XportDevice.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 28 Nov 2011 19:11:58 IST
+
+Package: libipmi (2.61.0); urgency = medium
+
+Abstract:
+	Fixed high level API for Web UI
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Fri, 25 Nov 2011 23:00:15 CST
+
+Package: libipmi (2.60.0); urgency = medium
+
+Abstract:
+	Correct head file
+
+Files Modified: data/libipmi_AMIEXT.h
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Thu, 24 Nov 2011 14:52:49 CST
+
+Package: libipmi (2.59.0); urgency = medium
+
+Abstract:
+	Add high level APIs.
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Fri, 18 Nov 2011 19:07:38 CST
+
+Package: libipmi (2.58.0); urgency = medium
+
+Abstract:
+	For UserId Blockselector should 0 and ReqLen should be 1 byte.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 16 Nov 2011 19:46:09 IST
+
+Package: libipmi (2.57.0); urgency = medium
+
+Abstract:
+	Changes
+1.Set SMTP Username and Password it should not accept more than 64 bytes.
+2.Get SMTP Username response should be 64 bytes.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 16 Nov 2011 15:10:21 IST
+
+Package: libipmi (2.56.0); urgency = medium
+
+Abstract:
+	EIP 70192: Support TFTP Firmware update; flasher functions for web
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: adamlin (AdamLin@ami.com.tw) Fri, 28 Oct 2011 21:10:53 CST
+
+Package: libipmi (2.55.0); urgency = medium
+
+Abstract:
+	1.Sensor Thresholds are shown up based on the threshold mask
+2.Sensor Reading is shown up only when the raw reading is greater than zero
+
+Files Modified: data/include/libsensor.h, data/libipmi_sensor.c
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 14 Oct 2011 12:07:49 IST
+
+Package: libipmi (2.54.0); urgency = medium
+
+Abstract:
+	Changed printf statement to debug (TDBG).
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 27 Sep 2011 10:35:26 IST
+
+Package: libipmi (2.53.0); urgency = high
+
+Abstract:
+	changing the library routines name and command name to a more appropriate one
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 26 Sep 2011 15:21:39 EDT
+
+Package: libipmi (2.52.0); urgency = high
+
+Abstract:
+	Correcting the dependency. Also adding library routines for calling the command from apps
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Sun, 25 Sep 2011 21:37:20 EDT
+
+Package: libipmi (2.51.0); urgency = medium
+
+Abstract:
+	checking the Sensor scanning bit and sensor access error to update the Sensor reading properly in web-UI.
+
+Files Modified: data/include/libipmi_sensor.h, data/libipmi_sensor.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 20 Sep 2011 21:43:44 IST
+
+Package: libipmi (2.50.0); urgency = high
+
+Abstract:
+	update for snmp ipmi alignment issues: EIP 69020
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: michaelw (michaelw@ami.com) Tue, 20 Sep 2011 11:07:04 EDT
+
+Package: libipmi (2.49.0); urgency = high
+
+Abstract:
+	Fixes for 64 Bit data structures
+
+Files Modified: data/libipmi_serial_session.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 20 Sep 2011 09:03:33 EDT
+
+Package: libipmi (2.48.0); urgency = medium
+
+Abstract:
+	Session start/finish audit for KVM.
+
+Files Modified: data/Makefile, data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c, spx/INFO
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 20 Sep 2011 18:11:31 IST
+
+Package: libipmi (2.47.0); urgency = medium
+
+Abstract:
+	Getting the Sensor count using GetSDRRepository Command.
+
+Files Modified: data/libipmi_sensor.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 17 Sep 2011 16:04:20 IST
+
+Package: libipmi (2.46.0); urgency = medium
+
+Abstract:
+	Added wrapper function for AMIGetSensorInfo command and added neccesary helper function.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/include/libipmi_errorcodes.h, data/include/libipmi_sensor.h, data/libipmi_AMIOEM.c, data/libipmi_sensor.c, data/sensor_helpers.c, data/sensor_helpers.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 16 Sep 2011 22:39:41 IST
+
+Package: libipmi (2.45.0); urgency = medium
+
+Abstract:
+	Taking care of clearing SEL repository scenario while retrieving SEL entries.
+
+Files Modified: data/include/libipmi_errorcodes.h, data/libipmi_AMIOEM.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Wed, 14 Sep 2011 21:36:58 IST
+
+Package: libipmi (2.44.0); urgency = medium
+
+Abstract:
+	Fix for build error.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 13 Sep 2011 19:46:23 IST
+
+Package: libipmi (2.43.0); urgency = medium
+
+Abstract:
+	Adding AMIGetSELEntires command support to libipmi.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/include/libipmi_StorDevice.h, data/libipmi_AMIOEM.c, data/libipmi_StorDevice.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Mon, 12 Sep 2011 20:23:40 IST
+
+Package: libipmi (2.42.0); urgency = medium
+
+Abstract:
+	Modified a warning message to debug as it is giving for all compact sensor records.
+
+Files Modified: data/sensor_helpers.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 08 Sep 2011 13:51:30 IST
+
+Package: libipmi (2.41.0); urgency = medium
+
+Abstract:
+	Memory leak and properly closed the handle in failure cases
+
+Files Modified: data/libipmi_StorDevice.c, data/libipmi_fru.c, data/scsi.c, data/sdr_cache.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 29 Aug 2011 17:46:06 JST
+
+Package: libipmi (2.40.0); urgency = medium
+
+Abstract:
+	Changes to include Mn/MaxsessionInactivitytimeout in getserviceconfiguration command.
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c, data/libipmi_ncml.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 25 Aug 2011 18:43:58 IST
+
+Package: libipmi (2.39.0); urgency = low
+
+Abstract:
+	Added macro for IP Version
+
+Files Modified: data/include/libipmi_struct.h
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 23 Aug 2011 10:57:54 IST
+
+Package: libipmi (2.38.0); urgency = low
+
+Abstract:
+	Added extra check to handle missing NULL terminator
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 19 Aug 2011 18:56:44 IST
+
+Package: libipmi (2.37.0); urgency = low
+
+Abstract:
+	1. Added new fields for username and ipaddr to the UDS Session structure
+2. Duplicated Create_Local_Session function to accept username and ipaddr as arguments from the application and wrap it to the Create_UDS_function 
+3. Modified Create_UDS_Session function to accept username and ipaddr as arguments and copies them to the UDS Session structure.
+4. Modified FillUDSMessagePacket function to copy username and ipaddr from UDS Session structure to UDS Msg Header structure.
+(Review ID: 821)
+
+Files Modified: data/include/libipmi_session.h, data/include/libipmi_struct.h, data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 17 Aug 2011 12:12:18 IST
+
+Package: libipmi (2.36.0); urgency = medium
+
+Abstract:
+	libipmi changes for telnet and ssh confgiuration support
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 11 Aug 2011 21:10:59 IST
+
+Package: libipmi (2.35.0); urgency = medium
+
+Abstract:
+	Removing IPMI service configuration using ncml.
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_ncml.c
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 09 Aug 2011 17:09:37 IST
+
+Package: libipmi (2.34.0); urgency = medium
+
+Abstract:
+	Added wrapper function for bond VLAN enable command.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 05 Aug 2011 12:52:26 IST
+
+Package: libipmi (2.33.0); urgency = medium
+
+Abstract:
+	Added enumeration for Authentication Flags in UDS
+
+Files Modified: data/include/libipmi_struct.h, data/libipmi_ncml.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Jul 2011 16:19:49 IST
+
+Package: libipmi (2.32.0); urgency = medium
+
+Abstract:
+	Close the socket properly based on OS type.
+
+Files Modified: data/libipmi_network.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 20 Jul 2011 14:01:10 IST
+
+Package: libipmi (2.31.0); urgency = low
+
+Abstract:
+	Fix for windows compilation error.
+
+Files Modified: data/libipmi_network_session.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 19 Jul 2011 19:36:48 IST
+
+Package: libipmi (2.30.0); urgency = medium
+
+Abstract:
+	No need to wait for RAKP4 Message, while Sending RAKP3 Message with Error code.
+
+Files Modified: data/libipmi_network_session.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 15 Jul 2011 14:27:13 IST
+
+Package: libipmi (2.29.0); urgency = medium
+
+Abstract:
+	Added IPv6 Support in libipmi layer for both TCP and UDP.
+
+Files Modified: data/include/libipmi_errorcodes.h, data/include/libipmi_struct.h, data/libipmi_AMIOEM.c, data/libipmi_network.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 13 Jul 2011 18:12:50 IST
+
+Package: libipmi (2.28.0); urgency = medium
+
+Abstract:
+	Libipmi support for get and set SEL policy command.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Fri, 08 Jul 2011 13:47:15 IST
+
+Package: libipmi (2.27.0); urgency = medium
+
+Abstract:
+	Included the hostname in Makefile, as per commit #15980
+
+Files Modified: data/Makefile
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Wed, 06 Jul 2011 20:06:34 IST
+
+Package: libipmi (2.26.0); urgency = low
+
+Abstract:
+	Updating the size of data.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 29 Jun 2011 22:51:36 IST
+
+Package: libipmi (2.25.0); urgency = medium
+
+Abstract:
+	Added NCSI Wrapper function.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 29 Jun 2011 22:26:08 IST
+
+Package: libipmi (2.24.0); urgency = low
+
+Abstract:
+	Added Set Sensor Reading Command
+
+Files Modified: data/include/libipmi_sensor.h, data/libipmi_sensor.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 29 Jun 2011 16:05:08 IST
+
+Package: libipmi (2.23.0); urgency = low
+
+Abstract:
+	Fix for Windows build error.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 23 Jun 2011 12:51:44 IST
+
+Package: libipmi (2.22.0); urgency = low
+
+Abstract:
+	Added libipmi layer to set the preserve configuration status
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Prakash. S (prakashs@amiindia.co.in) Fri, 17 Jun 2011 18:25:00 IST
+
+Package: libipmi (2.21.0); urgency = medium
+
+Abstract:
+	Fix for invalid request length of set phy configuration.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 06 Jun 2011 19:50:52 IST
+
+Package: libipmi (2.20.0); urgency = high
+
+Abstract:
+	Modified the single media interface in ncml to individual media components like cd, fd and hd. Updated accordingly in all relevant modules
+
+Files Modified: data/libipmi_AMIOEM.c, data/libipmi_ncml.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 03 Jun 2011 11:26:10 EDT
+
+Package: libipmi (2.19.0); urgency = medium
+
+Abstract:
+	Incrementing the data size for Network Link Speed.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 30 May 2011 19:09:30 IST
+
+Package: libipmi (2.18.0); urgency = high
+
+Abstract:
+	SNMP: send the request to get user info correctly. return the values correctly
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: michaelw (michaelw@ami.com) Mon, 16 May 2011 15:27:20 EDT
+
+Package: libipmi (2.17.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 14:49:42 EDT
+
+Package: libipmi (2.16.0); urgency = high
+
+Abstract:
+	ipmi file for SNMP didn't get updated correctly before.
+
+Files Modified: data/libipmi_AMIEXT.h
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 13 May 2011 10:33:19 EDT
+
+Package: libipmi (2.15.0); urgency = high
+
+Abstract:
+	SNMP Library update, conflicting declaration removed
+
+Files Modified: data/include/libipmi_AMIOEM.h
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 13 May 2011 09:38:42 EDT
+
+Package: libipmi (2.14.0); urgency = medium
+
+Abstract:
+	Libipmi support for login, logout audit event.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Akshay (akshayp@amiindia.co.in) Fri, 13 May 2011 18:26:51 IST
+
+Package: libipmi (2.13.0); urgency = medium
+
+Abstract:
+	libipmi changes for PAM re-ordering command
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Fri, 13 May 2011 14:27:53 IST
+
+Package: libipmi (2.12.0); urgency = high
+
+Abstract:
+	Added apis for handling the uds session, framing the packet and handing the ipmi request/response for ncml config
+
+Files Added: data/libipmi_ncml.c, data/libipmi_ncml.h
+Files Modified: data/Makefile, data/libipmi_AMIOEM.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 02:26:18 EDT
+
+Package: libipmi (2.11.0); urgency = high
+
+Abstract:
+	SNMP commands isolated so nothing should break
+
+Files Modified: data/Makefile, data/include/libipmi_AppDevice.h, data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c, spx/INFO
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 19:25:09 EDT
+
+Package: libipmi (2.10.0); urgency = high
+
+Abstract:
+	SNMP Support added for ipmi commands
+
+Files Modified: data/Linux_x86_32/Makefile, data/Makefile, data/include/libipmi_AMIOEM.h, data/include/libipmi_AppDevice.h, data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c, data/libipmi_AppDevice.c
+
+--Submitter: michaelw (michaelw@ami.com) Wed, 11 May 2011 17:10:25 EDT
+
+Package: libipmi (2.9.0); urgency = low
+
+Abstract:
+	Added wrapper functions for Trigger Event Configuration
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 11 May 2011 21:18:12 IST
+
+Package: libipmi (2.8.0); urgency = low
+
+Abstract:
+	Removed Multiple declaration of Macro EMAIL_FORMAT_SIZE
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Mon, 25 Apr 2011 12:27:54 IST
+
+Package: libipmi (2.7.0); urgency = high
+
+Abstract:
+	The following issue is resolved.
+
+SMTP server IP value changes on its own after getting configured on UI page.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Somoshree (somoshreeb@amiindia.co.in) Tue, 19 Apr 2011 11:24:52 IST
+
+Package: libipmi (2.6.0); urgency = low
+
+Abstract:
+	Added login Audit configuration for RMCP and Web
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: sena (senathipathyt@ami.com) Tue, 05 Apr 2011 17:45:33 IST
+
+Package: libipmi (2.5.0); urgency = medium
+
+Abstract:
+	libipmi function added to get the SOL configuration.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 05 Apr 2011 15:34:37 IST
+
+Package: libipmi (2.4.0); urgency = medium
+
+Abstract:
+	Added libncml_dev in depends list for libipmi library
+
+Files Modified: spx/INFO
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 04 Apr 2011 17:14:17 IST
+
+Package: libipmi (2.3.0); urgency = medium
+
+Abstract:
+	Adding libipmi layer for services
+
+Files Modified: data/Makefile, data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 04 Apr 2011 15:04:53 IST
+
+Package: libipmi (2.2.0); urgency = medium
+
+Abstract:
+	Added wrapper function for set/getActiveslave support.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 28 Mar 2011 23:32:11 IST
+
+Package: libipmi (2.1.0); urgency = low
+
+Abstract:
+	Adding libipmi layer support for services
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 28 Mar 2011 14:49:03 IST
+
+Package: libipmi (2.0.0); urgency = low
+
+Abstract:
+	Incrementing the version to 2.0.0
+
+
+--Submitter: Winston (winstonv@amiindia.co.in) Tue, 22 Mar 2011 19:52:54 IST
+
+Package: libipmi (1.53.0); urgency = low
+
+Abstract:
+	Correcting the priority field in VlanEnable
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Thu, 03 Mar 2011 11:04:19 IST
+
+Package: libipmi (1.52.0); urgency = low
+
+Abstract:
+	Adding higher level functions in libipmi for valn support
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: SridharCh (sridharch@amiindia.co.in) Thu, 17 Feb 2011 19:20:49 IST
+
+Package: libipmi (1.51.0); urgency = medium
+
+Abstract:
+	Issue: Web Allows a user with 16 byte or more in password to login, if the user is configured as 16 byte password and has password with 16 byte.
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 17 Feb 2011 12:40:10 IST
+
+Package: libipmi (1.50.0); urgency = low
+
+Abstract:
+	Added function calls to convert AMI oem parameter values to oem specific values
+
+Files Modified: data/Makefile, data/libipmi_XportDevice.c, spx/INFO
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 16 Feb 2011 19:58:23 IST
+
+Package: libipmi (1.49.0); urgency = low
+
+Abstract:
+	Added the timeout while sending the data to UDS.While receiving the response packet the received size is compared with the expected size inorder to ensure packet recieved is of correct size.
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 16 Feb 2011 14:08:29 IST
+
+Package: libipmi (1.48.0); urgency = medium
+
+Abstract:
+	Authentication failure code is return properly, if the user supplied Invalid password
+
+Files Modified: data/include/libipmi_errorcodes.h, data/libipmi_session.c
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Wed, 16 Feb 2011 12:05:55 IST
+
+Package: libipmi (1.47.0); urgency = medium
+
+Abstract:
+	Changes added as per network bonding in Network link configuration.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 15 Feb 2011 15:47:02 IST
+
+Package: libipmi (1.46.0); urgency = low
+
+Abstract:
+	Changes done to support both authentication and to by pass authentication. If Authentication Flag 1 is selected then the user name and password will be authenticated and if Authentication Flag is selected as 2 then user name and password will not be authenticated.
+
+Files Modified: data/include/libipmi_session.h, data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Wed, 09 Feb 2011 16:32:15 IST
+
+Package: libipmi (1.45.0); urgency = low
+
+Abstract:
+	Adding PHY APIs only when PHY support is included.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Wed, 09 Feb 2011 15:18:51 IST
+
+Package: libipmi (1.44.0); urgency = high
+
+Abstract:
+	Added Wrapper function to get the interface related information.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 08 Feb 2011 22:39:08 IST
+
+Package: libipmi (1.43.0); urgency = high
+
+Abstract:
+	Changed SetRootPassword command password length to max 64 bytes
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Tue, 08 Feb 2011 19:26:25 IST
+
+Package: libipmi (1.42.0); urgency = low
+
+Abstract:
+	The Authentication Flag is set to 2 as the sessions created by the applications are only local sessions.Response length for each command is given to copy only the specified amount of data as response.While receiving data from server,the total received length is compared to ensure that the packet is received correctly.
+
+Files Modified: data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 07 Feb 2011 17:03:27 IST
+
+Package: libipmi (1.41.0); urgency = medium
+
+Abstract:
+	Minor changes in passing request len
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 04 Feb 2011 00:11:38 IST
+
+Package: libipmi (1.40.0); urgency = high
+
+Abstract:
+	Modified Set/Get LanEnable command.Added wrapper function for bonding Support.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 03 Feb 2011 15:23:15 IST
+
+Package: libipmi (1.39.0); urgency = medium
+
+Abstract:
+	Removed unwanted codes.Session ID and Privilege level are updated only when the authentication is successful.
+
+Files Modified: data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Thu, 03 Feb 2011 11:45:08 IST
+
+Package: libipmi (1.38.0); urgency = medium
+
+Abstract:
+	Modified the size of the variable which holds address of running variable. This fails in product Extra field.
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 02 Feb 2011 16:34:51 IST
+
+Package: libipmi (1.37.0); urgency = medium
+
+Abstract:
+	Validate FRU header before reading the full FRU information.
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 25 Jan 2011 19:01:55 IST
+
+Package: libipmi (1.36.0); urgency = medium
+
+Abstract:
+	The Null user is authentication via the same logic of the other users but when the null user is disabled the authentication will be successful.
+
+Files Modified: data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 24 Jan 2011 21:51:18 IST
+
+Package: libipmi (1.35.0); urgency = medium
+
+Abstract:
+	Removed Password size argument from libipmi layer.
+
+Files Modified: data/include/libipmi_AppDevice.h, data/libipmi_AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Mon, 24 Jan 2011 17:46:26 IST
+
+Package: libipmi (1.34.0); urgency = high
+
+Abstract:
+	Added password size argument.
+
+Files Modified: data/include/libipmi_AppDevice.h, data/libipmi_AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 21 Jan 2011 18:36:42 IST
+
+Package: libipmi (1.33.0); urgency = medium
+
+Abstract:
+	Added support for set user password with 16 byte and 20 byte seperately.
+
+Files Modified: data/include/libipmi_AppDevice.h, data/libipmi_AppDevice.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Wed, 19 Jan 2011 12:04:53 IST
+
+Package: libipmi (1.32.0); urgency = medium
+
+Abstract:
+	Minor changes in DNS wrapper functions.
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 13 Jan 2011 17:50:06 IST
+
+Package: libipmi (1.31.0); urgency = medium
+
+Abstract:
+	Modified to fix webgo crash when junk data is added in FRU
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Tue, 11 Jan 2011 11:32:45 IST
+
+Package: libipmi (1.30.0); urgency = high
+
+Abstract:
+	Added wrapper function for set/get IPv4,IPv6 and DNS Configurations.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c, data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 10 Jan 2011 20:28:46 IST
+
+Package: libipmi (1.29.0); urgency = medium
+
+Abstract:
+	Making the API calls as a generic one so that call can be used where ever required
+
+Files Modified: data/include/libipmi_session.h, data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 10 Jan 2011 14:21:05 IST
+
+Package: libipmi (1.28.0); urgency = low
+
+Abstract:
+	Added wrapper functions for PHY configuration
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: KIRAN KUMAR S (kirankumars@amiindia.co.in) Thu, 23 Dec 2010 17:22:37 IST
+
+Package: libipmi (1.27.0); urgency = high
+
+Abstract:
+	Added User Access support in UI.
+
+Files Modified: data/libipmi_AppDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 21 Dec 2010 19:54:27 IST
+
+Package: libipmi (1.26.0); urgency = high
+
+Abstract:
+	Added debug messages for memory allocation failures
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Fri, 17 Dec 2010 18:30:10 IST
+
+Package: libipmi (1.25.0); urgency = high
+
+Abstract:
+	fixed libipmi issues for customfields in fru and memory allocation failures
+
+Files Modified: data/include/libipmi_fru.h, data/libipmi_fru.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 16 Dec 2010 23:41:05 IST
+
+Package: libipmi (1.24.0); urgency = high
+
+Abstract:
+	Added new AMI-OEM command Get linux root user access
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: Nagaramakrishna.K (nagaramakrishnak@amiindia.co.in) Thu, 16 Dec 2010 19:27:21 IST
+
+Package: libipmi (1.23.0); urgency = high
+
+Abstract:
+	Bug :- UDS Interface utilizies 100 percent of the CPU when the login is tried with invalid username
+Fix :- Close the socket accordingly when the user name is invalid by sending a command to UDS Interface
+
+Files Modified: data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 14 Dec 2010 19:23:19 IST
+
+Package: libipmi (1.22.0); urgency = low
+
+Abstract:
+	Added dependency to the OEM Lan config params header file
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: sena (senathipathyt@ami.com) Mon, 13 Dec 2010 15:55:18 IST
+
+Package: libipmi (1.21.0); urgency = medium
+
+Abstract:
+	Validation for Invalid FRU format.
+
+Files Modified: data/include/libipmi_errorcodes.h, data/libipmi_fru.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 10 Dec 2010 10:55:10 EST
+
+Package: libipmi (1.20.0); urgency = medium
+
+Abstract:
+	Modified sizeof parameter to calculate the size properly in 64-bit machine also.
+
+Files Modified: data/libipmi_StorDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 10 Dec 2010 12:52:48 IST
+
+Package: libipmi (1.19.0); urgency = low
+
+Abstract:
+	Added Secondary SMTP server configuration.
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Wed, 08 Dec 2010 21:58:07 IST
+
+Package: libipmi (1.18.0); urgency = medium
+
+Abstract:
+	Size of the Chassis type is increased to append the NULL termination.
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 07 Dec 2010 07:32:23 EST
+
+Package: libipmi (1.17.0); urgency = low
+
+Abstract:
+	Reverted the changes in Version 1.15 to remove PDK hook calls
+
+Files Modified: data/libipmi_ipmb_sensor.c
+
+--Submitter: sena (senathipathyt@ami.com) Fri, 03 Dec 2010 10:15:27 IST
+
+Package: libipmi (1.16.0); urgency = high
+
+Abstract:
+	Added higher level API for Get and Set SelTime and SelUTCOffset.
+
+Files Modified: data/include/libipmi_StorDevice.h, data/libipmi_StorDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 02 Dec 2010 20:26:44 IST
+
+Package: libipmi (1.15.0); urgency = low
+
+Abstract:
+	Modified to retrieve IPMB Address from a PDK hook instead of the macro
+
+Files Modified: data/libipmi_ipmb_sensor.c
+
+--Submitter: sena (senathipathyt@ami.com) Thu, 02 Dec 2010 17:57:30 IST
+
+Package: libipmi (1.14.0); urgency = medium
+
+Abstract:
+	Fixed the webgo crash(memory corruption error) when FRU parsing.
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Thu, 02 Dec 2010 12:29:41 GMT-5:30
+
+Package: libipmi (1.13.0); urgency = low
+
+Abstract:
+	Pong message should not validate OEM byte as it is specific to OEM implementation. Remvoed it.
+
+Files Modified: data/libipmi_rmcp.c
+
+--Submitter: Jothiram Selvam (jothirams@ami.com) Mon, 29 Nov 2010 14:51:38 CET
+
+Package: libipmi (1.12.0); urgency = low
+
+Abstract:
+	Added Email formatting support For users, PEF email alert is configured using user ID  instead emailid and Added support to Attach a file to smtp email alert
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Fri, 19 Nov 2010 23:13:45 IST
+
+Package: libipmi (1.11.0); urgency = low
+
+Abstract:
+	Renaming scsi header file to fix the windows build error.
+
+Files Modified: data/include/g2cdhostwindows.h
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 22 Oct 2010 19:23:08 IST
+
+Package: libipmi (1.10.0); urgency = low
+
+Abstract:
+	Renaming scsi.h into libipmi_scsi.h.
+
+Files Added: data/include/libipmi_scsi.h
+Files Deleted: data/include/scsi.h
+Files Modified: data/libipmi_usb_session.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 18 Oct 2010 18:32:04 IST
+
+Package: libipmi (1.9.0); urgency = medium
+
+Abstract:
+	Chassis_type type is changed.
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 08 Oct 2010 12:11:08 EDT
+
+Package: libipmi (1.8.0); urgency = high
+
+Abstract:
+	Bug: It is unavaialbe to recieve alert after sensor triggering - fixed.
+
+Files Modified: data/libipmi_StorDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 05 Oct 2010 02:25:28 IST
+
+Package: libipmi (1.7.0); urgency = medium
+
+Abstract:
+	High level calls are added inorder to fetch the total fru,device id and the fru devicename
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/include/libipmi_StorDevice.h, data/libipmi_AMIOEM.c, data/libipmi_StorDevice.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Fri, 01 Oct 2010 10:22:24 EDT
+
+Package: libipmi (1.6.0); urgency = medium
+
+Abstract:
+	The custom field for Chassis info, board info and product info is added .
+The changes are done for the proper listing of the fru.
+
+Files Modified: data/libipmi_fru.c
+
+--Submitter: karthiksubramaniambr (karthiksubramaniambr@amiindia.co.in) Tue, 28 Sep 2010 05:36:32 EDT
+
+Package: libipmi (1.5.0); urgency = medium
+
+Abstract:
+	Bug: SMTP Server IP disappear after save clicked - fixed
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Thu, 23 Sep 2010 14:47:33 IST
+
+Package: libipmi (1.4.0); urgency = low
+
+Abstract:
+	Minor changes in debug print.
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 20 Sep 2010 22:10:04 IST
+
+Package: libipmi (1.3.0); urgency = low
+
+Abstract:
+	- Added support to allow the user to select the protocol type as tcp/udp while blockin/un-blocking ports.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 17 Sep 2010 14:42:14 IST
+
+Package: libipmi (1.2.0); urgency = low
+
+Abstract:
+	- Fixed Build error.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 15 Sep 2010 21:59:56 IST
+
+Package: libipmi (1.1.0); urgency = low
+
+Abstract:
+	- libipmi changes for initial firewall support.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 15 Sep 2010 17:47:35 IST
+
+Package: libipmi (1.0.26); urgency = medium
+
+Abstract:
+	Added 64-bit support in libipmi for YafuFlash.
+
+Files Modified: data/aes.c, data/hmac.c, data/include/hmac.h, data/include/sha1.h, data/libipmi_usb_session.c, data/sha1.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 06 Sep 2010 18:53:22 IST
+
+Package: libipmi (1.0.25); urgency = low
+
+Abstract:
+	Changed the Library Call for Local Session Creation as LIBIPMI_Create_IPMI_Local_Session
+
+Files Modified: data/include/libipmi_session.h, data/libipmi_session.c, data/libipmi_uds_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Tue, 17 Aug 2010 21:26:49 IST
+
+Package: libipmi (1.0.24); urgency = low
+
+Abstract:
+	Removed unused Commands and functions
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIFlash.c, data/libipmi_AMIOEM.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Thu, 12 Aug 2010 21:20:21 IST
+
+Package: libipmi (1.0.23); urgency = low
+
+Abstract:
+	Changed ASF IANA value as integer in RMCP ping request
+
+Files Modified: data/include/libipmi_rmcp.h, data/libipmi_rmcp.c
+
+--Submitter: revanth (revantha@amiindia.co.in) Wed, 11 Aug 2010 20:00:11 IST
+
+Package: libipmi (1.0.22); urgency = high
+
+Abstract:
+	Added wrapper function to get the interface status.
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 10 Aug 2010 20:46:33 IST
+
+Package: libipmi (1.0.21); urgency = low
+
+Abstract:
+	Corrections in conditional compilation check.
+
+Files Modified: data/libipmi_session.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 05 Aug 2010 17:35:13 IST
+
+Package: libipmi (1.0.20); urgency = low
+
+Abstract:
+	Added condition compilation to fix the compilation error in windows.
+
+Files Modified: data/aes.c, data/libipmi_session.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 05 Aug 2010 15:30:32 IST
+
+Package: libipmi (1.0.19); urgency = medium
+
+Abstract:
+	Fix for scsi device probing check for fedora 12 OS.
+
+Files Modified: data/libipmi_usb_session.c, data/scsi.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 04 Aug 2010 18:46:32 IST
+
+Package: libipmi (1.0.18); urgency = low
+
+Abstract:
+	Modified interface name to EthIndex in AMI Set Iface State Command
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 03 Aug 2010 13:19:09 CST
+
+Package: libipmi (1.0.17); urgency = low
+
+Abstract:
+	MBMC Changes for libipmi
+
+Files Added: data/libipmi_uds_session.c
+Files Modified: data/Makefile, data/aes.c, data/include/libipmi_struct.h, data/libipmi_AppDevice.c, data/libipmi_session.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 02 Aug 2010 19:48:23 IST
+
+Package: libipmi (1.0.16); urgency = high
+
+Abstract:
+	Added Higher level API for redesiged PEF UI.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 28 Jul 2010 16:57:32 IST
+
+Package: libipmi (1.0.15); urgency = medium
+
+Abstract:
+	Added make file and project files to support Software Module Package.
+
+Files Added: data/Linux_x86_32, data/Linux_x86_32/Makefile, data/Win, data/Win/LIBIPMI.ncb, data/Win/LIBIPMI.sln, data/Win/LIBIPMI.suo, data/Win/LIBIPMI.vcproj
+Files Deleted: data/linux_x86, data/linux_x86/Makefile, data/win32, data/win32/LIBIPMI.dsp, data/win32/LIBIPMI.dsw
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Tue, 27 Jul 2010 17:57:59 IST
+
+Package: libipmi (1.0.14); urgency = high
+
+Abstract:
+	Get LAN enable/disable data using IPMI command implementation.
+
+Files Modified: data/include/libipmi_XportDevice.h, data/libipmi_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 06 Jul 2010 19:31:05 IST
+
+Package: libipmi (1.0.13); urgency = medium
+
+Abstract:
+	Fixed binary Required dependencies
+
+Files Modified: spx/INFO
+
+--Submitter: pavithra s (pavithras@amiindia.co.in) Tue, 29 Jun 2010 15:39:58 IST
+
+Package: libipmi (1.0.12); urgency = low
+
+Abstract:
+	Removing i2c dependancy from libipmi
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 14 Jun 2010 19:01:24 IST
+
+Package: libipmi (1.0.11); urgency = high
+
+Abstract:
+	Removed local LAN macros and included common header file
+
+Files Modified: data/libipmi_XportDevice.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Fri, 11 Jun 2010 18:08:57 IST
+
+Package: libipmi (1.0.10); urgency = medium
+
+Abstract:
+	Dependeices changes due to spliting some packages
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 09 Jun 2010 01:27:12 EDT
+
+Package: libipmi (1.0.9); urgency = high
+
+Abstract:
+	Added PEF configuration in UI
+
+Files Modified: data/include/libsensor.h, data/libipmi_sensor.c
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Tue, 08 Jun 2010 15:16:56 IST
+
+Package: libipmi (1.0.8); urgency = low
+
+Abstract:
+	emoved unwanted codes used by ATCA.
+
+Files Modified: data/include/libipmi_AMIOEM.h, data/libipmi_AMIOEM.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 14 May 2010 16:49:49 IST
+
+Package: libipmi (1.0.7); urgency = medium
+
+Abstract:
+	Fix in SMTP port setting.The port number which is greater than a byte can be set.
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 02 Apr 2010 08:18:54 IST
+
+Package: libipmi (1.0.6); urgency = low
+
+Abstract:
+	Added IPMICMD_GetUserAccess() to libipmi_AppDevice.h
+
+Files Modified: data/include/libipmi_AppDevice.h, spx/INFO
+
+--Submitter: Indhu PriyaVathana V (indhuv@amiindia.co.in) Thu, 01 Apr 2010 21:28:44 IST
+
+Package: libipmi (1.0.5); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:53:46 EDT
+
+Package: libipmi (1.0.4); urgency = low
+
+Abstract:
+	inet_ntop() length parameter modified to INET6_ADDRSTRLEN
+
+Files Modified: data/libipmi_AMIOEM.c
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 26 Feb 2010 15:32:28 IST
+
+Package: libipmi (1.0.3); urgency = low
+
+Abstract:
+	IPv6 support added for SNMP and SMTP in libipmi
+
+Files Modified: data/libipmi_AMIEXT.h, data/libipmi_AMIOEM.c, data/libipmi_XportDevice.c, data/include/libipmi_XportDevice.h
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Tue, 23 Feb 2010 03:17:03 IST
+
+Package: libipmi (1.0.2); urgency = low
+
+Abstract:
+	Proxy for muthuchamy.Added reseved bit condition validation for spx also.
+
+Files Modified: data/include/libipmi_struct.h, spx/INFO
+
+--Submitter: winston (winstonv@amiindia.co.in) Tue, 16 Feb 2010 20:19:57 IST
+
+Package: libipmi (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:05:03 EST
+
+Package:libipmi (1.0.0);urgency=new
+
+Abstract:
+	This package includes IPMI library.
+
+Files Added: ipmb_interface.c, ipmb_utils.c, libipmi_AMIEXT.h, linux_x86, scsi.c, sensor_helpers.c, Makefile, libipmi_serial_session.c, dbgout.c, libipmi_AMIOEM.c, libipmi_network.c, win32, libipmi_OPMA.c, libipmi_device_api.c, ipmb_private.h, libipmi_usb_session.c, libipmi_ATCA.c, libipmi_XportDevice.c, aes.c, hmac.c, libipmi_AMIFlash.c, libipmi_ipmb_sensor.c, libipmi_StorDevice.c, libipmi_PEF.c, include, libipmi_sdr.c, libipmi_sensor.c, libipmi_IPM.c, libipmi_rmcp.c, libipmi_network_session.c, libipmi_session.c, libipmi_AppDevice.c, libipmi_kcs_session.c, libipmi_ipmb_session.c, sha1.c, libipmi_Chassis.c, libipmi_NTP.c, libipmi_helper.c, libipmi_usermgmt.c, libipmi_fru.c, sdr_cache.c, sensor_helpers.h
+
+--Submitter: SP Core Team (spcoreteam@ami.com) Wed, 13 Jan 2010 13:35:47 +0530

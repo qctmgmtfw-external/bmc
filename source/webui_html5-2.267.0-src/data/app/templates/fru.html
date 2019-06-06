@@ -1,0 +1,270 @@
+<section class="content-header">
+    <h1>
+        <%=locale.fru%>
+        <small> <%=locale.field_replaceunit%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%=locale.home%></a>
+        </li>
+        <li class="active">
+            <%=locale.fru%>
+        </li>
+    </ol>
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <!-- Do not display
+    <div class="row">
+        <div class="col-md-12">
+            <~~!search events ~~>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder=" <%=locale.search_fru%>" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div role="alert" class="alert alert-info help-item hide"><%= locale.page_desc %></div>
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"><%=locale.available_frudev%></h3>
+                </div>
+                <div class="box-body">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <td width="20%"><%=locale.fru_devid%></td>
+                                <td>
+                                    <select id="fru_device_id">
+                                        <% _.each(devices, function(item) { %>
+                                            <option value="<%=item.device.id%>" <%=active==item.device.id?'selected':''%>>
+                                                <%=item.device.id%>
+                                            </option>
+                                            <% }); %>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="20%"><%=locale.fru_devname%></td>
+                                <td>
+                                    <%=device.name%>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <div class="box box-info animated fadeInUp">
+                <div class="box-header">
+                    <h3 class="box-title"><%=locale.chassis_info%></h3>
+                </div>
+                <div class="box-body">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <td><%=locale.chassis_info_version%></td>
+                                <td>
+                                    <%=chassis.version%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.chassis_type%></td>
+                                <td>
+                                    <%=chassis.type%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.chassis_partno%></td>
+                                <td>
+                                    <%=chassis.part_number%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.chassis_serialno%></td>
+                                <td>
+                                    <%=chassis.serial_number%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.chassis_extra%></td>
+                                <td>
+                                    <%=(chassis.custom_fields?chassis.custom_fields.split('\\n').join('<br/>'):"N/A<br/>N/A<br/>N/A")%>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="box box-warning animated fadeInUp delay-0">
+                <div class="box-header">
+                    <h3 class="box-title"><%=locale.board_info%></h3>
+                </div>
+                <div class="box-body">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <td><%=locale.board_info_version%></td>
+                                <td>
+                                    <%=board.version%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.language%></td>
+                                <td>
+                                    <%=board.language%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.manufacture_datetime%></td>
+                                <td>
+                                    <%=(board.date?board.date.split('\\n').join('<br/>'):"N/A")%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.board_manufac%></td>
+                                <td>
+                                    <%=board.manufacturer%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.board_productname%></td>
+                                <td>
+                                    <%=board.product_name%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.board_serialno%></td>
+                                <td>
+                                    <%=board.serial_number%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.board_partno%></td>
+                                <td>
+                                    <%=board.part_number%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.fru_fileid%></td>
+                                <td>
+                                    <%=board.fru_file_id%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.board_extra%></td>
+                                <td>
+                                    <!--<%=board.extra%>-->
+                                    <%=(board.custom_fields?board.custom_fields.split('\\n').join('<br/>'):"N/A<br/>N/A<br/>N/A")%>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="box box-success animated fadeInUp delay-1">
+                <div class="box-header">
+                    <h3 class="box-title"><%=locale.product_info%></h3>
+                </div>
+                <div class="box-body">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <td><%=locale.product_info_version%></td>
+                                <td>
+                                    <%=product.version%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.language%></td>
+                                <td>
+                                    <%=product.language%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.product_manufac%></td>
+                                <td>
+                                    <%=product.manufacturer%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.product_name%></td>
+                                <td>
+                                    <%=product.product_name%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.product_part_number%></td>
+                                <td>
+                                    <%=product.part_number%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.product_version%></td>
+                                <td>
+                                    <%=product.product_version%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.product_serialno%></td>
+                                <td>
+                                    <%=product.serial_number%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.assettag%></td>
+                                <td>
+                                    <%=product.asset_tag%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.fru_fileid%></td>
+                                <td>
+                                    <%=product.fru_file_id%>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><%=locale.product_extra%></td>
+                                <td>
+                                    <%=(product.custom_fields?product.custom_fields.split('\\n').join('<br/>'):"N/A<br/>N/A<br/>N/A")%>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+
+        </div>
+    </div>
+</section>

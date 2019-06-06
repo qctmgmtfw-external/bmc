@@ -1,0 +1,7 @@
+{
+	"administrator": "H=4",
+	"operator": "H=3",
+	"user": "H=2",
+	"oem": "H=1",
+	"none": "H=0"
+}

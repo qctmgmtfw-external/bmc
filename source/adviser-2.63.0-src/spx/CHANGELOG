@@ -1,0 +1,2616 @@
+Package: adviser (2.63.0); urgency = medium
+
+Abstract:
+	Auto update portnumber change without restart
+
+Files Modified: data/avse.c, data/conmgr.c, data/main.c, data/video_misc.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 25 Mar 2016 20:52:53 HMT
+
+Package: adviser (2.62.0); urgency = medium
+
+Abstract:
+	On sigup, event is not triggered in select.
+
+	Added code to check if sigup signal is received and call adviser_process_signal() to handle signal.
+
+Files Modified: data/conmgr.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Wed, 02 Mar 2016 18:38:42 IST
+
+Package: adviser (2.61.0); urgency = medium
+
+Abstract:
+	unlock host monitor on adviser start if its still in locked state
+
+Files Modified: data/main.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 25 Feb 2016 10:24:58 HMT
+
+Package: adviser (2.60.0); urgency = medium
+
+Abstract:
+	Fix for cpu high utilization reduced to 10 perventage
+
+Files Modified: data/video_misc.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 25 Feb 2016 10:16:34 HMT
+
+Package: adviser (2.59.0); urgency = medium
+
+Abstract:
+	send blank screen only if capture status changes
+
+Files Modified: data/avse.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 19 Feb 2016 16:55:27 HMT
+
+Package: adviser (2.58.0); urgency = medium
+
+Abstract:
+	avoided sending colore palete and attribute and blank screen packet continously if no signal in video
+
+Files Modified: data/avse.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 10 Feb 2016 10:06:27 HMT
+
+Package: adviser (2.57.0); urgency = medium
+
+Abstract:
+	Fortify fix
+
+Files Modified: data/conmgr.c
+
+--Submitter: Sreedhar B (bsreedhar@amiindia.co.in) Tue, 09 Feb 2016 17:22:47 HMT
+
+Package: adviser (2.56.0); urgency = medium
+
+Abstract:
+	Fix For Fortify Issues
+
+Files Modified: data/cmdhndlr.c, data/conmgr.c
+
+--Submitter: Nandakumar Nanjappan (nandakumarn@amiindia.co.in) Fri, 05 Feb 2016 19:12:46 HMT
+
+Package: adviser (2.55.0); urgency = medium
+
+Abstract:
+	updated proper language code for english us
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Mon, 25 Jan 2016 19:24:41 HMT
+
+Package: adviser (2.54.0); urgency = medium
+
+Abstract:
+	Host Display Lock button is not update as per configuration, when we resume back in slave session; issue fixed.
+
+Files Modified: data/cmdhndlr.c, data/video_misc.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Thu, 14 Jan 2016 12:52:43 HMT
+
+Package: adviser (2.53.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/adviser/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 19:03:35 EST
+
+Package: adviser (2.52.0); urgency = medium
+
+Abstract:
+	Synchronizing keyboard LED status based on client keyboard LED status.
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Tue, 29 Dec 2015 12:49:03 HMT
+
+Package: adviser (2.51.0); urgency = medium
+
+Abstract:
+	Fix For Bleeding Edge Compilation Errors
+
+Files Modified: data/avse.c
+
+--Submitter: Prashant Vyankatrao Bharade (prashantbharadev@amiindia.co.in) Tue, 29 Dec 2015 12:42:47 HMT
+
+Package: adviser (2.50.0); urgency = medium
+
+Abstract:
+	Assigning char to INT8 and signed char to INT8S
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Winston (winstont@ami.com) Mon, 28 Dec 2015 02:00:13 EST
+
+Package: adviser (2.49.0); urgency = medium
+
+Abstract:
+	Fix For Bleeding Edge Compilation Errors
+
+Files Modified: data/cmdhndlr.c, data/cmworker.c, data/hid_cmdhandlr.c, data/hid_usb.c, data/main.c, data/reader.c, data/sessionmgr.c, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Prashant Vyankatrao Bharade (prashantbharadev@amiindia.co.in) Thu, 24 Dec 2015 12:58:24 HMT
+
+Package: adviser (2.48.0); urgency = medium
+
+Abstract:
+	Safety checks added to avoid sending kvm sharing response packet to unintended sessions.
+
+Files Modified: data/avse.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Mon, 21 Dec 2015 20:22:09 HMT
+
+Package: adviser (2.47.0); urgency = medium
+
+Abstract:
+	Sending the KVM privilege response packet from the avse thread, instead of sending directly form session manager.
+
+Files Modified: data/avse.c, data/sessionmgr.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Sat, 19 Dec 2015 14:13:14 HMT
+
+Package: adviser (2.46.0); urgency = medium
+
+Abstract:
+	listen to loopback interface if html5_kvm_support is enabled
+
+Files Modified: data/conmgr.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Wed, 28 Oct 2015 18:45:21 HMT
+
+Package: adviser (2.45.0); urgency = medium
+
+Abstract:
+	Close the adviser only when there is no active session when SIGHUP.
+
+Files Modified: data/main.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 20 Oct 2015 18:46:04 HMT
+
+Package: adviser (2.44.0); urgency = medium
+
+Abstract:
+	moved  active session count update out of loop to avoid mutes deadlock
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 22 Sep 2015 12:54:06 HMT
+
+Package: adviser (2.43.0); urgency = medium
+
+Abstract:
+	Added buffer time to consider time taken to detect network connect/disconnect in the client system
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Fri, 18 Sep 2015 16:51:03 HMT
+
+Package: adviser (2.42.0); urgency = medium
+
+Abstract:
+	Free media instance count not recevied properly in JViewer for Floppy and HD instances; issue fixed.
+
+Files Modified: data/avse.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Thu, 27 Aug 2015 13:44:52 HMT
+
+Package: adviser (2.41.0); urgency = medium
+
+Abstract:
+	fix for clearing kvm session on reconnect failure when host doesn't have any change in video
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Tue, 25 Aug 2015 18:54:27 HMT
+
+Package: adviser (2.40.0); urgency = medium
+
+Abstract:
+	Fix for Getting the appropriate user ID for LDAP/AD/RADIUS in the Active session.
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Mon, 24 Aug 2015 22:02:33 IST
+
+Package: adviser (2.39.0); urgency = medium
+
+Abstract:
+	kvm retry and reconnect fails with ipv6 link local address
+	truncating the scope id of the link local address according to RFC 4007
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Wed, 19 Aug 2015 17:00:52 HMT
+
+Package: adviser (2.38.0); urgency = medium
+
+Abstract:
+	fixed double free or corruption issue
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 17 Aug 2015 11:53:47 HMT
+
+Package: adviser (2.37.0); urgency = medium
+
+Abstract:
+	set full screen flag as bsod capture gonna happen
+
+Files Modified: data/video_misc.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 13 Aug 2015 19:09:12 HMT
+
+Package: adviser (2.36.0); urgency = medium
+
+Abstract:
+	added skip repositioning windows as prj configurable
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Fri, 17 Jul 2015 10:06:03 HMT
+
+Package: adviser (2.35.0); urgency = medium
+
+Abstract:
+	assign ipmi priv irrespective of extended privilege
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Thu, 02 Jul 2015 19:37:08 HMT
+
+Package: adviser (2.34.0); urgency = medium
+
+Abstract:
+	fixed : Video is not updating properly on host wake up(or) pause and resume
+
+Files Modified: data/avse.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 01 Jul 2015 15:34:03 HMT
+
+Package: adviser (2.33.0); urgency = medium
+
+Abstract:
+	kill slave session from KVM master session
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 25 Jun 2015 17:38:43 HMT
+
+Package: adviser (2.32.0); urgency = low
+
+Abstract:
+	Fix for set single port app status command fail in AST1250
+
+Files Deleted: data/stunnel.conf
+Files Modified: spx/PACKAGES.D/adviser/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Prashant Vyankatrao Bharade (prashantbharadev@amiindia.co.in) Wed, 24 Jun 2015 11:16:49 GMT+1
+
+Package: adviser (2.31.0); urgency = medium
+
+Abstract:
+	fix for fortify issues (value never used)
+
+Files Modified: data/cmworker.c, data/reader.c, data/video_misc.c, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Tue, 23 Jun 2015 23:04:10 HMT
+
+Package: adviser (2.30.0); urgency = medium
+
+Abstract:
+	kvm timeout fix; added power status ivtp packet to exception list while clearing kvm timer
+
+Files Modified: data/cmdhndlr.c, data/video_misc.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Mon, 15 Jun 2015 20:10:41 HMT
+
+Package: adviser (2.29.0); urgency = medium
+
+Abstract:
+	#Fixed issues in reconnect
+        #if master is in reconnect. requested session will be notified about that
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/cmworker.c, data/conmgr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 12 Jun 2015 08:49:26 HMT
+
+Package: adviser (2.28.0); urgency = medium
+
+Abstract:
+	KVM privilege block menu,display user privilege
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 01 Jun 2015 18:36:50 HMT
+
+Package: adviser (2.27.0); urgency = medium
+
+Abstract:
+	fixed build break; added sys/time.h for gettimeoftheday()
+
+Files Modified: data/video_misc.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Thu, 28 May 2015 13:42:30 HMT
+
+Package: adviser (2.26.0); urgency = medium
+
+Abstract:
+	mouse slow issue fixed by replacing sleep to flag to set for video capture
+
+Files Modified: data/avse.c, data/video_misc.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 27 May 2015 12:04:32 HMT
+
+Package: adviser (2.25.0); urgency = low
+
+Abstract:
+	Removed smtp links from adiser, as it is not required for adviser build
+
+Files Modified: spx/INFO
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Wed, 20 May 2015 17:33:16 HMT
+
+Package: adviser (2.24.0); urgency = low
+
+Abstract:
+	Removed smtp link
+
+Files Modified: data/Makefile
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Tue, 19 May 2015 21:54:30 HMT
+
+Package: adviser (2.23.0); urgency = medium
+
+Abstract:
+	replacing signals with pipe communication
+
+Files Modified: data/adviserd.sh, data/cmdhndlr.c, data/conmgr.c, data/main.c, data/video_misc.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 04 May 2015 11:20:02 HMT
+
+Package: adviser (2.22.0); urgency = medium
+
+Abstract:
+	Fortify Fix for unrelease resources
+
+Files Modified: data/video_misc.c
+
+--Submitter: ponsaravananp (ponsaravananp@amiindia.co.in) Wed, 29 Apr 2015 09:18:28 HMT
+
+Package: adviser (2.21.0); urgency = medium
+
+Abstract:
+	Added IsProcRunning check to avoid the spwaning of adviserd.
+
+Files Modified: data/main.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Wed, 15 Apr 2015 20:15:16 HMT
+
+Package: adviser (2.20.0); urgency = medium
+
+Abstract:
+	Faster Boot.
+
+Files Modified: data/adviserd.sh, data/main.c
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Thu, 09 Apr 2015 19:41:50 HMT
+
+Package: adviser (2.19.0); urgency = medium
+
+Abstract:
+	reduced reconnect buffer time
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Thu, 09 Apr 2015 19:24:24 HMT
+
+Package: adviser (2.18.0); urgency = medium
+
+Abstract:
+	Host display lock not released when master session is terminated; issue fixed.
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Wed, 18 Mar 2015 11:35:56 HMT
+
+Package: adviser (2.17.0); urgency = medium
+
+Abstract:
+	Fortify Fixes
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Manish M (manishm@amiindia.co.in) Wed, 11 Mar 2015 20:54:03 HMT
+
+Package: adviser (2.16.0); urgency = medium
+
+Abstract:
+	Fortify Fixes.
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Manish M (manishm@amiindia.co.in) Tue, 10 Mar 2015 16:13:58 HMT
+
+Package: adviser (2.15.0); urgency = medium
+
+Abstract:
+	Fixed the fortify issue.
+
+Files Modified: data/cmdhndlr.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Sat, 07 Mar 2015 01:56:14 HMT
+
+Package: adviser (2.14.0); urgency = high
+
+Abstract:
+	Rectifying fortify fixes
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 17 Feb 2015 15:49:42 IST
+
+Package: adviser (2.13.0); urgency = medium
+
+Abstract:
+	Deleting session token whenever the session in closed.
+
+Files Modified: data/sessionmgr.c, spx/INFO
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Fri, 06 Feb 2015 15:20:27 HMT
+
+Package: adviser (2.12.0); urgency = medium
+
+Abstract:
+	unlock host on KVM exit even if feature is disabled
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 06 Feb 2015 10:58:10 GMT
+
+Package: adviser (2.11.0); urgency = medium
+
+Abstract:
+	#do not stop adviser when receive stop websesion received
+
+Files Modified: data/avse.c, data/main.c, spx/INFO
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 29 Jan 2015 20:05:25 GMT
+
+Package: adviser (2.10.0); urgency = medium
+
+Abstract:
+	Typo corrections
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Fri, 09 Jan 2015 21:31:43 GMT
+
+Package: adviser (2.9.0); urgency = high
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Thu, 08 Jan 2015 14:21:07 IST
+
+Package: adviser (2.8.0); urgency = medium
+
+Abstract:
+	SCAC SCAH SCAL fix for fortify issues
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 24 Dec 2014 11:41:28 IST
+
+Package: adviser (2.7.0); urgency = medium
+
+Abstract:
+	SCAC SCAH SCAL fix for fortify issues
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/cmworker.c, data/conmgr.c, data/hid_usb.c, data/main.c, data/sessionmgr.c, data/threadmgr.c, data/video_misc.c, spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Mon, 22 Dec 2014 11:30:16 IST
+
+Package: adviser (2.6.0); urgency = medium
+
+Abstract:
+	Added stunnel in required field
+
+Files Modified: spx/INFO
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 10 Dec 2014 18:59:29 GMT
+
+Package: adviser (2.5.0); urgency = medium
+
+Abstract:
+	Used dynamic value for host lock and included post power control hook.
+
+Files Modified: data/cmdhndlr.c, data/cmworker.c, data/sessionmgr.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 09 Dec 2014 21:05:06 HMT
+
+Package: adviser (2.4.0); urgency = low
+
+Abstract:
+	Seperate Sel log for auto logout and ordinary logout has been added
+
+Files Modified: data/avse.c, data/sessionmgr.c
+
+--Submitter: akshay p (akshayp@amiindia.co.in) Fri, 28 Nov 2014 13:47:30 HMT
+
+Package: adviser (2.3.0); urgency = high
+
+Abstract:
+	X-86 support related changes
+
+Files Modified: spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Thu, 27 Nov 2014 12:56:37 HMT
+
+Package: adviser (2.2.0); urgency = medium
+
+Abstract:
+	Included missing locks and avoided deadlock in adviser restart.
+
+Files Modified: data/adviserd.sh, data/avse.c, data/cmdhndlr.c, data/main.c, data/reader.c, data/sessionmgr.c, spx/INFO
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 05 Nov 2014 15:24:31 HMT
+
+Package: adviser (2.1.0); urgency = medium
+
+Abstract:
+	Updated P.CONFIG file for binary package.
+
+Files Modified: spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: madhug (gaddammadhug@amiindia.co.in) Sat, 18 Oct 2014 21:13:12 HMT
+
+Package: adviser (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 02:49:44 GMT
+
+Package: adviser (1.202.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 04:36:43 GMT
+
+Package: adviser (1.201.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 02:46:11 GMT
+
+Package: adviser (1.200.0); urgency = medium
+
+Abstract:
+	#send kvm privilege and active user list after successful kvm reconnect
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 17 Sep 2014 19:17:14 CST
+
+Package: adviser (1.199.0); urgency = medium
+
+Abstract:
+	Handled webservice restart information in adviser
+
+Files Modified: data/video_misc.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 27 Aug 2014 15:05:21 CST
+
+Package: adviser (1.198.0); urgency = medium
+
+Abstract:
+	Fix for JViewer closes with Closing JViewer due to web session logout when launch from web some time
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 21 Aug 2014 18:34:01 CST
+
+Package: adviser (1.197.0); urgency = medium
+
+Abstract:
+	VMedia instance count for kVM feature
+
+Files Modified: data/avse.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 12 Aug 2014 16:22:31 CST
+
+Package: adviser (1.196.0); urgency = medium
+
+Abstract:
+	Added Runlevel to restart the service for warm reboot.
+
+Files Modified: data/adviserd.sh
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 08 Aug 2014 20:21:09 HMT
+
+Package: adviser (1.195.0); urgency = medium
+
+Abstract:
+	#clear session once terminate initiated. Dont wait jviewer to send stop command
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 07 Aug 2014 17:08:57 CST
+
+Package: adviser (1.194.0); urgency = medium
+
+Abstract:
+	Changed from refering package name to Provides Value
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 12:39:28 EDT
+
+Package: adviser (1.193.0); urgency = medium
+
+Abstract:
+	#Added KVm session timeout range in P.CONFIG
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 28 Jul 2014 16:48:36 CST
+
+Package: adviser (1.192.0); urgency = medium
+
+Abstract:
+	Keyboard LED status out of sync while host powered OFF; issue fixed.
+
+Files Modified: data/cmdhndlr.c, data/hid_usb.c, data/video_misc.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Mon, 19 May 2014 15:16:58 HMT
+
+Package: adviser (1.191.0); urgency = medium
+
+Abstract:
+	#Fixed adviser crash due to invalid pointer on recv() failure
+
+Files Modified: data/reader.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Sat, 10 May 2014 14:45:17 CST
+
+Package: adviser (1.190.0); urgency = medium
+
+Abstract:
+	#added code to handle maximum session condition
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 30 Apr 2014 20:34:08 CST
+
+Package: adviser (1.189.0); urgency = medium
+
+Abstract:
+	Changes done to always load needed drivers only during service startup
+
+Files Modified: data/main.c
+
+--Submitter: Winston (winstont@ami.com) Thu, 24 Apr 2014 10:46:12 GMT
+
+Package: adviser (1.188.0); urgency = medium
+
+Abstract:
+	Faster Boot Support
+
+Files Modified: data/Makefile, data/adviserd.sh, data/main.c, spx/INFO
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Fri, 18 Apr 2014 20:35:04 HMT
+
+Package: adviser (1.187.0); urgency = low
+
+Abstract:
+	using process status monitoring instead of sleep
+
+Files Modified: data/adviserd.sh
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Tue, 15 Apr 2014 19:05:07 HMT
+
+Package: adviser (1.186.0); urgency = medium
+
+Abstract:
+	#fixed issue in KVM reconnection, if ip or mac changes reconnect will not happen
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 26 Mar 2014 17:45:28 CST
+
+Package: adviser (1.185.0); urgency = medium
+
+Abstract:
+	Added support to perform CD/DVD image redirection using Java implementation.
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Fri, 21 Mar 2014 20:06:03 GMT
+
+Package: adviser (1.184.0); urgency = medium
+
+Abstract:
+	#Added condition to avoid resetting clean flag if session in permission request
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 27 Feb 2014 11:06:42 CST
+
+Package: adviser (1.183.0); urgency = medium
+
+Abstract:
+	Added the libvmedia extern for feature define macros, changes need in library depend packages
+
+Files Modified: data/main.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 16 Jan 2014 02:42:49 HMT
+
+Package: adviser (1.182.0); urgency = medium
+
+Abstract:
+	Setting auto host lock failed at first time.
+
+Files Modified: data/main.c, data/sessionmgr.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Tue, 14 Jan 2014 14:12:47 CST
+
+Package: adviser (1.181.0); urgency = medium
+
+Abstract:
+	Modified P.CONFIG with KVM Defualt Configuration options.
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Fri, 10 Jan 2014 22:52:01 GMT
+
+Package: adviser (1.180.0); urgency = medium
+
+Abstract:
+	#removed libopencompress dependency
+
+Files Modified: data/Makefile, data/cmdhndlr.c, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 07 Jan 2014 12:39:16 GMT
+
+Package: adviser (1.179.0); urgency = medium
+
+Abstract:
+	Handled frame packet and control packet differently in structure.
+
+Files Modified: data/cmworker.c, data/conmgr.c, data/sessionmgr.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Thu, 02 Jan 2014 11:42:40 HMT
+
+Package: adviser (1.178.0); urgency = medium
+
+Abstract:
+	KVM/VM change in retry count and retry time interval
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: Tamil Kumaran S (tamilkumarans@amiindia.co.in) Tue, 24 Dec 2013 14:55:48 HMT
+
+Package: adviser (1.177.0); urgency = medium
+
+Abstract:
+	Truncating the scope id of client link local address according to RFC 4007.
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: shravan (shravan@amiindia.co.in) Tue, 17 Dec 2013 19:36:41 HMT
+
+Package: adviser (1.176.0); urgency = medium
+
+Abstract:
+	Adviser get the power status update from the IPMI using the power status command to be written in the adviser pipe.So we dont want to get teh power status in the avse thread,will check the power status based on that will get the video
+
+Files Modified: data/avse.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 17 Dec 2013 16:17:14 HMT
+
+Package: adviser (1.175.0); urgency = medium
+
+Abstract:
+	Modified sendraw ipmi cmd from adviser
+
+Files Modified: data/cmdhndlr.c, data/threadmgr.c
+
+--Submitter: Durga C (durgac@amiindia.co.in) Sun, 08 Dec 2013 15:38:57 CST
+
+Package: adviser (1.174.0); urgency = low
+
+Abstract:
+	Changed TINFO to TDBG
+
+Files Modified: data/main.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Tue, 03 Dec 2013 20:55:05 HMT
+
+Package: adviser (1.173.0); urgency = medium
+
+Abstract:
+	Removed Debug Message
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Tamil Kumaran S (tamilkumarans@amiindia.co.in) Thu, 28 Nov 2013 15:04:03 HMT
+
+Package: adviser (1.172.0); urgency = medium
+
+Abstract:
+	KVMVM runtime configuration change and bug fix for advisor kill
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/main.c, data/sessionmgr.c
+
+--Submitter: Tamil Kumaran S (tamilkumarans@amiindia.co.in) Thu, 28 Nov 2013 14:49:18 HMT
+
+Package: adviser (1.171.0); urgency = medium
+
+Abstract:
+	Removing Unused variables to avoid build error
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Tamil Kumaran S (tamilkumarans@amiindia.co.in) Fri, 22 Nov 2013 11:38:50 HMT
+
+Package: adviser (1.170.0); urgency = medium
+
+Abstract:
+	KVM Reconnect Feature
+
+Files Modified: data/adviserd.conf, data/avse.c, data/cmdhndlr.c, data/cmworker.c, data/conmgr.c, data/main.c, data/reader.c, data/sessionmgr.c, spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: Tamil Kumaran S (tamilkumarans@amiindia.co.in) Thu, 14 Nov 2013 22:05:55 HMT
+
+Package: adviser (1.169.0); urgency = high
+
+Abstract:
+	Added the HID device intialisation in the Adviser as configurable feature.
+
+Files Modified: data/main.c, spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 31 Oct 2013 16:35:19 HMT
+
+Package: adviser (1.168.0); urgency = medium
+
+Abstract:
+	Added Pre-event(pre-crash/pre-reset) video recoring feature
+
+Files Modified: data/avse.c, data/main.c, data/threadmgr.c, data/update_conf, data/video_misc.c
+
+--Submitter: Durga C (durgac@amiindia.co.in) Fri, 25 Oct 2013 00:39:37 CST
+
+Package: adviser (1.167.0); urgency = medium
+
+Abstract:
+	#JViewer same client detection has been done using MAC address
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 15 Oct 2013 13:11:31 GMT
+
+Package: adviser (1.166.0); urgency = medium
+
+Abstract:
+	Modified the adviser to get the current status of host lock status and to show it in JViewer.
+
+Files Modified: data/avse.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 08 Oct 2013 12:37:01 HMT
+
+Package: adviser (1.165.0); urgency = low
+
+Abstract:
+	Updated to use Provides instead of binary name
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 03 Oct 2013 13:10:44 EDT
+
+Package: adviser (1.164.0); urgency = high
+
+Abstract:
+	Modified unlocking of the host monitor in case of cleaning a session
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Mon, 30 Sep 2013 13:50:03 HMT
+
+Package: adviser (1.163.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: data/Makefile, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sat, 21 Sep 2013 23:41:34 EDT
+
+Package: adviser (1.162.0); urgency = medium
+
+Abstract:
+	Added teh check not to create the active session file if the session management feature not enabled
+
+Files Modified: data/main.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 29 Aug 2013 15:34:23 HMT
+
+Package: adviser (1.161.0); urgency = medium
+
+Abstract:
+	Moved the active session count updation from ncml file to /var/tmp/active_session_cnt
+
+Files Modified: data/cmdhndlr.c, data/main.c, data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 28 Aug 2013 18:22:47 HMT
+
+Package: adviser (1.160.0); urgency = medium
+
+Abstract:
+	#EIP 133730 : Jviewer:KVM session didnt get stopped/killed after changing the KVM interface in services page
+	#dont handle other signals when SIHUP received already.
+
+Files Modified: data/main.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 28 Aug 2013 12:29:14 GMT
+
+Package: adviser (1.159.0); urgency = medium
+
+Abstract:
+	Added the check to autolock,when the partial permnission client exist at tha time launch the session lock the host screen
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 22 Aug 2013 16:50:09 HMT
+
+Package: adviser (1.158.0); urgency = medium
+
+Abstract:
+	Added the check to autolock,when the partial permnission client exist at tha time launch the session lock the host screen
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 22 Aug 2013 16:21:30 HMT
+
+Package: adviser (1.157.0); urgency = medium
+
+Abstract:
+	Sending KVM_NOT_MASTER response to pending KVM sessions, when master KVM session gets terminated from Web UI.
+
+Files Modified: data/avse.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Wed, 21 Aug 2013 18:34:19 GMT
+
+Package: adviser (1.156.0); urgency = medium
+
+Abstract:
+	No Signal command will be send to new partial permission sessions also.
+
+Files Modified: data/avse.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Mon, 19 Aug 2013 12:15:23 GMT
+
+Package: adviser (1.155.0); urgency = medium
+
+Abstract:
+	Added the session management feature condition to write the active session count in ncm.conf if the feature is not enabled
+
+Files Modified: data/cmdhndlr.c, data/conmgr.c, data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 07 Aug 2013 14:27:33 HMT
+
+Package: adviser (1.154.0); urgency = medium
+
+Abstract:
+	#Avoided unneccessary KVM timer reset and updated proper reset value
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 05 Aug 2013 11:22:00 GMT
+
+Package: adviser (1.153.0); urgency = medium
+
+Abstract:
+	Blowfish algorithm moved to a seperate package as the license is BSD.Included the blowfish dependency.
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Thu, 01 Aug 2013 11:27:02 CST
+
+Package: adviser (1.152.0); urgency = medium
+
+Abstract:
+	Along with valid video session response session index will be sent to jviewer
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Thu, 25 Jul 2013 12:51:46 GMT
+
+Package: adviser (1.151.0); urgency = medium
+
+Abstract:
+	#Updated physical keyboard feature support P.CONFIG and devinstall
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 17 Jul 2013 13:57:52 GMT
+
+Package: adviser (1.150.0); urgency = medium
+
+Abstract:
+	Added the command to notify the media update in JViewer
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c, data/video_misc.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 15 Jul 2013 22:57:47 HMT
+
+Package: adviser (1.149.0); urgency = medium
+
+Abstract:
+	Added the check for session management
+
+Files Modified: data/avse.c, data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 12 Jul 2013 16:28:14 HMT
+
+Package: adviser (1.148.0); urgency = medium
+
+Abstract:
+	Added the mmeset for buffer allocated
+
+Files Modified: data/avse.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 11 Jul 2013 21:09:40 HMT
+
+Package: adviser (1.147.0); urgency = medium
+
+Abstract:
+	Included the PRJ feature to allow multiple KVM session from the same clients.
+
+Files Modified: data/cmdhndlr.c, data/video_misc.c, spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 09 Jul 2013 17:05:48 CEST
+
+Package: adviser (1.146.0); urgency = medium
+
+Abstract:
+	Discard power control and raw ipmi command packets from invalid and unused sessions.
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Tue, 09 Jul 2013 13:01:23 GMT
+
+Package: adviser (1.145.0); urgency = medium
+
+Abstract:
+	Added the updating the Vmedia device free slot in JViewer dynamically based on the Server connection accepted
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/video_misc.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 08 Jul 2013 18:33:33 HMT
+
+Package: adviser (1.144.0); urgency = medium
+
+Abstract:
+	#KVM Session timeout
+
+Files Modified: spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 04 Jul 2013 15:14:56 GMT
+
+Package: adviser (1.143.0); urgency = medium
+
+Abstract:
+	#Update physical keyboard layout language in configuration file.
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 02 Jul 2013 17:51:55 GMT
+
+Package: adviser (1.142.0); urgency = medium
+
+Abstract:
+	Added the session management feature,Stop the session from web support for KVM,Cd,FD and HD
+
+Files Modified: data/Makefile, data/cmdhndlr.c, data/conmgr.c, data/sessionmgr.c, data/video_misc.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 01 Jul 2013 20:15:43 HMT
+
+Package: adviser (1.141.0); urgency = medium
+
+Abstract:
+	Closing KVM Client on KVM session time out.
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/main.c, data/sessionmgr.c, spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Thu, 27 Jun 2013 20:27:09 GMT
+
+Package: adviser (1.140.0); urgency = medium
+
+Abstract:
+	#Singleport feature . Implemented Enable/Disable at runtime
+
+Files Modified: data/conmgr.c, data/main.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 26 Jun 2013 12:09:13 GMT
+
+Package: adviser (1.139.0); urgency = medium
+
+Abstract:
+	#Multiple KVM redirection sessions to same BMC denied only when launched from same client, with same user name, and same user domain.
+
+Files Modified: data/cmdhndlr.c, data/conmgr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 20 Jun 2013 17:01:30 GMT
+
+Package: adviser (1.138.0); urgency = medium
+
+Abstract:
+	#VMedia license status control packet will be send to JViewer before registering in avse thread
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 20 Jun 2013 14:43:48 GMT
+
+Package: adviser (1.137.0); urgency = medium
+
+Abstract:
+	Variable name in update_conf script updated
+
+Files Modified: data/update_conf, spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Wed, 15 May 2013 15:31:52 HMT
+
+Package: adviser (1.136.0); urgency = medium
+
+Abstract:
+	The host physical keyboard layout can be configured in PRJ.
+
+Files Added: data/update_conf
+Files Modified: data/adviserd.conf, spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Tue, 07 May 2013 11:29:07 HMT
+
+Package: adviser (1.135.0); urgency = medium
+
+Abstract:
+	#Fixed : Local monitor display remains locked even if master session not exist.
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 06 May 2013 17:13:34 HMT
+
+Package: adviser (1.134.0); urgency = medium
+
+Abstract:
+	#Fixed licensing related issue
+
+Files Modified: data/main.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 23 Apr 2013 19:10:15 HMT
+
+Package: adviser (1.133.0); urgency = medium
+
+Abstract:
+	#Added code to handle Licensing
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/main.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 16 Apr 2013 11:12:16 HMT
+
+Package: adviser (1.132.0); urgency = medium
+
+Abstract:
+	#Added code to handle command pipe.
+	#Code to send power status to all active clients.
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/conmgr.c, data/main.c, data/sessionmgr.c, data/video_misc.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 09 Apr 2013 11:19:05 HMT
+
+Package: adviser (1.131.0); urgency = medium
+
+Abstract:
+	Passed the previlege level from getuserpriv api to execuate the power command from advser.assinged the lan privilege while creating ipmi session
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 05 Apr 2013 16:50:07 CST
+
+Package: adviser (1.130.0); urgency = medium
+
+Abstract:
+	Full Access permission given to the requesting session, on KVM sharing request timeout.
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Fri, 05 Apr 2013 12:16:41 HMT
+
+Package: adviser (1.129.0); urgency = high
+
+Abstract:
+	Added the entry for power consumption in Vmedia.conf and needed changes
+
+Files Modified: data/avse.c, data/main.c, data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 22 Mar 2013 16:50:45 CST
+
+Package: adviser (1.128.0); urgency = medium
+
+Abstract:
+	Added the login/logout audit entry if the KVm failed user not ahve proper priviledge
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Tue, 19 Mar 2013 15:31:38 CST
+
+Package: adviser (1.127.0); urgency = high
+
+Abstract:
+	1.Moved the Host lock feature from SOC to common core feature
+2.Added the Support for Auto lock(Turn off the host display) while launching the JViewer
+3.Added the runtime enabled/disbled the Turn off host dsiplay support
+
+Files Modified: data/adviserd.conf, data/avse.c, data/cmdhndlr.c, data/main.c, data/sessionmgr.c, spx/P.CONFIG, spx/PACKAGES.D/adviser/P.CONFIG, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 08 Mar 2013 23:27:37 CST
+
+Package: adviser (1.126.0); urgency = high
+
+Abstract:
+	Modified to depend only on vmapp if licensing is present
+
+Files Modified: data/adviserd.sh
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Wed, 06 Mar 2013 08:24:31 EST
+
+Package: adviser (1.125.0); urgency = medium
+
+Abstract:
+	Soft Power Off Power Control command number modified to make it compatible with IPMI spec
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Wed, 20 Feb 2013 20:59:15 HMT
+
+Package: adviser (1.124.0); urgency = low
+
+Abstract:
+	Fixed core_features & core_macros wipe out while Rebuilding sys_base alone
+
+Files Modified: spx/INFO
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Mon, 04 Feb 2013 19:02:47 HMT
+
+Package: adviser (1.123.0); urgency = high
+
+Abstract:
+	Mouse not sync if the hardware cursor functionality work but the video driver return the No change in video.In this case sleep was there so delay in sync the mouse.Now removed the delay to sync the mouse
+
+Files Modified: data/video_misc.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 01 Feb 2013 10:36:09 CST
+
+Package: adviser (1.122.0); urgency = medium
+
+Abstract:
+	#added rdynamic flag for dynamic library loading
+
+Files Modified: data/Makefile
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 30 Jan 2013 18:26:39 HMT
+
+Package: adviser (1.121.0); urgency = medium
+
+Abstract:
+	Handled print_backtrace when SIGSEGV happens.
+
+Files Modified: data/main.c
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 11 Jan 2013 20:29:16 HMT
+
+Package: adviser (1.120.0); urgency = medium
+
+Abstract:
+	WebPreview always show capture failure
+the reproduce steps as follow:
+
+1. login to the web
+2. open KVM
+3. pressed webpreview "refresh" button
+
+Files Modified: data/avse.c, data/cmdhndlr.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 11 Jan 2013 14:55:11 CST
+
+Package: adviser (1.119.0); urgency = medium
+
+Abstract:
+	#Feature :BSOD capture to be stored on the BMC as JPEG file
+
+Files Modified: data/avse.c, data/conmgr.c, data/main.c, data/threadmgr.c, data/video_misc.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 07 Jan 2013 19:04:28 HMT
+
+Package: adviser (1.118.0); urgency = medium
+
+Abstract:
+	Fix webPreview abnormal, and the reproduce steps as follow:
+1. Login to the Web
+2. Open KVM
+3. After KVM is opened, pressed webPreview's "Refresh" button cintinually.
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Mon, 07 Jan 2013 13:52:56 CST
+
+Package: adviser (1.117.0); urgency = medium
+
+Abstract:
+	Added the diretory create statement for building GPL_PDK in MDS
+
+Files Modified: spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 02 Jan 2013 12:00:54 CST
+
+Package: adviser (1.116.0); urgency = low
+
+Abstract:
+	Power saving of using USB Selective Suspend Support-
+
+Files Modified: data/Makefile, data/cmdhndlr.c, data/hid_usb.c, data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Fri, 21 Dec 2012 13:07:22 CST
+
+Package: adviser (1.115.0); urgency = medium
+
+Abstract:
+	Send the KVM Master session change status to slave sessions alone.
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Tue, 18 Dec 2012 11:28:53 HMT
+
+Package: adviser (1.114.0); urgency = medium
+
+Abstract:
+	#increased KVM MAX Session from 2 to "n" number of session.
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/main.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 06 Dec 2012 21:17:48 IST
+
+Package: adviser (1.113.0); urgency = high
+
+Abstract:
+	When using Jviewer BandWidth "auto detect", it will hang
+The reason is memory over flow
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Thu, 29 Nov 2012 16:23:36 CST
+
+Package: adviser (1.112.0); urgency = medium
+
+Abstract:
+	KVM LoginLogout audits
+
+Files Modified: data/Makefile, data/cmdhndlr.c, data/sessionmgr.c, spx/INFO
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Wed, 28 Nov 2012 12:09:59 IST
+
+Package: adviser (1.111.0); urgency = medium
+
+Abstract:
+	Script changes done for license application
+
+Files Modified: data/adviserd.sh, spx/INFO
+
+--Submitter: ARUNA DEVI D (arunadevid@amiindia.co.in) Wed, 21 Nov 2012 17:47:14 IST
+
+Package: adviser (1.110.0); urgency = medium
+
+Abstract:
+	Depenedencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 31 Oct 2012 14:30:59 EDT
+
+Package: adviser (1.109.0); urgency = medium
+
+Abstract:
+	Dependency over processmanager is added. Without this processmanager will not run as it is made as non-essential process
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 26 Oct 2012 14:24:11 EDT
+
+Package: adviser (1.108.0); urgency = medium
+
+Abstract:
+	JViewer all button will actived when host OS AC off, and then pressed webpreview Refresh button and open JViewer quickly                                              
+M	data/sessionmgr.c
+M	data/cmdhndlr.c
+M	data/avse.c
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 05 Oct 2012 13:55:50 CST
+
+Package: adviser (1.107.0); urgency = high
+
+Abstract:
+	Binary build issue fixed
+
+Files Modified: spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Fri, 28 Sep 2012 18:05:16 EDT
+
+Package: adviser (1.106.0); urgency = medium
+
+Abstract:
+	#Included memset to avoid junks in wesession cookie
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 20 Sep 2012 09:50:55 IST
+
+Package: adviser (1.105.0); urgency = medium
+
+Abstract:
+	#modified sleep duration to avoid adviser restart issue
+
+Files Modified: data/adviserd.sh, data/main.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 04 Sep 2012 21:01:37 IST
+
+Package: adviser (1.104.0); urgency = medium
+
+Abstract:
+	Adding missing configurations to P.CONFIG of binary package.
+
+Files Added: spx/PACKAGES.D/adviser/P.CONFIG
+
+--Submitter: Winston (winstont@ami.com) Thu, 23 Aug 2012 13:10:47 EDT
+
+Package: adviser (1.103.0); urgency = medium
+
+Abstract:
+	Changes done to register adviser with Process Manager.
+
+Files Modified: data/adviserd.sh, data/hid_usb.c, data/main.c
+
+--Submitter: Winston (winstont@ami.com) Wed, 15 Aug 2012 18:59:40 EDT
+
+Package: adviser (1.102.0); urgency = medium
+
+Abstract:
+	KVM share request time out value is not getting reduced automatically in the KVM share request pop up message; issue fixed.
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Tue, 14 Aug 2012 19:48:12 IST
+
+Package: adviser (1.101.0); urgency = medium
+
+Abstract:
+	#moved Singleport featur related Macros to common package
+
+Files Modified: data/conmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 13 Aug 2012 14:39:38 IST
+
+Package: adviser (1.100.0); urgency = high
+
+Abstract:
+	Get the privilege for the USer and created teh IPMI session using the privilege
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Tue, 07 Aug 2012 10:00:53 IST
+
+Package: adviser (1.99.0); urgency = medium
+
+Abstract:
+	#EIP 94475 - Popup message is not displayed while changing the mouse mode.
+	#EIP 94477 - After changing the mouse mode the mouse cursor doesnt enter the java console video frame.
+
+Files Modified: data/adviserd.sh, data/main.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 11 Jul 2012 16:45:00 IST
+
+Package: adviser (1.98.0); urgency = medium
+
+Abstract:
+	#Changed Enable Key Board Language Selection support to Enable Keyboard Language Selection support.
+
+Files Modified: spx/P.CONFIG
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 02 Jul 2012 21:44:02 IST
+
+Package: adviser (1.97.0); urgency = medium
+
+Abstract:
+	Merge /etc/features content to /etc/core_features.
+
+Files Modified: spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Sat, 30 Jun 2012 18:57:02 CST
+
+Package: adviser (1.96.0); urgency = high
+
+Abstract:
+	Adding support for low bandwidth mode : resetting back to normal mode when all sessions are closed
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 28 Jun 2012 15:48:01 EDT
+
+Package: adviser (1.95.0); urgency = high
+
+Abstract:
+	Added the extended privilege support,such that KVM/VMedia enable/disable for the each users.
+
+Files Modified: data/Makefile, data/cmdhndlr.c, spx/INFO
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 28 Jun 2012 18:28:21 IST
+
+Package: adviser (1.94.0); urgency = medium
+
+Abstract:
+	Removed process manager registration support.
+
+Files Modified: data/adviserd.sh, data/conmgr.c, data/main.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 27 Jun 2012 21:13:37 IST
+
+Package: adviser (1.93.0); urgency = medium
+
+Abstract:
+	Modified the process registration using new API.
+
+Files Modified: data/adviserd.sh, data/conmgr.c, data/main.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 27 Jun 2012 13:13:40 IST
+
+Package: adviser (1.92.0); urgency = medium
+
+Abstract:
+	Added Keyboard language selection support .
+
+Files Added: spx/P.CONFIG
+Files Modified: data/adviserd.conf, spx/PACKAGES.D/adviser/SCRIPTS/dev-install
+
+--Submitter: banuprakashreddym (banuprakashreddym@amiindia.co.in) Wed, 27 Jun 2012 11:24:32 IST
+
+Package: adviser (1.91.0); urgency = medium
+
+Abstract:
+	#cleared allocated memory in IPMI command handler function
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 25 Jun 2012 14:47:25 IST
+
+Package: adviser (1.90.0); urgency = medium
+
+Abstract:
+	Added support to send IPMI raw commands from JViewer
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 20 Jun 2012 23:37:54 IST
+
+Package: adviser (1.89.0); urgency = medium
+
+Abstract:
+	# Auto Video recording feature : added support for remote Storage Space
+
+Files Modified: data/main.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 20 Jun 2012 21:02:44 IST
+
+Package: adviser (1.88.0); urgency = high
+
+Abstract:
+	Solved dead lock issue, the reproduce step as follow
+1. Using first client to open the KVM
+2. Using second client to open the KVM
+3. When first KVM show a popup to require a permission, do not choose any thing
+   and close first client web before timeout
+4. After 30secs, the second KVM will hang and will not to open KVM forever
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Tue, 19 Jun 2012 17:02:44 CST
+
+Package: adviser (1.87.0); urgency = medium
+
+Abstract:
+	Fixed a segmentation fault. (SIGSEGV signal). LAN anomalies and judgment-type defect, it would be make memory overflow and program will be terminated.
+issue: 90405.
+
+Files Modified: data/reader.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 14 Jun 2012 13:58:56 CST
+
+Package: adviser (1.86.0); urgency = medium
+
+Abstract:
+	Licensing the libcompress package
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Tue, 12 Jun 2012 22:33:55 IST
+
+Package: adviser (1.85.0); urgency = low
+
+Abstract:
+	Added PDK_vddstatus_swc_register() in libpdkapp package
+
+Files Modified: data/avse.c, spx/INFO
+
+--Submitter: sena (sudarshans@amiindia.co.in) Fri, 18 May 2012 20:35:00 IST
+
+Package: adviser (1.84.0); urgency = medium
+
+Abstract:
+	Linking ImageTree directory for libraries instead of target directory.
+
+Files Modified: data/Makefile
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 02 May 2012 16:00:34 IST
+
+Package: adviser (1.83.0); urgency = medium
+
+Abstract:
+	Changing the length in adviser side , as in web side we are writing only 35 bytes.
+
+Files Modified: data/video_misc.c
+
+--Submitter: ravisastrys (ravisastrys@amiindia.co.in) Mon, 09 Apr 2012 21:21:44 IST
+
+Package: adviser (1.82.0); urgency = medium
+
+Abstract:
+	#Changes for Singlepor feature: Adviser needs to listen loopback ip and UDS socket
+
+Files Modified: data/conmgr.c, data/main.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 09 Apr 2012 20:25:47 IST
+
+Package: adviser (1.81.0); urgency = high
+
+Abstract:
+	After launch JViewer,Auto Video recording player shows blank screen -Fixed
+
+Files Modified: data/avse.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Mon, 09 Apr 2012 20:13:31 IST
+
+Package: adviser (1.80.0); urgency = medium
+
+Abstract:
+	changes done to make checking of enabled features faster by comparing with the corefeatures_T structure instead of reading from /etc/core_features file.
+
+Files Modified: data/avse.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 29 Mar 2012 01:20:06 IST
+
+Package: adviser (1.79.0); urgency = low
+
+Abstract:
+	changes done to make checking of enabled features faster by comparing with the corefeatures_T structure instead of reading from /etc/core_features file.
+
+Files Modified: data/cmdhndlr.c, data/main.c, data/sessionmgr.c
+
+--Submitter: Winston (winstont@ami.com) Tue, 27 Mar 2012 23:26:25 EDT
+
+Package: adviser (1.78.0); urgency = medium
+
+Abstract:
+	Replaced hard coded value with macro.
+
+Files Modified: data/conmgr.c, data/main.c, data/video_misc.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 26 Mar 2012 18:29:57 IST
+
+Package: adviser (1.77.0); urgency = medium
+
+Abstract:
+	Adding support to retrieve the core features at the starting of every process instead of reading every time from /etc/core_features.
+
+Files Modified: data/conmgr.c, data/main.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Mon, 26 Mar 2012 13:22:10 IST
+
+Package: adviser (1.76.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/Makefile
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 22:52:04 EDT
+
+Package: adviser (1.75.0); urgency = medium
+
+Abstract:
+	Fixes for strict compiler - Generates error if a variable is assigned and not used
+
+Files Modified: data/cmdhndlr.c, data/cmworker.c, data/conmgr.c, data/hid_usb.c
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 22 Mar 2012 13:08:20 EDT
+
+Package: adviser (1.74.0); urgency = medium
+
+Abstract:
+	#MAX_TOKEN_LEN set as 128 by default
+
+Files Modified: data/video_misc.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 24 Feb 2012 22:02:56 IST
+
+Package: adviser (1.73.0); urgency = medium
+
+Abstract:
+	#making port numbers as Non-Editable when single port application is enabled.
+
+Files Modified: data/main.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 17 Feb 2012 01:56:42 IST
+
+Package: adviser (1.72.0); urgency = medium
+
+Abstract:
+	Removed condition compilation for sys IPV6 support (CONFIG_SPX_FEATURE_GLOBAL_IPV6).
+
+Files Modified: data/conmgr.c
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 14 Feb 2012 21:57:51 IST
+
+Package: adviser (1.71.0); urgency = medium
+
+Abstract:
+	#Adding Single Port KVM Feature
+
+Files Modified: data/Makefile, data/conmgr.c, data/main.c, spx/INFO
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 14 Feb 2012 04:24:33 IST
+
+Package: adviser (1.70.0); urgency = medium
+
+Abstract:
+	#Removed the conditiaon compilation for CONFIG_SPX_FEATURE_GLOBAL_WEB_CONSOLE_PREVIEW
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 14 Feb 2012 01:27:12 IST
+
+Package: adviser (1.69.1); urgency = medium
+
+Abstract:
+	When Jviewer running and the adviserd's socket disconnect, it will make JViewer will not opened forever
+The root cause is dead lock
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Fri, 10 Feb 2012 18:55:39 CST
+
+Package: adviser (1.69.0); urgency = medium
+
+Abstract:
+	Passing Server IP Address as Null.As Adviser Communicates with IPMI Locally to log SEL.
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 23 Jan 2012 17:35:33 IST
+
+Package: adviser (1.68.0); urgency = medium
+
+Abstract:
+	#Adviser is not restarting properly when changing KVM service configuration or enable/disable encryption.
+
+Files Modified: data/main.c
+
+--Submitter: gopinaths (gopianths@amiindia.co.in) Thu, 12 Jan 2012 10:12:03 IST
+
+Package: adviser (1.67.0); urgency = medium
+
+Abstract:
+	#KVM sharing timedout before timer expires when start time and current time same with difference 0
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 10 Jan 2012 20:04:52 IST
+
+Package: adviser (1.66.0); urgency = medium
+
+Abstract:
+	Keyboard is not working in JViewer when keyboard/mouse encryption is enabled and KVM sharing is initiated.
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 06 Jan 2012 21:42:41 IST
+
+Package: adviser (1.65.0); urgency = medium
+
+Abstract:
+	#EIP :77699 Unable to Launch Java console when KVM encryption is enabled in web.
+
+Files Modified: data/conmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 03 Jan 2012 18:12:53 IST
+
+Package: adviser (1.64.0); urgency = medium
+
+Abstract:
+	#EIP 77735 :Active seesion count shows wrongly in Services page fixed
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 28 Dec 2011 20:36:58 IST
+
+Package: adviser (1.63.0); urgency = medium
+
+Abstract:
+	for 77022, solved The mouse of Remote Jviewer is not smooth when local system install AST Driver
+
+Files Modified: data/video_misc.c
+
+--Submitter: nealchen (nealchen@ami.com.tw) Tue, 06 Dec 2011 11:16:43 CST
+
+Package: adviser (1.62.0); urgency = medium
+
+Abstract:
+	Added the check for mousemode is  othermode or relative no need to send to change  the mouse mode to driver
+
+Files Modified: data/hid_usb.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Fri, 11 Nov 2011 13:49:18 IST
+
+Package: adviser (1.61.0); urgency = medium
+
+Abstract:
+	SSI Compute Blade Application Launch support.
+
+Files Modified: data/video_misc.c
+
+--Submitter: Kevin Cheng (kevincheng@ami.com.tw) Fri, 28 Oct 2011 02:55:50 CST
+
+Package: adviser (1.60.0); urgency = medium
+
+Abstract:
+	#Other mouse mode Implementation for jviewer
+
+Files Modified: data/hid_usb.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 14 Oct 2011 14:12:22 IST
+
+Package: adviser (1.59.0); urgency = medium
+
+Abstract:
+	#User defined Hot Keys macros feature
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 07 Oct 2011 10:00:23 IST
+
+Package: adviser (1.58.0); urgency = medium
+
+Abstract:
+	# Java preview option shows connection failed status when host video is in sleep mode, issue fixed
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 22 Sep 2011 14:20:31 IST
+
+Package: adviser (1.57.0); urgency = high
+
+Abstract:
+	Adviser sockets will be connected based on the interface given in the services configuration
+
+Files Modified: data/conmgr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 20 Sep 2011 23:03:22 EDT
+
+Package: adviser (1.56.0); urgency = medium
+
+Abstract:
+	Session start/finish audit for KVM
+
+Files Modified: data/Makefile, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Tue, 20 Sep 2011 18:08:55 IST
+
+Package: adviser (1.55.0); urgency = medium
+
+Abstract:
+	#EIP_66579:The Active session value of kvm becomes zero in UI when a second kvm session is launched from the same client : FIXED
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 13 Sep 2011 17:34:30 IST
+
+Package: adviser (1.54.0); urgency = medium
+
+Abstract:
+	removed HID_support from the Build-Depends
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Fri, 09 Sep 2011 08:36:10 EDT
+
+Package: adviser (1.53.0); urgency = medium
+
+Abstract:
+	Added the check for setting the clean flag,checking the isused flag also.
+Added the close and shutdown socket once the maximum session packet is send to the host.
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/cmworker.c, data/conmgr.c, data/reader.c, data/sessionmgr.c, data/video_misc.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 08 Sep 2011 18:17:40 JST
+
+Package: adviser (1.52.0); urgency = medium
+
+Abstract:
+	#Seccond session with KVM partial permission is not getting KVM full permission when closing first session
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 26 Aug 2011 10:17:15 IST
+
+Package: adviser (1.51.0); urgency = medium
+
+Abstract:
+	Removed the local define of UDS Authentication Flag
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Suresh V (sureshv@amiindia.co.in) Mon, 25 Jul 2011 16:29:50 IST
+
+Package: adviser (1.50.0); urgency = low
+
+Abstract:
+	Change to show correct thread name with "ps -L" instaed of showing ipmimain for all threads.
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/cmworker.c, data/video_misc.c
+
+--Submitter: akshay (akshayp@amiindia.co.in) Thu, 21 Jul 2011 21:37:46 IST
+
+Package: adviser (1.49.0); urgency = medium
+
+Abstract:
+	Services configuration redesigned to have support of Non-Editable and Not-Applicable for the individual fields.
+
+Files Modified: data/cmdhndlr.c, data/main.c, data/sessionmgr.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 20 Jul 2011 13:06:52 IST
+
+Package: adviser (1.48.0); urgency = medium
+
+Abstract:
+	KVM session User Active client information display in the JViewer
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 21:10:59 IST
+
+Package: adviser (1.47.0); urgency = medium
+
+Abstract:
+	1.updating the NCML for active sessioncount
+2.Adviserd restart handled
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/main.c, data/sessionmgr.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Wed, 29 Jun 2011 18:52:56 IST
+
+Package: adviser (1.46.0); urgency = medium
+
+Abstract:
+	#IPV6 socket releated fix
+
+Files Modified: data/conmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 29 Jun 2011 10:46:27 IST
+
+Package: adviser (1.45.0); urgency = medium
+
+Abstract:
+	Feature to change Mouse mode from the Jviewer
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Thu, 16 Jun 2011 15:49:19 IST
+
+Package: adviser (1.44.0); urgency = medium
+
+Abstract:
+	FOr second session sending the blankscreen
+
+Files Modified: data/avse.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Sat, 11 Jun 2011 19:46:25 IST
+
+Package: adviser (1.43.0); urgency = medium
+
+Abstract:
+	Added the support to send the Mousem mode,Cd,FD,HD count if user updated in the web sending the data to the opened active JViewer CLients.
+
+Files Modified: data/avse.c, data/main.c, data/sessionmgr.c
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Thu, 09 Jun 2011 02:42:59 IST
+
+Package: adviser (1.42.0); urgency = high
+
+Abstract:
+	Sending the service configuration to the clients upon startup and whenever configuration changes
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/main.c, data/sessionmgr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 07 Jun 2011 15:50:14 EDT
+
+Package: adviser (1.41.0); urgency = medium
+
+Abstract:
+	Power Feature added
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Wed, 01 Jun 2011 23:21:37 IST
+
+Package: adviser (1.40.0); urgency = high
+
+Abstract:
+	Modified from MAX_SESSION macro to dynamically updated max_session from ncml configuration
+
+Files Modified: data/cmdhndlr.c, data/conmgr.c, data/main.c, data/sessionmgr.c, data/sync.c, data/threadmgr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 31 May 2011 15:04:29 EDT
+
+Package: adviser (1.39.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 13:55:40 EDT
+
+Package: adviser (1.38.0); urgency = high
+
+Abstract:
+	Updating the web preview macro
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 10:31:25 EDT
+
+Package: adviser (1.37.0); urgency = high
+
+Abstract:
+	Removing libipmi dependency and using ncml calls
+
+Files Modified: data/cmdhndlr.c, data/conmgr.c, data/main.c, data/sessionmgr.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 08:06:17 EDT
+
+Package: adviser (1.36.0); urgency = high
+
+Abstract:
+	Getting the port number from NCML config
+
+Files Modified: data/Makefile, data/adviserd.conf, data/adviserd.sh, data/cmdhndlr.c, data/conmgr.c, data/main.c, data/sessionmgr.c, data/stunnel.conf
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 01:55:15 EDT
+
+Package: adviser (1.35.0); urgency = medium
+
+Abstract:
+	Fixing adviser abnormal termination when web Preview support was enabled
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: senguttuvan (senguttuvanm@amiindia.co.in) Thu, 12 May 2011 16:16:18 IST
+
+Package: adviser (1.34.0); urgency = high
+
+Abstract:
+	Fixed Bugs: 13147=Resume Redirection does not resume the updated video correctly & 13198=Error reading video data is displayed on changing the mouse mode
+
+Files Modified: data/avse.c, data/main.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 10 May 2011 15:49:06 EDT
+
+Package: adviser (1.33.0); urgency = medium
+
+Abstract:
+	Added the KVM_SESSION session macro replaced for MAX_SESSION
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Thu, 05 May 2011 11:38:28 IST
+
+Package: adviser (1.32.0); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	KVM sharing socket atatus packet sent.condition removed
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 02 May 2011 18:35:11 IST
+
+Package: adviser (1.31.0); urgency = medium
+
+Abstract:
+	Web console preview feature support
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 27 Apr 2011 16:59:47 IST
+
+Package: adviser (1.30.0); urgency = high
+
+Abstract:
+	Sending the frame hdr size for video recording
+
+Files Modified: data/avse.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 21 Apr 2011 12:39:10 EDT
+
+Package: adviser (1.29.0); urgency = high
+
+Abstract:
+	Removing dependency with libautovideorecord library for adviser
+
+Files Modified: data/Makefile, data/avse.c, data/sessionmgr.c, data/threadmgr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 14:37:47 EDT
+
+Package: adviser (1.28.0); urgency = high
+
+Abstract:
+	Removed the header files and moved to adviser_dev for easier access by other packages. Also moved the autorecord.conf to libvideorecordcfg
+
+Files Deleted: data/advisercfg.h, data/adviserdbg.h, data/advisererrno.h, data/autorecord.conf, data/avse.h, data/cmworker.h, data/conmgr.h, data/encrypt.h, data/hid_cmdhandlr.h, data/hid_errno.h, data/hidconf.h, data/hidtypes.h, data/reader.h, data/sessionlogin.h, data/sessionmgr.h, data/stickyKeys.h, data/sync.h, data/threadmgr.h, data/utils.h, data/video_misc.h, data/video_record.c, data/video_record.h
+Files Modified: data/Makefile, data/avse.c, data/main.c, data/sessionmgr.c, data/threadmgr.c, spx/INFO, spx/PACKAGES.D/adviser/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 10:53:51 EDT
+
+Package: adviser (1.27.0); urgency = high
+
+Abstract:
+	Avoiding multiple wake up of semaphore. Semaphore will not be woken up if already a recording is in progress
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 23 Mar 2011 13:54:39 EDT
+
+Package: adviser (1.26.0); urgency = high
+
+Abstract:
+	Handled the signals properly which helps restart adviser properly without errors. Updated adviser script to handle the same
+
+Files Modified: data/adviserd.sh, data/main.c, data/video_record.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 23 Mar 2011 12:41:41 EDT
+
+Package: adviser (1.25.0); urgency = high
+
+Abstract:
+	Closing the socket properly after shutdown
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 18 Mar 2011 12:42:02 EDT
+
+Package: adviser (1.24.0); urgency = high
+
+Abstract:
+	Check for file size moved to a common function
+
+Files Modified: data/video_record.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 04 Mar 2011 14:25:42 EST
+
+Package: adviser (1.23.0); urgency = high
+
+Abstract:
+	Remove the dump file, if the file size is 0. This will happen if no space is there in device to write to file
+
+Files Modified: data/video_record.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 04 Mar 2011 14:03:00 EST
+
+Package: adviser (1.22.0); urgency = high
+
+Abstract:
+	Removing the flag reset when blank/noscreen change occurs continuously to reduce cpu usage
+
+Files Modified: data/avse.c, data/video_misc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 25 Feb 2011 15:21:59 EST
+
+Package: adviser (1.21.0); urgency = high
+
+Abstract:
+	Optimized no screen change condition. when it occurs, we just return without any sleep, and if the same status persists for some time, then we slow down the capture rate
+
+Files Modified: data/avse.c, data/video_misc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 24 Feb 2011 15:49:56 EST
+
+Package: adviser (1.20.0); urgency = high
+
+Abstract:
+	1. Optimized Blank Screen handling, 2. Raw writing of timestamp and code to dump file, 3. Modified the path to /var/video
+
+Files Modified: data/autorecord.conf, data/avse.c, data/video_misc.c, data/video_misc.h, data/video_record.c, data/video_record.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Feb 2011 18:26:19 EST
+
+Package: adviser (1.19.0); urgency = high
+
+Abstract:
+	Optimized adviser to save the data dump file size, storing the data dump file in RAM
+
+Files Modified: data/video_record.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 04 Feb 2011 15:15:44 EST
+
+Package: adviser (1.18.0); urgency = high
+
+Abstract:
+	Setting default path in configuration file for storing the recorded video data file to /var. Also setting the same for backup path in case of file corruption
+
+Files Modified: data/autorecord.conf, data/video_record.c, data/video_record.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 04 Feb 2011 13:19:34 EST
+
+Package: adviser (1.17.0); urgency = high
+
+Abstract:
+	Optimization to reduce the cpu usage of adviser
+
+Files Modified: data/main.c, data/sessionmgr.c, data/sessionmgr.h, data/video_record.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 04 Feb 2011 00:06:17 EST
+
+Package: adviser (1.16.0); urgency = high
+
+Abstract:
+	Updated the auto video record feature
+
+Files Modified: data/autorecord.conf, data/video_record.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 02 Feb 2011 17:06:32 EST
+
+Package: adviser (1.15.0); urgency = high
+
+Abstract:
+	Updated the auto video recording feature
+
+Files Added: data/autorecord.conf
+Files Modified: spx/INFO, spx/PACKAGES.D/adviser/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 02 Feb 2011 13:01:34 EST
+
+Package: adviser (1.14.0); urgency = high
+
+Abstract:
+	auto video recording feature incorporated to adviser
+
+Files Added: data/video_record.c, data/video_record.h
+Files Modified: data/Makefile, data/avse.c, data/avse.h, data/threadmgr.c, spx/INFO
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 01 Feb 2011 17:44:18 EST
+
+Package: adviser (1.13.0); urgency = medium
+
+Abstract:
+	Deafault and timeout option is changed from dfeny to allow for the second user in KVM Sharing
+
+Files Modified: data/sessionmgr.c
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 31 Jan 2011 18:54:05 IST
+
+Package: adviser (1.12.0); urgency = medium
+
+Abstract:
+	Issue fixed : adviserd killed when closing web session during java console launching.
+
+Files Modified: data/cmdhndlr.c, data/cmworker.c, data/sessionmgr.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 20 Jan 2011 11:31:23 IST
+
+Package: adviser (1.11.0); urgency = medium
+
+Abstract:
+	KVM Sharing Feature added
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/conmgr.c, data/sessionmgr.c, data/sessionmgr.h
+
+--Submitter: othiyappank (othiyappank@amiindia.co.in) Mon, 17 Jan 2011 21:28:15 IST
+
+Package: adviser (1.10.0); urgency = medium
+
+Abstract:
+	Add I2C library in link path for external videocap.
+
+Files Modified: data/Makefile, spx/INFO
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Mon, 17 Jan 2011 14:31:47 CST
+
+Package: adviser (1.9.0); urgency = low
+
+Abstract:
+	Cleanup Messages and Removed unwanted messages
+
+Files Modified: data/adviserd.sh
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Dec 2010 22:51:22 EST
+
+Package: adviser (1.8.0); urgency = high
+
+Abstract:
+	Updated the Validation process
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 16 Dec 2010 17:55:48 EST
+
+Package: adviser (1.7.0); urgency = high
+
+Abstract:
+	Updated the soc header update
+
+Files Modified: data/video_misc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 01 Dec 2010 19:27:31 EST
+
+Package: adviser (1.6.0); urgency = high
+
+Abstract:
+	Modified Host Lock and Hardware Cursor feature as individual session based.
+Added Hook to be called whenever a new session starts and stops
+
+Files Modified: data/avse.c, data/cmdhndlr.c, data/cmworker.c, data/sessionmgr.c, data/sessionmgr.h, data/utils.c, data/video_misc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 01 Dec 2010 17:18:40 EST
+
+Package: adviser (1.5.0); urgency = medium
+
+Abstract:
+	Fixed Issue KB/Mouse Encryption Fail
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: Othiyappan.K (othiyappank@amiindia.co.in) Fri, 01 Oct 2010 17:17:41 IST
+
+Package: adviser (1.4.0); urgency = medium
+
+Abstract:
+	Enable Validate session function adviser.
+
+Files Modified: data/cmdhndlr.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 29 Sep 2010 11:59:31 IST
+
+Package: adviser (1.3.0); urgency = high
+
+Abstract:
+	Updating the user status message properly according to scenario.
+
+Files Modified: data/adviserd.sh, data/main.c, data/video_misc.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 24 Sep 2010 12:43:41 EDT
+
+Package: adviser (1.2.0); urgency = high
+
+Abstract:
+	Updated Session handling user messages
+
+Files Modified: data/Makefile, data/adviserd.sh, data/cmdhndlr.c, data/main.c, data/sessionmgr.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 23 Sep 2010 14:51:06 EDT
+
+Package: adviser (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 12:55:46 EDT
+
+Package: adviser (1.0.18); urgency = high
+
+Abstract:
+	Host monitor lock feature updated
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 16 Aug 2010 19:29:29 EDT
+
+Package: adviser (1.0.17); urgency = medium
+
+Abstract:
+	We can able to acess Jviewer even after session logout
+
+Files Modified: data/video_misc.c
+
+--Submitter: ivanlee (ivanlee@ami.com.tw) Thu, 29 Jul 2010 13:18:21 CST
+
+Package: adviser (1.0.16); urgency = medium
+
+Abstract:
+	Issue Fixed:
+	1.Num,Caps,Scroll options do not syn with host machine.
+	2.Media encryption-enabled by one client but the other client dont know when the console is opened - If the session is launched changing the media encyption sending packet live session(Restart the adviserd) because media encyption port is changed.
+
+Files Modified: data/avse.c, data/main.c, data/sessionmgr.c, data/sessionmgr.h, data/video_misc.c
+
+--Submitter: Othiyappan k (othiyappank@amiindia.co.in) Wed, 07 Jul 2010 19:58:47 IST
+
+Package: adviser (1.0.15); urgency = low
+
+Abstract:
+	Fixed bug - kvm disable function doesn't work after BMC reboot.
+
+Files Modified: data/adviserd.sh
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Wed, 23 Jun 2010 13:20:37 CST
+
+Package: adviser (1.0.14); urgency = medium
+
+Abstract:
+	1. After handle SoC specific command, adviser corrupts -- fixed.
+2. Copy new session information from session list to send list.
+
+Files Modified: data/cmdhndlr.c, data/sessionmgr.c
+
+--Submitter: David Chang (DavidChang@ami.com.tw) Fri, 04 Jun 2010 11:14:08 CST
+
+Package: adviser (1.0.13); urgency = low
+
+Abstract:
+	Issue : The USB key does not redirect after enabled the Media Encryption with Java console mode - Fixed
+
+Files Modified: data/stunnel.conf
+
+--Submitter: santhoshp (santhoshp@amiindia.co.in) Fri, 28 May 2010 16:34:50 IST
+
+Package: adviser (1.0.12); urgency = low
+
+Abstract:
+	Added Runlevel 8 entries
+
+Files Modified: data/adviserd.sh
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:11:47 EDT
+
+Package: adviser (1.0.11); urgency = high
+
+Abstract:
+	IPv4/IPv6 kernel independent code is written for adviser using getaddrinfo call. Now adviser will run without IPv6 support in the kernel
+
+Files Modified: data/conmgr.c
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 11 May 2010 18:06:24 IST
+
+Package: adviser (1.0.10); urgency = medium
+
+Abstract:
+	USB media dependencies resolved for MDS
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 21 Apr 2010 13:18:43 EDT
+
+Package: adviser (1.0.9); urgency = medium
+
+Abstract:
+	Build-Dep on libvideo_dev added
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 15 Apr 2010 09:22:53 EDT
+
+Package: adviser (1.0.8); urgency = medium
+
+Abstract:
+	packages dependencies updated
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Wed, 17 Mar 2010 17:37:07 EDT
+
+Package: adviser (1.0.7); urgency = low
+
+Abstract:
+	Removed build-time dependency on Video Library, only runtime dependency.
+
+Files Modified: spx/INFO
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Wed, 17 Mar 2010 11:56:27 EDT
+
+Package: adviser (1.0.6); urgency = low
+
+Abstract:
+	Fix for error seen on making a login attempt after logging out.
+
+Files Modified: data/video_misc.c, spx/INFO
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Tue, 16 Mar 2010 19:02:53 EDT
+
+Package: adviser (1.0.5); urgency = low
+
+Abstract:
+	Changes in interface API with libvideo. Soc-specific code moved to libvideo.
+
+Files Added: data/encrypt.h
+Files Deleted: data/video_compression.c
+Files Modified: data/avse.c, data/utils.c, data/reader.c, data/utils.h, data/reader.h, data/threadmgr.c, data/hid_usb.c, data/video_misc.c, data/threadmgr.h, data/conmgr.c, data/video_misc.h, data/sessionmgr.c, data/cmworker.c, data/conmgr.h, data/Makefile, data/sessionmgr.h, data/cmworker.h, data/adviserdbg.h, data/advisercfg.h, data/main.c, data/hid_cmdhandlr.h, data/cmdhndlr.c, spx/INFO
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Thu, 11 Mar 2010 11:48:11 EST
+
+Package: adviser (1.0.4); urgency = low
+
+Abstract:
+	Fix for bug : Bad color depth detected in the videocap driver returns the blank screen , USB driver does not get initialized properly during cold reset
+
+Files Modified: data/hid_usb.c, data/main.c, data/hid_cmdhandlr.h
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Wed, 17 Feb 2010 17:49:18 EST
+
+Package: adviser (1.0.3); urgency = low
+
+Abstract:
+	Common adviser application for all architectures, soc-specific code moved from adviser to libvideo.
+
+Files Deleted: data/cmdhndlr.h, data/codec.h, data/encrypt.h, data/sighandler.c, data/sighandler.h
+Files Modified: data/hidtypes.h, data/avse.c, data/hid_usb.c, data/hid_errno.h, data/sessionlogin.h, data/video_misc.c, data/conmgr.c, data/video_misc.h, data/cmworker.c, data/sessionmgr.c, data/conmgr.h, data/Makefile, data/sessionmgr.h, data/stickyKeys.h, data/hidconf.h, data/advisercfg.h, data/main.c, data/cmdhndlr.c
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Mon, 15 Feb 2010 19:33:24 EST
+
+Package: adviser (1.0.2); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 16:52:03 EST
+
+Package: adviser (1.0.1); urgency = low
+
+Abstract:
+	version of libvideo package dependancy is set to >= 1.0.0
+
+Files Modified: spx/INFO
+
+--Submitter: Rama Rao Bisa (ramab@ami.com) Tue, 09 Feb 2010 12:40:57 EST
+
+Package:adviser (1.0.0);urgency=new
+
+Abstract:
+	This package contains the ADVISER application.
+
+Files Added: video_compression.c, Makefile, video_misc.c, reader.c, threadmgr.c, video_misc.h, advisererrno.h, main.c, stunnel.conf, cmdhndlr.c, sighandler.h, conmgr.c, avse.c, hid_errno.h, sessionlogin.h, cmworker.h, hid_cmdhandlr.h, adviserd.conf, sessionmgr.c, cmdhndlr.h, stickyKeys.h, hidtypes.h, utils.h, encrypt.c, encrypt.h, cmworker.c, sighandler.c, codec.h, hid_usb.c, reader.h, advisercfg.h, avse.h, conmgr.h, sessionmgr.h, sync.c, utils.c, sync.h, adviserd.sh, hid_cmdhandlr.c, threadmgr.h, hidconf.h, adviserdbg.h
+
+--Submitter: Vinay Tandon (vinayt@ami.com) Thu, 28 Jan 2010 17:59:08 -0500

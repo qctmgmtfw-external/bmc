@@ -1,0 +1,12 @@
+[
+
+  { "section_name" : "boot",	"current_version_1" : "1.4",	"current_version_2" : "1.4",	"latest_version" : "1.4",	"section_status" : 0,	"status" : 32 },
+  { "section_name" : "conf",	"current_version_1" : "1.4",	"current_version_2" : "1.4",	"latest_version" : "1.4",	"section_status" : 0,	"status" : 16 },
+  { "section_name" : "bkupcon",	"current_version_1" : "1.4",	"current_version_2" : "1.4",	"latest_version" : "1.4",	"section_status" : 0,	"status" : 16 },
+  { "section_name" : "root",	"current_version_1" : "1.4",	"current_version_2" : "1.4",	"latest_version" : "1.4",	"section_status" : 0,	"status" : 16 },
+  { "section_name" : "osimage",	"current_version_1" : "1.4",	"current_version_2" : "1.4",	"latest_version" : "1.4",	"section_status" : 0,	"status" : 16 },
+  { "section_name" : "www",		"current_version_1" : "1.4",	"current_version_2" : "1.4",	"latest_version" : "1.4",	"section_status" : 1,	"status" : 16 },
+  { "section_name" : "lmedia",	"current_version_1" : "1.4",	"current_version_2" : "1.4",	"latest_version" : "1.4",	"section_status" : 1,	"status" : 16 },
+  { "section_name" : "hornet",	"current_version_1" : "1.4",	"current_version_2" : "1.4",	"latest_version" : "1.4",	"section_status" : 0,	"status" : 16 }
+
+]

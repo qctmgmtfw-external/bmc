@@ -30,7 +30,6 @@
 USB_DEV_INFO DevInfo[MAX_USB_HW];
 USB_DEV_EP_INFO DevEpInfo [MAX_USB_HW];
 
-EXPORT_SYMBOL(DevInfo);
 /* Local Static Functions */
 static int SendPendingEP0Data(uint8 DevNo);
 static void EnableEndPoint(uint8 DevNo, uint8 EpNum, uint8 EpDir);

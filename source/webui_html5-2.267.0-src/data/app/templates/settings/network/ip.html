@@ -1,0 +1,126 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/network"><%= locale.network %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"><%= locale.ip %></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger hide">
+                <!-- <i class="fa fa-ban"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                <div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ipcheck_this_option_to_enable_lan_support_for_the_selected_interface %></div>
+    <label>
+        <input type="checkbox" value="1" id="idlan_enable" > <%= locale.ipenable_lan %>
+    </label>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ipselect_the_lan_interface_to_be_configured %></div>
+    <label for="interface_name"><%= locale.iplan_interface %></label>
+    <select name="interface_name" id="idinterface_name" class="form-control">
+
+    </select>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ipthis_field_displays_the_mac_address_of_the_selected_interface_read_only %></div>
+    <label for="mac_address"><%= locale.ipmac_address %></label>
+    <div class="form-control-static" id="idmac_address"></div>
+</div><div class="form-group">
+	<hr/>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ip_check_this_option_to_enable_ipv4_support_for_the_selected_interface %></div>
+    <label>
+        <input type="checkbox" value="1" id="idipv4_enable" > <%= locale.ipenable_ipv4 %>
+    </label>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ip_check_this_option_to_enable_ipv4_dhcp_support_for_the_selected_interface_h4obtain_an_ip_address_automaticallyh4_enable_use_dhcp_to_dynamically_configure_ipv4_address_using_dynamic_host_configuration_protocol_dhcp %></div>
+    <label>
+        <input type="checkbox" value="1" id="idipv4_dhcp_enable" > <%= locale.ipenable_ipv4_dhcp %>
+    </label>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ip_if_dhcp_is_disabled_specify_a_static_ipv4_address_to_be_configured_for_the_selected_interface_ul_li_ip_address_consists_of_4_sets_of_numbers_separated_by_dots_as_in_xxxxxxxxxxxxli_li_each_set_ranges_from_0_to_255li_li_first_number_must_not_be_0li_ul %></div>
+    <label for="ipv4_address"><%= locale.ipipv4_address %></label>
+    <input type="text" class="form-control" id="idipv4_address" value="" placeholder="">
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ipif_dhcp_is_disabled_specify_a_static_subnet_mask_to_be_configured_for_the_selected_interface_ul_li_ip_address_consists_of_4_sets_of_numbers_separated_by_dots_as_in_xxxxxxxxxxxxli_li_each_set_ranges_from_0_to_255li_li_first_number_must_not_be_0li_ul %></div>
+    <label for="ipv4_subnet"><%= locale.ipipv4_subnet %></label>
+    <input type="text" class="form-control" id="idipv4_subnet" value="" placeholder="">
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ipif_dhcp_is_disabled_specify_a_static_default_gateway_to_be_configured_for_the_selected_interface_ul_li_ip_address_consists_of_4_sets_of_numbers_separated_by_dots_as_in_xxxxxxxxxxxxli_li_each_set_ranges_from_0_to_255li_li_first_number_must_not_be_0li_ul %></div>
+    <label for="ipv4_gateway"><%= locale.ipipv4_gateway %></label>
+    <input type="text" class="form-control" id="idipv4_gateway" value="" placeholder="">
+</div><div class="form-group">
+	<hr/>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ip_check_this_option_to_enable_ipv6_support_for_the_selected_interface %></div>
+    <label>
+        <input type="checkbox" value="1" id="idipv6_enable" > <%= locale.ipenable_ipv6 %>
+    </label>
+</div><div class="form-group" data-feature='IPV6_SUPPORT' >
+	<div class="alert alert-info help-item hide"  data-feature='IPV6_SUPPORT'  role="alert"><%= locale.ipcheck_this_option_to_enable_ipv6_support_for_the_selected_interfaceh4obtain_an_ip_address_automaticallyh4enable_use_dhcp_to_dynamically_configure_ipv6_address_using_dynamic_hostconfiguration_v6_protocol_dhcpv6 %></div>
+    <label>
+        <input type="checkbox" value="1" id="idipv6_dhcp_enable" > <%= locale.ipenable_ipv6_dhcp %>
+    </label>
+</div><div class="form-group" data-feature='IPV6_COMPLIANCE' >
+	<div class="alert alert-info help-item hide"  data-feature='IPV6_COMPLIANCE'  role="alert"><%= locale.ipchoose_the_ipv6_index %></div>
+    <label for="ipv6_index"><%= locale.ipipv6_index %></label>
+    <select name="ipv6_index" id="idipv6_index" class="form-control">
+
+    </select>
+</div><div class="form-group" data-feature='IPV6_SUPPORT' >
+	<div class="alert alert-info help-item hide"  data-feature='IPV6_SUPPORT'  role="alert"><%= locale.ipspecify_a_static_ipv6_address_to_be_configured_for_the_selected_interface %></div>
+    <label for="ipv6_address"><%= locale.ipipv6_address %></label>
+    <input type="text" class="form-control" id="idipv6_address" value="" placeholder="">
+</div><div class="form-group" data-feature='IPV6_SUPPORT' >
+    <label for="mutiIpv6_name"><%= locale.mutiIpipv6_address %></label>
+	<select name="mutiIpv6_name" id="mutiIpv6" class="form-control"></select>
+</div><div class="form-group" data-feature='IPV6_SUPPORT' >
+	<div class="alert alert-info help-item hide"  data-feature='IPV6_SUPPORT'  role="alert"><%= locale.ipspecify_the_subnet_prefix_length_for_the_ipv6_settingsulli_value_ranges_from_0_to_128liul %></div>
+    <label for="ipv6_prefix"><%= locale.ipsubnet_prefix_length %></label>
+    <input type="text" class="form-control" id="idipv6_prefix" value="" placeholder="">
+</div><div class="form-group">
+	<hr/>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ip_check_this_option_to_enable_vlan_support_for_the_selected_interface %></div>
+    <label>
+        <input type="checkbox" value="1" id="idvlan_enable" > <%= locale.ipenable_vlan %>
+    </label>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ipspecify_the_identification_for_vlan_configuration_ulli_value_ranges_from_2_to_4094liul_strongnotestrong_vlan_id_cannot_be_changed_without_resetting_the_vlan_configuration_vlan_id_0_1_4095_are_reserved_vlan_ids %></div>
+    <label for="vlan_id"><%= locale.ipvlan_id %></label>
+    <input type="text" class="form-control" id="idvlan_id" value="" placeholder="">
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.ipspecify_the_priority_for_vlan_configuration_ulli_value_ranges_from_0_to_7liul_strongnotestrong_7_is_the_highest_priority_for_vlan %></div>
+    <label for="vlan_priority"><%= locale.ipvlan_priority %></label>
+    <input type="text" class="form-control" id="idvlan_priority" value="" placeholder="">
+</div><div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

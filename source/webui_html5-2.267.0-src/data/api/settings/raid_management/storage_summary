@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "controller_id": 261,
+    "controller_name": "LSI MegaRAID SAS 9361-8i (261)",
+    "status": 0,
+    "physical_count": 1,
+    "logical_count": 1,
+    "hotspare": 1
+  },
+  {
+    "id": 2,
+    "controller_id": 260,
+    "controller_name": "LSI MegaRAID 9361-8i (260)",
+    "status": 1,
+    "physical_count": 1,
+    "logical_count": 0,
+    "hotspare": 1
+  }
+]

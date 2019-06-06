@@ -1,0 +1,187 @@
+<!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-aqua animated flipInX delay-0">
+                                <div class="inner">
+                                    <h4 id="new-ae-scripts-count">
+                                        <%=locale.Device_infomation%>
+                                    </h4>
+                                    <p>
+                                        <sup style="font-size: 15px"><span id = "time" /></sup>
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-bag"></i>
+                                </div>
+                                <a href="#openModal" class="small-box-footer">
+                                   <%=locale.more_info%> <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <div class="small-box bg-green animated flipInX delay-0">
+                                <div class="inner">
+                                    <h3>
+                                        <span id="uptime">-</span> <sup style="font-size: 20px">hours</sup>
+                                    </h3>
+                                    <p>
+                                       <%=locale.up_time%>
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-stats-bars"></i>
+                                </div>
+                                <a href="#power-control" class="small-box-footer">
+                                    <%=locale.power_cycle%> <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div><!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+<!--                            <div class="small-box bg-yellow animated flipInX delay-0">//Quanta -
+                                <div class="inner">
+                                    <h3 id="asserted-events-count">
+                                        0
+                                    </h3>
+                                    <p>
+                                        <%=locale.pending_assertions%>
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-pin"></i>
+                                </div>
+                                <a href="#logs/event-log/deasserted" class="small-box-footer">
+                                   <%=locale.more_info%> <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
+                        </div>--><!-- ./col -->
+                        <div class="col-lg-3 col-xs-6">
+                            <!-- small box -->
+                            <!--
+                            <div class="small-box bg-red animated flipInX delay-0">
+                                <div class="inner">
+                                    <h3 id="new-audit-issues-count">
+                                        0
+                                    </h3>
+                                    <p>
+                                        <%=locale.new_audit_issue%>
+                                    </p>
+                                </div>
+                                <div class="icon">
+                                    <i class="ion ion-person"></i>
+                                </div>
+                                <a href="#logs/audit-log" class="small-box-footer">
+                                    <%=locale.more_info%> <i class="fa fa-arrow-circle-right"></i>
+                                </a>
+                            </div>-->
+                        </div><!-- ./col -->
+                    </div><!-- /.row -->
+                    <style>
+                    .modalWindow {
+                        position: fixed;
+                        font-family: arial;
+                        font-size:80%;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background: rgba(0,0,0,0.2);
+                        z-index: 99999;
+                        opacity:0;
+                        -webkit-transition: opacity 400ms ease-in;
+                        -moz-transition: opacity 400ms ease-in;
+                        transition: opacity 400ms ease-in;
+                        pointer-events: none;
+                    }
+                    .modalHeader h5 { color: #189CDA; border-bottom: 2px groove #efefef; }
+                    .modalWindow:target {
+                        opacity:1;
+                        pointer-events: auto;
+                    }
+                    .modalWindow > div {
+                        width: 500px;
+                        position: relative;
+                        margin: 10% auto;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        border-radius: 5px;
+                        background: #fff;
+                    }
+                    .modalWindow .modalHeader  {    padding: 5px 20px 0px 20px; }
+                    .modalWindow .modalContent {    padding: 0px 20px 5px 20px; }
+                    .modalWindow .modalFooter  {    padding: 8px 20px 8px 20px; }
+                    .modalFooter {
+                        background: #F1F1F1;
+                        border-top: 1px solid #999;
+                        -moz-box-shadow: inset 0px 13px 12px -14px #888;
+                        -webkit-box-shadow: inset 0px 13px 12px -14px #888;
+                        box-shadow: inset 0px 13px 12px -14px #888;
+                    }
+                    .modalFooter p {
+                        color:#D4482D;
+                        text-align:right;
+                        margin:0;
+                        padding: 5px;
+                    }
+                    .ok, .close, .cancel {
+                        background: #606061;
+                        color: #FFFFFF;
+                        line-height: 25px;
+                        text-align: center;
+                        text-decoration: none;
+                        font-weight: bold;
+                        -webkit-border-radius: 2px;
+                        -moz-border-radius: 2px;
+                        border-radius: 2px;
+                        -moz-box-shadow: 1px 1px 3px #000;
+                        -webkit-box-shadow: 1px 1px 3px #000;
+                        box-shadow: 1px 1px 3px #000;
+                    }
+                    .ok, .cancel {
+                        width:80px;
+                        float:right;
+                        margin-left:20px;
+                    }
+                    .ok:hover { background: #189CDA; }
+                    .close:hover, .cancel:hover { background: #D4482D; }
+                    .clear { float:none; clear: both; }
+                    </style>
+                    <!-- pop up window-->
+                    <div id="openModal" class="modalWindow" style = "overflow-y:auto;">
+                        <div>
+
+                            <div class="modalHeader">
+                                <h4>Device Information</h4>
+                            </div>
+
+                            <div class="modalContent">
+                                    <p><%=locale.firmware_revision%><b> <span id="fwversion">-</span></b></p>
+                                    <p><%=locale.firmware_buildtime%> <b><span id ="buildtime">-</span></b></p>
+                                    <p><%=locale.bios_version%><b> <span id ="biosversion">-</span></b></p>
+                                    <p><%=locale.lan_port%> <b><span id ="lanport">-</span></b></p>
+                                    <p><%=locale.chip_set%> <b><span id ="chipset">-</span></b></p>
+                                    <p><%=locale.system_mac%> <b><span id ="sysmac">-</span></b></p>
+                                    <p><%=locale.fan_table%> <b><span id ="fantableversion">-</span></b></p>
+                                    <p><span id ="cmcversion"></span></p>
+                            </div>
+                            <div class="modalHeader">
+                                <h4>Network Information</h4>
+                            </div>
+                            <div class="modalContent">
+                                    <p><%=locale.host_name%> <b><span id ="hostname">-</span></b></p>
+                                    <p><%=locale.mac_address%><b> <span id ="macaddress">-</span></b></p>
+                                    <p><%=locale.ipv4_mode%> <b><span id ="ipv4mode">-</span></b></p>
+                                    <p><%=locale.ipv4_address%> <b><span id ="ipv4address">-</span></b></p>
+                                    <p><%=locale.ipv6_mode%> <b><span id ="ipv6mode">-</span></b></p>
+                                    <p><%=locale.ipv6_link_local_address%> <b><span id ="ipv6linnkaddress">-</span></b></p>
+                                    <p><%=locale.ipv6_address%> <b><span id ="ipv6address">-</span></b></p>
+                            </div>
+                            <div class="modalFooter">
+                                <a href="#" title="Ok" class="ok">Close</a>
+                                <!--<button type="button" id = "closeMoadl" class="ok" data-dismiss="modal">Close</button>-->
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>

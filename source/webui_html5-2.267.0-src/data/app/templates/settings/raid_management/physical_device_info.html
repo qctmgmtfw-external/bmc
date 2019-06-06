@@ -1,0 +1,124 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li>
+        <li>
+            <a href="#settings">
+                <%= locale.settings %>
+            </a>
+        </li>
+        <li>
+            <a href="#settings/raid_management">
+                <%= locale.raid_management %>
+            </a>
+        </li>
+        <li class="active">
+            <%= locale.title %>
+        </li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+    <!--<div class="row">
+        <div class="col-md-12">
+            <!--search events 
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder="Search <%= locale.title %>" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="row">
+        <div class='col-md-12'>
+            <div class="row">
+                <div class="alert alert-info help-item hide" role="alert">
+                    <%= locale.raid_physical_hlp %>
+                </div>
+            </div>
+            <div class="alert alert-success hide"><b></b> </div>
+            <div class="alert alert-danger hide"><b></b></div>
+            <div class='box'>
+                <div class='box-body'>
+                    <div class='row'>
+                        <div class="col-md-12 table-list">
+                            <form class='form-inline'>
+                                <div class="form-group" %feature %runtime-feature>
+                                    <label for="group_by_controller_name">
+                                        <%= locale.select_the_raid_controller_ %>
+                                    </label>
+                                    <select name="group_by_controller_name" id="idgroup_by_controller_name" class="form-control">
+                                    </select>
+                                </div>
+                            </form>
+                            <hr/>
+                            <table class="footable table toggle-medium" data-page-navigation=".pagination">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <%= locale.device_id %>
+                                        </th>
+                                        <th>
+                                            <%= locale.controller %>
+                                        </th>
+                                        <th>
+                                            <%= locale.media_type %>
+                                        </th>
+                                        <th>
+                                            <%= locale.state %>
+                                        </th>
+                                        <th>
+                                            <%= locale.slot %>
+                                        </th>
+                                        <th>
+                                            <%= locale.speed %>
+                                        </th>
+                                        <th>
+                                            <%= locale.link_speed %>
+                                        </th>
+                                        <th>
+                                            <%= locale.size_gb %>
+                                        </th>
+                                        <th>
+                                            <%= locale.temp_c %>
+                                        </th>
+                                        <th data-toggle="true" data-sort-ignore="true" class="footable-last-column"></th>
+                                        <th data-hide="all"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-body">
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="7">
+                                            <div class="pagination pagination-centered hide-if-no-paging"></div>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div class="col-md-12 table-list-add-item hide">
+                                <a href='%add-link'>
+                                    <div class="col-md-3 icon">
+                                        <i class="ion-plus-circled iconic"></i>
+                                    </div>
+                                    <div class="col-md-9 contents">
+                                        %add-text
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,82 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%=locale.systemlog%>
+            <small> <%=locale.allsys_eventlog%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i>  <%=locale.home%></a>
+        </li>
+        <li class="active">
+            <%=locale.systemlog%>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="alert alert-info help-item hide" role="alert"><%= locale.syslog_hlp %>
+                </div>
+            </div>
+            <div class="alert alert-danger hide"><b></b></div>
+            <div class="graph-filters filters">
+                <!-- 
+                <div class="input-group" id="filter">
+                    <input type="text" class="form-control" placeholder=" <%=locale.search_filterevent%>" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon-search glyphicon"></span>
+                    </span>
+                </div> -->
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label for="iddate_range_begin"><%=locale.filterby_date%></label>
+                        <div class='input-group date' id='iddate_range_begin' data-date-format="YYYY/MM/DD">
+                            <input type='text' class="form-control" placeholder="<%=locale.start_date%>" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="iddate_range_end">-</label>
+                        <div class='input-group date' id='iddate_range_end' data-date-format="YYYY/MM/DD">
+                            <input type='text' class="form-control" placeholder="<%=locale.end_date%>" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="idevent_type"><%=locale.event_cate%></label>
+                        <select class="form-control" id="idevent_type">
+                            <option value="1"><%=locale.alert%></option>
+                            <option value="2"><%=locale.critical%></option>
+                            <option value="3"><%=locale.error%></option>
+                            <option value="4"><%=locale.notification%></option>
+                            <option value="5"><%=locale.warning%></option>
+                            <option value="6"><%=locale.debug%></option>
+                            <option value="7"><%=locale.emergency%></option>
+                            <option value="8"><%=locale.information%></option>  
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 logscroll">
+            <ul class="timeline" id="event-content">
+                <li class='timeline-item-finish'>
+                    <i class="fa fa-clock-o animated fadeInDown"></i>
+                </li> 
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

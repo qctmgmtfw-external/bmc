@@ -1,0 +1,32 @@
+Source : sys_iptables
+Version : 3.5.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : santhoshkumarr (santhoshkumarr@amiindia.co.in)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : sys_iptables
+Build-Depends : Target, Crosscc, libiptables_dev
+Architecture : ALL
+Urgency : medium
+Description : Package provides support to iptables which is used for IPv4 firewall configuration.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : sys_iptables
+Section : sys
+Group : BASE
+Essential : YES
+Depends : libiptables
+Description : Packages contains library files and configurations for iptables.
+.
+

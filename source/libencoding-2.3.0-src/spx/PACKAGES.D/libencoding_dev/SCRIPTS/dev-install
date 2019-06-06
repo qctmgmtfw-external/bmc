@@ -1,0 +1,13 @@
+# Install Script
+
+build-install:
+ MKDIR_NOCLEAN %SPXINC/encoding
+ MKDIR_NOCLEAN %SPXLIB/encoding
+ COPY_FILE ./CyoDecode.h %SPXINC/encoding
+ COPY_FILE ./CyoEncode.h %SPXINC/encoding
+ COPY_FILE ./Encode.h %SPXINC/encoding
+ COPY_FILE ./libencoding.a %SPXLIB/encoding
+ COPY_FILE ./libencoding.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/encoding
+ ADD_LIBRARY_LINKS %SPXLIB/encoding libencoding.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+ 		
+debug-install:

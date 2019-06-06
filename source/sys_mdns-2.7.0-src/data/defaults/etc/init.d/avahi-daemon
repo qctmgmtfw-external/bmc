@@ -28,7 +28,6 @@ DESC="Avahi mDNS/DNS-SD Daemon"
 NAME="avahi-daemon"
 DAEMON="/usr/sbin/$NAME"
 SCRIPTNAME=/etc/init.d/$NAME
-DNSCONFMAXLINE="9"
 
 # Gracefully exit if the package has been removed.
 test -x $DAEMON || exit 0
@@ -85,33 +84,14 @@ case "$1" in
     	bond=`grep -in bond /conf/dns.conf | cut -d ":" -f 1`
         if [ ! -z $bond ]
         then
-            var=`grep -C $DNSCONFMAXLINE bond0 /conf/dns.conf | tail -1 | cut -d"=" -f 2`
-            while [ "$var" != "y" -a "$var" != "n" ]
-            do
-            	DNSCONFMAXLINE=`expr $DNSCONFMAXLINE - 1`
-            	if [ "$DNSCONFMAXLINE" -lt "8" ]
-            	then
-            	    break
-            	fi
-            	var=`grep -C $DNSCONFMAXLINE bond0 /conf/dns.conf | tail -1 | cut -d"=" -f 2`
-            done
-            
+            var=`grep -C 9 bond0 /conf/dns.conf | tail -1 | cut -d"=" -f 2`
             if [ "$var" == "n" ]
         	then
                 d_stop
                 exit 0
         	fi
         else
-        	var=`grep -C $DNSCONFMAXLINE eth0 /conf/dns.conf | tail -1 | cut -d"=" -f 2`
-            while [ "$var" != "y" -a "$var" != "n" ]
-            do
-            	DNSCONFMAXLINE=`expr $DNSCONFMAXLINE - 1`
-            	if [ "$DNSCONFMAXLINE" -lt "8" ]
-            	then
-            	    break
-            	fi
-            	var=`grep -C $DNSCONFMAXLINE eth0 /conf/dns.conf | tail -1 | cut -d"=" -f 2`
-            done
+        	var=`grep -C 9 eth0 /conf/dns.conf | tail -1 | cut -d"=" -f 2`
         	if [ "$var" == "n" ]
         	then
                 d_stop

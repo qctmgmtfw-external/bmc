@@ -165,7 +165,7 @@
 +    struct ast_uart_dma_info *udma = (dir==DMA_TO_DEVICE?(&(p->dma->tx)):(&(p->dma->rx)));
 +
 +    if(udma->enable == 0) {
-+        //printk("udma Please check \n");
++        printk("udma Please check \n");
 +        return;
 +    }
 +

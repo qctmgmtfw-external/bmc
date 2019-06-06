@@ -1,0 +1,137 @@
+Package: H5Viewer_html5 (1.14.0); urgency = medium
+
+Abstract:
+	Help menu implementation.
+
+Files Added: data/app/images/jviewerlogo.jpg, data/app/models/oem_resource.js
+Files Modified: data/app/strings/nls/root/remote_control.js, data/app/templates/remote.html
+
+--Submitter: mohammedjavitham (mohammedjavitham@amiindia.co.in) Fri, 25 Mar 2016 16:42:11 HMT
+
+Package: H5Viewer_html5 (1.13.0); urgency = medium
+
+Abstract:
+	Fixed typo; block privilege request
+
+Files Modified: data/app/strings/nls/root/remote_control.js
+
+--Submitter: hariharanr (hariharanr@amiindia.co.in) Mon, 21 Mar 2016 18:31:12 IST
+
+Package: H5Viewer_html5 (1.12.0); urgency = medium
+
+Abstract:
+	Make H5Viewer text/Menu/MenuItems bold. Moved keyboard layout from settings to a new menu Keyboard
+
+Files Modified: data/app/css/roboto.css, data/app/css/sourcesans.css, data/app/strings/nls/root/remote_control.js, data/app/templates/remote.html
+
+--Submitter: hariharanr (hariharanr@amiindia.co.in) Thu, 17 Mar 2016 21:00:14 IST
+
+Package: H5Viewer_html5 (1.11.0); urgency = medium
+
+Abstract:
+	Modified the color of the button text to make it more visible.
+
+Files Modified: data/app/less/AdminLTE/buttons.less
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 16 Mar 2016 20:31:41 HMT
+
+Package: H5Viewer_html5 (1.10.0); urgency = medium
+
+Abstract:
+	Included class name for dynamically hiding mouse mode.
+
+Files Modified: data/app/templates/remote.html, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Tue, 15 Mar 2016 13:00:44 HMT
+
+Package: H5Viewer_html5 (1.9.0); urgency = medium
+
+Abstract:
+	Renamed Power menu option
+
+Files Modified: data/app/strings/nls/root/remote_control.js
+
+--Submitter: sowmyaa (sowmyaa@amiindia.co.in) Mon, 14 Mar 2016 19:59:13 HMT
+
+Package: H5Viewer_html5 (1.8.0); urgency = medium
+
+Abstract:
+	IE related bug fixes.
+
+Files Modified: data/app/templates/remote.html
+
+--Submitter: mohammedjavitham (mohammedjavitham@amiindia.co.in) Fri, 11 Mar 2016 15:17:06 HMT
+
+Package: H5Viewer_html5 (1.7.0); urgency = medium
+
+Abstract:
+	Updated keyboard / mouse encryption menu visibility.
+
+Files Modified: data/app/templates/remote.html
+
+--Submitter: mohammedjavitham (mohammedjavitham@amiindia.co.in) Thu, 10 Mar 2016 18:03:30 HMT
+
+Package: H5Viewer_html5 (1.6.0); urgency = medium
+
+Abstract:
+	IE related bug fixes.
+
+Files Modified: data/app/templates/remote.html, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: mohammedjavitham (mohammedjavitham@amiindia.co.in) Wed, 09 Mar 2016 18:07:25 HMT
+
+Package: H5Viewer_html5 (1.5.0); urgency = medium
+
+Abstract:
+	add host lock and windows button
+
+Files Modified: data/app/templates/remote.html
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Wed, 09 Mar 2016 16:30:09 IST
+
+Package: H5Viewer_html5 (1.4.0); urgency = medium
+
+Abstract:
+	Added id for power menu for accesing in the js code.
+
+Files Modified: data/app/templates/remote.html, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Mon, 07 Mar 2016 21:36:48 HMT
+
+Package: H5Viewer_html5 (1.3.0); urgency = medium
+
+Abstract:
+	added h5viewer related packages as build depends
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Tue, 23 Feb 2016 19:24:20 IST
+
+Package: H5Viewer_html5 (1.2.0); urgency = medium
+
+Abstract:
+	Included ctrl and alt status bar buttons
+
+Files Modified: data/app/templates/remote.html
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 23 Feb 2016 16:16:40 HMT
+
+Package: H5Viewer_html5 (1.1.0); urgency = medium
+
+Abstract:
+	added missing html changes for H5Viewer_html5 from webui remote.html
+	added proper name for min.js for debugging purpose
+
+Files Modified: data/app/templates/remote.html, spx/RULES.py
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Tue, 23 Feb 2016 12:42:12 IST
+
+Package: H5Viewer_html5 (1.0.0); urgency = new
+
+Abstract:
+	This Package contains SPX KVM HTML5 web page related files
+
+Files Added: data, data/CONTRIBUTING.md, data/Gruntfile.js, data/README.md, data/api, data/api/kvm, data/api/kvm/token, data/api/login, data/api/videos, data/app, data/app/HTTPErrorHandler.js, data/app/app.js, data/app/cc.js, data/app/collection, data/app/collection/messages.js, data/app/collection/notifications.js, data/app/collection/project-configurations.js, data/app/collection/runtime-configurations.js, data/app/config-kvm.js, data/app/config.main.js, data/app/css, data/app/css/opensans.css, data/app/css/roboto.css, data/app/css/sourcesans.css, data/app/fonts, data/app/fonts/M2Jd71oPJhLKp0zdtTvoMzNrcjQuD0pTu1za2FULaMs.woff, data/app/fonts/ODelI1aHBYDBqgeIAH2zlBM0YzuT7MdOe03otPbuUS0.woff, data/app/fonts/OpenSans-Light-webfont.eot, data/app/fonts/OpenSans-Light-webfont.svg, data/app/fonts/OpenSans-Light-webfont.ttf, data/app/fonts/OpenSans-Light-webfont.woff, data/app/fonts/OpenSans-Regular-webfont.eot, data/app/fonts/OpenSans-Regular-webfont.svg, data/app/fonts/OpenSans-Regular-webfont.ttf, data/app/fonts/OpenSans-Regular-webfont.woff, data/app/fonts/Roboto-Light-webfont.eot, data/app/fonts/Roboto-Light-webfont.svg, data/app/fonts/Roboto-Light-webfont.ttf, data/app/fonts/Roboto-Light-webfont.woff, data/app/fonts/Roboto-Thin-webfont.eot, data/app/fonts/Roboto-Thin-webfont.svg, data/app/fonts/Roboto-Thin-webfont.ttf, data/app/fonts/Roboto-Thin-webfont.woff, data/app/fonts/fpTVHK8qsXbIeTHTrnQH6GGomRtBD2u8FwSY4jjlmeA.woff, data/app/fonts/fpTVHK8qsXbIeTHTrnQH6PULlOK_XQENnt2ryrY843E.woff, data/app/fonts/qx1LSqts-NtiKcLw4N03IFhlQWQpSCpzb2Peu3I-Q34.woff, data/app/fonts/toadOcfmlt9b38dHJxOBGJ6-ys_j0H4QL65VLqzI3wI.woff, data/app/fonts/toadOcfmlt9b38dHJxOBGNbE_oMaV8t2eFeISPpzbdE.woff, data/app/images, data/app/images/.gitkeep, data/app/images/fem.png, data/app/images/loading.GIF, data/app/images/windows.jpg, data/app/images/world.png, data/app/lang_support, data/app/lang_support/zh-tw, data/app/lang_support/zh-tw/auditlog.js, data/app/lang_support/zh-tw/bond.js, data/app/lang_support/zh-tw/calendar.js, data/app/lang_support/zh-tw/common.js, data/app/lang_support/zh-tw/create_logical_device.js, data/app/lang_support/zh-tw/dashboard.js, data/app/lang_support/zh-tw/date_time.js, data/app/lang_support/zh-tw/discrete_states.js, data/app/lang_support/zh-tw/dns.js, data/app/lang_support/zh-tw/dual_firmware_update.js, data/app/lang_support/zh-tw/dual_image_config.js, data/app/lang_support/zh-tw/error.js, data/app/lang_support/zh-tw/event_filters.js, data/app/lang_support/zh-tw/firmware_update.js, data/app/lang_support/zh-tw/fru.js, data/app/lang_support/zh-tw/hpm_firmware_update.js, data/app/lang_support/zh-tw/ip.js, data/app/lang_support/zh-tw/lan_destinations.js, data/app/lang_support/zh-tw/lmedia.js, data/app/lang_support/zh-tw/log_details.js, data/app/lang_support/zh-tw/logical_device_info.js, data/app/lang_support/zh-tw/model_errors.js, data/app/lang_support/zh-tw/physical_device_info.js, data/app/lang_support/zh-tw/power_control.js, data/app/lang_support/zh-tw/pre_event.js, data/app/lang_support/zh-tw/raid_event_log.js, data/app/lang_support/zh-tw/raid_logical_physical_device_info.js, data/app/lang_support/zh-tw/remote_control.js, data/app/lang_support/zh-tw/rmedia.js, data/app/lang_support/zh-tw/sasit_topology_info.js, data/app/lang_support/zh-tw/sensor-details.js, data/app/lang_support/zh-tw/sensor.js, data/app/lang_support/zh-tw/sensor_specific_states.js, data/app/lang_support/zh-tw/service_sessions.js, data/app/lang_support/zh-tw/services.js, data/app/lang_support/zh-tw/settings.js, data/app/lang_support/zh-tw/smtp.js, data/app/lang_support/zh-tw/sol_recorded_video.js, data/app/lang_support/zh-tw/sol_trigger_settings.js, data/app/lang_support/zh-tw/stats.js, data/app/lang_support/zh-tw/store.js, data/app/lang_support/zh-tw/system_inventory_info.js, data/app/lang_support/zh-tw/systemlog.js, data/app/lang_support/zh-tw/task_details.js, data/app/lang_support/zh-tw/tasks.js, data/app/lang_support/zh-tw/threshold_states.js, data/app/lang_support/zh-tw/trigger_settings.js, data/app/lang_support/zh-tw/units.js, data/app/lang_support/zh-tw/updates.js, data/app/lang_support/zh-tw/users.js, data/app/lang_support/zh-tw/videolog.js, data/app/less, data/app/less/AdminLTE, data/app/less/AdminLTE/404_500_errors.less, data/app/less/AdminLTE/AdminLTE.less, data/app/less/AdminLTE/alerts.less, data/app/less/AdminLTE/boxes.less, data/app/less/AdminLTE/buttons.less, data/app/less/AdminLTE/callout.less, data/app/less/AdminLTE/core.less, data/app/less/AdminLTE/dropdown.less, data/app/less/AdminLTE/forms.less, data/app/less/AdminLTE/header.less, data/app/less/AdminLTE/invoice.less, data/app/less/AdminLTE/lockscreen.less, data/app/less/AdminLTE/login_and_register.less, data/app/less/AdminLTE/mailbox.less, data/app/less/AdminLTE/mixins.less, data/app/less/AdminLTE/navs.less, data/app/less/AdminLTE/progress-bars.less, data/app/less/AdminLTE/sidebar.less, data/app/less/AdminLTE/skins.less, data/app/less/AdminLTE/small-box.less, data/app/less/AdminLTE/timeline.less, data/app/less/AdminLTE/vars.less, data/app/less/delayer.less, data/app/less/styles.less, data/app/libs, data/app/libs/boxrefresh.js, data/app/libs/center.js, data/app/libs/resize.js, data/app/libs/videoplayback_ast.js, data/app/libs/videoplayback_none.js, data/app/libs/videoplayback_pilot.js, data/app/main.js, data/app/models, data/app/models/adviser.js, data/app/models/kvm_token.js, data/app/models/media, data/app/models/media/general.js, data/app/models/media/instance.js, data/app/models/media/remotesession.js, data/app/models/message.js, data/app/models/notification.js, data/app/models/project-configuration.js, data/app/models/runtime-configuration.js, data/app/router.js, data/app/strings, data/app/strings/nls, data/app/strings/nls/common.js, data/app/strings/nls/error.js, data/app/strings/nls/general.js, data/app/strings/nls/instance.js, data/app/strings/nls/model_errors.js, data/app/strings/nls/remote_control.js, data/app/strings/nls/remotesession.js, data/app/strings/nls/root, data/app/strings/nls/root/common.js, data/app/strings/nls/root/error.js, data/app/strings/nls/root/general.js, data/app/strings/nls/root/instance.js, data/app/strings/nls/root/model_errors.js, data/app/strings/nls/root/remote_control.js, data/app/strings/nls/root/remotesession.js, data/app/styles, data/app/styles/index.css, data/app/templates, data/app/templates/.gitkeep, data/app/templates/help.html, data/app/templates/layouts, data/app/templates/layouts/login.html, data/app/templates/layouts/main.html, data/app/templates/layouts/withoutmenu.html, data/app/templates/login.html, data/app/templates/message.html, data/app/templates/notification.html, data/app/templates/remote-blank.html, data/app/templates/remote.html, data/app/templates/remote_popup.html, data/app/templates/settings, data/app/templates/settings/media, data/app/templates/settings/media/general.html, data/app/utils.js, data/app/views, data/app/views/HelpView.js, data/app/views/LoginView.js, data/app/views/MaintenanceView.js, data/app/views/MessageView.js, data/app/views/MessagesView.js, data/app/views/NotificationView.js, data/app/views/NotificationsView.js, data/app/views/RemoteControlView.js, data/app/views/RemoteControlViewHide.js, data/app/views/maintenance.js, data/app/views/remotePopUpView.js, data/app/views/settings, data/app/views/settings/media, data/app/views/settings/media/general.js, data/favicon.ico, data/lang_runtime_support.tag, data/lang_zh_tw.tag, data/test, data/test/coverage, data/test/coverage/PhantomJS 1.9.7 (Linux), data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/app.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/collection, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/collection/event-log.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/collection/index.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/collection/sensors.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/config.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/index.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/libs, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/libs/index.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/libs/resize.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/libs/todo.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/libs/treeview.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/models, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/models/index.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/models/log.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/models/sensor.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/router.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/common.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/discrete_states.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/index.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/root, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/root/common.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/root/discrete_states.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/root/index.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/root/sensor_specific_states.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/root/threshold_states.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/root/units.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/sensor_specific_states.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/threshold_states.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/strings/nls/units.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/CriticalSensorView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/DashboardView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/DisabledSensorView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/DiscreteSensorView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/EventLogView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/FRUView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/HelpView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/MaintenanceView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/NormalSensorView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/RemoteControlView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/ScriptsView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/SensorView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/SettingsView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/StoreView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/TaskEventsView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/TimelineDateView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/TimelineItemView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/UpdatesView.js.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/app/views/index.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/index.html, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/prettify.css, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov-report/prettify.js, data/test/coverage/PhantomJS 1.9.7 (Linux)/lcov.info, data/test/coverage/coverage-PhantomJS 1.9.7 (Linux)-20140418_111447.json, data/test/coverage/coverage-PhantomJS 1.9.7 (Linux)-20140418_125150.json, data/test/coverage/coverage-PhantomJS 1.9.7 (Linux)-20140418_175356.json, data/test/jasmine, data/test/jasmine/specs, data/test/jasmine/specs/boilerplate, data/test/jasmine/specs/boilerplate/router.spec.js, data/test/jasmine/specs/example.spec.js, data/test/mocha, data/test/mocha/specs, data/test/mocha/specs/boilerplate, data/test/mocha/specs/boilerplate/router.spec.js, data/test/mocha/specs/example.spec.js, data/test/qunit, data/test/qunit/specs, data/test/qunit/specs/boilerplate, data/test/qunit/specs/boilerplate/router.spec.js, data/test/qunit/specs/example.spec.js, data/test/runner.js, data/viewer.html, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/H5Viewer_html5, spx/PACKAGES.D/H5Viewer_html5/DATA, spx/PACKAGES.D/H5Viewer_html5/DATA/.keep, spx/PACKAGES.D/H5Viewer_html5/P.CONFIG, spx/PACKAGES.D/H5Viewer_html5/SCRIPTS, spx/PACKAGES.D/H5Viewer_html5/SCRIPTS/dev-install.py, spx/RULES.D, spx/RULES.D/add_kvm.sh, spx/RULES.D/add_lang_zh_tw.sh, spx/RULES.D/add_media.sh, spx/RULES.D/add_oem.sh, spx/RULES.py
+
+--Submitter: kirankumarb (kirankumarb@amiindia.co.in) Mon, 22 Feb 2016 21:35:26 HMT
+

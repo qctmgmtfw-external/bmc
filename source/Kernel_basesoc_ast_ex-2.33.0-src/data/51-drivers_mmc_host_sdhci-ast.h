@@ -18,7 +18,7 @@
 +#define SD_RESET_BIT                    (1 << 16)
 +
 +#define SD_CLOCK_DIVIDER_MASK           (7 << 12) /* bits[14:12] */
-+#define SD_CLOCK_DIVIDER_SELECTION      0 /* SDCLK = H-PLL / 4 */
++#define SD_CLOCK_DIVIDER_SELECTION      1 /* SDCLK = H-PLL / 4 */
 +#define SDIO_ALL_SOFTWARE_RESET         0x01
 +
 +#define AST_SDHC_INFO                   0x00

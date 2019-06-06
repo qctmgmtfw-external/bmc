@@ -1,0 +1,13 @@
+./usr/sbin/flash_erase
+./usr/sbin/mkfs.jffs2
+
+./usr/bin/rsync
+./usr/bin/inotifywait
+
+./lib/%MULTI_ARCH_LIB%/libacl.so.1
+./lib/%MULTI_ARCH_LIB%/libattr.so.1
+./usr/lib/%MULTI_ARCH_LIB%/liblzo2.so.2 | ./lib/%MULTI_ARCH_LIB%/liblzo2.so.2
+./usr/lib/libinotifytools.so
+./usr/lib/libinotifytools.so.0
+
+

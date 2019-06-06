@@ -1,0 +1,80 @@
+<section class="content-header">
+    <h1>
+        <%= locale.lan_destination_configuration %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/pef"><%= locale.platform_event_filters %></a></li><li><a href="#settings/pef/lan_destinations"><%= locale.lan_destinations %></a></li>
+        <li class="active">
+           <%= locale.lan_destination_configuration %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger hide">
+                <!-- <i class="fa fa-ban"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                <div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.lan_destinationsdisplays_lan_channel_number_of_the_selected_slotreadonly %></div>
+    <label for="lan_channel"><%= locale.lan_destinationslan_channel %></label>
+    <div class="form-control-static" id="idlan_channel"></div>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.lan_destinationsdisplays_id_for_setting_destination_selector_of_alert_policyreadonly %></div>
+    <label for="channel_id"><%= locale.lan_destinationslan_destination %></label>
+    <div class="form-control-static" id="idchannel_id"></div>
+</div><div class="form-group"  >
+	<label for="destination_type"><%= locale.lan_destinationsdestination_type %></label><br/>
+	<label>
+							        <input type='radio' value='snmp' name='destination_type' id='iddestination_type' > <%= locale.lan_destinationssnmp_trap %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;<label>
+							        <input type='radio' value='email' name='destination_type' id='iddestination_type' > <%= locale.lan_destinationsemail %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;    
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.lan_destinationsif_destination_type_is_snmp_trap_then_give_the_ip_address_of_the_system_that_will_receive_the_alert_destination_address_will_support_the_following_ulli_ipv4_address_format_li_ipv6_address_formatul %></div>
+    <label for="destination_address"><%= locale.lan_destinationssnmp_destination_address %></label>
+    <input type="text" class="form-control" id="iddestination_address" value="" placeholder="">
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.lan_destinationsif_destination_type_is_email_alert_then_choose_the_user_to_whom_the_email_alert_has_to_be_sentstrongnotestrong_email_address_for_the_user_has_to_be_configured_under_configurationusers %></div>
+    <label for="name"><%= locale.lan_destinationsbmc_username %></label>
+    <select name="name" id="idname" class="form-control">
+    	
+    </select>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.lan_destinationsthese_fields_must_be_configured_if_email_alert_is_chosen_asdestination_type_an_email_will_be_sent_to_the_configured_email_address_of_the_user_in_case_of_any_severity_events_with_a_subject_specified_in_subject_field_and_will_contain_the_message_fields_content_as_the_email_body_strongnotestrong_these_fields_are_not_applicable_for_amiformat_email_users %></div>
+    <label for="subject"><%= locale.lan_destinationsemail_subject %></label>
+    <input type="text" class="form-control" id="idsubject" value="" placeholder="" maxlength = "31">
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.lan_destinationsthese_fields_must_be_configured_if_email_alert_is_chosen_as_destination_type_an_email_will_be_sent_to_the_configured_email_address_of_the_user_in_case_of_any_severity_events_with_a_subject_specified_in_subject_field_and_will_contain_the_message_fields_content_as_the_email_body_strongnotestrong_these_fields_are_not_applicable_for_amiformat_email_users %></div>
+    <label for="message"><%= locale.lan_destinationsemail_message %></label>
+    <input type="text" class="form-control" id="idmessage" value="" placeholder="" maxlength = "63">
+</div><div class="form-group"  >
+	
+
+    <div class="clearfix"></div>
+</div><a class="btn btn-danger" id="delete"><%= locale.deleteLabel %></a><div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

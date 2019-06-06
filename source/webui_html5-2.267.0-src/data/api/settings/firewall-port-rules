@@ -1,0 +1,35 @@
+[
+	{
+		"id": 1, 
+		"port_start": "250", 
+		"port_end": "300",
+		"protocol": 1, 
+		"rule": "allow", 
+		"timeout": 1, 
+		"start_time": 1408939138, 
+		"end_time": 1416939138,
+		"network_type": "IPV4"
+	},
+	{
+		"id": 2, 
+		"port_start": "301", 
+		"port_end": "400",
+		"protocol": 1, 
+		"rule": "allow", 
+		"timeout": 1, 
+		"start_time": 1408939138, 
+		"end_time": 1416939138,
+		"network_type": "IPV4"
+	},
+	{
+		"id": 3, 
+		"port_start": "301", 
+		"port_end": "400",
+		"protocol": 1, 
+		"rule": "allow", 
+		"timeout": 1, 
+		"start_time": 1408939138, 
+		"end_time": 1416939138,
+		"network_type": "IPV6"
+	}
+]

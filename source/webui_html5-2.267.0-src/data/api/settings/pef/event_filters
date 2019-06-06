@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"enable_filter": "1",
+		"trigger_event_severity": "monitor",
+		"power_action": "power_down",
+		"policy_group": "1",
+		"raw_data": "0",
+		"generator_id_1": "0",
+		"generator_id_2": "0",
+		"generator_type": "slave",
+		"slave_addr_software_id": "0x0f",
+		"channel_number": "4",
+		"ipmb_lun": "2",
+		"sensor_type": "temperature",
+		"sensor_name": "TEMP_1",
+		"event_options": "string",
+		"event_trigger": "255",
+		"event_data_1_and_mask": "0",
+		"event_data_1_compare_1": "0",
+		"event_data_1_compare_2": "0",
+		"event_data_2_and_mask": "0",
+		"event_data_2_compare_1": "0",
+		"event_data_2_compare_2": "0",
+		"event_data_3_and_mask": "0",
+		"event_data_3_compare_1": "0",
+		"event_data_3_compare_2": "0"
+	}
+]

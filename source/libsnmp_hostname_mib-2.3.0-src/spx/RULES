@@ -1,0 +1,17 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+				CWD %BUILD/%PACKAGE/data
+                INVOKE_MAKE
+
+#Clean Source
+clean_source:
+				CWD %BUILD/%PACKAGE/data
+                INVOKE_MAKE clean
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create libsnmp_hostname_mib package
+build_package-libsnmp_hostname_mib:
+		PACK_SPX  ./   %BUILD/%PACKAGE/data/libsnmp_hostname_mib.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX

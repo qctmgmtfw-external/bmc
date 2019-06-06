@@ -1,0 +1,151 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%=locale.eventlog%>
+            <small><%=locale.allsensor_eventlog%></small>
+            <link href="../style/page_style.css" type="text/css" rel="stylesheet" />
+            <script src="../lib/include.js" type="text/javascript"></script>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%=locale.home%></a>
+        </li>
+        <li class="active">
+            <%=locale.eventlog%>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="alert alert-info help-item hide" role="alert"><%= locale.eventlog_hlp %>
+                </div>
+            </div>
+            <div class="alert alert-danger hide"><b></b></div>
+            <div class="graph-filters filters">
+                <!--
+                <div class="input-group" id="filter">
+                    <input type="text" class="form-control" placeholder="<%=locale.search_filterevent%>" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon-search glyphicon"></span>
+                    </span>
+                </div> -->
+                <form class="form-inline" role="form" action="javascript://">
+				<div class="row" style="margin:15px 0px 0px 0px">
+                    <div class="form-group">
+                        <label for="iddate_range_begin"><%=locale.filter_bydate%></label>
+                        <div class='input-group date' id='iddate_range_begin' data-date-format="YYYY/MM/DD">
+                            <input type='text' class="form-control" placeholder="<%=locale.start_date%>" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="iddate_range_end">-</label>
+                        <div class='input-group date' id='iddate_range_end' data-date-format="YYYY/MM/DD">
+                            <input type='text' class="form-control" placeholder="<%=locale.end_date%>" />
+                            <span class="input-group-addon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="idevent_type">&nbsp;&nbsp;&nbsp;<%=locale.filter_bytype%></label>
+                        <select class="form-control" id="idevent_type">
+                            <option value=""><%=locale.allevents%></option>
+                            <option value="system_event_record"><%=locale.system_events%></option>
+                            <option value="oem_record"><%=locale.oem_events%></option>
+                            <option value="bios"><%=locale.bios_events%></option>
+                            <option value="smi_handler"><%=locale.smi_events%></option>
+                            <option value="system_management_software"><%=locale.system_management_events%></option>
+                            <option value="system_software_oem"><%=locale.system_oem_events%></option>
+                            <option value="remote_console_software"><%=locale.remove_console_events%></option>
+                            <option value="terminal_mode_remote_console_software"><%=locale.terminal_mode_events%></option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="idsensor"><%=locale.sensor%></label>
+                        <select class="form-control" id="idsensor">
+                            <option value=""><%=locale.allsensors%></option>
+                        </select>
+                    </div>
+				</div>
+                <div class="row" style="margin:15px 0px 0px 0px">
+					<div class="col-md-12">
+						<div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <input type='radio' value='1' name='time_zone' class='timeZone' id="idbmctimezone" checked><%= locale.bmc_timezone %></label>&nbsp;&nbsp;&nbsp;&nbsp;<label>
+                                        <input type='radio' value='2' name='time_zone' class='timeZone' id="idclienttimezone"><%= locale.client_timezone %></label>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </div>
+                                    <div class="col-md-3">
+                                         <label for="UTCOffset" ><%= locale.UTCOffset %></label>
+                                         <label for="UTCOffset" id="idUTCOffset" ></label>
+                                    </div>
+                                </div>
+                            </div>
+							<div class="col-md-2">
+								<button class="btn btn-danger" id="idcl_log"><i class="fa fa-trash-o"></i>  <%=locale.clear_sel%></button>
+							</div>
+							<div class="col-md-2">
+                <!-- original: cannot see download button, need to remove data-feature tag, Quanta Elmo modified
+                    <button class="btn btn-success" id='idsave_log' data-feature="SAVE_SELLOG" ><i class='fa fa-download'></i> <%=locale.save_sel%></button>
+					             -->
+								<button class="btn btn-success" id="idsave_log" style=""><i class="fa fa-download"></i><%=locale.save_sel%></button>
+                <!--<a href="#" target="_blank" id="downloadLink" class="hide"  download = "SELLog"></a>-->
+                <div class="form-group">
+                    <table cellspacing="2" cellpadding="5" border="0" width="500">
+                        <tr><td>
+                            <strong>Event Log Type Download :
+                            <label id="_lblSELType" style="text-transform:uppercase"></label>
+                            </strong>
+                        </td></tr>
+                        <tr><td>
+                            <input type="radio" id="_rdoSELHex" name="_lblSELType" checked="checked"/>
+                            <label for="_rdoSELHex">Hex File Type</label>
+                        </td></tr>
+                        <tr><td>
+                        <input type="radio" id="_rdoSELText" name="_lblSELType" />
+                            <label for="_rdoSELText">Text File Type</label>
+                        </td></tr>
+                    </table>
+                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+                    <a href="#" target="_blank" id="downloadLink" download="SELLog" class="hide"></a>
+                </form>
+                <button class="btn btn-success" id='idsave_ierr_log' ><i class='fa fa-download'></i> <%=locale.save_ierr%></button>
+                <a href="#" target="_blank" id="downloadLink" download="IERRLog" class="hide"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 graph-container">
+            <div class="event-graph" id="log-count-graph">
+                <div>
+                    <canvas id="log-count-graph-canvas" ></canvas>
+                </div>
+            </div>
+            <div class="event-graph-title">
+                <h2><%=locale.eventlog_statistics%></h2>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <ul class="timeline" id="event-content">
+                <li>
+                    <i class="fa fa-clock-o animated fadeInDown"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_NOCLEAN %SPXINC/mdio
+        COPY_DIR ./ %SPXINC/mdio
+
+debug-install:

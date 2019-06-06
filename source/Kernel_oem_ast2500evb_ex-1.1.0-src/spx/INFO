@@ -18,7 +18,7 @@ Description : AST2500 OEM Patches to Kernel 3
 #---------------------------------------------------------------------------
 # Binary Packages follows
 # Binary package takes the following fields from source pacakage:
-# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
 # Architecture,SOC,BOARD,OEM,Urgency
 # Provides,Depends,Required ?
 # ---------------------------------------------------------------------------

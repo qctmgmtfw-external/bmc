@@ -1,0 +1,41 @@
+
+<section class="content-header">
+    <h1>
+        <%=locale.postcode%>
+        <small> <%=locale.bios_postcode%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%=locale.home%></a></li>
+        <li class="active">
+            <%=locale.postcode%>
+        </li>
+    </ol>
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div role="alert" class="alert alert-info help-item hide"><%= locale.page_desc %></div>
+    <div class="col-md-4">
+
+    <div class="box box-info animated fadeInUp" style="width:700px">
+        <div class="box-header">
+            <h3 class="box-title"><%=locale.postcode%></h3>
+        </div>
+
+        <div class="box-body">
+            <table cellspacing="0" cellpadding="6" border="0" width="700">
+        	<tr>
+        		<td valign="top"><h4><td><%=locale.current_code%></h4></td></td>
+        		<td><textarea rows="16" cols="48" id="currCode" readonly></textarea></td>
+        	</tr>
+        	<tr>
+        		<td valign="top"><h4><td><%=locale.previous_code%></td></h4></td>
+        		<td><textarea rows="8" cols="48" id="prevCode" readonly></textarea></td>
+        	</tr>
+        	</table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

@@ -1,0 +1,154 @@
+Package: sys_ip6tables (3.4.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: data/.keep, spx/PACKAGES.D/sys_ip6tables/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:24:55 EST
+
+Package: sys_ip6tables (3.3.0); urgency = low
+
+Abstract:
+	Added extra files and fixes for future target migrations and strict compilers
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 23 Jul 2015 14:33:45 EDT
+
+Package: sys_ip6tables (3.2.0); urgency = medium
+
+Abstract:
+	Correction in License files
+
+Files Added: spx/LICENSES/LICENSE.AMI
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+
+--Submitter: Winston (winstont@ami.com) Tue, 31 Mar 2015 19:00:14 GMT
+
+Package: sys_ip6tables (3.1.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:31:00 GMT
+
+Package: sys_ip6tables (3.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:36:24 GMT
+
+Package: sys_ip6tables (2.8.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:01:45 GMT
+
+Package: sys_ip6tables (2.7.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:13:48 GMT
+
+Package: sys_ip6tables (2.6.0); urgency = medium
+
+Abstract:
+	Compiler/Linker errors fixed
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 25 Sep 2013 10:54:51 EDT
+
+Package: sys_ip6tables (2.5.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:11:55 EDT
+
+Package: sys_ip6tables (2.4.0); urgency = medium
+
+Abstract:
+	Removing the unwanted library file
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Mon, 16 Jul 2012 18:04:02 IST
+
+Package: sys_ip6tables (2.3.0); urgency = medium
+
+Abstract:
+	Added new Library links for libip6tc.so.0.0.0 for Firewall
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: santhoshkumarr (santhoshkumarr@amiindia.co.in) Mon, 16 Jul 2012 16:38:57 IST
+
+Package: sys_ip6tables (2.2.0); urgency = low
+
+Abstract:
+	Versions of library is not hard coded. The correct version of library is taken by travesing from <library>.so file
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 20 Jun 2012 14:46:38 EDT
+
+Package: sys_ip6tables (2.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:40:56 EDT
+
+Package: sys_ip6tables (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:53:37 EST
+
+Package: sys_ip6tables (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:17:03 EDT
+
+Package: sys_ip6tables (1.0.1); urgency = low
+
+Abstract:
+	Dependecies Resolved
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 27 Aug 2010 15:37:29 EDT
+
+Package: sys_ip6tables (1.0.0); urgency = new
+
+Abstract:
+	Package provides support to ip6tables which is used for IPv6 firewll configuration.
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/sys_ip6tables, spx/PACKAGES.D/sys_ip6tables/DATA, spx/PACKAGES.D/sys_ip6tables/SCRIPTS, spx/PACKAGES.D/sys_ip6tables/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/CreateTree, spx/RULES.D/device.lst, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 26 Aug 2010 17:39:54 IST
+

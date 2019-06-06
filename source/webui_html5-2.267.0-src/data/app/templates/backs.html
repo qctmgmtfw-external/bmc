@@ -1,0 +1,194 @@
+<!-- Map box -->
+                            <div class="box box-primary">
+                                <div class="box-header">
+                                    <!-- tools box -->
+                                    <div class="pull-right box-tools">                                        
+                                        <button class="btn btn-primary btn-sm daterange pull-right" data-toggle="tooltip" title="Date range"><i class="fa fa-calendar"></i></button>
+                                        <button class="btn btn-primary btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+                                    </div><!-- /. tools -->
+
+                                    <i class="fa fa-map-marker"></i>
+                                    <h3 class="box-title">
+                                        Visitors
+                                    </h3>
+                                </div>
+                                <div class="box-body no-padding">
+                                    <div id="world-map" style="height: 300px;"></div>
+                                    <div class="table-responsive">
+                                        <!-- .table - Uses sparkline charts-->
+                                        <table class="table table-striped">
+                                            <tr>
+                                                <th>Country</th>
+                                                <th>Visitors</th>
+                                                <th>Online</th>
+                                                <th>Page Views</th>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">USA</a></td>
+                                                <td><div id="sparkline-1"></div></td>
+                                                <td>209</td>
+                                                <td>239</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">India</a></td>
+                                                <td><div id="sparkline-2"></div></td>
+                                                <td>131</td>
+                                                <td>958</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Britain</a></td>
+                                                <td><div id="sparkline-3"></div></td>
+                                                <td>19</td>
+                                                <td>417</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Brazil</a></td>
+                                                <td><div id="sparkline-4"></div></td>
+                                                <td>109</td>
+                                                <td>476</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">China</a></td>
+                                                <td><div id="sparkline-5"></div></td>
+                                                <td>192</td>
+                                                <td>437</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="#">Australia</a></td>
+                                                <td><div id="sparkline-6"></div></td>
+                                                <td>1709</td>
+                                                <td>947</td>
+                                            </tr>
+                                        </table><!-- /.table -->
+                                    </div>
+                                </div><!-- /.box-body-->
+                                <div class="box-footer">
+                                    <button class="btn btn-info"><i class="fa fa-download"></i> Generate PDF</button>
+                                    <button class="btn btn-warning"><i class="fa fa-bug"></i> Report Bug</button>
+                                </div>
+                            </div>
+                            <!-- /.box -->
+                            <script>
+                            /*//jvectormap data
+            var visitorsData = {
+                "US": 398, //USA
+                "SA": 400, //Saudi Arabia
+                "CA": 1000, //Canada
+                "DE": 500, //Germany
+                "FR": 760, //France
+                "CN": 300, //China
+                "AU": 700, //Australia
+                "BR": 600, //Brazil
+                "IN": 800, //India
+                "GB": 320, //Great Britain
+                "RU": 3000 //Russia
+            };
+            //World map by jvectormap
+            $('#world-map').vectorMap({
+                map: 'world_mill_en',
+                backgroundColor: "#fff",
+                regionStyle: {
+                    initial: {
+                        fill: '#e4e4e4',
+                        "fill-opacity": 1,
+                        stroke: 'none',
+                        "stroke-width": 0,
+                        "stroke-opacity": 1
+                    }
+                },
+                series: {
+                    regions: [{
+                            values: visitorsData,
+                            scale: ["#3c8dbc", "#2D79A6"], //['#3E5E6B', '#A6BAC2'],
+                            normalizeFunction: 'polynomial'
+                        }]
+                },
+                onRegionLabelShow: function(e, el, code) {
+                    if (typeof visitorsData[code] != "undefined")
+                        el.html(el.html() + ': ' + visitorsData[code] + ' new visitors');
+                }
+            });*/
+                            </script>
+
+
+                            <div class="col-sm-5">
+                                            <div class="pad">
+                                                <!-- Progress bars -->
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Temperature Sensors</span>
+                                                    <small class="pull-right">55%</small>
+                                                </div>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-red" style="width: 55%;"></div>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Fan Sensors</span>
+                                                    <small class="pull-right">10%</small>
+                                                </div>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-yellow" style="width: 10%;"></div>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <span class="pull-left">Chassis Intrusion</span>
+                                                    <small class="pull-right">1%</small>
+                                                </div>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-aqua" style="width: 1%;"></div>
+                                                </div>
+
+                                                <div class="clearfix">
+                                                    <span class="pull-left">PowerSupply Sensors</span>
+                                                    <small class="pull-right">1%</small>
+                                                </div>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-green" style="width: 1%;"></div>
+                                                </div>
+                                                <!-- Buttons -->
+                                                <!-- <p>
+                                                    <button class="btn btn-default btn-sm"><i class="fa fa-cloud-download"></i> Generate PDF</button>
+                                                </p> -->
+                                            </div><!-- /.pad -->
+                                        </div><!-- /.col -->
+
+                                        <script>
+                                        var bar = new Morris.Bar({
+                        element: 'bar-chart',
+                        resize: false,
+                        data: [{
+                            y: '2006',
+                            a: 100,
+                            b: 90
+                        }, {
+                            y: '2007',
+                            a: 75,
+                            b: 65
+                        }, {
+                            y: '2008',
+                            a: 50,
+                            b: 40
+                        }, {
+                            y: '2009',
+                            a: 75,
+                            b: 65
+                        }, {
+                            y: '2010',
+                            a: 50,
+                            b: 40
+                        }, {
+                            y: '2011',
+                            a: 75,
+                            b: 65
+                        }, {
+                            y: '2012',
+                            a: 100,
+                            b: 90
+                        }],
+                        barColors: ['#00a65a', '#f56954'],
+                        xkey: 'y',
+                        ykeys: ['a', 'b'],
+                        labels: ['CPU', 'DISK'],
+                        hideHover: 'auto'
+                    });
+                                        </script>

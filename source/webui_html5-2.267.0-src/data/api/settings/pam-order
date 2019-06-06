@@ -1,0 +1,8 @@
+[
+
+	{ "id" :  1, "pam_position" : 2, "pam_module_name" : "LDAP"},
+ 	{ "id" :  2, "pam_position" : 1, "pam_module_name" : "IPMI"},
+ 	{ "id" :  3, "pam_position" : 3, "pam_module_name" : "Active Directory"},
+ 	{ "id" :  4, "pam_position" : 4, "pam_module_name" : "RADIUS"}
+ 
+]

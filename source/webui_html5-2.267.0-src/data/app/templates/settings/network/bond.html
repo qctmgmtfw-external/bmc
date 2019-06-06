@@ -1,0 +1,65 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/network"><%= locale.network %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"><%= locale.bond %></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger hide">
+                <!-- <i class="fa fa-ban"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <div class="client-validation " id='Validationerror'>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                <div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.bondcheck_this_option_to_enable_network_bonding_for_network_interfaces_strongnotestrong_if_vlan_is_enabled_for_slave_interfaces_then_bonding_cannot_be_enabled_vlan_can_be_disabled_under_configuration_network_vlan %></div>
+    <label>
+        <input type="checkbox" value="1" id="idbond_enable" > <%= locale.bondenable_bonding %>
+    </label>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.bondh4auto_configurationh4_enable_this_option_to_configure_the_interfaces_automatically_strongnotestrong_if_auto_configuration_is_disabled_then_interfaces_in_services_can_be_configured_via_ipmi_command_if_auto_configuration_is_enabled_then_all_the_services_will_be_restarted_automatically %></div>
+    <label>
+        <input type="checkbox" value="1" id="idauto_configuration_enable" > <%= locale.bondauto_configuration %>
+    </label>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.bondthis_page_is_used_to_configure_the_network_bonding_for_the_network_interfaces_this_is_enabled_by_default_strongnotestrong_minimum_of_2_network_interfaces_are_required_in_order_to_enable_network_bonding_for_the_device %></div>
+    <label for="bond_ifc"><%= locale.bondbond_interface %></label>
+    <select name="bond_ifc" id="idbond_ifc" class="form-control">
+    	<option value='eth0'><%= locale.bondeth0 %></option><option value='eth1'><%= locale.bondeth1 %></option>
+    </select>
+</div><div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.bondthis_field_displays_the_network_bonding_mode_strongnotestrong_this_field_is_not_configurable %></div>
+    <label for="bond_mode"><%= locale.bondbond_mode %></label>
+    <div class="form-control-static" id="idbond_mode"></div>
+</div><div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

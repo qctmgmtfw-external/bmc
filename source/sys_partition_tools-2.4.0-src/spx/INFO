@@ -1,0 +1,23 @@
+Source                   	:	sys_partition_tools
+Version : 2.4.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	SPX Core Team  (spcoreteam@ami.com)
+License                  	:	AMI
+Source-Location          	:	Debian
+Source-Version           	:	1.0.0
+Builds                   	:	sys_partition_tools
+Build-Depends            	:	Target
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	System package to select media partition tools.
+.
+
+Package                  	:	sys_partition_tools
+Section                  	:	sys
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	System package to select media partition tools.
+.
+

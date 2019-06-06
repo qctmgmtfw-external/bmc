@@ -1,0 +1,32 @@
+Source : libipmiuds
+Version : 3.9.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Suresh V (sureshv@amiindia.co.in)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : libipmiuds
+Build-Depends : Crosscc, ipmi_dev, global_dev, rules, libdbgout_dev, libnetwork_dev, libipmi_dev, ipmipdk_dev, libencryption_dev, libblowfish_dev
+Architecture : ALL
+Urgency : medium
+Description : This Package contains the source for unix domain socket for internal communication with IPMI Stack.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libipmiuds
+Section : lib
+Group : IPMI
+Essential : NO
+Required : libencryption
+Description : IPMI UDS Library binaries
+.
+

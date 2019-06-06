@@ -1,0 +1,181 @@
+Package: libencoding (2.3.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/libencoding/DATA/.keep, spx/PACKAGES.D/libencoding_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 21:02:10 EST
+
+Package: libencoding (2.2.0); urgency = high
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/Encode.c, data/Encode.h, spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Thu, 08 Jan 2015 12:29:45 IST
+
+Package: libencoding (2.1.0); urgency = medium
+
+Abstract:
+	Correction for GROUP, Source-Location and Source-Version fields
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Thu, 23 Oct 2014 22:54:06 GMT
+
+Package: libencoding (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:38:04 GMT
+
+Package: libencoding (1.14.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 10:21:21 HMT
+
+Package: libencoding (1.13.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 06:19:15 GMT
+
+Package: libencoding (1.12.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:30:27 GMT
+
+Package: libencoding (1.11.0); urgency = medium
+
+Abstract:
+	- Encrypted password may contain first character as '\0'(null terminator character), So Removed null terminator character check.
+
+--This lien, and those below, will be ignored--
+M	data/Encode.c
+
+Files Modified: data/Encode.c
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Thu, 18 Sep 2014 19:21:59 HMT
+
+Package: libencoding (1.10.0); urgency = low
+
+Abstract:
+	Changed the license from BSD to BSD.CyoEncoding
+
+Files Added: spx/LICENSES/LICENSE.BSD.CyoEncoding
+Files Deleted: spx/LICENSES/LICENSE.BSD
+Files Modified: spx/INFO
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Fri, 09 May 2014 15:30:29 HMT
+
+Package: libencoding (1.9.0); urgency = low
+
+Abstract:
+	Replaced base32 with BSD implementation
+
+Files Modified: data/CyoDecode.c, data/CyoDecode.h, data/CyoEncode.c, data/CyoEncode.h, data/Encode.c, data/Encode.h, spx/INFO
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Thu, 17 Apr 2014 20:47:48 HMT
+
+Package: libencoding (1.8.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 00:50:27 EDT
+
+Package: libencoding (1.7.0); urgency = low
+
+Abstract:
+	added/deleted some condition checking
+
+Files Modified: data/Encode.c
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Wed, 04 Sep 2013 18:48:47 MMT
+
+Package: libencoding (1.6.0); urgency = low
+
+Abstract:
+	reverted base32 algorithm
+
+Files Modified: data/CyoDecode.c, data/CyoDecode.h, data/CyoEncode.c, data/CyoEncode.h, data/Encode.c, data/Encode.h
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Tue, 03 Sep 2013 22:56:56 MMT
+
+Package: libencoding (1.5.0); urgency = medium
+
+Abstract:
+	Adding new function cyoBase32EncodeGetLength.
+
+Files Modified: data/CyoEncode.c, data/CyoEncode.h
+
+--Submitter: Winston (winstont@ami.com) Mon, 02 Sep 2013 22:30:31 EDT
+
+Package: libencoding (1.4.0); urgency = low
+
+Abstract:
+	Changed the implementation of Base32 and Base64 algorithm with BSD licensed implementation
+
+Files Added: data/CyoDecode.c, data/CyoDecode.h, data/CyoEncode.c, data/CyoEncode.h, data/Encode.c, data/Encode.h, spx/LICENSES/LICENSE.BSD
+Files Deleted: data/base32.c, data/base32.h, data/base64.c, data/base64.h, spx/LICENSES/LICENSE.GPL-V2
+Files Modified: data/Makefile, spx/INFO, spx/PACKAGES.D/libencoding_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Fri, 30 Aug 2013 20:25:18 MMT
+
+Package: libencoding (1.3.0); urgency = low
+
+Abstract:
+	added wrapper function for Base64 algorithm
+
+Files Modified: data/base64.c, data/base64.h
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Fri, 02 Aug 2013 15:30:49 MMT
+
+Package: libencoding (1.2.0); urgency = low
+
+Abstract:
+	Added updated version of open soure file in libencoding and changed license to GPL-V2.
+
+Files Added: data/base32.c, data/base32.h, data/base64.c, data/base64.h, spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: data/WS_base32.c, data/WS_base32.h, data/WS_base64.c, data/WS_base64.h, spx/LICENSES/LICENSE.OPENSOURCE
+Files Modified: data/Makefile, spx/INFO, spx/PACKAGES.D/libencoding_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Thu, 25 Jul 2013 11:49:49 HMT
+
+Package: libencoding (1.1.0); urgency = low
+
+Abstract:
+	Added OEM commands for license uploading
+
+Files Added: data/WS_base32.c, data/WS_base32.h
+Files Modified: data/Makefile, spx/PACKAGES.D/libencoding_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: patra (poulabipatra@amiindia.co.in) Thu, 28 Feb 2013 11:34:50 GMT
+
+Package: libencoding (1.0.0); urgency = new
+
+Abstract:
+	Containes the encoding and decoding functions
+
+Files Added: data, data/Makefile, data/WS_base64.c, data/WS_base64.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.OPENSOURCE, spx/PACKAGES.D, spx/PACKAGES.D/libencoding, spx/PACKAGES.D/libencoding/DATA, spx/PACKAGES.D/libencoding/SCRIPTS, spx/PACKAGES.D/libencoding/SCRIPTS/dev-install, spx/PACKAGES.D/libencoding_dev, spx/PACKAGES.D/libencoding_dev/DATA, spx/PACKAGES.D/libencoding_dev/SCRIPTS, spx/PACKAGES.D/libencoding_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: ravisastrys (ravisastrys@amiindia.co.in) Fri, 25 May 2012 11:50:55 IST
+

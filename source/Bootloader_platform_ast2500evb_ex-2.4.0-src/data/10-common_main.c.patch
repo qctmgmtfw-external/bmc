@@ -1,0 +1,60 @@
+--- uboot/common/main.c	2016-10-26 20:12:32.150971571 +0800
++++ uboot/common/main.c.new	2016-10-26 20:14:39.598972938 +0800
+@@ -352,6 +352,7 @@
+ #endif
+ 	char *s;
+ 	int bootdelay;
++	ulong wdt30;  // Quanta
+ #ifdef CONFIG_BOOTCOUNT_LIMIT
+ 	unsigned long bootcount = 0;
+ 	unsigned long bootlimit = 0;
+@@ -422,8 +423,37 @@
+ #else
+ 	printf("DRAM ECC disabled\n");
+ #endif
++	// Quanta ---
++	wdt30 = *((volatile u_long *) 0x1e785030);
++	if (!(wdt30 & 0x02)) {
++		printf("Boot Source: Default\n");
++		*((volatile ulong *)0x1e785024) = 0x07270e00;  // change timeout to 120 seconds
++		*((volatile ulong *)0x1e785028) = 0x00004755;
++	}
++	else {
++		printf("Boot Source: Alternate\n");
++		*((volatile ulong *)0x1e78502c) &= 0xfffffffe;
++	}
++	// --- Quanta
+ 
+ 	if (bootdelay != -1 && s && !abortboot(bootdelay)) {
++		// Quanta ---
++		if (wdt30 & 0x02) {
++			printf("\n######## BMC Firmware Recovery ########\n");
++			printf("Copy image from alternate flash to memory (82000000h) ...\n");
++			run_command("cp.b 20000000 82000000 4000000", 0);
++
++			printf("Clear 2nd boot mode register ...\n");
++			*((volatile ulong *)0x1e785034) = 0x00000001;
++
++			printf("Copy image from memory (82000000h) to main flash ...\n");
++			run_command("protect off bank 1", 0);
++			run_command("erase bank 1", 0);
++			run_command("cp.b 82000000 20000000 4000000", 0);
++			run_command("reset", 0);
++		}
++		// --- Quanta
++
+ #ifdef CONFIG_AUTOBOOT_KEYED
+ 		int prev = disable_ctrlc(1);	/* disable Control C checking */
+ #endif
+@@ -434,6 +464,11 @@
+ 		disable_ctrlc(prev);	/* restore Control C checking */
+ #endif
+ 	}
++	// Quanta ---
++	else {
++		*((volatile ulong *)0x1e78502c) &= 0xfffffffe;
++	}
++	// --- Quanta
+ 
+ #ifdef CONFIG_MENUKEY
+ 	if (menukey == CONFIG_MENUKEY) {

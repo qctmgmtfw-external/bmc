@@ -1,0 +1,464 @@
+<!-- Content Header (Page header) -->
+<!--<section class="content-header">
+	<h1>
+		 <%=locale.remote_control%>
+		<small> <%=locale.power_controlkvm%></small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a href="#"><i class="fa fa-home"></i><%=locale.home%></a>
+		</li>
+		<li class="active">
+			 <%=locale.remote_control%>
+		</li>
+	</ol>
+</section>-->
+
+<div id="master_dialog" style="position: absolute; z-index: 10000;left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close_master">×</button>
+				<h4 class="modal-title"><%=locale.slave_permission%></h4>
+			</div>
+			<div class="modal-body">
+				<p id="master_dialog_body"></p>
+				<p><%=locale.you_have%><span id="master_time_left">30</span><%=locale.more_seconds%></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="full_permission"><%=locale.full_permission%></button>
+				<button type="button" class="btn btn-primary" id="part_permission"><%=locale.part_permission%></button>
+				<button type="button" class="btn btn-primary" id="block_priv_request_opt"><%=locale.block_priv_request%></button>
+				<button type="button" class="btn btn-primary" id="no_permission"><%=locale.no_permission%></button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<div id="slave_dialog" style="position: absolute; z-index: 10000;left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close_slave">×</button>
+				<h4 class="modal-title"><%=locale.permission_requested%></h4>
+			</div>
+			<div class="modal-body">
+				<p id="slave_dialog_body"></p>
+				<p><%=locale.master_has%><span id="slave_time_left">30</span><%=locale.more_seconds%></p>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<div id="status_dialog" style="position: absolute; z-index: 10000;left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close_status">×</button>
+				<h4 class="modal-title"><%=locale.status%></h4>
+			</div>
+			<div class="modal-body">
+				<p id="status_body"></p>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<div id="switch_master_dialog" style="position: absolute; z-index: 10000;left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close_master_switch">×</button>
+				<h4 class="modal-title"><%=locale.switch_master%></h4>
+			</div>
+			<div class="modal-body">
+				<p><%=locale.switch_master_body%></p>
+				<p id="switch_master_options"></p>
+				<br>
+				<!-- The value for the countdown is set during runtime using SWITCH_MASTER_DIALOG_COUNTDOWN -->
+				<p><%=locale.you_have%><span id="switch_master_time_left"></span><%=locale.more_seconds%></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="switch_master"><%=locale.grant_permission%></button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+<div id="video_rec_setting_dialog" style="position: absolute; z-index: 10000;left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close_settings">×</button>
+				<h4 class="modal-title"><%=locale.video_rec_setting%></h4>
+			</div>
+			<div class="modal-body">
+				<p id="settings_dialog_body"></p>
+				<p><%=locale.video_length%>	  
+					<span id="video_rec_length">&nbsp;
+					<input id='video_rec_length_box' type="text" name='video_len' autofocus="autofocus" autocorrect="off" autocapitalize="off" autocomplete="off"/>
+					</span>&nbsp;<%=locale.seconds%>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<p><%=locale.record_duration_range%></p>
+				<button type="button" class="btn btn-primary" id="video_settings_ok"><%=locale.settings_ok%></button>
+				<button type="button" class="btn btn-primary" id="close_settings"><%=locale.settings_cancel%></button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+<!-- Keyboard Layout Dialog -->
+<div id="kbd_layout_dialog" style="position: absolute; z-index: 10000;left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title"><%=locale.kbd_header%></h4>
+			</div>
+			<div class="modal-body">
+				<p id="kbd_layout_dialog_body"><%=locale.kbd_permission%></p>
+				<p><%=locale.you_have%><span id="kbd_time_left">5</span><%=locale.more_seconds%></p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="kbd_permission_yes"><%=locale.yes%></button>
+				<button type="button" class="btn btn-primary" id="kbd_permission_no"><%=locale.no%></button>
+			</div>
+		</div>
+	</div>
+</div><!-- End of Keyboard Layout Dialog -->
+
+<!-- User Defined Macros Dialog -->
+<div id="usr_macros_dialog" style="position: absolute; z-index: 10000;left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="usr_macro_close">&times;</button>
+				<h4 class="modal-title"><%=locale.usr_macro%></h4>
+			</div>
+			<div class="modal-body">
+				<div class="list-group" id="usr_macros_list" style="height:auto; max-height:200px; overflow-x:hidden;"></div>
+			</div>
+			<div class="modal-footer">
+				<!-- Error message to be shown when maximum macro limit is reached -->
+				<div id="err_MaxMacroLimit" hidden>
+					<p><i class="fa fa-exclamation-circle"></i><span>&nbsp;<%=locale.err_MaxMacroLimit%></span></p>
+				</div>
+				<button type="button" class="btn btn-primary" id="usr_macro_add"><%=locale.add%></button>
+				<!-- If data-dismiss="modal" attribute is missed, then backdrop won't appear properly during next invocation -->
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="usr_macro_close"><%=locale.close%></button>
+			</div>
+		</div>
+	</div>
+</div><!-- End of User Defined Macros Dialog -->
+
+<!-- Add Macro Dialog -->
+<div id="macro_dialog" style="position: absolute; z-index: 10000;left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="macro_close">&times;</button>
+				<h4 class="modal-title"><%=locale.add_macro%></h4>
+			</div>
+			<div class="modal-body">
+				<p id="macro_dialog_body">
+					<%=locale.add_macro1%>
+					<br><br>
+					<button type="button" class="btn btn-default" id="macro_win">
+						<i class="fa fa-windows"></i>&nbsp;Windows
+					</button>
+					<button type="button" class="btn btn-default" id="macro_altf4">Alt + F4</button>
+					<button type="button" class="btn btn-default" id="macro_printscr">Print Screen</button>
+					<br><br>
+					<!-- Don't want editable input box -->
+					<input type="text" class="form-control" id="macro_dialog_input" readonly>
+				</p>
+				<!-- Error message to be shown when single macro limit is reached -->
+				<div id="err_SingleMacroLimit" hidden>
+					<p><i class="fa fa-exclamation-circle"></i><span>&nbsp;<%=locale.err_SingleMacroLimit%></span></p>
+				</div>
+				<!-- Error message to be shown when duplicate entry is detected -->
+				<div id="err_DuplicateMacro" hidden>
+					<p><i class="fa fa-exclamation-circle"></i><span>&nbsp;<%=locale.err_DuplicateMacro%></span></p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="macro_clr"><%=locale.clr%></button>
+				<button type="button" class="btn btn-primary" id="macro_clrAll"><%=locale.clrAll%></button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="macro_close"><%=locale.insert%></button>
+			</div>
+		</div>
+	</div>
+</div><!-- End of Add Macro Dialog -->
+
+<!-- About H5Viewer Dialog -->
+<div id="help_dialog" style="position: absolute; z-index: 10000; top: 66%; left: 33%;" hidden>
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" aria-hidden="true" id="close_help">×</button>
+				<h4 class="modal-title" id="help_title"></h4>
+			</div>
+			<div class="modal-body" id="help_body"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" id="close_help"><%=locale.close%></button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+<!-- End of About H5Viewer Dialog -->
+
+<!-- Main content -->
+<section>
+<div class="alert alert-success hide"><b></b> </div>
+<div class="alert alert-danger hide"><b></b></div>
+<!-- 
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<div class="input-group" id="filter">
+						<input type="text" class="form-control" placeholder=" <%=locale.search_settings%>" />
+						<span class="input-group-addon">
+							<span class="glyphicon-search glyphicon"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="animated fadeInRight delay-0 box box-primary">
+		<div class="toolbar">
+			<div class="">
+				<!-- <span class="pull-right right-align dropdown"> -->
+					<!-- <button class="btn btn-default btn-xs dropdown-toggle" type="button" id="dropdownRemoteSettings" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;"> -->
+						<!-- <i class="fa fa-cog"></i> <%=locale.settings%> -->
+						<!-- <!-- <i class="fa fa-caret-down"></i> -->
+						<!-- <span class="caret"></span> -->
+					<!-- </button> -->
+					<!-- <ul class="dropdown-menu" aria-labelledby="dropdownRemoteSettings"> -->
+						<!-- <li class="dropdown-header" id="kbd_layout_hdr"><%=locale.kbd_layout_hdr%></li> -->
+						<!-- <li><a class="kbd-layout" id="kbd_layout_eng" href="#"><%=locale.kbd_layout_eng%><i id="kl-select" class="fa fa-check"></i></a></li> -->
+						<!-- <li><a class="kbd-layout" id="kbd_layout_ger" href="#"><%=locale.kbd_layout_ger%></a></li> -->
+						<!-- <li hidden><a class="kbd-layout" id="kbd_layout_jap" href="#"><%=locale.kbd_layout_jap%></a></li> -->
+						<!-- <li role="separator" class="divider"></li> -->
+						
+						<!-- <li class="dropdown-header">Power Options</li> -->
+						<!-- <li><a class="power-toggle" id="power_on" data-power="on" href="#">Power On</a></li> -->
+						<!-- <li><a class="power-cycle" id="power_cycle" href="#">Power Cycle</a></li> -->
+						<!-- <li><a class="power-reset" id="power_reset" href="#">Power Reset</a></li> -->
+						<!-- <li role="separator" class="divider"></li> -->
+					<!-- </ul> -->
+				<!-- </span> -->
+				
+				<span class="pull-right right-align" id="media_redirection" hidden>
+					<i class="ion ion-disc"></i><%=locale.cd_image%>: 
+					<div style="display: inline;position: relative;background:transparent;">
+					<a href="javascript:void(0);" id="browse" class="btn btn-default btn-xs">Browse File</a> 
+					<input type="file" id="files" name="files[]" accept=".nrg,.iso,.ISO,.NRG" style="display:none;" />
+					</div>
+					(<span id="sentcount">0</span> KB)
+					&nbsp;&nbsp;
+					<a href="#" id="media"	class="btn btn-info btn-xs" disabled="disabled"><%=locale.start_media_redirection%></a>
+				</span>
+				</span>
+				<span class="col-md-4">
+					<i class="fa fa-lock"></i>	&nbsp; &nbsp;
+					<a href="javascript://" id="toggle" class="btn btn-primary btn-xs"><%=locale.start_kvm%></a>
+				</span> 	  
+				<span id="status"></span>	  
+				<p id ="record_progress"></p>
+			</div>
+
+		</div>
+		<div class="">
+			<div class="remote-view">
+				<!-- <input type="text" id="ip" placeholder="IP Address" value=""/> -->
+				<!-- <button id="css" style="display:none;">Show some CSS Magic!</button> -->
+				
+				<!-- <span><i class="ion ion-disc"></i> <%=locale.cd_image%>:--> 
+				<div style="margin-top: 15px; clear: left; border-top: 1px dashed #ccc; padding-top: 5px;">
+				<div style="display: inline-block;">
+				<!-- <button class="btn btn-default btn-xs" id='record' style="display:none;"><%=locale.record%></button>  -->
+				<!-- <button class="btn btn-default btn-xs" id='stop' disabled style="display:none;"><%=locale.stop%></button>  -->
+				</div>
+				<div style="display: inline-block; padding-left: 20px;">
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_video_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.video%>
+						<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="button_video_menu">
+							<li><a href="#" id="pause_video"><%=locale.pause_video%></a></li>
+							<li><a href="#" id="resume_video"><%=locale.resume_video%></a></li>
+							<li><a href="#" id="refresh_video"><%=locale.refresh_video%></a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header"><%=locale.host_display%></li>
+							<li><a href="#" id="hd_turn_on"><%=locale.hdisplay_on%></a></li>
+							<li><a href="#" id="hd_turn_off"><%=locale.hdisplay_off%></a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#" id="capture_screen"><%=locale.capture_screen%></a></li>
+							<li role="separator" class="divider"></li>
+						</ul>
+					</span>
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_mouse_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.mouse%>
+						<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="button_mouse_menu">
+							<li><a href="#" id="show_cli_cursor" ><%=locale.show_cli_cursor%>&nbsp;&nbsp;<i class="fa fa-check"></i></a></li>
+							<!--<li><a href="#" id="show_host_cursor" disabled="disabled"><%=locale.show_host_cursor%>&nbsp;&nbsp;</a></li> -->
+							<li role="separator" class="divider mouse-mode"></li>
+							<li class="dropdown-header mouse-mode"><%=locale.mouse_mode%></li>
+							<li><a href="#" class="mouse-mode" id="absolute_mm"><%=locale.absolute_mm%>&nbsp;&nbsp;</a></li>
+							<li><a href="#" class="mouse-mode" id="relative_mm"><%=locale.relative_mm%>&nbsp;&nbsp;</a></li>
+							<li><a href="#" class="mouse-mode" id="other_mm"><%=locale.other_mm%>&nbsp;&nbsp;</a></li>
+						</ul>
+					</span>
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_options_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.options%>
+						<span class="caret"></span>
+						</button>
+						<ul id="id_option_menu" class="dropdown-menu" aria-labelledby="button_options_menu">
+							<!--<li class="dropdown-header"><%=locale.zoom%></li>
+							<li><a href="#" id="zoom_in"><%=locale.zoom_in%></a></li>
+							<li><a href="#" id="zoom_out"><%=locale.zoom_out%></a></li>
+							<li role="separator" class="divider"></li> -->
+							<li><a href="#" id="block_priv_request"><%=locale.block_priv_request%>&nbsp;&nbsp;</a></li>
+							<li hidden><a href="#" id="kbd_mouse_encryption"><%=locale.kbd_mouse_encryption%>&nbsp;&nbsp;</a></li>					
+						</ul>
+					</span>
+					<button id='kbd' class="btn btn-default btn-xs" data-show='0'><%=locale.show_kbd%></button>
+					<!-- <button class="btn btn-default btn-xs" id='cad' data-show='0'>Ctrl+Alt+Del</button> -->
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_keyboard_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.keyboard%>
+						<span class="caret"></span>
+						</button>
+						<ul id="id_keyboard_menu" class="dropdown-menu" aria-labelledby="button_keyboard_menu">
+						<li class="dropdown-header"><%=locale.key_layout%></li>
+						<li><a class="kbd-layout" id="kbd_layout_eng" href="#"><%=locale.kbd_layout_eng%><i id="kl-select" class="fa fa-check"></i></a></li>
+						<li><a class="kbd-layout" id="kbd_layout_ger" href="#"><%=locale.kbd_layout_ger%></a></li> 
+						</ul>
+					</span>
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs dropdown-toggle" type="button" id="button_send_keys" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.send_keys%>
+							<!-- <i class="fa fa-caret-down"></i> -->
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="button_send_keys">							 
+							<li class="dropdown-header"><%=locale.hold_down%></li>
+							<li><a href="#" id="r_ctrl"><%=locale.r_ctrl%></a></li>
+							<li><a href="#" id="r_alt"><%=locale.r_alt%></a></li>
+							<li><a href="#" id="r_win_hold"><%=locale.r_win%></a></li>
+							<li><a href="#" id="l_ctrl"><%=locale.l_ctrl%></a></li>
+							<li><a href="#" id="l_alt"><%=locale.l_alt%></a></li>
+							<li><a href="#" id="l_win_hold"><%=locale.l_win%></a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header"><%=locale.press_release%></li>
+							<li><a href="#" id='cad'>Ctrl+Alt+Del</a></li>
+							<li><a href="#" id="l_win_press"><%=locale.l_win%></a></li>
+							<li><a href="#" id="r_win_press"><%=locale.r_win%></a></li>
+							<li><a href="#" id="context"><%=locale.context_key%></a></li>
+							<li><a href="#" id="prtscn"><%=locale.prtscn%></a></li>
+						</ul>
+					</span>
+					<!-- HotKeys Menu -->
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_HotKeys" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.hotkeys%>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="button_HotKeys" id="usr_macros_menu">
+							<li><a href="#" id="addHotKey"><%=locale.add%>&nbsp;<%=locale.hotkeys%></a></li>
+						</ul>
+					</span>
+					<!-- End of HotKeys Menu -->
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_video_recording" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.videorecording%>
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu record" aria-labelledby="button_video_recording" id="video-record">
+							<li><a href="#" id="record"><%=locale.record%></a></li>
+							<li><a class="disable_a_href" href="#" id="stop"><%=locale.stop%></a></li>
+							<li><a href="#" id="video_rec_setting"><%=locale.video_rec_setting%></a></li>
+						</ul>
+					</span>
+
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_power_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.power%>
+						<span class="caret"></span></button>
+						<ul id="id_power_menu" class="dropdown-menu power" aria-labelledby="dropdownPower" >
+						<li><a href="#" id="power_reset"><%=locale.power_reset%></a></li>
+						<li><a href="#" id="power_off_immediate"><%=locale.power_off_immediate%></a></li>
+						<li><a href="#" id="power_off_orderly"><%=locale.power_off_orderly%></a></li>
+						<li><a href="#" id="power_on" ><%=locale.power_on%></a></li>
+						<li><a href="#" id="power_cycle" ><%=locale.power_cycle%></a></li>
+						</ul>
+					</span>
+
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_active_user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.activeuser%>
+						<span class="caret"></span></button>						
+						<ul class="dropdown-menu au" aria-labelledby="button_active_user" id="active-user">
+						</ul>
+					</span>
+
+					<!-- Help Menu -->
+					<span class="dropdown">
+						<button class="btn btn-default btn-xs" data-show-'0' type="button" id="button_help" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="display:none;">
+							<%=locale.help%>
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu" aria-labelledby="button_help">
+							<li><a href="#" id="about"><%=locale.about%></a></li>
+						</ul>
+					</span>
+					<!-- End of Help Menu -->
+
+				</div>
+					<span><button class='btn btn-success btn-xs' id='request_full' style="display: none"><%=locale.request_full%></button></span>
+                    <span>
+						<div style="display: inline-block; float:right;">
+						<span class="btn btn-success btn-xs" id='host_lock_btn' style="display: none"><i class="ion-monitor"></i></span>
+                    <div id="power_div" style="display: none; float:right; border-left:1px solid #DDDDDD;height:25px;margin-left:3px;padding-left:3px">
+
+                        <span class="btn btn-danger btn-xs" id="power_ctrl_btn" style="">
+									<i class="fa fa-power-off"></i>
+								</span>
+							</div>
+						</div>
+					</span>
+				</div>
+				<div id="log" style="color: white; display: none;"></div>
+				<div id="static_log" style="color: white; padding: 10px; display: none;"><%=locale.time%>: N/A</div>
+				<!-- <div><%=locale.media_packets_sent%> <span id="sentcount">0</span> KB</div>-->
+				<br/>
+				<input id='kvm_textbox' name='password' autocorrect="off" autocapitalize="off" autocomplete="off"/>
+				<div class="prespective" style="overflow-x: auto;">
+				<canvas id='kvm' width='800' height='600' oncontextmenu="return false;"></canvas>
+				</div>
+				<!-- <img src='images/windows.jpg' /> -->
+			</div>
+		</div>
+	</div> 
+	<div class="remote-view-bottom">
+		<div style="margin-top: 15px; clear: left; border-top: 1px dashed #ccc; padding-top: 5px;">
+            <div class="pull-right right-align" style="display: inline-block; padding-left: 20px; position: right;background:transparent;">
+            	<span class="btn btn-default btn-xs" id='l_win_hold_btn' style="display: none">LWIN</span>
+            	<span class="btn btn-default btn-xs" id='r_win_hold_btn' style="display: none">RWIN</span>
+                <button class="btn btn-default btn-xs" id="l_alt_btn" style="display: none;">LALT</button>
+				<button class="btn btn-default btn-xs" id="l_ctrl_btn" style="display: none;">LCTRL</button>
+				<button class="btn btn-default btn-xs" id="r_alt_btn" style="display: none;">RALT</button>
+                <button class="btn btn-default btn-xs" id="r_ctrl_btn" style="display: none;">RCTRL</button>
+				<span class="btn btn-default btn-xs" id='num_lock' style="display: none">NUM</span>
+				<span class="btn btn-default btn-xs" id='caps_lock' style="display: none">CAPS</span>
+				<span class="btn btn-default btn-xs" id='scr_lock' style="display: none">SCR</span>
+            </div>
+		</div>
+	</div>
+</section>
+<!-- /.content -->

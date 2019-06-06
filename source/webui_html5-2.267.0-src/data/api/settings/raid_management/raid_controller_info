@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "controller_id": 261,
+    "controller_name": "LSI MegaRAID SAS 9361-8i (261)",
+    "serial_number": "SV423580",
+    "package_version": "24.68.963",
+    "bios_version": "22.50.68",
+    "uefi_version": "N/A",
+    "expander_version": "N/A",
+    "seeprom_version": "3.1452",
+    "cpld_version": "N/A",
+    "pci_vendor_id": 4096,
+    "pci_device_id": 93,
+    "pci_subvendor_id": 4096,
+    "pci_subsystem_id": 37729,
+    "roc_temp": 53,
+    "expander_temp": 20,
+    "ctrl_health": 1
+  },
+  {
+    "id": 2,
+    "controller_id": 260,
+    "controller_name": "LSI MegaRAID 9361-8i (260)",
+    "serial_number": "SV423580",
+    "package_version": "24.68.963",
+    "bios_version": "22.50.68",
+    "uefi_version": "N/A",
+    "expander_version": "N/A",
+    "seeprom_version": "3.1452",
+    "cpld_version": "N/A",
+    "pci_vendor_id": 5096,
+    "pci_device_id": 90,
+    "pci_subvendor_id": 6096,
+    "pci_subsystem_id": 36729,
+    "roc_temp": 63,
+    "expander_temp": 21,
+    "ctrl_health": 7
+  }
+]

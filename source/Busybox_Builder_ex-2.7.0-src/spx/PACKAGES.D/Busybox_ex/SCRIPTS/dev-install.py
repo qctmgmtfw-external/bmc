@@ -26,11 +26,6 @@ def build_install():
 	if retval != 0:
 		return retval
 
-	retval = Py_CopyFile("../spx/DATA/tcpdump", ImageTree+"/usr/local/bin/tcpdump")
-	if retval != 0:
-		return retval
-	
-	os.chmod("./bin/busybox", 04755)
 	# Copy the data to Image
 	return Py_CopyDir(".",ImageTree)
 

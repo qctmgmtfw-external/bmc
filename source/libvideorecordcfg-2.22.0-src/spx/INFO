@@ -1,0 +1,38 @@
+Source : libvideorecordcfg
+Version : 2.22.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : SP Core Team (spcoreteam@ami.com)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : libvideorecordcfg, libvideorecordcfg_dev
+Build-Depends : Crosscc, libiniparser_dev, libunix_dev, rules
+Architecture : ALL
+Urgency : medium
+Description : This package includes the APIs related to handling the configuration file for Auto Video Recording feature
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libvideorecordcfg
+Section : lib
+Group : LIBRARY
+Essential : NO
+Description : This is the binary package for libvideorecordcfg package
+.
+
+Package : libvideorecordcfg_dev
+Section : dev
+Group : LIBRARY
+Essential : NO
+Description : This is the development package for libvideorecordcfg package
+.
+

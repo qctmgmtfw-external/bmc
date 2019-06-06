@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+		COPY_DIR ./ %IMAGE_TREE/lib/modules/generic/misc/
+		MAKE_CHAR_NODE IOreg-0 241 0
+
+debug-install:

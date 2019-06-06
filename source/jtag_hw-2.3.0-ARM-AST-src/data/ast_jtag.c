@@ -31,6 +31,7 @@
 
 
 #define AST_JTAG_DRIVER_NAME	"ast_jtag"
+#define bit_delay() udelay(2)
 
 volatile u8		*ast_jtag_v_add=0;
 #ifdef SOC_AST2300
@@ -40,6 +41,147 @@ static int ast_jtag_hal_id;
 static jtag_core_funcs_t *jtag_core_ops;
 
 int g_is_Support_LoopFunc=0;
+
+int g_is_HeaderTrailer_Ready=0;
+
+typedef struct _HeaderTrailer_Bits {
+	int HIR;
+	int TIR;
+	int HDR;
+	int TDR;
+	
+	unsigned int Devices;
+	unsigned int Device_Index;
+} HeaderTrailer_Bits;
+
+static HeaderTrailer_Bits HeaderTrailer_bits={
+	.HIR=0,
+	.TIR=0,
+	.HDR=0,
+	.TDR=0,
+	.Device_Index=1
+};
+
+
+/*
+ * tck_pulse(status)
+ * To make one tck pulse with state 
+ */
+static void tck_pulse(unsigned int status){
+	/* Signal L_H_L : Not work. */
+    status &= ~(SOFTWARE_TCK_BIT);		//clk low
+    iowrite32(status ,(void * __iomem)ast_jtag_v_add + JTAG_STATUS);
+    bit_delay();
+   
+    status |= SOFTWARE_TCK_BIT;			//clk High
+    iowrite32(status ,(void * __iomem)ast_jtag_v_add + JTAG_STATUS);
+    bit_delay();
+/*
+    status &= ~(SOFTWARE_TCK_BIT);		//clk low
+    iowrite32(status , (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
+    bit_delay();
+*/
+}
+
+/*
+ * set_device_number 
+ * index : 0 for set Header/Trailer bits but change index.
+ *       : others for set index but Header/Trailer bits.
+ *         jtag chain device index is using 1 base. 
+ *       
+ * return: 0 for normal.
+ *       : Others for error. 
+ */
+int set_device_number(unsigned int index){ // action type, device_index.
+	int ret = 0;
+	static int enable_warning = 1;
+	//--------------------------------------------------------------------------------------
+	// ox256c :
+	// for IR      single  		chip 1 		chip 2  
+	//  HIR         0				8			0
+	//  TIR 		0				0			8
+	//
+	// for DR      single  		chip 1 		chip 2  
+	//  HDR         0				1			0
+	//  TDR 		0				0			1
+	//--------------------------------------------------------------------------------------
+	
+	if(index != 0){
+		//Set HeaderTrailer_bits.Device_Index even get wrong index.
+		//It will make program fail after error setting.
+		
+		enable_warning = 0;
+		jtag_boundary_scan(1);
+		enable_warning = 1;
+		
+		printk("\nUsing new device index.\n");
+		HeaderTrailer_bits.Device_Index = index;
+		if((HeaderTrailer_bits.Devices >= index) && (HeaderTrailer_bits.Devices > 0)){		
+			ret = 0;
+			// printk("HeaderTrailer_bits.Device_Index = %d\n", HeaderTrailer_bits.Device_Index);			
+		}
+		else{
+			g_is_HeaderTrailer_Ready = 0;
+			printk("Set JtagChain index error!\n");
+			#if (0)
+			// debug.
+			printk("HeaderTrailer_bits:\n");
+			printk("Device_Index/Devices[%d/%d]\n",HeaderTrailer_bits.Device_Index,HeaderTrailer_bits.Devices);
+			printk("HIR,TIR : [%d/%d]\n", HeaderTrailer_bits.HIR, HeaderTrailer_bits.TIR);
+			printk("HDR,TDR : [%d/%d]\n", HeaderTrailer_bits.HDR, HeaderTrailer_bits.TDR);
+			#endif
+			
+			ret = -1;
+		}
+		if(enable_warning == 1){
+			printk("CPLD devices : %d.\n",HeaderTrailer_bits.Devices);
+			printk("CPLD devices index Switch to %d.\n", HeaderTrailer_bits.Device_Index );
+		}
+	}
+	else{
+		// Single device
+		if((HeaderTrailer_bits.Device_Index == 1) && (HeaderTrailer_bits.Devices == 1)){
+			HeaderTrailer_bits.HIR = 0;
+			HeaderTrailer_bits.TIR = 0;
+			HeaderTrailer_bits.HDR = 0;
+			HeaderTrailer_bits.TDR = 0;
+			g_is_HeaderTrailer_Ready = 1;
+		}
+		// Jtag chain
+		else if((HeaderTrailer_bits.Devices >= HeaderTrailer_bits.Device_Index) && (HeaderTrailer_bits.Devices > 0)){
+			HeaderTrailer_bits.HDR =  HeaderTrailer_bits.Devices - HeaderTrailer_bits.Device_Index;
+			HeaderTrailer_bits.TDR = (HeaderTrailer_bits.Device_Index-1);
+						
+			HeaderTrailer_bits.HIR = HeaderTrailer_bits.HDR * 10;
+			HeaderTrailer_bits.TIR = HeaderTrailer_bits.TDR * 10;
+			
+			if(HeaderTrailer_bits.HDR >= 0  && HeaderTrailer_bits.TDR >= 0){
+				g_is_HeaderTrailer_Ready = 1;
+			}
+			else{
+				g_is_HeaderTrailer_Ready = 0;
+			}
+			//printk("g_is_HeaderTrailer_Ready=%d\n",g_is_HeaderTrailer_Ready);
+		}
+		else{
+			if(enable_warning == 1 ){
+				printk("Set JtagChain error!\n");
+				printk("Device_Index/Devices[%d/%d]\n",HeaderTrailer_bits.Device_Index,HeaderTrailer_bits.Devices);
+				ret = -1;
+			}
+		}
+	}
+	
+	#if (1)
+	// HeaderTrailer_bits debug :
+	printk("HeaderTrailer_bits:\n");
+	printk("Device_Index/Devices[%d/%d]\n",HeaderTrailer_bits.Device_Index,HeaderTrailer_bits.Devices);		
+	printk("HIR,TIR : [%d/%d]\n", HeaderTrailer_bits.HIR, HeaderTrailer_bits.TIR);
+	printk("HDR,TDR : [%d/%d]\n", HeaderTrailer_bits.HDR, HeaderTrailer_bits.TDR);
+	#endif
+	
+	return ret ;			
+}
 
 //Altera jtag pin set.
 
@@ -125,72 +267,89 @@ void jtag_sir(unsigned short bits, unsigned int tdi){
 	
 	int i = 0;
 	//uint32_t tdo;
+	
+	if (g_is_HeaderTrailer_Ready == 0 ) return;
+	
 	// go to DRSCAN
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	// go to IRSCAN
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	// go to CaptureIR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	// go to ShiftIR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
+	
+	// HIR
+	for(i=HeaderTrailer_bits.HIR; i>0; i--) {
+		tck_pulse(SOFTWARE_MODE_ENABLE);
+	}
 	
 	for(i = 0; i< bits; i++) {
-		if(i == (bits - 1)) {
+		if(i == (bits - 1) && (HeaderTrailer_bits.TIR == 0)) {
 			if(tdi & (0x1 << i)) {
 				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(42);
+				bit_delay();
 				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(42);
+				bit_delay();
 			} 
 			else {
 				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(42);
+				bit_delay();
 				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(42);
+				bit_delay();
 			}
 		}
 		else {
 			if(tdi & (0x1 << i)) {
 				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(42);
+				bit_delay();
 				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(42);
+				bit_delay();
 			}
 			else {
 				iowrite32(SOFTWARE_MODE_ENABLE, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(42);
+				bit_delay();
 				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(42);
+				bit_delay();
 			}
 		}
 		//tdo = ioread32((void * __iomem)ast_jtag_v_add + JTAG_STATUS);
 	}
+
+	// TIR
+	if(HeaderTrailer_bits.TIR != 0){
+		for(i=HeaderTrailer_bits.TIR -1; i>0; i--) {
+			tck_pulse(SOFTWARE_MODE_ENABLE);
+		}
+		tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT);
+ 	}
+
 	
 	// go to UpdateIR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 
 	// go to IDLE
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT,(void * __iomem) ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 }
 
 
@@ -205,66 +364,121 @@ void jtag_sdr(unsigned short bits, unsigned int *TDI,unsigned int *TDO){
 	u32 shift_bits =0;
 	u32 dr_data;
 
+	u32 i;
+	
+	if (g_is_HeaderTrailer_Ready == 0 ) return;
+
 	//go to DR Scan
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
+	bit_delay();
+	
 	//go to Capture DR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
+	bit_delay();
 	
 	// go to ShiftDR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
+	bit_delay();
 	
+	// HDR
+	for(i=HeaderTrailer_bits.HDR; i>0; i--) {
+		tck_pulse(SOFTWARE_MODE_ENABLE);
+	}
+
 	while (bits) {
-		if( !(TDO) ) {
-			//Write
-			dr_data = (TDI[index] >> (shift_bits % 32)) & (0x1);
-			if(bits == 1) {
-				// go to Exit1DR
-				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | (dr_data << 16), (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(1);
-				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | (dr_data << 16), (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(1);
-			}
-			else {
-				iowrite32(SOFTWARE_MODE_ENABLE | (dr_data << 16), (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(1);
-				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | (dr_data << 16), (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(1);
-			}
+		
+		//Write
+		if(TDI == 0){
+			dr_data  = 0;
+		}
+		else if(TDI == (void*)0xffffffff){
+			dr_data  = 1;
+		}
+		else{
+ 			dr_data = (TDI[index] >> (shift_bits % 32)) & (0x1);
+
+		}
+		
+		if(bits == 1 && (HeaderTrailer_bits.TIR == 0)) {
+			// go to Exit1DR
+			tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | (dr_data << 16));
 		}
 		else {
-			//Read
-			if(bits == 1) {
-				// go to Exit1DR
-				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(1);
-				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(1);
+			tck_pulse(SOFTWARE_MODE_ENABLE | (dr_data << 16));
+		}
+		
+		// When need read from TDO.
+		if(TDO!=0){
+			if(ast_tdo_pin() == 1){
+				TDO[index] |= (0x1 << (shift_bits % 32));
+ 			}
+ 			else {
+
+ 				TDO[index] &= ~(0x1 << (shift_bits % 32));
+
 			}
-			else {
-				iowrite32(SOFTWARE_MODE_ENABLE, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(1);
-				iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-				udelay(1);
-			}
-			#ifdef SOC_AST2300
-			 if(ioread32((void * __iomem)ast_gpio_v_add + GPIO_DATA_VALUE) & GPIO_G5_BIT) {
-			#else
-			 if(ioread32((void * __iomem)ast_jtag_v_add + JTAG_STATUS) & SOFTWARE_TDIO_BIT) {
-			#endif
-				dr_data = 1;
+		}
+		 
+ 		shift_bits++;
+ 		bits--;
+ 		if((shift_bits % 32) == 0)
+ 			index ++;
+ 	}
+	
+	// TDR
+	if(HeaderTrailer_bits.TDR != 0){
+		for(i=HeaderTrailer_bits.TDR -1; i>0; i--) {
+			tck_pulse(SOFTWARE_MODE_ENABLE);
+		}
+		tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT);
+	}
+
+
+	// go to UpdateDR
+	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
+	bit_delay();
+	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
+	bit_delay();
+
+	// go to IDLE
+	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
+	bit_delay();
+	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
+	bit_delay();
+	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
+	bit_delay();
+}
+
+// 	
+/*
+ * jtag_sr 
+ * Do not change status
+ * Send Jtag test bits.
+ */
+static void jtag_sr(unsigned short bits, unsigned int *TDI,unsigned int *TDO){
+
+	unsigned int index = 0;
+	u32 shift_bits =0;
+	u32 dr_data;
+	
+	while (bits) {
+		
+		//Write
+		dr_data = (TDI[index] >> (shift_bits % 32)) & (0x1);	
+		tck_pulse(SOFTWARE_MODE_ENABLE | (dr_data << 16));
+		
+		// When need read from TDO.
+		if(TDO!=0){
+			if(ast_tdo_pin() == 1){
 				TDO[index] |= (0x1 << (shift_bits % 32));
 			}
 			else {
-				dr_data = 0;
 				TDO[index] &= ~(0x1 << (shift_bits % 32));
 			}
 		}
@@ -273,20 +487,100 @@ void jtag_sdr(unsigned short bits, unsigned int *TDI,unsigned int *TDO){
 		if((shift_bits % 32) == 0)
 			index ++;
 	}
-	// go to UpdateDR
-	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
-	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
-
-	// go to IDLE
-	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
-	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
-	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(1);
 }
+
+/*
+ * jtag_boundary_scan
+ * 
+ * For setting HIR, TIR, HDR and TDR bits by device numbers.
+ * The signal control follow logic Analyzers got signal.
+ * 
+ */
+void jtag_boundary_scan(int enable_list){
+	
+	const unsigned int TDI_Mask = 0x7FFFFFFF;
+	unsigned int TDI=TDI_Mask, TDO = 0xFFFFFFFF;	// for different data.
+	unsigned int JtagChain = 0; 					// Jtag chain fail.
+	unsigned int device_number=0;
+
+	int i;
+
+	// Jtag Reset: 5 TMS signal with tck_pulse at least.	
+	for (i=0; i<7 ; i++){
+		tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT);
+	}
+	
+	tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT);
+		
+	for (i=0; i<7 ; i++){
+		tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT);
+	}
+	// end reset.
+	//----------------------------------------------------------------------------
+	//! First scan, here can get device id code.
+	for(i=0;i<100;i++){
+		jtag_sr(8, &TDI, &TDO);
+		if((TDO != 0xffffffff)&& (TDO != 0xffffff00)) printk("Scan%d get[%08x]\n",i+1,TDO);
+	}
+	//----------------------------------------------------------------------------
+	//to Run test/ idle
+	tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT);
+	
+	//go to DR Scan
+	tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT);		
+	//go to Capture DR
+	tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT);	
+	// go to ShiftDR
+	tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT);
+	
+	//printk("ID scan:\n");
+	for(i=0;i<100;i++){
+		jtag_sr(32, &TDI, &TDO);
+		if(TDO == TDI){			
+			JtagChain = 1;
+			break;
+		}
+		if(enable_list == 1){
+			if((TDO != 0xffffffff) && (TDO != 0)) 	printk("ID%d get[%08x]\n",i+1,TDO);
+		}
+	}
+	
+	// count device_number.
+	TDI=0x0;
+	for(i=0;i<10;i++){
+		jtag_sr(32, &TDI, &TDO);		
+		
+		if(TDO == TDI_Mask){
+			device_number++;
+		}
+	}
+
+	printk("Scan device... device_number = %d\n", device_number);
+	HeaderTrailer_bits.Devices=device_number;
+	
+	if(JtagChain == 0 ) printk("JtagChain fail!\n");	
+	
+	//! auto switch single device index ?
+	/*
+	if(HeaderTrailer_bits.Devices == 1){
+		printk("JtagChain fix no HeaderTrailer_bits!\n");
+		HeaderTrailer_bits.Device_Index = 1;
+	}
+	*/
+	
+	set_device_number(0);	
+	
+	// go to Exit1DR
+	tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT);
+	// go to PauseDR
+	tck_pulse(SOFTWARE_MODE_ENABLE );
+	// go to UpdateDR
+	tck_pulse(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT );
+	//----------------------------------------------------------------------------
+	mdelay(1);	
+	//----------------------------------------------------------------------------
+	ast_jtag_reset ();
+ }
 
 
 /*
@@ -298,21 +592,21 @@ void ast_jtag_reset (void)
 	int i = 0;
 	//State from test logic reset to Run-Test/Idle State 
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	for(i=0;i<10;i++) {
 		iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-		udelay(42);
+		bit_delay();
 		iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-		udelay(42);
+		bit_delay();
 	}
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 }
 
 // Quanta Start
@@ -338,45 +632,45 @@ void jtag_dr_pause(unsigned int min_mSec){
 	// start state is run test idle
 	// go to DRSCAN
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	//go to Capture DR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	// go to Exit1DR skip ShiftDR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	// go to Pause DR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	//
 	if (min_mSec != 0)
 		mdelay(min_mSec);
 
 	// go to Exit2DR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	// go to UpdateDR
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TMS_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	// go to IDLE
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 	iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-	udelay(42);
+	bit_delay();
 
 }
 
@@ -387,18 +681,23 @@ void jtag_dr_pause(unsigned int min_mSec){
 void jtag_runtest_idle(unsigned int tcks, unsigned int min_mSec)
 {
 	int i = 0;
+	static unsigned int idle_count = 0;
 
 	for(i = 0; i< tcks; i++) {
 		iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-		udelay(1);
+		bit_delay();
 		iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TCK_BIT | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-		udelay(1);
+		bit_delay();
 		iowrite32(SOFTWARE_MODE_ENABLE | SOFTWARE_TDIO_BIT, (void * __iomem)ast_jtag_v_add + JTAG_STATUS);
-		udelay(1);
+		bit_delay();
 	}
 	
 	if (min_mSec != 0){ 
 		mdelay(min_mSec);
+	}
+	//msleep :: for kernel switch other task.
+	if((idle_count ++ ) % 128 == 0){
+		msleep(0);
 	}
 }
 
@@ -508,6 +807,8 @@ EXPORT_SYMBOL(jtag_sdr);
 EXPORT_SYMBOL(jtag_sir);
 EXPORT_SYMBOL(jtag_runtest_idle);
 EXPORT_SYMBOL(jtag_dr_pause);
+EXPORT_SYMBOL(jtag_boundary_scan);
+EXPORT_SYMBOL(set_device_number);
 EXPORT_SYMBOL(jtag_io);
 
 module_init (ast_jtag_init);

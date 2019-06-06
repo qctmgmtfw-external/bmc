@@ -1,0 +1,1 @@
+	if(storedLocale == "en" || storedLocale == "en-us")

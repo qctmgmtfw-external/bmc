@@ -1,0 +1,6 @@
+
+{	
+	"id" : 1, "critical_events_enable" : 1, "non_critical_events_enable" : 0, "non_recoverable_events_enable" : 0, "fan_state_events_enable" : 0, 
+	"watchdog_events_enable" : 0, "chassis_power_on_events_enable" : 0, "chassis_power_off_events_enable" : 0, "chassis_reset_events_enable" : 1, 
+	"lpc_reset_events_enable" : 0, "date_time_events_enable" : 1, "date_time_to_record" : 1262308906 
+}  

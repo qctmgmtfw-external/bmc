@@ -1,0 +1,46 @@
+[
+  {
+    "id": 0, 
+	"controller_id": 67110151,
+	"controller_name": "SAS9311-4i4e", 
+	"PhyEnabled": 1, 
+	"PhyCount": 8, 
+	"DevType": 1, 
+	"DeviceID": 0, 
+	"ConnectedPhyID": 0, 
+	"ConnectedDevID": 67110151
+  },
+  {
+    "id": 1, 
+	"controller_id": 67110151, 
+	"controller_name": "SAS9311-4i4e", 
+	"PhyEnabled": 1, 
+	"PhyCount": 1, 
+	"DevType": 4, 
+	"DeviceID": 65535, 
+	"ConnectedPhyID": 4,
+	"ConnectedDevID": 67110151
+  },
+  {
+    "id": 2, 
+	"controller_id": 67110151, 
+	"controller_name": "SAS9311-4i4e", 
+	"PhyEnabled": 1, 
+	"PhyCount": 1, 
+	"DevType": 4, 
+	"DeviceID": 65535, 
+	"ConnectedPhyID": 5, 
+	"ConnectedDevID": 67110151
+  },
+  {
+    "id": 3, 
+	"controller_id": 67110151, 
+	"controller_name": "SAS9311-4i4e",
+	"PhyEnabled": 1, 
+	"PhyCount": 1,
+	"DevType": 4,
+	"DeviceID": 65535,
+	"ConnectedPhyID": 7, 
+	"ConnectedDevID": 1287
+  }
+]

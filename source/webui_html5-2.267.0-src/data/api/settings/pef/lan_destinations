@@ -1,0 +1,9 @@
+[{
+	"id": 1,
+	"lan_channel": "test",
+	"destination_type": "snmp",
+	"destination_address": "test",
+	"name": "test",
+	"subject": "test",
+	"message": "test"
+}]

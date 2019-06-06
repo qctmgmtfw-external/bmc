@@ -1,0 +1,69 @@
+#!/bin/sh
+
+SLAAC_TIMING_CONF=/conf/slaactiming.conf
+
+test -f $SLAAC_TIMING_CONF || exit 0
+
+cat $SLAAC_TIMING_CONF | while read LINE
+do
+    IFNAME_TMP=`echo $LINE | grep '\[' | awk '{print $2}'`
+    if [ -n "$IFNAME_TMP" ]
+    then
+        IFNAME=$IFNAME_TMP
+    else
+        if [ "$IFACE" == "$IFNAME" ]
+        then
+            PARAM=`echo $LINE | awk '{print $1}'`
+            PARAM_VAL=`echo $LINE | awk '{print $2}'`
+
+            case "$PARAM" in
+
+            MAX_RTR_SOLICITATION_DELAY)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/conf/$IFNAME/router_solicitation_delay
+            ;;
+
+            RTR_SOLICITATION_INTERVAL)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/conf/$IFNAME/router_solicitation_interval
+            ;;
+
+            MAX_RTR_SOLICITATIONS)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/conf/$IFNAME/router_solicitations
+            ;;
+
+            DupAddrDetectTransmits)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/conf/$IFNAME/dad_transmits
+            ;;
+
+            MAX_MULTICAST_SOLICIT)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/neigh/$IFNAME/mcast_solicit
+            ;;
+
+            MAX_UNICAST_SOLICIT)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/neigh/$IFNAME/ucast_solicit
+            ;;
+
+            MAX_ANYCAST_DELAY_TIME)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/neigh/$IFNAME/anycast_delay
+            ;;
+
+            REACHABLE_TIME)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/neigh/$IFNAME/base_reachable_time
+            ;;
+
+            RETRANS_TIMER)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/neigh/$IFNAME/retrans_time
+            ;;
+
+            DELAY_FIRST_PROBE_TIME)
+                echo $PARAM_VAL > /proc/sys/net/ipv6/neigh/$IFNAME/delay_first_probe_time
+            ;;
+
+            *)
+                echo "Neighbor Discovery / SLAAC Timing Parameter $1 is not supported" > /dev/null
+            esac
+        else
+            exit 0
+        fi
+    fi
+
+done
