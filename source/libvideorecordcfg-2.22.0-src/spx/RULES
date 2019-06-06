@@ -1,0 +1,31 @@
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE
+		
+#Clean Source
+clean_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE clean
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create libvideorecordcfg package
+build_package-libvideorecordcfg:
+		MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/video_record.jnlp %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/libvideorecordcfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/update_conf %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/autorecord.conf %TEMPDIR/%PACKAGE/tmp
+		PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+				
+# Rules to create libvideorecordcfg_dev package
+build_package-libvideorecordcfg_dev:
+		MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/videorecord_cfg.h %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/libvideorecordcfg.a %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/libvideorecordcfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %TEMPDIR/%PACKAGE/tmp
+		PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp

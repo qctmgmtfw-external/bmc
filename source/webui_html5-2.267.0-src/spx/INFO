@@ -1,0 +1,35 @@
+Source : webui_html5
+Version : 2.267.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Chandrasekar R (chandrasekarr@ami.com)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : webui_html5
+Build-Depends : webui_html5_libs, webui_scaffold
+Customization-Type : WEB
+Architecture : ALL
+Build-Order : LAST
+Urgency : medium
+Description : This Package contains SPX HTML5 web page related files
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : webui_html5
+Config-Tag : SPX HTML5 UI
+Section : app
+License : AMI
+Group : SOFTWARE
+Essential : NO
+Description : This Package contains SPX HTML5 web page related files
+.
+

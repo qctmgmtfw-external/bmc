@@ -1,0 +1,99 @@
+Package: libfcgi (2.1.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/libfcgi/DATA/.keep, spx/PACKAGES.D/libfcgi_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 21:04:47 EST
+
+Package: libfcgi (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 04:40:34 GMT
+
+Package: libfcgi (1.8.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 10:23:27 HMT
+
+Package: libfcgi (1.7.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 06:21:34 GMT
+
+Package: libfcgi (1.6.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 04:32:47 GMT
+
+Package: libfcgi (1.5.0); urgency = high
+
+Abstract:
+	Rebuild fix
+
+Files Modified: data/fcgi.tar.gz
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 07 Feb 2014 20:02:15 EST
+
+Package: libfcgi (1.4.0); urgency = critical
+
+Abstract:
+	Patch fix
+
+Files Modified: spx/PATCHES/FILES/AMI-EXT/01-AMI-FCGI-FIX.patch
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Thu, 19 Dec 2013 20:02:19 EST
+
+Package: libfcgi (1.3.0); urgency = high
+
+Abstract:
+	Cross compilation issue fixed
+
+Files Modified: spx/RULES.D/Buildfcgi.sh
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Thu, 19 Dec 2013 15:50:16 EST
+
+Package: libfcgi (1.2.0); urgency = high
+
+Abstract:
+	Enabling cross compilation during configure
+
+Files Modified: spx/RULES.D/Buildfcgi.sh
+
+--Submitter: Chandrasekar R (chandrasekarr@amiindia.co.in) Wed, 17 Apr 2013 21:19:55 HMT
+
+Package: libfcgi (1.1.0); urgency = high
+
+Abstract:
+	Removed .workspace folder
+
+Files Deleted: data/.workspace, data/.workspace/libfcgi, data/.workspace/libfcgi/LICENSE.TERMS, data/.workspace/libfcgi/Makefile.am, data/.workspace/libfcgi/Makefile.in, data/.workspace/libfcgi/Makefile.nt, data/.workspace/libfcgi/README, data/.workspace/libfcgi/Win32, data/.workspace/libfcgi/Win32/FastCGI.dsw, data/.workspace/libfcgi/Win32/authorizer.dsp, data/.workspace/libfcgi/Win32/cgifcgi.dsp, data/.workspace/libfcgi/Win32/config_h.dsp, data/.workspace/libfcgi/Win32/echo-cpp.dsp, data/.workspace/libfcgi/Win32/echo.dsp, data/.workspace/libfcgi/Win32/echox.dsp, data/.workspace/libfcgi/Win32/libfcgi.dsp, data/.workspace/libfcgi/Win32/logdump.dsp, data/.workspace/libfcgi/Win32/size.dsp, data/.workspace/libfcgi/Win32/threaded.dsp, data/.workspace/libfcgi/acinclude.m4, data/.workspace/libfcgi/aclocal.m4, data/.workspace/libfcgi/cgi-fcgi, data/.workspace/libfcgi/cgi-fcgi/Makefile.am, data/.workspace/libfcgi/cgi-fcgi/Makefile.in, data/.workspace/libfcgi/cgi-fcgi/cgi-fcgi.c, data/.workspace/libfcgi/cgi-fcgi/cgi-fcgi.mak, data/.workspace/libfcgi/compile, data/.workspace/libfcgi/config.guess, data/.workspace/libfcgi/config.sub, data/.workspace/libfcgi/configure, data/.workspace/libfcgi/configure.in, data/.workspace/libfcgi/depcomp, data/.workspace/libfcgi/doc, data/.workspace/libfcgi/doc/FCGI_Accept.3, data/.workspace/libfcgi/doc/FCGI_Finish.3, data/.workspace/libfcgi/doc/FCGI_SetExitStatus.3, data/.workspace/libfcgi/doc/FCGI_StartFilterData.3, data/.workspace/libfcgi/doc/cgi-fcgi.1, data/.workspace/libfcgi/doc/fastcgi-prog-guide, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ap_guida.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ap_guide.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/apaman.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch1inta1.gif, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch1intra.gif, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch1intro.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch2c.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch3perl.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch4tcl.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/cover.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/covera.gif, data/.workspace/libfcgi/doc/fastcgi-whitepaper, data/.workspace/libfcgi/doc/fastcgi-whitepaper/fastcgi.htm, data/.workspace/libfcgi/doc/fastcgi-whitepaper/img00001.gif, data/.workspace/libfcgi/doc/fastcgi-whitepaper/img00002.gif, data/.workspace/libfcgi/doc/fastcgi-whitepaper/img00003.gif, data/.workspace/libfcgi/doc/fcgi-devel-kit.htm, data/.workspace/libfcgi/doc/fcgi-java.htm, data/.workspace/libfcgi/doc/fcgi-perf.htm, data/.workspace/libfcgi/doc/fcgi-perl.htm, data/.workspace/libfcgi/doc/fcgi-spec.html, data/.workspace/libfcgi/doc/fcgi-tcl.htm, data/.workspace/libfcgi/doc/omi-logo.gif, data/.workspace/libfcgi/doc/overview.html, data/.workspace/libfcgi/doc/www5-api-workshop.html, data/.workspace/libfcgi/examples, data/.workspace/libfcgi/examples/Makefile.am, data/.workspace/libfcgi/examples/Makefile.in, data/.workspace/libfcgi/examples/authorizer.c, data/.workspace/libfcgi/examples/authorizer.mak, data/.workspace/libfcgi/examples/echo-cpp.cpp, data/.workspace/libfcgi/examples/echo-cpp.mak, data/.workspace/libfcgi/examples/echo-x.c, data/.workspace/libfcgi/examples/echo.c, data/.workspace/libfcgi/examples/echo.mak, data/.workspace/libfcgi/examples/echox.mak, data/.workspace/libfcgi/examples/log-dump.c, data/.workspace/libfcgi/examples/size.c, data/.workspace/libfcgi/examples/size.mak, data/.workspace/libfcgi/examples/threaded.c, data/.workspace/libfcgi/fcgi_config.h, data/.workspace/libfcgi/fcgi_config.h.in, data/.workspace/libfcgi/images, data/.workspace/libfcgi/images/aplib-hd.gif, data/.workspace/libfcgi/images/divider.gif, data/.workspace/libfcgi/images/fcgi-hd.gif, data/.workspace/libfcgi/images/mail-hd.gif, data/.workspace/libfcgi/images/navbar.gif, data/.workspace/libfcgi/images/serv-hd.gif, data/.workspace/libfcgi/images/words-hd.gif, data/.workspace/libfcgi/include, data/.workspace/libfcgi/include/Makefile.am, data/.workspace/libfcgi/include/Makefile.in, data/.workspace/libfcgi/include/fastcgi.h, data/.workspace/libfcgi/include/fcgi_config_x86.h, data/.workspace/libfcgi/include/fcgi_stdio.h, data/.workspace/libfcgi/include/fcgiapp.h, data/.workspace/libfcgi/include/fcgimisc.h, data/.workspace/libfcgi/include/fcgio.h, data/.workspace/libfcgi/include/fcgio.h.orig, data/.workspace/libfcgi/include/fcgios.h, data/.workspace/libfcgi/install-sh, data/.workspace/libfcgi/java, data/.workspace/libfcgi/java/FCGIGlobalDefs.java, data/.workspace/libfcgi/java/FCGIInputStream.java, data/.workspace/libfcgi/java/FCGIInterface.java, data/.workspace/libfcgi/java/FCGIMessage.java, data/.workspace/libfcgi/java/FCGIOutputStream.java, data/.workspace/libfcgi/java/FCGIRequest.java, data/.workspace/libfcgi/libfcgi, data/.workspace/libfcgi/libfcgi/Makefile.am, data/.workspace/libfcgi/libfcgi/Makefile.in, data/.workspace/libfcgi/libfcgi/fcgi_stdio.c, data/.workspace/libfcgi/libfcgi/fcgiapp.c, data/.workspace/libfcgi/libfcgi/fcgio.cpp, data/.workspace/libfcgi/libfcgi/libfcgi.mak, data/.workspace/libfcgi/libfcgi/os_unix.c, data/.workspace/libfcgi/libfcgi/os_win32.c, data/.workspace/libfcgi/ltmain.sh, data/.workspace/libfcgi/missing, data/.workspace/libfcgi/mkinstalldirs, data/.workspace/libfcgi/perl, data/.workspace/libfcgi/perl/ChangeLog, data/.workspace/libfcgi/perl/FCGI.PL, data/.workspace/libfcgi/perl/FCGI.XL, data/.workspace/libfcgi/perl/MANIFEST, data/.workspace/libfcgi/perl/Makefile.PL, data/.workspace/libfcgi/perl/README, data/.workspace/libfcgi/perl/aclocal.m4, data/.workspace/libfcgi/perl/configure, data/.workspace/libfcgi/perl/configure.in, data/.workspace/libfcgi/perl/echo.PL, data/.workspace/libfcgi/perl/fcgi_config.h.in, data/.workspace/libfcgi/perl/oldinterface.pod, data/.workspace/libfcgi/perl/remote.PL, data/.workspace/libfcgi/perl/threaded.PL, data/.workspace/libfcgi/perl/typemap, data/.workspace/libfcgi/perl/version.pm, data/.workspace/libfcgi/stamp-h.in
+
+--Submitter: valantina (valantinaa@amiindia.co.in) Wed, 20 Mar 2013 12:55:55 HMT
+
+Package: libfcgi (1.0.0); urgency = new
+
+Abstract:
+	Library package for fastcgi.
+
+Files Added: data, data/.workspace, data/.workspace/libfcgi, data/.workspace/libfcgi/LICENSE.TERMS, data/.workspace/libfcgi/Makefile.am, data/.workspace/libfcgi/Makefile.in, data/.workspace/libfcgi/Makefile.nt, data/.workspace/libfcgi/README, data/.workspace/libfcgi/Win32, data/.workspace/libfcgi/Win32/FastCGI.dsw, data/.workspace/libfcgi/Win32/authorizer.dsp, data/.workspace/libfcgi/Win32/cgifcgi.dsp, data/.workspace/libfcgi/Win32/config_h.dsp, data/.workspace/libfcgi/Win32/echo-cpp.dsp, data/.workspace/libfcgi/Win32/echo.dsp, data/.workspace/libfcgi/Win32/echox.dsp, data/.workspace/libfcgi/Win32/libfcgi.dsp, data/.workspace/libfcgi/Win32/logdump.dsp, data/.workspace/libfcgi/Win32/size.dsp, data/.workspace/libfcgi/Win32/threaded.dsp, data/.workspace/libfcgi/acinclude.m4, data/.workspace/libfcgi/aclocal.m4, data/.workspace/libfcgi/cgi-fcgi, data/.workspace/libfcgi/cgi-fcgi/Makefile.am, data/.workspace/libfcgi/cgi-fcgi/Makefile.in, data/.workspace/libfcgi/cgi-fcgi/cgi-fcgi.c, data/.workspace/libfcgi/cgi-fcgi/cgi-fcgi.mak, data/.workspace/libfcgi/compile, data/.workspace/libfcgi/config.guess, data/.workspace/libfcgi/config.sub, data/.workspace/libfcgi/configure, data/.workspace/libfcgi/configure.in, data/.workspace/libfcgi/depcomp, data/.workspace/libfcgi/doc, data/.workspace/libfcgi/doc/FCGI_Accept.3, data/.workspace/libfcgi/doc/FCGI_Finish.3, data/.workspace/libfcgi/doc/FCGI_SetExitStatus.3, data/.workspace/libfcgi/doc/FCGI_StartFilterData.3, data/.workspace/libfcgi/doc/cgi-fcgi.1, data/.workspace/libfcgi/doc/fastcgi-prog-guide, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ap_guida.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ap_guide.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/apaman.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch1inta1.gif, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch1intra.gif, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch1intro.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch2c.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch3perl.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/ch4tcl.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/cover.htm, data/.workspace/libfcgi/doc/fastcgi-prog-guide/covera.gif, data/.workspace/libfcgi/doc/fastcgi-whitepaper, data/.workspace/libfcgi/doc/fastcgi-whitepaper/fastcgi.htm, data/.workspace/libfcgi/doc/fastcgi-whitepaper/img00001.gif, data/.workspace/libfcgi/doc/fastcgi-whitepaper/img00002.gif, data/.workspace/libfcgi/doc/fastcgi-whitepaper/img00003.gif, data/.workspace/libfcgi/doc/fcgi-devel-kit.htm, data/.workspace/libfcgi/doc/fcgi-java.htm, data/.workspace/libfcgi/doc/fcgi-perf.htm, data/.workspace/libfcgi/doc/fcgi-perl.htm, data/.workspace/libfcgi/doc/fcgi-spec.html, data/.workspace/libfcgi/doc/fcgi-tcl.htm, data/.workspace/libfcgi/doc/omi-logo.gif, data/.workspace/libfcgi/doc/overview.html, data/.workspace/libfcgi/doc/www5-api-workshop.html, data/.workspace/libfcgi/examples, data/.workspace/libfcgi/examples/Makefile.am, data/.workspace/libfcgi/examples/Makefile.in, data/.workspace/libfcgi/examples/authorizer.c, data/.workspace/libfcgi/examples/authorizer.mak, data/.workspace/libfcgi/examples/echo-cpp.cpp, data/.workspace/libfcgi/examples/echo-cpp.mak, data/.workspace/libfcgi/examples/echo-x.c, data/.workspace/libfcgi/examples/echo.c, data/.workspace/libfcgi/examples/echo.mak, data/.workspace/libfcgi/examples/echox.mak, data/.workspace/libfcgi/examples/log-dump.c, data/.workspace/libfcgi/examples/size.c, data/.workspace/libfcgi/examples/size.mak, data/.workspace/libfcgi/examples/threaded.c, data/.workspace/libfcgi/fcgi_config.h, data/.workspace/libfcgi/fcgi_config.h.in, data/.workspace/libfcgi/images, data/.workspace/libfcgi/images/aplib-hd.gif, data/.workspace/libfcgi/images/divider.gif, data/.workspace/libfcgi/images/fcgi-hd.gif, data/.workspace/libfcgi/images/mail-hd.gif, data/.workspace/libfcgi/images/navbar.gif, data/.workspace/libfcgi/images/serv-hd.gif, data/.workspace/libfcgi/images/words-hd.gif, data/.workspace/libfcgi/include, data/.workspace/libfcgi/include/Makefile.am, data/.workspace/libfcgi/include/Makefile.in, data/.workspace/libfcgi/include/fastcgi.h, data/.workspace/libfcgi/include/fcgi_config_x86.h, data/.workspace/libfcgi/include/fcgi_stdio.h, data/.workspace/libfcgi/include/fcgiapp.h, data/.workspace/libfcgi/include/fcgimisc.h, data/.workspace/libfcgi/include/fcgio.h, data/.workspace/libfcgi/include/fcgio.h.orig, data/.workspace/libfcgi/include/fcgios.h, data/.workspace/libfcgi/install-sh, data/.workspace/libfcgi/java, data/.workspace/libfcgi/java/FCGIGlobalDefs.java, data/.workspace/libfcgi/java/FCGIInputStream.java, data/.workspace/libfcgi/java/FCGIInterface.java, data/.workspace/libfcgi/java/FCGIMessage.java, data/.workspace/libfcgi/java/FCGIOutputStream.java, data/.workspace/libfcgi/java/FCGIRequest.java, data/.workspace/libfcgi/libfcgi, data/.workspace/libfcgi/libfcgi/Makefile.am, data/.workspace/libfcgi/libfcgi/Makefile.in, data/.workspace/libfcgi/libfcgi/fcgi_stdio.c, data/.workspace/libfcgi/libfcgi/fcgiapp.c, data/.workspace/libfcgi/libfcgi/fcgio.cpp, data/.workspace/libfcgi/libfcgi/libfcgi.mak, data/.workspace/libfcgi/libfcgi/os_unix.c, data/.workspace/libfcgi/libfcgi/os_win32.c, data/.workspace/libfcgi/ltmain.sh, data/.workspace/libfcgi/missing, data/.workspace/libfcgi/mkinstalldirs, data/.workspace/libfcgi/perl, data/.workspace/libfcgi/perl/ChangeLog, data/.workspace/libfcgi/perl/FCGI.PL, data/.workspace/libfcgi/perl/FCGI.XL, data/.workspace/libfcgi/perl/MANIFEST, data/.workspace/libfcgi/perl/Makefile.PL, data/.workspace/libfcgi/perl/README, data/.workspace/libfcgi/perl/aclocal.m4, data/.workspace/libfcgi/perl/configure, data/.workspace/libfcgi/perl/configure.in, data/.workspace/libfcgi/perl/echo.PL, data/.workspace/libfcgi/perl/fcgi_config.h.in, data/.workspace/libfcgi/perl/oldinterface.pod, data/.workspace/libfcgi/perl/remote.PL, data/.workspace/libfcgi/perl/threaded.PL, data/.workspace/libfcgi/perl/typemap, data/.workspace/libfcgi/perl/version.pm, data/.workspace/libfcgi/stamp-h.in, data/fcgi.tar.gz, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.PublicDomain, spx/PACKAGES.D, spx/PACKAGES.D/libfcgi, spx/PACKAGES.D/libfcgi/DATA, spx/PACKAGES.D/libfcgi/SCRIPTS, spx/PACKAGES.D/libfcgi/SCRIPTS/dev-install, spx/PACKAGES.D/libfcgi_dev, spx/PACKAGES.D/libfcgi_dev/DATA, spx/PACKAGES.D/libfcgi_dev/SCRIPTS, spx/PACKAGES.D/libfcgi_dev/SCRIPTS/dev-install, spx/PATCHES, spx/PATCHES/FILES, spx/PATCHES/FILES/AMI-EXT, spx/PATCHES/FILES/AMI-EXT/01-AMI-FCGI-FIX.patch, spx/PATCHES/SERIES, spx/PATCHES/SERIES/00, spx/RULES, spx/RULES.D, spx/RULES.D/Buildfcgi.sh
+
+--Submitter: valantina (valantinaa@amiindia.co.in) Wed, 20 Mar 2013 12:13:29 HMT
+

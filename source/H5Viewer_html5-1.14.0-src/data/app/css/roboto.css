@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light-webfont.eot');
+    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: bolder;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('../fonts/Roboto-Thin-webfont.eot');
+    src: url('../fonts/Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Thin-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Thin-webfont.svg#robotothin') format('svg');
+    font-weight: bolder;
+    font-style: normal;
+
+}
+
+

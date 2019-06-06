@@ -1,0 +1,41 @@
+Source : mdio_mod
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : Quanta
+Maintainer : Always Chen (Always.Chen@quantatw.com)
+License : AMI
+Source-Location : AMI
+Source-Version : 2.0.0
+Builds : mdio_mod, access_reg_mod_driver_dev
+Build-Depends : Crosscc, helper_driver_dev, kernel_dev, rules, DevNodes
+Architecture : ANY
+Urgency : new
+Description : This package contains the access reg driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : mdio_mod
+Config-Tag : MDIO Support
+Section : sys
+Group : DEVICE
+Essential : NO
+Depends : kernel
+Required : helper
+Description : Access reg driver module
+.
+
+Package : access_reg_mod_driver_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : This package contains Access reg development header files.
+.
+

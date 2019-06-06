@@ -1,0 +1,30 @@
+Source                   	:	libencryption
+Version : 2.3.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Suresh  (sureshv@amiindia.co.in)
+License                  	:	SSLeay
+Source-Location          	:	https://packages.debian.org/
+Source-Version           	:	0.9.8
+Builds                   	:	libencryption, libencryption_dev
+Build-Depends            	:	Crosscc, global_dev, ipmi_dev, libdbgout_dev, rules, libunix_dev, ipmipdk_dev, libnetwork_dev, libhostname_dev
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	This package contains the encryption library related files.
+.
+
+Package                  	:	libencryption
+Section                  	:	lib
+Group                    	:	LIBRARY
+Essential                	:	NO
+Description              	:	This package contains lib encryption binary.
+.
+
+Package                  	:	libencryption_dev
+Section                  	:	dev
+Group                    	:	DEVEL
+Essential                	:	NO
+Description              	:	This package contains development headers for libencryption.
+.
+

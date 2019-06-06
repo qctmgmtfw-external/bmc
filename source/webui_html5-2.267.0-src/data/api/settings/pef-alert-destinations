@@ -1,0 +1,23 @@
+[
+
+{ "interface" : "eth0", "ruleName" : "SNMP Trap", "addrFormat" : 0, "destAddr" : "10.0.0.0", "userID" : 0, "subject" : "", "message" : "" },  
+
+{ "interface" : "eth0", "ruleName" : "SNMP Trap", "addrFormat" : 0, "destAddr" : "10.0.0.1", "userID" : 0, "subject" : "", "message" : "" },  
+ 
+{ "interface" : "eth0", "ruleName" : "SNMP Trap", "addrFormat" : 0, "destAddr" : "10.0.0.2", "userID" : 0, "subject" : "", "message" : "" }, 
+
+{ "interface" : "eth0", "ruleName" : "Email Alert", "addrFormat" : 0, "destAddr" : "sprakash@amiindia.co.in", "userID" : 0, "subject" : "", "message" : "" },  
+
+{ "interface" : "eth0", "ruleName" : "SNMP Trap", "addrFormat" : 0, "destAddr" : "10.0.0.3", "userID" : 0, "subject" : "", "message" : "" },  
+
+{ "interface" : "eth1", "ruleName" : "Email Alert", "addrFormat" : 0, "destAddr" : "ami@amiindia.co.in", "userID" : 0, "subject" : "", "message" : "" },  
+
+{ "interface" : "eth1", "ruleName" : "Email Alert", "addrFormat" : 0, "destAddr" : "admin@amiindia.co.in", "userID" : 0, "subject" : "", "message" : "" },  
+
+{ "interface" : "eth1", "ruleName" : "Email Alert", "addrFormat" : 0, "destAddr" : "admin123@amiindia.co.in", "userID" : 0, "subject" : "", "message" : "" },  
+
+{ "interface" : "eth1", "ruleName" : "SNMP Trap", "addrFormat" : 0, "destAddr" : "10.0.0.4", "userID" : 0, "subject" : "", "message" : "" },  
+
+{ "interface" : "eth1", "ruleName" : "Email Alert", "addrFormat" : 0, "destAddr" : "admin456@amiindia.co.in", "userID" : 0, "subject" : "", "message" : "" }
+
+]

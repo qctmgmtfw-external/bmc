@@ -1,0 +1,113 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/video"><%= locale.video %></a></li><li><a href="#settings/video/sol"><%= locale.sol %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"><%= locale.sol_trigger_settings %></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger hide">
+                <!-- <i class="fa fa-ban"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                <div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.sol_trigger_settingsconfigure_which_event_on_the_page_will_trigger_the_sol_video_recording_option_to_start_you_can_checkuncheck_a_box_to_addremove_the_trigger_for_your_systembrbsaveb_click_save_to_save_any_changes_madebrbnoteb_the_date_and_time_should_be_in_advance_to_the_system_date_and_time %></div>
+    <label>
+        <input type="checkbox" value="1" id="idcritical_events_enable" > <%= locale.sol_trigger_settingscritical_events_temperaturevoltage %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="idnon_critical_events_enable" > <%= locale.sol_trigger_settingsnon_critical_events_temperaturevoltage %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="idnon_recoverable_events_enable" > <%= locale.sol_trigger_settingsnon_recoverable_events_temperaturevoltage %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="idfan_state_events_enable" > <%= locale.sol_trigger_settingsfan_state_changed_events %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="idwatchdog_events_enable" > <%= locale.sol_trigger_settingswatchdog_timer_events %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="idchasis_power_on_events_enable" > <%= locale.sol_trigger_settingschasis_power_on_events %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="idchasis_power_off_events_enable" > <%= locale.sol_trigger_settingschasis_power_off_events %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="idchasis_reset_events_enable" > <%= locale.sol_trigger_settingschasis_reset_events %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="idlpc_reset_events_enable" > <%= locale.sol_trigger_settingslpc_reset_events %>
+    </label>
+</div><div class="form-group">
+	<hr/>
+</div><div class="form-group"  >
+	
+    <label>
+        <input type="checkbox" value="1" id="iddate_time_events_enable" > <%= locale.sol_trigger_settingsdate_and_time_event %>
+    </label>
+</div><div class="form-group"  >
+	
+    <label for="pick-date"><%= locale.sol_trigger_settingsdate %></label>
+    <div class='input-group date' id='idpick-date' data-date-format="YYYY/MM/DD">
+        <input type='text' class="form-control" placeholder="YYYY/MM/DD" />
+        <span class="input-group-addon">
+            <span class="fa fa-calendar"></span>
+        </span>
+    </div>
+</div><div class="form-group"  >
+	
+    <label for="pick-time"><%= locale.sol_trigger_settingstime %></label>
+    <div class='input-group date' id='idpick-time'>
+        <input type='text' class="form-control" placeholder="" />
+        <span class="input-group-addon">
+            <span class="fa fa-clock-o"></span>
+        </span>
+    </div>
+</div><div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

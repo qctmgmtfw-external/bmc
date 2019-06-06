@@ -1,0 +1,225 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/media"><%= locale.media_redirection %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"><%= locale.general %></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger hide">
+                <!-- <i class="fa fa-ban"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                <div class="form-group" data-feature='LMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='LMEDIA'  role="alert"><%= locale.generalto_enable_or_disable_local_media_support_check_or_uncheck_the_checkbox_respectively %></div>
+    <label>
+        <input type="checkbox" value="1" id="idlocal_media_support" > <%= locale.generallocal_media_support %>
+    </label>
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generalto_enable_or_disable_remote_media_support_check_or_uncheck_the_checkbox_respectivelybr_if_it_is_selected_then_following_remote_media_types_will_be_displayedulli_cddvdli_lifloppylili_harddisk_liulon_selecting_the_individual_media_types_its_respective_configurations_will_be_displayedbr_user_can_configure_different_settings_for_different_remote_media_types %></div>
+    <label>
+        <input type="checkbox" value="1" id="idremote_media_support" > <%= locale.generalremote_media_support %>
+    </label>
+</div>
+
+<!--remote media part starts-->
+<div id="rmedia_parts">
+<!-- mount cd starts-->
+<div id="rmedia_cd_part" data-feature='RMEDIA'>
+<div class="form-group" data-feature='RMEDIA' >
+	<label>
+        <input type="checkbox" value="1" id="idmount_cd" > <%= locale.generalmount_cddvd %>
+    </label>
+</div>
+<!-- mount cd details starts-->
+<div id="rmedia_cd_details" data-feature='RMEDIA'>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generaladdress_of_the_server_where_the_remote_media_images_are_stored %></div>
+    <label for="cd_remote_server_address"><%= locale.generalserver_address_for_cddvd_images %></label>
+    <input type="text" class="form-control" id="idcd_remote_server_address" value="" placeholder="<%= locale.server_ip_or_host_name %>">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generalsource_path_to_the_remote_media_images %></div>
+    <label for="cd_remote_source_path"><%= locale.generalpath_in_server %></label>
+    <input type="text" class="form-control" id="idcd_remote_source_path" value="" placeholder="<%= locale.eg_optbmcnfs %>">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generalshare_type_of_the_remote_media_server_either_nfs_or_sambacifs %></div>
+	<label for="cd_remote_share_type"><%= locale.generalshare_type_for_cddvd %></label><br/>
+	<label>
+							        <input type='radio' value='nfs' name='cd_remote_share_type' id='idcd_remote_share_type' > <%= locale.generalnfs %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;<label>
+							        <input type='radio' value='cifs' name='cd_remote_share_type' id='idcd_remote_share_type' > <%= locale.generalcifs %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;    
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generalusername_password_and_domain_nameulliif_share_type_is_sambacifs_then_enter_user_credentials_to_authenticate_on_the_serverlilistrongnotestrong_domain_name_field_is_optionalliul %></div>
+    <label for="cd_remote_domain_name"><%= locale.generaldomain_name %></label>
+    <input type="text" class="form-control" id="idcd_remote_domain_name" value="" placeholder="">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	
+    <label for="cd_remote_user_name"><%= locale.generalusername %></label>
+    <input type="text" class="form-control" id="idcd_remote_user_name" value="" placeholder="">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	
+    <label for="cd_remote_password"><%= locale.generalpassword %></label>
+    <input type="password" class="form-control" id="idcd_remote_password" value="" placeholder="">
+</div>
+
+<div class="form-group">
+	<hr/>
+</div>
+</div>
+<!-- mount cd details ends-->
+</div>
+<!--mount cd ends-->
+
+<!--same settings starts-->
+<div id="rmedia_same_settings">
+<div class="form-group">
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.generalif_same_settings_for_floppyharddisk_images_option_selected_then_the_entered_cddvd_media_type_data_configurations_will_be_same_for_floppy_and_harddisk_remote_media_types %></div>
+    <label>
+        <input type="checkbox" value="1" id="idsame_settings" > <%= locale.generalsame_settings_for_floppyharddisk_images %>
+    </label>
+</div>
+<div class="form-group">
+	<hr/>
+</div>
+</div>
+<!--same settings ends-->
+
+<!--mount fd starts-->
+<div id="rmedia_fd_part" data-feature='RMEDIA'>
+<div class="form-group" data-feature='RMEDIA' >
+	<label>
+        <input type="checkbox" value="1" id="idmount_fd" > <%= locale.generalmount_floppy %>
+    </label>
+</div>
+<!-- mount fd details starts-->
+<div id="rmedia_fd_details" data-feature='RMEDIA'>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generaladdress_of_the_server_where_the_remote_media_images_are_stored %></div>
+    <label for="fd_remote_server_address"><%= locale.generalserver_address_for_floppy_images %></label>
+    <input type="text" class="form-control" id="idfd_remote_server_address" value="" placeholder="<%= locale.server_ip_or_host_name %>">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generalsource_path_to_the_remote_media_images %></div>
+    <label for="fd_remote_source_path"><%= locale.generalpath_in_server %></label>
+    <input type="text" class="form-control" id="idfd_remote_source_path" value="" placeholder="<%= locale.eg_optbmcnfs %>">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	
+	<label for="fd_remote_share_type"><%= locale.generalshare_type_for_floppy %></label><br/>
+	<label>
+							        <input type='radio' value='nfs' name='fd_remote_share_type' id='idfd_remote_share_type' > <%= locale.generalnfs %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;<label>
+							        <input type='radio' value='cifs' name='fd_remote_share_type' id='idfd_remote_share_type' > <%= locale.generalcifs %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;    
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generalusername_password_and_domain_nameulliif_share_type_is_sambacifs_then_enter_user_credentials_to_authenticate_on_the_serverlilistrongnotestrong_domain_name_field_is_optionalliul %></div>
+    <label for="fd_remote_domain_name"><%= locale.generaldomain_name %></label>
+    <input type="text" class="form-control" id="idfd_remote_domain_name" value="" placeholder="">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	
+    <label for="fd_remote_user_name"><%= locale.generalusername %></label>
+    <input type="text" class="form-control" id="idfd_remote_user_name" value="" placeholder="">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	
+    <label for="fd_remote_password"><%= locale.generalpassword %></label>
+    <input type="password" class="form-control" id="idfd_remote_password" value="" placeholder="">
+</div>
+<div class="form-group">
+	<hr/>
+</div>
+</div>
+<!-- mount fd details ends-->
+</div>
+<!--mount fd ends-->
+
+<!--mount hd starts-->
+<div id="rmedia_hd_part" data-feature='RMEDIA'>
+<div class="form-group" data-feature='RMEDIA' >
+	<label>
+        <input type="checkbox" value="1" id="idmount_hd" > <%= locale.generalmount_harddisk %>
+    </label>
+</div>
+<!-- mount hd details starts-->
+<div id="rmedia_hd_details" data-feature='RMEDIA'>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generaladdress_of_the_server_where_the_remote_media_images_are_stored %></div>
+    <label for="hd_remote_server_address"><%= locale.generalserver_address_for_harddisk_images %></label>
+    <input type="text" class="form-control" id="idhd_remote_server_address" value="" placeholder="<%= locale.server_ip_or_host_name %>">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generalsource_path_to_the_remote_media_images %></div>
+    <label for="hd_remote_source_path"><%= locale.generalpath_in_server %></label>
+    <input type="text" class="form-control" id="idhd_remote_source_path" value="" placeholder="<%= locale.eg_optbmcnfs %>">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	
+	<label for="hd_remote_share_type"><%= locale.generalshare_type_for_harddisk %></label><br/>
+	<label>
+							        <input type='radio' value='nfs' name='hd_remote_share_type' id='idhd_remote_share_type' > <%= locale.generalnfs %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;<label>
+							        <input type='radio' value='cifs' name='hd_remote_share_type' id='idhd_remote_share_type' > <%= locale.generalcifs %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;    
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	<div class="alert alert-info help-item hide"  data-feature='RMEDIA'  role="alert"><%= locale.generalusername_password_and_domain_nameulliif_share_type_is_sambacifs_then_enter_user_credentials_to_authenticate_on_the_serverlilistrongnotestrong_domain_name_field_is_optionalliul %></div>
+    <label for="hd_remote_domain_name"><%= locale.generaldomain_name %></label>
+    <input type="text" class="form-control" id="idhd_remote_domain_name" value="" placeholder="">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	
+    <label for="hd_remote_user_name"><%= locale.generalusername %></label>
+    <input type="text" class="form-control" id="idhd_remote_user_name" value="" placeholder="">
+</div>
+<div class="form-group" data-feature='RMEDIA' >
+	
+    <label for="hd_remote_password"><%= locale.generalpassword %></label>
+    <input type="password" class="form-control" id="idhd_remote_password" value="" placeholder="">
+</div>
+</div>
+<!-- mount hd details ends-->
+</div>
+<!--mount hd ends-->
+</div>
+<!--remote media part ends-->
+
+<div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

@@ -1,0 +1,3 @@
+{
+	"id": 1, "enable": 0, "ssl_enable": 0, "port": 389, "server_address": "10.0.0.102", "bind_dn": "cn=admin,ou=login,dc=domain,dc=com", "search_base": "ou=login,dc=domain,dc=com", "user_login_attribute": "cn"
+}

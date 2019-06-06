@@ -89,7 +89,7 @@ static int ast_peci_check_tx_fcs(void)
 	reg = (reg & AST_PECI_CAP_FCS_WR_FCS_MASK) >> AST_PECI_CAP_FCS_WR_FCS_SHIFT;
 	cap_fcs = (uint8_t) reg;
 
-	return (cap_fcs == hw_fcs) ? 0 : -1;
+	return ((cap_fcs != 0x00) && (cap_fcs == hw_fcs)) ? 0 : -1;
 }
 
 static int ast_peci_check_rx_fcs(void)

@@ -1,0 +1,4 @@
+
+# ------------------------ Configuration Links --------------------------------
+
+./etc/wide-dhcpv6/dhcp6c.conf -> /conf/dhcp6c.conf

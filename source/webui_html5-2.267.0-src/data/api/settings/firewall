@@ -1,0 +1,19 @@
+[
+	{
+		"id": 1,
+		"block_all": "IPV4",
+		"flush_all": 0,
+		"timeout": 1,
+		"start_time": 1406939138,
+		"end_time": 1408939138
+	},
+	{
+		"id": 2,
+		"block_all": "IPV6",
+		"flush_all": 0,
+		"timeout": 1,
+		"start_time": 1406939138,
+		"end_time": 1408939138
+	}
+]
+

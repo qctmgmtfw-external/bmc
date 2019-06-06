@@ -1,0 +1,14 @@
+#Extract Source	in %SOURCE
+extract_source: 
+
+#Build Source in %BUILD
+build_source:
+	CREATE_SYS_TREE %BUILD/%PACKAGE/spx/RULES.D %BUILD/%PACKAGE/data/tree 
+
+#Clean Source
+clean_source:
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+# Rules to create stay ip6tables pacakage
+build_package-sys_ip6tables:
+	PACK_SPX  ./   %BUILD/%PACKAGE/data/tree

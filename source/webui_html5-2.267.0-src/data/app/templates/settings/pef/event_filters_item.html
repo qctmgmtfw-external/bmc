@@ -1,0 +1,12 @@
+<div class="col-md-3 list-item">
+    <a href='#settings/pef/event_filters/edit/:id'>
+        <div class="col-md-3 icon">
+            <i class="ion-play iconic"></i>
+        </div>
+        <div class="col-md-9 contents">
+            <label class='pef_id'><span><%= locale.pef_id_ %></span><%= model.get('id') %></label> <em class='enable_filter'><% var av = model.get('enable_filter'); %><% if(av == '1'){  %><%= locale._enabled %><% } %><% if(av == '0'){  %><%= locale._disabled %><% } %><% if(av == '-1'){  %><%= locale._delete %><% } %></em> <div class='name'><span><%= locale.when_ %></span><%= model.get('name') %></div> <div class='trigger_event_severity'><span><%= locale.switches_to_ %></span><% var av = model.get('trigger_event_severity'); %><% if(av == 'unspecified'){  %><%= locale.any_severity %><% } %><% if(av == 'monitor'){  %><%= locale.new_monitor_state %><% } %><% if(av == 'information'){  %><%= locale.new_information %><% } %><% if(av == 'normal'){  %><%= locale.normal_state %><% } %><% if(av == 'non_critical'){  %><%= locale.noncritical_state %><% } %><% if(av == 'critical'){  %><%= locale.critical_state %><% } %><% if(av == 'non_recoverable'){  %><%= locale.nonrecoverable_state %><% } %></div> 
+            <label class='policy_group'><span><%= locale.run_ %></span><% var av = model.get('policy_group'); %><% if(av == '1'){  %><%= locale.alert_1_ %><% } %><% if(av == '2'){  %><%= locale.alert_2_ %><% } %><% if(av == '3'){  %><%= locale.alert_3_ %><% } %><% if(av == '4'){  %><%= locale.alert_4_ %><% } %><% if(av == '5'){  %><%= locale.alert_5_ %><% } %><% if(av == '6'){  %><%= locale.alert_6_ %><% } %><% if(av == '7'){  %><%= locale.alert_7_ %><% } %><% if(av == '8'){  %><%= locale.alert_8_ %><% } %><% if(av == '9'){  %><%= locale.alert_9_ %><% } %><% if(av == '10'){  %><%= locale.alert_10_ %><% } %><% if(av == '11'){  %><%= locale.alert_11_ %><% } %><% if(av == '12'){  %><%= locale.alert_12_ %><% } %><% if(av == '13'){  %><%= locale.alert_13_ %><% } %><% if(av == '14'){  %><%= locale.alert_14_ %><% } %><% if(av == '15'){  %><%= locale.alert_15_ %><% } %><span><%= locale.amp %></label> 
+            <label class='power_action'></span><% var av = model.get('power_action'); %><% if(av == 'none'){  %><%= locale._thats_it_ %><% } %><% if(av == 'power_down'){  %><%= locale._power_down_system_ %><% } %><% if(av == 'power_cycle'){  %><%= locale._power_cycle_system_ %><% } %><% if(av == 'power_reset'){  %><%= locale._reset_system_ %><% } %></label>             
+        </div>
+    </a>
+</div>

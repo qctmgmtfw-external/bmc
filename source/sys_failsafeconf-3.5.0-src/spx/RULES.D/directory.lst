@@ -1,0 +1,9 @@
+./etc/rc1.d
+./etc/rc3.d
+./etc/rc6.d
+./etc/rc7.d
+./etc/rc8.d
+./usr/bin/
+./usr/sbin/
+./lib/
+./usr/lib/

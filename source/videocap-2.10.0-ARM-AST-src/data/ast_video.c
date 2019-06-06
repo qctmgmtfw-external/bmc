@@ -1088,8 +1088,6 @@ void ast_video_set_1_scaling(struct ast_video_data *ast_video, struct ast_scalin
 
 void ast_video_mode_detect_trigger(struct ast_video_data *ast_video)
 {
-	int timeout = 0;
-
 	VIDEO_DBG("\n");
 
 	if(!(ast_videocap_read_reg(AST_VIDEO_SEQ_CTRL) & VIDEO_CAPTURE_BUSY)) {
@@ -1105,21 +1103,8 @@ void ast_video_mode_detect_trigger(struct ast_video_data *ast_video)
 	
 	ast_videocap_write_reg(ast_videocap_read_reg(AST_VIDEO_SEQ_CTRL) | VIDEO_DETECT_TRIGGER, AST_VIDEO_SEQ_CTRL);			
 
-#if 0 //-----Quanta+++
-	///without timeout it will be stuck here when host power off
-	wait_for_completion_interruptible(&ast_video->mode_detect_complete); //original code
-#else
+	wait_for_completion_interruptible(&ast_video->mode_detect_complete);
 	
-	timeout = wait_for_completion_interruptible_timeout(&ast_video->mode_detect_complete, 2*HZ);
-	
-	if (timeout == 0) { 
-		printk("mode_detect_complete timeout !\n");
-	} else {
-		//printk("mode_detect_complete time elapsed: %d \n", timeout); //for debug
-	}
-	
-#endif //-----Quanta+++
-
 	ast_videocap_write_reg(0, AST_VIDEO_INT_EN);	
 }
 
@@ -1217,9 +1202,8 @@ Redo:
 //			printk("Color Depth is not 16bpp or higher\n");
 			Direct_Mode = 0;
 		} else {
-			//printk("Color Depth is 16bpp or higher\n");
-			//Direct_Mode = 1; //original
-			Direct_Mode = 0; //Quanta test here
+//			printk("Color Depth is 16bpp or higher\n");
+			Direct_Mode = 1;
 		}
 	} else { //Original mode information
 		//Judge if bandwidth is not enough then enable direct mode in internal VGA
@@ -1251,11 +1235,9 @@ Redo:
 			Direct_Mode = 0;
 		} else {
 			if(ColorDepthIndex > 2) {
-#if 0 //we don't want to use direct mode here for temporarily
 				if((ast_video->src_fbinfo.x * ast_video->src_fbinfo.y) > (1024 * 768))
 						Direct_Mode = 1;
 				else
-#endif
 						Direct_Mode = 0;
 			} else {
 				Direct_Mode = 0;
@@ -1287,12 +1269,10 @@ void ast_video_auto_mode_trigger(struct ast_video_data *ast_video, struct ast_au
 	int timeout = 0;
 
 	VIDEO_DBG("\n");
-	//printk("ast_video_auto_mode_trigger auto_mode->engine_idx = %d\n", auto_mode->engine_idx);
 
 	if(ast_video->mode_change) {
 		auto_mode->mode_change = ast_video->mode_change;
 		ast_video->mode_change = 0;
-		//printk("ast_video_auto_mode_trigger 111\n");
 		return;
 	}
 
@@ -1319,8 +1299,6 @@ void ast_video_auto_mode_trigger(struct ast_video_data *ast_video, struct ast_au
 				auto_mode->total_size = ast_videocap_read_reg(AST_VIDEO_COMPRESS_DATA_COUNT);
 				auto_mode->block_count = ast_videocap_read_reg(AST_VIDEO_COMPRESS_BLOCK_COUNT) >> 16;
 			}
-
-			//printk("ast_video_auto_mode_trigger auto_mode->total_size = %d, auto_mode->block_count = %d\n", auto_mode->total_size, auto_mode->block_count);
 			
 			break;
 		case 1:

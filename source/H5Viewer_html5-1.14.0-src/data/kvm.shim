@@ -1,0 +1,9 @@
+	,
+	"video": ["datastream", "base64", "usbmessage", "utils", "event_listener", "ivtp", "mjbuilder",
+            "softkeys", "touch_event_listener", "usbkeyboardenglish","usbkeyboardgerman",
+            "usbkeyboardmessage", "usbmousemessage",
+            "videosocket", "decode_worker", "usermacros", "oem_app" , "hardwareCursor"],
+    "datastream": ["encoding", "encoding-indexes"],
+    "videoplayback": ["jquery", "datastream", "base64", "event_listener", "mjbuilder",
+            "utils", "decode_worker"]
+            

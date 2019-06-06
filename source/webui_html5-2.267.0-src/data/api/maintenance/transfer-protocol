@@ -1,0 +1,5 @@
+{ 
+
+	"id" : 1, "prototype" : "HTTP", "server_address" : "10.0.3.193", "share_path" : "/home/share", "retry_count" : 1 
+
+}

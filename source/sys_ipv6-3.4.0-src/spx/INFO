@@ -1,0 +1,33 @@
+Source : sys_ipv6
+Version : 3.4.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : arunkumars (arunkumars@amiindia.co.in)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : sys_ipv6
+Build-Depends : Crosscc, Target, wide_dhcpv6(>=1.0.0), BaseSystem
+Architecture : ALL
+Urgency : medium
+Description : This Package Contains all the IPv6 related files. This package is needed for all the IPv6 related functionalities.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : sys_ipv6
+Config-Tag : IPv6 Support
+Section : sys
+Group : BASE
+Essential : NO
+Required : wide_dhcpv6
+Description : ipv6 System Package which creates ipv6 spported files.
+.
+

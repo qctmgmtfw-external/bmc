@@ -1,0 +1,41 @@
+Source : libipmi
+Version : 3.107.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : SP Core Team (spcoreteam@ami.com)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : libipmi, libipmi_dev
+Build-Depends : Crosscc, rules, global_dev, libnetwork_dev, libsmtp_dev, libflash_dev, libunix_dev, libfmh_dev, ipmi_dev, libdbgout_dev, libipmiparams, libncml_dev, ipmipdk_dev, libsnmpusers_dev, libpamhelper_dev, libencryption_dev, win32api_headers, libversionmgt_dev, libi2c_dev
+Architecture : ALL
+Urgency : medium
+Description : This package includes IPMI library.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libipmi
+Config-Tag : IPMI Library (libipmi) Support
+Section : lib
+Group : IPMI
+Essential : NO
+Depends : ipmimain
+Required : libsmtp, libipmiparams, libsnmpusers, libpamhelper, libencryption
+Description : IPMI Library Binary
+.
+
+Package : libipmi_dev
+Section : dev
+Group : DEVEL
+Essential : NO
+Description : LIBIPMI development header files.
+.
+

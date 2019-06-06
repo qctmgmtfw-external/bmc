@@ -1,0 +1,24 @@
+Source                   	:	sys_failsafeconf
+Version : 3.5.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Joey Chen  (JoeyChen@ami.com.tw)
+License                  	:	AMI
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	sys_failsafeconf
+Build-Depends            	:	BaseSystem, Target
+Architecture             	:	ANY
+Urgency : medium
+Description              	:	This package contains fail-safe configuration related files.
+.
+
+Package                  	:	sys_failsafeconf
+Config-Tag               	:	Fail-safe conf support
+Section                  	:	sys
+Group                    	:	FEATURES
+Essential                	:	NO
+Description              	:	fail-safe conf system package which contains required files for fail-safe conf functionalities
+.
+

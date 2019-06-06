@@ -1,0 +1,40 @@
+# List of Supported Rules
+supported_rules: extract_source build_source clean_source
+
+#Extract Source	in %SOURCE
+extract_source:
+	MKDIR_CLEAN %SOURCE/%PACKAGE/data/.workspace
+	UNTAR_GZ  %SOURCE/%PACKAGE/data/fcgi.tar.gz  %SOURCE/%PACKAGE/data/.workspace
+	RENAME %SOURCE/%PACKAGE/data/.workspace/fcgi-2.4.1-SNAP-0311112127  %SOURCE/%PACKAGE/data/.workspace/libfcgi
+	
+
+#Build Source in %BUILD
+build_source:
+	CWD %BUILD/%PACKAGE/data/.workspace/libfcgi
+	SET_VALUE PACKAGE_NAME %PACKAGE
+	SET_VALUE BUILDAREA %DEVAREA/Build
+	INVOKE_SHELL Buildfcgi.sh
+
+#Clean Source
+clean_source:
+	CWD %BUILD/%PACKAGE/data
+	INVOKE_MAKE clean
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+# Rules to create libfcgi package
+build_package-libfcgi:
+	PACK_SPX  ./   %BUILD/%PACKAGE/data/.workspace/libfcgi/OUTPUT/usr/local/lib/libfcgi.so.0.0.0
+
+build_package-libfcgi_dev:
+	MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp/lib
+	COPY_FILE %BUILD/%PACKAGE/data/.workspace/libfcgi/include/fastcgi.h %TEMPDIR/%PACKAGE/tmp/
+	COPY_FILE %BUILD/%PACKAGE/data/.workspace/libfcgi/include/fcgiapp.h %TEMPDIR/%PACKAGE/tmp/
+	COPY_FILE %BUILD/%PACKAGE/data/.workspace/libfcgi/include/fcgimisc.h %TEMPDIR/%PACKAGE/tmp/
+	COPY_FILE %BUILD/%PACKAGE/data/.workspace/libfcgi/include/fcgio.h %TEMPDIR/%PACKAGE/tmp/
+	COPY_FILE %BUILD/%PACKAGE/data/.workspace/libfcgi/include/fcgios.h %TEMPDIR/%PACKAGE/tmp/
+	COPY_FILE %BUILD/%PACKAGE/data/.workspace/libfcgi/include/fcgi_stdio.h %TEMPDIR/%PACKAGE/tmp/
+	#COPY_FILE %BUILD/%PACKAGE/data/.workspace/libfcgi/OUTPUT/usr/local/lib/libfcgi.a %TEMPDIR/%PACKAGE/tmp
+	#COPY_FILE %BUILD/%PACKAGE/data/.workspace/libfcgi/OUTPUT/usr/local/lib/libfcgi.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %TEMPDIR/%PACKAGE/tmp
+	COPY_DIR %BUILD/%PACKAGE/data/.workspace/libfcgi/OUTPUT/usr/local/lib %TEMPDIR/%PACKAGE/tmp/lib
+	PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+	

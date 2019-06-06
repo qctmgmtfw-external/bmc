@@ -1,0 +1,20 @@
+--- uboot/board/ast2500evb/ast2500evb.c	2017-06-27 18:04:59.433280145 +0800
++++ uboot/board/ast2500evb/ast2500evb_new.c	2017-06-28 14:19:33.000000000 +0800
+@@ -91,7 +91,7 @@
+
+ 	return 0;
+ }
+-#ifdef CONFIG_BOARDID_IN_EEPROM_DONT_USE
++#if 0
+ // Quanta ------
+ #define CFG_I2C_CHANNEL_ID	CONFIG_SPX_FEATURE_GLOBAL_UBOOT_ENABLE_I2C_BUS /* channel number in PRJ */
+ #define AST_I2C_CHANNEL_BASE ((CFG_I2C_CHANNEL_ID < 7)? 0x1E78A040 + (0x040 * (CFG_I2C_CHANNEL_ID)) : 0x1E78A300 + (0x040 * (CFG_I2C_CHANNEL_ID - 7)))
+@@ -312,7 +312,7 @@
+
+ #endif
+
+-#ifdef CONFIG_BOARDID_IN_EEPROM_DONT_USE
++#if 0
+ 	boardid_init();
+ #endif
+

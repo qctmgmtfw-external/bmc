@@ -244,9 +244,7 @@ ncsi_set_settings(struct net_device *netdev, struct ethtool_cmd *ecmd)
 	/* Validate Inputs */
 	if (ecmd->speed != SPEED_10 &&
             ecmd->speed != SPEED_100 &&
-            ecmd->speed != SPEED_1000 &&
-            ecmd->speed != SPEED_10000 &&
-            ecmd->speed != SPEED_25000)
+            ecmd->speed != SPEED_1000)
                 return -EINVAL;
         if (ecmd->duplex != DUPLEX_HALF && ecmd->duplex != DUPLEX_FULL)
                 return -EINVAL;
@@ -260,10 +258,7 @@ ncsi_set_settings(struct net_device *netdev, struct ethtool_cmd *ecmd)
 		NcsiSpeed =  LINK_ENABLE_100_MBPS;
 	if (ecmd->speed == SPEED_1000)
 		NcsiSpeed =  LINK_ENABLE_1000_MBPS;
-	if (ecmd->speed == SPEED_10000)
-		NcsiSpeed =  LINK_ENABLE_10_GBPS;
-	if (ecmd->speed == SPEED_25000)
-		NcsiSpeed =  LINK_ENABLE_25_GBPS;	
+
 	if (ecmd->duplex== DUPLEX_FULL)
 		NcsiDuplex =  LINK_ENABLE_FULL_DUPLEX;
 	if (ecmd->duplex== DUPLEX_HALF)
@@ -295,7 +290,6 @@ ncsi_set_settings(struct net_device *netdev, struct ethtool_cmd *ecmd)
 
 	}
 	mdelay (3000);
-	DisplayLinkStatus(info,LINK_STATUS_UP, 1);
 	/* Force settings might have change the link properties*/
 	InitEthtoolInfo(info);
 	return err;
@@ -321,8 +315,7 @@ GetEthtoolInfoFromLink (NCSI_IF_INFO *info, UINT32 LinkStatus)
 	ecmd->supported = (SUPPORTED_Autoneg |
             SUPPORTED_10baseT_Half   | SUPPORTED_10baseT_Full   |
             SUPPORTED_100baseT_Half  | SUPPORTED_100baseT_Full  |
-            SUPPORTED_1000baseT_Full | SUPPORTED_10000baseT_Full |            
-            SUPPORTED_25000baseT_Full);
+            SUPPORTED_1000baseT_Half | SUPPORTED_1000baseT_Full);
 
 	/* Not applicable to NCSI. Set some values */
 	ecmd->port = 0;
@@ -375,16 +368,12 @@ GetEthtoolInfoFromLink (NCSI_IF_INFO *info, UINT32 LinkStatus)
 			break;
 		case LINK_10GT:			
 			ecmd->duplex  = DUPLEX_FULL;
-			ecmd->speed   =  SPEED_10000;	//??
+			ecmd->speed   =  SPEED_1000;	//??
 			break;
 		case LINK_100T4:						
 			ecmd->speed =  SPEED_100;
 			ecmd->duplex  = DUPLEX_FULL;	//??
 			break;
-		case LINK_25GT:			
-			ecmd->duplex  = DUPLEX_FULL;
-			ecmd->speed   =  SPEED_25000;	//??
-			break;				
 		default:
 			ecmd->speed = SPEED_10;
 			ecmd->duplex = DUPLEX_HALF;

@@ -1,0 +1,5 @@
+{
+
+	"id" : 1, "SDR" : 1, "FRU" : 1, "SEL": 1, "IPMI" : 0 , "Network" : 0 , "NTP" : 0 , "SNMP" : 0 , "SSH" : 1 , "KVM" : 1 , "Authentication" : 1 
+	
+}

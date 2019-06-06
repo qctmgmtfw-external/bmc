@@ -1,0 +1,121 @@
+#!/bin/sh
+
+# /etc/init.d/rsyncconfd: start rsyncconf to run fail-save configuration Service
+#
+# chkconfig: 2345 90 91
+#Runlevel : 1 = K91
+#Runlevel : 3 = S90
+#Runlevel : 6 = K91
+#Runlevel : 7 = K91
+#Runlevel : 8 = K91
+# Restart the service on warm reboot
+#Runlevel : 9 = K91
+#Runlevel : 9 = S91
+
+CONF_DIR="conf"
+EXTLOG_DIR="extlog"
+BKUPCONF_DIR="bkupconf"
+DUPFSTAB="/etc/dupfstab"
+CORE_FEATURES="/etc/core_features"
+
+ ShouldBeSkipped()
+ {
+        echo $1 | grep "^#" > /dev/null
+        if [ $? == 0 ]
+        then
+            return 1
+        fi
+        if [ "`echo $1`" == "" ]
+        then
+            return 1
+        fi
+
+        return 0
+  }
+
+ isfeatureenabled()
+ {
+        feature="$1"
+
+        if [ -f $CORE_FEATURES ]
+        then
+            line=`cat $CORE_FEATURES | grep -w $feature`
+            if [ "$line" == "" ]; then
+                    return 0
+            fi
+
+            ShouldBeSkipped $line
+            if [ $? == 1 ]; then
+                    return 0
+            fi
+
+            return 1
+        fi
+
+        return 0
+ }
+
+start_rsync() {
+
+    SECTION=$1
+    check_proc rsyncconf /bkup$SECTION
+        if [ $? == 1 ]; then
+           chkdf=`df -h | grep -w -c "/bkup$SECTION"`
+           if [ "$chkdf" -eq "1" ]; then
+              echo "Starting Fail Safe Services for /bkup$SECTION"
+             /etc/rsyncconf.sh /$SECTION /bkup$SECTION &
+           fi
+        fi
+}
+
+#
+# function check_bkupconf,
+# it will check if there is a bkupconf partition in fstab.
+# And it will return 1 if success.
+#
+do_start() {
+      
+      isfeatureenabled CONFIG_SPX_FEATURE_GLOBAL_FAILSAFECONF
+      if [ $? == 1 ]; then
+         start_rsync $CONF_DIR
+      fi
+
+      isfeatureenabled CONFIG_SPX_FEATURE_GLOBAL_FAILSAFEEXTLOG
+      if [ $? == 1 ]; then
+         start_rsync $EXTLOG_DIR
+      fi
+
+}
+
+check_proc()
+{
+
+    chkpid=`ps -efa | grep -w "$1" | grep -c "$2"`
+	
+    if [ "$chkpid" -ge "1" ]; then 
+	return 0
+    else
+	return 1 	
+    fi	
+}
+
+
+case "$1" in
+  start)
+        do_start
+	if [ $? != 0 ]; then 
+            echo "Fail to start the Fail-Safe configuration Service ..."
+	    echo "."	
+	fi
+    ;;
+  stop)    	
+      	echo "Stopping fail-safe configuration Service..."
+      	killall inotifywait rsyncconf.sh rsync
+      	echo "." 
+    ;;
+   *)
+    echo "Usage: /etc/init.d/rsyncconfd {start|stop}"
+    exit 1
+esac
+
+exit 0

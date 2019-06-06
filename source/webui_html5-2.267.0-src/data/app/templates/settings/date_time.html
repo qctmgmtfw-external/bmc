@@ -1,0 +1,121 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li>
+        <li class="active">
+            <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-12">
+        <div class="box box-primary animated fadeInUp">
+            <div class="box-header">
+                <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+                <h3 class="box-title"><%= locale.general_date_timeconfigure_date_amp_time %></h3>
+            </div>
+            <div class="box-body">
+                <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                    <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+                </div>
+                <div class="alert alert-danger hide">
+                    <!-- <i class="fa fa-ban"></i> -->
+                    <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                    <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+                </div>
+				<div class="client-validation " id='Validationerror'>
+				</div>
+                <form class="container" id="idtimestamp_form" action="javascript://" method="POST" role="form">
+                    <div class="form-group"  >
+                        <div class="alert alert-info help-item hide"    role="alert"><%= locale.general_date_timethis_field_is_used_to_set_the_date_on_the_bmc %></div>
+
+                        <div class='input-group date ntpdate col-xs-offset-1 col-xs-8' id='iddate-picker'>
+                            <input type='text' class="form-control roText" placeholder="" readonly="readonly" />
+                            <span class="input-group-addon clock-icon">
+                                <span class="fa fa-clock-o"></span>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <div id="id_tzmap" class='animated fadeIn'>
+                    <div class="map-bg">
+                        <div id="id_map_inner" style="background-image: url(./images/world.png);">
+                            <div id="map_x"></div>
+                            <div id="map_y"></div>
+                        </div>
+                    </div>
+                </div>
+                <form class="container form-inline" action="javascript://" method="POST" role="form">
+                    <hr/>
+                    <div class="form-group col-sm-6" data-feature='NTP_SERVER_SUPPORT' >
+                        <div class="alert alert-info help-item hide"  data-feature='NTP_SERVER_SUPPORT'  role="alert"><%= locale.general_date_timethis_field_is_used_to_configure_a_primary_ntp_server_to_use_when_automatically_setting_the_date_and_time %></div>
+
+                        <label for="primary_ntp"><%= locale.general_date_timeprimary_ntp_server %></label>
+                        <input type="text" class="form-control" id="idprimary_ntp" value="" placeholder="<%= locale.ntp_server_name %>">
+                    </div>
+                    
+                    <div class="form-group col-sm-6" data-feature='NTP_SERVER_SUPPORT' >
+                        <div class="alert alert-info help-item hide"  data-feature='NTP_SERVER_SUPPORT'  role="alert"><%= locale.general_date_timethis_field_is_used_to_configure_a_secondary_ntp_server_to_use_when_automatically_setting_the_date_and_time %></div>
+
+                        <label for="secondary_ntp"><%= locale.general_date_timesecondary_ntp_server %></label>
+                        <input type="text" class="form-control" id="idsecondary_ntp" value="" placeholder="<%= locale.ntp_server_name %>">
+                    </div>
+<!-- <div class="alert alert-info help-item hide"    role="alert"><%= locale.general_date_timethis_field_is_used_to_set_the_timezone_of_the_bmc %></div><div class="form-group"  >
+<label for="timezone"><%= locale.general_date_timetimezone %></label>
+<select name="timezone" id="idtimezone" class="form-control">
+<optgroup label="US (Common)" id="US_Common">
+</optgroup>
+<optgroup label="America" id="America">
+</optgroup>
+<optgroup label="Europe" id="Europe">
+</optgroup>
+<optgroup label="Asia" id="Asia">
+</optgroup>
+<optgroup label="Africa" id="Africa">
+</optgroup>
+<optgroup label="Australia" id="Australia">
+</optgroup>
+<optgroup label="Indian" id="Indian">
+</optgroup>
+<optgroup label="Atlantic" id="Atlantic">
+</optgroup>
+<optgroup label="Pacific" id="Pacific">
+</optgroup>
+<optgroup label="Antarctica" id="Antarctica">
+</optgroup>
+<optgroup label="Arctic" id="Arctic">
+</optgroup>
+<optgroup label="UTC" id="UTC">
+</optgroup>
+<optgroup label="Manual Offsets" id="Manual Offsets">
+</optgroup>
+</select>
+</div> -->
+                </form>
+                <form class="container" action="javascript://" method="POST" role="form">
+                    <hr/>
+                    
+                    <div class="form-group" data-feature='NTP_SERVER_SUPPORT' >
+                        <div class="alert alert-info help-item hide"  data-feature='NTP_SERVER_SUPPORT'  role="alert"><%= locale.general_date_timethis_field_is_used_to_enabledisable_the_use_of_ntp_servers_to_automatically_set_the_date_and_time %></div>
+                        
+                        <label>
+                            <input type="checkbox" value="1" id="idauto_sync_ntp" > <%= locale.general_date_timeautomatic_date_amp_time %>
+                        </label>
+                    </div>
+                    <div class="col-xs-offset-10">
+                        <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        <!-- /.box-body -->
+        </div>
+    </div>
+</section>

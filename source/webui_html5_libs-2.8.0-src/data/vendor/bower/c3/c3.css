@@ -1,7 +1,6 @@
 /*-- Chart --*/
 .c3 svg {
-  font: 10px sans-serif;
-  -webkit-tap-highlight-color: transparent; }
+  font: 10px sans-serif; }
 
 .c3 path, .c3 line {
   fill: none;
@@ -12,11 +11,7 @@
   -moz-user-select: none;
   user-select: none; }
 
-.c3-legend-item-tile,
-.c3-xgrid-focus,
-.c3-ygrid,
-.c3-event-rect,
-.c3-bars path {
+.c3-legend-item-tile, .c3-xgrid-focus, .c3-ygrid, .c3-event-rect, .c3-bars path {
   shape-rendering: crispEdges; }
 
 .c3-chart-arc path {
@@ -75,11 +70,11 @@
 /*-- Region --*/
 .c3-region {
   fill: steelblue;
-  fill-opacity: .1; }
+  fill-opacity: 0.1; }
 
 /*-- Brush --*/
 .c3-brush .extent {
-  fill-opacity: .1; }
+  fill-opacity: 0.1; }
 
 /*-- Select - Drag --*/
 /*-- Legend --*/
@@ -94,10 +89,6 @@
   fill: white;
   stroke: lightgray;
   stroke-width: 1; }
-
-/*-- Title --*/
-.c3-title {
-  font: 14px sans-serif; }
 
 /*-- Tooltip --*/
 .c3-tooltip-container {

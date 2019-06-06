@@ -1,0 +1,11 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %SPXINC/videorecordcfg
+		COPY_FILE ./videorecord_cfg.h %SPXINC/videorecordcfg
+		MKDIR_NOCLEAN %SPXLIB/videorecordcfg
+		COPY_FILE ./libvideorecordcfg.a %SPXLIB/videorecordcfg
+		COPY_FILE ./libvideorecordcfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %SPXLIB/videorecordcfg
+		ADD_LIBRARY_LINKS %SPXLIB/videorecordcfg libvideorecordcfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		
+debug-install:

@@ -1,0 +1,23 @@
+<!-- <div class="modal fade" id="script-editor-modal"> -->
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"> <%=locale.close%></span></button>
+        <h4 class="modal-title" contenteditable="true"></h4>
+      </div>
+      <div class="modal-body">
+        <p>
+          <textarea id="script-code"></textarea>
+        </p>
+        <p class="" id="script-debug-output">
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-close" data-dismiss="modal"> 
+          <%=locale.close%></button>
+        <button type="button" class="btn btn-warning btn-test"> <%=locale.test_run%></button>
+        <button type="button" class="btn btn-primary btn-save"> <%=locale.save_changes%></button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+<!-- </div>/.modal -->

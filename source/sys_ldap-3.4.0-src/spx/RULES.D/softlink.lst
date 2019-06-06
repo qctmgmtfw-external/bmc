@@ -1,0 +1,16 @@
+#/usr/lib/libldap_r-2.4.so.2	 -> libldap_r-2.4.so.2.5.6
+#/usr/lib/libldap_r.so		 -> libldap_r-2.4.so.2.5.6
+#/usr/lib/libldap-2.4.so.2	 -> libldap_r-2.4.so.2
+#/usr/lib/liblber-2.4.so.2	 -> liblber-2.4.so.2.5.6
+#/usr/lib/liblber.so		 -> liblber-2.4.so.2.5.6
+#/usr/lib/libsasl2.so.2		 -> libsasl2.so.2.0.23
+#/usr/lib/libgnutls.so.26	 -> libgnutls.so.26.14.12
+#/usr/lib/libtasn1.so.3		 -> libtasn1.so.3.1.9
+#/usr/lib/libgpg-error.so	 -> libgpg-error.so.0.4.0
+#/usr/lib/libgpg-error.so.0	 -> libgpg-error.so.0.4.0
+#/usr/lib/libgcrypt.so		 -> libgcrypt.so.11.5.3
+#/usr/lib/libgcrypt.so.11	 -> libgcrypt.so.11.5.3
+
+/etc/pam_ldap.conf -> /conf/ldap.conf
+
+

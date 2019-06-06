@@ -1,0 +1,36 @@
+# List of Supported Rules
+supported_rules: extract_source build_source clean_source
+
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+	CREATE_SYS_TREE %BUILD/%PACKAGE/spx/RULES.D %BUILD/%PACKAGE/data/tree 
+				
+#Clean Source
+clean_source:
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create sys_ipv6 package
+build_package-sys_ipv6:
+		MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+		MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp/tree
+		COPY_FILE %BUILD/%PACKAGE/data/dhcp6c-script %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/03-up-slaactimingconf %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/globalipv6remove.sh %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/ipv6autoconf.sh %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/interfaces.0x1 %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/interfaces.0x2 %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/interfaces.0x3 %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/interfaces.0x4 %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/interfaces.mncx4 %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/dhcp6c.conf.0x1 %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/dhcp6c.conf.0x2 %TEMPDIR/%PACKAGE/tmp		
+		COPY_FILE %BUILD/%PACKAGE/data/dhcp6c.conf.0x3 %TEMPDIR/%PACKAGE/tmp		
+		COPY_FILE %BUILD/%PACKAGE/data/dhcp6c.conf.0x4 %TEMPDIR/%PACKAGE/tmp		
+		COPY_FILE %BUILD/%PACKAGE/data/dhcp6c.conf.mncx4 %TEMPDIR/%PACKAGE/tmp
+		COPY_DIR %BUILD/%PACKAGE/data/tree %TEMPDIR/%PACKAGE/tmp/tree
+		PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+		

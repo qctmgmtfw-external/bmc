@@ -1,0 +1,213 @@
+Package: sys_slp (3.3.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/sys_slp/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:31:55 EST
+
+Package: sys_slp (3.2.0); urgency = low
+
+Abstract:
+	Added extra files and fixes for future target migrations and strict compilers
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 23 Jul 2015 14:33:34 EDT
+
+Package: sys_slp (3.1.0); urgency = medium
+
+Abstract:
+	Changes done to assign proper run levels
+
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: Winston (winstont@ami.com) Mon, 22 Jun 2015 01:36:34 EDT
+
+Package: sys_slp (3.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:41:39 GMT
+
+Package: sys_slp (2.12.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:06:26 GMT
+
+Package: sys_slp (2.11.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:18:27 GMT
+
+Package: sys_slp (2.10.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:16:54 EDT
+
+Package: sys_slp (2.9.0); urgency = low
+
+Abstract:
+	changed LICENSE from SLP-V2 to CALDERA
+
+Files Added: spx/LICENSES/LICENSE.CALDERA
+Files Deleted: spx/LICENSES/LICENSE.SLP-V2
+Files Modified: spx/INFO
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Wed, 10 Jul 2013 14:21:53 MMT
+
+Package: sys_slp (2.8.0); urgency = low
+
+Abstract:
+	Changed the source and binary license to SLP-V2.
+
+Files Added: spx/LICENSES/LICENSE.SLP-V2
+Files Deleted: spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.BSD, spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Mon, 01 Jul 2013 20:25:20 HMT
+
+Package: sys_slp (2.7.0); urgency = medium
+
+Abstract:
+	Correct the License Info
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Deleted: spx/LICENSES/LICENSE.OPENSOURCE
+Files Modified: spx/INFO
+
+--Submitter: BordonKuo (BordonKuo.ami.com.tw) Wed, 26 Jun 2013 12:33:32 CST
+
+Package: sys_slp (2.6.0); urgency = low
+
+Abstract:
+	Versions of library is not hard coded. The correct version of library is taken by travesing from <library>.so file
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 20 Jun 2012 14:46:06 EDT
+
+Package: sys_slp (2.5.0); urgency = high
+
+Abstract:
+	license file added
+
+Files Added: spx/LICENSES/LICENSE.OPENSOURCE
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 29 Mar 2012 16:06:00 EDT
+
+Package: sys_slp (2.4.0); urgency = low
+
+Abstract:
+	License Fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 19 Jan 2012 10:08:12 EST
+
+Package: sys_slp (2.3.0); urgency = high
+
+Abstract:
+	package created again to include the proper license file
+
+Files Added: spx/LICENSES/LICENSE.BSD
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 24 Jun 2011 11:32:16 EDT
+
+Package: sys_slp (2.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:42:33 EDT
+
+Package: sys_slp (2.1.0); urgency = high
+
+Abstract:
+	binary package license corrected to BSD style
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 09 May 2011 17:35:07 EDT
+
+Package: sys_slp (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:55:27 EST
+
+Package: sys_slp (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:17:40 EDT
+
+Package: sys_slp (1.0.4); urgency = low
+
+Abstract:
+	Added Runlevel 8 entries
+
+Files Modified: spx/RULES.D/directory.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 11 May 2010 14:12:01 EDT
+
+Package: sys_slp (1.0.3); urgency = low
+
+Abstract:
+	SLP is made to start last in rcS runlevel.
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Winston (winstonv@amiindia.co.in) Mon, 22 Mar 2010 20:06:16 IST
+
+Package: sys_slp (1.0.2); urgency = low
+
+Abstract:
+	Removing unwanted files from sys_slp package.
+
+Files Deleted: data/defaults/conf, data/defaults/conf/slpservice.conf, data/defaults/conf/slp.reg, data/defaults/etc/slpreg.sh
+Files Modified: data/defaults/etc/init.d/slpd, spx/INFO
+
+--Submitter: Winston (winstonv@amiindia.co.in) Fri, 12 Mar 2010 16:59:18 IST
+
+Package: sys_slp (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:16:15 EST
+
+Package:sys_slp (1.0.0);urgency=new
+
+Abstract:
+	System Package which provides SLPD support and registration of SLP services.
+
+Files Added: defaults
+
+--Submitter: Ramesh Suthan (rameshsuthanp@amiindia.co.in) Tue, 19 Jan 2010 14:34:08 +0530

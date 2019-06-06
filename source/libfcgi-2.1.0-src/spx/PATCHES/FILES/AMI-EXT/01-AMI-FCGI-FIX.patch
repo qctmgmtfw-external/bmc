@@ -1,0 +1,11 @@
+--- fcgi-2.4.1-SNAP-0311112127/include/fcgio.h	2002-02-25 08:16:11.000000000 -0500
++++ fcgi/include/fcgio.h	2013-12-19 15:36:38.443956688 -0500
+@@ -31,7 +31,7 @@
+ #define FCGIO_H
+ 
+ #include <iostream>
+-
++#include <stdio.h>
+ #include "fcgiapp.h"
+ 
+ #ifndef DLLAPI

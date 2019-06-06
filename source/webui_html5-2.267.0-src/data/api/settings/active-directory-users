@@ -1,0 +1,9 @@
+[
+	 
+	{ "id" : 1, "role_group_name" : "unixusers1", "role_group_domain" : "megaracami.com", "role_group_privilege" : "administrator", "role_group_kvm_privilege" : 1, "role_group_vmedia_privilege": 0 },
+	{ "id" : 2, "role_group_name" : "unixusers2", "role_group_domain" : "megarac.com", "role_group_privilege" : "user", "role_group_kvm_privilege" : 0, "role_group_vmedia_privilege": 1 },
+	{ "id" : 3, "role_group_name" : "unixusers3", "role_group_domain" : "mega.com", "role_group_privilege" : "oem", "role_group_kvm_privilege" : 1, "role_group_vmedia_privilege": 1 },
+	{ "id" : 4, "role_group_name" : "unixusers4", "role_group_domain" : "testmega.com", "role_group_privilege" : "operator", "role_group_kvm_privilege" : 1, "role_group_vmedia_privilege": 0 },
+	{ "id" : 5, "role_group_name" : "unixusers5", "role_group_domain" : "megatesting.com", "role_group_privilege" : "none", "role_group_kvm_privilege" : 0, "role_group_vmedia_privilege": 1 } 
+	 
+]

@@ -1,0 +1,16 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./tree %IMAGE_TREE
+	COPY_FILE ./dhcp6c-script %IMAGE_TREE/etc/dhcp6c-script
+        COPY_FILE ./interfaces.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/etc/defconfig/interfaces
+        COPY_FILE ./interfaces.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/conf/interfaces
+        COPY_FILE ./dhcp6c.conf.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/etc/defconfig/dhcp6c.conf
+        COPY_FILE ./dhcp6c.conf.%CONFIG_SPX_FEATURE_GLOBAL_NIC_COUNT %IMAGE_TREE/conf/dhcp6c.conf
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_NCSI_MULTI_NODE_CX4" == "YES" ]; then cp ./interfaces.mncx4 %IMAGE_TREE/etc/defconfig/interfaces; cp ./interfaces.mncx4 %IMAGE_TREE/conf/interfaces; cp ./dhcp6c.conf.mncx4 %IMAGE_TREE/etc/defconfig/dhcp6c.conf; cp ./dhcp6c.conf.mncx4 %IMAGE_TREE/conf/dhcp6c.conf; fi
+	COPY_FILE ./03-up-slaactimingconf %IMAGE_TREE/etc/network/if-up.d/
+	COPY_FILE ./ipv6autoconf.sh %IMAGE_TREE/etc/network/if-up.d/02-up-ipv6autoconf
+	COPY_FILE ./globalipv6remove.sh %IMAGE_TREE/etc/network/globalipv6remove.sh
+        EXECUTE if [ "%CONFIG_SPX_FEATURE_GLOBAL_IPV6" == "YES" ]; then echo "CONFIG_SPX_FEATURE_GLOBAL_IPV6=IPV6_SUPPORT" >> %IMAGE_TREE/etc/core_features; fi
+	
+debug-install:

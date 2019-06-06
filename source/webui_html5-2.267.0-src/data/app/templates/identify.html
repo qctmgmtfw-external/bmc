@@ -1,0 +1,50 @@
+
+<section class="content-header">
+    <h1>
+        <%=locale.srv_identify%>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%=locale.home%></a></li>
+        <li class="active">
+            <small><%=locale.srv_identify%></small>
+        </li>
+    </ol>
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div role="alert" class="alert alert-info help-item hide"><%= locale.page_desc %></div>
+    <div class="col-md-4">
+
+    <div class="box box-info animated fadeInUp" style="width:700px">
+        <div class="box-header">
+            <h3 class="box-title"><%=locale.srv_identify%></h3>
+        </div>
+        <br><div id="led_status" style="font-weight:bold;color:#3c8dbc"></div></br>
+        <div class="form-group">
+            <label>
+                <input type='radio' value='1' name='identify_status' id='idsystem_identify_on'> <%= locale.identify_on %>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type='radio' value='0' name='identify_status' id='idsystem_identify_off'> <%= locale.identify_off %>
+            </label>
+        </div>
+        <div class="form-group">
+            <label>
+                <input type='radio' value='2' name='identify_status' id='idsystem_identify_blink'> <%= locale.identify_blink %>
+            </label>
+        </div>
+        <div class="form-group" >
+            <td valign="top"><h6><%=locale.timeout%></h6>
+            <input type="text" class="form-control" id="blink_timeout" value="15" placeholder="" name="blink_timeout"></td>
+        </div>
+        <div class="pull-right">
+            <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-eye"></i> &nbsp; <%= locale.perform_action %></a>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

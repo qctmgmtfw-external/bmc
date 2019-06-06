@@ -1,0 +1,162 @@
+Package: libsnmp_hostname_mib (2.3.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/libsnmp_hostname_mib/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 22:07:36 EST
+
+Package: libsnmp_hostname_mib (2.2.0); urgency = medium
+
+Abstract:
+	Fix for bleeding edge compilation errors
+
+Files Modified: data/amiMibModule.c
+
+--Submitter: Prashant Vyankatrao Bharade (prashantbharadev@amiindia.co.in) Mon, 28 Dec 2015 22:30:48 HMT
+
+Package: libsnmp_hostname_mib (2.1.0); urgency = medium
+
+Abstract:
+	Updated proper AMI Enterprise value in SNMP library.
+
+Files Modified: data/amiMibModule.c
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 05 Aug 2015 16:21:19 HMT
+
+Package: libsnmp_hostname_mib (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 05:32:31 GMT
+
+Package: libsnmp_hostname_mib (1.13.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 11:12:49 HMT
+
+Package: libsnmp_hostname_mib (1.12.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:07:15 GMT
+
+Package: libsnmp_hostname_mib (1.11.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:19:21 GMT
+
+Package: libsnmp_hostname_mib (1.10.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:28:10 EDT
+
+Package: libsnmp_hostname_mib (1.9.0); urgency = medium
+
+Abstract:
+	Fixed source EXTRACTION break while creating project in MDS using GPL packages
+
+Files Modified: spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install
+
+--Submitter: Anand Krishnan V (anandkrishnanv@amiindia.co.in) Fri, 20 Sep 2013 22:34:40 HMT
+
+Package: libsnmp_hostname_mib (1.8.0); urgency = low
+
+Abstract:
+	Fix Duplicate Registration Mib Module
+
+Files Modified: spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install
+
+--Submitter: jcchiu (jcchiu@ami.com.tw) Fri, 22 Jun 2012 18:40:34 CST
+
+Package: libsnmp_hostname_mib (1.7.0); urgency = low
+
+Abstract:
+	removed empty P.CONFIG files
+
+Files Deleted: spx/DEFCONFIG, spx/P.CONFIG
+
+--Submitter: sena (senathipathyt@ami.com) Wed, 08 Feb 2012 15:51:34 IST
+
+Package: libsnmp_hostname_mib (1.6.0); urgency = high
+
+Abstract:
+	update config file for /conf and /etc/defconfig
+
+Files Modified: data/Makefile, spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 08 Jul 2011 10:55:27 EDT
+
+Package: libsnmp_hostname_mib (1.5.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:11:59 EDT
+
+Package: libsnmp_hostname_mib (1.4.0); urgency = high
+
+Abstract:
+	Change include path to get libraries from target include dir
+
+Files Modified: data/Makefile
+
+--Submitter: michaelw (michaelw@ami.com) Thu, 12 May 2011 15:16:51 EDT
+
+Package: libsnmp_hostname_mib (1.3.0); urgency = high
+
+Abstract:
+	Makefile update for dynamic library, require libhostname added, using libhostname properly now
+
+Files Modified: data/Makefile, data/amiMibModule.c, data/amiMibModule.h, spx/INFO
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 29 Apr 2011 12:57:51 EDT
+
+Package: libsnmp_hostname_mib (1.2.0); urgency = high
+
+Abstract:
+	correxted error in append line and updated makefile
+
+Files Modified: data/Makefile, spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install
+
+--Submitter: michaelw (michaelw@ami.com) Wed, 27 Apr 2011 11:08:18 EDT
+
+Package: libsnmp_hostname_mib (1.1.0); urgency = high
+
+Abstract:
+	corrected error in header file
+
+Files Modified: data/amiMibModule.h
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 22 Apr 2011 17:00:24 EDT
+
+Package: libsnmp_hostname_mib (1.0.0); urgency = new
+
+Abstract:
+	SNMP Hostname Extension
+
+Files Added: data, data/Makefile, data/amiMibModule.c, data/amiMibModule.h, spx, spx/CHANGELOG, spx/DEFCONFIG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/libsnmp_hostname_mib, spx/PACKAGES.D/libsnmp_hostname_mib/DATA, spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS, spx/PACKAGES.D/libsnmp_hostname_mib/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: michaelw (michaelw@ami.com) Fri, 22 Apr 2011 16:35:01 EDT
+

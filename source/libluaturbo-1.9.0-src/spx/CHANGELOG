@@ -1,0 +1,91 @@
+Package: libluaturbo (1.9.0); urgency = high
+
+Abstract:
+	Correcting the Date header
+
+Files Modified: data/turbo/util.lua
+
+--Submitter: Garret Naegle (garretn@ami.com) Thu, 11 Aug 2016 17:47:07 EDT
+
+Package: libluaturbo (1.8.0); urgency = medium
+
+Abstract:
+	Updating Help
+
+Files Modified: spx/INFO
+
+--Submitter: sountharya R (sountharyar@amiindia.co.in) Mon, 01 Aug 2016 10:55:23 HMT
+
+Package: libluaturbo (1.7.0); urgency = high
+
+Abstract:
+	Fixing compilation errors
+
+Files Modified: data/deps/turbo_ffi_wrap.c
+
+--Submitter: Garret Naegle (garretn@ami.com) Thu, 07 Jul 2016 12:44:50 EDT
+
+Package: libluaturbo (1.6.0); urgency = medium
+
+Abstract:
+	.keep files changed to keep.folder
+
+Files Added: spx/PACKAGES.D/libluaturbo/DATA/keep.folder
+Files Deleted: spx/PACKAGES.D/libluaturbo/DATA/.keep
+
+--Submitter: Samvinesh Christopher (vinesh@ami.com) Thu, 05 May 2016 16:44:51 EDT
+
+Package: libluaturbo (1.5.0); urgency = high
+
+Abstract:
+	Upgrading to Turbo version 2.0.4
+
+Files Modified: data/Makefile, data/turbo.lua, data/turbo/async.lua, data/turbo/httputil.lua, data/turbo/ioloop.lua, data/turbo/iostream.lua, data/turbo/mustache.lua, data/turbo/web.lua, data/turbo/websocket.lua, spx/INFO
+
+--Submitter: Clark Kerr (clarkk@ami.com) Thu, 03 Mar 2016 19:08:25 LMT
+
+Package: libluaturbo (1.4.0); urgency = high
+
+Abstract:
+	Fixing compiler errors
+
+Files Modified: data/deps/turbo_ffi_wrap.c
+
+--Submitter: Garret Naegle (garretn@ami.com) Wed, 06 Jan 2016 16:28:16 EST
+
+Package: libluaturbo (1.3.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/libluaturbo/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 21:51:48 EST
+
+Package: libluaturbo (1.2.0); urgency = critical
+
+Abstract:
+	Fix lib copy in rules
+
+Files Modified: spx/RULES
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Fri, 09 Oct 2015 11:05:57 EWT
+
+Package: libluaturbo (1.1.0); urgency = high
+
+Abstract:
+	Added dep sys_lua
+
+Files Modified: spx/INFO
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Wed, 30 Sep 2015 21:06:13 EWT
+
+Package: libluaturbo (1.0.0); urgency = new
+
+Abstract:
+	Lua turbo web framework
+
+Files Added: data, data/LICENSE, data/Makefile, data/Makefile-tffi, data/README.rst, data/bin, data/bin/turbovisor, data/deps, data/deps/turbo_ffi_wrap.c, data/deps/turbo_ffi_wrap.h, data/turbo, data/turbo.lua, data/turbo/3rdparty, data/turbo/3rdparty/JSON.lua, data/turbo/3rdparty/middleclass, data/turbo/3rdparty/middleclass.lua, data/turbo/3rdparty/middleclass/MIT-LICENSE.txt, data/turbo/3rdparty/middleclass/middleclass.lua, data/turbo/async.lua, data/turbo/ca-certificates.crt, data/turbo/cdef.lua, data/turbo/coctx.lua, data/turbo/crypto.lua, data/turbo/crypto_linux.lua, data/turbo/crypto_luasec.lua, data/turbo/epoll_ffi.lua, data/turbo/escape.lua, data/turbo/fs.lua, data/turbo/hash.lua, data/turbo/http_response_codes.lua, data/turbo/httpserver.lua, data/turbo/httputil.lua, data/turbo/inotify.lua, data/turbo/ioloop.lua, data/turbo/iosimple.lua, data/turbo/iostream.lua, data/turbo/log.lua, data/turbo/mime_types.lua, data/turbo/mustache.lua, data/turbo/platform.lua, data/turbo/signal.lua, data/turbo/socket_ffi.lua, data/turbo/sockutil.lua, data/turbo/structs, data/turbo/structs/buffer.lua, data/turbo/structs/bufferptr.lua, data/turbo/structs/deque.lua, data/turbo/syscall.lua, data/turbo/tcpserver.lua, data/turbo/util.lua, data/turbo/web.lua, data/turbo/websocket.lua, data/turbovisor.lua, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.APACHE, spx/PACKAGES.D, spx/PACKAGES.D/libluaturbo, spx/PACKAGES.D/libluaturbo/DATA, spx/PACKAGES.D/libluaturbo/SCRIPTS, spx/PACKAGES.D/libluaturbo/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Chandrasekar.R (chandrasekarr@ami.com) Thu, 03 Sep 2015 18:28:31 EWT
+

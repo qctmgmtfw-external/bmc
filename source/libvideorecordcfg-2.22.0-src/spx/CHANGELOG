@@ -1,0 +1,593 @@
+Package: libvideorecordcfg (2.22.0); urgency = medium
+
+Abstract:
+	Fix for EIP 255748 : [PILOT4]: AMI OEM Command :Video Record Configuration Commands: Under Pre Event Configuration, Video Duration is allowed to set to 0 seconds
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Nandakumar Nanjappan (nandakumarn@amiindia.co.in) Tue, 23 Feb 2016 11:16:45 HMT
+
+Package: libvideorecordcfg (2.21.0); urgency = medium
+
+Abstract:
+	Fix For Fortify Issue
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Nandakumar Nanjappan (nandakumarn@amiindia.co.in) Wed, 10 Feb 2016 12:22:35 HMT
+
+Package: libvideorecordcfg (2.20.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/libvideorecordcfg/DATA/.keep, spx/PACKAGES.D/libvideorecordcfg_dev/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 22:16:55 EST
+
+Package: libvideorecordcfg (2.19.0); urgency = medium
+
+Abstract:
+	Fix For Bleeding Edge Compilation Errors
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: rajaj (jraja@amiindia.co.in) Mon, 28 Dec 2015 21:52:48 IST
+
+Package: libvideorecordcfg (2.18.0); urgency = low
+
+Abstract:
+	Change done to remove multiple definitions of MAX_HOSTNAME_LEN macro
+
+Files Modified: data/Makefile, data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Mon, 21 Sep 2015 15:37:30 HMT
+
+Package: libvideorecordcfg (2.17.0); urgency = low
+
+Abstract:
+	added changes to check return value of snprintf
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: deepesh jain (deepeshjain@amiindia.co.in) Mon, 10 Aug 2015 18:55:29 HMT
+
+Package: libvideorecordcfg (2.16.0); urgency = medium
+
+Abstract:
+	Increased the dns name size from 64 to 128.
+
+Files Modified: data/videorecord_cfg.h
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Wed, 15 Jul 2015 14:21:46 HMT
+
+Package: libvideorecordcfg (2.15.0); urgency = medium
+
+Abstract:
+	added oem jar file as resource
+
+Files Modified: data/video_record.jnlp
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Thu, 02 Jul 2015 19:34:46 HMT
+
+Package: libvideorecordcfg (2.14.0); urgency = medium
+
+Abstract:
+	fix for autovideo record page crash
+
+Files Modified: data/videorecord_cfg.h
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Tue, 30 Jun 2015 13:02:02 HMT
+
+Package: libvideorecordcfg (2.13.0); urgency = medium
+
+Abstract:
+	fix for fortify issues (value never used)
+
+Files Modified: data/videorecord_cfg.c, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Raja Jayavelu (jraja@amiindia.co.in) Tue, 23 Jun 2015 23:49:54 HMT
+
+Package: libvideorecordcfg (2.12.0); urgency = medium
+
+Abstract:
+	Modified video file name to specify start time clearly
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 13 May 2015 14:33:30 HMT
+
+Package: libvideorecordcfg (2.11.0); urgency = medium
+
+Abstract:
+	replacing signals with pipe communication
+
+Files Modified: data/videorecord_cfg.h, spx/LICENSES/LICENSE.AMI
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 04 May 2015 11:22:45 HMT
+
+Package: libvideorecordcfg (2.10.0); urgency = medium
+
+Abstract:
+	Implemented SOL Video Remote Storage, Video Trigger Settings and SOL Trigger Settings on HTML5 WEBUI.
+
+Files Modified: data/videorecord_cfg.h
+
+--Submitter: kalaivananm (kalaivananm@amiindia.co.in) Fri, 17 Apr 2015 22:04:42 HMT
+
+Package: libvideorecordcfg (2.9.0); urgency = medium
+
+Abstract:
+	Added function to check video folder size
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 31 Mar 2015 14:49:02 HMT
+
+Package: libvideorecordcfg (2.8.0); urgency = medium
+
+Abstract:
+	Modified memcpy with snprintf.
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Mon, 16 Mar 2015 18:53:33 HMT
+
+Package: libvideorecordcfg (2.7.0); urgency = medium
+
+Abstract:
+	Forify Fixes.
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Manish M (manishm@amiindia.co.in) Fri, 06 Mar 2015 23:06:50 HMT
+
+Package: libvideorecordcfg (2.6.0); urgency = medium
+
+Abstract:
+	pre-event video; increased path size to hold foldername
+
+Files Modified: data/videorecord_cfg.h
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Mon, 02 Mar 2015 20:48:26 HMT
+
+Package: libvideorecordcfg (2.5.0); urgency = medium
+
+Abstract:
+	added noserverino to prevent EOVERFLOW
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Thu, 19 Feb 2015 15:55:01 HMT
+
+Package: libvideorecordcfg (2.4.0); urgency = high
+
+Abstract:
+	Rectifying fortify fixes
+
+Files Modified: data/videorecord_cfg.c, spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Tue, 17 Feb 2015 16:08:02 IST
+
+Package: libvideorecordcfg (2.3.0); urgency = medium
+
+Abstract:
+	#fixed x86 build break.
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 05 Feb 2015 10:34:41 GMT
+
+Package: libvideorecordcfg (2.2.0); urgency = medium
+
+Abstract:
+	fix for file name
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 14 Jan 2015 15:26:36 GMT
+
+Package: libvideorecordcfg (2.1.0); urgency = medium
+
+Abstract:
+	#Autovideo record : max duration,size,count configurable
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h, spx/INFO
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 08 Jan 2015 14:44:09 GMT
+
+Package: libvideorecordcfg (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 05:40:20 GMT
+
+Package: libvideorecordcfg (1.41.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 11:20:10 HMT
+
+Package: libvideorecordcfg (1.40.0); urgency = medium
+
+Abstract:
+	Updated Group Field Information
+
+Files Modified: spx/INFO
+
+--Submitter: hariharanr (rhariharan@amiindia.co.in) Thu, 16 Oct 2014 13:08:12 GMT
+
+Package: libvideorecordcfg (1.39.0); urgency = medium
+
+Abstract:
+	set java max heap size to 1024M for huge video file size
+
+Files Modified: data/video_record.jnlp
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Mon, 06 Oct 2014 16:50:27 CST
+
+Package: libvideorecordcfg (1.38.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 07:14:13 GMT
+
+Package: libvideorecordcfg (1.37.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:26:16 GMT
+
+Package: libvideorecordcfg (1.36.0); urgency = medium
+
+Abstract:
+	fixed issue in video file naming and scaning video folder
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 05 Sep 2014 14:11:23 CST
+
+Package: libvideorecordcfg (1.35.0); urgency = low
+
+Abstract:
+	Added an option to get video record status.
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Mon, 01 Sep 2014 18:15:22 HMT
+
+Package: libvideorecordcfg (1.34.0); urgency = low
+
+Abstract:
+	changes wrt test mount command.
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: ramakrishna (nagaramakrishnak@amiindia.co.in) Tue, 12 Aug 2014 21:51:32 HMT
+
+Package: libvideorecordcfg (1.33.0); urgency = low
+
+Abstract:
+	Changes to allow unlimited number of video dumps when remote mount path chosen and chnaged record name as vide_dump_HostName_Timstamp.dat
+
+Files Modified: data/videorecord_cfg.h
+
+--Submitter: ramakrishna (nagaramakrishnak@amiindia.co.in) Wed, 30 Jul 2014 16:58:56 HMT
+
+Package: libvideorecordcfg (1.32.0); urgency = medium
+
+Abstract:
+	#updated ocde to save proper mount statuc in conf file
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 25 Jul 2014 15:01:58 CST
+
+Package: libvideorecordcfg (1.31.0); urgency = medium
+
+Abstract:
+	Fixing fortify issues for videorecord
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Thu, 03 Jul 2014 15:33:15 CST
+
+Package: libvideorecordcfg (1.30.0); urgency = medium
+
+Abstract:
+	Updated jnlp to download JViewer-AVIStream.jar file.
+
+Files Modified: data/video_record.jnlp
+
+--Submitter: deepakmn (deepakmn@amiindia.co.in) Tue, 17 Jun 2014 18:19:53 HMT
+
+Package: libvideorecordcfg (1.29.0); urgency = low
+
+Abstract:
+	removed the else condition to make code proper
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Tue, 27 May 2014 16:05:06 UTC
+
+Package: libvideorecordcfg (1.28.0); urgency = low
+
+Abstract:
+	added condition to remove umount errors while video redirection
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Gourav Kumar Garg (gouravkumarg@amiindia.co.in) Tue, 27 May 2014 09:33:56 UTC
+
+Package: libvideorecordcfg (1.27.0); urgency = low
+
+Abstract:
+	Modified umount to use busybox umount command instead of umount().
+
+Files Modified: data/videorecord_cfg.c, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Mon, 28 Apr 2014 14:22:39 HMT
+
+Package: libvideorecordcfg (1.26.0); urgency = medium
+
+Abstract:
+	Modified fn. to display pre-event videorecording files
+
+Files Modified: data/Makefile, data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Durga C (durgac@amiindia.co.in) Thu, 31 Oct 2013 23:46:57 CST
+
+Package: libvideorecordcfg (1.25.0); urgency = medium
+
+Abstract:
+	Added Pre-event(pre-crash/pre-reset) video recoring feature
+
+Files Added: data/update_conf
+Files Modified: data/autorecord.conf, data/videorecord_cfg.c, data/videorecord_cfg.h, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Durga C (durgac@amiindia.co.in) Fri, 25 Oct 2013 00:37:45 CST
+
+Package: libvideorecordcfg (1.24.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:34:36 EDT
+
+Package: libvideorecordcfg (1.23.0); urgency = medium
+
+Abstract:
+	#Force NFS mount to use Version 2 to avaoid stat() failure with 64-bit offset share.
+	#Version 2 of the NFS protocol limited file offsets to a 32-bit quantity
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 29 Aug 2013 09:26:26 GMT
+
+Package: libvideorecordcfg (1.22.0); urgency = high
+
+Abstract:
+	Replaced Rmount with mount
+
+Files Modified: data/videorecord_cfg.c, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Wed, 13 Mar 2013 18:20:16 HMT
+
+Package: libvideorecordcfg (1.21.0); urgency = low
+
+Abstract:
+	Added support to sync INI files
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Mon, 11 Mar 2013 21:06:56 HMT
+
+Package: libvideorecordcfg (1.20.0); urgency = low
+
+Abstract:
+	Run all the init scripts in background
+
+Files Modified: data/videorecord_cfg.h
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Thu, 07 Mar 2013 14:27:31 GMT
+
+Package: libvideorecordcfg (1.19.0); urgency = medium
+
+Abstract:
+	Added header file w.r.t iniparser design change
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Manoj Ashok (manoja@amiindia.co.in) Tue, 26 Feb 2013 18:52:59 HMT
+
+Package: libvideorecordcfg (1.18.0); urgency = medium
+
+Abstract:
+	#Updated return error code to display proper error msg in webpage
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 04 Sep 2012 18:46:36 IST
+
+Package: libvideorecordcfg (1.17.0); urgency = medium
+
+Abstract:
+	#implemented semaphore lock to avoid deleting currently recodring file
+	#configuration will be saved even mount fails
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Tue, 28 Aug 2012 17:44:03 IST
+
+Package: libvideorecordcfg (1.16.0); urgency = medium
+
+Abstract:
+	#Handled mount failure cases and adviser restarts in autovideo record
+
+Files Modified: data/autorecord.conf, data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Fri, 29 Jun 2012 00:34:30 IST
+
+Package: libvideorecordcfg (1.15.0); urgency = medium
+
+Abstract:
+	# Auto Video recording feature : added support for remote Storage Space
+
+Files Modified: data/autorecord.conf, data/videorecord_cfg.c, data/videorecord_cfg.h, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Wed, 20 Jun 2012 21:06:02 IST
+
+Package: libvideorecordcfg (1.14.0); urgency = medium
+
+Abstract:
+	#Modified jnlp file
+
+Files Modified: data/video_record.jnlp
+
+--Submitter: gopinaths (gopinaths@amiindia.co.in) Thu, 09 Jun 2011 03:19:39 IST
+
+Package: libvideorecordcfg (1.13.0); urgency = high
+
+Abstract:
+	Fixed EIP 60797:Recorded Video files are deleted wrongly
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 25 May 2011 23:24:36 EDT
+
+Package: libvideorecordcfg (1.12.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:16:01 EDT
+
+Package: libvideorecordcfg (1.11.0); urgency = high
+
+Abstract:
+	Removed the unnecessary stunnel restart for videorecording config change
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 13 May 2011 02:06:40 EDT
+
+Package: libvideorecordcfg (1.10.0); urgency = high
+
+Abstract:
+	Moved the autorecord.conf from adviser to libvideorecordcfg for video record feature isolation
+
+Files Added: data/autorecord.conf
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 07 Apr 2011 10:55:06 EDT
+
+Package: libvideorecordcfg (1.9.0); urgency = high
+
+Abstract:
+	Fixed the extra junk gets padded into the file info structure.
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Thu, 03 Mar 2011 00:41:26 EST
+
+Package: libvideorecordcfg (1.8.0); urgency = high
+
+Abstract:
+	Created the Java folder for copying the video record JNLP.
+
+Files Modified: spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 22:28:04 IST
+
+Package: libvideorecordcfg (1.7.0); urgency = high
+
+Abstract:
+	Added video record feature in UI.
+
+Files Added: data/video_record.jnlp
+Files Deleted: data/jviewer_video.jnlp
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Arockia Selva Rani.A (arockiaa@amiindia.co.in) Wed, 02 Mar 2011 16:21:40 IST
+
+Package: libvideorecordcfg (1.6.0); urgency = high
+
+Abstract:
+	JNLP file needs to be copied to www/Java for Video Recording functionality
+
+Files Modified: spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 01 Mar 2011 13:04:37 EST
+
+Package: libvideorecordcfg (1.5.0); urgency = high
+
+Abstract:
+	Adding the JNLP file for loading the Java App for Video recording functionality
+
+Files Added: data/jviewer_video.jnlp
+Files Modified: spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 28 Feb 2011 15:42:53 EST
+
+Package: libvideorecordcfg (1.4.0); urgency = high
+
+Abstract:
+	Modified the locking mechanism for the videorecording data file using counter semaphores
+
+Files Modified: data/videorecord_cfg.c, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Mon, 28 Feb 2011 13:13:10 EST
+
+Package: libvideorecordcfg (1.3.0); urgency = high
+
+Abstract:
+	Modified the return when the lock is not got by this process
+
+Files Modified: data/videorecord_cfg.c
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 23 Feb 2011 10:23:13 EST
+
+Package: libvideorecordcfg (1.2.0); urgency = high
+
+Abstract:
+	Added Locking when deleting the data file
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Feb 2011 18:42:47 EST
+
+Package: libvideorecordcfg (1.1.0); urgency = high
+
+Abstract:
+	Added APIs to support Web interface to handle the dump files
+
+Files Modified: data/videorecord_cfg.c, data/videorecord_cfg.h
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Wed, 16 Feb 2011 18:28:34 EST
+
+Package: libvideorecordcfg (1.0.0); urgency = new
+
+Abstract:
+	This package includes the APIs related to handling the configuration file for Auto Video Recording feature
+
+Files Added: data, data/Makefile, data/videorecord_cfg.c, data/videorecord_cfg.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/LICENSES/LICENSE.GPL-V2, spx/PACKAGES.D, spx/PACKAGES.D/libvideorecordcfg, spx/PACKAGES.D/libvideorecordcfg/DATA, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS, spx/PACKAGES.D/libvideorecordcfg/SCRIPTS/dev-install, spx/PACKAGES.D/libvideorecordcfg_dev, spx/PACKAGES.D/libvideorecordcfg_dev/DATA, spx/PACKAGES.D/libvideorecordcfg_dev/SCRIPTS, spx/PACKAGES.D/libvideorecordcfg_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Tue, 01 Feb 2011 17:44:53 EST
+

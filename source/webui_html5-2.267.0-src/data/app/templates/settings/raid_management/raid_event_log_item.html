@@ -1,0 +1,14 @@
+
+	<td><readonly class='controller_name'><%= model.get('controller_name') %></readonly></td><td><readonly class='record_id'><%= model.get('record_id') %></readonly></td><td><readonly class='timestamp'><%= moment.unix(model.get('timestamp')).utc().format('MM/DD/YYYY') %></readonly></td><td><readonly class='event_code'><%= model.get('event_code') %></readonly></td><td><readonly class='event_type'><% var av = model.get('event_type'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.unknown %><% } %><% if(av == '1'){ avset = true;  %><%= locale.event_type_1 %><% } %><% if(av == '2'){ avset = true;  %><%= locale.event_type_2 %><% } %><% if(av == '3'){ avset = true;  %><%= locale.event_type_3 %><% } %><% if(av == '4'){ avset = true;  %><%= locale.event_type_4 %><% } %><% if(av == '5'){ avset = true;  %><%= locale.event_type_5 %><% } %><% if(av == '6'){ avset = true;  %><%= locale.event_type_6 %><% } %><% if(av == '7'){ avset = true;  %><%= locale.event_type_7 %><% } %><% if(av == '8'){ avset = true;  %><%= locale.event_type_8 %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td><td><readonly class='event_class'><% var av = model.get('event_class'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.info_events %><% } %><% if(av == '1'){ avset = true;  %><%= locale.warning_events %><% } %><% if(av == '2'){ avset = true;  %><%= locale.critical_events %><% } %><% if(av == '3'){ avset = true;  %><%= locale.fatal_events %><% } %><% if(av == '4'){ avset = true;  %><%= locale.dead_events %><% } %><% if(av == '5'){ avset = true;  %><%= locale.progress_events %><% } %><% if(av == '6'){ avset = true;  %><%= locale.debug_events %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td>
+	<td>
+		<readonly class='event_desc'><%= model.get('event_desc') %></readonly>
+		<!--<a class="btn btn-success hide description"><i class="ion-arrow-up-a"></i></a>
+
+		<a class="btn btn-%%btn_color hide action-2" href="%%custom-link-2"><i class="%%custom-icon-2"></i></a>
+		<a class="btn btn-%%btn_color hide action-3" href="%%custom-link-3"><i class="%%custom-icon-3"></i></a>
+		<a class="btn btn-%%btn_color hide action-4" href="%%custom-link-4"><i class="%%custom-icon-4"></i></a>
+		<a class="btn btn-success hide edit" href="#settings/raid_management/raid_event_log/edit/:id"><i class="ion ion-edit"></i></a>
+		<a class="btn btn-danger hide delete" href="#settings/raid_management/raid_event_log/edit/:id"><i class="ion ion-close-circled"></i></a>-->
+	</td>
+	<!--<td><readonly class='event_desc'><%= model.get('event_desc') %></readonly></td>-->
+

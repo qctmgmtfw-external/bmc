@@ -1,0 +1,4 @@
+[
+	{ "eth_index" : 0, "interface_name" : "eth0", "auto_negotiation" : 1, "support_config" :  { "half" : [10, 100, 1000] ,  "full" : [10, 100, 1000] } },  
+	{ "eth_index" : 1, "interface_name" : "eth1", "auto_negotiation" : 1, "support_config" : { "half" : [10, 100] , "full" : [10, 100] } }
+]

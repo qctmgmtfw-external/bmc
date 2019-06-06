@@ -1,0 +1,24 @@
+Source                   	:	defaulthost
+Version : 2.2.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Anurag Bhatia  (anuragb@ami.com)
+License                  	:	AMI
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	defaulthost
+Build-Depends            	:	Crosscc, rules, libhostname_dev, global_dev
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	This package includes default host application that runs duringsystem startup to configure the hostname.
+.
+
+Package                  	:	defaulthost
+Section                  	:	app
+Group                    	:	BASE
+Essential                	:	YES
+Required                 	:	libhostname, BaseSystem
+Description              	:	This package includes the defaulthost application.
+.
+

@@ -118,8 +118,7 @@ void NAME##_func(regmatch_t MATCHES[]) { \
 end_handler_auth: \
 		if(headers){}; \
 		if(post_authorized_call_hook) post_authorized_call_hook(req, sess); \
-		if(sess->getint(sess, "authorized") ==1) \
-			qcgisess_save(sess); \
+		qcgisess_save(sess); \
 		sess->free(sess); \
 		        if(post_call_hook) post_call_hook(req); \
 		        req->free(req); \

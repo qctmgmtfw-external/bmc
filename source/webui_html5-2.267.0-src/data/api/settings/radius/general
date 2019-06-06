@@ -1,0 +1,8 @@
+{
+	"enable": 1,
+	"server_address": "",
+	"port": "",
+	"secret": "",
+	"kvm": 1,
+	"vmedia": 0
+}

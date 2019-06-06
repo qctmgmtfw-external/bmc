@@ -1,0 +1,218 @@
+<section class="content-header">
+    <h1>
+        <%= locale.event_filter_configuration %>
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/pef"><%= locale.platform_event_filters %></a></li><li><a href="#settings/pef/event_filters"><%= locale.event_filters %></a></li>
+        <li class="active">
+           <%= locale.event_filter_configuration %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success alert-dismissable hide">
+                <i class="fa fa-check"></i>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger alert-dismissable hide">
+                <i class="fa fa-ban"></i>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterscheck_the_option_enable_to_enable_the_pef_settings %></div>
+    <label>
+        <input type="checkbox" value="1" id="idenable_filter" > <%= locale.event_filtersenable_this_filter %>
+    </label>
+</div>
+<div class="form-group hide" > <!-- Quanta add hide class -->
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_any_one_of_the_event_severity_from_the_dropdown_list %></div>
+    <label for="trigger_event_severity"><%= locale.event_filtersevent_severity_to_trigger %></label>
+    <select name="trigger_event_severity" id="idtrigger_event_severity" class="form-control">
+    	<option value='unspecified'><%= locale.event_filtersany_severity %></option><option value='monitor'><%= locale.event_filtersnew_monitor_state %></option><option value='information'><%= locale.event_filtersnew_information %></option><option value='normal'><%= locale.event_filtersnormal_state %></option><option value='non_critical'><%= locale.event_filtersnoncritical_state %></option><option value='critical'><%= locale.event_filterscritical_state %></option><option value='non_recoverable'><%= locale.event_filtersnonrecoverable_state %></option>
+    </select>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_power_action_to_be_either_power_down_power_reset_or_power_cycle_from_the_dropdown_list %></div>
+    <label for="power_action"><%= locale.event_filterspower_action %></label>
+    <select name="power_action" id="idpower_action" class="form-control">
+    	<option value='none'><%= locale.event_filtersnone %></option><option value='power_down'><%= locale.event_filterspower_down %></option><option value='power_cycle'><%= locale.event_filterspower_cycle %></option><option value='power_reset'><%= locale.event_filtersreset_system %></option>
+    </select>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_configured_alert_policy_number_from_the_dropdown_list_strongnotestrong_alert_policy_can_be_configured_under_configurationpefalert_policy %></div>
+    <label for="policy_group"><%= locale.event_filtersalert_policy_group_number %></label>
+    <select name="policy_group" id="idpolicy_group" class="form-control">
+    	<option value='1'><%= locale.event_filters1 %></option>
+        <option value='2'><%= locale.event_filters2 %></option>
+        <option value='3'><%= locale.event_filters3 %></option>
+        <option value='4'><%= locale.event_filters4 %></option>
+        <option value='5'><%= locale.event_filters5 %></option>
+        <option value='6'><%= locale.event_filters6 %></option>
+        <option value='7'><%= locale.event_filters7 %></option>
+        <option value='8'><%= locale.event_filters8 %></option>
+        <option value='9'><%= locale.event_filters9 %></option>
+        <option value='10'><%= locale.event_filters10 %></option>
+        <option value='11'><%= locale.event_filters11 %></option>
+        <option value='12'><%= locale.event_filters12 %></option>
+        <option value='13'><%= locale.event_filters13 %></option>
+        <option value='14'><%= locale.event_filters14 %></option>
+        <option value='15'><%= locale.event_filters15 %></option>
+    </select>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersenable_this_option_to_enter_the_generator_id_with_raw_data %></div>
+    <label>
+        <input type="checkbox" value="1" id="idraw_data" > <%= locale.event_filtersraw_data %>
+    </label>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersenter_the_raw_generator_id1_data_value %></div>
+    <label for="generator_id_1"><%= locale.event_filtersgenerator_id_1 %></label>
+    <input type="text" class="form-control" id="idgenerator_id_1" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersenter_the_raw_generator_id2_data_value_strongnotestrong_in_the_raw_data_field_to_specify_hexadecimal_value_prefix_the_value_with_0x %></div>
+    <label for="generator_id_2"><%= locale.event_filtersgenerator_id_2 %></label>
+    <input type="text" class="form-control" id="idgenerator_id_2" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_the_event_generator_as_slave_address_if_event_is_generated_from_ipmb %></div>
+	<label for="generator_type"><%= locale.event_filtersgenerator_type %></label><br/>
+	<label>
+							        <input type='radio' value='slave' name='generator_type' id='idgenerator_type' > <%= locale.event_filtersslave %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;<label>
+							        <input type='radio' value='software' name='generator_type' id='idgenerator_type' > <%= locale.event_filterssoftware %>
+							    </label>&nbsp;&nbsp;&nbsp;&nbsp;    
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_system_software_id_if_event_is_generated_from_system_software %></div>
+    <label for="slave_addr_software_id"><%= locale.event_filtersslave_addresssoftware_id %></label>
+    <input type="text" class="form-control" id="idslave_addr_software_id" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_the_particular_channel_number_through_which_the_event_message_is_received_over_choose_0_if_the_event_message_is_received_via_the_system_interface_primary_ipmb_or_internally_generated_by_the_bmc %></div>
+    <label for="channel_number"><%= locale.event_filterschannel_number %></label>
+    <select name="channel_number" id="idchannel_number" class="form-control">
+    	<option value='0'><%= locale.event_filters0 %></option>
+        <option value='1'><%= locale.event_filters1 %></option>
+        <option value='2'><%= locale.event_filters2 %></option>
+        <option value='3'><%= locale.event_filters3 %></option>
+        <option value='4'><%= locale.event_filters4 %></option>
+        <option value='5'><%= locale.event_filters5 %></option>
+        <option value='6'><%= locale.event_filters6 %></option>
+        <option value='7'><%= locale.event_filters7 %></option>
+        <option value='8'><%= locale.event_filters8 %></option>
+        <option value='9'><%= locale.event_filters9 %></option>
+        <option value='10'><%= locale.event_filters10 %></option>
+        <option value='11'><%= locale.event_filters11 %></option>
+        <option value='15'><%= locale.event_filters15 %></option>
+    </select>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_the_corresponding_ipmb_device_lun_if_event_generated_by_ipmb %></div>
+    <label for="ipmb_lun"><%= locale.event_filtersipmb_device_lun %></label>
+    <select name="ipmb_lun" id="idipmb_lun" class="form-control">
+    	<option value='0'><%= locale.event_filters0 %></option><option value='1'><%= locale.event_filters1 %></option><option value='2'><%= locale.event_filters2 %></option><option value='3'><%= locale.event_filters3 %></option>
+    </select>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthe_type_of_sensor_that_will_trigger_the_event_filter_action %></div>
+    <label for="sensor_type"><%= locale.event_filterssensor_type %></label>
+    <select name="sensor_type" id="idsensor_type" class="form-control">
+        <option value='Any'><%= locale.event_filtersall_sensors %></option>
+    	<option value='Temperature'><%= locale.event_filterstemperature %></option>
+        <option value='Fan'><%= locale.event_filtersfan %></option>
+        <option value='Voltage'><%= locale.event_filtersvoltage %></option>
+        <option value='Discrete'><%= locale.event_filtersdiscrete %></option>
+    </select>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_the_particular_sensor_from_the_sensor_list %></div>
+    <label for="name"><%= locale.event_filterssensor_name %></label>
+    <select name="name" id="idname" class="form-control">
+    	
+    </select>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filterschoose_event_option_to_be_either_all_events_or_sensor_specific_events %></div>
+    <label for="event_options"><%= locale.event_filtersevent_options %></label>
+    <select name="event_options" id="idevent_options" class="form-control">
+    	<option value='all'><%= locale.event_filtersall_events %></option>
+    </select>
+</div>
+<div id="sensor_events" class="form-group" style="display:none;">
+    <label for="sensor_events_table"><%= locale.event_filterssensor_events %></label>
+    <table class="table" id="sensor_events_table">
+    </table>
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthis_field_is_used_to_give_eventreading_type_value_ulli_value_ranges_from_1_to_255liul %></div>
+    <label for="event_trigger"><%= locale.event_filtersevent_trigger %></label>
+    <input type="text" class="form-control" id="idevent_trigger" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthis_field_is_used_to_indicate_wildcarded_or_compared_bits_ulli_value_ranges_from_0_to_255liul %></div>
+    <label for="event_data_1_and_mask"><%= locale.event_filtersevent_data_1_and_mask %></label>
+    <input type="text" class="form-control" id="idevent_data_1_and_mask" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthis_field_is_used_to_indicate_whether_each_bit_positions_comparison_is_an_exact_comparison_or_notbrulli_value_ranges_from_0_to_255liul %></div>
+    <label for="event_data_1_compare_1"><%= locale.event_filtersevent_data_1_compare_1 %></label>
+    <input type="text" class="form-control" id="idevent_data_1_compare_1" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthis_field_is_used_to_indicate_whether_each_bit_positions_comparison_is_an_exact_comparison_or_notbrulli_value_ranges_from_0_to_255liul %></div>
+    <label for="event_data_1_compare_2"><%= locale.event_filtersevent_data_1_compare_2 %></label>
+    <input type="text" class="form-control" id="idevent_data_1_compare_2" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthis_field_is_similar_to_event_data_1_and_mask %></div>
+    <label for="event_data_2_and_mask"><%= locale.event_filtersevent_data_2_and_mask %></label>
+    <input type="text" class="form-control" id="idevent_data_2_and_mask" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthese_fields_are_similar_to_event_data_1_compare_1_and_event_data_1_compare_2_respectively %></div>
+    <label for="event_data_2_compare_1"><%= locale.event_filtersevent_data_2_compare_1 %></label>
+    <input type="text" class="form-control" id="idevent_data_2_compare_1" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthese_fields_are_similar_to_event_data_1_compare_1_and_event_data_1_compare_2_respectively %></div>
+    <label for="event_data_2_compare_2"><%= locale.event_filtersevent_data_2_compare_2 %></label>
+    <input type="text" class="form-control" id="idevent_data_2_compare_2" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthis_field_is_similar_to_event_data_1_and_mask %></div>
+    <label for="event_data_3_and_mask"><%= locale.event_filtersevent_data_3_and_mask %></label>
+    <input type="text" class="form-control" id="idevent_data_3_and_mask" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthese_fields_are_similar_to_event_data_1_compare_1_and_event_data_1_compare_2_respectively %></div>
+    <label for="event_data_3_compare_1"><%= locale.event_filtersevent_data_3_compare_1 %></label>
+    <input type="text" class="form-control" id="idevent_data_3_compare_1" value="" placeholder="">
+</div>
+<div class="form-group" >
+	<div class="alert alert-info help-item hide"   role="alert"><%= locale.event_filtersthese_fields_are_similar_to_event_data_1_compare_1_and_event_data_1_compare_2_respectively %></div>
+    <label for="event_data_3_compare_2"><%= locale.event_filtersevent_data_3_compare_2 %></label>
+    <input type="text" class="form-control" id="idevent_data_3_compare_2" value="" placeholder="">
+</div><a class="btn btn-danger" id="delete"><%= locale.deleteLabel %></a><div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

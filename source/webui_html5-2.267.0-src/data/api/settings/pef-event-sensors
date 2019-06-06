@@ -1,0 +1,400 @@
+[
+
+{ "SensorNumber" : 1,"SensorName" : "Ambient","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 26500,"RawReading" : 106,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1000,"LowNCThresh" : 6000,"HighNCThresh" : 37000,"HighCTThresh" : 42000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 2,"SensorName" : "Systemboard","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 32000,"RawReading" : 32,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 60000,"HighCTThresh" : 65000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 3,"SensorName" : "CPU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 85000,"HighCTThresh" : 90000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 4,"SensorName" : "CPU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 85000,"HighCTThresh" : 90000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 5,"SensorName" : "DIMM-1A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 6,"SensorName" : "DIMM-2A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 7,"SensorName" : "DIMM-3A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 8,"SensorName" : "DIMM-1B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 }, 
+ 
+{ "SensorNumber" : 9,"SensorName" : "DIMM-2B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 10,"SensorName" : "DIMM-3B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 11,"SensorName" : "DIMM-1C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 12,"SensorName" : "DIMM-2C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 13,"SensorName" : "DIMM-3C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 14,"SensorName" : "DIMM-1D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 15,"SensorName" : "DIMM-2D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 16,"SensorName" : "DIMM-3D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 17,"SensorName" : "DIMM-1E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 18,"SensorName" : "DIMM-2E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 19,"SensorName" : "DIMM-3E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 20,"SensorName" : "DIMM-1F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 21,"SensorName" : "DIMM-2F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 78000,"HighCTThresh" : 82000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 22,"SensorName" : "DIMM-3F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 0,"SensorUnit2" : 1,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 23,"SensorName" : "BATT 3.0V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 3062,"RawReading" : 195,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 2010,"LowNCThresh" : 2497,"HighNCThresh" : 0,"HighCTThresh" : 3502,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 24,"SensorName" : "STBY 3.3V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 3334,"RawReading" : 193,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 3092,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 3576,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 25,"SensorName" : "iRMC 1.2V STBY","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 1199,"RawReading" : 119,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1079,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1319,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 26,"SensorName" : "iRMC 1.8V STBY","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 1829,"RawReading" : 182,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1620,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1979,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 27,"SensorName" : "LAN 1.0V STBY","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 1000,"RawReading" : 127,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 898,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1101,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 28,"SensorName" : "LAN 1.8V STBY","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 1800,"RawReading" : 191,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1621,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1978,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 29,"SensorName" : "MAIN 12V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 11070,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 12992,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 30,"SensorName" : "MAIN 5V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 4660,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 5391,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 31,"SensorName" : "MAIN 3.3V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 3057,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 3576,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 32,"SensorName" : "IOH 1.8V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1620,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1979,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 33,"SensorName" : "IOH 1.1V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 989,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1209,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 34,"SensorName" : "IOH 1.1V AUX","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 989,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1209,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 35,"SensorName" : "ICH 1.5V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1350,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1650,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 36,"SensorName" : "CPU1 1.8V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1709,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1890,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 37,"SensorName" : "CPU2 1.8V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 0,"SensorUnit2" : 4,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1709,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 1890,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 38,"SensorName" : "FAN1 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 39,"SensorName" : "FAN2 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 40,"SensorName" : "FAN3 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 41,"SensorName" : "FAN4 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 42,"SensorName" : "FAN5 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 43,"SensorName" : "FAN6 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 44,"SensorName" : "FAN7 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 45,"SensorName" : "FAN8 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 46,"SensorName" : "FAN9 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 }, 
+
+{ "SensorNumber" : 47,"SensorName" : "FAN10 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 48,"SensorName" : "FAN11 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 49,"SensorName" : "FAN12 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 1920000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 50,"SensorName" : "PSU1 Power","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 11,"SensorUnit1" : 0,"SensorUnit2" : 6,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 51,"SensorName" : "PSU2 Power","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 11,"SensorUnit1" : 0,"SensorUnit2" : 6,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 52,"SensorName" : "Total Power","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 11,"SensorUnit1" : 0,"SensorUnit2" : 6,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 53,"SensorName" : "FAN1 PSU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 2880000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 54,"SensorName" : "FAN2 PSU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 2880000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 55,"SensorName" : "FAN1 PSU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 2880000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 56,"SensorName" : "FAN2 PSU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 32,"SensorUnit2" : 18,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 2880000,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 57,"SensorName" : "I2C1 error ratio","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 1,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 10000,"HighCTThresh" : 20000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 58,"SensorName" : "I2C2 error ratio","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 1,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 10000,"HighCTThresh" : 20000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 59,"SensorName" : "I2C3 error ratio","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 1,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 10000,"HighCTThresh" : 20000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 60,"SensorName" : "I2C4 error ratio","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 1,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 10000,"HighCTThresh" : 20000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 61,"SensorName" : "I2C5 error ratio","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 1,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 10000,"HighCTThresh" : 20000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 62,"SensorName" : "I2C6 error ratio","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 1,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 10000,"HighCTThresh" : 20000,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 63,"SensorName" : "SEL Level","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 38,"SensorUnit1" : 1,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 1,"DiscreteState" : 
+0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 90000,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 64,"SensorName" : "CPU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 7,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 65,"SensorName" : "CPU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 7,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 66,"SensorName" : "Power Unit","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 9,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 67,"SensorName" : "PSU","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 9,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 68,"SensorName" : "PSU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 232,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 69,"SensorName" : "PSU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 232,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 70,"SensorName" : "FAN1 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 71,"SensorName" : "FAN2 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 }, 
+
+{ "SensorNumber" : 72,"SensorName" : "FAN3 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 73,"SensorName" : "FAN4 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 74,"SensorName" : "FAN5 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 75,"SensorName" : "FAN6 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 76,"SensorName" : "FAN7 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 77,"SensorName" : "FAN8 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 78,"SensorName" : "FAN9 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 79,"SensorName" : "FAN10 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 80,"SensorName" : "FAN11 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 81,"SensorName" : "FAN12 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 82,"SensorName" : "FAN1 PSU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 83,"SensorName" : "FAN2 PSU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 84,"SensorName" : "FAN1 PSU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 85,"SensorName" : "FAN2 PSU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 230,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 86,"SensorName" : "DIMM-1A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 87,"SensorName" : "DIMM-1A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 88,"SensorName" : "DIMM-2A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 89,"SensorName" : "DIMM-2A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 }, 
+
+{ "SensorNumber" : 90,"SensorName" : "DIMM-3A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 91,"SensorName" : "DIMM-3A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 92,"SensorName" : "DIMM-1B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 }, 
+
+ { "SensorNumber" : 93,"SensorName" : "DIMM-1B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 94,"SensorName" : "DIMM-2B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 95,"SensorName" : "DIMM-2B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 }, 
+
+{ "SensorNumber" : 96,"SensorName" : "DIMM-3B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 97,"SensorName" : "DIMM-3B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 98,"SensorName" : "DIMM-1C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 99,"SensorName" : "DIMM-1C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 100,"SensorName" : "DIMM-2C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 101,"SensorName" : "DIMM-2C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 102,"SensorName" : "DIMM-3C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 103,"SensorName" : "DIMM-3C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 104,"SensorName" : "DIMM-1D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 105,"SensorName" : "DIMM-1D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 106,"SensorName" : "DIMM-2D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 107,"SensorName" : "DIMM-2D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 108,"SensorName" : "DIMM-3D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 109,"SensorName" : "DIMM-3D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 110,"SensorName" : "DIMM-1E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 111,"SensorName" : "DIMM-1E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 112,"SensorName" : "DIMM-2E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 113,"SensorName" : "DIMM-2E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 114,"SensorName" : "DIMM-3E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 115,"SensorName" : "DIMM-3E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 116,"SensorName" : "DIMM-1F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 117,"SensorName" : "DIMM-1F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 118,"SensorName" : "DIMM-2F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 119,"SensorName" : "DIMM-2F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 120,"SensorName" : "DIMM-3F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 222,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 121,"SensorName" : "DIMM-3F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 223,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 122,"SensorName" : "DIMM-3A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32770000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 123,"SensorName" : "DIMM-3B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32770000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 124,"SensorName" : "DIMM-3C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32770000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 125,"SensorName" : "DIMM-3D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32770000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 126,"SensorName" : "DIMM-3E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32770000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 127,"SensorName" : "DIMM-3F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32770000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 128,"SensorName" : "Watchdog","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 35,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 129,"SensorName" : "Total Power","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 130,"SensorName" : "PSU1 Power","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 131,"SensorName" : "PSU2 Power","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 132,"SensorName" : "Power Level","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 37,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 133,"SensorName" : "Power Level","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 221,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 0,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 0,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 213 },  
+
+{ "SensorNumber" : 134,"SensorName" : "CPU detection","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 18,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 135,"SensorName" : "iRMC request","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 234,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 136,"SensorName" : "Config backup","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 239,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 137,"SensorName" : "I2C1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 }, 
+
+ { "SensorNumber" : 138,"SensorName" : "I2C2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 139,"SensorName" : "I2C3","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 }, 
+
+{ "SensorNumber" : 140,"SensorName" : "I2C4","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 141,"SensorName" : "I2C5","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 142,"SensorName" : "I2C6","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 192,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 143,"SensorName" : "CPU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 7,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 144,"SensorName" : "CPU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 7,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 145,"SensorName" : "FAN1 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 146,"SensorName" : "FAN2 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 147,"SensorName" : "FAN3 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 148,"SensorName" : "FAN4 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 149,"SensorName" : "FAN5 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 150,"SensorName" : "FAN6 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 151,"SensorName" : "FAN7 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 152,"SensorName" : "FAN8 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 153,"SensorName" : "FAN9 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 154,"SensorName" : "FAN10 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 155,"SensorName" : "FAN11 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 156,"SensorName" : "FAN12 SYS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 157,"SensorName" : "FAN1 PSU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 }, 
+
+{ "SensorNumber" : 158,"SensorName" : "FAN2 PSU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 159,"SensorName" : "FAN1 PSU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 160,"SensorName" : "FAN2 PSU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 4,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 161,"SensorName" : "BATT 3.0V","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 162,"SensorName" : "Voltages","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 2,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 163,"SensorName" : "BBU","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 41,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 53248000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 164,"SensorName" : "Temp","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 165,"SensorName" : "PSU1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 8,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 166,"SensorName" : "PSU2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 8,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 167,"SensorName" : "DIMM-1A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 168,"SensorName" : "DIMM-2A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 169,"SensorName" : "DIMM-3A","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 170,"SensorName" : "DIMM-1B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 171,"SensorName" : "DIMM-2B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 172,"SensorName" : "DIMM-3B","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 173,"SensorName" : "DIMM-1C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 174,"SensorName" : "DIMM-2C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 175,"SensorName" : "DIMM-3C","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 176,"SensorName" : "DIMM-1D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 177,"SensorName" : "DIMM-2D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 178,"SensorName" : "DIMM-3D","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 179,"SensorName" : "DIMM-1E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 180,"SensorName" : "DIMM-2E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 181,"SensorName" : "DIMM-3E","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 182,"SensorName" : "DIMM-1F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 183,"SensorName" : "DIMM-2F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 184,"SensorName" : "DIMM-3F","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 12,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 185,"SensorName" : "Slot1","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 19,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 186,"SensorName" : "Slot2","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 19,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 187,"SensorName" : "Slot3","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 19,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 188,"SensorName" : "HDD","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 13,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 53248000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 189,"SensorName" : "BIOS","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 0,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 190,"SensorName" : "Agent","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 0,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 193,"SensorName" : "iRMC","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 0,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 194,"SensorName" : "Power Level","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 221,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 196,"SensorName" : "Local Monitor","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 26,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 9,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 197,"SensorName" : "Pwr Btn override","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 34,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 198,"SensorName" : "NMI","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 19,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 111,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 199,"SensorName" : "Ambient","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32770000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 8,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 200,"SensorName" : "Ambient","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 1,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32769000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 7,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 },  
+
+{ "SensorNumber" : 254,"SensorName" : "iRMC","OwnerID" : 32,"OwnerLUN" : 0,"SensorType" : 238,"SensorUnit1" : 192,"SensorUnit2" : 0,"SensorUnit3" : 0,"SensorReading" : 32768000,"RawReading" : 0,"SensorState" : 0,"DiscreteState" : 112,"LowNRThresh" : 0,"LowCTThresh" : 0,"LowNCThresh" : 0,"HighNCThresh" : 0,"HighCTThresh" : 0,"HighNRThresh" : 0,"SensorAccessibleFlags" : 0 }
+
+]

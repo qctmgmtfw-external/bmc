@@ -1,0 +1,14 @@
+# Install Script
+
+build-install:
+                EXECUTE if [ "%CONFIG_SPX_FEATURE_PRE_EVENT_VIDEO_RECORDING" == "YES" ]; then echo "CONFIG_SPX_FEATURE_PRE_EVENT_VIDEO_RECORDING" >> %IMAGE_TREE/etc/core_features; fi
+                EXECUTE if [ "%CONFIG_SPX_FEATURE_PRE_EVENT_VIDEO_RECORDING" == "YES" ]; then ./update_conf ./autorecord.conf record_boot_crash vdo_quality "%CONFIG_SPX_FEATURE_PRE_EVENT_RECORDING_VIDEO_QUALITY"; fi
+                EXECUTE if [ "%CONFIG_SPX_FEATURE_PRE_EVENT_VIDEO_RECORDING" == "YES" ]; then ./update_conf ./autorecord.conf record_boot_crash vdo_compression_mode "%CONFIG_SPX_FEATURE_PRE_EVENT_RECORDING_VIDEO_COMPRESSION_MODE"; fi
+                EXECUTE if [ "%CONFIG_SPX_FEATURE_PRE_EVENT_VIDEO_RECORDING" == "YES" ]; then ./update_conf ./autorecord.conf record_boot_crash vdo_duration "%CONFIG_SPX_FEATURE_PRE_EVENT_RECORDING_VIDEO_DURATION"; fi
+                EXECUTE if [ "%CONFIG_SPX_FEATURE_PRE_EVENT_VIDEO_RECORDING" == "YES" ]; then ./update_conf ./autorecord.conf record_boot_crash frame_count "%CONFIG_SPX_FEATURE_PRE_EVENT_RECORDING_VIDEO_FPS_COUNT"; fi
+		COPY_DIR	./ %IMAGE_TREE/usr/local/lib/
+		ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libvideorecordcfg.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+		MKDIR_NOCLEAN    %IMAGE_TREE/usr/local/www/Java/
+		COPY_FILE	./video_record.jnlp %IMAGE_TREE/usr/local/www/Java/
+		COPY_TO_CONF ./autorecord.conf
+debug-install:

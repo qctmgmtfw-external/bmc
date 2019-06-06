@@ -354,7 +354,7 @@
 +    s = getenv("netretry");
 +    setenv("netretry","no");
 +    saveenv();
-+	setenv("ethact", "ast_eth1");
++
 +    /*Run the DHCP command to get the IP Address, SubNetmask and Gateway*/
 +    NetLoop(DHCP);
 +

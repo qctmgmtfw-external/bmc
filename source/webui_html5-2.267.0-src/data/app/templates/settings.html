@@ -1,0 +1,221 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+       <%=locale.settings%>
+        <small><%=locale.config_bmcoption%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%=locale.home%></a>
+        </li>
+        <li class="active">
+           <%=locale.settings%>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <!--
+    <div class="row">
+        <div class="col-md-12">
+            <~~! search events ~~>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder=" <%=locale.search_settings%>" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="box box-solid bg-gray-transparent pad10 animated fadeInUp">
+        <div class="row">
+            <!-- <div class="col-md-3">
+                <a href="#settings/ldap" class="big-button">
+                        <div class="icon"><i class=""></i>
+                        </div>
+                        <span class="name"> <%=locale.ldap_aduser%></span>
+                </a>
+            </div> -->
+			<div class="col-md-3" data-feature="CAPTURE_BSOD_JPEG">
+                 <a href="#settings/bsod" class="big-button">
+                         <div class="icon"><i class="fa fa-camera"></i>
+                         </div>
+                         <span class="name"><%=locale.captured_bsod%></span>
+                 </a>
+             </div>
+             <!--
+            <div class="col-md-3">
+                <a href="#settings/date_time" class="big-button">
+                        <div class="icon"><i class="ion-ios-clock"></i>
+                        </div>
+                        <span class="name"><%=locale.date_time%></span>
+                </a>
+            </div>-->
+            <div class="col-md-3">
+                <a href="#settings/ext_users" class="big-button">
+                        <div class="icon"><i class="fa fa-book"></i>
+                        </div>
+                        <span class="name"><%=locale.external_userservice%></span>
+                </a>
+            </div>
+			 <div class="col-md-3" data-feature="ADVISER_SUPPORT">
+                <a href="#settings/mouse" class="big-button">
+                        <div class="icon"><i class="ion-mouse"></i>
+                        </div>
+                        <span class="name"><%=locale.kvm_mouse_settings%></span>
+                </a>
+            </div>
+            <div class="col-md-3" data-feature="SERVER_SUPPORT">
+                <a href="#settings/log" class="big-button">
+                        <div class="icon"><i class="ion-document-text"></i>
+                        </div>
+                        <span class="name"><%=locale.log_settings%></span>
+                </a>
+            </div>
+            <!--//Quanta
+			<div class="col-md-3" data-feature="RUNTIME_LICENSE">
+                <a href="#settings/license" class="big-button">
+                        <div class="icon"><i class="fa fa-key"></i>
+                        </div>
+                        <span class="name"><%=locale.manage_licence%></span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#settings/media" class="big-button">
+                        <div class="icon"><i class="fa fa-hdd-o"></i>
+                        </div>
+                        <span class="name"><%=locale.media_redir_settings%></span>
+                </a>
+            </div>-->
+            <div class="col-md-3">
+                <a href="#settings/network" class="big-button">
+                        <div class="icon"><i class="fa fa-sitemap"></i>
+                        </div>
+                        <span class="name"><%=locale.network_settings%></span>
+                </a>
+            </div>
+            <!--
+            <div class="col-md-3" data-feature="PAM_REORDERING">
+                <a href="#settings/pamorder" class="big-button">
+                        <div class="icon"><i class="fa fa-sort-amount-asc"></i>
+                        </div>
+                        <span class="name"><%=locale.pamorder_settings%></span>
+                </a>
+            </div>-->
+            <div class="col-md-3">
+                <a href="#settings/pef" class="big-button">
+                        <div class="icon"><i class="fa fa-filter"></i>
+                        </div>
+                        <span class="name"><%=locale.platformevent_filter%></span>
+                </a>
+            </div>
+			<div class="col-md-3" data-feature="RAID_SUPPORT">
+                <a href="#settings/raid_management" class="big-button">
+                        <div class="icon"><i class="ion-help-buoy"></i>
+                        </div>
+                        <span class="name"><%=locale.raid_management%></span>
+                </a>
+            </div>
+            <div class="col-md-3" data-feature="SASIT_SUPPORT">
+                <a href="#settings/sasit_management" class="big-button">
+                        <div class="icon"><i class="ion-help-buoy"></i>
+                        </div>
+                        <span class="name"><%=locale.sasit_management%></span>
+                </a>
+            </div>
+            <!--<div class="col-md-3" data-feature="SERVICES">
+                <a href="#settings/services" class="big-button">
+                        <div class="icon"><i class="fa fa-cogs"></i>
+                        </div>
+                        <span class="name"><%=locale.services%></span>
+                </a>
+            </div>-->
+            <div class="col-md-3">
+                <a href="#settings/smtp" class="big-button">
+                        <div class="icon"><i class="ion-email"></i>
+                        </div>
+                        <span class="name"><%=locale.smtp_settings%></span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#settings/ssl" class="big-button">
+                        <div class="icon"><i class="fa fa-certificate"></i>
+                        </div>
+                        <span class="name"><%=locale.ssl_settings%></span>
+                </a>
+            </div>
+			<div class="col-md-3" data-feature="SYSTEM_FIREWALL">
+                <a href="#settings/firewall" class="big-button">
+                        <div class="icon"><i class="ion-locked"></i>
+                        </div>
+                        <span class="name"><%=locale.system_firwall%></span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#settings/users" class="big-button">
+                        <div class="icon"><i class="ion-person-stalker"></i>
+                        </div>
+                        <span class="name"><%=locale.user_mngt%></span>
+                </a>
+            </div>
+            <div class="col-md-3" data-feature="SERVER_SUPPORT">
+                <a href="#settings/sol_config" class="big-button">
+                        <div class="icon"><i class="fa fa-hdd-o"></i>
+                        </div>
+                        <span class="name"><%=locale.sol_settings%></span>
+                </a>
+            </div>
+            <!--
+            <div class="col-md-3" data-feature="AUTOVDORECORD">
+                <a href="#settings/video" class="big-button">
+                        <div class="icon"><i class="ion-ios-videocam"></i>
+                        </div>
+                        <span class="name"><%=locale.video_recording%></span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#settings/web_server_instances" class="big-button">
+                        <div class="icon"><i class="ion-ios-analytics"></i>
+                        </div>
+                        <span class="name"><%=locale.web_server_instances%></span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#settings/network/dns" class="big-button">
+                        <div class="icon"><i class="fa fa-server"></i>
+                        </div>
+                        <span class="name"><%=locale.dns_cfg%></span>
+                </a>
+            </div>-->
+			<div class="col-md-3">
+                <a href="#settings/snmp" class="big-button">
+                        <div class="icon"><i class="ion-network"></i>
+                        </div>
+                        <span class="name"><%=locale.snmp_settings%></span>
+                </a>
+            </div>
+            <div class="form-group" data-feature="SERVER_SUPPORT">
+            <div class="col-md-3">
+                <a href="#settings/redundancy" class="big-button">
+                        <div class="icon"><i class="fa fa-server"></i>
+                        </div>
+                        <span class="name"><%=locale.cold_redundancy%></span>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#settings/selection" class="big-button">
+                        <div class="icon"><i class="ion-pull-request"></i>
+                        </div>
+                        <span class="name"><%=locale.nic_selection%></span>
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

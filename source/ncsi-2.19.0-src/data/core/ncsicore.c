@@ -89,7 +89,6 @@ NCSI_CheckStatusAndResetNCSI(struct work_struct *data)
     GetLinkStatusReq_T *work;
     NCSI_IF_INFO *info;
     UINT32 linkstate = 0;
-    static UINT32 pre_linkstate = 0;
 	
     if(data == NULL)
         return;
@@ -101,48 +100,30 @@ NCSI_CheckStatusAndResetNCSI(struct work_struct *data)
     {
         netif_carrier_on(info->dev);    //make sure we can transmit
 
-        retval = NCSI_Issue_GetLinkStatus(info, (UINT8)work->PackageId, (UINT8)work->ChannelId, &linkstate );
-
-        if(pre_linkstate != linkstate) {//Alan, if the LinkStatus changed then write it into the LinkStatus file.
-          pre_linkstate = linkstate;
-          WriteLinkStatus(linkstate);
-        }
+	retval = NCSI_Issue_GetLinkStatus(info, (UINT8)work->PackageId, (UINT8)work->ChannelId, &linkstate );
 
 #ifdef CONFIG_SPX_FEATURE_POLL_FOR_ASYNC_RESET
 	// If the controller reverts back to initial state after an asynchronous reset
 	// Re configure the link
         if ( NCSI_INIT_REQUIRED == retval )
         {
-        	int i = 0;
-        	UINT8 PackageID;
-        	UINT8 ChannelID;
 		printk(KERN_WARNING"Asynchronous Reset Detected !!!\n");			
 		printk (KERN_WARNING"NCSI(%s):(%d.%d) Reset for NCSI Interface..\n",
                 work->InterfaceName, work->PackageId, work->ChannelId);
 
         	/* Detect and Configure the NC-SI Interface that 
-	        * previous detected */
-        	netif_carrier_on(info->dev);        
-   		for(i=0;i<info->TotalChannels;i++)
-   		{
-   			if (info->ChannelInfo[i].Valid == 0)
-   				continue;
-   			PackageID = info->ChannelInfo[i].PackageID;
-   			ChannelID = info->ChannelInfo[i].ChannelID;        	
-        	//NSCI_Detect_Package_Channel (info, work->PackageId, work->ChannelId);
-   			NSCI_Detect_Package_Channel (info, PackageID, ChannelID);
-   		}
-        
+	        * pluggable NCSI channels will also work */
+        	netif_carrier_on(info->dev); 
+		NSCI_Detect_Package_Channel (info, work->PackageId, work->ChannelId);
 		// Enabling previously active channel
 		NCSI_Enable_Info(info);
-#if 0
+
 		#ifdef CONFIG_SPX_FEATURE_NCSI_FORCE_LAN_SPEED_10G
     			NCSI_Issue_SetLink(info,(UINT8)PackageID,(UINT8)ChannelID,0/*Force Speed*/,LINK_ENABLE_10_GBPS,LINK_ENABLE_FULL_DUPLEX) ;
 		#else
 			// Setting Auto Negotiate for link speed
 			NCSI_Issue_SetLink(info,(UINT8)work->PackageId,(UINT8)work->ChannelId,1,0,0);
 		#endif
-#endif			
         }
 #endif
 
@@ -150,36 +131,8 @@ NCSI_CheckStatusAndResetNCSI(struct work_struct *data)
 #ifdef CONFIG_SPX_FEATURE_NCSI_GET_LINK_STATUS_FOR_NON_AEN_SUPPORTED_CONTROLLERS
 	// If AEN is not enabled in the interface, alert netdevice notifiers
 	if ( !info->AENEnabled && NCSI_ERR_SUCCESS == retval )	
-	{	
-		int a = 0;
-	    for(i=0;i<info->TotalChannels;i++)
-		{	
-			int i = 0;
-			UINT8 PackageID;
-			UINT8 ChannelID;
-			if (info->ChannelInfo[i].Valid == 0)
-				continue;
-
-			PackageID = info->ChannelInfo[i].PackageID;
-			ChannelID = info->ChannelInfo[i].ChannelID;
-			if (info->ChannelInfo[i].Enabled == 1)
-			{
-				a+=1;
-			}
-		}
-		if(a != info->TotalChannels)
-		{
-			for(i=0;i<info->TotalChannels;i++)
-			{
-			  if (info->ChannelInfo[i].Enabled == 1)
-				{ 
-					if info->LinkStatus!= linkstate)
-				  	DisplayLinkStatus(info, linkstate, 0);
-				}
-			}
-		}
-		else
-			DisplayLinkStatus(info, linkstate, 0);
+	{
+		DisplayLinkStatus(info, linkstate, 0);
 	}
 #endif
 // Quanta +++
@@ -242,22 +195,17 @@ void CheckLinkStatus ( NCSI_IF_INFO *info )
 		        work->ChannelId = info->EnabledChannelID;
 		        queue_work(ncsi_wq, (struct work_struct *)work);
 		}
-	} else {
-		//Alan++, if the Interface eth0 is down that means the current NIC is dedicated,
-		// so turn off the timer of Check Link status.
-		isPollTimerInitialized = 0;
 	}
 }
 
 static void
 getLinkStatusTimerFn(unsigned long data)
 {
-	if (isPollTimerInitialized) {
-		InvokeCallbackForEachInterface(CheckLinkStatus);
-		// Respawning the timer
-		getLinkStatusTimer.expires = jiffies + (CONFIG_SPX_FEATURE_NCSI_TIMER_DEALAY_FOR_GET_LINK_STATUS * HZ);
-		add_timer(&getLinkStatusTimer);
-	}
+	InvokeCallbackForEachInterface(CheckLinkStatus);
+
+	// Respawning the timer
+	getLinkStatusTimer.expires = jiffies + (CONFIG_SPX_FEATURE_NCSI_TIMER_DEALAY_FOR_GET_LINK_STATUS * HZ);
+	add_timer(&getLinkStatusTimer);
 }
 
 #endif
@@ -312,7 +260,7 @@ EnableChannel(NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelID)
 	{
 		printk(KERN_DEBUG "NCSI(%s):%d.%d Enable Channel Tx Failed\n",
 					info->dev->name,PackageID, ChannelID);	
-		//return 1;
+		return 1;
 	}
 		
 	/* Enable the channel */
@@ -331,12 +279,11 @@ EnableChannel(NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelID)
 #if defined(CONFIG_SPX_FEATURE_NCSI_GET_LINK_STATUS_FOR_NON_AEN_SUPPORTED_CONTROLLERS)||\
 	defined(CONFIG_SPX_FEATURE_POLL_FOR_ASYNC_RESET ) || defined(CONFIG_SPX_FEATURE_NCSI_POLL_LINK_STATUS)  // Quanta
 
+	info->AENEnabled = CheckAENSupport(info, PackageID, ChannelID);
 #ifndef CONFIG_SPX_FEATURE_NCSI_POLL_LINK_STATUS  // Quanta, start Link Status Timer whether AEN support or not
 #if defined(CONFIG_SPX_FEATURE_NCSI_GET_LINK_STATUS_FOR_NON_AEN_SUPPORTED_CONTROLLERS) &&\
         !defined(CONFIG_SPX_FEATURE_POLL_FOR_ASYNC_RESET )
-
-	info->AENEnabled = CheckAENSupport(info, PackageID, ChannelID);
-
+	
 	if ( info->AENEnabled )
 		return 0;
 
@@ -405,10 +352,7 @@ DisableChannel(NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelID)
 #endif
 
 	printk(KERN_DEBUG "NCSI(%s): Channel %d.%d Disabled\n", info->dev->name, PackageID, ChannelID);
-#if defined(CONFIG_SPX_FEATURE_NCSI_GET_LINK_STATUS_FOR_NON_AEN_SUPPORTED_CONTROLLERS) ||\
-	defined(CONFIG_SPX_FEATURE_POLL_FOR_ASYNC_RESET )	
-	isPollTimerInitialized=0;
-#endif
+
 
 	return 0;
 }
@@ -566,7 +510,7 @@ void NSCI_Detect_Channel (NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelID)
     
     /* Get Capabilities and set ArbitSupport */
     if (NCSI_Issue_GetCapabilities(info,PackageID,ChannelID, 
-                &info->ChannelInfo[i].Caps, &info->ChannelInfo[i].AENCaps, &ChannelCount[PackageID]) != 0)
+                &info->ChannelInfo[i].Caps, &ChannelCount[PackageID]) != 0)
     {
         printk(KERN_DEBUG "NCSI(%s):%d.%d Get Capabilities Failed\n", dev->name, PackageID, ChannelID);
         ChannelCount[PackageID] = MAX_CHANNEL_ID;
@@ -594,8 +538,7 @@ void NCSI_Configure_Channel (NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelI
 #ifndef CONFIG_SPX_FEATURE_NCSI_FORCE_LAN_SPEED_10G
     int NcsiSpeed = 0, NcsiDuplex = 0;
 #endif    
-    UINT32 Caps, AENCaps;
-    UINT8	ChannelCount;
+
     
     dev  = info->dev;
     /* Get MAC Address to use */
@@ -696,17 +639,8 @@ void NCSI_Configure_Channel (NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelI
         printk("NCSI(%s):%d.%d Disable Multicast Filter Failed\n",dev->name,PackageID, ChannelID);
     }
 
-    /* Setup AEN Messages */    
-    if (NCSI_Issue_GetCapabilities(info,(UINT8)PackageID,(UINT8)ChannelID, 
-    		&Caps, &AENCaps, &ChannelCount) != 0)
-    {	
-    	printk("NCSI(%s):%d.%d Get Capabilities Failed\n", dev->name, PackageID, ChannelID);
-    	return;
-    }
-       	
-    if (NCSI_Issue_EnableAEN(info,(UINT8)PackageID,(UINT8)ChannelID,AENCaps&LINK_STATUS_CHANGE_CONTROL_AEN,
-    		AENCaps&REQUIRED_CONTROL_AEN,
-    		AENCaps&HOST_NC_DRIVER_STATUS_CHANGE_CONTROL_AEN) != 0)
+    /* Setup AEN Messages */
+    if (NCSI_Issue_EnableAEN(info,(UINT8)PackageID,(UINT8)ChannelID,1,1,1) != 0)
     {
 #ifndef CONFIG_SPX_FEATURE_NCSI_GET_LINK_STATUS_FOR_NON_AEN_SUPPORTED_CONTROLLERS
         printk("NCSI(%s):%d.%d Enable AEN Failed\n",dev->name,PackageID, ChannelID);
@@ -739,9 +673,7 @@ void NCSI_Configure_Channel (NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelI
             NcsiSpeed =  LINK_ENABLE_100_MBPS;
         if (UserSpeed == 1000)
             NcsiSpeed =  LINK_ENABLE_1000_MBPS;
-        if (UserSpeed == 10000)
-        	NcsiSpeed =  LINK_ENABLE_10_GBPS;
-        
+
         if (UserDuplex == 1)
             NcsiDuplex =  LINK_ENABLE_FULL_DUPLEX;
         if (UserDuplex == 0)
@@ -1393,18 +1325,16 @@ NCSI_SetUserLink(struct work_struct *data)
 		NcsiSpeed =  LINK_ENABLE_100_MBPS;
 	if (work->Speed == 1000)
 		NcsiSpeed =  LINK_ENABLE_1000_MBPS;
-	if (work->Speed == 10000)
-		NcsiSpeed =  LINK_ENABLE_10_GBPS;
-	
+
 	if (work-> Duplex== 1)
 		NcsiDuplex =  LINK_ENABLE_FULL_DUPLEX;
 	if (work-> Duplex== 0)
 		NcsiDuplex =  LINK_ENABLE_HALF_DUPLEX;
 	
 #ifdef CONFIG_SPX_FEATURE_NCSI_FORCE_LAN_SPEED_10G
-	if (work->Speed == LINK_ENABLE_10_GBPS) 
+	if (work->speed == LINK_ENABLE_10_GBPS) 
 	{
-		retval = NCSI_Issue_SetLink(info,(UINT8)work->PackageId,(UINT8)work->ChannelId,0/*Force Speed*/,LINK_ENABLE_10_GBPS,NcsiDuplex) ;
+		retval = NCSI_Issue_SetLink(info,(UINT8)PackageID,(UINT8)ChannelID,0/*Force Speed*/,LINK_ENABLE_10_GBPS,NcsiDuplex) ;
 		kfree ((void *)data);
 		return;
 	}
@@ -1529,9 +1459,6 @@ NCSI_SetUserVetoBit(struct work_struct *data)
 	NCSI_IF_INFO *info;
 	UINT32 Ver1,Ver2;
 	static UINT32 Ver3 = 0;
-	int i;
-	UINT8 PackageID;
-	UINT8 ChannelID;
 
 	if (data == NULL) return;
 
@@ -1544,7 +1471,7 @@ NCSI_SetUserVetoBit(struct work_struct *data)
 					work->InterfaceName, work->PackageId, work->ChannelId, work->VetoBit);
 
 		netif_carrier_on(info->dev);//make sure we can transmit
-		if (info->IANA_ManID  == 0){ // read VersionID only once 
+		if (Ver3 == 0){ // read VersionID only once 
 			/* Get Version ID and verify it is > 1.0  */
 			if (NCSI_Issue_GetVersionID(info,work->PackageId,work->ChannelId,&Ver1,&Ver2,&Ver3) != 0)
 			{
@@ -1557,25 +1484,17 @@ NCSI_SetUserVetoBit(struct work_struct *data)
 			printk("Manufacturer ID :: (0x%08lx)\n", Ver3);
 		}
 
-		printk("Manufacturer ID :: (0x%08lx)\n", Ver3);
-		switch (info->IANA_ManID)
+		switch (Ver3)
 		{
-		case VENDOR_ID_INTEL:	//For Intel Management Controller
+		
+		case 0x57010000:	//For Intel Management Controller
+			printk(KERN_DEBUG "NCSI(%s):%d.%d %d Set Intel Management Control\n",work->InterfaceName,work->PackageId, work->ChannelId,work->VetoBit);
 			// Enable/Disable Keep Phy Link Up feature for Intel GbE Controller
-			for(i=0;i<info->TotalChannels;i++)
+			if (NCSI_Issue_OEM_SetIntelManagementControlCommand(info,work->PackageId, work->ChannelId, work->VetoBit) != 0)
 			{
-				if (info->ChannelInfo[i].Valid == 0)
-					continue;
-				PackageID = info->ChannelInfo[i].PackageID;
-				ChannelID = info->ChannelInfo[i].ChannelID;
-				printk(KERN_DEBUG "NCSI(%s):%d.%d %d Set Intel Management Control\n",work->InterfaceName,PackageID, ChannelID,work->VetoBit);
-
-				if (NCSI_Issue_OEM_SetIntelManagementControlCommand(info,PackageID, ChannelID, work->VetoBit) != 0)
-				{
-					printk(KERN_DEBUG "NCSI(%s):%d.%d.%d Set Intel Management Control Failed\n",work->InterfaceName,work->PackageId, work->ChannelId, work->VetoBit);
-				}			
+				printk(KERN_DEBUG "NCSI(%s):%d.%d.%d Set Intel Management Control Failed\n",work->InterfaceName,work->PackageId, work->ChannelId, work->VetoBit);
 			}
-			break;
+		break;
 			
 		default:
 			printk(">>>>>>>>>NCSI Management Control is not supported<<<<<<<<<<<<\n");

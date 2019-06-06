@@ -1,0 +1,23 @@
+[
+
+ { "UserName" : "anonymous","UserStatus" : 0,"PrivLimit_Network" : 84,"PrivLimit_Serial" : 84,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 2,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available", "KVMAccess" : 1 },
+
+ { "UserName" : "admin","UserStatus" : 1,"PrivLimit_Network" : 84,"PrivLimit_Serial" : 84,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 2,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 1 },
+
+ { "UserName" : "","UserStatus" : 0,"PrivLimit_Network" : 15,"PrivLimit_Serial" : 15,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 0,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 0 },
+
+ { "UserName" : "","UserStatus" : 0,"PrivLimit_Network" : 15,"PrivLimit_Serial" : 15,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 0,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 0 },
+
+ { "UserName" : "","UserStatus" : 0,"PrivLimit_Network" : 15,"PrivLimit_Serial" : 15,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 0,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 0 },
+
+ { "UserName" : "","UserStatus" : 0,"PrivLimit_Network" : 15,"PrivLimit_Serial" : 15,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 0,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 0 },
+
+ { "UserName" : "","UserStatus" : 0,"PrivLimit_Network" : 15,"PrivLimit_Serial" : 15,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 0,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 0 },
+
+ { "UserName" : "","UserStatus" : 0,"PrivLimit_Network" : 15,"PrivLimit_Serial" : 15,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 0,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 0 },
+
+ { "UserName" : "","UserStatus" : 0,"PrivLimit_Network" : 15,"PrivLimit_Serial" : 15,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 0,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 0 },
+
+ { "UserName" : "","UserStatus" : 0,"PrivLimit_Network" : 15,"PrivLimit_Serial" : 15,"SNMPStatus" : 0,"SNMPAccess" : 0,"AUTHProtocol" : 0,"PrivProtocol" : 0,"EmailID" : "","EmailFormat" : "","SOL_Status" : 0,"SSHKeyStatus" : 0,"SSHKeyInfo" : "Not Available" , "KVMAccess" : 0 }
+
+]

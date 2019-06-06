@@ -1,0 +1,522 @@
+Package: sys_ipv6 (3.4.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/sys_ipv6/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:25:18 EST
+
+Package: sys_ipv6 (3.3.0); urgency = medium
+
+Abstract:
+	Added IPv6 Support macro for Web-UI.
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Wed, 15 Apr 2015 14:42:46 HMT
+
+Package: sys_ipv6 (3.2.0); urgency = medium
+
+Abstract:
+	Chenaged the switch case to manage default values.
+
+Files Modified: data/globalipv6remove.sh
+
+--Submitter: shravan (shravans@amiindia.co.in) Wed, 28 Jan 2015 14:13:32 HMT
+
+Package: sys_ipv6 (3.1.0); urgency = medium
+
+Abstract:
+	fixed IPV6 configuration bugs
+
+Files Deleted: data/02-up-ipv6autoconf
+Files Modified: spx/INFO, spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: RAJA JAYAVELU (jraja@amiindia.co.in) Thu, 18 Dec 2014 06:42:08 EST
+
+Package: sys_ipv6 (3.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:36:48 GMT
+
+Package: sys_ipv6 (2.28.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:02:06 GMT
+
+Package: sys_ipv6 (2.27.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:14:08 GMT
+
+Package: sys_ipv6 (2.26.0); urgency = medium
+
+Abstract:
+	Added a script file 03-up-slaactimingconf to update the SLAAC Timing configuration in corresponding proc files
+
+Files Added: data/03-up-slaactimingconf
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: jithintk (jithintk@amiindia.com) Wed, 13 Aug 2014 17:04:18 HMT
+
+Package: sys_ipv6 (2.25.0); urgency = medium
+
+Abstract:
+	Changed from refering package name to Provides Value
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 12:15:48 EDT
+
+Package: sys_ipv6 (2.24.0); urgency = medium
+
+Abstract:
+	Fix EIP153077, Ping SideBand Card will fail through IPv6 Stateful IP.
+
+Files Modified: data/02-up-ipv6autoconf, spx/LICENSES/LICENSE.AMI
+
+--Submitter: kennywu (kennywu) Fri, 21 Feb 2014 15:20:32 CST
+
+Package: sys_ipv6 (2.23.0); urgency = medium
+
+Abstract:
+	Renamed file to avoid licensing issue when license for the builded workspace is generated using GenCOO
+
+Files Added: data/02-up-ipv6autoconf
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: sureshv (sureshv@amiindia.co.in) Tue, 24 Sep 2013 16:18:58 CST
+
+Package: sys_ipv6 (2.22.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:12:30 EDT
+
+Package: sys_ipv6 (2.21.0); urgency = medium
+
+Abstract:
+	Modified RULES to avoid unwanted configuration files to be copied into ImageTree.
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Fri, 19 Jul 2013 21:45:47 GMT
+
+Package: sys_ipv6 (2.20.0); urgency = low
+
+Abstract:
+	changed LICENSE from OPENSOURCE to AMI
+
+Files Deleted: spx/LICENSES/LICENSE.OPENSOURCE
+Files Modified: spx/INFO
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Wed, 10 Jul 2013 14:22:54 MMT
+
+Package: sys_ipv6 (2.19.0); urgency = medium
+
+Abstract:
+	Moved the "/conf/dhcp.conf" and "/conf/dhcp6c-script" to "/etc/" . Since these files are not updated at the run time, and changed name of dhcp.conf as dhcp-script.
+
+Files Modified: data/dhcp6c.conf.0x1, data/dhcp6c.conf.0x2, data/dhcp6c.conf.0x3, data/dhcp6c.conf.0x4, spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: shravan (shravan@amiindia.co.in) Mon, 10 Jun 2013 20:40:57 HMT
+
+Package: sys_ipv6 (2.18.0); urgency = medium
+
+Abstract:
+	Included rdisc6 in the BMC firmware for router discovery.
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES.D/files.lst
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 17 May 2013 18:15:32 HMT
+
+Package: sys_ipv6 (2.17.0); urgency = medium
+
+Abstract:
+	updating DNS IP address properly, resolving nameserver being not updated properly
+
+Files Modified: data/dhcp6c-script, data/globalipv6remove.sh
+
+--Submitter: Siva Prakash R (sivaprakashr@amiindia.co.in) Thu, 09 May 2013 21:25:44 HMT
+
+Package: sys_ipv6 (2.16.0); urgency = high
+
+Abstract:
+	Releasing old IPV6 address after lan segment change
+
+Files Added: data/globalipv6remove.sh
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Mon, 25 Mar 2013 12:24:10 HMT
+
+Package: sys_ipv6 (2.15.0); urgency = low
+
+Abstract:
+	Fixed core_features & core_macros wipe out while Rebuilding sys_base alone
+
+Files Modified: spx/INFO
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Mon, 04 Feb 2013 19:14:58 HMT
+
+Package: sys_ipv6 (2.14.0); urgency = medium
+
+Abstract:
+	Included the removing IPV6 address in the script.
+
+Files Modified: data/ipv6autoconf.sh
+
+--Submitter: gokul (gokulakannans@amiindia.co.in) Fri, 18 Jan 2013 19:16:01 HMT
+
+Package: sys_ipv6 (2.13.0); urgency = medium
+
+Abstract:
+	Changed DHCPServer Address file location to /tmp/<Ifc>.dhcpv6
+
+Files Modified: data/dhcp6c-script
+
+--Submitter: Anand Krishnan V (anandkrishnanv@amiindia.co.in) Wed, 07 Nov 2012 17:03:33 HMT
+
+Package: sys_ipv6 (2.12.0); urgency = medium
+
+Abstract:
+	Modified dhcp6c-script to store DHCP server address in local filesystem
+
+Files Deleted: spx/LICENSES/LICENSE.BSD
+Files Modified: data/dhcp6c-script
+
+--Submitter: Anand Krishnan V (anandkrishnanv@amiindia.co.in) Wed, 07 Nov 2012 15:29:07 HMT
+
+Package: sys_ipv6 (2.11.0); urgency = medium
+
+Abstract:
+	Changed interfaces files from allow-hotplug to auto as SPX does not support this yet
+
+Files Modified: data/interfaces.0x1, data/interfaces.0x2, data/interfaces.0x3, data/interfaces.0x4
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Mon, 23 Apr 2012 11:09:01 EDT
+
+Package: sys_ipv6 (2.10.0); urgency = high
+
+Abstract:
+	license file added
+
+Files Added: spx/LICENSES/LICENSE.OPENSOURCE
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 29 Mar 2012 16:06:15 EDT
+
+Package: sys_ipv6 (2.9.0); urgency = medium
+
+Abstract:
+	Removed condition compilation for sys IPV6 support (CONFIG_SPX_FEATURE_GLOBAL_IPV6).
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Tue, 14 Feb 2012 21:47:30 IST
+
+Package: sys_ipv6 (2.8.0); urgency = low
+
+Abstract:
+	License Fixed
+
+Files Modified: data/interfaces.0x1, data/interfaces.0x2, data/interfaces.0x3, data/interfaces.0x4, spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 19 Jan 2012 10:07:38 EST
+
+Package: sys_ipv6 (2.7.0); urgency = medium
+
+Abstract:
+	Modified the dependency for the binary Image tree build.
+
+Files Added: spx/PACKAGES.D/sys_ipv6/P.CONFIG
+Files Modified: spx/INFO
+
+--Submitter: othiyappnk (othiyappank@amiindia.co.in) Sat, 10 Dec 2011 13:37:12 IST
+
+Package: sys_ipv6 (2.6.0); urgency = medium
+
+Abstract:
+	Added IPv6 support for VLAN - 
+ipv6autoconf will check vlaninterfaces file if vlan is enabled.
+
+Files Modified: data/ipv6autoconf.sh
+
+--Submitter: joeychen (JoeyChen@ami.com.tw) Tue, 06 Dec 2011 17:45:33 CST
+
+Package: sys_ipv6 (2.5.0); urgency = medium
+
+Abstract:
+	Modified script to update the single DNS IPv6 Address if the IPPRIORITY is enabled.
+
+Files Modified: data/dhcp6c-script
+
+--Submitter: muthuchamyk (muthusamyk@amiindia.co.in) Thu, 01 Dec 2011 18:15:11 IST
+
+Package: sys_ipv6 (2.4.0); urgency = medium
+
+Abstract:
+	Commenting the static glopal ipv6 address deletion script
+
+Files Modified: data/ipv6autoconf.sh
+
+--Submitter: sridhar chinthala (sridharch@amiindia.co.in) Mon, 28 Nov 2011 19:25:17 IST
+
+Package: sys_ipv6 (2.3.0); urgency = high
+
+Abstract:
+	Adding support for Interfaces 3 and 4 for ipv6
+
+Files Added: data/dhcp6c.conf.0x3, data/dhcp6c.conf.0x4, data/interfaces.0x3, data/interfaces.0x4
+Files Modified: spx/RULES
+
+--Submitter: Viswanathan Swaminathan (viswanathans@ami.com) Fri, 05 Aug 2011 19:01:45 EDT
+
+Package: sys_ipv6 (2.2.0); urgency = high
+
+Abstract:
+	licensing corrected
+
+Files Added: spx/LICENSES/LICENSE.BSD
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 23 Jun 2011 16:33:56 EDT
+
+Package: sys_ipv6 (2.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:41:20 EDT
+
+Package: sys_ipv6 (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:54:05 EST
+
+Package: sys_ipv6 (1.2.0); urgency = low
+
+Abstract:
+	* By default enabling the configurations for dhcp6c client in dhcp6c.conf file according to the number of NIC available in PRJ file
+
+Files Added: data/dhcp6c.conf.0x1, data/dhcp6c.conf.0x2
+Files Deleted: data/dhcp6c.conf
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 06 Oct 2010 01:20:36 IST
+
+Package: sys_ipv6 (1.1.0); urgency = high
+
+Abstract:
+	support added for two network interfaces at build time
+
+Files Added: data/interfaces.0x1, data/interfaces.0x2
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 17 Sep 2010 14:58:35 EDT
+
+Package: sys_ipv6 (1.0.19); urgency = high
+
+Abstract:
+	*  wide-dhcpv6 package added as a build dependency for sys_ipv6 package. so that it will include architecture dependent wide-dhcpv6 client binary package.
+*  hereafter dhcp6c client binary will be copied from wide-dhcpv6-<arch> package and not from sys_ipv6 package.
+
+Files Modified: spx/INFO, spx/RULES.D/directory.lst, spx/RULES.D/files.lst
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 14 Jul 2010 21:52:03 IST
+
+Package: sys_ipv6 (1.0.18); urgency = high
+
+Abstract:
+	* Interface name given by dhcp6c client is stored and the same passed to dns.conf file for new DNS architecture.
+
+Files Modified: data/dhcp6c-script
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 09 Jun 2010 15:16:17 IST
+
+Package: sys_ipv6 (1.0.17); urgency = low
+
+Abstract:
+	Package Description added
+
+Files Modified: spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 28 Apr 2010 21:00:36 IST
+
+Package: sys_ipv6 (1.0.16); urgency = medium
+
+Abstract:
+	Commenting out Eth1 related configurations in dhcp6c.conf file as it is creating problem when there is a single interface in the device.
+
+Files Modified: data/dhcp6c.conf
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Sat, 24 Apr 2010 17:23:31 IST
+
+Package: sys_ipv6 (1.0.15); urgency = medium
+
+Abstract:
+	*Eth1 related configurations added in dhcp6c.conf file. Now dhcp6c client will also run for eth1 interface, if there is a entry in interfaces file.
+
+Files Modified: data/dhcp6c.conf
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 22 Apr 2010 20:24:24 IST
+
+Package: sys_ipv6 (1.0.14); urgency = medium
+
+Abstract:
+	IPv6 autoconfiguration script modified. Bug: Eventhough there is only one inet6 entry for an interface, ipv6 autoconfiguration is done for all the avilable interfaces in the etc/network/interfaces file. Fix: ipv6 autoconfiguration is done seperately for each interface through ipv6autoconf script.
+
+Files Modified: data/ipv6autoconf.sh
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 22 Apr 2010 14:31:00 IST
+
+Package: sys_ipv6 (1.0.13); urgency = medium
+
+Abstract:
+	modified 'only eth0 specific' scripts to generic scripts
+
+Files Modified: data/ipv6autoconf.sh
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 21 Apr 2010 12:50:19 IST
+
+Package: sys_ipv6 (1.0.12); urgency = medium
+
+Abstract:
+	Bug - DNS server addresses are not written correctly after changing source from static-dhcp. Fix - New API is added to replace/append DNS server entries when source is dhcp. so there will not be any unwanted old entries in resolv.conf.
+
+Files Modified: data/dhcp6c-script, spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 20 Apr 2010 16:34:46 IST
+
+Package: sys_ipv6 (1.0.11); urgency = medium
+
+Abstract:
+	Dependencies fixed and config added.
+
+Files Added: spx/P.CONFIG
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 02 Apr 2010 18:36:21 EDT
+
+Package: sys_ipv6 (1.0.10); urgency = high
+
+Abstract:
+	Bug: After disbaling IPv6 enable check box in web page, device is able to get IPv6 address. Fix:ipv6autoconf script modified for checking IPv6 enable option from /etc/network/interfaces file.
+
+Files Modified: data/ipv6autoconf.sh, spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 02 Apr 2010 20:18:11 IST
+
+Package: sys_ipv6 (1.0.9); urgency = medium
+
+Abstract:
+	dependencies fixed
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 01 Apr 2010 17:45:42 EDT
+
+Package: sys_ipv6 (1.0.8); urgency = low
+
+Abstract:
+	Entry for copying dhcp6c binary is removed. It will be done by wide_dhcpv6 package
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 31 Mar 2010 13:17:26 IST
+
+Package: sys_ipv6 (1.0.7); urgency = high
+
+Abstract:
+	NTP support added for dhcp6c client, so that IPv6 NTP server address is stored in ntp.conf
+
+Files Modified: data/dhcp6c-script
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Tue, 30 Mar 2010 19:53:28 IST
+
+Package: sys_ipv6 (1.0.6); urgency = low
+
+Abstract:
+	issue : Device is getting IPv6 address from router advertisement, even when IPv6 address source is static. Fix : proc entry added to reject RA when source is static. ipv6autoconf script file is added for this in if-pre-up.d
+
+Files Added: data/ipv6autoconf.sh
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Fri, 19 Mar 2010 13:21:03 IST
+
+Package: sys_ipv6 (1.0.5); urgency = low
+
+Abstract:
+	inet6 entry in interfaces file is appended from sys_ipv6 package
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Thu, 11 Mar 2010 21:02:40 IST
+
+Package: sys_ipv6 (1.0.4); urgency = low
+
+Abstract:
+	Removing nwhelperapi.sh from sys_ipv6 package. This helper function already moved to sys_base package.
+
+Files Deleted: data/nwhelperapi.sh
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Wed, 10 Mar 2010 01:48:04 IST
+
+Package: sys_ipv6 (1.0.3); urgency = low
+
+Abstract:
+	Added missing files which are lost in previous committ - dhcp6c and wide-dhcpv6 folder added
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 08 Mar 2010 23:12:10 IST
+
+Package: sys_ipv6 (1.0.2); urgency = low
+
+Abstract:
+	removed unwanted presence of dhcp6c.conf, dhcp6c-script and nwhelperapi.sh files from / directory
+
+Files Modified: spx/PACKAGES.D/sys_ipv6/SCRIPTS/dev-install, spx/INFO
+
+--Submitter: arunkumar (arunkumars@amiindia.co.in) Mon, 08 Mar 2010 19:14:59 IST
+
+Package: sys_ipv6 (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:15:55 EST
+
+Package:sys_ipv6 (1.0.0);urgency=new
+
+Abstract:
+	Package Description.
+
+Files Added: dhcp6c.conf, dhcp6c-script
+
+--Submitter: arunkumars (arunkumars@amiindia.co.in) Fri, 29 Jan 2010 18:17:45 +0530

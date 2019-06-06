@@ -1,0 +1,23 @@
+Source                   	:	sys_slp
+Version : 3.3.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Winston  (winstonv@amiindia.co.in)
+License                  	:	CALDERA
+Source-Location          	:	UNKNOWN
+Source-Version           	:	1.0.0
+Builds                   	:	sys_slp
+Build-Depends            	:	Crosscc, Target
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	System Package which provides SLPD support
+.
+
+Package                  	:	sys_slp
+Section                  	:	sys
+Group                    	:	BASE
+Essential                	:	NO
+Description              	:	System Package which provides SLPD support and registration of SLP services.
+.
+

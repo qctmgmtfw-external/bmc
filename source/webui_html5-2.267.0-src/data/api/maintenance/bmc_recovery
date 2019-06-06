@@ -1,0 +1,7 @@
+{
+	"forceRecovery": 1,
+	"bootRetryCount": 5,
+	"recoveryRetryCount": 5,
+	"serverAddress": "10.0.6.18",
+	"imageName": "rom.ima"
+}

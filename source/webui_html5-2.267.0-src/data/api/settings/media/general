@@ -1,0 +1,10 @@
+{
+    "id": 1,
+    "local_media_support": 1,
+    "remote_media_support": 1,
+    "remote_server_address": "172.16.99.199",
+    "remote_source_path": "/opt/bmc/media",
+    "remote_share_type": "NFS",
+    "remote_domain_name": "",
+    "remote_user_name": ""
+}

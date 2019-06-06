@@ -1,0 +1,24 @@
+Source                   	:	sys_ip6tables
+Version : 3.4.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	santhoshkumarr  (santhoshkumarr@amiindia.co.in)
+License                  	:	AMI
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	sys_ip6tables
+Build-Depends            	:	Target, Crosscc, libiptables_dev
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	Package provides support to ip6tables which is used for IPv6 firewll configuration.
+.
+
+Package                  	:	sys_ip6tables
+Section                  	:	sys
+Group                    	:	BASE
+Essential                	:	YES
+Depends                  	:	libiptables,sys_ipv6
+Description              	:	Packages contains library files and configurations for ip6tables.
+.
+

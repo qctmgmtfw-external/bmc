@@ -46,27 +46,6 @@
 /etc/rc3.d/S98logrotate.sh                -> ../init.d/logrotate.sh
 /etc/rc3.d/S99zz-rc-init-complete -> ../init.d/rc-init-complete
 
-/etc/rc4.d/K20ssh 			-> ../init.d/ssh-main
-/etc/rc4.d/K20telnetd       -> ../init.d/telnetd
-/etc/rc4.d/K20tftpd         -> ../init.d/tftpd
-/etc/rc4.d/K20stunnel		-> ../init.d/stunnel4
-/etc/rc4.d/K30cron 			-> ../init.d/cron
-/etc/rc4.d/K90syslog 		-> ../init.d/sysklogd
-/etc/rc4.d/K90rsyslog		-> ../init.d/rsyslog
-
-/etc/rc4.d/K10ntp           -> ../init.d/ntp
-/etc/rc4.d/K10rsyncconfd    -> ../init.d/rsyncconfd
-/etc/rc4.d/K11dhcpmon       -> ../init.d/dhcpmon
-/etc/rc4.d/K20procmanager   -> ../init.d/procmanager
-/etc/rc4.d/K31vmscript      -> ../init.d/vmscript
-/etc/rc4.d/K44avahi-daemon  -> ../init.d/avahi-daemon
-/etc/rc4.d/K45adviserd.sh   -> ../init.d/adviserd.sh
-/etc/rc4.d/K85netsnmp       -> ../init.d/netsnmp
-/etc/rc4.d/K97timeout       -> ../init.d/timeout
-/etc/rc4.d/K99forcekill     -> ../init.d/forcekill
-/etc/rc4.d/S51stopgc        -> ../init.d/stopgc
-/etc/rc4.d/S52initcomplete  -> ../init.d/initcomplete
-
 /etc/rc6.d/K20ssh 			-> ../init.d/ssh-main
 /etc/rc6.d/K20telnetd       -> ../init.d/telnetd
 /etc/rc6.d/K20tftpd         -> ../init.d/tftpd
@@ -103,10 +82,9 @@
 /etc/rcS.d/S30hostname.sh 	-> ../init.d/hostname.sh
 #/etc/rcS.d/S38drvload.sh          -> ../init.d/drvload.sh
 /etc/rcS.d/S40ifupdown 		-> ../init.d/ifupdown
-/etc/rcS.d/S41networking 	-> ../init.d/networking
+/etc/rcS.d/S42networking 	-> ../init.d/networking
 /etc/rcS.d/S50arpflux.sh 	-> ../init.d/arpflux.sh
 /etc/rcS.d/S55bootmisc.sh 	-> ../init.d/bootmisc.sh
-/etc/rcS.d/S21ncsi-performance.sh        -> ../init.d/ncsi-performance.sh
 
 # Library Links
 #/lib/libcom_err.so.2 		-> libcom_err.so.2.1
@@ -161,7 +139,7 @@
 /etc/logrotate.d/rotate.conf		-> /conf/rotate.conf
 
 
-/etc/pam.d/sshd				-> /conf/pam_ssh_wounix
+/etc/pam.d/sshd				-> /etc/pam_withunix
 /etc/pam.d/login			-> /etc/pam_withunix
 /etc/pam.d/other			-> /etc/pam_wounix
 /etc/pam_withunix			-> /conf/pam_withunix

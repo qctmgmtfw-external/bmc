@@ -212,13 +212,11 @@ detect_ncsi_fg(char *devname)
 	if(rtnl_trylock() == 1)
 	{
 		dev_open(dev);
-		netif_carrier_on(dev);
 		rtnl_unlock();
 	}
 	else
 	{
 	       dev_open(dev);
-			netif_carrier_on(dev);
 	}
 
 #ifdef CONFIG_SPX_FEATURE_NCSI_AUTO_FAILOVER

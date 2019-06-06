@@ -1,0 +1,191 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Sensor Reading
+        <small>Live reading of all sensors</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a>
+        </li>
+        <li class="active">
+            Sensor Reading
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <!--search sensors -->
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder="<%=locale.search_sensors%>" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-danger">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> Critical Sensors</h3>
+                </div>
+                <div class="cards row box-body" id="sensor-content">
+                    <div class="sensor col-md-4 col-lg-3 nr">
+                        <div class="reading">
+                            <span>80 &deg;C</span>
+                            <h3>CPU Temperature</h3>
+                        </div>
+                    </div>
+                    <div class="sensor col-md-4 col-lg-3 nr">
+                        <div class="reading">
+                            <span>70 &deg;C</span>
+                            <h3>Ambient Temperature</h3>
+                        </div>
+                    </div>
+                    <div class="sensor col-md-4 col-lg-3 c">
+                        <div class="reading">
+                            <span>60 &deg;C</span>
+                            <h3>Temperature</h3>
+                        </div>
+                    </div>
+                    <!-- <div class="sensor col-md-4 col-lg-3 c">
+                    <div class="reading">
+                        <span>1500 RPM</span>
+                        <h3>Fan</h3>
+                    </div>
+                </div>
+                <div class="sensor col-md-4 col-lg-3 c">
+                    <div class="reading">
+                        <span>1500 RPM</span>
+                        <h3>Fan</h3>
+                    </div>
+                </div>
+                <div class="sensor col-md-4 col-lg-3 c">
+                    <div class="reading">
+                        <span>1500 RPM</span>
+                        <h3>Fan</h3>
+                    </div>
+                </div>
+                <div class="sensor col-md-4 col-lg-3 nc">
+                    <div class="reading">
+                        <span>+5 Volts</span>
+                        <h3>Voltage</h3>
+                    </div>
+                </div>
+                <div class="sensor col-md-4 col-lg-3 nc">
+                    <div class="reading">
+                        <span>+5 Volts</span>
+                        <h3>Voltage</h3>
+                    </div>
+                </div>
+                <div class="sensor col-md-4 col-lg-3 nc">
+                    <div class="reading">
+                        <span>+5 Volts</span>
+                        <h3>Voltage</h3>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> Discrete Sensor States</h3>
+                </div>
+                <div class="box-body">
+                    <table class="table">
+                        <tr>
+                            <th>Sensor Name</th>
+                            <th>State</th>
+                            <th>Behavior</th>
+                        </tr>
+                        <tr class='discrete' id='sensor_210'>
+                            <td>Power Supply</td>
+                            <td>Present</td>
+                            <td>
+                                <div class='sparkline-graph'>Loading..</div>
+                            </td>
+                        </tr>
+                        <tr class='discrete' id='sensor_211'>
+                            <td>Battery</td>
+                            <td>Present</td>
+                            <td>
+                                <div class='sparkline-graph'>Loading..</div>
+                            </td>
+                        </tr>
+                        <tr class='discrete' id='sensor_212'>
+                            <td>Processor</td>
+                            <td>Present</td>
+                            <td>
+                                <div class='sparkline-graph'>Loading..</div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> Normal Sensors</h3>
+                </div>
+                <div class="box-body">
+                    <table class="table">
+                        <tr>
+                            <th>Sensor Name</th>
+                            <th>Reading</th>
+                            <th>Behavior</th>
+                        </tr>
+                        <tr class='threshold' id='sensor_213'>
+                            <td>CPU 1 Temperature</td>
+                            <td>40 &deg;C</td>
+                            <td>
+                                <div class='sparkline-graph'>Loading..</div>
+                            </td>
+                        </tr>
+                        <tr class='threshold' id='sensor_214'>
+                            <td>CPU 2 Temperature</td>
+                            <td>40 &deg;C</td>
+                            <td>
+                                <div class='sparkline-graph'>Loading..</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> Disabled Sensors</h3>
+                </div>
+                <div class="box-body row">
+                    <div class="noscan-sensor col-md-4 col-lg-3">
+                        <h5><i class='fa fa-times'></i> Status Can0 CPU0</h5>
+                    </div>
+                    <div class="noscan-sensor col-md-4 col-lg-3">
+                        <h5><i class='fa fa-times'></i> Memory Err</h5>
+                    </div>
+                    <div class="noscan-sensor col-md-4 col-lg-3">
+                        <h5><i class='fa fa-times'></i> PCIe Card Prst</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content

@@ -1,0 +1,91 @@
+<td>
+    <label class='service_name'>
+        <%= model.get('service_name').toUpperCase() %>
+    </label>
+</td>
+<td>
+    <div class='state'>
+        <% var av = model.get('state'); var avset = false; %>
+            <% if(av == '1'){ avset = true;  %>
+                <%= locale.active %>
+                    <% } %>
+                        <% if(av == '0'){ avset = true;  %>
+                            <%= locale.inactive %>
+                                <% } %>
+                                    <% if(avset == false) { %>
+                                        <%= av %>
+                                            <% } %>
+    </div>
+</td>
+<td>
+    <div class='interface_name'>
+        <%= model.get('interface_name') %>
+    </div>
+</td>
+<td>
+    <div class='non_secure_port'>
+        <% var av = model.get('non_secure_port'); var avset = false; %>
+            <% if(av == '-1'){ avset = true;  %>
+                <%= locale.na %>
+                    <% } %>
+                        <% if(avset == false) { %>
+                            <%var port_val=(av == 0xFFFFFFFF)?'N/A' : av & 0x7FFFFFFF ;%>
+                                <%= port_val %>
+                                    <% } %>
+    </div>
+</td>
+<td>
+    <div class='secure_port'>
+        <% var av = model.get('secure_port'); var avset = false; %>
+            <% if(av == '-1'){ avset = true;  %>
+                <%= locale.na %>
+                    <% } %>
+                        <% if(avset == false) { %>
+                            <%var port_val=(av == 0xFFFFFFFF)?'N/A' : av & 0x7FFFFFFF ;%>
+                                <%=port_val%>
+                                    <% } %>
+    </div>
+</td>
+<td>
+    <div class='time_out'>
+        <% var av = model.get('time_out'); var avset = false; %>
+            <% if(av == '-1'){ avset = true;  %>
+                <%= locale.na %>
+                    <% } %>
+                        <% if(avset == false) { %>
+                            <%= av %>
+                                <% } %>
+    </div>
+</td>
+<td>
+    <div class='maximum_sessions'>
+        <% var av = model.get('maximum_sessions'); var avset = false; %>
+            <% if(av == '255'){ avset = true;  %>
+                <%= locale.na %>
+                    <% } %>
+                        <% if(avset == false) { %>
+                            <%var port_val=(av == 0xFF)?'N/A' : av & 0x7F ;%>
+                                <%=port_val%>
+                                    <% } %>
+    </div>
+</td>
+<td>
+    <div class='active_session'>
+        <% var av = model.get('active_session'); var avset = false; %>
+            <% if(av == '255'){ avset = true;  %>
+                <%= locale.na %>
+                    <% } %>
+                        <% if(avset == false) { %>
+                            <%var port_val=(av == 0xFF)?'N/A' : av & 0x7F ;%>
+                                <%=port_val%>
+                                    <% } %>
+    </div>
+</td>
+<td>
+    <a class="btn btn-default hide action-1" href="#settings/service_sessions/:id" title="View"><i class="ion ion-navicon"></i></a>
+    <a class="btn btn-default hide action-2" href="%custom-link-2"><i class="%custom-icon-2"></i></a>
+    <a class="btn btn-default hide action-3" href="%custom-link-3"><i class="%custom-icon-3"></i></a>
+    <a class="btn btn-default hide action-4" href="%custom-link-4"><i class="%custom-icon-4"></i></a>
+    <a class="btn btn-success hide edit" href="#settings/services/edit/:id" title="Edit"><i class="ion ion-edit"></i></a>
+    <a class="btn btn-danger hide delete" href="#settings/services/edit/:id"><i class="ion ion-close-circled"></i></a>
+</td>

@@ -1,0 +1,33 @@
+Source : adviser
+Version : 2.63.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Viswanathan S (viswanathans@ami.com)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : adviser
+Build-Depends : libcompress_dev, global_dev, libdbgout_dev, libadvisercfg_dev, libunix_dev, libtoken_dev, libblowfish_dev, adviser_dev, libvmedia_dev, VideoLibraryDevelopment, libi2c_dev, libvideorecordcfg_dev, libncml_dev, libfeaturedefine_dev, libUserPrivilege, libuserprivilegepdk, libExtendedpriv_dev, libprocmanager_dev, libuserauth_dev, BaseSystem, libencryption_dev, libdynamicdrv, libdynamicdrv_dev
+Architecture : ALL
+Urgency : medium
+Description : This package contains the ADVISER application.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : adviser
+Config-Tag : Video Server Support
+Section : app
+Group : KVM
+Essential : NO
+Required : VideoLibrary, libcompress, libadvisercfg, libblowfish, libunix, libracsessioninfo, libdbgout, libiniparser, HID_support, libncml, libfeaturedefine, libpdkapp, libprocmanager, processmanager, libvideorecordcfg, libi2c, stunnel4
+Description : This package includes the binary for ADVISER application.
+.
+

@@ -1,0 +1,33 @@
+Source : liblicense
+Version : 2.5.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Aruna Devi (arunadevid@amiindia.co.in)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : liblicense
+Build-Depends : Crosscc, global_dev, libfeaturedefine_dev, rules, libdbgout_dev, BaseSystem, ipmi_dev
+Customization-Type : PDK
+Architecture : ALL
+Urgency : medium
+Description : This package contains functions for license verification.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : liblicense
+Section : lib
+Group : FEATURES
+Essential : NO
+Required : libdbgout
+Description : This package contains functions for license verification.
+.
+

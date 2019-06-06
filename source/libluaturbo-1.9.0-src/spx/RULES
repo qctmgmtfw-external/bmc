@@ -1,0 +1,21 @@
+# List of Supported Rules
+supported_rules: extract_source build_source clean_source
+
+#Extract Source	in %SOURCE
+extract_source:
+
+
+#Build Source in %BUILD
+build_source:
+	CWD %BUILD/%PACKAGE/data/
+	INVOKE_MAKE -f Makefile-tffi
+	COPY_FILE libtffi_wrap.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX libtffi_wrap.so
+	INVOKE_MAKE minimize
+
+#Clean Source
+clean_source:
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+# Rules to create libluaturbo package
+build_package-libluaturbo:
+	PACK_SPX  ./   %BUILD/%PACKAGE/data/package/turbo/

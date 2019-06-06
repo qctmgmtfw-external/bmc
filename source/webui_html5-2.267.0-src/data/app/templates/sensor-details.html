@@ -1,0 +1,114 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%=locale.sensor_details%> 
+        <small><%=locale.allinfo%></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%=locale.home%></a> 
+        </li>
+        <li><a href="#sensors"><%=locale.sensor_reading%></a> 
+        </li>
+        <li class="active">
+            <%=locale.sensor_details%>  
+        </li>
+    </ol>
+    <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <!--
+    <div class="row">
+        <div class="col-md-12">
+            <~~! search sensors ~~>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder="<%=locale.search_sensors%>" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div role="alert" class="alert alert-info help-item hide"><%= locale.page_desc %></div>
+    <div class="row animated fadeInUp">
+        <div class="col-md-12">
+            <div class="box box-danger">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> <span id="sensor_name"></span> <%=locale.sensor_information%></h3>
+                </div>
+                <div class="cards row box-body" id="sensor-content">
+                    
+                    <div class="threshold-sensors col-md-12">
+                        <div class="col-md-8">
+                            <!--<canvas id="live-reading"></canvas>-->
+                            <div id="live-reading"></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div id="live-reading-text"></div>
+                            <table class="table table-body">
+                                <tr>
+                                    <td>Upper Non-Recoverable</td>
+                                    <td id='unr'></td>
+                                </tr>
+                                <tr>
+                                    <td>Upper Critical</td>
+                                    <td id='uc'></td>
+                                </tr>
+                                <tr>
+                                    <td>Upper Non-Critical</td>
+                                    <td id='unc'></td>
+                                </tr>
+                                <tr>
+                                    <td>Lower Non-Critical</td>
+                                    <td id='lnc'></td>
+                                </tr>
+                                <tr>
+                                    <td>Lower Critical</td>
+                                    <td id='lc'></td>
+                                </tr>
+                                <tr>
+                                    <td>Lower Non-Recoverable</td>
+                                    <td id='lnr'></td>
+                                </tr>
+                            </table>
+                            <div class="pull-right clear-fix">
+                                <a class='btn btn-primary' href="#settings/sensor_thresholds" data-feature="SET_SENSOR_THRESHOLDS" id='change-threshold'>Change Thresholds</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discrete-sensors col-md-12 hide">
+                        <div class="col-md-8">
+                            <canvas id="live-state"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row animated fadeInUp delay-0">
+        <div class="col-md-12">
+            <div class="box box-info">
+                <div class="box-header">
+                    <h3 class="box-title"><i class="fa fa-bookmark-o"></i> <%=locale.sensor_events%></h3>
+                </div>
+<!--                <div class="box-body" id="sensor-events">
+                    <div class='info'><i class='fa fa-info-circle'></i> <%=locale.no_events%></div>
+                </div>	-->
+				<div class="col-lg-6">
+					<ul class="timeline" id="event-content">
+						<li>
+							<i class="fa fa-clock-o animated fadeInDown"></i>
+						</li>
+					</ul>
+        		</div> 
+            </div>
+        </div>
+    </div>
+</section>

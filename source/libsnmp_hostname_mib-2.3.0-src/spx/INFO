@@ -1,0 +1,26 @@
+Source                   	:	libsnmp_hostname_mib
+Version : 2.3.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Michael Wozniak  (michaelw@ami.com)
+License                  	:	AMI
+Source-Location          	:	AMI
+Source-Version           	:	1.0.0
+Builds                   	:	libsnmp_hostname_mib
+Build-Depends            	:	sys_net_snmp(>=1.0.0), Crosscc, libdbgout_dev, global_dev, rules, libhostname
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	SNMP Hostname Extension
+.
+
+Package                  	:	libsnmp_hostname_mib
+Config-Tag               	:	SNMP Hostname Extension
+Section                  	:	lib
+Group                    	:	FEATURES
+Essential                	:	NO
+Depends                  	:	sys_net_snmp(>=1.0.0)
+Required                 	:	libhostname
+Description              	:	SNMP Hostname Extension
+.
+

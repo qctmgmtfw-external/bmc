@@ -1,0 +1,173 @@
+Package: sys_ldap (3.4.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: data/.keep, spx/PACKAGES.D/sys_ldap/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:25:28 EST
+
+Package: sys_ldap (3.3.0); urgency = low
+
+Abstract:
+	Added extra files and fixes for future target migrations and strict compilers
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 23 Jul 2015 14:33:23 EDT
+
+Package: sys_ldap (3.2.0); urgency = medium
+
+Abstract:
+	Correction in License files
+
+Files Added: spx/LICENSES/LICENSE.AMI
+Files Deleted: spx/LICENSES/LICENSE.OPENSOURCE
+
+--Submitter: Winston (winstont@ami.com) Tue, 31 Mar 2015 19:00:43 GMT
+
+Package: sys_ldap (3.1.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:31:24 GMT
+
+Package: sys_ldap (3.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:36:59 GMT
+
+Package: sys_ldap (2.8.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:02:16 GMT
+
+Package: sys_ldap (2.7.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:14:19 GMT
+
+Package: sys_ldap (2.6.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO, spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:12:42 EDT
+
+Package: sys_ldap (2.5.0); urgency = high
+
+Abstract:
+	run-time loading issues fixed
+
+Files Modified: spx/RULES.D/files.lst
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 22 Jun 2012 16:48:28 EDT
+
+Package: sys_ldap (2.4.0); urgency = low
+
+Abstract:
+	Versions of library is not hard coded. The correct version of library is taken by travesing from <library>.so file
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 20 Jun 2012 14:45:55 EDT
+
+Package: sys_ldap (2.3.0); urgency = medium
+
+Abstract:
+	Creating a soft link of libldap for libldap_r
+
+Files Modified: spx/RULES.D/softlink.lst
+
+--Submitter: Revanth A (revantha@amiindia.co.in) Wed, 02 May 2012 15:44:49 IST
+
+Package: sys_ldap (2.2.0); urgency = high
+
+Abstract:
+	licensing corrected
+
+Files Added: spx/LICENSES/LICENSE.OPENSOURCE
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Thu, 23 Jun 2011 16:34:08 EDT
+
+Package: sys_ldap (2.1.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:41:37 EDT
+
+Package: sys_ldap (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:54:19 EST
+
+Package: sys_ldap (1.3.0); urgency = low
+
+Abstract:
+	Description files cleanup
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Nov 2010 15:34:30 EST
+
+Package: sys_ldap (1.2.0); urgency = medium
+
+Abstract:
+	Added Provides as BaseLdap
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 09 Nov 2010 11:31:10 EST
+
+Package: sys_ldap (1.1.0); urgency = low
+
+Abstract:
+	Incrementing Minor and setting Aux to Zero
+
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 21 Sep 2010 14:17:22 EDT
+
+Package: sys_ldap (1.0.1); urgency = low
+
+Abstract:
+	Version Dependecies Removed
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 10 Feb 2010 17:16:01 EST
+
+Package:sys_ldap (1.0.0);urgency=new
+
+Abstract:
+	System Package that includes all the LDAP related sysem-level libraries.
+
+Files Added: 
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 3 Dec 2009 12:34:23 -0500

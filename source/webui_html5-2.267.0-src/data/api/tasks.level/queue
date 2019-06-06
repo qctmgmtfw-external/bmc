@@ -1,0 +1,6 @@
+[
+	{"title": "Restoring older version of OS", "percent": 20.5, "status": "Paused by user", "start": 0, "end": 0}
+,	{"title": "Install Anti-virus software", "percent": 0, "status": "Waiting for resource", "start": 0, "end": 0}
+,	{"title": "Setup Mail Server", "percent": 0, "status": "Waiting for resource", "start": 0, "end": 0}
+,	{"title": "Reboot Host", "percent": 0, "status": "Waiting for resource", "start": 0, "end": 0}
+]

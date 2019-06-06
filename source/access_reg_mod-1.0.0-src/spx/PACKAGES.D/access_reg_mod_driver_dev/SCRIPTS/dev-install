@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+        MKDIR_NOCLEAN %SPXINC/access_reg
+        COPY_DIR ./ %SPXINC/access_reg
+
+debug-install:

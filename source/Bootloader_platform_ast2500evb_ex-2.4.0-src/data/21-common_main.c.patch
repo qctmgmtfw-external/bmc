@@ -1,0 +1,12 @@
+--- uboot/common/main.c	2019-01-29 13:18:49.847529254 +0800
++++ uboot/common/main.c.new	2019-01-29 13:20:21.391532066 +0800
+ #ifdef CONFIG_SILENT_CONSOLE
+@@ -470,7 +470,7 @@
+ 	}
+ 	// --- Quanta
+
+-#ifdef CONFIG_MENUKEY
++#if defined(CONFIG_MENUKEY) && !defined(CONFIG_AUTOBOOT_KEYED)
+ 	if (menukey == CONFIG_MENUKEY) {
+ 		s = getenv("menucmd");
+ 		if (s)

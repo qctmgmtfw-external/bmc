@@ -1,0 +1,34 @@
+# List of Supported Rules
+supported_rules: extract_source build_source clean_source
+
+#Extract Source	in %SOURCE
+extract_source:
+
+#Build Source in %BUILD
+build_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE
+
+#Clean Source
+clean_source:
+		CWD %BUILD/%PACKAGE/data
+		INVOKE_MAKE clean
+
+#--------------------- Mandatory Rules for every binary package -------------------------
+
+# Rules to create libencoding package
+build_package-libencoding:
+		PACK_SPX  ./   %BUILD/%PACKAGE/data/libencoding.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX
+				
+# Rules to create libencoding_dev package
+build_package-libencoding_dev:
+		MKDIR_CLEAN %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/CyoDecode.h %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/CyoEncode.h %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/Encode.h %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/libencoding.a %TEMPDIR/%PACKAGE/tmp
+		COPY_FILE %BUILD/%PACKAGE/data/libencoding.so.%PKG_MAJOR.%PKG_MINOR.%PKG_AUX %TEMPDIR/%PACKAGE/tmp
+		PACK_SPX ./ %TEMPDIR/%PACKAGE/tmp
+				
+		
+

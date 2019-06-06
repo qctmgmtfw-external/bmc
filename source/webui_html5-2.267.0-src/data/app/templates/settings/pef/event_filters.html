@@ -1,0 +1,49 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/pef"><%= locale.platform_event_filters %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+		<div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+		<div class="alert alert-info help-item hide" role="alert"><%= locale.hlp_event_filter %></div>
+		
+		<div class="alert alert-danger hide"><b></b></div> 
+        <div class="row">
+        <div class="col-md-12">
+            <!--search events -->
+           <!-- <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder="Search <%= locale.title %>" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 list">
+            <div class="col-md-3 list-item list-add-item hide">
+                <a href='%%add-link'>
+                    <div class="col-md-3 icon">
+                        <i class="ion-plus-circled iconic"></i>
+                    </div>
+                    <div class="col-md-9 contents">
+                        %%add-text
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

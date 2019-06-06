@@ -1,0 +1,24 @@
+Source                   	:	sys_ldap
+Version : 3.4.0
+SPX-Version              	:	4.0
+SPX-Format               	:	2.0
+Owner                    	:	AMI
+Maintainer               	:	Samvinesh Christopher  (vineshc@ami.com)
+License                  	:	AMI
+Source-Location          	:	http://packages.debian.org
+Source-Version           	:	1.0.0
+Builds                   	:	sys_ldap
+Build-Depends            	:	Target, Crosscc
+Architecture             	:	ALL
+Urgency : medium
+Description              	:	System Package that includes all the LDAP related system-level libraries.
+.
+
+Package                  	:	sys_ldap
+Section                  	:	sys
+Group                    	:	BASE
+Essential                	:	NO
+Provides                 	:	BaseLdap
+Description              	:	System Package that includes all the LDAP related system-level libraries.
+.
+

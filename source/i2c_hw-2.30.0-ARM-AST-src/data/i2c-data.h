@@ -92,11 +92,12 @@
 #define MASTER_XMIT 0x11
 #define MASTER_RECV 0x10
 
-#define SLAVETX_MAX_RES_SIZE	34	//Here defined size for SSIF application: Length, Data[1..32], PEC 
-#define SLAVETX_RES_BUFFER_SIZE	((SLAVETX_MAX_RES_SIZE/4) + (SLAVETX_MAX_RES_SIZE%4 == 0?0:1)) * 4 
+#define SLAVETX_MAX_RES_SIZE	34	//Here defined size for SSIF application: Length, Data[1..32], PEC
+#define SLAVETX_RES_BUFFER_SIZE	((SLAVETX_MAX_RES_SIZE/4) + (SLAVETX_MAX_RES_SIZE%4 == 0?0:1)) * 4
 
-/* Extended IOCTLS - Implemented in i2c-core and hardware for SSIF */ 
-#define ENABLE_SSIF	0x0852 
+/* Extended IOCTLS - Implemented in i2c-core and hardware for SSIF */
+#define ENABLE_SSIF	0x0852
+#define I2C_USER_RECOVERY		      0x0855
 
 /* Error codes in compliance with IPMI */
 #define ARBLOST		0x80000081
@@ -104,8 +105,8 @@
 #define NACKONWR	0x80000083
 #define TRUNKRD		0x80000084
 
-#define I2C_BYTE_MODE   0 
-#define I2C_DMA_MODE    1 
+#define I2C_BYTE_MODE   0
+#define I2C_DMA_MODE    1
 
 //#define JM_RECOVERY 1
 
@@ -146,7 +147,7 @@ struct i2c_as_data
 	int MCTPRX_Reader;
 	int MCTPRX_Len[MAX_FIFO_LEN];
 	int MCTPRX_Entries;
- 
+
 	unsigned char MasterRX_data[TRANSFERSIZE];
 	int MasterRX_len;
 	int MasterRX_index;
@@ -158,7 +159,7 @@ struct i2c_as_data
 	unsigned char SlaveRX_data[MAX_FIFO_LEN][TRANSFERSIZE];
 	int SlaveRX_len[MAX_FIFO_LEN];
 	int SlaveRX_index[MAX_FIFO_LEN];
-	
+
 	int SlaveRX_Writer;
 	int SlaveRX_Reader;
 	int SlaveRX_Entries;
@@ -195,17 +196,17 @@ struct i2c_as_data
 	int SMB_Linear_SlaveRX_len;
 	int SMB_Linear_SlaveRX_index;
 
-	
+
 	unsigned char SMB_SlaveRX_data[MAX_FIFO_LEN][TRANSFERSIZE];
 	int SMB_SlaveRX_len[MAX_FIFO_LEN];
 	int SMB_SlaveRX_index[MAX_FIFO_LEN];
-		
+
 	int SMB_SlaveRX_Writer;
 	int SMB_SlaveRX_Reader;
 	int SMB_SlaveRX_Entries;
 	unsigned short i2c_link_state;
-	
-#ifdef JM_RECOVERY 
+
+#ifdef JM_RECOVERY
 	unsigned char dev_fail_cnt[128];
 	unsigned char bus_busy_cnt;
 	int i2c_message_slave_address;
@@ -226,7 +227,7 @@ void i2c_init_internal_data(int bus);
 
 
 /*
-* I2C BUS states 
+* I2C BUS states
 */
 
 #define I2C_LINK_NO_FAILURE						0x00  //
@@ -234,9 +235,9 @@ void i2c_init_internal_data(int bus);
 #define I2C_UNABLE_DRIVE_DATA_HIGH				0x02  //
 #define I2C_UNABLE_DRIVE_CLK_LOW				0x03
 #define I2C_UNABLE_DRIVE_DATA_LOW				0x04
-#define I2C_CLOCK_LOW_TIMEOUT_CLK_HIGH			0x05   
-#define I2C_UNDER_TEST							0x06  //  
-#define I2C_UNDIAGNOSED_COMM_FAILURE			0x07  // 
+#define I2C_CLOCK_LOW_TIMEOUT_CLK_HIGH			0x05
+#define I2C_UNDER_TEST							0x06  //
+#define I2C_UNDIAGNOSED_COMM_FAILURE			0x07  //
 
 /*
 * I2c Test Operations

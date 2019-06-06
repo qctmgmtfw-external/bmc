@@ -1,0 +1,16 @@
+# Install Script
+
+build-install:
+	COPY_FILE ./libtffi_wrap.so %IMAGE_TREE/usr/lib/%MULTI_ARCH_LIB
+	#ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libjson-c.so.2.0.0
+	MKDIR_CLEAN %IMAGE_TREE/usr/share/luajit-2.0.3/turbo
+	MKDIR_CLEAN %IMAGE_TREE/usr/share/lua/5.1/turbo
+	COPY_DIR ./turbo %IMAGE_TREE/usr/share/luajit-2.0.3/turbo
+	COPY_FILE ./turbo.lua %IMAGE_TREE/usr/share/luajit-2.0.3/
+	COPY_FILE ./turbovisor.lua %IMAGE_TREE/usr/share/luajit-2.0.3/
+	COPY_DIR ./turbo %IMAGE_TREE/usr/share/lua/5.1/turbo
+	COPY_FILE ./turbo.lua %IMAGE_TREE/usr/share/lua/5.1/
+	COPY_FILE ./turbovisor.lua %IMAGE_TREE/usr/share/lua/5.1/
+		
+debug-install:
+

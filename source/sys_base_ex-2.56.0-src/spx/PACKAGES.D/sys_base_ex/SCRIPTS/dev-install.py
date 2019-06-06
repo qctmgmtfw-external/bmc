@@ -99,9 +99,7 @@ def build_install():
 	retval=Py_CopyFile(ImageTree+"/etc/defconfig/console_tty", ImageTree+"/conf/console_tty")
 	if retval != 0:
 		return retval
-
-	#NCSI Performance 
-	Py_Execute("chmod 755 "+ImageTree+"/etc/init.d/ncsi-performance.sh")
+	
 
 	# SHELL defconfig 
 	retval=Py_WriteFile("[defaultshell]", ImageTree+"/etc/defconfig/default_sh")
@@ -221,19 +219,6 @@ def build_install():
 #                if retval != 0:
 #   	  		return retval
 
-	# Quanta: Ensure the logrotate has correct permission to be executed
-	retval=Py_Execute("chmod 644 " + ImageTree + "/etc/logrotate.conf");
-	if retval != 0:
-		return retval
-	# Quanta: Ensure the crontab has correct permission to be executed
-	retval=Py_Execute("chmod 644 " + ImageTree + "/etc/defconfig/crontab");
-	if retval != 0:
-		return retval
-	# Quanta: Ensure the crontab has correct permission to be executed
-	retval=Py_Execute("chmod 644 " + ImageTree + "/etc/defconfig/rotate.conf");
-	if retval != 0:
-		return retval	
-				
 	 #Add mDNS Support only if enabled
  	if  "CONFIG_SPX_FEATURE_MDNS_SUPPORT" in PrjVars:
  		retval = Py_AppendFile("avahi:x:104:111:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false", ImageTree+"/etc/defconfig/passwd")

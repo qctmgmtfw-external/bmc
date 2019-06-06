@@ -1,0 +1,4 @@
+[
+	{ "interface_name" : "eth0", "id" : 0, "auto_negotiation" : 1, "link_speed": 1000, "duplex_mode" : "FULL" },  
+	{ "interface_name" : "eth1", "id" : 1, "auto_negotiation" : 0, "link_speed" : 10, "duplex_mode" : "HALF" }
+] 

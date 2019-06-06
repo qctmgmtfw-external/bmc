@@ -1,0 +1,43 @@
+Source : access_reg_mod
+Version : 1.0.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Builds : access_reg_mod, access_reg_mod_driver_dev
+Build-Depends : Crosscc, helper_driver_dev, kernel_dev, rules, DevNodes
+Owner : Quanta
+Maintainer : Always Chen (Always.Chen@quantatw.com)
+Source-Location : AMI
+Source-Version : 2.0.0
+Source-License : AMI
+Architecture : ANY
+Urgency : new
+Description : This package contains the access reg driver.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : access_reg_mod
+Section : sys
+Essential : NO
+Config-Tag : Access Reg Support
+Group : DEVICE
+Depends : kernel
+Required : helper
+Binary-License : AMI
+Description : Access reg driver module
+.
+
+Package : access_reg_mod_driver_dev
+Section : dev
+Essential : NO
+Group : DEVEL
+Binary-License : AMI
+Description : This package contains Access reg development header files.
+.
+

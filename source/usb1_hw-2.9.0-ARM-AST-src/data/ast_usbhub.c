@@ -59,26 +59,7 @@
 #define AST_USBHUB_DEV_EP0_ID 0x80
 
 /*-----------------------------------------------------------------------------------------------*/
-//Alan ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// Default interval time of monitoring USB HUB and Device enabled Status in seconds
-#define USB_TIMER_DEALAY_FOR_POLLING 5  //the interval of launch check, as least 3 sec 
-static struct timer_list s_Polling_Check_Timer; // A Kernel Timer to poll the flag of enabling check timer
-static int s_usb_check_timer = 0; //the flag of enabling check timer
-static int s_IsTimerUsing = 0; 
-static int s_hub_check_done = 0; //the flag indicates that hub enabled
-static int s_dev_check_done[AST_USBHUB_DEV_NUM] = {0}; //the flag indicates each device enabled
-static int s_hub_retry = 0; 
-static int s_dev_retry[AST_USBHUB_DEV_NUM] = {0};
-static uint8_t check_Txbuf[AST_USBHUB_EP0_BUF_SIZE];
-#define MEMCPY_CHECK(DES, SRC, SIZE)\
-		memcpy_toio(DES, SRC, SIZE);\
-		memcpy_fromio(check_Txbuf, DES, SIZE);\
-		if(memcmp(check_Txbuf, SRC, SIZE)) {\
-			printk(KERN_ERR "[Error] USB Tx buf data does not match , Line:%d \n", __LINE__);\
-			memcpy_toio(DES, SRC, SIZE);\
-		}
-//Alan ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-/*-----------------------------------------------------------------------------------------------*/
+
 static const char *ast_usbhub_driver_name = "ast-usbhub";
 
 static void *ast_usbhub_virt_base; /* virtual address of I/O registers */
@@ -569,7 +550,6 @@ void ast_usbhub_dev_disconnect(uint8_t dev_num)
 	}
 
 	ast_usbhub_device_connect_to_port[dev_num] = 0;
-	s_dev_check_done[dev_num] = 0; //Alan++
 }
 
 void ast_usbhub_dev_connect(uint8_t dev_num)
@@ -600,13 +580,6 @@ void ast_usbhub_dev_connect(uint8_t dev_num)
 	}
 
 	ast_usbhub_device_connect_to_port[dev_num] = 1;
-	//Alan ++++++++++++++++++++++++++++++++++++++++++++++++++
-	// Respawning the Monitor timer
-	if((s_hub_check_done == 1) && (!s_dev_check_done[dev_num]))
-	{
-	//	printk("[Alan]....ast_usbhub_dev_connect add timer \n");
-		s_usb_check_timer = 1;
-	}
 }
 
 int ast_usbhub_enable_ep(uint8_t dev_num, uint8_t ep_num, uint8_t ep_dir, uint8_t ep_type)
@@ -1405,7 +1378,7 @@ static int ast_usbhub_hub_setup_class_req(const struct usb_ctrlrequest *ctrl_req
 	uint8_t desc_type, desc_index;
 	uint8_t port;
 	int value = -EOPNOTSUPP;
-	
+
 	switch (ctrl_req->bRequest) {
 	case USB_REQ_GET_DESCRIPTOR:
 		TDBG_FLAGGED(ast_usbhub_debug_flags, AST_USBHUB_DEBUG_SETUP, "GET HUB DESC\n");
@@ -1420,15 +1393,9 @@ static int ast_usbhub_hub_setup_class_req(const struct usb_ctrlrequest *ctrl_req
 			break;
 		if (desc_index != 0) /* we only have 1 hub descriptor */
 			break;
-		
+
 		value = (w_length < USB_DT_HUB_SIZE) ? w_length : USB_DT_HUB_SIZE;
-		
-		//memcpy(ast_usbhub_hub_ep0_buf, &ast_usbhub_hub_class_desc, value);
-		
-		/* Use memcpy_toio to avoid incomplete copy data to Tx EP0 buf*/
-		MEMCPY_CHECK(ast_usbhub_hub_ep0_buf, (uint8_t *) &ast_usbhub_hub_class_desc, value);
-		s_usb_check_timer = 1; //Alan ++
-		
+		memcpy(ast_usbhub_hub_ep0_buf, &ast_usbhub_hub_class_desc, value);
 		break;
 	case USB_REQ_GET_STATUS:
 		ast_usbhub_hub_ctrl_data_stage = EP0_CTRL_DATA_STAGE_IN;
@@ -1439,9 +1406,7 @@ static int ast_usbhub_hub_setup_class_req(const struct usb_ctrlrequest *ctrl_req
 			if (w_index != 0 || w_value != 0 || w_length != USB_HUB_STATUS_SIZE)
 				break;
 
-			//memcpy(ast_usbhub_hub_ep0_buf, (uint8_t *) &ast_usbhub_hub_class_status, USB_HUB_STATUS_SIZE);
-			/* Use memcpy_toio to avoid incomplete copy data to Tx EP0 buf*/
-			MEMCPY_CHECK(ast_usbhub_hub_ep0_buf, (uint8_t *) &ast_usbhub_hub_class_status, USB_HUB_STATUS_SIZE);
+			memcpy(ast_usbhub_hub_ep0_buf, (uint8_t *) &ast_usbhub_hub_class_status, USB_HUB_STATUS_SIZE);
 			value = USB_HUB_STATUS_SIZE;
 			break;
 		case (USB_DIR_IN | USB_RT_PORT):
@@ -1455,9 +1420,7 @@ static int ast_usbhub_hub_setup_class_req(const struct usb_ctrlrequest *ctrl_req
 			if (port >= AST_USBHUB_DEV_NUM)
 				break;
 
-			//memcpy(ast_usbhub_hub_ep0_buf, &(ast_usbhub_port_status[port]), USB_PORT_STATUS_SIZE);
-			/* Use memcpy_toio to avoid incomplete copy data to Tx EP0 buf*/
-			MEMCPY_CHECK(ast_usbhub_hub_ep0_buf, (uint8_t *) &(ast_usbhub_port_status[port]), USB_PORT_STATUS_SIZE);
+			memcpy(ast_usbhub_hub_ep0_buf, &(ast_usbhub_port_status[port]), USB_PORT_STATUS_SIZE);
 			value = USB_PORT_STATUS_SIZE;
 			break;
 		}
@@ -1650,7 +1613,6 @@ static int ast_usbhub_hub_setup_standard_req(const struct usb_ctrlrequest *ctrl_
 
 		ast_usbhub_hub_dev_addr = w_value;
 		value = 0;
-		s_usb_check_timer = 1; //Alan ++
 		break;
 	case USB_REQ_GET_DESCRIPTOR:
 		ast_usbhub_hub_ctrl_data_stage = EP0_CTRL_DATA_STAGE_IN;
@@ -1665,9 +1627,7 @@ static int ast_usbhub_hub_setup_standard_req(const struct usb_ctrlrequest *ctrl_
 			TDBG_FLAGGED(ast_usbhub_debug_flags, AST_USBHUB_DEBUG_SETUP, "DEV DESC\n");
 
 			value = USB_DT_DEVICE_SIZE;
-			//memcpy(ast_usbhub_hub_ep0_buf, &ast_usbhub_hub_dev_desc, value);
-			/* Use memcpy_toio to avoid incomplete copy data to Tx EP0 buf*/
-			MEMCPY_CHECK(ast_usbhub_hub_ep0_buf, (uint8_t *) &ast_usbhub_hub_dev_desc, value);
+			memcpy(ast_usbhub_hub_ep0_buf, &ast_usbhub_hub_dev_desc, value);
 			break;
 		case USB_DT_CONFIG:
 			TDBG_FLAGGED(ast_usbhub_debug_flags, AST_USBHUB_DEBUG_SETUP, "CFG DESC\n");
@@ -1685,9 +1645,7 @@ static int ast_usbhub_hub_setup_standard_req(const struct usb_ctrlrequest *ctrl_
 
 			value = sizeof(ast_usbhub_hub_dev_qualifier_desc);
 			ast_usbhub_hub_dev_qualifier_desc.bDeviceProtocol = (ast_usbhub_hub_speed == USB_SPEED_FULL) ? 0x01 : 0x00;
-			//memcpy(ast_usbhub_hub_ep0_buf, &ast_usbhub_hub_dev_qualifier_desc, value);
-			/* Use memcpy_toio to avoid incomplete copy data to Tx EP0 buf*/
-			MEMCPY_CHECK(ast_usbhub_hub_ep0_buf, (uint8_t *) &ast_usbhub_hub_dev_qualifier_desc, value);
+			memcpy(ast_usbhub_hub_ep0_buf, &ast_usbhub_hub_dev_qualifier_desc, value);
 			break;
 		case USB_DT_OTHER_SPEED_CONFIG:
 
@@ -1858,8 +1816,7 @@ irqreturn_t ast_usbhub_irq_handler(int irq, void *priv)
 		ast_usbhub_hub_class_status.wHubChange = 0; /* No change has occurred */
 		ast_usbhub_hub_speed = USB_SPEED_FULL;
 		ast_usbhub_remote_wakeup_enable = 0;
-		s_hub_check_done = 0; //Alan ++		
-		
+
 		for (i = 0; i < AST_USBHUB_DEV_NUM; i ++) {
 			ast_usbhub_dev_addr[i] = 0x00;
 			ast_usbhub_dev_set_addr_req[i] = 0;
@@ -1867,8 +1824,6 @@ irqreturn_t ast_usbhub_irq_handler(int irq, void *priv)
 			ast_usbhub_port_status[i].wPortStatus = 0;
 			ast_usbhub_port_status[i].wPortChange = 0;
 			ast_usbhub_dev_run_speed[i] = SUPPORT_FULL_SPEED;
-			s_dev_check_done[i] = 0; //Alan++
-			s_dev_retry[i] = 0; //Alan++
 			
 			port = ast_usbhub_convert_dev_to_port(ast_usbhub_dev_cfg[i].dev_num);
 			ast_usbhub_clear_bitmap(port);
@@ -1892,8 +1847,6 @@ irqreturn_t ast_usbhub_irq_handler(int irq, void *priv)
 			/* call suspend handler of device */
 			if (ast_usbhub_device_connect_to_port[i]) {
 				usb_core_module.CoreUsbBusSuspend(ast_usbhub_dev_cfg[i].dev_num);
-				//Alan, Clear the address of enabled device, because when Host send resume request the device will get a new address
-				ast_usbhub_write_reg(0, AST_USBHUB_DEV_EP0_ICR(i));
 			}
 		}
 	}
@@ -1961,10 +1914,8 @@ irqreturn_t ast_usbhub_irq_handler(int irq, void *priv)
 				reg = ((length << AST_USBHUB_HUB_EP0_IN_BUF_LEN_SHIFT) & AST_USBHUB_HUB_EP0_IN_BUF_LEN_MASK) | AST_USBHUB_HUB_EP0_IN_BUF_TX;
 			}
 		}
-
 		wmb();
 		ast_usbhub_write_reg(reg, AST_USBHUB_HUB_EP0_CSR);
-		
 	}
 
 	if (irq_status & AST_USBHUB_IRQ_DEV_MASK) { /* device ep0 */
@@ -1983,155 +1934,9 @@ irqreturn_t ast_usbhub_irq_handler(int irq, void *priv)
 			}
 		}
 	}
+
 	return IRQ_HANDLED;
 }
-/*-----------------------------------------------------------------------------------------------*/
-//Alan ++
-static void Timer_check_USB_EnableFn(void)
-{	
-	uint8_t hubaddr = 0;
-	uint8_t hubenable= 0;
-	uint8_t devaddr = 0;
-	uint8_t devenable = 0;
-	uint32_t reg = 0;
-	uint8_t i;
-
-	s_usb_check_timer = 0; 
-	
-	if(s_hub_retry > 2) // Re-enable USB 3 times, check hub and all device, if still cannot enable then stop re-enable USB
-	{ 
-	//	printk("[Alan]....Retry over 3 times \n");
-		hubaddr = ast_usbhub_read_reg(AST_USBHUB_HUB_ADDR) & 0x0000007F;
-		hubenable = ast_usbhub_read_reg(AST_USBHUB_ROOT) & 0x00000001;	
-		if((hubenable > 0) && (hubaddr > 0))
-		{
-			s_hub_check_done = 1;
-			for (i = 0; i < AST_USBHUB_DEV_NUM; i++)
-			{
-				if(ast_usbhub_device_connect_to_port[i] == 1) 
-				{
-					reg = ast_usbhub_read_reg(AST_USBHUB_DEV_EP0_ICR(i));  
-					devenable = reg & 0x00000001;
-					devaddr   = (reg & 0x00007F00) >> 8;				
-					if((devaddr > 0) && (devenable > 0))	//already enabled				
-					{	
-						s_dev_check_done[i] = 1;
-						s_dev_retry[i] = 0;
-						continue;
-					}
-					else
-					{
-						printk("[Warning]  Cannot enable the USB device %d !!! \n", i);
-						return;
-					}
-				}
-			}
-			s_hub_retry = 0;
-		}
-		else
-		{
-			printk("[Warning]  Cannot enable USB-HUB !!! \n");
-			return;
-		}
-	}
-	
-	if(!s_hub_check_done)
-	{
-		// check UHB is enabled or not
-		hubaddr = ast_usbhub_read_reg(AST_USBHUB_HUB_ADDR) & 0x0000007F;
-		hubenable = ast_usbhub_read_reg(AST_USBHUB_ROOT) & 0x00000001;
-		if((hubenable > 0) && (hubaddr > 0))		
-		{	
-			s_hub_check_done = 1;
-		}
-		else //re-enable HUB
-		{
-			/* disconnect upstream port from host */
-			reg = ast_usbhub_read_reg(AST_USBHUB_ROOT) & ~AST_USBHUB_ROOT_UPSTREAM_PORT_CONNECT;
-			ast_usbhub_write_reg(reg, AST_USBHUB_ROOT);
-			udelay(100);
-			/* connect upstream port to host */
-			reg = ast_usbhub_read_reg(AST_USBHUB_ROOT) | AST_USBHUB_ROOT_UPSTREAM_PORT_CONNECT;
-			ast_usbhub_write_reg(reg, AST_USBHUB_ROOT);
-			s_hub_retry++;
-	//		printk("[Alan]....re-enable HUB  \n");
-		}
-	}
-	
-	// If UHB is enabled, check each connected-device is enabled or not
-	if(s_hub_check_done == 1)
-	{
-		for (i = 0; i < AST_USBHUB_DEV_NUM; i++)
-		{
-			if ((ast_usbhub_device_connect_to_port[i] == 1) && (!s_dev_check_done[i]))
-			{
-				reg = ast_usbhub_read_reg(AST_USBHUB_DEV_EP0_ICR(i));  
-				devenable = reg & 0x00000001;
-				devaddr   = (reg & 0x00007F00) >> 8;				
-				if((devaddr > 0) && (devenable > 0))	//already enabled				
-				{	
-					s_dev_check_done[i] = 1;
-					s_dev_retry[i] = 0;
-					continue;
-				}					
-				else if(s_dev_retry[i] < 2)	//re-enable device
-				{
-			//		printk("[Alan]....re-enable dev %u devenable %u devaddr %x \n", i, devenable, devaddr);
-					ast_usbhub_dev_disconnect(i);
-					udelay(10);
-					ast_usbhub_dev_connect(i);
-					s_dev_retry[i]++;
-				}
-				else //If any device cannot enable in 2 times retry then re-enable HUB
-				{																				
-					/* disconnect upstream port from host */
-					reg = ast_usbhub_read_reg(AST_USBHUB_ROOT) & ~AST_USBHUB_ROOT_UPSTREAM_PORT_CONNECT;
-					ast_usbhub_write_reg(reg, AST_USBHUB_ROOT);
-					udelay(100);
-					/* connect upstream port to host */
-					reg = ast_usbhub_read_reg(AST_USBHUB_ROOT) | AST_USBHUB_ROOT_UPSTREAM_PORT_CONNECT;
-					ast_usbhub_write_reg(reg, AST_USBHUB_ROOT);				
-			//		printk("[Alan]....re-enable HUB  \n");
-					s_hub_retry++;
-					s_IsTimerUsing = 0;
-					return;
-				}
-			}				
-		}
-	}
-	
-	s_IsTimerUsing = 0;	
-}
-
-static void Polling_USB_EnableFn(unsigned long data)
-{	
-	static char launch_check = 0;
-	static char count = 0;
-	if( (!s_IsTimerUsing) && (s_usb_check_timer == 1) )
-	{
-		if(launch_check)  
-		{
-//			printk("[Alan]....Spawning a timer \n");
-			s_IsTimerUsing = 1;
-			count = 0;
-			launch_check = 0;
-			Timer_check_USB_EnableFn();		
-		}
-		else {
-			launch_check++;
-		}
-	}
-	
-	if (s_IsTimerUsing) {
-		count++;
-		if (count > 60) {	//Alan: reset s_IsTimerUsing after 5 min.
-			s_IsTimerUsing = 0;
-		}
-	}
-	s_Polling_Check_Timer.expires = jiffies + (USB_TIMER_DEALAY_FOR_POLLING * HZ);
-	add_timer(&s_Polling_Check_Timer);	
-}
-/*-----------------------------------------------------------------------------------------------*/
 
 int ast_usbhub_init(uint8_t dev_num, USB_HW *usb_hw_module, void **dev_config)
 {
@@ -2344,16 +2149,6 @@ int ast_usbhub_module_init(void)
 		goto out_iomap;
 	}
 
-	//Alan+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	init_timer(&s_Polling_Check_Timer);
-	s_Polling_Check_Timer.data = 0;
-	s_Polling_Check_Timer.function = Polling_USB_EnableFn;
-	s_Polling_Check_Timer.expires = jiffies + (USB_TIMER_DEALAY_FOR_POLLING * HZ);
-	add_timer(&s_Polling_Check_Timer);	
-	s_IsTimerUsing = 0;
-	s_usb_check_timer = 0; 
-	//Alan+++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	
 	ast_usbhub_hub_dev_addr = 0x00;
 	ast_usbhub_hub_current_config_value = 0;
 	ast_usbhub_hub_usb_status = (1 << USB_DEVICE_SELF_POWERED);

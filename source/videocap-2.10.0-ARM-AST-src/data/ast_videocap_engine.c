@@ -752,14 +752,6 @@ Redo:
 	V_Start = ast_videocap_read_reg(AST_VIDEOCAP_EDGE_DETECT_V) & AST_VIDEOCAP_EDGE_DETECT_START_MASK;
 	V_End = (ast_videocap_read_reg(AST_VIDEOCAP_EDGE_DETECT_V) & AST_VIDEOCAP_EDGE_DETECT_END_MASK) >> AST_VIDEOCAP_EDGE_DETECT_END_SHIFT;
 
-	//If any unsupported frame size comes, we should skip processing it. 
-	if ((((H_End - H_Start) + 1) > AST_VIDEOCAP_MAX_FRAME_WIDTH) || 
-	( ((V_End - V_Start) + 1) > AST_VIDEOCAP_MAX_FRAME_HEIGHT) ) { 
-		/*  Possibly invalid input, we should send a blank screen   */ 
-		ISRDetectedModeOutOfLock = 1; 
-		return -1;                               
-	} 
-
 	//Check if cable quality is too bad. If it is bad then we use 0x65 as threshold
 	//Because RGB data is arrived slower than H-sync, V-sync. We have to read more times to confirm RGB data is arrived
 	if ((abs(H_Temp - H_Start) > 1) || ((H_Start <= 1) || (V_Start <= 1) || (H_Start == 0x3FF) || (V_Start == 0x3FF))) {

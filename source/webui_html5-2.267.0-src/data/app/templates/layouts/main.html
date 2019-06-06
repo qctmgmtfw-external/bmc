@@ -1,0 +1,328 @@
+<!-- header logo: style can be found in header.less -->
+<header class="header">
+    <label class="logo">
+        <!-- Add the class icon to your logo image or logo icon to add the margining -->
+      <%=locale.brand%>
+    </label>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top animated fadeInDownBig" role="navigation">
+        <!-- Sidebar toggle button-->
+        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only"><%=locale.toggle_navigation%></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+
+                <!-- Notifications: style can be found in dropdown.less -->
+
+                <!-- Tasks: style can be found in dropdown.less -->
+
+                <!-- Live Polling:-->
+                <li class="live-poll-section">
+                    <a href="#" id="live-poll" alt="Live Polling" data-poll="on" title="<%=locale.sync_desc%>">
+                        <i class="ion ion-loop" style="color: deepskyblue"></i>
+                        <span>Sync</span>
+                    </a>
+                </li>
+
+                <!-- Refresh Page:-->
+                <li class="refresh-section" title="<%=locale.refresh_desc%>">
+                    <a href="#" id="refreshPage" alt="Refresh Page">
+                        <i class="fa fa-refresh" style="color: deepskyblue"></i>
+                        <span>Refresh</span>
+                    </a>
+                </li>
+
+                <!-- User Account: style can be found in dropdown.less -->
+                <li class="dropdown user user-menu" title="<%=locale.admin_desc%>">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <span><span class='username'></span> <i class="caret"></i>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <!-- User image -->
+                        <li class="user-header bg-light-blue">
+                            <span id="user-icon" class="img-circle"><i class="fa fa-user"></i></span>
+                            <!-- <img src="images/fem.png" class="img-circle" alt="User Image" /> -->
+                            <p>
+                                <span class='username'></span> - <span class='privilege'></span>
+                                <!-- <small>since <span class='since'></span></small> -->
+                            </p>
+                        </li>
+                        <!-- Menu Body -->
+                        <!--
+                        <li class="user-body">
+                            <div class="col-xs-4 text-center">
+                                <a href="#settings/users/<%=window.sessionStorage.getItem('id')%>"><%=locale.user_privilage%></a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#"></a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#tasks"><%=locale.user_activities%></a>
+                            </div>
+                        </li>
+                        -->
+                        <!-- Menu Footer-->
+                        <li class="user-footer">
+                            <div class="pull-left">
+                                <a href="#settings/users/edit/<%=window.sessionStorage.getItem('id')%>" class="btn btn-default btn-flat"><%=locale.user_profile%></a>
+                            </div>
+                            <div class="pull-right">
+                                <a href="#logout" class="btn btn-default btn-flat"><%=locale.sign_out%></a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="wrapper row-offcanvas row-offcanvas-left">
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="left-side sidebar-offcanvas">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar">
+            <!-- Sidebar user panel -->
+            <div class="user-panel">
+                <div class="pull-left image">
+                    <span id="server-icon" class="img-circle"><i class="fa fa-star"></i></span>
+                    <!-- <img src="images/fem.png" class="img-circle" alt="User Image" /> -->
+                </div>
+                <div class="pull-left info">
+                    <p><span class='bmc-name'></span></p>
+
+                    <!--<a href="#power-control" id='host_status'><i class="fa fa-circle text-success"></i> <span></span></a>-->
+                </div>
+            </div>
+            <!-- search form
+            <form action="#" method="get" class="sidebar-form disable_a_href">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Search..." />
+                    <span class="input-group-btn">
+                        <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </form>
+            <!/.search form -->
+            <!-- sidebar menu: : style can be found in sidebar.less -->
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="#dashboard">
+                        <i class="fa fa-home"></i>
+                        <span><%=locale.dashboard%></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#sensors">
+                        <i class="fa fa-dashboard"></i>
+                        <span><%=locale.sensor%></span>
+                    </a>
+                </li>
+				 <li data-feature="INVENTORY_SUPPORT">
+                    <a href="#system_inventory_info">
+                        <i class="fa fa-info-circle"></i>
+                        <span><%=locale.system_inventory%></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#fru">
+                        <i class="fa fa-info-circle"></i>
+                        <span><%=locale.fru_information%></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#postcode">
+                        <i class="fa fa-info-circle "></i>
+                        <span><%=locale.post_code%></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#identify">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <span><%=locale.srv_identify%></span>
+                    </a>
+                </li>
+                <!-- <li>
+                            <a href="pages/widgets.html">
+                                <i class="fa fa-th"></i> <span>Widgets</span> <small class="badge pull-right bg-green">new</small>
+                            </a>
+                        </li> -->
+                <li class="treeview">
+                    <a href="#logs">
+                        <i class="fa fa-bar-chart-o"></i>
+                        <span><%=locale.logs_report%></span>
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu" id="selEvent-tree">
+                        <li><a href="#logs/event-log"><i class="fa fa-angle-double-right"></i> <span><%=locale.ipmi_event_log%></span><small class="badge pull-right bg-red ipmi-log-count hide">0</small></a>
+                        </li>
+                        <!--
+                        <li><a href="#logs/system-log"><i class="fa fa-angle-double-right"></i> <span><%=locale.systemlog%></span><small class="badge pull-right bg-yellow system-log-count hide">0</small></a>
+                        </li>
+                        <li><a href="#logs/audit-log"><i class="fa fa-angle-double-right"></i> <span><%=locale.auditlog%></span><small class="badge pull-right bg-yellow audit-log-count hide">0</small></a>
+                        </li>
+                        <li data-feature="AUTOVDORECORD"><a href="#logs/video-log"><i class="fa fa-angle-double-right"></i> <span><%=locale.videolog%></span><small class="badge pull-right bg-green video-log-count hide">new</small></a>
+                        </li>
+                        -->
+                    </ul>
+                </li>
+                <!-- <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>UI Elements</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="pages/UI/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                <li><a href="pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                <li><a href="pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                <li><a href="pages/UI/sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                <li><a href="pages/UI/timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-edit"></i> <span>Forms</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="pages/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                <li><a href="pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                <li><a href="pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-table"></i> <span>Tables</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                <li><a href="pages/tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                            </ul>
+                        </li> -->
+                <li>
+                    <a href="#settings">
+                        <i class="fa fa-cog"></i>
+                        <span><%=locale.settings%></span>
+                    </a>
+                </li>
+                <li data-feature="ADVISER_SUPPORT">
+                    <a href="#remote">
+                        <i class="fa fa-desktop"></i>
+                        <span><%=locale.remote_control%></span>
+                    </a>
+                </li>
+                <!--
+                <li data-feature="IMG_REDIRECTION">
+                    <a href="#image_redirection">
+                        <i class="fa fa-hdd-o"></i>
+                        <span><%=locale.image_redirection%></span>
+                    </a>
+                </li>-->
+                <li>
+                    <a href="#power-control">
+                        <i class="fa fa-power-off"></i>
+                        <span><%=locale.power%></span>
+                    </a>
+                </li>
+                <!--
+                <li class="treeview">
+                    <a href="#ae">
+                        <i class="fa fa-code"></i>
+                        <span>Automation Engine</span>
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#ae/tasks"><i class="fa fa-angle-double-right"></i> <span>Tasks &amp; Events</span><small class="badge pull-right bg-red tasks-count hide">0</small></a>
+                        </li>
+                        <li><a href="#ae/scripts"><i class="fa fa-angle-double-right"></i> <span>Scripts</span><small class="badge pull-right bg-yellow script-count hide">0</small></a>
+                        </li>
+                    </ul>
+                </li>
+                <li data-feature="AUTOMATION">
+                    <a href="#tasks">
+                        <i class="fa fa-calendar"></i>
+                        <span><%=locale.tasks_event%></span>
+                        <small id="task-badge" class="badge pull-right tasks-count bg-red hide"></small>
+                    </a>
+                </li>
+                <li data-feature="AUTOMATION">
+                    <a href="#scripts">
+                        <i class="fa fa-code"></i>
+                        <span><%=locale.scripts%></span>
+                        <small id="script-badge" class="badge pull-right scripts-count bg-yellow hide"></small>
+                    </a>
+                </li>
+                <li data-feature="MEGARAC_STORE">
+                    <a href="#store">
+                        <i class="fa fa-shopping-cart"></i>
+                        <span><%=locale.store%></span>
+                        <small class="badge pull-right bg-green">new</small>
+                    </a>
+                </li>-->
+                <!-- <li>
+                    <a href="#connect">
+                        <i class="fa fa-exchange"></i>
+                        <span>Extd. Mgmt.</span> <i class="fa fa-star pull-right"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#updates">
+                        <i class="fa fa-upload"></i>
+                        <span>Update</span>
+                    </a>
+                </li> -->
+                <li>
+                    <a href="#maintenance">
+                        <i class="fa fa-wrench"></i>
+                        <span><%=locale.maintenance%></span>
+                    </a>
+                </li>
+                <!--<li data-feature="LONG_HELP">
+                    <a href="#help">
+                        <i class="fa fa-question-circle"></i>
+                        <span><%=locale.help%></span>
+                    </a>
+                </li>-->
+                <li>
+                    <a href="#logout">
+                        <i class="fa fa-sign-out"></i>
+                        <span><%=locale.sign_out%></span>
+                    </a>
+                </li>
+                <!-- <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-folder"></i> <span>Examples</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                <li><a href="pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                <li><a href="pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                <li><a href="pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                <li><a href="pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                <li><a href="pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                                <li><a href="pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                            </ul>
+                        </li> -->
+            </ul>
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Right side column. Contains the navbar and content of the page -->
+    <aside class="right-side">
+
+    </aside>
+    <!-- /.right-side -->
+</div>
+<!-- ./wrapper

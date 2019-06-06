@@ -1,0 +1,26 @@
+
+	<td><readonly class='ld_name'><%= model.get('ld_name') %></readonly></td><td><readonly class='controller_name'><%= model.get('controller_name') %></readonly></td>
+	<td><readonly class='type'><% var av = model.get('type'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.type_0 %><% } %><% if(av == '1'){ avset = true;  %><%= locale.type_1 %><% } %><% if(av == '2'){ avset = true;  %><%= locale.type_2 %><% } %><% if(av == '3'){ avset = true;  %><%= locale.type_3 %><% } %><% if(av == '4'){ avset = true;  %><%= locale.type_4 %><% } %><% if(av == '5'){ avset = true;  %><%= locale.type_5 %> <%}%><% if(av == '6'){ avset = true;  %><%= locale.type_6 %><% } %><% if(av == '7'){ avset = true;  %><%= locale.type_7 %><% } %><% if(av == '8'){ avset = true;  %><%= locale.type_8 %><% } %><% if(av == '9'){ avset = true;  %><%= locale.type_9 %><% } %><% if(av == '10'){ avset = true;  %><%= locale.type_10 %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td>
+
+	<!--<td><readonly class='type'><%= model.get('type') %></readonly></td>--><td><readonly class='state'><% var av = model.get('state'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.offline %><% } %><% if(av == '1'){ avset = true;  %><%= locale.degraded %><% } %><% if(av == '2'){ avset = true;  %><%= locale.rebuild %><% } %><% if(av == '3'){ avset = true;  %><%= locale.optimal %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td><td><readonly class='read_policy'><% var av = model.get('read_policy'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.no_read_ahead %><% } %><% if(av == '1'){ avset = true;  %><%= locale.read_ahead %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td><td><readonly class='write_policy'><% var av = model.get('write_policy'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.write_through %><% } %><% if(av == '1'){ avset = true;  %><%= locale.write_back %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td>
+		<td><readonly class='cache_policy'><% var av = model.get('cache_policy'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.direct_io %><% } %><% if(av == '1'){ avset = true;  %><%= locale.cache_io %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td>
+		<td><readonly class='elements_num'><%= model.get('elements_num') %></readonly></td>
+	<td>
+		<!--<a class="btn btn-default hide action-1" href="%%custom-link-1"><i class="%%custom-icon-1"></i></a>
+		<a class="btn btn-default hide action-2" href="%%custom-link-2"><i class="%%custom-icon-2"></i></a>
+		<a class="btn btn-default hide action-3" href="%%custom-link-3"><i class="%%custom-icon-3"></i></a>
+		<a class="btn btn-success hide view"><i class="ion ion-navicon"></i></a>
+		<a class="btn btn-success hide edit" href="#settings/raid_management/logical_device_info/edit/:id"><i class="ion ion-navicon"></i></a>
+		<a class="btn btn-danger hide delete" href="#settings/raid_management/logical_device_info/edit/:id"><i class="ion ion-close-circled"></i></a>-->
+	</td>
+	<td  data-sort-ignore="true"><a class="btn btn-default hide action-1" href="%%custom-link-1"><i class="%%custom-icon-1"></i></a>
+		<a class="btn btn-default hide action-2" href="%%custom-link-2"><i class="%%custom-icon-2"></i></a>
+		<a class="btn btn-default hide action-3" href="%%custom-link-3"><i class="%%custom-icon-3"></i></a>
+		<a class="btn btn-success hide view"><i class="ion ion-navicon"></i></a>
+		<a class="btn btn-success hide edit" href="#settings/raid_management/logical_device_info/edit/:id"><i class="ion ion-navicon"></i></a>
+		<a class="btn btn-success hide LEDActivation"><i class="fa fa-circle"></i></a>
+		<a class="btn btn-success hide consistencyCheck"><i class="fa fa-circle"></i></a>
+		<a class="btn btn-success hide initializeCheck"><i class="fa fa-circle"></i></a>
+		<a class="btn btn-danger hide delete" href="#settings/raid_management/logical_device_info/edit/:id"><i class="ion ion-close-circled"></i></a><select name="select_initialize" id="idselect_initialize" class="hide"><option value='0'><%= locale.create_logical_deviceslow_initialization %></option><option value='1'><%= locale.create_logical_devicefast_initialization %></option>
+    </select></select><a class="btn btn-success hide initailize"><i class="ion ion-plus"></i></a>
+		</td>

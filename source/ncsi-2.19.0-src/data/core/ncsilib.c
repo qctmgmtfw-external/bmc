@@ -35,10 +35,6 @@
 #include "interfaces.h"
 #include "ncsi.h"
 
-//Alan, for kernel file writing
-#include <linux/fs.h>
-#include <asm/uaccess.h>
-#include <linux/mm.h>
 
 extern int verbose;
 extern unsigned int UserLastResponse[NCSI_COMMAND_SIZE];
@@ -56,25 +52,6 @@ extern UINT8 NCSI_MAC[][MAC_ADDR_LEN];
 UINT8 ETH_SrcMAC[MAC_ADDR_LEN] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
 #endif
 // +++ Quanta
-
-void WriteLinkStatus(UINT32 Link)
-{
-	struct file *filp;
-	mm_segment_t fs;
-
-	filp = filp_open("/var/state/NCSIlinkstatus", O_RDWR | O_CREAT, 0644);
-
-	if(!filp) {
-		printk("[NCSI]open file error \n");
-		return;
-	}
-
-	fs=get_fs();
-	set_fs(KERNEL_DS);
-	filp->f_op->write(filp, (unsigned char*)&Link, sizeof(UINT32), &filp->f_pos);
-	set_fs(fs);
-	filp_close(filp,NULL);
-}
 
 void
 DisplayLinkStatus(NCSI_IF_INFO* info, UINT32 Link, UINT8 local_verbose)
@@ -228,19 +205,10 @@ CheckAENSupport(NCSI_IF_INFO *info, UINT8 PackageID, UINT8 ChannelID)
     UINT32 ConfigFlags = 0;
     UINT32 AENControl = 0;
     int RetryCount = NCSI_RETRIES;
-    UINT32 Caps, AENCaps;
-    UINT8	ChannelCount;
-    
+
     netif_carrier_on(info->dev);
-    if (NCSI_Issue_GetCapabilities(info,(UINT8)PackageID,(UINT8)ChannelID, 
-    		&Caps, &AENCaps, &ChannelCount) != 0)
-    {	
-    	printk("NCSI(%s):%d.%d Get Capabilities Failed\n", info->dev->name, PackageID, ChannelID);
-    	return 0;
-    }	    
     /* Setup AEN Messages before trying to check if AEN support is available or not*/
-    if (NCSI_Issue_EnableAEN(info,(UINT8)PackageID,(UINT8)ChannelID,AENCaps&LINK_STATUS_CHANGE_CONTROL_AEN,
-    		AENCaps&REQUIRED_CONTROL_AEN, AENCaps&HOST_NC_DRIVER_STATUS_CHANGE_CONTROL_AEN) != 0)	    
+    if(NCSI_Issue_EnableAEN(info, (UINT8)PackageID, (UINT8)ChannelID, 1, 1, 1) != 0)
     {
         printk("NCSI(%s):%d.%d Enable AEN Failed\n", info->dev->name, PackageID, ChannelID);
         return 0;
@@ -1033,7 +1001,7 @@ NCSI_Issue_GetVersionID(NCSI_IF_INFO *info,UINT8 PackageID, UINT8 ChannelID,
 }
 
 int 
-NCSI_Issue_GetCapabilities(NCSI_IF_INFO *info,UINT8 PackageID, UINT8 ChannelID,UINT32 *Caps, UINT32 *AENCaps, UINT8 *ChannelCount)
+NCSI_Issue_GetCapabilities(NCSI_IF_INFO *info,UINT8 PackageID, UINT8 ChannelID,UINT32 *Caps, UINT8 *ChannelCount)
 {
 
 	GET_CAPABILITIES_REQ_PKT Pkt;
@@ -1082,7 +1050,6 @@ NCSI_Issue_GetCapabilities(NCSI_IF_INFO *info,UINT8 PackageID, UINT8 ChannelID,U
 	if (retval == NCSI_ERR_SUCCESS)
 	{
 		*Caps = be32_to_cpu(ResPkt->CapFlags);
-		*AENCaps = be32_to_cpu(ResPkt->AENControlSupport);		
 		*ChannelCount = ResPkt->ChannelCount;
 	}
 	
@@ -1726,10 +1693,6 @@ NCSI_Issue_SetLink(NCSI_IF_INFO *info,UINT8 PackageID,UINT8 ChannelID, UINT8 Aut
 			if (retry < 1)
 				LinkSettings |= LINK_ENABLE_10_GBPS;
 	#endif
-	#if NCSI_25G_SUPPORT
-			if (retry < 1)
-				LinkSettings |= LINK_ENABLE_25_GBPS;
-	#endif				
 			LinkSettings |= LINK_ENABLE_HALF_DUPLEX;
 			LinkSettings |= LINK_ENABLE_FULL_DUPLEX;
 		}

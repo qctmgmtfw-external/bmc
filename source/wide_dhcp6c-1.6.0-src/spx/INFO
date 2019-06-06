@@ -1,0 +1,32 @@
+Source : wide_dhcp6c
+Version : 1.6.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : arunkumars (arunkumars@amiindia.co.in)
+License : BSD
+Source-Location : AMI
+Source-Version : 1.6.0
+Builds : wide_dhcp6c
+Build-Depends : wide_dhcpv6
+Architecture : ALL
+Urgency : low
+Description : This package contains customized wide_dhcpv6 source files. It provides customized DHCP client for IPv6.
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : wide_dhcp6c
+Config-Tag : Customized DHCPv6 Client
+Section : app
+Group : MISC
+Essential : NO
+Description : This package includes the binary for customized wide_dhcpv6 application.
+.
+

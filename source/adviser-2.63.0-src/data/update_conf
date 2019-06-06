@@ -1,0 +1,134 @@
+#!/usr/bin/env python
+
+# FileName		: update_conf
+# Author		: Deepak M Nair (deepakmn@amiindia.co.in)
+# Description		: This script will update the value of a given key in conf file, at building time,
+#			by comparing the key value, which is provided as a commandline argument, and the 
+#			existing values of key in the conf file. 
+
+import os, sys
+import shutil
+
+#Global variable to store file as list
+fileLines = []
+fileLen = 0
+
+
+#--------------------- Check_SecName() Fuction ---------------
+#Check whether given ini file contains the given section tag
+#-------------------------------------------------------------
+def Check_SecName(conf_file, secName):
+
+	#storing all lines in list
+	global fileLines
+	global fileLen
+	infile = open(conf_file,'r')
+	#line = (infile.readline()).rstrip()
+
+	fileLines = infile.readlines()
+	infile.close()
+	fileLen = len(fileLines)
+	for line in fileLines:
+		if secName == line.strip():
+			index = fileLines.index(line)
+			return index
+#-------------------End of Check_SecName() Fuction ------------
+
+#--------------------- Check_KeyName_Value() Fuction ---------
+#Check given KeyName present, and compare newVal with existing
+#-------------------------------------------------------------
+def Check_KeyName_Value(index, keyName, newVal):
+	
+	#Checking keyName:value
+	for i in range(index+1,fileLen):
+		if( 0 == fileLines[i].find(keyName+"=")):
+			line = fileLines[i].strip()
+			line = line.split(' ') #removing comments if any
+			newList = line[0].split('=') #parsing key=value pair of ini
+			if newList[1]: 			# found key has some values
+				#check given new val is same as old
+				if newVal.strip() == newList[1]:
+					#No Need to write this value
+					sys.exit(0)
+				else:
+					#If new value is empty or not same as old value
+					return i; #return index of line where keyName found
+
+	#If control comes here means keyName not found
+	return -1 
+#-------------------End of Check_KeyName_Value() Function --------------
+
+#--------------------- WriteNewValToConf() Fuction -----------------
+#Updating given INI with keyName=newVal 
+#-------------------------------------------------------------
+def WriteNewValToConf(conf_file,i,key,newVal):
+	
+	#Need to add new line char else,while writing it will merge two lines
+	newString = key+"="+newVal+"\n"
+	fileLines[i] = fileLines[i].strip()
+	fileLines[i] = newString
+	fp = open(conf_file,'w')
+	fp.writelines(fileLines)
+	fp.close()
+#-------------------End of WriteNewValToConf() Fuction --------------	
+
+#--------------------- main() Fuction -----------------
+#main module to update given key:value pair in ini
+#-------------------------------------------------------------
+def main():
+	usage = "usage: %s adviserd.conf conf_tag key new_value" %os.path.basename(sys.argv[0])
+
+	#Number of arguments (4 commandline argument + scrpit name = 5)
+	num_of_args = 5
+
+	#Check the number of arguments recived are correct
+	if num_of_args != len(sys.argv):
+		print usage
+		sys.exit(0)
+	#Check whether given conf file is a valid file
+	if( os.path.isfile(sys.argv[1])):
+		conf_file = sys.argv[1]
+	else:
+		sys.exit(0)
+	
+	#Get conf tag
+	try:
+		conf_tag = sys.argv[2].strip()
+	except ValueError:
+		print usage
+		sys.exit(0)
+
+	conf_tag = '[' + conf_tag + ']'
+
+	#Get key value
+	try:
+		key = sys.argv[3].rstrip()
+	except ValueError:
+		print usage
+		sys.exit(0)
+
+	#Get new value
+	try:
+		new_value = sys.argv[4].rstrip()
+	except ValueError:
+		print usage
+		sys.exit(0)
+	#Check section Name present or not
+	#if present return index
+	secIndex = Check_SecName(conf_file,conf_tag)
+	if secIndex == -1:
+		sys.exit(0)
+	keyIndex = Check_KeyName_Value(secIndex, key, new_value)
+	if -1 == keyIndex:
+		#print "The key "+ key + " is not available in the file " + conf_file
+		sys.exit(0)
+	#write new value to corresponding key
+	#WriteNewValToConf(conf_file,key,new_value)
+	WriteNewValToConf(conf_file,keyIndex,key,new_value)
+#-------------------End of main() Fuction --------------	
+	
+#end of main module
+if __name__ == "__main__":
+	import sys
+	main()
+

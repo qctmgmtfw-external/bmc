@@ -1,0 +1,9 @@
+#init scripts
+/etc/rc1.d/K52slpd 			-> ../init.d/slpd
+/etc/rcS.d/S52slpd 			-> ../init.d/slpd
+/etc/rc6.d/K52slpd 			-> ../init.d/slpd
+/etc/rc7.d/K52slpd 			-> ../init.d/slpd
+/etc/rc8.d/K52slpd 			-> ../init.d/slpd
+#library links
+
+

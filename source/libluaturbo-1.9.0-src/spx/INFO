@@ -1,0 +1,34 @@
+Source : libluaturbo
+Version : 1.9.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Chandrasekar R (chandrasekarr@amiindia.co.in)
+License : APACHE
+Source-Location : https://github.com/kernelsauce/turbo
+Source-Version : 2.0.4
+Builds : libluaturbo
+Build-Depends : libhttp_parser_dev
+Architecture : ALL
+Urgency : high
+Description : Lua turbo web framework
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : libluaturbo
+Config-Tag : libluaturbo
+Section : lib
+License : APACHE
+Group : LIBRARY
+Essential : NO
+Required : sys_lua
+Description : This provides Lua turbo web framework library.
+.
+

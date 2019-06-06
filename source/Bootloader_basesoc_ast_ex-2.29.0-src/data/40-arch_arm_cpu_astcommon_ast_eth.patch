@@ -1,0 +1,11 @@
+--- uboot/arch/arm/cpu/astcommon/ast_eth.c	2016-07-20 10:54:03.786326567 +0800
++++ uboot/arch/arm/cpu/astcommon/ast_eth_new.c	2016-07-20 13:55:10.000000000 +0800
+@@ -575,7 +575,7 @@
+ 		}
+ 		break;
+ 	default: /* NC-SI */
+-		ctrl_reg |= MACCR_SPEED_100M_MODE;
++		ctrl_reg |= MACCR_GMAC_MODE;
+ 		ctrl_reg |= MACCR_FULLDUP;
+ 	}
+ 

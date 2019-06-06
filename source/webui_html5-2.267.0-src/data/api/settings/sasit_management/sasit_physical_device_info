@@ -1,0 +1,40 @@
+[
+  {
+     "id": 1, 
+     "controller_id": 67110151,
+     " controller_name": "SAS9311-4i4e",
+     "dev_id": 0, 
+     "type": 0, 
+     "state": 0, 
+     "slot": 6, 
+     "speed": 3, 
+     "size": 896, 
+     "temperature": 0, 
+     "vendor_id": "SEAGATE ", 
+     "product_id": "ST1200MM0007    ",
+     "serial_num": "S3L03KKP", 
+     "firmware_revision": "0001", 
+     "power_sate": 0, 
+     "interface_type": 2, 
+     "smart": 2 
+  },
+  {
+    "id": 1, 
+    "controller_id": 67110151,
+    "controller_name": "SAS9311-4i4e",
+    "dev_id": 1,
+    "type": 0,
+    "state": 0, 
+    "slot": 4, 
+    "speed": 3, 
+    "size": 931, 
+    "temperature": 22, 
+    "vendor_id": "ATA     ", 
+    "product_id": "ST1000VX000-1ES1", 
+    "serial_num": "            Z4Y2AKGE", 
+    "firmware_revision": "CV26", 
+    "power_sate": 0, 
+    "interface_type": 3, 
+    "smart": 2 
+  }
+]

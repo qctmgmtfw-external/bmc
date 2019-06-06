@@ -191,12 +191,13 @@ static int ast_video_probe(struct platform_device *pdev)
 	ast_video->jpeg_tbl_phy = (phys_addr_t *) virt_to_phys(AST_VIDEOCAP_JPEG_TBL_ADDR);
 
 	ast_video->video_mem_size = MEM_POOL_SIZE - ((u32)ast_video->stream_phy/*ast_video->hdr_phy*/ - (u32)ast_video->buff0_phy);
-	VIDEO_DBG("video_mem_size %d MB\n",ast_video->video_mem_size/1024/1024);
-	VIDEO_DBG("\nvideo_jpeg_offset: %x \n", (u32)ast_video->video_jpeg_offset);
+	printk("video_mem_size %d MB\n",ast_video->video_mem_size/1024/1024);
+	printk("\nvideo_jpeg_offset: %x \n", (u32)ast_video->video_jpeg_offset);
 
-	//VIDEO_DBG("\nstream_phy: %x, buff0_phy: %x, buff1_phy:%x, bcd_phy:%x \njpeg_phy:%x, jpeg_tbl_phy:%x \n",
-	//        (u32)ast_video->stream_phy, (u32)ast_video->buff0_phy, (u32)ast_video->buff1_phy, (u32)ast_video->bcd_phy, (u32)ast_video->jpeg_phy, (u32)ast_video->jpeg_tbl_phy);
-	VIDEO_DBG("\nstream_phy: %x, buff0_phy: %x, buff1_phy:%x, bcd_phy:%x \njpeg_phy:%x, jpeg_tbl_phy:%x, hdr_phy: %x \n",
+	VIDEO_DBG("\nstream_phy: %x, buff0_phy: %x, buff1_phy:%x, bcd_phy:%x \njpeg_phy:%x, jpeg_tbl_phy:%x \n",
+	        (u32)ast_video->stream_phy, (u32)ast_video->buff0_phy, (u32)ast_video->buff1_phy, (u32)ast_video->bcd_phy, (u32)ast_video->jpeg_phy, (u32)ast_video->jpeg_tbl_phy);
+
+	printk("\nstream_phy: %x, buff0_phy: %x, buff1_phy:%x, bcd_phy:%x \njpeg_phy:%x, jpeg_tbl_phy:%x, hdr_phy: %x \n",
 	        (u32)ast_video->stream_phy, (u32)ast_video->buff0_phy, (u32)ast_video->buff1_phy, (u32)ast_video->bcd_phy, (u32)ast_video->jpeg_phy, (u32)ast_video->jpeg_tbl_phy, (u32)ast_video->hdr_phy);
 
 	ast_video->buff0_virt = (u32 *)AST_VIDEOCAP_REF_BUF_ADDR;
@@ -208,9 +209,10 @@ static int ast_video_probe(struct platform_device *pdev)
 	ast_video->jpeg_virt =  (u32 *)AST_VIDEOCAP_JPEG_ADDR;
 	ast_video->jpeg_tbl_virt =  (u32 *)AST_VIDEOCAP_JPEG_TBL_ADDR;
 
-	//VIDEO_DBG("\nstream_virt: %x, buff0_virt: %x, buff1_virt:%x, bcd_virt:%x \njpeg_virt:%x, jpeg_tbl_virt:%x \n",
-	//        (u32)ast_video->stream_virt, (u32)ast_video->buff0_virt, (u32)ast_video->buff1_virt, (u32)ast_video->bcd_virt, (u32)ast_video->jpeg_virt, (u32)ast_video->jpeg_tbl_virt);
-	VIDEO_DBG("\nstream_virt: %x, buff0_virt: %x, buff1_virt:%x, bcd_virt:%x \njpeg_virt:%x, jpeg_tbl_virt:%x, hdr_virt: %x \n",
+	VIDEO_DBG("\nstream_virt: %x, buff0_virt: %x, buff1_virt:%x, bcd_virt:%x \njpeg_virt:%x, jpeg_tbl_virt:%x \n",
+	        (u32)ast_video->stream_virt, (u32)ast_video->buff0_virt, (u32)ast_video->buff1_virt, (u32)ast_video->bcd_virt, (u32)ast_video->jpeg_virt, (u32)ast_video->jpeg_tbl_virt);
+
+	printk("\nstream_virt: %x, buff0_virt: %x, buff1_virt:%x, bcd_virt:%x \njpeg_virt:%x, jpeg_tbl_virt:%x, hdr_virt: %x \n",
 	        (u32)ast_video->stream_virt, (u32)ast_video->buff0_virt, (u32)ast_video->buff1_virt, (u32)ast_video->bcd_virt, (u32)ast_video->jpeg_virt, (u32)ast_video->jpeg_tbl_virt, (u32)ast_video->hdr_virt);
 
 	memset(ast_video->buff0_virt, 0, MEM_POOL_SIZE);

@@ -1,0 +1,124 @@
+<section class="content-header">
+    <h1>
+        <%= locale.edit_title %>
+        <small></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/users"><%= locale.user_management %></a></li>
+        <li class="active">
+           <%= locale.edit_title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"><%= locale.users %></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success alert-dismissable hide">
+                <i class="fa fa-check"></i>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger alert-dismissable hide">
+                <i class="fa fa-ban"></i>
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                <div class="alert alert-info help-item hide"   role="alert"><%= locale.usersenter_the_name_of_the_new_user_ulli_user_name_is_a_string_of_1_to_16_alphanumeric_charactersli_li_it_must_start_with_an_alphabetical_characterli_li_it_is_casesensitiveli_li_special_characters_hyphen_underscore_at_sign_are_allowedliul %></div>
+                <div class="form-group" >
+    <label for="name"><%= locale.usersusername %></label>
+    <input type="text" class="form-control" id="idname" value="" placeholder="">
+</div><div class="form-group">
+				<div class="alert alert-info help-item hide"   role="alert">check the box to change the password</div>
+				<input type="checkbox" value="1" id="idchangepassword" >
+				<label for="changepassword">Change Password</label>
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.userssize_of_the_password %></div><div class="form-group" >
+    <label for="password_size"><%= locale.userspassword_size %></label>
+    <select name="password_size" id="idpassword_size" class="form-control">
+        <option value='bytes_16'><%= locale.users16_bytes %></option><option value='bytes_20'><%= locale.users20_bytes %></option>
+    </select>
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.usersenter_a_strong_password_including_a_alphabets_numbers_symbol_and_upper_case_characters %></div><div class="form-group" >
+    <label for="password"><%= locale.userspassword %></label>
+    <input type="password" class="form-control" id="idpassword" value="" placeholder="">
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.usersconfirm_the_password %></div><div class="form-group" >
+    <label for="confirm_password"><%= locale.usersconfirm_password %></label>
+    <input type="password" class="form-control" id="idconfirm_password" value="" placeholder="">
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.userscheck_the_box_to_enable_user_access_for_the_user %></div><div class="form-group" >
+    <label>
+        <input type="checkbox" value="1" id="idaccess" > <%= locale.usersenable_user_access %>
+    </label>
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.usersselect_the_privilege_level_assigned_to_this_user_when_the_user_access_bmc_through_network_interface_5_levels_are_available_administrator_operator_user_oem_and_no_access %></div><div class="form-group" >
+    <label for="network_privilege"><%= locale.usersnetwork_privilege %></label>
+    <select name="network_privilege" id="idnetwork_privilege" class="form-control">
+        <option value='user'><%= locale.usersuser %></option><option value='administrator'><%= locale.usersadministrator %></option><option value='operator'><%= locale.usersoperator %></option><option value='none'><%= locale.usersnone %></option>
+    </select>
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.usersselect_the_privilege_level_to_be_assigned_to_this_user_when_the_user_access_bmc_through_serial_interface_5_levels_are_available_administrator_operator_user_oem_and_no_access %></div><div class="form-group" >
+    <label for="privilege_limit_serial"><%= locale.usersserial_privilege %></label>
+    <select name="privilege_limit_serial" id="idprivilege_limit_serial" class="form-control">
+        <option value='user'><%= locale.usersuser %></option><option value='administrator'><%= locale.usersadministrator %></option><option value='operator'><%= locale.usersoperator %></option><option value='none'><%= locale.usersnone %></option>
+    </select>
+</div><div class="alert alert-info help-item hide"  data-feature="SERVER_SUPPORT" data-feature='EXTENDED_PRIV' role="alert"><%= locale.usersthis_field_is_used_to_assign_the_kvm_privilege_for_the_user %></div><div class="form-group" data-feature='EXTENDED_PRIV'>
+    <label data-feature="SERVER_SUPPORT">
+        <input type="checkbox" value="1" id="idkvm" > <%= locale.userskvm_access %>
+    </label>
+</div><div class="alert alert-info help-item hide" data-feature="SERVER_SUPPORT" data-feature='EXTENDED_PRIV' role="alert"><%= locale.usersthis_field_is_used_to_assign_the_vmedia_privilege_for_the_user %></div><div class="form-group" data-feature='EXTENDED_PRIV'>
+    <label data-feature="SERVER_SUPPORT">
+        <input type="checkbox" value="1" id="idvmedia" > <%= locale.usersvmedia_access %>
+    </label>
+</div><div class="alert alert-info help-item hide"  data-feature='SNMP' role="alert"><%= locale.userscheck_the_box_to_enable_snmp_access_for_the_user %></div><div class="form-group" data-feature='SNMP'>
+    <label id="snmp_label">
+        <input type="checkbox" value="1" id="idsnmp" > <%= locale.userssnmp_access %>
+    </label>
+</div><div class="alert alert-info help-item hide"  data-feature='SNMP' role="alert"><%= locale.userschoose_the_snmp_access_level_option_for_user_it_can_be_either_read_only_or_read_write %></div><div class="form-group" data-feature='SNMP'>
+    <label for="snmp_access"><%= locale.userssnmp_access_level %></label>
+    <select name="snmp_access" id="idsnmp_access" class="form-control">
+        <option value='read_only'><%= locale.usersread_only %></option><option value='read_write'><%= locale.usersread_write %></option>
+    </select>
+</div><div class="alert alert-info help-item hide"  data-feature='SNMP' role="alert"><%= locale.userschoose_an_authentication_protocol_for_snmp_settings_strongnotestrong_password_field_is_mandatory_if_authentication_protocol_is_changed %></div><div class="form-group" data-feature='SNMP'>
+    <label for="snmp_authentication_protocol"><%= locale.userssnmp_authentication_protocol %></label>
+    <select name="snmp_authentication_protocol" id="idsnmp_authentication_protocol" class="form-control">
+        <option value='sha'><%= locale.userssha %></option><option value='md5'><%= locale.usersmd5 %></option>
+    </select>
+</div><div class="alert alert-info help-item hide"  data-feature='SNMP' role="alert"><%= locale.userschoose_the_encryption_algorithm_to_use_for_snmp_settings %></div><div class="form-group" data-feature='SNMP'>
+    <label for="snmp_privacy_protocol"><%= locale.userssnmp_privacy_protocol %></label>
+    <select name="snmp_privacy_protocol" id="idsnmp_privacy_protocol" class="form-control">
+        <option value='des'><%= locale.usersdes %></option><option value='aes'><%= locale.usersaes %></option>
+    </select>
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.usersspecify_the_format_for_the_email_this_format_will_be_used_while_sending_the_email_two_type_of_formats_are_available_ulli_amiformat_the_subject_of_this_mail_format_is_alert_from_your_hostname_the_mail_content_shows_sensor_information_ex_sensor_type_and_descriptionliul_ulli_fixedsubjectformat_this_format_displays_the_message_according_to_users_setting_you_must_set_the_subject_and_message_for_email_alertliul %></div><div class="form-group" >
+    <label for="email_format"><%= locale.usersemail_format %></label>
+    <select name="email_format" id="idemail_format" class="form-control">
+        <option value='ami_format'><%= locale.usersamiformat %></option><option value='fixedsubject_format'><%= locale.usersfixedsubjectformat %></option>
+    </select>
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.usersenter_the_email_id_for_the_user_if_user_forgets_the_password_new_password_will_be_mailed_to_the_configured_email_id_strongnotestrong_smtp_server_must_be_configured_to_send_the_email %></div><div class="form-group" >
+    <label for="email_id"><%= locale.usersemail_id %></label>
+    <input type="text" class="form-control" id="idemail_id" value="" placeholder="">
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.usersthe_uploaded_ssh_key_information_will_be_displayed_read_only %></div><div class="form-group" >
+    <label for="existing_ssh_key"><%= locale.usersexisting_ssh_key %></label>
+    <input type="text" class="form-control" id="idexisting_ssh_key" value="" placeholder="">
+</div><div class="alert alert-info help-item hide"   role="alert"><%= locale.usersuse_browse_button_to_navigate_to_the_public_ssh_key_file_ulli_ssh_key_file_should_be_of_pub_typeliul %></div><div class="form-group" >
+    <label for="upload_ssh_key"><%= locale.usersupload_ssh_key %></label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="idupload_ssh_key" value="" readonly>
+        <span class="input-group-btn">
+            <span class="btn btn-primary btn-file">
+                <i class="fa fa-folder-open"></i>&hellip; <input type="file" id="fileupload_ssh_key">
+            </span>
+        </span>
+    </div>
+</div><a class="btn btn-danger" id="delete"><%= locale.deleteLabel %></a><div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

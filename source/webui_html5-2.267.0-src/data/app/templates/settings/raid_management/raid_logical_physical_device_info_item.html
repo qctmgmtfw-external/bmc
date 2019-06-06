@@ -1,0 +1,19 @@
+
+	<td><readonly class='dev_id'><%= model.get('dev_id') %></readonly></td><td><readonly class='controller_name'><%= model.get('controller_name') %></readonly></td><td><readonly class='type'><% var av = model.get('type'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.hdd %><% } %><% if(av == '1'){ avset = true;  %><%= locale.ssd %><% } %><% if(av == '2'){ avset = true;  %><%= locale.ssm %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td><td><readonly class='state'><% var av = model.get('state'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.unconfigured_good %><% } %><% if(av == '1'){ avset = true;  %><%= locale.unconfigured_bad %><% } %><% if(av == '2'){ avset = true;  %><%= locale.hot_spare %><% } %><% if(av == '4'){ avset = true;  %><%= locale.offline %><% } %><% if(av == '8'){ avset = true;  %><%= locale.failed %><% } %><% if(av == '16'){ avset = true;  %><%= locale.rebuild %><% } %><% if(av == '32'){ avset = true;  %><%= locale.online %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td><td><readonly class='slot'><%= model.get('slot') %></readonly></td>
+
+	<!--<td><readonly class='speed'><%= model.get('speed') %></readonly></td>
+	<td><readonly class='link_speed'><%= model.get('link_speed') %></readonly></td>-->
+
+	<td><readonly class='speed'><% var av = model.get('speed'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.speed_0 %><% } %><% if(av == '1'){ avset = true;  %><%= locale.speed_1 %><% } %><% if(av == '2'){ avset = true;  %><%= locale.speed_2 %><% } %><% if(av == '3'){ avset = true;  %><%= locale.speed_3 %><% } %><% if(av == '4'){ avset = true;  %><%= locale.speed_4 %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td>
+
+	<td><readonly class='link_speed'><% var av = model.get('link_speed'); var avset = false; %><% if(av == '0'){ avset = true;  %><%= locale.speed_0 %><% } %><% if(av == '1'){ avset = true;  %><%= locale.speed_1 %><% } %><% if(av == '2'){ avset = true;  %><%= locale.speed_2 %><% } %><% if(av == '3'){ avset = true;  %><%= locale.speed_3 %><% } %><% if(av == '4'){ avset = true;  %><%= locale.speed_4 %><% } %><% if(avset == false) { %><%= av %><% } %></readonly></td>
+
+	<td><readonly class='size'><%= model.get('size') %></readonly></td><td><readonly class='temperature'><%= model.get('temperature') %></readonly></td>
+	<td>
+		<a class="btn btn-default hide action-1" href="%%custom-link-1"><i class="%%custom-icon-1"></i></a>
+		<a class="btn btn-default hide action-2" href="%%custom-link-2"><i class="%%custom-icon-2"></i></a>
+		<a class="btn btn-default hide action-3" href="%%custom-link-3"><i class="%%custom-icon-3"></i></a>
+		<a class="btn btn-default hide action-4" href="%%custom-link-4"><i class="%%custom-icon-4"></i></a>
+		<a class="btn btn-success hide status"><i class="ion ion-edit"></i></a>
+		<!--<a class="btn btn-danger hide delete" href="#settings/raid_management/raid_logical_physical_device_info/edit/:id"><i class="ion ion-close-circled"></i></a>-->
+	</td>

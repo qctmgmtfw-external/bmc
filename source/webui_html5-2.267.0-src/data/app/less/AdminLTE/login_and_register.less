@@ -1,0 +1,79 @@
+/*
+    Page: register and login
+*/
+
+.form-box {
+    width: 1000px;
+    height:800px;
+    margin-right:auto;
+    margin-left:auto;
+    //background-image: url("images/login_bg.jpg");
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position: center center;	
+    
+    .header {
+        .border-radius(4px, 4px, 0, 0);
+        background: @blue;
+        box-shadow: inset 0px -3px 0px rgba(0,0,0,0.2);
+        padding: 20px 10px;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 300;
+        color: #fff;
+    }
+
+     .body {
+        width:40%;
+        margin-right:auto;
+        margin-left:60%;
+        margin-top:26%;
+        padding: 10px 20px;
+        //background: #fff;
+        color: #444;
+        > .form-group {
+            margin-top: 20px;
+            > input {
+                border: #fff;
+            }
+        }
+
+        > .btn {
+            margin-bottom: 10px;
+        }
+    }
+
+    .footer {
+        width:40%;
+        margin-right:auto;
+        margin-left:60%;
+        padding: 10px 20px;
+        .border-radius(0, 0, 4px, 4px);
+        color: #444;
+        > .form-group {
+           margin-top: 20px;
+           > input {
+               border: #fff;
+           }
+        }
+
+        > .btn {
+           margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: @screen-sm) {
+        width: 90%;
+    }
+    @media screen and (max-width: 760px) {
+        background-image:none;
+    }
+}
+
+.img-qci {
+	background-image: url("images/login_bg.jpg");
+}
+
+.img-cus {
+	background-image: url("images/oem_login.jpg");
+}

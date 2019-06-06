@@ -1,0 +1,3 @@
+{ 
+	"id": 1, "enable": 0, "user_domain_name": "megaracami.com", "secret_username": "test", "domain_controller1":  "10.0.6.246", "domain_controller1": "10.0.0.61", "domain_controller1": "10.0.4.242" 
+}

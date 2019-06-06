@@ -1,0 +1,320 @@
+Package: liblicense (2.5.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: spx/PACKAGES.D/liblicense/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 21:50:53 EST
+
+Package: liblicense (2.4.0); urgency = medium
+
+Abstract:
+	-Wextra flag: Fix for build error
+
+Files Modified: data/license.c, spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Prashant Vyankatrao Bharade (prashantbharadev@amiindia.co.in) Wed, 04 Nov 2015 15:02:26 HMT
+
+Package: liblicense (2.3.0); urgency = medium
+
+Abstract:
+	Fixed  binary build issues.
+
+Files Modified: spx/PACKAGES.D/liblicense/P.CONFIG
+
+--Submitter: shravan (shravans@amiindia.co.in) Fri, 13 Mar 2015 17:20:47 HMT
+
+Package: liblicense (2.2.0); urgency = high
+
+Abstract:
+	SCAH fix for fortify issues
+
+Files Modified: data/license.c
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Thu, 08 Jan 2015 12:31:33 IST
+
+Package: liblicense (2.1.0); urgency = medium
+
+Abstract:
+	SCAC fix for fortify issues
+
+Files Modified: data/license.c, spx/INFO
+
+--Submitter: senguttuvanm (senguttuvanm@amiindia.co.in) Wed, 24 Dec 2014 15:03:57 IST
+
+Package: liblicense (2.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 05:16:56 GMT
+
+Package: liblicense (1.28.0); urgency = medium
+
+Abstract:
+	Remove Group Field from source section
+
+Files Modified: spx/INFO
+
+--Submitter: Dipankar Patra (dipankarpatra@amiindia.co.in) Fri, 17 Oct 2014 10:58:32 HMT
+
+Package: liblicense (1.27.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 06:53:33 GMT
+
+Package: liblicense (1.26.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 05:05:36 GMT
+
+Package: liblicense (1.25.0); urgency = medium
+
+Abstract:
+	Changed from refering package name to Provides Value
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Thu, 31 Jul 2014 12:24:06 EDT
+
+Package: liblicense (1.24.0); urgency = low
+
+Abstract:
+	Added seperate license for lmedia and rmedia.
+
+Files Modified: data/license.c, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/PACKAGES.D/liblicense/P.CONFIG, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: Gokulakannan Sampath (gokulakannans@amiindia.co.in) Thu, 24 Jul 2014 19:45:26 HMT
+
+Package: liblicense (1.23.0); urgency = low
+
+Abstract:
+	Revert back the changes from #!/bin/bash to #!/bin/sh.
+
+Files Modified: data/lic_daily.sh, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Wed, 09 Oct 2013 13:20:05 HMT
+
+Package: liblicense (1.22.0); urgency = low
+
+Abstract:
+	Add sh to run the licenseapp.sh script.
+
+Files Modified: data/lic_daily.sh, spx/LICENSES/LICENSE.AMI
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Thu, 03 Oct 2013 15:07:19 HMT
+
+Package: liblicense (1.21.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 01:16:42 EDT
+
+Package: liblicense (1.20.0); urgency = medium
+
+Abstract:
+	Fixed the GPL and Binary  build error.
+
+Files Modified: spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: shravan (shravan@amiindia.co.in) Tue, 17 Sep 2013 20:24:13 HMT
+
+Package: liblicense (1.19.0); urgency = medium
+
+Abstract:
+	Fix in dev-install.
+
+Files Modified: spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: Winston (winstont@ami.com) Mon, 16 Sep 2013 16:48:56 EDT
+
+Package: liblicense (1.18.0); urgency = low
+
+Abstract:
+	fix for the crontab for lic_daily.sh is not working.
+
+Files Modified: spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Thu, 29 Aug 2013 16:04:43 HMT
+
+Package: liblicense (1.17.0); urgency = low
+
+Abstract:
+	Fixed the Build Error when default shell chenges from /bin/sh to dash.
+
+Files Modified: data/lic_daily.sh
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Mon, 15 Jul 2013 14:43:04 HMT
+
+Package: liblicense (1.16.0); urgency = medium
+
+Abstract:
+	Added network library and header file.
+
+Files Modified: data/Makefile
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Tue, 11 Jun 2013 15:58:57 HMT
+
+Package: liblicense (1.15.0); urgency = medium
+
+Abstract:
+	1.Changed the license status file delimiter from ':' to '|'
+2.Added a function  "IsValidMACAddr" to validate the MAC address.
+3.Made the changes in "GetLicenseStatus" function to remove the
+  unlicensed entry from status file.
+
+Files Modified: data/license.c, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: rajdharkumar (rajdhark@amiindia.co.in) Tue, 11 Jun 2013 14:39:04 HMT
+
+Package: liblicense (1.14.0); urgency = low
+
+Abstract:
+	modified to check nolicense file is present or not
+
+Files Modified: data/license.c
+
+--Submitter: sudarshans (sudarshans@amiindia.co.in) Wed, 22 May 2013 21:53:06 MMT
+
+Package: liblicense (1.13.0); urgency = low
+
+Abstract:
+	Added trial license
+
+Files Modified: spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: sudarshan (sudarshans@amiindia.co.in) Thu, 21 Mar 2013 10:53:03 HMT
+
+Package: liblicense (1.12.0); urgency = low
+
+Abstract:
+	Resolved binary build issue
+
+Files Modified: spx/INFO
+
+--Submitter: patra (poulabipatra@amiindia.co.in) Tue, 19 Mar 2013 12:46:03 GMT
+
+Package: liblicense (1.11.0); urgency = low
+
+Abstract:
+	Modified liblicense to create /conf/license in rom.ima
+
+Files Modified: spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: patra (poulabipatra@amiindia.co.in) Wed, 13 Mar 2013 23:43:48 GMT
+
+Package: liblicense (1.10.0); urgency = low
+
+Abstract:
+	Resolved Build error when license feature is not selected in PRJ
+
+Files Modified: data/license.c
+
+--Submitter: patra (poulabipatra@amiindia.co.in) Tue, 12 Mar 2013 19:33:22 GMT
+
+Package: liblicense (1.9.0); urgency = low
+
+Abstract:
+	Resolved build error when no licensing feature is selected in PRJ
+
+Files Modified: spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: patra (poulabipatra@amiindia.co.in) Tue, 12 Mar 2013 18:17:29 GMT
+
+Package: liblicense (1.8.0); urgency = high
+
+Abstract:
+	Added support to MEDIA license to only depend on vm app
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/liblicense/P.CONFIG, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Wed, 06 Mar 2013 08:40:02 EST
+
+Package: liblicense (1.7.0); urgency = low
+
+Abstract:
+	Fixed License feature related errors
+
+Files Modified: spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Fri, 01 Mar 2013 06:36:08 GMT
+
+Package: liblicense (1.6.0); urgency = low
+
+Abstract:
+	Added OEM commands for license uploading
+
+Files Added: data/count_days, data/lic_daily.sh
+Files Deleted: data/license.conf, data/license.h, spx/PACKAGES.D/liblicense_dev, spx/PACKAGES.D/liblicense_dev/DATA, spx/PACKAGES.D/liblicense_dev/SCRIPTS, spx/PACKAGES.D/liblicense_dev/SCRIPTS/dev-install
+Files Modified: data/Makefile, data/license.c, spx/INFO, spx/P.CONFIG, spx/PACKAGES.D/liblicense/P.CONFIG, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: patra (poulabipatra@amiindia.co.in) Thu, 28 Feb 2013 11:40:49 GMT
+
+Package: liblicense (1.5.0); urgency = low
+
+Abstract:
+	Fixed core_features & core_macros wipe out while Rebuilding sys_base alone
+
+Files Modified: spx/INFO
+
+--Submitter: sandipan (sandipang@amiindia.co.in) Mon, 04 Feb 2013 19:09:10 HMT
+
+Package: liblicense (1.4.0); urgency = medium
+
+Abstract:
+	Added license support for lmedia and rmedia and increasing the bit position even app doesn't have valid license
+
+Files Modified: data/license.c, spx/P.CONFIG, spx/PACKAGES.D/liblicense/P.CONFIG, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: ARUNA DEVI D (arunadevid@amiindia.co.in) Thu, 06 Dec 2012 21:04:18 IST
+
+Package: liblicense (1.3.0); urgency = low
+
+Abstract:
+	Modified dev-install
+
+Files Modified: spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: patra (poulabipatra@amiindia.co.in) Wed, 28 Nov 2012 10:15:00 HMT
+
+Package: liblicense (1.2.0); urgency = medium
+
+Abstract:
+	Added license support for WSMAN and SMASH
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/liblicense/P.CONFIG, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: ARUNA DEVI D (arunadevid@amiindia.co.in) Fri, 23 Nov 2012 18:06:33 IST
+
+Package: liblicense (1.1.0); urgency = medium
+
+Abstract:
+	Added License support for Media(cdserver,fdserver,hdserver,rdserver and sdserver)
+
+Files Modified: spx/P.CONFIG, spx/PACKAGES.D/liblicense/P.CONFIG, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install
+
+--Submitter: ARUNA DEVI D (arunadevid@amiindia.co.in) Thu, 22 Nov 2012 12:44:23 IST
+
+Package: liblicense (1.0.0); urgency = new
+
+Abstract:
+	This package includes license verification library for licenseapp.
+
+Files Added: data, data/Makefile, data/license.c, data/license.conf, data/license.h, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/P.CONFIG, spx/PACKAGES.D, spx/PACKAGES.D/liblicense, spx/PACKAGES.D/liblicense/DATA, spx/PACKAGES.D/liblicense/P.CONFIG, spx/PACKAGES.D/liblicense/SCRIPTS, spx/PACKAGES.D/liblicense/SCRIPTS/dev-install, spx/PACKAGES.D/liblicense_dev, spx/PACKAGES.D/liblicense_dev/DATA, spx/PACKAGES.D/liblicense_dev/SCRIPTS, spx/PACKAGES.D/liblicense_dev/SCRIPTS/dev-install, spx/RULES
+
+--Submitter: ARUNA DEVI D (arunadevid@amiindia.co.in) Wed, 21 Nov 2012 17:46:15 IST
+

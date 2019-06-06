@@ -1,0 +1,26 @@
+# Install Script
+
+build-install:
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_QUANTA_WEB_RKVM_SUPPORT" == "YES" ]; then echo "CONFIG_SPX_FEATURE_ADVISER_SUPPORT=ADVISER_SUPPORT" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT" == "YES" ]; then echo "CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT=KB_LANG_SELECT_SUPPORT" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT" == "YES" ] && [ "%CONFIG_SPX_FEATURE_KB_LANG_AD" == "YES" ]; then ./update_conf ./adviserd.conf adviserd keyboard_layout AD; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT" == "YES" ] && [ "%CONFIG_SPX_FEATURE_KB_LANG_EN" == "YES" ]; then ./update_conf ./adviserd.conf adviserd keyboard_layout US; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT" == "YES" ] && [ "%CONFIG_SPX_FEATURE_KB_LANG_FR" == "YES" ]; then ./update_conf ./adviserd.conf adviserd keyboard_layout FR; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT" == "YES" ] && [ "%CONFIG_SPX_FEATURE_KB_LANG_DE" == "YES" ]; then ./update_conf ./adviserd.conf adviserd keyboard_layout DE; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KB_LANG_SELECT_SUPPORT" == "YES" ] && [ "%CONFIG_SPX_FEATURE_KB_LANG_ES" == "YES" ]; then ./update_conf ./adviserd.conf adviserd keyboard_layout ES; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_RUNTIME_HOST_LOCK" == "YES" ]; then echo "CONFIG_SPX_FEATURE_RUNTIME_HOST_LOCK=RUNTIME_HOST_LOCK" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_HOST_LOCK_AUTO" == "YES" ]; then echo "CONFIG_SPX_FEATURE_HOST_LOCK_AUTO=HOST_LOCK_AUTO" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KVM_SESSION_TIMEOUT" == "YES" ]; then  echo "CONFIG_SPX_FEATURE_KVM_SESSION_TIMEOUT=KVM_SESSION_TIMEOUT" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KVM_SESSION_TIMEOUT" == "YES" ]; then  echo "CONFIG_SPX_FEATURE_KVM_SESSION_TIMEOUT_VALUE=%CONFIG_SPX_FEATURE_KVM_SESSION_TIMEOUT_VALUE" >> %IMAGE_TREE/etc/core_macros; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_ALLOW_MULTIPLE_KVM_SESSION_FROM_SAME_CLIENT" == "YES" ]; then echo "CONFIG_SPX_FEATURE_ALLOW_MULTIPLE_KVM_SESSION_FROM_SAME_CLIENT" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_USB_INITIALIZE_ADVISER" == "YES" ]; then echo "CONFIG_SPX_FEATURE_USB_INITIALIZE_ADVISER" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KVM_SESSION_RECONNECT" == "YES" ]; then  echo "CONFIG_SPX_FEATURE_KVM_SESSION_RECONNECT=KVM_SESSION_RECONNECT" >> %IMAGE_TREE/etc/core_features; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KVM_SESSION_RECONNECT" == "YES" ]; then  echo "retry interval =%CONFIG_SPX_FEATURE_KVM_SESSION_RETRY_INTERVAL, retry_count = %CONFIG_SPX_FEATURE_KVM_SESSION_RETRY_COUNT";fi
+		#EXECUTE if [ "%CONFIG_SPX_FEATURE_KVM_SESSION_RECONNECT" == "YES" ]; then ./update_conf ./adviserd.conf adviserd kvm_retry_count "%CONFIG_SPX_FEATURE_KVM_SESSION_RETRY_COUNT"; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KVM_SESSION_RECONNECT" == "YES" ]; then ./update_conf ./adviserd.conf adviserd kvm_retry_count "6"; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_KVM_SESSION_RECONNECT" == "YES" ]; then ./update_conf ./adviserd.conf adviserd kvm_retry_interval "%CONFIG_SPX_FEATURE_KVM_SESSION_RETRY_INTERVAL"; fi
+		EXECUTE if [ "%CONFIG_SPX_FEATURE_SYNC_KBD_LED_CLIENT" == "YES" ]; then echo "CONFIG_SPX_FEATURE_SYNC_KBD_LED_CLIENT=SYNC_KBD_LED_CLIENT" >> %IMAGE_TREE/etc/core_features; fi
+		COPY_FILE ./adviserd %IMAGE_TREE/usr/local/bin/
+		SET_INIT_SCRIPT ./adviserd.sh
+		COPY_TO_CONF ./adviserd.conf
+debug-install:

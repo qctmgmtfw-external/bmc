@@ -1,0 +1,17 @@
+[
+  {
+     "id": 1,
+     "controller_id": 67110151, 
+     "controller_name": "SAS9311-4i4e", 
+     "board_name": "SAS9311-4i4e", 
+     "sas_address": "500605b00388d0c0", 
+     "firmware_version": "07.130.04.00",
+     "nvdata_version": "07.01.00.00",
+     "pci_vendor_id": 4096, 
+     "pci_device_id": 151, 
+     "pci_subvendor_id": 4096, 
+     "pci_subsystem_id": 144, 
+     "speed": 32, 
+     "roc_temp": 47
+  }
+]

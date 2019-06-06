@@ -1,0 +1,22 @@
+    <div class="header" style="visibility: hidden"><%=locale.brand%></div>
+    <form action="javascript://">
+        <div class="body bg-gray">
+            <div class="form-group">
+                <input type="text" id="userid" class="form-control" placeholder="<%=locale.username%>"/>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" class="form-control" placeholder="<%=locale.password%>"/>
+            </div>
+            <div class="form-group">
+                <input id="remember_me" type="checkbox" name="remember_me"/> <%=locale.rememberme%>
+            </div>
+        </div>
+        <div class="footer">
+            <button type="submit" id="btn-login" class="btn bg-blue btn-block"><%=locale.signmein%></button>
+
+            <p><a href="javascript://" id="forgot-password"><%=locale.forgotpassword%></a></p>
+
+            <p><font id="copyRightID" color="blue"><%=locale.copyright%></font></p>
+
+        </div>
+    </form>

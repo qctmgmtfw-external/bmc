@@ -1,0 +1,9 @@
+{
+	"kvm": 1,
+	"services": 1,
+	"network": 1,
+	"ipmi": 1,
+	"ntp": 1,
+	"authentication": 1,
+	"syslog": 1	
+}

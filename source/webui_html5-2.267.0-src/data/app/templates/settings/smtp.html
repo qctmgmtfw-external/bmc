@@ -1,0 +1,235 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"><%= locale.smtp %></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger hide">
+                <!-- <i class="fa fa-ban"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                <div class="form-group"  >
+    <label for="channel_interface"><%= locale.smtplan_interface %></label>
+    <select name="channel_interface" id="idchannel_interface" class="form-control">
+    	
+    </select>
+</div><div class="form-group"  >
+    <label for="email_id"><%= locale.smtpsender_email_id %></label>
+    <input type="text" class="form-control" id="idemail_id" value="" placeholder="">
+</div><div class="form-group">
+	<hr/>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpcheck_this_option_to_enable_smtp_support_for_the_bmc %></div>
+    <label>
+        <input type="checkbox" value="1" id="idprimary_smtp_enable" > <%= locale.smtpprimary_smtp_support %>
+    </label>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpenter_the_machine_name_of_the_smtp_server_ul_li_machine_name_is_a_string_of_maximum_15_alphanumeric_charactersli_li_space_special_characters_are_not_allowedli_ul %></div>
+    <label for="primary_server_name"><%= locale.smtpprimary_server_name %></label>
+    <input type="text" class="form-control" id="idprimary_server_name" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtp_enter_the_ip_address_of_the_smtp_server_it_is_a_mandatory_field_ul_li_ip_address_made_of_4_numbers_separated_by_dots_as_in_xxxxxx_xxxxxxli_li_each_number_ranges_from_0_to_255li_li_first_number_must_not_be_0li_ul_server_address_will_support_the_following_ul_li_ipv4_address_format_li_ipv6_address_format_ul %></div>
+    <label for="primary_server_ip"><%= locale.smtpprimary_server_ip %></label>
+    <input type="text" class="form-control" id="idprimary_server_ip" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpspecify_the_smtp_port_ul_li_default_port_is_25li_li_port_value_ranges_from_1_to_65535li_ul %></div>
+    <label for="primary_smtp_port"><%= locale.smtpprimary_smtp_port %></label>
+    <input type="text" class="form-control" id="idprimary_smtp_port" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpspecify_the_smtp_secure_port_ul_li_default_port_is_465li_li_port_value_ranges_from_1_to_65535li_ul %></div>
+    <label for="primary_smtp_secure_port"><%= locale.smtpprimary_secure_smtp_port %></label>
+    <input type="text" class="form-control" id="idprimary_smtp_secure_port" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpcheck_the_option_enable_to_enable_smtp_authentication_note_smtp_server_authentication_types_supported_are_ul_li_crammd5li_li_loginli_li_plainli_ul_if_the_smtp_server_does_not_support_any_one_of_the_above_authentication_types_the_user_will_get_an_error_message_stating_iauthentication_type_is_not_supported_by_smtp_serveri %></div>
+    <label>
+        <input type="checkbox" value="1" id="idprimary_smtp_authentication" > <%= locale.smtpprimary_smtp_authentication %>
+    </label>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpenter_the_username_to_access_smtp_accounts_ul_li_user_name_can_be_of_length_4_to_64_alphanumeric_charactersli_li_it_must_start_with_an_alphabetli_li_special_characters_comma_colon_semicolon_space_and_backslash_are_not_allowedli_ul %></div>
+    <label for="primary_username"><%= locale.smtpprimary_username %></label>
+    <input type="text" class="form-control" id="idprimary_username" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpenter_the_password_for_the_smtp_user_account_ul_li_password_must_be_at_least_4_characters_longli_li_white_space_is_not_allowedli_ul_strongnotestrong_this_field_will_not_allow_more_than_64_characters %></div>
+    <label for="primary_password"><%= locale.smtpprimary_password %></label>
+    <input type="password" class="form-control" id="idprimary_password" value="" placeholder="" maxlength="64">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpcheck_the_option_enable_to_enable_smtp_ssltls_protocol %></div>
+    <label>
+        <input type="checkbox" value="1" id="idprimary_ssltls_enable" > <%= locale.smtpprimary_smtp_ssltls_enable %>
+    </label>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpcheck_the_option_enable_to_enable_smtp_starttls_protocol %></div>
+    <label>
+        <input type="checkbox" value="1" id="idprimary_starttls_enable" > <%= locale.smtpprimary_smtp_starttls_enable %>
+    </label>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpuse_browse_button_to_navigate_to_upload_cacert_ulli_cacert_key_file_should_be_of_pem_typeliul %></div>
+    <label for="upload_cacert1"><%= locale.smtpupload_smtp_ca_certificate_file %></label>
+    <div class="input-group">
+    	<input type="text" class="form-control" id="idupload_cacert1" value="" readonly>
+    	<span class="input-group-btn">
+    		<span class="btn btn-primary btn-file">
+    			<i class="fa fa-folder-open"></i>&hellip; <input type="file" id="fileupload_cacert1">
+    		</span>
+    	</span>
+    </div>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpuse_browse_button_to_navigate_to_upload_cert_ulli_cert_key_file_should_be_of_pem_typeliul %></div>
+    <label for="upload_cert1"><%= locale.smtpupload_smtp_certificate_file %></label>
+    <div class="input-group">
+    	<input type="text" class="form-control" id="idupload_cert1" value="" readonly>
+    	<span class="input-group-btn">
+    		<span class="btn btn-primary btn-file">
+    			<i class="fa fa-folder-open"></i>&hellip; <input type="file" id="fileupload_cert1">
+    		</span>
+    	</span>
+    </div>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpuse_browse_button_to_navigate_to_upload_smtp_key_ulli_smtp_key_file_should_be_of_pem_typeliul %></div>
+    <label for="upload_key1"><%= locale.smtpupload_smtp_private_key %></label>
+    <div class="input-group">
+    	<input type="text" class="form-control" id="idupload_key1" value="" readonly>
+    	<span class="input-group-btn">
+    		<span class="btn btn-primary btn-file">
+    			<i class="fa fa-folder-open"></i>&hellip; <input type="file" id="fileupload_key1">
+    		</span>
+    	</span>
+    </div>
+</div><div class="form-group">
+	<hr/>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpcheck_this_option_to_enable_secondary_smtp_support_for_the_bmc %></div>
+    <label>
+        <input type="checkbox" value="1" id="idsecondary_smtp_enable" > <%= locale.smtpsecondary_smtp_support %>
+    </label>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpenter_the_machine_name_of_the_secondary_smtp_server_ul_li_machine_name_is_a_string_of_maximum_15_alphanumeric_charactersli_li_space_special_characters_are_not_allowedli_ul %></div>
+    <label for="secondary_server_name"><%= locale.smtpsecondary_server_name %></label>
+    <input type="text" class="form-control" id="idsecondary_server_name" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtp_enter_the_ip_address_of_the_secondary_smtp_server_ul_li_ip_address_made_of_4_numbers_separated_by_dots_as_in_xxxxxx_xxxxxxli_li_each_number_ranges_from_0_to_255li_li_first_number_must_not_be_0li_ul_server_address_will_support_the_following_ul_li_ipv4_address_format_li_ipv6_address_format_ul %></div>
+    <label for="secondary_server_ip"><%= locale.smtpsecondary_server_ip %></label>
+    <input type="text" class="form-control" id="idsecondary_server_ip" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpspecify_the_secondary_smtp_port_ul_li_default_port_is_25li_li_port_value_ranges_from_1_to_65535li_ul %></div>
+    <label for="secondary_smtp_port"><%= locale.smtpsecondary_smtp_port %></label>
+    <input type="text" class="form-control" id="idsecondary_smtp_port" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpspecify_the_secondary_smtp_secure_port_ul_li_default_port_is_465li_li_port_value_ranges_from_1_to_65535li_ul %></div>
+    <label for="secondary_smtp_secure_port"><%= locale.smtpsecondary_smtp_secure_port %></label>
+    <input type="text" class="form-control" id="idsecondary_smtp_secure_port" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpcheck_the_option_enable_to_enable_secondary_smtp_authentication_note_smtp_server_authentication_types_supported_are_ul_li_crammd5li_li_loginli_li_plainli_ul_if_the_smtp_server_does_not_support_any_one_of_the_above_authentication_types_the_user_will_get_an_error_message_stating_iauthentication_type_is_not_supported_by_smtp_serveri %></div>
+    <label>
+        <input type="checkbox" value="1" id="idsecondary_smtp_authentication" > <%= locale.smtpsecondary_smtp_authentication %>
+    </label>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpenter_the_username_to_access_smtp_accounts_ul_li_user_name_can_be_of_length_4_to_64_alphanumeric_charactersli_li_it_must_start_with_an_alphabetli_li_special_characters_comma_colon_semicolon_space_and_backslash_are_not_allowedli_ul %></div>
+    <label for="secondary_username"><%= locale.smtpsecondary_username %></label>
+    <input type="text" class="form-control" id="idsecondary_username" value="" placeholder="">
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpenter_the_password_for_the_smtp_user_account_ul_li_password_must_be_at_least_4_characters_longli_li_white_space_is_not_allowedli_ul_strongnotestrong_this_field_will_not_allow_more_than_64_characters %></div>
+    <label for="secondary_password"><%= locale.smtpsecondary_password %></label>
+    <input type="password" class="form-control" id="idsecondary_password" value="" placeholder="" maxlength="64">
+</div>
+<div class="form-group"  >	
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpcheck_the_option_enable_to_enable_smtp_ssltls_protocol %></div>
+    <label>
+        <input type="checkbox" value="1" id="idsecondary_ssltls_enable" > <%= locale.smtpsecondary_smtp_ssltls_enable %>
+    </label>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpcheck_the_option_enable_to_enable_smtp_starttls_protocol %></div>
+    <label>
+        <input type="checkbox" value="1" id="idsecondary_starttls_enable" > <%= locale.smtpsecondary_smtp_starttls_enable %>
+    </label>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpuse_browse_button_to_navigate_to_upload_cacert_ulli_cacert_key_file_should_be_of_pem_typeliul %></div>
+    <label for="upload_cacert2"><%= locale.smtpupload_smtp_ca_certificate_file %></label>
+    <div class="input-group">
+    	<input type="text" class="form-control" id="idupload_cacert2" value="" readonly>
+    	<span class="input-group-btn">
+    		<span class="btn btn-primary btn-file">
+    			<i class="fa fa-folder-open"></i>&hellip; <input type="file" id="fileupload_cacert2">
+    		</span>
+    	</span>
+    </div>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpuse_browse_button_to_navigate_to_upload_cert_ulli_cert_key_file_should_be_of_pem_typeliul %></div>
+    <label for="upload_cert2"><%= locale.smtpupload_smtp_certificate_file %></label>
+    <div class="input-group">
+    	<input type="text" class="form-control" id="idupload_cert2" value="" readonly>
+    	<span class="input-group-btn">
+    		<span class="btn btn-primary btn-file">
+    			<i class="fa fa-folder-open"></i>&hellip; <input type="file" id="fileupload_cert2">
+    		</span>
+    	</span>
+    </div>
+</div>
+<div class="form-group"  >
+	<div class="alert alert-info help-item hide"    role="alert"><%= locale.smtpuse_browse_button_to_navigate_to_upload_key_ulli_key_file_should_be_of_pem_typeliul %></div>
+    <label for="upload_key2"><%= locale.smtpupload_smtp_private_key %></label>
+    <div class="input-group">
+    	<input type="text" class="form-control" id="idupload_key2" value="" readonly>
+    	<span class="input-group-btn">
+    		<span class="btn btn-primary btn-file">
+    			<i class="fa fa-folder-open"></i>&hellip; <input type="file" id="fileupload_key2">
+    		</span>
+    	</span>
+    </div>
+</div><div class="pull-right">
+    <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-save"></i> &nbsp; <%= locale.saveLabel %></a>
+</div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

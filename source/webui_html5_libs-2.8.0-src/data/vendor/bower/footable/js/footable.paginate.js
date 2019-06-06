@@ -4,7 +4,7 @@
 
 	var defaults = {
 		paginate: true,
-		pageSize: 24,
+		pageSize: 10,
 		pageNavigation: '.pagination',
 		firstText: '&laquo;',
 		previousText: '&lsaquo;',

@@ -1,0 +1,3 @@
+./defaults/etc/init.d/rsyncconfd 2339 2ee1f3943616086c5634a0de294c25ed
+./defaults/etc/rsync-excludes 17 7a9de85610cbdc53c91d8dd2b87fb410
+./defaults/etc/rsyncconf.sh 595 221bde49c466db346aa1c6111598b483

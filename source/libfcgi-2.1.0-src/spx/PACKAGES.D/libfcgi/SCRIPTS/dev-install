@@ -1,0 +1,9 @@
+# Install Script
+
+build-install:
+	COPY_DIR ./ %IMAGE_TREE/usr/local/lib/
+	ADD_LIBRARY_LINKS %IMAGE_TREE/usr/local/lib libfcgi.so.0.0.0
+	
+		
+debug-install:
+

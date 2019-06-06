@@ -1,0 +1,14 @@
+# Install Script
+
+build-install:
+		MKDIR_NOCLEAN %IMAGE_TREE/usr/local/bin
+		COPY_FILE ./defaulthost %IMAGE_TREE/usr/local/bin
+		MKDIR_NOCLEAN %IMAGE_TREE/etc/rcS.d/ 
+ 		MKDIR_NOCLEAN %IMAGE_TREE/etc/rc1.d/ 
+ 	    MKDIR_NOCLEAN %IMAGE_TREE/etc/rc3.d/ 
+ 	    MKDIR_NOCLEAN %IMAGE_TREE/etc/rc6.d/ 
+ 	    MKDIR_NOCLEAN %IMAGE_TREE/etc/rc7.d/ 
+ 		MKDIR_NOCLEAN %IMAGE_TREE/etc/rc8.d/
+		SET_INIT_SCRIPT ./defaulthost.sh
+				
+debug-install:

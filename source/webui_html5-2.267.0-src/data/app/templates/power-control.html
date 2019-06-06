@@ -1,0 +1,97 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <%= locale.power_control %>
+        <small data-feature="SERVER_SUPPORT"><%= locale.tag %></small>
+        <small data-feature="SWITCH_SUPPORT"><%= locale.tag_switch %></small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i> <%= locale.home %></a>
+        </li>
+        <li class="active">
+            <%= locale.power_control %>
+        </li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!--
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <div class="input-group" id="filter">
+                        <input type="text" class="form-control" placeholder="Search settings" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon-search glyphicon"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div class="col-md-5">
+        <div class="box box-primary animated fadeInUp">
+            <div class="box-header">
+                <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+                <h3 class="box-title"><%= locale.power_actions %></h3>
+            </div>
+            <div class="box-body">
+				<div class="alert alert-success hide"><b></b> </div>
+                <div class="alert alert-danger hide"><b></b></div>
+				<div id="chassis_status" style="font-weight:bold;color:#3c8dbc"></div></br>
+                <form action="javascript://" method="POST" role="form">
+                    <div class="form-group">
+                        <div class="alert alert-info help-item hide" role="alert" data-feature="SERVER_SUPPORT">Select this option to immediately power off the server.</div>
+                        <div class="alert alert-info help-item hide" role="alert" data-feature="SWITCH_SUPPORT">Select this option to immediately power off the switch.</div>
+                        <label data-feature="SERVER_SUPPORT">
+                            <input type='radio' value='0' name='power_command_server' id='idpower_off_command'> <%= locale.power_off %>
+                        </label>
+                        <label data-feature="SWITCH_SUPPORT">
+                            <input type='radio' value='0' name='power_command_switch' id='idpower_off_command'> <%= locale.power_off_switch %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert" data-feature="SERVER_SUPPORT">Select this option to power on the server.</div>
+                        <div class="alert alert-info help-item hide" role="alert" data-feature="SWITCH_SUPPORT">Select this option to power on the switch.</div>
+                    </div>
+                    <div class="form-group">
+                        <label data-feature="SERVER_SUPPORT">
+                            <input type='radio' value='1' name='power_command_server' id='idpower_on_command'> <%= locale.power_on %>
+                        </label>
+                        <label data-feature="SWITCH_SUPPORT">
+                            <input type='radio' value='1' name='power_command_switch' id='idpower_on_command'> <%= locale.power_on_switch %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert">Select this option to first power off, and then reboot the system (cold boot).</div>
+                    </div>
+                    <div class="form-group">
+                        <label data-feature="SERVER_SUPPORT">
+                            <input type='radio' value='2' name='power_command_server' id='idpower_cycle_command'> <%= locale.power_cycle %>
+                        </label>
+                        <label data-feature="SWITCH_SUPPORT">
+                            <input type='radio' value='2' name='power_command_switch' id='idpower_cycle_command'> <%= locale.power_cycle_switch %>
+                        </label>
+                        <div class="alert alert-info help-item hide" role="alert">Select this option to reboot the system without powering off (warm boot).</div>
+                    </div>
+                    <div class="form-group">
+                        <label data-feature="SERVER_SUPPORT">
+                            <input type='radio' value='3' name='power_command_server' id='idpower_reset_command'> <%= locale.hard_reset %>
+                        </label>
+                        <label data-feature="SWITCH_SUPPORT">
+                            <input type='radio' value='3' name='power_command_switch' id='idpower_reset_command'> <%= locale.hard_reset_switch %>
+                        </label>
+                        <div class="alert alert-info help-item hide" data-feature="SERVER_SUPPORT" role="alert">Select this option to initiate operating system shutdown prior to the shutdown.</div>
+                    </div>
+                    <div class="form-group" data-feature="SERVER_SUPPORT">
+                        <label>
+                            <input type='radio' value='5' name='power_command_server' id='idpower_acpi_command'> <%= locale.acpi_shutdown %>
+                        </label>
+                    </div>
+                    <div class="pull-right">
+                        <a class="btn btn-primary" id="save"><i id='save-icon' class="fa fa-power-off"></i> &nbsp; <%= locale.perform_action %></a>
+                    </div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.content -->

@@ -1,0 +1,41 @@
+<section class="content-header">
+    <h1>
+        <%= locale.title %>
+        <small> <%= locale.tag %> </small>
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-home"></i><%= locale.home %></a></li><li><a href="#settings"><%= locale.settings %></a></li><li><a href="#settings/raid_management"><%= locale.raid_management %></a></li><li><a href="#settings/raid_management/raid_logical_physical_device_info"><%= locale.logical_physical_device_information %></a></li>
+        <li class="active">
+           <%= locale.title %>
+        </li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+    <div class="col-md-5">
+    <div class="box box-primary animated fadeInUp">
+        <div class="box-header">
+            <div class="pull-right help"><a class="col-sm-1 help-link" href="#"><i class="fa fa-question-circle"></i></a></div>
+            <h3 class="box-title"><%= locale.raid_logical_physical_device_info %></h3>
+        </div>
+        <div class="box-body">
+            <div class="alert alert-success hide">
+                <!-- <i class="fa fa-check"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongSuccessMsg %></b> <%= locale.successMsg %>
+            </div>
+            <div class="alert alert-danger hide">
+                <!-- <i class="fa fa-ban"></i> -->
+                <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+                <b><%= locale.strongFailureMsg %></b> <%= locale.failureMsg %>
+            </div>
+            <form action="javascript://" method="POST" role="form">
+                
+                <div class="clearfix"></div>
+            </form>
+        </div>
+        <!-- /.box-body -->
+    </div>
+</div>
+</section>

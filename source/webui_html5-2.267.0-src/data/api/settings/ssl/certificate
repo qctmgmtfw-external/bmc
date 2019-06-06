@@ -1,0 +1,6 @@
+{ "certificate_version" : "3", "serial_number" : "9FF7DACD544345C2", "signature_algorithm" : "sha1WithRSAEncryption", "public_key" : "(1024 bit)",
+  "from_common_name" : "AMI", "from_organization" : "American Megatrends Inc", "from_organization_unit" : "Service Processors",
+  "from_city" : "Atlanta", "from_state" : "Georgia", "from_country" : "US", "from_email_id" : "support@ami.com", 
+  "valid_from" : "Sep 12 09:36:47 2008 GMT", "valid_till" : "Jan 25 09:36:47 2010 GMT", "to_common_name" : "AMI",
+  "to_organization" : "American Megatrends Inc", "to_organization_unit" : "Service Processors", "to_city" : "Atlanta", 
+  "to_state" : "Georgia", "to_country" : "US", "to_email_id" : "support@ami.com" }

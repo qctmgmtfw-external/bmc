@@ -1,0 +1,7 @@
+# Install Script
+
+build-install:
+	COPY_DIR .  %IMAGE_TREE
+	EXECUTE if [ "%CONFIG_SPX_FEATURE_GLOBAL_FAILSAFECONF" == "YES" ]; then echo "CONFIG_SPX_FEATURE_GLOBAL_FAILSAFECONF" >> %IMAGE_TREE/etc/core_features; fi
+
+debug-install:

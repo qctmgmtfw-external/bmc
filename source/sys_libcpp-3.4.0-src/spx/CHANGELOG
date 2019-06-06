@@ -1,0 +1,130 @@
+Package: sys_libcpp (3.4.0); urgency = medium
+
+Abstract:
+	Adding .keep file to empty directories to satisfy source controls like git
+
+Files Added: data/.keep, spx/PACKAGES.D/sys_libcpp/DATA/.keep
+
+--Submitter: Winston (winstont@ami.com) Mon, 04 Jan 2016 23:25:53 EST
+
+Package: sys_libcpp (3.3.0); urgency = medium
+
+Abstract:
+	Correction in License files
+
+Files Added: spx/LICENSES/LICENSE.AMI
+Files Deleted: spx/LICENSES/LICENSE.GPLv3_GCC_Runtime_Library_Exception
+
+--Submitter: Winston (winstont@ami.com) Tue, 31 Mar 2015 19:00:58 GMT
+
+Package: sys_libcpp (3.2.0); urgency = medium
+
+Abstract:
+	Removing LICENSE.AMI from LICENSES folder to prevent multiple licensing issue
+
+Files Deleted: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Tue, 23 Dec 2014 22:31:36 GMT
+
+Package: sys_libcpp (3.1.0); urgency = medium
+
+Abstract:
+	Changed license from GPL-V2 to GPLv3_GCC_Runtime_Library_Exception
+
+Files Added: spx/LICENSES/LICENSE.GPLv3_GCC_Runtime_Library_Exception
+Files Deleted: spx/LICENSES/LICENSE.GPL-V2
+
+--Submitter: Nilesh Konar (nileshk@amiindia.co.in) Tue, 16 Dec 2014 12:29:47 HMT
+
+Package: sys_libcpp (3.0.0); urgency = high
+
+Abstract:
+	Converting the packages to SPX 2.0 Format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 18 Oct 2014 06:37:11 GMT
+
+Package: sys_libcpp (2.7.0); urgency = medium
+
+Abstract:
+	Due to various issues reverting the package to SPX 1.0 format
+
+Files Modified: spx/INFO
+
+--Submitter: Winston (winstont@ami.com) Sat, 27 Sep 2014 08:02:26 GMT
+
+Package: sys_libcpp (2.6.0); urgency = medium
+
+Abstract:
+	Converting the package to SPX 2.0 format
+
+Files Modified: spx/INFO, spx/LICENSES/LICENSE.AMI
+
+--Submitter: Winston (winstont@ami.com) Fri, 26 Sep 2014 06:14:29 GMT
+
+Package: sys_libcpp (2.5.0); urgency = medium
+
+Abstract:
+	Updated to support Debian Wheezy target and new complier
+
+Files Modified: spx/INFO, spx/RULES.D/files.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Sun, 22 Sep 2013 02:12:55 EDT
+
+Package: sys_libcpp (2.4.0); urgency = low
+
+Abstract:
+	Versions of library is not hard coded. The correct version of library is taken by travesing from <library>.so file
+
+Files Modified: spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Wed, 20 Jun 2012 14:46:17 EDT
+
+Package: sys_libcpp (2.3.0); urgency = high
+
+Abstract:
+	package created again to include the proper license file
+
+Files Added: spx/LICENSES/LICENSE.GPL-V2
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Fri, 24 Jun 2011 11:32:41 EDT
+
+Package: sys_libcpp (2.2.0); urgency = medium
+
+Abstract:
+	Proper AMI License Added
+
+Files Modified: spx/LICENSES/LICENSE.AMI
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 May 2011 15:41:48 EDT
+
+Package: sys_libcpp (2.1.0); urgency = high
+
+Abstract:
+	Package license corrected
+
+Files Modified: spx/INFO
+
+--Submitter: Anurag Bhatia (anuragb@ami.com) Mon, 09 May 2011 17:40:39 EDT
+
+Package: sys_libcpp (2.0.0); urgency = medium
+
+Abstract:
+	Unified sys packages for all targets
+
+Files Deleted: spx/RULES.D/CreateTree
+Files Modified: spx/INFO, spx/RULES, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Tue, 08 Mar 2011 16:54:32 EST
+
+Package: sys_libcpp (1.0.0); urgency = new
+
+Abstract:
+	System Package providing CPP runtime Library
+
+Files Added: data, spx, spx/CHANGELOG, spx/FILES, spx/INFO, spx/LICENSES, spx/LICENSES/LICENSE.AMI, spx/PACKAGES.D, spx/PACKAGES.D/sys_libcpp, spx/PACKAGES.D/sys_libcpp/DATA, spx/PACKAGES.D/sys_libcpp/SCRIPTS, spx/PACKAGES.D/sys_libcpp/SCRIPTS/dev-install, spx/RULES, spx/RULES.D, spx/RULES.D/CreateTree, spx/RULES.D/device.lst, spx/RULES.D/directory.lst, spx/RULES.D/files.lst, spx/RULES.D/softlink.lst
+
+--Submitter: Samvinesh Christopher (vineshc@ami.com) Fri, 13 Aug 2010 18:26:39 EDT
+

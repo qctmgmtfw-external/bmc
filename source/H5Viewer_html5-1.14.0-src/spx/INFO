@@ -1,0 +1,35 @@
+Source : H5Viewer_html5
+Version : 1.14.0
+SPX-Version : 4.0
+SPX-Format : 2.0
+Owner : AMI
+Maintainer : Kirankumar B (kirankumarb@amiindia.co.in)
+License : AMI
+Source-Location : AMI
+Source-Version : 1.0.0
+Builds : H5Viewer_html5
+Build-Depends : webui_html5_libs, H5Viewer, H5Viewer_common, H5Viewer_OEM
+Architecture : ALL
+Urgency : medium
+Description : This Package contains SPX KVM HTML5 web page related files
+.
+
+#---------------------------------------------------------------------------
+# Binary Packages follows
+# Binary package takes the following fields from source pacakage:
+# Version, SPX-Version, SPX-Format, Owner, Maintainer,Source-License,
+# Architecture,SOC,BOARD,OEM,Urgency
+# Provides,Depends,Required ?
+# ---------------------------------------------------------------------------
+
+Package : H5Viewer_html5
+Config-Tag : HTML5 KVM/Media feature
+Section : app
+License : AMI
+Group : KVM
+Essential : NO
+Depends : adviser
+Required : H5Viewer, H5Viewer_common, H5Viewer_OEM
+Description : This Package contains SPX  KVM HTML5 web page related files
+.
+
