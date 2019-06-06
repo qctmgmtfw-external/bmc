@@ -57,3 +57,13 @@ Here is the product name and branch mapping table.
     Rackgo-X-Leopard-Snow BMC           RR2
     CB220 BMC                           RR2
     SD1Q-1ULH BMC                       RR2
+    
+    Switch Product:
+    T1048-LY4R                          RR115_S
+    T3048-LY7                           RR115_S
+    T4048-IX8                           RR115_S
+    T4048-IX8D                          RR115_S
+    T7032-IX1                           RR115_S
+    T7032-IX7                           RR115_S
+    T7032-IX7D                          RR115_S
+    T7064-IX4                           RR115_S
