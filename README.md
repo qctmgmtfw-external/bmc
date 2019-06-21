@@ -6,7 +6,6 @@ Build tools:
 
     gcc-multilib
     mtd-utils:i386
-    subversion
     patch
     patchutils
     bison
