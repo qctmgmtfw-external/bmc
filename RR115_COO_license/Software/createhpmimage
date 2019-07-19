@@ -1,0 +1,3261 @@
+---------------------------------------------
+File : /Common/CreateHPMImage.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/HPM1.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/OemHPMHeader.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/OemHPMHeader.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/SignImage.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/SignImage.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/Types.h
+---------------------------------------------
+
+Binary Package Name : global_dev-2.10.0-ARM.spx
+Binary Package Location : packages/global_dev-2.10.0-ARM.spx
+Package License Location : global_dev-2.10.0-ARM.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2015 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/checksum.h
+---------------------------------------------
+
+Binary Package Name : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb
+Binary Package Location : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb
+Package License Location : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb/data/usr/share/doc/linux-headers-3.2.0-4-versatile/copyright
+
+This is the Debian GNU/Linux prepackaged version of the Linux kernel.
+
+It was downloaded from http://ftp.kernel.org/pub/linux/kernel/.
+
+Copyright:
+
+   Copyright (C) 1991-2009 Linus Torvalds
+   and many others
+
+License:
+
+   This package is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License version 2 as
+   published by the Free Software Foundation.
+
+   This package is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this package; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General Public License version
+2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License for the Xen interface headers:
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to
+   deal in the Software without restriction, including without limitation the
+   rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+   sell copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+The 'perf' tool is dynamically linked with the Python interpreter,
+which is itself dynamically linked with OpenSSL, which is not
+GPL-compatible.  However, since perf itself does not link with or use
+OpenSSL, we believe that this indirect linking does not require
+additional permissions beyond the GPL.
+
+The Debian packaging is licensed under the GPL, see above.
+
+=============================================
+
+---------------------------------------------
+File : /Common/crc32.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/crc32.h
+---------------------------------------------
+
+Binary Package Name : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb
+Binary Package Location : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb
+Package License Location : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb/data/usr/share/doc/linux-headers-3.2.0-4-versatile/copyright
+
+This is the Debian GNU/Linux prepackaged version of the Linux kernel.
+
+It was downloaded from http://ftp.kernel.org/pub/linux/kernel/.
+
+Copyright:
+
+   Copyright (C) 1991-2009 Linus Torvalds
+   and many others
+
+License:
+
+   This package is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License version 2 as
+   published by the Free Software Foundation.
+
+   This package is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this package; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General Public License version
+2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License for the Xen interface headers:
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to
+   deal in the Software without restriction, including without limitation the
+   rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+   sell copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+The 'perf' tool is dynamically linked with the Python interpreter,
+which is itself dynamically linked with OpenSSL, which is not
+GPL-compatible.  However, since perf itself does not link with or use
+OpenSSL, we believe that this indirect linking does not require
+additional permissions beyond the GPL.
+
+The Debian packaging is licensed under the GPL, see above.
+
+=============================================
+
+---------------------------------------------
+File : /Common/crc8.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/crc8.h
+---------------------------------------------
+
+Binary Package Name : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb
+Binary Package Location : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb
+Package License Location : linux-headers-3.2.0-4-versatile_3.2.81-1_armel.deb/data/usr/share/doc/linux-headers-3.2.0-4-versatile/copyright
+
+This is the Debian GNU/Linux prepackaged version of the Linux kernel.
+
+It was downloaded from http://ftp.kernel.org/pub/linux/kernel/.
+
+Copyright:
+
+   Copyright (C) 1991-2009 Linus Torvalds
+   and many others
+
+License:
+
+   This package is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License version 2 as
+   published by the Free Software Foundation.
+
+   This package is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this package; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General Public License version
+2 can be found in `/usr/share/common-licenses/GPL-2'.
+
+License for the Xen interface headers:
+
+   Permission is hereby granted, free of charge, to any person obtaining a copy
+   of this software and associated documentation files (the "Software"), to
+   deal in the Software without restriction, including without limitation the
+   rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+   sell copies of the Software, and to permit persons to whom the Software is
+   furnished to do so, subject to the following conditions:
+
+   The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.
+
+The 'perf' tool is dynamically linked with the Python interpreter,
+which is itself dynamically linked with OpenSSL, which is not
+GPL-compatible.  However, since perf itself does not link with or use
+OpenSSL, we believe that this indirect linking does not require
+additional permissions beyond the GPL.
+
+The Debian packaging is licensed under the GPL, see above.
+
+=============================================
+
+---------------------------------------------
+File : /Common/crypto.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/crypto.h
+---------------------------------------------
+
+Binary Package Name : libgnutls-dev_2.12.20-8+deb7u5_armel.deb
+Binary Package Location : libgnutls-dev_2.12.20-8+deb7u5_armel.deb
+Package License Location : libgnutls-dev_2.12.20-8+deb7u5_armel.deb/data/usr/share/doc/libgnutls-dev/copyright
+
+This package was debianized by Ivo Timmermans <ivo@debian.org> on
+Fri,  3 Aug 2001 10:00:42 +0200.
+It was later taken over by Matthias Urlichs <smurf@debian.org> and is now
+maintained by Andreas Metzler <ametzler@debian.org> Eric Dorland
+<eric@debian.org>, James Westby <jw+debian@jameswestby.net>
+
+
+It was downloaded from ftp://gnutls.hellug.gr/pub/gnutls
+
+Upstream Authors: 
+  Nikos Mavroyanopoulos <nmav@gnutls.org>
+  Fabio Fiorina <Fabio.Fiorina@alcatel.it>
+  Simon Josefsson <jas@gnutls.org>
+  Timo Schulz <twoaday@freakmail.de>
+  Andrew McDonald <andrew@mcdonald.org.uk>
+  Ludovic Courtes <ludovic.courtes@laas.fr>
+  Mario Lenz <m@riolenz.de>
+  Howard Chu <hyc@symas.com>
+  Ivo Timmermans <ivo@o2w.nl>
+  Stefan Walter <stef@memberwebs.com>
+  Yoshisato YANAGISAWA <yanagisawa@csg.is.titech.ac.jp>
+  Emile Van Bergen <emile@e-advies.nl>
+  Joe Orton <jorton@redhat.com>
+  Daniel Kahn Gillmor <dkg-debian.org@fifthhorseman.net>
+  David Marín Carreño <davefx@gmail.com>
+  Daiki Ueno <ueno@unixuser.org>
+  Brad Hards <bradh@frogmouth.net>
+  Boyan Kasarov <bkasarov@gmail.com>
+  Steve Dispensa <dispensa@phonefactor.com>
+  Jonathan Bastien-Filiatrault <joe@x2a.org>
+
+
+License: The main library is licensed under GNU Lesser General Public
+License (LGPL) version 2.1+, Gnutls Extra (i.e. openssl wrapper library,
+and library for code for "GnuTLS Inner Application" support) build system,
+testsuite and commandline utilities are licenced under the GNU General
+Public License version 3+. The Guile bindings use the same license as the
+respective underlying library, i.e. LGPLv2.1+ for the main library and
+GPLv3+ for Gnutls extra.
+
+Copyright:
+--------------------
+ * Copyright (C) 2000, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009
+ * 2010 Free Software Foundation
+ *
+ * Author: Nikos Mavrogiannopoulos
+ *
+ * This file is part of GNUTLS.
+ *
+ * The GNUTLS library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public License
+ * as published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+ * USA
+--------------------
+/*
+ * Copyright (C) 2002, 2003, 2004, 2005, 2007, 2008, 2009, 2010 Free
+ * Software Foundation, Inc.
+ *
+ * Author: Nikos Mavrogiannopoulos
+ *
+ * This file is part of GnuTLS-EXTRA.
+ *
+ * GnuTLS-extra is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * GnuTLS-extra is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with GnuTLS-EXTRA; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301, USA.
+--------------------
+
+The documentation is distributed under the terms of the GNU Free
+Documentation License (FDL):
+--------------------
+Copyright @copyright{} 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
+
+@quotation
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A
+copy of the license is included in the section entitled ``GNU Free
+Documentation License''.
+@end quotation
+--------------------
+
+On Debian GNU/Linux systems, the complete text of the latest version of the GNU
+Lesser General Public License can be found in `/usr/share/common-licenses/LGPL'
+v2.1 of the license in `/usr/share/common-licenses/LGPL-2.1'; the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'. The GNU Free
+Documentation License is available under /usr/share/common-licenses/GFDL-1.3.
+
+
+
+Excerpt from upstream's README:
+LICENSE ISSUES
+--------------
+
+Since the 0.4.2 version the gnutls library is covered under the GNU
+Lesser GPL. Previously released versions were licensed under the GNU
+GPL.
+
+We changed the license for most of GNUTLS because other free libraries
+already exist that do the same jobs and have lax licenses.  We want
+GNUTLS to be usable in all the same places as those other libraries.
+We kept some parts of GNUTLS under the GPL because they are unique,
+and with the GPL they provide free software projects (which deserve
+our help) an advantage over non-free projects (which do not deserve
+our help, since they refuse to share with us).  For more explanation,
+see http://www.gnu.org/philosophy/why-not-lgpl.html.
+
+The GNU Lesser GPL license applies to the main gnutls library, while
+the gnutls-extra library is under the GPL. The gnutls-extra library
+contains the code for "GnuTLS Inner Application" support and the
+OpenSSL compatibility layer.  The gnutls library is located in the
+lib/ directory, while the gnutls-extra library is at libextra/.
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/farlib.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/fmh.h
+---------------------------------------------
+
+Binary Package Name : libfmh_dev-2.2.0-ARM.spx
+Binary Package Location : packages/libfmh_dev-2.2.0-ARM.spx
+Package License Location : libfmh_dev-2.2.0-ARM.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2013 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/fmhcore.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/fmhinfo.h
+---------------------------------------------
+
+Binary Package Name : libfmh_dev-2.2.0-ARM.spx
+Binary Package Location : packages/libfmh_dev-2.2.0-ARM.spx
+Package License Location : libfmh_dev-2.2.0-ARM.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2013 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/hpmimage.conf
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/icc_what.h
+---------------------------------------------
+
+Binary Package Name : global_dev-2.10.0-ARM.spx
+Binary Package Location : packages/global_dev-2.10.0-ARM.spx
+Package License Location : global_dev-2.10.0-ARM.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2015 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/iniparser-2.14/libini.a
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/iniparser-2.14/src/dictionary.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/iniparser-2.14/src/dictionary.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/iniparser-2.14/src/iniparser.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/iniparser-2.14/src/iniparser.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/iniparser-2.14/src/strlib.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/iniparser-2.14/src/strlib.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/md5.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/md5.h
+---------------------------------------------
+
+Binary Package Name : libavutil-dev_6%3a0.8.17-2+deb7u2_armel.deb
+Binary Package Location : libavutil-dev_6%3a0.8.17-2+deb7u2_armel.deb
+Package License Location : libavutil-dev_6%3a0.8.17-2+deb7u2_armel.deb/data/usr/share/doc/libavutil-dev/copyright
+
+This package was downloaded from http://libav.org
+
+Upstream Authors: Fabrice Bellard
+                  Alex Beregszaszi
+                  BERO
+                  Mario Brito
+                  Ronald Bultje
+                  Tim Ferguson
+                  Brian Foley
+                  Arpad Gereoffy
+                  Philip Gladstone
+                  Vladimir Gneushev
+                  Wolfgang Hesseler
+                  Falk Hueffner
+                  Zdenek Kabelac
+                  Robin Kay
+                  Todd Kirby
+                  Nick Kurshev
+                  Mike Melanson
+                  Michael Niedermayer
+                  François Revol
+                  Roman Shaposhnik
+                  Dieter Shirley
+                  Juan J. Sierralta
+                  Ewald Snel
+                  Leon van Stuivenberg
+                  Roberto Togni
+                  Lionel Ulmer
+
+Copyright (c) 2000-2004 Fabrice Bellard et al.
+
+The following files are licensed under the GNU GPL, as clarified below:
+
+ * ffmpeg.c
+ * libavcodec:
+   + dtsdec.c
+   + i386/idct_mmx.c
+   + liba52/*.[ch]
+ * libavformat:
+   + x11grab.c
+   + gxfenc.c
+ * libpostproc:
+   + postprocess_internal.h
+   + postprocess_altivec_template.c
+   + postprocess.h
+   + postprocess_template.c
+   + postprocess.c
+   + mangle.h
+ * libswscale:
+   + swscale.c
+   + swscale-example.c
+   + yuv2rgb_template.c
+   + swscale_altivec_template.c
+   + yuv2rgb_altivec.c
+   + swscale_template.c
+   + rgb2rgb_template.c
+   + rgb2rgb.c
+   + cs_test.c
+   + yuv2rgb_mlib.c
+   + yuv2rgb.c
+
+ | This library is free software; you can redistribute it and/or
+ | modify it under the terms of the GNU General Public License as
+ | published by the Free Software Foundation; either version 2 of
+ | the License, or (at your option) any later version.
+ |
+ | This library is distributed in the hope that it will be useful,
+ | but WITHOUT ANY WARRANTY; without even the implied warranty of
+ | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ | Lesser General Public License for more details.
+ |
+ | You should have received a copy of the GNU General Public License
+ | along with this program; if not, write to the Free Software
+ | Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+The rest of the code is licensed under the GNU LGPL:
+
+ | This library is free software; you can redistribute it and/or
+ | modify it under the terms of the GNU Lesser General Public License as
+ | published by the Free Software Foundation; either version 2.1 of
+ | the License, or (at your option) any later version.
+ |
+ | This library is distributed in the hope that it will be useful,
+ | but WITHOUT ANY WARRANTY; without even the implied warranty of
+ | MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ | Lesser General Public License for more details.
+ |
+ | You should have received a copy of the GNU General Public License
+ | along with this program; if not, write to the Free Software
+ | Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian GNU/Linux systems, the complete text of the GNU General Public
+License can be found in `/usr/share/common-licenses/GPL' and the text of the
+GNU Lesser General Public License is in `/usr/share/common-licenses/LGPL'.
+
+Note: Because the libavcodec-extra-53 package links against libraries that
+are licensed under Apache License 2.0, it is distributed under the GPL
+version 3. The libav-dbg package does also contain its debug symbols.
+
+=============================================
+
+---------------------------------------------
+File : /Common/me_region.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/module100.c
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /Common/types_cpu.h
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/Linux_x86_32/CreateHPMImage
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/Linux_x86_32/hpmimage.conf
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/Linux_x86_64/CreateHPMImage
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/Linux_x86_64/hpmimage.conf
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/SampleConf/ME_image.conf
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/SampleConf/ReadME.txt
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/SampleConf/bios_image.conf
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/SampleConf/mmc_image.conf
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/SampleConf/signimage.conf
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+
+---------------------------------------------
+File : /obj/SampleConf/spi_image.conf
+---------------------------------------------
+
+Binary Package Name : createhpmimage-2.30.0-ANY.spx
+Binary Package Location : packages/createhpmimage-2.30.0-ANY.spx
+Package License Location : createhpmimage-2.30.0-ANY.spx/spx/LICENSES
+
+License : AMI
+
+Full Description: 
+ 
+Copyright 2006 - 2016 by American Megatrends, Inc.  
+All rights reserved.
+May be subject to one or more issued and pending patent applications.
+ 
+American Megatrends, Inc.
+5555 Oakbrook Parkway, Bldg. 200
+Norcross, GA 30093
+U.S.A.
+www.AMI.com
++1-770-246-8600
+ 
+ 
+CONFIDENTIALITY AND PROPRIETARY NOTICE
+This document is intended only for the use of the individual and entity to which it is addressed and 
+contains information that is privileged, confidential, and exempt from disclosure under applicable law. 
+If the reader of this document is not the intended recipient, you are hereby notified that any 
+dissemination, distribution or copying of this communication is strictly prohibited.  
+ 
+Except to the extent the technology was licensed to American Megatrends, Inc. by its licensor, the 
+technology and all related documentation are owned by American Megatrends, Inc. and are protected 
+by United States' copyright laws and international treaty provisions.  No copyright, trade secret, 
+patent, trademark, trade name, logo, product designation or other proprietary and/or other legal 
+notices contained in or on the technology may be altered or removed. These legal notices must be 
+retained on any copies of the technology. 
+ 
+No rights sublicense, assign, reproduce or distribute copies of the technology are provided herein 
+expressly, implicitly or by estoppels.  NO RIGHTS TO MODIFY, ADAPT, TRANSLATE, RENT, LEASE, LOAN, 
+RESELL FOR PROFIT, DISTRIBUTE, OR OTHERWISE ASSIGN OR TRANSFER THE TECHNOLOGY, OR CREATE 
+DERIVATIVE WORKS BASED UPON THE SOFTWARE OR ANY PART THEREOF, EXCEPT AS EXPRESSLY 
+AGREED TO IN WRITING BY AMERICAN MEGATRENDS, INC. PURSUANT TO A VALID SOURCE CODE 
+ACCESS AGREEMENT OR SOFTWARE LICENSING AGREEMENT.
+ 
+Any rights to this code and any related intellectual property rights embodied herein are exclusively and 
+solely subject to a separate, effective and duly authorized source code access agreement, software 
+licensing agreement, technology access agreement, technology evaluation agreement or technology 
+license agreement provided by American Megatrends, Inc.  This publication contains proprietary 
+information which is protected in whole and/or in part by intellectual property including without 
+limitation all applicable copyrights, trade secrets and patents. No part of this publication may be 
+reproduced, transcribed, stored in a retrieval system, translated into any language or computer 
+language, or transmitted in any form whatsoever without the prior written consent of the publisher, 
+American Megatrends, Inc.   American Megatrends, Inc. retains the right to update, change or modify 
+this publication at any time, without notice.
+
+DISCLAIMER
+NOTWITHSTANDING ANYTHING IN THIS AGREEMENT TO THE CONTRARY, AMI DISCLAIMS ALL 
+WARRANTIES, EITHER EXPRESS OR IMPLIED, REGARDING THE TECHNOLOGY, ITS FUNCTIONALITY, ITS 
+PERFORMANCE, ITS MERCHANTABILITY, THE VALIDITY AND/OR NON-INFRINGEMENT OF ITS 
+INTELLECTUAL PROPERTY RIGHTS, AND ITS FITNESS FOR ANY PARTICULAR PURPOSE.  AMI DISCLAIMS 
+ALL OTHER OBLIGATIONS OR LIABILITIES ON ITS PART AND NEITHER ASSUMES NOR AUTHORIZES ANY 
+OTHER PERSON TO ASSUME FOR IT ANY OTHER LIABILITIES IN CONNECTION WITH THE PERFORMANCE 
+OF THE TECHNOLOGY.
+ 
+ LIMITATION OF LIABILITY
+Independently of any other remedy limitation hereof, and notwithstanding any failure of the essential 
+purpose of any such limited remedy, it is agreed that in no event shall AMI be liable for special, 
+punitive, direct, indirect, incidental, or consequential damages of any kind even if advised of the 
+possibility of such damage. 
+
+
+------------------------------------------------------------------------------------------------------
+
+
+=============================================
+

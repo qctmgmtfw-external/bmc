@@ -1,0 +1,1160 @@
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : IPMIMain
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libfmh.so.2.2.0                                      AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libblowfish.so.2.7.0                                 BSD                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libdynamicdrv.so.2.9.0                               AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libflash.so.2.23.0                                   AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libsmtp.so.2.16.0                                    AMI                   dynamic
+libipmichassis.so.3.9.0                              AMI                   dynamic
+libipmipef.so.3.20.0                                 AMI                   dynamic
+libipmitimer.so.3.7.0                                AMI                   dynamic
+libipmihalapi.so.3.3.0                               AMI                   dynamic
+libipmihalhw.so.3.7.0                                AMI                   dynamic
+libipmistack.so.3.72.0                               AMI                   dynamic
+libipmipdkapi.so.3.16.0                              AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libmmap.so.2.1.0                                     AMI                   dynamic
+libipmipdk.so.2.15.0                                 AMI                   dynamic
+libipmimsghndlr.so.3.270.0                           AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libprocmanager.so.2.6.0                              AMI                   dynamic
+libncsiconf.so.2.4.0                                 AMI                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libz.so.1.2.7                                                              dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libsyslogconf.so.2.8.0                               AMI                   dynamic
+libuserprivilege.so.2.13.0                           AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libversionmgt.so.2.7.0                               AMI                   dynamic
+libEventLogDes.so.2.4.0                              AMI                   dynamic
+libhiredis.so.0.13.3                          OPENSOURCE                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libgpio.so.2.4.0                                     AMI                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libsmb.so.2.5.0                                      AMI                   dynamic
+libpwmtach.so.2.3.0                                  AMI                   dynamic
+libsslcertificate.so.2.16.0                          AMI                   dynamic
+libvmedia.so.2.36.0                                  AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libcomponent_manager.so.2.49.0                       AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libuserprivilegepdk.so.2.4.0                         AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libjson-c.so.2.0.0                          PublicDomain                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : TFTPClient
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libunix.so.2.21.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : access_reg
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : adcapp
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libadc.so.2.1.0                                      AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : adviserd
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libvideo.so.2.7.0                                    AMI                   dynamic
+libdynamicdrv.so.2.9.0                               AMI                   dynamic
+libcompress.so.2.2.0                                 AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libadvisercfg.so.2.11.0                              AMI                   dynamic
+libvideorecordcfg.so.2.22.0                          AMI                   dynamic
+libvmedia.so.2.36.0                                  AMI                   dynamic
+libblowfish.so.2.7.0                                 BSD                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libprocmanager.so.2.6.0                              AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libuserprivilege.so.2.13.0                           AMI                   dynamic
+libuserprivilegepdk.so.2.4.0                         AMI                   dynamic
+libuserauth.so.2.21.0                                AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libflash.so.2.23.0                                   AMI                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libz.so.1.2.7                                                              dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libpam.so.0.83.0                                     GPL                   dynamic
+libpamhelper.so.2.6.0                                AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : bios_flasher
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : bioscode
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libsnoop.so.2.3.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : cdserverapp
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libsingleportapp.so.2.8.0                            AMI                    dlopen
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libvmedia.so.2.36.0                                  AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libprocmanager.so.2.6.0                              AMI                   dynamic
+libuserprivilege.so.2.13.0                           AMI                   dynamic
+libuserprivilegepdk.so.2.4.0                         AMI                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libblowfish.so.2.7.0                                 BSD                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : compmanager
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libcomponent_manager.so.2.49.0                       AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : defaulthost
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : defshell
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libunix.so.2.21.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : dhcpmonitor
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libpdkapp.so.3.12.0                                  AMI                    dlopen
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libdynamicdrv.so.2.9.0                               AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : execdaemon
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : fdserverapp
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libsingleportapp.so.2.8.0                            AMI                    dlopen
+libvmedia.so.2.36.0                                  AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libuserprivilege.so.2.13.0                           AMI                   dynamic
+libuserprivilegepdk.so.2.4.0                         AMI                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libprocmanager.so.2.6.0                              AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libblowfish.so.2.7.0                                 BSD                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : flasher
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libpdkapp.so.3.12.0                                  AMI                    dlopen
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libpreserveconf.so.2.31.0                            AMI                   dynamic
+libflash.so.2.23.0                                   AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libcrfstr.so.2.4.0                                   AMI                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libz.so.1.2.7                                                              dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : gpiotool
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libgpio.so.2.4.0                                     AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : hdserverapp
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libsingleportapp.so.2.8.0                            AMI                    dlopen
+libvmedia.so.2.36.0                                  AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libuserprivilege.so.2.13.0                           AMI                   dynamic
+libuserprivilegepdk.so.2.4.0                         AMI                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libprocmanager.so.2.6.0                              AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libblowfish.so.2.7.0                                 BSD                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : i2c-test
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libi2c.so.2.5.0                                      AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : ipmitool
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : jtag_unittest
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libcpld.so.2.1.0                                     AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : kcs_unittest
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : lmedia
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libstdc++.so.6.0.17               LGPL,GPL,Public Domain                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libvmedia.so.2.36.0                                  AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libmediaredir.so.2.15.0                              AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libprocmanager.so.2.6.0                              AMI                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libblowfish.so.2.7.0                                 BSD                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : mountallapp
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libunix.so.2.21.0                                    AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : ncsicfg
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libncsiconf.so.2.4.0                                 AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : netmontool
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : nsupdate
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : openssl
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libunix.so.2.21.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : pam_helperd
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libpamhelper.so.2.6.0                                AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : peciapp
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libpeci.so.2.1.0                                     AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : phycfg
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libphyconf.so.2.2.0                                  AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : pmbus-test
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libi2c.so.2.5.0                                      AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libpmbus.so.2.2.0                                    AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : preservecfg
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libpreserveconf.so.2.31.0                            AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libflash.so.2.23.0                                   AMI                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : processmanager
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libpdkapp.so.3.12.0                                  AMI                    dlopen
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libprocmanager.so.2.6.0                              AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libwatchdog.so.1.3.0                                 AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : pwmtachtool
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libpwmtach.so.2.3.0                                  AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : redfish_device
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libupnp.so.6.3.4                                     MIT                   dynamic
+libthreadutil.so.6.0.4                               MIT                   dynamic
+libixml.so.2.0.8                                     MIT                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : reset_unittest
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : smash
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+liboemsystemlog.so.1.8.0                             AMI                   dynamic
+libntpconf.so.2.5.0                                  AMI                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libflash.so.2.23.0                                   AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libSMASHLiteHooks.so.1.25.0                          AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libsyslogconf.so.2.8.0                               AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libpmbus.so.2.2.0                                    AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : smb-test
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libsmb.so.2.5.0                                      AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : snoop_unittest
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : solssh
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libuserprivilege.so.2.13.0                           AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libuserprivilegepdk.so.2.4.0                         AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : spx_restservice
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libsingleportapp.so.2.8.0                            AMI                    dlopen
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libfcgi.so.0.0.0                            PublicDomain                   dynamic
+libqdecoder.so.2.7.0                                 BSD                   dynamic
+libraphters.so.2.15.0                             LGPL-3                   dynamic
+libjson-c.so.2.0.0                          PublicDomain                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libadvisercfg.so.2.11.0                              AMI                   dynamic
+libvmedia.so.2.36.0                                  AMI                   dynamic
+libflash.so.2.23.0                                   AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libactivedircfg.so.2.17.0                            AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libradiusconf.so.2.14.0                              AMI                   dynamic
+libldapconf.so.2.12.0                                AMI                   dynamic
+libsyslogconf.so.2.8.0                               AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libncsiconf.so.2.4.0                                 AMI                   dynamic
+libuserauth.so.2.21.0                                AMI                   dynamic
+libcomponent_manager.so.2.49.0                       AMI                   dynamic
+libvideorecordcfg.so.2.22.0                          AMI                   dynamic
+libuserprivilege.so.2.13.0                           AMI                   dynamic
+libsslcertificate.so.2.16.0                          AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libsession.so.2.4.0                                  AMI                   dynamic
+librtlog.so.2.6.0                                    AMI                   dynamic
+libldapauth.so.2.11.0                                AMI                   dynamic
+libldap_r-2.4.so.2.8.3           OpenLDAP Public License                   dynamic
+libEventLogDes.so.2.4.0                              AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libpam.so.0.83.0                                     GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libblowfish.so.2.7.0                                 BSD                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libuserprivilegepdk.so.2.4.0                         AMI                   dynamic
+libpamhelper.so.2.6.0                                AMI                   dynamic
+liblber-2.4.so.2.8.3             OpenLDAP Public License                   dynamic
+libresolv-2.13.so                               LGPL,GPL                   dynamic
+libsasl2.so.2.0.25                                   GPL                   dynamic
+libgnutls.so.26.22.4                            LGPL,GPL                   dynamic
+libgcrypt.so.11.7.0                             LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libtasn1.so.3.1.16                              LGPL,GPL                   dynamic
+libz.so.1.2.7                                                              dynamic
+libp11-kit.so.0.0.0                                  GPL                   dynamic
+libgpg-error.so.0.8.0                               LGPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : syslogmonitord
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libuserauth.so.2.21.0                                AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libpam.so.0.83.0                                     GPL                   dynamic
+libuserprivilege.so.2.13.0                           AMI                   dynamic
+libuserprivilegepdk.so.2.4.0                         AMI                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libpamhelper.so.2.6.0                                AMI                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libuserm.so.2.22.0                                   AMI                   dynamic
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : tcpdump
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : timeoutd
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : uartroutetest
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libuartroute.so.2.1.0                                AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : vmapp
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libpthread-2.13.so                              LGPL,GPL                   dynamic
+libdl-2.13.so                                   LGPL,GPL                   dynamic
+libvmedia.so.2.36.0                                  AMI                   dynamic
+libdynamicdrv.so.2.9.0                               AMI                   dynamic
+libdbgout.so.2.7.0                                   AMI                   dynamic
+libracsessioninfo.so.2.10.0                          AMI                   dynamic
+libtoken.so.2.9.0                                    AMI                   dynamic
+libiniparser.so.2.12.0                               MIT                   dynamic
+libunix.so.2.21.0                                    AMI                   dynamic
+libfeaturedefine.so.2.54.0                           AMI                   dynamic
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
+libncml.so.2.23.0                                    AMI                   dynamic
+libencoding.so.2.3.0                     BSD.CyoEncoding                   dynamic
+libencryption.so.2.3.0                            SSLeay                   dynamic
+libblowfish.so.2.7.0                                 BSD                   dynamic
+libsafesystem.so.2.6.0                               AMI                   dynamic
+libipmi.so.3.107.0                                   AMI                   dynamic
+libnetwork.so.2.44.0                                 AMI                   dynamic
+libipmiparams.so.3.2.0                               AMI                   dynamic
+libcrypto.so.1.0.0                                SSLeay                   dynamic
+libssl.so.1.0.0                                   SSLeay                   dynamic
+librt-2.13.so                                   LGPL,GPL                   dynamic
+libm-2.13.so                                    LGPL,GPL                   dynamic
+libi2c.so.2.5.0                                      AMI                   dynamic
+libhostname.so.2.11.0                                AMI                   dynamic
+libubenv.so.2.8.0                                    AMI                   dynamic
+libfwinfo.so.2.17.0                                  AMI                   dynamic
+libchecksum.so.2.3.0                                 MIT                   dynamic
+libfmh.so.2.2.0                                      AMI                   dynamic
+===============================================================================================================
+
+-----------------------------------------------------------------------------------------------------------------
+File : wd_tm
+-----------------------------------------------------------------------------------------------------------------
+Library Name:                              License Type:                Link Type:
+-----------------------------------------------------------------------------------------------------------------
+
+libgcc_s.so.1                     LGPL,GPL,Public Domain                   dynamic
+libc-2.13.so                                    LGPL,GPL                   dynamic
+ld-2.13.so                                      LGPL,GPL                   dynamic
