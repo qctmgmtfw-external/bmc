@@ -1,17 +1,10 @@
-# bmc
+README file for RR2 BMC module
+==============================
+
 We create this repository for Quanta BMC RR10 open source code.
 
-Build environment: Ubuntu 14.04
-Build tools:
+Build environment: Fedora12 32 bit OS
 
-    gcc-multilib
-    mtd-utils:i386
-    patch
-    patchutils
-    bison
-    libc6-dev
-    libxml-dom-perl
-    zlib1g
-    zlib1g-dev
-    libcurl4-openssl-dev
-    libncurses5:i386
+Please refer to master branch README.md for how to proceed BMC module modification.
+
+https://github.com/qctmgmtfw-external/bmc/tree/master
