@@ -1,6 +1,6 @@
-# BMC
+# BMC (Baseboard Management Controller) Modules Repository
 
-This repository is for users who would like to modify the partial BMC function of the following server product.  The README file will help you to accomplish the whole process.
+This repository is for users who would like to modify the partial BMC function of the following server products.  The README file will help you to accomplish the whole process.
 First, you have to download the corresponding BMC images and update tool according to your server type here:
 
 http://www.qct.io/Download/index/bmc
