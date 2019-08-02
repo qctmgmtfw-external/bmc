@@ -1,0 +1,103 @@
+*******************************************************************************
+**                        Quanta Cloud Technology Inc.                       **
+**                                                                           **
+**             BMC Firmware Modules Update Instruction V 1.0                 **
+**                                                                           **
+**        This BMC update instruction is for people who has strong embedded  **
+**    Linux Knowledge and would like to modify QCT BMC functionality.        **
+**    This instruction will walk through the process of downloading the      **
+**    source files/packages, compiling the code and installing it into the   **
+**    BMC.                                                                   **
+**                                                                           **
+*******************************************************************************
+
+NOTE!!                                    
+    There are some regulations for the whole process, please read it carefully 
+before you make any modification:    
+1.     Please prepare your compile environment so that it is suitable for building
+    embedded Linux for ARM 9/11.
+2.     Because this is an embedded system, the file/package size and version are 
+    strictly limited. 
+
+    For SPX and product mapping, please refer to 
+    "https://github.com/qctmgmtfw-external/bmc/blob/master/README.md".
+
+    For SPX RR2:
+
+    Component                  Version                    Size             
+    --------------------------------------------------------------
+    gawk                    	3.16                    	324 KB            
+    stat                     	8.4                             62 KB
+    sum                        	8.4                        	36 KB
+    false                    	8.4                        	63 KB
+    rsyslogd                	4.6.4                    	287 KB
+    cron                    	cron_3.0pl1-116            	31 KB
+    diff                    	3.0                        	31 KB
+    egrep                    	2.6.3                    	175 KB
+    libtasn1.so.3.1.9        	3_2.7-1                    	55 KB
+
+
+    For SPX RR10/RR11.5:
+
+    Component                  Version                    Size             
+    --------------------------------------------------------------
+    gawk                    	4.0.1                    	411 KB
+    stat                     	8.13                    	63 KB
+    sum                        	8.13                    	38 KB
+    rsyslog                 	5.8.11                    	4 KB                
+    timeout                    	8.13                    	1.5 KB
+    libparted.so.0.0.1        	2.3                        	75.8 KB
+    libreadline.so.6.2        	6.2                        	215 KB
+    parted                    	2.3                        	75 KB
+    
+
+How to build components
+ 
+1.  Please refer to the tables above for what components are in each SPX version. Download source code from following places:
+         https://ftp.gnu.org/gnu/gawk (version 4.0.1)
+    Component            Version              Download URL            
+    ----------------------------------------------------------
+    rsyslog            	5.8.11                	https://www.rsyslog.com/tag/5-8-11
+    rsyslogd            4.6.4                	http://snapshot.debian.org/archive/debian/20141020T163950Z/pool/main/r/rsyslog/rsyslog_4.6.4-2+deb6u1.dsc
+    gawk                3.1.6                	ftp://ftp.gnu.org/pub/gnu/gawk/gawk-3.1.6.tar.gz
+    stat                8.13                	https://ftp.gnu.org/gnu/coreutils
+    stat                8.4                    	ftp://ftp.gnu.org/gnu/coreutils/coreutils-8.4.tar.gz
+    sum                 8.4                    	ftp://ftp.gnu.org/gnu/coreutils/coreutils-8.4.tar.gz
+    false               8.4                    	ftp://ftp.gnu.org/gnu/coreutils/coreutils-8.4.tar.gz
+    cron                cron_3.0pl1-116     	https://46.29.125.16/archive.debian.org/debian/pool/main/c/cron/
+    diff                3.0                    	http://ftp.gnu.org/gnu/diffutils/diffutils-3.0.tar.gz
+    egrep               2.6.3                	http://b3.update.excito.org/pool/main/g/grep/
+    libtasn1.so.3.1.9   3_2.7-1                	http://archive.debian.org/debian-security/pool/updates/main/libt/libtasn1-3/
+
+2.     Extract the package and make a folder in this package( e.g : mkdir output)
+3.     Execute configure file ( ./configure –prefix=”/folder path which you make at step 2” --host=arm-linux-gnueabihf  CC=”/arm-none-linux-gnueabi-gcc cross compiler path”)
+4.     Execute the command: make && make install
+5.     Gawk will build in output/bin
+
+
+How to upload components to BMC
+
+FWM is the tool needed to upload components to BMC. This utility is available in QCT's Public GitHub "github path". User can reference the FWM README file for detail instruction. 
+After you finish FWM procedure and has generated a new .ima image, you have to
+send the image to QCT to sign your new image, so that it can be uploaded
+to BMC successfully. 
+Please contact QCT customer service for sending image assistance.
+
+"https://www.qct.io/Contact-QCT/index"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
