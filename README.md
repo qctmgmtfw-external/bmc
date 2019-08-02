@@ -1,22 +1,10 @@
-# bmc
-We create this repository for Quanta BMC RR11.5 open source code.
+README file for RR115 BMC module
+==============================
+
+We create this repository for Quanta BMC RR115 open source code.
 
 Build environment: Ubuntu 14.04 64bits
 
-Build tools:
+Please refer to master branch README.md for How to proceed BMC module modification.
 
-    gcc-multilib,
-    mtd-utils:i386,
-    patch,
-    patchutils,
-    bison,
-    libc6-dev,
-    libxml-dom-perl,
-    zlib1g,
-    zlib1g-dev,
-    libcurl4-openssl-dev,
-    libncurses5:i386,
-    python-numpy,
-    doxygen,
-    cross-compiler: arm gcc 6.4.1
-
+https://github.com/qctmgmtfw-external/bmc/tree/master
