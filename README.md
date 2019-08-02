@@ -1,20 +1,12 @@
-README file
-===========
+README file for RR2 BMC module
+==============================
 
 We create this repository for Quanta BMC RR2 open source code.
 
 Build environment: Fedora12 32 bit OS
 
-Build tools:
+Please refer to master branch README.md for How to proceed BMC module modification.
 
-gcc-multilib,
-mtd-utils:i386,
-patch,
-patchutils,
-Java 1.6 or newer release,
-Python 2.6.4 or above,
-mkcramfs,
-mkfs.jffs2,
-mkimage,
-cross-compiler: arm-linux-gcc4.5.1
+https://github.com/qctmgmtfw-external/bmc/tree/master
+
 
