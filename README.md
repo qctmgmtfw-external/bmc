@@ -1,5 +1,14 @@
-# bmc
-We create this repository for Quanta BMC open source code. 
+# BMC
+
+This repository is for users who would like to modify the partial BMC function of the following server product.  The README file will help you to accomplish the whole process.
+First, you have to download the corresponding BMC images and update tool according to your server type here:
+
+http://www.qct.io/Download/index/bmc
+
+Next, By knowing your server type, you can find your BMC branch by looking up the mapping table below. 
+Once you know what BMC branch you need, you can switch to that branch in this repository and download the source code you need.
+
+After you've downloaded the source code, you can follow the instruction in the BMC_Module_Update_Instruction_v1.txt to finish the rest procedures. 
 
 Here is the product name and branch mapping table.
 
