@@ -46,14 +46,15 @@ Here is the product name and branch mapping table.
 	28.	X10E-9N BMC                         RR10	
 	29.	X11C-8N BMC                         RR115	
 
-    
-    Switch Product                      
-    -------------------------------------------
-    T1048-LY4R                          RR115_S
-    T3048-LY7                           RR115_S
-    T4048-IX3                           RR115_S
-    T4048-IX8                           RR115_S
-    T4048-IX8D                          RR115_S
-    T7032-IX7                           RR115_S
-    T7032-IX7D                          RR115_S
-    T7064-IX4                           RR115_S
+
+    	Product Name                        Branch
+    ------------------------------------------------------------
+	1.	T1048-LY4R                          RR115_S
+	2.	T3048-LY7                           RR115_S
+	3.	T4048-IX3                           RR115_S
+	4.	T4048-IX8                           RR115_S
+	5.	T4048-IX8D                          RR115_S
+	6.	T3048-LY7                           RR115_S
+	7.	T7032-IX7D                          RR115_S
+	8.	T7064-IX4                           RR115_S
+
