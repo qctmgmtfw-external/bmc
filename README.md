@@ -54,7 +54,8 @@ Here is the product name and branch mapping table.
 	3.	T4048-IX3                           RR115_S
 	4.	T4048-IX8                           RR115_S
 	5.	T4048-IX8D                          RR115_S
-	6.	T3048-LY7                           RR115_S
+	6.	T7032-IX7                           RR115_S
 	7.	T7032-IX7D                          RR115_S
 	8.	T7064-IX4                           RR115_S
+	9.	T9032-IX9                           RR115_S			
 
